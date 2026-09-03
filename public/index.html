@@ -346,9 +346,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
 /* Scroll progress. --accent is this site's blue, so it inherits the theme
    rather than importing signal's amber. Above the sticky header, which would
    otherwise slide over it. */
-.prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);
+.scrollprog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);
   z-index:2000;transition:width .1s linear;pointer-events:none}
-@media (prefers-reduced-motion:reduce){ .prog{transition:none} }
+@media (prefers-reduced-motion:reduce){ .scrollprog{transition:none} }
 </style>
 </head>
 <body>
@@ -356,7 +356,7 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
      newspaper: two pixels across the top, filling as you scroll. This page is
      one long single-file document with no section pagination, so the native
      scrollbar is the only cue and on a phone it is not one. -->
-<div class="prog" id="prog" role="progressbar" aria-label="Page scrolled"
+<div class="scrollprog" id="scrollprog" role="progressbar" aria-label="Page scrolled"
      aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 <header class="bar">
   <a class="mark" href="#top"><i>◆</i> The Campaign</a>
@@ -1735,7 +1735,7 @@ drawBank(); paintStats(); markActive(); paintToTop();
    per frame. Safe in a background tab for the reason a marquee is not — a
    scroll handler has nothing to do when nobody is scrolling. */
 (function(){
-  var bar = document.getElementById('prog'); if(!bar) return;
+  var bar = document.getElementById('scrollprog'); if(!bar) return;
   var queued = false;
   function draw(){
     var d = document.documentElement, h = d.scrollHeight - window.innerHeight;
