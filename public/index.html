@@ -61,7 +61,11 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--barh) + 18px)}
+/* NO scroll-padding-top here. It stacks with .sec's scroll-margin-top and a
+   clicked section then lands at the SUM of the two, which is what put the
+   nav highlight one section behind. The per-section margin is the single
+   source of truth for where an anchor lands. */
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 body{margin:0;background:var(--bg);color:var(--text);
@@ -268,6 +272,27 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .epi span{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
   text-transform:uppercase;color:var(--dim);margin-top:5px}
 .epi p{font-size:var(--t-4);color:var(--muted);margin-top:6px;line-height:1.6}
+
+
+.role-sc.t-S{border-color:var(--up);background:var(--up-soft)}
+.role-sc.t-S b{color:var(--up)}
+.role-sc.t-A{border-color:var(--accent);background:var(--accent-soft)}
+.role-sc.t-A b{color:var(--accent)}
+.role-sc.t-B{border-color:var(--warn);background:var(--warn-soft)}
+.role-sc.t-B b{color:var(--warn)}
+.pill.tier-S{color:var(--up);border-color:var(--up);background:var(--up-soft)}
+.pill.tier-A{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.pill.tier-B{color:var(--warn);border-color:var(--warn);background:var(--warn-soft)}
+
+/* ── BACK TO TOP ───────────────────────────────────────────────────────── */
+.totop{position:fixed;right:20px;bottom:20px;z-index:38;width:44px;height:44px;
+  display:grid;place-items:center;border:1px solid var(--line2);border-radius:var(--r-pill);
+  background:var(--surface);color:var(--text);cursor:pointer;font-size:var(--t-6);
+  box-shadow:0 6px 20px rgba(0,0,0,.18);opacity:0;visibility:hidden;
+  transition:opacity var(--t-mid) var(--ease),visibility var(--t-mid),transform var(--t-fast) var(--ease)}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
+@media print{.totop{display:none}}
 
 /* ── CHECKLIST ─────────────────────────────────────────────────────────── */
 .ck{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
@@ -960,6 +985,8 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
 </main>
 </div>
 
+<button class="totop" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+
 <footer class="foot">
   The Campaign · career.askakshay.com · a private working surface, not published.<br>
   Ratings, counters and checkboxes live in this browser only and are never sent anywhere.<br>
@@ -1282,9 +1309,13 @@ let spy = null, spyLast = 0, lockUntil = 0;
    used and which is why the rail read one section behind. Taken from the live
    token so it cannot drift from the CSS. */
 function probeLine(){
-  const bar = parseFloat(getComputedStyle(document.documentElement)
-                .getPropertyValue("--barh")) || 56;
-  return bar + 26;
+  /* Measured, not assumed. An anchor lands at the scroll container's
+     scroll-padding-top PLUS the target's own scroll-margin-top; hard-coding a
+     guess here is exactly how the highlight ended up one section behind. The
+     +8 keeps a clicked section on the correct side of the line. */
+  const pad = parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 0;
+  const mar = secs.length ? (parseFloat(getComputedStyle(secs[0]).scrollMarginTop) || 0) : 0;
+  return pad + mar + 8;
 }
 
 function setActive(id){
@@ -1300,7 +1331,14 @@ function markActive(){
   if (Date.now() < lockUntil) return;
   const line = probeLine();
   let cur = null;
-  for (const s of secs) if (s.getBoundingClientRect().top - line <= 0) cur = s;
+  /* The section the probe line actually sits inside. Contiguous sections mean
+     exactly one qualifies, which is unambiguous in a way "the last one above"
+     never was. */
+  for (const s of secs){
+    const r = s.getBoundingClientRect();
+    if (r.top <= line && r.bottom > line){ cur = s; break; }
+  }
+  if (!cur) for (const s of secs) if (s.getBoundingClientRect().top <= line) cur = s;
   /* The last section can never reach the probe line on a short final screen,
      so it could otherwise never be selected. */
   if (window.innerHeight + window.scrollY >=
@@ -1337,6 +1375,10 @@ window.addEventListener("hashchange", () => {
    every morning and which already sends Access-Control-Allow-Origin: *. The
    scraper is NOT duplicated here — one pipeline, two surfaces. */
 const FEED = "https://news.askakshay.com/jobs.json";
+/* What a grade actually means, so A and B are readable at a glance instead of
+   being a letter you have to remember the scale for. */
+const TIER_LABEL = {S:"S · Top of the list", A:"A · Strong fit",
+                    B:"B · Worth a look",   C:"C · Long shot", D:"D · Weak"};
 let ROLES = [], rFilter = {country:"All", tier:"All"};
 
 function roleCard(j){
@@ -1355,9 +1397,11 @@ function roleCard(j){
         <b>${esc(j.title || "Untitled role")}</b>
         <span>${esc(j.company || j.source || "")}${loc ? " · " + esc(loc) : ""}</span>
       </div>
-      <div class="role-sc"><b>${j.opportunity_score ?? "–"}</b><span>${esc(tier)}</span></div>
+      <div class="role-sc t-${esc(tier)}"><b>${j.opportunity_score ?? "–"}</b><span>${esc(tier)}</span></div>
     </div>
     <div class="role-m">
+      ${TIER_LABEL[tier] ? `<span class="pill tier-${esc(tier)}">${esc(TIER_LABEL[tier])}</span>` : ""}
+      ${j.application_priority ? `<span class="pill">${esc(j.application_priority)}</span>` : ""}
       ${j.status ? `<span class="pill ${st}">${esc(j.status)}</span>` : ""}
       ${j.posted_date ? `<span class="pill">Posted ${esc(j.posted_date)}</span>` : ""}
       ${j.candidate_fit_score != null ? `<span class="pill">Fit ${j.candidate_fit_score}</span>` : ""}
@@ -1605,8 +1649,21 @@ document.getElementById("lifeTabs").addEventListener("click", e => {
     .forEach(p => { p.hidden = p.dataset.pane !== want; });
 });
 
+/* ── BACK TO TOP ──────────────────────────────────────────────────────── */
+/* Appears once there is something to go back up to. Reuses the scroll handler
+   rather than adding a second listener. */
+const toTop = document.getElementById("toTop");
+toTop.addEventListener("click", () => {
+  window.scrollTo({top:0, behavior:"smooth"});
+  setActive(secs[0] && secs[0].id);
+  lockUntil = Date.now() + 900;
+  document.getElementById("top")?.focus?.();
+});
+function paintToTop(){ toTop.classList.toggle("show", window.scrollY > 600); }
+window.addEventListener("scroll", paintToTop, {passive:true});
+
 /* ── GO ────────────────────────────────────────────────────────────────── */
-drawBank(); paintStats(); markActive();
+drawBank(); paintStats(); markActive(); paintToTop();
 })();
 </script>
 <script>
