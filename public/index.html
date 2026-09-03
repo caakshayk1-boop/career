@@ -240,6 +240,33 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .role-a a.alt{font:500 var(--t-3)/1 var(--ui);color:var(--muted)}
 .role-a em{margin-left:auto;font-style:normal;font:500 var(--t-1)/1 var(--mono);color:var(--dim)}
 
+
+/* ── LIFE ──────────────────────────────────────────────────────────────── */
+.lc{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
+  padding:15px 17px;margin-bottom:11px}
+.lc h4{margin:0 0 7px;font:600 var(--t-6)/1.35 var(--ui);color:var(--text);font-family:var(--ui)}
+.lc .k{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.lc p{font-size:var(--t-5);line-height:1.7;color:var(--muted);margin:0}
+.lc p+p{margin-top:9px}
+.lc b{color:var(--text)}
+.lc .do{margin-top:10px;padding-top:9px;border-top:1px solid var(--line);
+  font-size:var(--t-4);color:var(--text)}
+.lc .do span{color:var(--accent);font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;margin-right:7px}
+.lgrid{display:grid;gap:11px}
+@media(min-width:760px){.lgrid.two{grid-template-columns:1fr 1fr}}
+.wordr{display:flex;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--line)}
+.wordr:last-child{border-bottom:0}
+.wordr b{flex:none;min-width:118px;color:var(--text);font-size:var(--t-5)}
+.wordr span{font-size:var(--t-4);color:var(--muted);line-height:1.6}
+.epi{padding:11px 0;border-bottom:1px solid var(--line)}
+.epi:last-child{border-bottom:0}
+.epi b{display:block;font-size:var(--t-5);color:var(--text);line-height:1.45}
+.epi span{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--dim);margin-top:5px}
+.epi p{font-size:var(--t-4);color:var(--muted);margin-top:6px;line-height:1.6}
+
 /* ── CHECKLIST ─────────────────────────────────────────────────────────── */
 .ck{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
 .ck:last-child{border-bottom:0}
@@ -289,6 +316,11 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   <a href="#intel"   data-s="intel"><i>09</i>Market intel</a>
   <a href="#money"   data-s="money"><i>10</i>Money</a>
   <a href="#long"    data-s="long"><i>11</i>The long game</a>
+  <span class="rail-h">Life</span>
+  <a href="#learn"   data-s="learn"><i>12</i>Reading</a>
+  <a href="#prac"    data-s="prac"><i>13</i>Practice</a>
+  <a href="#mindsec" data-s="mindsec"><i>14</i>Mind</a>
+  <a href="#drills"  data-s="drills"><i>15</i>Drills</a>
 </nav>
 
 <main>
@@ -890,6 +922,43 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
+<!-- ══ 12–15 LIFE ════════════════════════════════════════════════════════
+     Rendered from news.askakshay.com/today.json ["desk"] — the same objects
+     generate.py already builds for the paper. No generator runs here. -->
+<section class="sec" id="learn">
+  <span class="sec-k">12 — Reading</span>
+  <h2>The book, the wire, the listening</h2>
+  <p class="sec-s">One chapter a day with the whole argument underneath it, the analysis worth
+     ten minutes, and what is worth listening to.</p>
+  <hr class="rule">
+  <div id="lifeLearn"><div class="empty">Loading…</div></div>
+</section>
+
+<section class="sec" id="prac">
+  <span class="sec-k">13 — Practice</span>
+  <h2>The daily reps</h2>
+  <p class="sec-s">Spanish, the word, the speaking drill, and one thing to do with your daughter
+     today.</p>
+  <hr class="rule">
+  <div id="lifePrac"><div class="empty">Loading…</div></div>
+</section>
+
+<section class="sec" id="mindsec">
+  <span class="sec-k">14 — Mind</span>
+  <h2>How to think, and what thinking is already done</h2>
+  <p class="sec-s">The day's wisdom, the traditions, the way, and the week's review prompt.</p>
+  <hr class="rule">
+  <div id="lifeMind"><div class="empty">Loading…</div></div>
+</section>
+
+<section class="sec" id="drills">
+  <span class="sec-k">15 — Drills</span>
+  <h2>Scored against a board</h2>
+  <p class="sec-s">The CFO track's four a day, the chess lesson, and yesterday's games.</p>
+  <hr class="rule">
+  <div id="lifeDrills"><div class="empty">Loading…</div></div>
+</section>
+
 </main>
 </div>
 
@@ -1324,6 +1393,151 @@ function drawRoles(){
   } catch (err) {
     meta.innerHTML = `<b>Could not load the feed.</b> ${esc(String(err.message || err))}.
       The scraper publishes to <code>news.askakshay.com/jobs.json</code> — check that it ran.`;
+  }
+})();
+
+
+/* ══ LIFE ══════════════════════════════════════════════════════════════════
+   today.json["desk"] carries every payload generate.py already built for the
+   paper, and is served with Access-Control-Allow-Origin: *. Nothing is
+   generated here. Every renderer tolerates a missing or reshaped key — the
+   producer lives in another repo and this page must degrade, not blank. */
+const DESK_FEED = "https://news.askakshay.com/today.json";
+
+const has = v => v && (Array.isArray(v) ? v.length : Object.keys(v).length);
+const card = (kicker, title, body, extra) =>
+  `<div class="lc">${kicker ? `<span class="k">${esc(kicker)}</span>` : ""}
+     ${title ? `<h4>${esc(title)}</h4>` : ""}
+     ${body ? `<p>${esc(body)}</p>` : ""}${extra || ""}</div>`;
+const doLine = (label, text) => text
+  ? `<p class="do"><span>${esc(label)}</span>${esc(text)}</p>` : "";
+const counter = o => (o && o.index != null && o.total)
+  ? `${o.index} of ${o.total}` : "";
+
+function renderLearn(d){
+  let h = "";
+  const b = d.book;
+  if (has(b)) {
+    const crux = Array.isArray(b.crux) ? b.crux.slice(0, 6) : [];
+    h += card(`Book · ${counter(b) || ""}`, `${b.book || ""}${b.author ? " — " + b.author : ""}`,
+      b.chapter ? `Chapter: ${b.chapter}` : "",
+      `${b.lesson ? `<p>${esc(b.lesson)}</p>` : ""}
+       ${b.key_quote ? `<p><b>&ldquo;${esc(b.key_quote)}&rdquo;</b></p>` : ""}
+       ${crux.length ? `<ul class="tick">${crux.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}
+       ${doLine("Do", b.action)}`);
+  }
+  const sr = d.smart_reads;
+  const items = Array.isArray(sr) ? sr : (sr && (sr.items || sr.reads || sr.articles)) || [];
+  if (items.length) {
+    h += `<div class="lc"><span class="k">Smart reads</span>` +
+      items.slice(0, 6).map(a => `<div class="epi">
+        <b>${esc(a.title || a.headline || "")}</b>
+        <span>${esc(a.source || a.site || "")}${a.section ? " · " + esc(a.section) : ""}</span>
+        ${a.summary || a.takeaway ? `<p>${esc(a.summary || a.takeaway)}</p>` : ""}
+        ${a.url ? `<p><a href="${esc(a.url)}" target="_blank" rel="noopener">Read →</a></p>` : ""}
+      </div>`).join("") + `</div>`;
+  }
+  const pod = d.podcasts;
+  const eps = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
+  if (eps.length) {
+    h += `<div class="lc"><span class="k">Podcasts${pod.shows ? ` · ${pod.shows} shows` : ""}</span>` +
+      eps.slice(0, 8).map(e => `<div class="epi">
+        <b>${esc(e.title || "")}</b>
+        <span>${esc(e.show || e.channel || "")}${e.date ? " · " + esc(e.date) : ""}</span>
+        ${e.takeaway || e.summary ? `<p>${esc(e.takeaway || e.summary)}</p>` : ""}
+        ${e.url ? `<p><a href="${esc(e.url)}" target="_blank" rel="noopener">Listen →</a></p>` : ""}
+      </div>`).join("") + `</div>`;
+  }
+  return h || '<div class="empty">No reading in today\'s edition.</div>';
+}
+
+function renderPrac(d){
+  let h = "";
+  if (has(d.spanish)) h += `<div class="lc"><span class="k">Spanish</span>` +
+    d.spanish.map(w => `<div class="wordr"><b>${esc(w.word || "")}</b>
+      <span>${esc(w.meaning || "")}${w.es ? `<br><i>${esc(w.es)}</i>` : ""}
+      ${w.en ? `<br>${esc(w.en)}` : ""}</span></div>`).join("") + `</div>`;
+  if (has(d.vocab)) h += `<div class="lc"><span class="k">Vocabulary</span>` +
+    d.vocab.map(w => `<div class="wordr"><b>${esc(w.word || "")}</b>
+      <span>${w.say ? `<i>${esc(w.say)}</i> — ` : ""}${esc(w.meaning || "")}
+      ${w.example ? `<br>${esc(w.example)}` : ""}</span></div>`).join("") + `</div>`;
+  const sp = d.speaking;
+  if (has(sp)) h += card("Speaking", sp.title, sp.drill, doLine("Why", sp.why));
+  if (has(d.father)) h += `<div class="lgrid two">` + d.father.map(f =>
+    card("Father", f.title, f.do, doLine("Why", f.why))).join("") + `</div>`;
+  const dg = d.daughter;
+  if (has(dg)) h += card("Daughter", dg.heading,
+    [dg.months != null ? `${dg.months} months` : "", dg.days != null ? `${dg.days} days` : "",
+     dg.band || ""].filter(Boolean).join(" · "));
+  return h || '<div class="empty">No practice in today\'s edition.</div>';
+}
+
+function renderMind(d){
+  let h = "";
+  if (has(d.wisdom)) h += card(`Wisdom · ${counter(d.wisdom)}`, d.wisdom.title, d.wisdom.body);
+  if (has(d.life_wisdom)) h += `<div class="lgrid two">` + d.life_wisdom.map(w =>
+    card(w.tradition, `${w.term || ""}${w.translation ? " — " + w.translation : ""}`,
+         w.teaching, doLine("Apply", w.apply))).join("") + `</div>`;
+  const way = d.way;
+  if (has(way)) {
+    const parts = Object.values(way).filter(v => v && v.title);
+    if (parts.length) h += `<div class="lgrid two">` + parts.map(v =>
+      card(v.label || "The Way", v.title, v.body, doLine("Do", v.action))).join("") + `</div>`;
+  }
+  if (has(d.quote)) h += card("Quote", d.quote.name, `“${d.quote.quote || ""}”`);
+  if (has(d.lesson)) h += card(d.lesson.tradition || "Lesson", "", d.lesson.lesson,
+    d.lesson.source ? `<p class="do"><span>Source</span>${esc(d.lesson.source)}</p>` : "");
+  if (has(d.case)) h += card("Case study", d.case.title, d.case.story,
+    doLine("Lesson", d.case.lesson));
+  const rv = d.review;
+  if (has(rv)) h += card(`The Review · week ${rv.week || ""}`, rv.prompt, rv.why,
+    rv.days_left != null ? `<p class="do"><span>Days left</span>${rv.days_left}</p>` : "");
+  return h || '<div class="empty">No reflection in today\'s edition.</div>';
+}
+
+function renderDrills(d){
+  let h = "";
+  const qs = [].concat(d.interview_tech || [], d.interview_soft || [], d.cfo_field || []);
+  if (qs.length) h += `<div class="lc"><span class="k">CFO track — today's four</span>` +
+    qs.map(q => `<div class="epi"><b>${esc(q.q || q.title || "")}</b>
+      ${q.a || q.body ? `<p>${esc(q.a || q.body)}</p>` : ""}
+      ${q.who ? `<span>${esc(q.who)}</span>` : ""}</div>`).join("") + `</div>`;
+  if (has(d.chess)) h += card(`Chess · ${counter(d.chess)}`, d.chess.title, d.chess.body);
+  const sum = d.lichess_summary, games = d.lichess_games || [];
+  if (has(sum) || games.length) {
+    const line = typeof sum === "string" ? sum
+      : (sum && (sum.text || sum.summary)) || `${games.length} games yesterday`;
+    h += card("Lichess", "Yesterday", line,
+      games.length ? `<div style="margin-top:9px">` + games.slice(0, 5).map(g =>
+        `<div class="wordr"><b>${esc(g.result || g.outcome || "—")}</b>
+         <span>${esc(g.opponent || g.vs || "")}${g.opening ? " · " + esc(g.opening) : ""}
+         ${g.url ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener">replay</a>` : ""}</span></div>`
+      ).join("") + `</div>` : "");
+  }
+  const pz = d.lichess_puzzle;
+  if (has(pz)) h += card("Puzzle", pz.title || `Rating ${pz.rating || "—"}`,
+    pz.description || pz.fen || "",
+    pz.url ? `<p class="do"><span>Solve</span><a href="${esc(pz.url)}" target="_blank" rel="noopener">Open on Lichess →</a></p>` : "");
+  return h || '<div class="empty">No drills in today\'s edition.</div>';
+}
+
+(async function loadLife(){
+  const targets = {lifeLearn: renderLearn, lifePrac: renderPrac,
+                   lifeMind: renderMind, lifeDrills: renderDrills};
+  try {
+    const res = await fetch(DESK_FEED, {cache:"no-store"});
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const desk = (await res.json()).desk || {};
+    for (const [id, fn] of Object.entries(targets)) {
+      const el = document.getElementById(id);
+      try { el.innerHTML = fn(desk); }
+      catch (e) { el.innerHTML = `<div class="empty">Could not render this section — ${esc(e.message)}</div>`; }
+    }
+  } catch (err) {
+    for (const id of Object.keys(targets))
+      document.getElementById(id).innerHTML =
+        `<div class="empty">Feed unavailable — ${esc(String(err.message || err))}.
+         The daily build publishes it to <code>news.askakshay.com/today.json</code>.</div>`;
   }
 })();
 
