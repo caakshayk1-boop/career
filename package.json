@@ -1,0 +1,15 @@
+{
+  "name": "career",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "career.askakshay.com — the job campaign: plan, positioning, interview bank, market intel.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  }
+}

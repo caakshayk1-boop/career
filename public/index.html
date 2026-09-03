@@ -1,0 +1,1184 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Campaign — Akshay Kothari</title>
+<meta name="description" content="Job campaign working surface: the plan, the positioning, the interview bank, the market intel.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+
+<style>
+/* ── FONTS ─────────────────────────────────────────────────────────────────
+   Self-hosted, same three faces as signal.askakshay.com so the two sites read
+   as one hand. font-display:swap — this page must be readable before the
+   network settles, because it gets opened on a phone between meetings. */
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-500-latin.woff2')format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-600-latin.woff2')format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-700-latin.woff2')format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'JBMono';src:url('/fonts/JetBrainsMono-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JBMono';src:url('/fonts/JetBrainsMono-500-latin.woff2')format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-600-latin.woff2')format('woff2');font-weight:600;font-display:swap}
+
+/* ── TOKENS ────────────────────────────────────────────────────────────────
+   Values lifted from signal.askakshay.com so the palettes cannot drift apart.
+   DARK IS THE DEFAULT HERE, unlike signal. This page is read early and late,
+   it is a private working surface rather than a publication, and the brief
+   asked for brutalist dark. Light is one tap away. */
+:root[data-theme="dark"]{
+  --bg:#0B0F14; --surface:#141A22; --raised:#1B222C;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#F2F5F9; --muted:#B3BDCA; --dim:#8D97A5;
+  --ink-btn:#F2F5F9; --on-ink:#0B0F14;
+  --accent:#5B9CFF; --accent-soft:rgba(91,156,255,.13); --on-accent:#06101F;
+  --up:#2BD07C; --down:#FF6B6B; --warn:#F0B429;
+  --up-soft:rgba(43,208,124,.13); --down-soft:rgba(255,107,107,.13); --warn-soft:rgba(240,180,41,.13);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#FFFFFF; --surface:#FFFFFF; --raised:#F6F7F8;
+  --line:rgba(0,0,0,.09); --line2:rgba(0,0,0,.14);
+  --text:#0A0A0A; --muted:#3E3E3E; --dim:#6B6B6B;
+  --ink-btn:#111111; --on-ink:#FFFFFF;
+  --accent:#1B5FD9; --accent-soft:rgba(27,95,217,.07); --on-accent:#FFFFFF;
+  --up:#0E7C48; --down:#C23B2E; --warn:#8A6208;
+  --up-soft:rgba(14,124,72,.09); --down-soft:rgba(194,59,46,.08); --warn-soft:rgba(138,98,8,.09);
+  color-scheme:light;
+}
+:root{
+  --ui:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JBMono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --t-1:10px; --t-2:11px; --t-3:12px; --t-4:13px; --t-5:14px;
+  --t-6:16px; --t-7:18px; --t-8:21px; --t-9:25px; --t-10:30px;
+  --r-1:4px; --r-2:6px; --r-3:8px; --r-4:12px; --r-5:16px; --r-pill:999px;
+  --ls-tight:-.02em; --ls-snug:-.012em; --ls-wide:.05em; --ls-wider:.1em; --ls-widest:.14em;
+  --t-fast:140ms; --t-mid:220ms; --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(16px,4vw,32px); --barh:56px; --rail:216px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--barh) + 18px)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:400 var(--t-6)/1.6 var(--ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:600;letter-spacing:var(--ls-snug);line-height:1.22}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:2px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-1)}
+::selection{background:var(--accent);color:var(--on-accent)}
+
+/* ── CHROME ────────────────────────────────────────────────────────────── */
+.bar{position:sticky;top:0;z-index:40;height:var(--barh);display:flex;align-items:center;
+  gap:12px;padding:0 var(--gut);border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.mark{font:700 var(--t-6)/1 var(--ui);letter-spacing:var(--ls-tight);text-decoration:none;color:var(--text);white-space:nowrap}
+.mark i{color:var(--accent);font-style:normal}
+.bar-sp{flex:1}
+.icon-btn{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);
+  border-radius:var(--r-3);background:none;color:var(--muted);cursor:pointer;font-size:var(--t-5);
+  transition:color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease)}
+.icon-btn:hover{color:var(--text);border-color:var(--line2)}
+.srch{display:inline-flex;align-items:center;gap:8px;background:var(--surface);cursor:text;
+  border:1px solid var(--line);border-radius:var(--r-2);padding:0 10px;min-height:34px;
+  color:var(--dim);font:400 var(--t-4)/1 var(--ui);min-width:0}
+.srch input{border:0;background:none;outline:none;color:var(--text);font:inherit;width:clamp(80px,18vw,200px);padding:0}
+.srch kbd{font:500 var(--t-1)/1 var(--mono);border:1px solid var(--line2);border-radius:var(--r-1);padding:3px 4px;color:var(--dim)}
+@media(max-width:640px){.srch kbd{display:none}}
+
+/* ── SHELL ─────────────────────────────────────────────────────────────── */
+.shell{max-width:1240px;margin:0 auto;padding:0 var(--gut);
+  display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:900px){.shell{grid-template-columns:minmax(0,1fr);gap:0}}
+
+.rail{position:sticky;top:calc(var(--barh) + 20px);padding:28px 0 40px;display:flex;flex-direction:column;gap:2px}
+.rail a{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--dim);
+  font:500 var(--t-4)/1 var(--ui);padding:9px 10px;border-radius:var(--r-2);
+  transition:color var(--t-fast) var(--ease),background var(--t-fast) var(--ease)}
+.rail a i{font:500 var(--t-1)/1 var(--mono);color:var(--dim);opacity:.7;font-style:normal;min-width:16px}
+.rail a:hover{color:var(--text);background:var(--raised)}
+.rail a.on{color:var(--text);background:var(--accent-soft)}
+.rail a.on i{color:var(--accent);opacity:1}
+.rail-h{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-widest);text-transform:uppercase;
+  color:var(--dim);padding:16px 10px 7px}
+@media(max-width:900px){
+  .rail{position:sticky;top:var(--barh);z-index:39;flex-direction:row;gap:6px;overflow-x:auto;
+    padding:10px 0;background:var(--bg);border-bottom:1px solid var(--line);
+    scrollbar-width:none;-ms-overflow-style:none}
+  .rail::-webkit-scrollbar{display:none}
+  .rail a{flex:none;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 13px;white-space:nowrap}
+  .rail a i{display:none}
+  .rail-h{display:none}
+}
+
+main{padding:clamp(26px,4vw,44px) 0 100px;min-width:0}
+</style>
+<style>
+/* ── SECTIONS ──────────────────────────────────────────────────────────── */
+.sec{padding:0 0 clamp(48px,6vw,76px);scroll-margin-top:calc(var(--barh) + 24px)}
+.sec-k{display:block;font:500 var(--t-2)/1 var(--mono);letter-spacing:var(--ls-widest);
+  text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sec h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px}
+.sec-s{color:var(--muted);font-size:var(--t-6);max-width:66ch;margin-bottom:clamp(20px,2.6vw,30px)}
+.rule{height:1px;background:var(--line);border:0;margin:0 0 clamp(22px,3vw,32px)}
+
+/* ── HERO ──────────────────────────────────────────────────────────────── */
+.hero{padding:clamp(20px,3vw,34px) 0 clamp(34px,4.4vw,52px);border-bottom:1px solid var(--line);margin-bottom:clamp(34px,4vw,50px)}
+.hero h1{font-size:clamp(32px,5.4vw,54px);letter-spacing:var(--ls-tight);margin-bottom:14px;max-width:19ch}
+.hero p{color:var(--muted);max-width:62ch;font-size:var(--t-7)}
+.hero-m{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.stat{border:1px solid var(--line);border-radius:var(--r-3);padding:11px 14px;background:var(--surface);min-width:112px}
+.stat b{display:block;font:600 var(--t-8)/1.1 var(--mono);font-variant-numeric:tabular-nums;letter-spacing:var(--ls-tight)}
+.stat span{display:block;font:500 var(--t-1)/1.3 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--dim);margin-top:5px}
+.stat.hot b{color:var(--warn)}
+
+/* ── CARDS & PROSE ─────────────────────────────────────────────────────── */
+.card{border:1px solid var(--line);border-radius:var(--r-4);padding:clamp(16px,2.2vw,22px);
+  background:var(--surface);margin-bottom:14px}
+.card h3{font-size:var(--t-7);margin-bottom:8px}
+.card p+p{margin-top:10px}
+.card p,.card li{color:var(--muted);font-size:var(--t-5);line-height:1.68}
+.card strong,.card b{color:var(--text);font-weight:600}
+.grid{display:grid;gap:14px}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.lede{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--r-3) var(--r-3) 0;
+  padding:15px 17px;margin-bottom:20px;font-size:var(--t-6);color:var(--text);line-height:1.62}
+.warnbox{border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--warn-soft);
+  border-radius:0 var(--r-3) var(--r-3) 0;padding:15px 17px;margin-bottom:16px;font-size:var(--t-5);color:var(--muted)}
+.warnbox b{color:var(--text)}
+ul.tick,ul.plain{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+ul.tick li{padding-left:22px;position:relative}
+ul.tick li::before{content:"→";position:absolute;left:0;color:var(--accent);font-family:var(--mono);font-size:var(--t-4)}
+ul.plain li{padding-left:16px;position:relative}
+ul.plain li::before{content:"·";position:absolute;left:5px;color:var(--dim)}
+.src{font:400 var(--t-2)/1.5 var(--mono);color:var(--dim);margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.src a{color:var(--dim)}
+
+/* ── TABLES ────────────────────────────────────────────────────────────── */
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-4);margin-bottom:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:var(--t-4)}
+th{text-align:left;font:500 var(--t-1)/1.3 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
+  color:var(--dim);padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--raised)}
+td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top;line-height:1.55}
+tr:last-child td{border-bottom:0}
+td b,td strong{color:var(--text)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--text)}
+
+/* ── PILLS ─────────────────────────────────────────────────────────────── */
+.pill{display:inline-flex;align-items:center;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;padding:4px 7px;border-radius:var(--r-1);border:1px solid var(--line2);
+  color:var(--dim);white-space:nowrap}
+.pill.up{color:var(--up);border-color:var(--up);background:var(--up-soft)}
+.pill.warn{color:var(--warn);border-color:var(--warn);background:var(--warn-soft)}
+.pill.down{color:var(--down);border-color:var(--down);background:var(--down-soft)}
+.pill.acc{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+/* ── DRILL / Q&A ───────────────────────────────────────────────────────── */
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.chip{flex:none;font:500 var(--t-3)/1 var(--ui);padding:8px 13px;border-radius:var(--r-pill);
+  border:1px solid var(--line);background:var(--surface);color:var(--muted);cursor:pointer;
+  min-height:34px;transition:all var(--t-fast) var(--ease)}
+.chip:hover{color:var(--text);border-color:var(--line2)}
+.chip[aria-pressed="true"]{background:var(--ink-btn);color:var(--on-ink);border-color:var(--ink-btn)}
+.q{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);margin-bottom:10px;overflow:hidden}
+.q-h{display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;background:none;border:0;
+  padding:15px 17px;cursor:pointer;min-height:52px}
+.q-h:hover{background:var(--raised)}
+.q-n{flex:none;font:500 var(--t-1)/1 var(--mono);color:var(--dim);border:1px solid var(--line2);
+  border-radius:var(--r-1);padding:5px 6px;margin-top:1px}
+.q-t{flex:1;font:500 var(--t-5)/1.5 var(--ui);color:var(--text);min-width:0}
+.q-tag{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
+  color:var(--dim);margin-top:7px}
+.q-x{flex:none;color:var(--dim);font-family:var(--mono);font-size:var(--t-5);transition:transform var(--t-fast) var(--ease)}
+.q.open .q-x{transform:rotate(45deg)}
+.q-b{display:none;padding:0 17px 17px;border-top:1px solid var(--line)}
+.q.open .q-b{display:block}
+.q-b p{color:var(--muted);font-size:var(--t-5);line-height:1.7;margin-top:13px}
+.q-b strong{color:var(--text)}
+.q-b .lbl{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
+  color:var(--accent);display:block;margin-top:15px}
+.conf{display:flex;align-items:center;gap:7px;margin-top:16px;padding-top:13px;border-top:1px solid var(--line);flex-wrap:wrap}
+.conf span{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--dim);margin-right:3px}
+.conf button{border:1px solid var(--line2);background:none;color:var(--dim);border-radius:var(--r-1);
+  padding:6px 10px;cursor:pointer;font:500 var(--t-2)/1 var(--mono);transition:all var(--t-fast) var(--ease)}
+.conf button:hover{color:var(--text);border-color:var(--text)}
+.conf button.sel[data-v="1"]{background:var(--down-soft);border-color:var(--down);color:var(--down)}
+.conf button.sel[data-v="2"]{background:var(--warn-soft);border-color:var(--warn);color:var(--warn)}
+.conf button.sel[data-v="3"]{background:var(--up-soft);border-color:var(--up);color:var(--up)}
+.empty{padding:30px 16px;text-align:center;color:var(--dim);font-size:var(--t-5);
+  border:1px dashed var(--line2);border-radius:var(--r-4)}
+
+/* ── CHECKLIST ─────────────────────────────────────────────────────────── */
+.ck{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.ck:last-child{border-bottom:0}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:19px;height:19px;margin:2px 0 0;cursor:pointer;
+  border:1px solid var(--line2);border-radius:var(--r-1);background:none;display:grid;place-items:center}
+.ck input:checked{background:var(--accent);border-color:var(--accent)}
+.ck input:checked::after{content:"✓";color:var(--on-accent);font-size:12px;font-weight:700;line-height:1}
+.ck span{font-size:var(--t-5);color:var(--muted);line-height:1.6}
+.ck input:checked+span{color:var(--dim);text-decoration:line-through}
+
+/* ── FOOT ──────────────────────────────────────────────────────────────── */
+.foot{max-width:1240px;margin:0 auto;padding:26px var(--gut) 40px;border-top:1px solid var(--line);
+  font:400 var(--t-3)/1.75 var(--mono);color:var(--dim)}
+mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2px}
+@media print{
+  .bar,.rail,.chips,.conf,.q-x{display:none!important}
+  .shell{grid-template-columns:1fr}.q-b{display:block!important}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="mark" href="#top"><i>◆</i> The Campaign</a>
+  <div class="bar-sp"></div>
+  <label class="srch" for="q">
+    <span aria-hidden="true">⌕</span>
+    <input id="q" type="search" placeholder="Search everything" autocomplete="off" spellcheck="false">
+    <kbd>/</kbd>
+  </label>
+  <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch theme"><span aria-hidden="true">◐</span></button>
+</header>
+
+<div class="shell" id="top">
+<nav class="rail" aria-label="Sections">
+  <span class="rail-h">Daily</span>
+  <a href="#today"   data-s="today"><i>01</i>Today</a>
+  <a href="#drill"   data-s="drill"><i>02</i>Interview bank</a>
+  <a href="#ref"     data-s="ref"><i>03</i>Technical</a>
+  <span class="rail-h">Campaign</span>
+  <a href="#why"     data-s="why"><i>04</i>Why it stalled</a>
+  <a href="#plan"    data-s="plan"><i>05</i>The plan</a>
+  <a href="#pitch"   data-s="pitch"><i>06</i>Positioning</a>
+  <a href="#targets" data-s="targets"><i>07</i>Targets</a>
+  <span class="rail-h">Leverage</span>
+  <a href="#intel"   data-s="intel"><i>08</i>Market intel</a>
+  <a href="#money"   data-s="money"><i>09</i>Money</a>
+  <a href="#long"    data-s="long"><i>10</i>The long game</a>
+</nav>
+
+<main>
+<section class="hero">
+  <h1>One role. Ninety days. Everything else is noise.</h1>
+  <p>Financial Controller or Head of FP&amp;A, UAE or Malaysia. This page is the working
+     surface for that — the plan, the pitch, the question bank, and the numbers that decide
+     what a package is worth. Not a reading list.</p>
+  <div class="hero-m">
+    <div class="stat"><b id="stDays">—</b><span>Days to target</span></div>
+    <div class="stat"><b id="stApps">0</b><span>Applications</span></div>
+    <div class="stat"><b id="stConv">0</b><span>Live conversations</span></div>
+    <div class="stat"><b id="stDrill">0<small style="font-size:.55em;color:var(--dim)">/40</small></b><span>Drilled cold</span></div>
+  </div>
+</section>
+
+<!-- ══ 01 TODAY ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="today">
+  <span class="sec-k">01 — Today</span>
+  <h2>Twenty minutes, before anything else</h2>
+  <p class="sec-s">Rotates on the date, so it is never the same three days running and never
+     a choice you have to make at 6am. Do these, close the tab.</p>
+  <hr class="rule">
+
+  <div class="lede" id="todayFocus">—</div>
+
+  <div class="grid g3" id="todayQs"></div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>The non-negotiable three</h3>
+    <p>Applications are the least valuable of the three and the easiest to do. That is exactly why
+       they crowd out the other two. Do them in this order.</p>
+    <label class="ck"><input type="checkbox" data-ck="d1"><span><b>One warm contact.</b> A message to a
+      person, not a portal. Ex-Landmark in Dubai, a recruiter you have already spoken to, an alum, a
+      second-degree LinkedIn connection at a target company. One. Every working day.</span></label>
+    <label class="ck"><input type="checkbox" data-ck="d2"><span><b>One drill answered out loud.</b>
+      Out loud, not in your head — the gap between knowing an answer and saying it cleanly is the
+      whole interview.</span></label>
+    <label class="ck"><input type="checkbox" data-ck="d3"><span><b>One targeted application.</b> Targeted
+      means the summary line was rewritten for that role. If you did not change a word, it does not
+      count and it will not land.</span></label>
+  </div>
+
+  <div class="card">
+    <h3>Counters</h3>
+    <p>Kept in this browser only. Nothing is sent anywhere.</p>
+    <div class="chips" style="margin:14px 0 0">
+      <button class="chip" data-inc="apps">+1 application</button>
+      <button class="chip" data-inc="conv">+1 conversation</button>
+      <button class="chip" data-inc="apps" data-dec="1">−1 application</button>
+      <button class="chip" data-inc="conv" data-dec="1">−1 conversation</button>
+      <button class="chip" id="resetWeek">Reset the daily three</button>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 02 DRILL ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="drill">
+  <span class="sec-k">02 — Interview bank</span>
+  <h2>Forty questions, answered in your own facts</h2>
+  <p class="sec-s">Every model answer below is built from your actual record — Landmark, D365,
+     two-country consolidation, 60+ leases. Rate each one honestly. The rating is the only
+     thing that tells you what to drill tomorrow.</p>
+  <hr class="rule">
+  <div class="chips" id="drillFilters"></div>
+  <div id="drillList"></div>
+</section>
+
+<!-- ══ 03 TECHNICAL ══════════════════════════════════════════════════════ -->
+<section class="sec" id="ref">
+  <span class="sec-k">03 — Technical</span>
+  <h2>The eight things a Controller interview actually tests</h2>
+  <p class="sec-s">Not a textbook. The eight mechanisms you will be asked to explain on a
+     whiteboard or over a call, each in the shortest form that survives a follow-up question.</p>
+  <hr class="rule">
+  <div id="refList"></div>
+</section>
+
+<!-- ══ 04 WHY IT STALLED ═════════════════════════════════════════════════ -->
+<section class="sec" id="why">
+  <span class="sec-k">04 — Diagnosis</span>
+  <h2>Why a hundred applications returned nothing</h2>
+  <p class="sec-s">Ranked by how much each one cost you. The first is the big one and it is not
+     the CV.</p>
+  <hr class="rule">
+
+  <div class="lede">
+    A hundred applications through job portals, from Malaysia, for roles in another country, is
+    not a hundred attempts. It is one attempt at the lowest-yield channel there is, repeated a
+    hundred times. Fixing the document raises the conversion on a channel that barely converts.
+    <b>Change the channel first.</b>
+  </div>
+
+  <div class="tw">
+   <table>
+    <thead><tr><th>#</th><th>Cause</th><th>Why it kills the application</th><th>Fixed</th></tr></thead>
+    <tbody>
+     <tr><td class="num">1</td><td><b>Channel, not document</b></td>
+       <td>Gulf finance hiring runs on recruiters and internal referral. A cold portal application
+           from a non-resident sits behind every internal candidate and every agency shortlist.
+           Base rate is brutal regardless of CV quality.</td>
+       <td><span class="pill warn">Plan §05</span></td></tr>
+     <tr><td class="num">2</td><td><b>Broken text layer</b></td>
+       <td>Your PDF's text layer contained <code>FP&amp;A;</code> and <code>P&amp;L;</code> — HTML
+           entity leakage from the generator. Seven corrupted instances against two clean ones. Every
+           ATS parsing your title field read <code>FP&amp;A; Manager</code>.</td>
+       <td><span class="pill up">Fixed</span></td></tr>
+     <tr><td class="num">3</td><td><b>Graphic stat bar</b></td>
+       <td>The six-figure header band parsed as six orphaned numbers followed by six orphaned labels.
+           An ATS saw <code>10+ 7+ 400M 60+ 40% 2</code> attached to nothing.</td>
+       <td><span class="pill up">Removed</span></td></tr>
+     <tr><td class="num">4</td><td><b>Title mismatch</b></td>
+       <td>Headline claimed "Financial Controller". Experience said "FP&amp;A Manager". Recruiters
+           filter on held title; the mismatch reads as inflation and ends the read.</td>
+       <td><span class="pill up">Honest now</span></td></tr>
+     <tr><td class="num">5</td><td><b>Page one had no employer</b></td>
+       <td>Summary, competencies and achievements filled page one. Landmark Group — a Dubai-headquartered
+           group, your single strongest Gulf credential — first appeared on page two.</td>
+       <td><span class="pill up">Page one</span></td></tr>
+     <tr><td class="num">6</td><td><b>Local currency</b></td>
+       <td>MYR 400M means nothing to a Dubai or London reader. It reads as a small local number
+           because they cannot size it.</td>
+       <td><span class="pill up">USD 95M+</span></td></tr>
+     <tr><td class="num">7</td><td><b>Seven perfect-record claims</b></td>
+       <td>"Zero restatements", "zero audit findings", "zero material control failures", "zero lapses",
+           "100% compliance", twice more. Real controllers have findings. Seven perfect claims discount
+           each other.</td>
+       <td><span class="pill up">Cut to 2</span></td></tr>
+     <tr><td class="num">8</td><td><b>Three target countries</b></td>
+       <td>"Malaysia, UAE and India" in the summary tells a recruiter you are shotgunning, and that
+           India is the fallback.</td>
+       <td><span class="pill up">One line</span></td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="card">
+    <h3>Does it read as faking?</h3>
+    <p>No. It reads as <b>over-optimised</b>, which in 2026 is discarded just as fast and for a
+      worse reason — the reader assumes a model wrote it and stops attributing any of it to you.</p>
+    <p>The tells were specific: every achievement a superlative with a round number; seven claims of
+      a perfect record; "Board- and C-suite-level financial intelligence", a phrase no working
+      controller writes; and the same four facts repeated across summary, achievements and experience
+      so the document was roughly 40% redundant.</p>
+    <p><b>Nothing in it was untrue.</b> The problem was that everything was pitched at maximum, so a
+      reader had no way to tell which two facts actually mattered. The rewrite keeps every claim and
+      states each one once.</p>
+  </div>
+</section>
+
+<!-- ══ 05 PLAN ═══════════════════════════════════════════════════════════ -->
+<section class="sec" id="plan">
+  <span class="sec-k">05 — The plan</span>
+  <h2>Ninety days, four fortnights</h2>
+  <p class="sec-s">The only structural change that matters: move effort out of portals and into
+     people. Everything below serves that.</p>
+  <hr class="rule">
+
+  <div class="tw">
+   <table>
+    <thead><tr><th>Channel</th><th>You did</th><th>Do instead</th><th>Why</th></tr></thead>
+    <tbody>
+     <tr><td><b>Portals</b><br><span class="pill">LinkedIn · Bayt · GulfTalent</span></td>
+       <td class="num">~100%</td><td class="num">15%</td>
+       <td>Keep it — it is cheap. Stop treating it as the campaign.</td></tr>
+     <tr><td><b>Recruiters</b><br><span class="pill acc">Highest yield</span></td>
+       <td class="num">~0%</td><td class="num">40%</td>
+       <td>Gulf finance roles are filled through a small number of agencies. Ten real relationships
+           beats a thousand applications. They are paid to place you.</td></tr>
+     <tr><td><b>Referral</b><br><span class="pill acc">Your unfair advantage</span></td>
+       <td class="num">~0%</td><td class="num">30%</td>
+       <td>Landmark is headquartered in Dubai. Ex-colleagues have moved across the group and to
+           Alshaya, Al-Futtaim, Apparel, Chalhoub. You already know these people.</td></tr>
+     <tr><td><b>Direct to hiring manager</b></td>
+       <td class="num">~0%</td><td class="num">15%</td>
+       <td>Find the Finance Director, not the HR inbox. A short, specific note about their business
+           gets read when a CV does not.</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Fortnight 1 — Rebuild the base</h3>
+      <ul class="tick">
+        <li>New CV out, LinkedIn headline and About rewritten to match it word for word</li>
+        <li>List every ex-Landmark contact now in the GCC. Target: 25 names.</li>
+        <li>Register properly with 8–10 Gulf finance recruiters — a call, not a CV upload</li>
+        <li>Shortlist 30 target employers (§07) and find the finance lead at each</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fortnight 2 — Open conversations</h3>
+      <ul class="tick">
+        <li>Contact all 25. Not "any openings?" — a specific question about their move</li>
+        <li>First recruiter calls. Ask what they are actually briefed on, and the real band</li>
+        <li>Drill the 12 red-rated questions until they are green</li>
+        <li>Three targeted applications a week. Only three. Each one rewritten.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fortnight 3 — Convert</h3>
+      <ul class="tick">
+        <li>First-round interviews. Expect technical to be easier than you fear and "why leave
+            after seven years" to be harder.</li>
+        <li>Second wave of contacts — the people the first 25 referred you to</li>
+        <li>Case/modelling test prep: three-statement build under time pressure</li>
+        <li>Ask every recruiter for the band before the second interview, not after</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Fortnight 4–6 — Close</h3>
+      <ul class="tick">
+        <li>Final rounds, package negotiation (§09)</li>
+        <li>Never negotiate against yourself — one number, held, with a reason</li>
+        <li>Get the offer in writing with housing, schooling, flights and visa itemised</li>
+        <li>If nothing has converted by week 10, the problem is the pitch, not the market — rerun §04</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="warnbox">
+    <b>The honest constraint.</b> You are competing against candidates already in the UAE who need
+    no relocation and can start in two weeks. You will not out-compete them on convenience. You beat
+    them on the thing they do not have: multi-country consolidation for a Dubai-headquartered group,
+    an ERP implementation you led, and IFRS plus a local GAAP. Lead with that in the first two
+    sentences of every conversation, or you are just another remote CV.
+  </div>
+</section>
+
+<!-- ══ 06 POSITIONING ════════════════════════════════════════════════════ -->
+<section class="sec" id="pitch">
+  <span class="sec-k">06 — Positioning</span>
+  <h2>One sentence, three stories, six numbers</h2>
+  <p class="sec-s">If you can say these without preparing, you are ready for any first-round call.</p>
+  <hr class="rule">
+
+  <div class="card">
+    <h3>The sentence</h3>
+    <p style="font-size:var(--t-7);color:var(--text);line-height:1.6;font-family:var(--serif)">
+      "I am a Chartered Accountant running finance for Landmark Group's Malaysia and Indonesia retail
+      businesses — about USD 95 million across 60-plus stores. I own the budget and forecast,
+      consolidate both entities under IFRS and MPERS, and I led the finance side of our Dynamics 365
+      implementation, which took 40% out of the month-end close."</p>
+    <p>Four facts, no adjectives. Say it in under twenty seconds. Everything else in the call is a
+      follow-up to one of those four.</p>
+  </div>
+
+  <div class="grid g3">
+    <div class="card">
+      <h3>Story 1 — The ERP</h3>
+      <p><b>S</b> Two countries closing separately, consolidation done by hand in spreadsheets.</p>
+      <p><b>T</b> Finance lead for D365 across both entities.</p>
+      <p><b>A</b> Rebuilt the chart of accounts so both entities mapped to one group structure,
+        ran the migration and UAT, trained the teams, went live.</p>
+      <p><b>R</b> Close time down 40%; manual consolidation gone entirely.</p>
+      <p class="src">Use for: change management, systems, project leadership, "tell me about
+        something you drove end to end".</p>
+    </div>
+    <div class="card">
+      <h3>Story 2 — The consolidation</h3>
+      <p><b>S</b> Two legal entities, two reporting frameworks, one group answer needed monthly.</p>
+      <p><b>T</b> Own group consolidation under IFRS and MPERS.</p>
+      <p><b>A</b> Standardised the reporting calendar and intercompany process, built the
+        translation and elimination logic, held one close discipline across both countries.</p>
+      <p><b>R</b> No restatements and no audit adjustments since taking ownership.</p>
+      <p class="src">Use for: technical depth, controls, audit relationships, attention to detail.</p>
+    </div>
+    <div class="card">
+      <h3>Story 3 — Store economics</h3>
+      <p><b>S</b> 60+ stores, not all of them earning their lease.</p>
+      <p><b>T</b> Make the portfolio's economics visible enough to act on.</p>
+      <p><b>A</b> Store-level contribution margin analysis, then the renegotiate / relocate / close
+        conversation with Retail Heads and Operations.</p>
+      <p><b>R</b> Decisions taken on numbers rather than on tenure; group EBITDA protected.</p>
+      <p class="src">Use for: commercial judgement, influencing without authority, "a time you
+        disagreed with the business".</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Six numbers to know cold</h3>
+    <p>You will be asked for at least two of these in every first round. Hesitating on your own
+      numbers costs more than getting a technical answer slightly wrong.</p>
+    <div class="tw" style="margin-top:14px">
+     <table>
+      <tbody>
+       <tr><td><b>Revenue you plan</b></td><td class="num">USD 95M+ · MYR 400M+</td></tr>
+       <tr><td><b>Stores</b></td><td class="num">60+, two countries</td></tr>
+       <tr><td><b>Entities consolidated</b></td><td class="num">2, under IFRS and MPERS</td></tr>
+       <tr><td><b>Close improvement</b></td><td class="num">40% faster, post-D365</td></tr>
+       <tr><td><b>Leases under IFRS 16</b></td><td class="num">60+ active</td></tr>
+       <tr><td><b>Team</b></td><td class="num">4 analysts supervised (2019–23)</td></tr>
+      </tbody>
+     </table>
+    </div>
+    <p style="margin-top:14px"><b>Sharpen these before your next call.</b> "40%" is weaker than
+      "ten working days to six". If you know the real before-and-after, use it — a specific pair of
+      numbers is the single most credible thing you can say.</p>
+  </div>
+</section>
+
+<!-- ══ 07 TARGETS ════════════════════════════════════════════════════════ -->
+<section class="sec" id="targets">
+  <span class="sec-k">07 — Targets</span>
+  <h2>Where your exact experience transfers</h2>
+  <p class="sec-s">Multi-country retail, IFRS plus a local GAAP, lease-heavy store estate, ERP
+     migration. These are the groups where that is the job description, not a nice-to-have.</p>
+  <hr class="rule">
+
+  <div class="warnbox">
+    <b>Verify before you apply.</b> This is a shortlist of where the fit is structural, built from
+    your profile — not a list of confirmed vacancies. Check each company's own careers page for what
+    is actually open.
+  </div>
+
+  <div class="tw">
+   <table>
+    <thead><tr><th>Group</th><th>Where</th><th>Why you fit</th><th>Route in</th></tr></thead>
+    <tbody>
+     <tr><td><b>Landmark Group</b></td><td>Dubai</td>
+       <td>Your own group. Internal moves need no new relationship and no explaining of context.</td>
+       <td><span class="pill up">Internal — try first</span></td></tr>
+     <tr><td><b>Alshaya Group</b></td><td>Kuwait · Dubai</td>
+       <td>Multi-brand, multi-country retail franchise. Same store-economics and lease problems.</td>
+       <td><span class="pill acc">Referral</span></td></tr>
+     <tr><td><b>Al-Futtaim</b></td><td>Dubai</td>
+       <td>Retail plus real estate — both halves of your CV in one group.</td>
+       <td><span class="pill acc">Referral / recruiter</span></td></tr>
+     <tr><td><b>Majid Al Futtaim</b></td><td>Dubai</td>
+       <td>Malls and retail. Lease accounting at scale is a live discipline, not a footnote.</td>
+       <td><span class="pill acc">Recruiter</span></td></tr>
+     <tr><td><b>Apparel Group</b></td><td>Dubai</td>
+       <td>Fashion retail across many territories. Consolidation-heavy.</td>
+       <td><span class="pill acc">Referral</span></td></tr>
+     <tr><td><b>Chalhoub Group</b></td><td>Dubai</td>
+       <td>Luxury retail, strong finance function, invests in systems.</td>
+       <td><span class="pill acc">Recruiter</span></td></tr>
+     <tr><td><b>GMG</b></td><td>Dubai</td>
+       <td>Sports and retail distribution across the GCC and Asia — including your region.</td>
+       <td><span class="pill acc">Referral</span></td></tr>
+     <tr><td><b>Lulu Group</b></td><td>Abu Dhabi</td>
+       <td>Very large store estate, multi-country, heavy Indian-qualified finance bench.</td>
+       <td><span class="pill">Portal + referral</span></td></tr>
+     <tr><td><b>AEON Co. (M)</b></td><td>Malaysia</td>
+       <td>Listed Malaysian retail. MPERS/MFRS and store economics are the core of the role.</td>
+       <td><span class="pill">Direct</span></td></tr>
+     <tr><td><b>Padini · Mr DIY · 99 Speedmart</b></td><td>Malaysia</td>
+       <td>Listed local retail. Controller roles here clear the new EP floor by necessity (§08).</td>
+       <td><span class="pill">Direct</span></td></tr>
+     <tr><td><b>Shared service centres</b><br><span class="pill">Roche · Shell · BAT · DHL</span></td>
+       <td>KL</td>
+       <td>KL is a major SSC hub. Group reporting and controllership roles, and they sponsor as a
+           matter of routine.</td>
+       <td><span class="pill up">Underrated</span></td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="card">
+    <h3>The message that gets answered</h3>
+    <p>Not "are there any openings". That asks them to do work for you. This asks one specific
+      question and gives them a reason to reply:</p>
+    <p style="border-left:3px solid var(--line2);padding-left:15px;color:var(--text);font-family:var(--serif);font-size:var(--t-6)">
+      "Hi [name] — I run FP&amp;A for Landmark's Malaysia and Indonesia business, about USD 95M
+      across 60 stores. I am looking at moving to Dubai in the next few months and you made the same
+      move a while back. Could I ask you two questions about how finance hiring actually works there
+      — particularly whether groups are open to someone relocating, or whether they hold out for
+      candidates already in-market?"</p>
+    <p>It is short, it names a shared context, it asks something only they can answer, and it does
+      not ask for a job — so replying costs them nothing and refusing would feel odd. That is the
+      whole mechanism. "Any openings?" fails because it asks a stranger to do your search for you.</p>
+  </div>
+</section>
+
+<!-- ══ 08 MARKET INTEL ═══════════════════════════════════════════════════ -->
+<section class="sec" id="intel">
+  <span class="sec-k">08 — Market intel</span>
+  <h2>The rule change that just repriced you</h2>
+  <p class="sec-s">Verified at source on 2 September 2026. This is the single most useful thing
+     on this page and most candidates in your position do not know it yet.</p>
+  <hr class="rule">
+
+  <div class="lede">
+    On <b>1 June 2026</b> Malaysia roughly doubled the minimum salary for every Employment Pass
+    category. It applies to <b>new and renewal applications alike</b>. You told me Malaysia does not
+    pay expats well at your level — that was true under the old policy. The floor has moved, and it
+    moved in your favour.
+  </div>
+
+  <div class="tw">
+   <table>
+    <thead><tr><th>EP category</th><th>Was</th><th>From 1 June 2026</th><th>Pass duration</th></tr></thead>
+    <tbody>
+     <tr><td><b>Category I</b><br><span class="pill">Senior / managerial — a Controller role</span></td>
+       <td class="num">RM 10,000+</td><td class="num" style="color:var(--up)"><b>RM 20,000+</b></td>
+       <td>Up to 10 years</td></tr>
+     <tr><td><b>Category II</b></td><td class="num">RM 5,000–9,999</td>
+       <td class="num" style="color:var(--up)"><b>RM 10,000–19,999</b></td>
+       <td>Up to 10 years (with succession plan)</td></tr>
+     <tr><td><b>Category III</b></td><td class="num">RM 3,000–4,999</td>
+       <td class="num">RM 5,000–9,999</td><td>Up to 5 years (with succession plan)</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>What it means for you — the upside</h3>
+      <ul class="tick">
+        <li>Any Malaysian employer hiring you onto a new EP must clear the floor by law. You cannot
+          be lowballed below it.</li>
+        <li>A genuine Financial Controller title is Category I territory. That anchors the
+          conversation at <b>RM 20,000/month</b> — not at whatever you earn today.</li>
+        <li>It is a legal requirement, not a negotiating position. You are quoting the rule, not
+          making a demand.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>And the risk — check this week</h3>
+      <ul class="tick">
+        <li>Renewals are covered too. <b>Find your EP expiry date and category.</b> If your current
+          salary sits under the new floor for your category, your own renewal is the problem, not
+          just your next job.</li>
+        <li>That is a conversation to have with your employer <b>before</b> the renewal window, not
+          during it.</li>
+        <li>Fewer employers will sponsor at the new levels. The pool shrinks; what remains pays
+          more. Both are true.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="src">Source: Expatriate Services Division, Immigration Department of Malaysia —
+    "Revised Employment Pass Salary Policy Effective 1 June 2026", published 15 January 2026,
+    following the MOHA press release of 14 January 2026 and Cabinet approval of 17 October 2025.
+    Fetched and read 2 Sep 2026.</p>
+
+  <h3 style="font-size:var(--t-8);margin:32px 0 10px">Dubai, and why the gap is bigger than it looks</h3>
+  <div class="tw">
+   <table>
+    <thead><tr><th>Measure</th><th>Amount</th><th>Note</th></tr></thead>
+    <tbody>
+     <tr><td>Your stated Dubai target</td><td class="num">AED 30,000/mo</td>
+       <td>From your own notes. Realistic for a Controller role.</td></tr>
+     <tr><td>Financial Controller, UAE — recruiter survey</td><td class="num">AED 35–45,000/mo</td>
+       <td>Michael Page UAE salary report, SME controller band, as reported Jan 2026.</td></tr>
+     <tr><td>Financial Controller, UAE — job-board average</td><td class="num">AED 21,000/mo</td>
+       <td>GulfTalent, up to ~AED 41,500. Lower because it includes smaller companies.</td></tr>
+     <tr><td>AED 30,000 in ringgit</td><td class="num">≈ RM 33,000/mo</td>
+       <td>At BNM's middle rate, 1 AED = RM 1.101, 2 Sep 2026.</td></tr>
+     <tr><td><b>UAE personal income tax</b></td><td class="num" style="color:var(--up)"><b>Nil</b></td>
+       <td>The gross figure is the net figure. This is where the real difference sits.</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <div class="warnbox">
+    <b>Treat every published salary figure as a range, not a number.</b> The sources above disagree
+    by roughly two to one on the same job title, because "Financial Controller" spans a four-person
+    company and a listed group. Use them to set your floor and your ask — never quote one back to a
+    recruiter as if it were fact. The number that matters is the band the recruiter is actually
+    briefed on, and asking for it directly is normal and expected.
+  </div>
+
+  <div class="card">
+    <h3>The comparison that should drive the decision</h3>
+    <p>A Malaysian Category I package at the new statutory floor is <b>RM 20,000/month, taxed</b>.
+      Malaysian personal income tax at that level runs into the mid-twenties percent at the margin,
+      so take-home lands materially below the gross.</p>
+    <p>A Dubai package at your own AED 30,000 target is <b>≈ RM 33,000/month, untaxed</b> — and
+      before any housing or schooling allowance, which is standard in Gulf packages and is not
+      standard in Malaysian ones.</p>
+    <p><b>On gross alone the Dubai number is about 65% higher. After tax and allowances the gap is
+      wider than that.</b> That is the arbitrage, and it is why Dubai should stay the primary target
+      with Malaysia as the well-paid fallback rather than the other way round.</p>
+    <p class="src">Malaysian tax stated qualitatively on purpose — the exact liability depends on
+      residency status, reliefs and filing position. Model your own before you compare offers.</p>
+  </div>
+</section>
+
+<!-- ══ 09 MONEY ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="money">
+  <span class="sec-k">09 — Money</span>
+  <h2>Negotiation, in the order it actually happens</h2>
+  <p class="sec-s">Most of the money is lost in the first two minutes of the first call, before
+     anyone has said the word "offer".</p>
+  <hr class="rule">
+
+  <div class="card">
+    <h3>Rule one — never name the first number</h3>
+    <p>"What are your current salary and expectations?" arrives on the first recruiter call. Whoever
+      names a number first sets the ceiling. You do not have to.</p>
+    <p style="border-left:3px solid var(--accent);padding-left:15px;color:var(--text);font-family:var(--serif);font-size:var(--t-6)">
+      "I am looking at the whole package rather than the base in isolation — and Malaysian and UAE
+      packages are not comparable line for line, given tax and allowances. What band is the role
+      briefed at? If it is in the right area I am happy to go into detail."</p>
+    <p>This is not evasive; it is the correct answer, and any competent recruiter will simply tell
+      you the band. If they refuse twice, that itself is information about the role.</p>
+  </div>
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Anchors — know these before you pick up</h3>
+      <ul class="plain">
+        <li><b>Malaysia, Category I floor:</b> RM 20,000/month. Statutory, not aspirational.</li>
+        <li><b>Dubai, your target:</b> AED 30,000/month, tax-free.</li>
+        <li><b>Dubai, recruiter-survey band:</b> AED 35–45,000 for controller roles at established
+          companies.</li>
+        <li><b>Your walk-away:</b> decide it now, in writing, before the first call. A number decided
+          under pressure is always too low.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>What to itemise in a Gulf offer</h3>
+      <p>Base alone tells you very little. Ask for every line before you compare:</p>
+      <ul class="plain">
+        <li>Housing allowance — often 20–30% of base, sometimes paid annually up front</li>
+        <li>Schooling — the one that matters most with a young child, and the one most often omitted</li>
+        <li>Annual flights home, and for how many people</li>
+        <li>Medical cover, and whether dependants are included</li>
+        <li>Visa and relocation costs, for the whole family</li>
+        <li>End-of-service gratuity and the bonus structure — target and how it has actually paid</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>The one about the seven years</h3>
+    <p>It will be asked in every interview, and the honest answer is the strong one. Do not
+      apologise for the tenure and do not criticise Landmark.</p>
+    <p style="border-left:3px solid var(--line2);padding-left:15px;color:var(--text);font-family:var(--serif);font-size:var(--t-6)">
+      "Seven years in one group is why I can do this job — I have owned a close, a consolidation and
+      an ERP migration in the same business, and seen the consequences of my own decisions play out
+      over years rather than quarters. What I want next is a bigger balance sheet and full
+      controllership, and that step is not available where I am in the timeframe I want it."</p>
+    <p>It reframes long tenure as depth, states the ambition plainly, and gives a reason to leave
+      that is about the role rather than about grievance.</p>
+  </div>
+</section>
+
+<!-- ══ 10 THE LONG GAME ══════════════════════════════════════════════════ -->
+<section class="sec" id="long">
+  <span class="sec-k">10 — The long game</span>
+  <h2>The part nobody schedules</h2>
+  <p class="sec-s">A job search is eight to twelve weeks of rejection with no feedback. The people
+     who land well are not the most qualified; they are the ones still executing in week ten.</p>
+  <hr class="rule">
+
+  <div class="grid g2">
+    <div class="card">
+      <h3>Protect the process, not the outcome</h3>
+      <p>You control three things: contacts made, drills done, applications targeted. You control
+        none of the responses. Score yourself weekly on the three you control — 15 contacts, 15
+        drills, 15 targeted applications. A week where you hit all three and heard nothing back is
+        a <b>good week</b>. Judging yourself on replies is how people quit in week six.</p>
+    </div>
+    <div class="card">
+      <h3>The rejection ledger</h3>
+      <p>Log every rejection with one line on the likely reason. After ten, patterns appear that no
+        single rejection shows: always after the salary conversation, always at the same stage,
+        always the same objection. That is diagnosis. Without the log it is just a bad month.</p>
+    </div>
+    <div class="card">
+      <h3>Do not let the search eat the job</h3>
+      <p>Your current role is the entire product you are selling, and your reference. A visibly
+        checked-out FP&amp;A Manager is a worse candidate and a worse referee. Search before work
+        and at weekends; keep the day clean.</p>
+    </div>
+    <div class="card">
+      <h3>Tell your wife the plan, not the mood</h3>
+      <p>Relocation with a small child is a joint decision with real costs — schooling, notice
+        periods, one income during the move. Share the structure and the timeline rather than the
+        daily emotional weather of it. The plan is reassuring; the mood is not.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Weekly review — fifteen minutes, Sunday</h3>
+    <label class="ck"><input type="checkbox" data-ck="w1"><span>Contacts made this week, and who replied</span></label>
+    <label class="ck"><input type="checkbox" data-ck="w2"><span>Every red drill still red — schedule them into next week</span></label>
+    <label class="ck"><input type="checkbox" data-ck="w3"><span>Applications sent, and which were genuinely targeted</span></label>
+    <label class="ck"><input type="checkbox" data-ck="w4"><span>Rejection ledger updated with reasons</span></label>
+    <label class="ck"><input type="checkbox" data-ck="w5"><span>One thing that is not working — change it, do not repeat it</span></label>
+  </div>
+</section>
+
+</main>
+</div>
+
+<footer class="foot">
+  The Campaign · career.askakshay.com · a private working surface, not published.<br>
+  Ratings, counters and checkboxes live in this browser only and are never sent anywhere.<br>
+  Market data verified at source 2 September 2026 — re-check the EP thresholds before quoting them.
+</footer>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════════
+   THE BANK. Data, not markup — the list is filtered, searched, rotated daily
+   and rated, and every one of those is a one-liner over an array and a
+   nightmare over 40 hand-written <section>s.
+   c = category · q = question · a = the answer, in Akshay's own facts
+   ══════════════════════════════════════════════════════════════════════════ */
+const BANK = [
+/* ── TECHNICAL — reporting & consolidation ──────────────────────────────── */
+{c:"Technical",q:"Walk me through how you consolidate two entities in different countries.",
+ a:"Align the reporting calendar and accounting policies first — that is where most of the work is. Then: translate the foreign entity (P&L at average rate, balance sheet at closing rate, equity at historical, the difference to a foreign currency translation reserve in OCI), eliminate intercompany balances and transactions, remove unrealised profit in inventory, then aggregate line by line. <b>Say what makes yours hard:</b> Malaysia reports under MPERS and the group under IFRS, so there is a conversion layer before consolidation, not after."},
+{c:"Technical",q:"What is the difference between a subsidiary, an associate and a joint venture?",
+ a:"Control, significant influence, joint control. A subsidiary is controlled — you consolidate line by line and show a non-controlling interest. An associate is significant influence, usually 20–50% — equity method, one line. A joint venture is joint control under a contractual arrangement — also equity method under IFRS 11. <b>The trap:</b> the threshold is control, not the percentage. You can control at 40% with board rights, or fail to control at 60% with a shareholder agreement against you."},
+{c:"Technical",q:"Explain IFRS 16 as if I have never seen it.",
+ a:"Every lease over twelve months goes on the balance sheet. At commencement you recognise a right-of-use asset and a lease liability at the present value of the remaining payments, discounted at the rate implicit in the lease or, if that is not readily determinable, the incremental borrowing rate. Afterwards the asset depreciates straight-line and the liability unwinds at the discount rate. <b>The effect people miss:</b> rent expense becomes depreciation plus interest, so EBITDA improves and the charge is front-loaded — early years cost more than the old straight-line rent. On 60+ retail leases that is a material presentation change and the first question the board asks."},
+{c:"Technical",q:"A lease is renegotiated mid-term. What do you do?",
+ a:"Decide first whether it is a modification or a reassessment. A change in scope or consideration not in the original terms is a modification: remeasure the liability at a revised discount rate and adjust the right-of-use asset, unless the modification is a separate lease. A change in an index-linked payment or in your assessment of a renewal option is a reassessment: remeasure the liability at the original rate and adjust the asset. <b>Only if the asset is written down to nil does the balance go to P&L.</b> With 60+ leases this comes up constantly, and getting modification versus reassessment wrong is the most common IFRS 16 audit finding."},
+{c:"Technical",q:"How do the three statements link?",
+ a:"Net income from the P&L is the top line of the cash flow and flows into retained earnings on the balance sheet. The cash flow adjusts net income for non-cash items (depreciation, provisions), working capital movements, then investing and financing. The closing cash from the cash flow is the cash line on the balance sheet. <b>The test they are really running:</b> change one number and follow it. Depreciation up 100 — profit down 100 less tax, cash flow adds it back so cash is unchanged, and the balance sheet has lower net assets and lower retained earnings by the after-tax amount."},
+{c:"Technical",q:"Depreciation rises by 100. Walk all three statements, after 25% tax.",
+ a:"P&L: operating profit down 100, tax down 25, net income down 75. Cash flow: start at −75, add back the 100 non-cash charge, so cash is up 25 — the tax shield. Balance sheet: cash up 25, net fixed assets down 100, so assets down 75; retained earnings down 75. It balances. <b>Say the tax shield out loud</b> — that is the part they are listening for, and the reason the cash movement is not zero."},
+{c:"Technical",q:"What is deferred tax and where does it come from?",
+ a:"It is the tax effect of temporary differences between an asset or liability's carrying amount and its tax base. Accelerated capital allowances create a deferred tax liability — you got the deduction early and will pay later. Provisions not yet deductible, and unused tax losses, create deferred tax assets. <b>The judgement:</b> a deferred tax asset is only recognised to the extent future taxable profit is probable. That word is where the auditor spends their time, and with IFRS 16 you now carry deferred tax on the right-of-use asset and lease liability too."},
+{c:"Technical",q:"How do you test a store for impairment?",
+ a:"Each store is a cash-generating unit — the smallest group of assets generating largely independent cash inflows. Compare carrying amount, which now includes the right-of-use asset, against recoverable amount: the higher of value in use and fair value less costs of disposal. Value in use is discounted future cash flows. <b>Where it gets real:</b> a loss-making store with a large ROU asset impairs quickly under IFRS 16, and the impairment reverses if conditions improve, unlike goodwill. I run this alongside the contribution margin analysis, so the accounting and the commercial decision use the same numbers."},
+{c:"Technical",q:"What is the difference between IFRS and MPERS, and why does it matter to you?",
+ a:"MPERS is Malaysia's reporting standard for private entities — a simplified framework, closer to the IFRS for SMEs. It differs on financial instruments, on some measurement and disclosure, and critically it does not carry IFRS 16's lease model in the same form. So the Malaysian statutory accounts and the group IFRS pack are not the same numbers. <b>My job is holding both:</b> statutory filings on MPERS, group reporting on IFRS, one reconciliation between them that the auditors sign."},
+{c:"Technical",q:"Revenue recognition for a retailer — where is the judgement?",
+ a:"The sale itself is simple: control passes at the till, revenue is recognised net of expected returns. The judgement sits around it — a refund liability for expected returns based on history; loyalty points as a separate performance obligation with revenue deferred at standalone selling price; gift cards deferred until redemption or breakage; and gross versus net for concessions, where you have to decide whether you control the goods before transfer or are an agent. <b>Gross versus net is the one that moves headline revenue</b> without touching a cent of profit."},
+/* ── FP&A ──────────────────────────────────────────────────────────────── */
+{c:"FP&A",q:"How do you build an annual budget for 60 stores?",
+ a:"Bottom-up on revenue, top-down on the constraint. Each store gets a sales line built from footfall, conversion, average basket and trading days, adjusted for openings, closures and refits. Store costs are largely rent, payroll and utilities — rent is contractual and known, payroll flexes with trading hours. Overheads are built centrally and allocated on a driver that the business accepts. Then it is iterated against the group's margin target until it holds together. <b>The part that matters is not the model, it is the negotiation</b> — the budget only works if the Retail Heads believe their own numbers."},
+{c:"FP&A",q:"Budget versus forecast versus rolling forecast — what is the actual difference?",
+ a:"A budget is a commitment set once and held for the year — it is the yardstick you are measured against. A forecast is your current best estimate of where the year lands. A rolling forecast always looks the same distance ahead — twelve or eighteen months — regardless of where you are in the year, so the planning horizon never shrinks to nothing in Q4. <b>Why it matters:</b> without a rolling forecast, decisions taken in November are taken with six weeks of visibility."},
+{c:"FP&A",q:"Sales are 8% below budget. Walk me through what you do.",
+ a:"Bridge it before explaining it. Split the variance into price, volume, mix and FX; then by store, by category and by month, to find whether it is broad or concentrated. Usually a handful of stores or one category carry most of it. Then separate what is structural — a competitor opening, a catchment shift — from what is timing, like a delayed campaign. <b>Only then talk to the business,</b> because arriving with a bridge and two hypotheses gets a different conversation than arriving with a number and a question."},
+{c:"FP&A",q:"How do you appraise a new store?",
+ a:"Build the store's own P&L over the lease term: sales ramping over the first 18–24 months, gross margin at category mix, then rent, payroll, utilities and an allocated overhead. Capex is fit-out and initial stock. Discount the free cash flows at the group's cost of capital for NPV, calculate IRR and simple payback, then run downside sensitivities — the ones that matter are sales 20% below plan and rent 10% above. <b>Then the part most people skip:</b> revisit the approved case 12 months after opening and compare. That is what makes the next appraisal credible."},
+{c:"FP&A",q:"What is contribution margin and why do you use it per store?",
+ a:"Revenue less the costs that vary with, or are directly attributable to, that store — cost of goods, store payroll, rent, utilities. It stops before allocated head office overhead. <b>Why that line and not net profit:</b> allocated overhead does not disappear when you close a store, so judging a store on a number that includes it tells you to close stores that are actually contributing. A store with positive contribution and negative net profit is usually worth keeping and renegotiating, not closing."},
+{c:"FP&A",q:"How do you improve working capital in a retail business?",
+ a:"It is inventory, almost entirely — receivables are near zero when customers pay at the till, so the levers are stock and payables. On stock: identify slow-moving and aged lines by store and category, then markdown or transfer rather than hold; tighten buying against actual sell-through instead of plan; and improve replenishment so cover falls without hurting availability. On payables: extend terms where supplier relationships allow, without paying for it in price. <b>I ran an inventory liquidation and cash conversion programme across the estate</b> for exactly this."},
+{c:"FP&A",q:"Your forecast was wrong three months running. What do you do?",
+ a:"Find out whether it is bias or noise. Noise is random and roughly symmetric; bias is consistently one direction and is a broken assumption. Three months the same way is bias. Then decompose which line is wrong — usually one driver, not the whole model. <b>Say this:</b> I would rather have a forecast that is honest and revised than one that defends its original number. The credibility of every future forecast depends on how you handle the wrong one."},
+/* ── LEADERSHIP & BEHAVIOURAL ───────────────────────────────────────────── */
+{c:"Behavioural",q:"Tell me about a project you led end to end.",
+ a:"The D365 implementation. Two countries closing separately and consolidating by hand in spreadsheets. I was finance lead: redesigned the chart of accounts so both entities mapped to one group structure, ran data migration and UAT with the finance-IT team, trained both finance teams, and went live. Close time down 40% and manual consolidation eliminated. <b>The honest hard part</b> was not the system — it was that two teams had done things their own way for years, and the chart of accounts decision settled which way became the group's way."},
+{c:"Behavioural",q:"Tell me about a time you disagreed with the business.",
+ a:"Use the store closure case. Operations wanted to keep an underperforming store on tenure and relationship grounds. I brought the contribution margin analysis and the lease commitment rather than an opinion, and framed it as three options — renegotiate, relocate, close — with the numbers under each. <b>The point to land:</b> I did not win the argument by being right about the number. I won it by giving them a decision to make instead of a verdict to accept."},
+{c:"Behavioural",q:"How do you present to a board?",
+ a:"Answer first. The board wants the number, the variance and what you are doing about it — in the first slide, not the seventh. Then the two or three drivers behind it, then the risks with sizes attached. I keep the detail in an appendix and never walk through it unless asked. <b>The discipline is deciding what not to say:</b> a board has twenty minutes for finance and will remember one thing, so I decide in advance what that one thing is."},
+{c:"Behavioural",q:"Describe managing a team.",
+ a:"I supervised four analysts in the Assistant Manager role. The most useful thing I did was rebuild the reconciliation SOPs — rework was eating roughly a third of their month and most of it came from ambiguity about who owned what and in what order. <b>What I learned:</b> most performance problems in a finance team are process problems wearing a performance costume. I fixed the process first and only then looked at the people."},
+{c:"Behavioural",q:"What is your biggest weakness?",
+ a:"Give a real one with a real mechanism. Mine: I go deep into the detail because that is where I am comfortable and where I trust the answer, and early on that meant I over-prepared analysis nobody had asked for while a decision waited. What I do now is agree the decision and the deadline before I open the model, and I timebox. <b>What kills this answer</b> is a disguised strength — 'I work too hard' — which tells the interviewer you either lack self-awareness or will not be candid."},
+{c:"Behavioural",q:"Tell me about a mistake you made.",
+ a:"Pick one that was real, was yours, and was fixed. Say what happened, the impact in plain numbers, what you did immediately, and the control you put in so it could not recur. <b>Do not pick a mistake that was someone else's,</b> and do not pick one so trivial it insults the question. The interviewer is testing whether you can be trusted to report bad news early — the story is only the vehicle."},
+{c:"Behavioural",q:"How do you handle a close where the numbers will not tie?",
+ a:"Timebox the investigation and escalate on a schedule, not on a feeling. Materiality first — a variance below threshold gets logged and carried, not chased at midnight. If it is material, isolate by working backwards through the sub-ledgers to the last point the numbers agreed. <b>The rule I hold:</b> never post a plug to make a deadline. A deadline missed by a day is recoverable; a plug found by an auditor is not."},
+/* ── THE MOVE — the ones that decide it ─────────────────────────────────── */
+{c:"The move",q:"Why are you leaving after seven years?",
+ a:"\"Seven years in one group is why I can do this job — I have owned a close, a consolidation and an ERP migration in the same business, and seen my own decisions play out over years rather than quarters. What I want next is a bigger balance sheet and full controllership, and that step is not available where I am in the timeframe I want it.\" <b>Never criticise Landmark.</b> The interviewer is listening for whether you will speak about them that way in two years."},
+{c:"The move",q:"Why Dubai?",
+ a:"Be concrete, not romantic. The group I work for is headquartered there, so it is the natural centre of gravity for a retail finance career; the scale of the finance functions is larger than Malaysia's; and my family and I want to be there. <b>What loses the room:</b> \"better opportunities\" and \"tax-free income\". Everyone says the first and everyone knows the second — neither tells them anything about you."},
+{c:"The move",q:"You have no GCC experience. Why should we hire you over someone who does?",
+ a:"Meet it head on. \"I have spent seven years inside a Dubai-headquartered group, reporting into it — so the operating model, the reporting cadence and the standards are not new to me, only the postcode is. What I bring that a local hire may not is running finance across two countries with two reporting frameworks and a live ERP migration.\" <b>Then close the loop:</b> ask what their first ninety days would need, and answer it."},
+{c:"The move",q:"What are your salary expectations?",
+ a:"\"I am looking at the whole package rather than base in isolation — Malaysian and UAE packages are not comparable line for line given tax and allowances. What band is the role briefed at?\" Never name the first number. If pressed a second time, give a range anchored on the market, not on your current salary, and say the range is for the total package. <b>See §09</b> for the anchors."},
+{c:"The move",q:"When could you start, and do you need sponsorship?",
+ a:"Have exact answers ready — vagueness here reads as not-serious. Know your notice period to the day and whether it is negotiable. On sponsorship: UAE employment visas are employer-sponsored as standard for professional roles, so this is routine rather than an obstacle, and saying so calmly signals you have done the homework. <b>Do not volunteer difficulty</b> that is not there."},
+{c:"The move",q:"Are you interviewing elsewhere?",
+ a:"Yes, without a list. \"I am in a couple of other processes, both at a similar stage. I am being selective rather than applying broadly.\" It signals market validation and mild time pressure without being a threat. <b>Never name the companies</b> and never invent an offer you do not have — it collapses the moment they ask a follow-up, and Gulf finance is a small market."},
+{c:"The move",q:"Why should we not be worried you will leave in a year?",
+ a:"Point at the record. Seven years in one group and four in the role before that is the opposite of a flight risk — the concern with your CV is the reverse, that you stay too long. Then give the positive reason you would stay: the scope you want is the scope they are offering. <b>If they raise relocation risk,</b> answer it directly — the family is moving with you, and say so."},
+{c:"Technical",q:"Direct or indirect cash flow — and why does everyone use indirect?",
+ a:"Direct shows actual cash receipts and payments by category; indirect starts at profit and reconciles to cash. Indirect wins in practice because it falls straight out of the ledger — you already have profit, depreciation and the balance sheet movements — whereas direct needs cash flows tagged at source. <b>The insight to offer:</b> indirect is more useful analytically anyway, because the reconciliation itself shows where profit and cash diverged, which is the question anyone is actually asking."},
+{c:"Technical",q:"Provision, contingent liability, or nothing at all?",
+ a:"Three tests: a present obligation from a past event, a probable outflow, and a reliable estimate. All three met — provide. Possible but not probable, or not reliably measurable — disclose as a contingent liability. Remote — say nothing. <b>Where judgement bites:</b> \"probable\" is more likely than not under IAS 37, and restructuring provisions need a detailed formal plan that has been communicated, which is what stops management provisioning for an intention."},
+{c:"Technical",q:"How do you value retail inventory, and when do you write it down?",
+ a:"Lower of cost and net realisable value, item by item or by category — never across the whole estate, which would net losses against gains. Cost includes purchase, conversion and the cost of bringing it to location, but excludes storage and admin. NRV is estimated selling price less costs to sell. <b>In fashion retail this is live:</b> ageing and season are the drivers, so the provision runs off a stock-ageing matrix by category, and it reverses if the item later sells above the written-down value."},
+{c:"FP&A",q:"Which five KPIs would you put in front of a retail board?",
+ a:"Like-for-like sales growth — strips out openings and closures, so it is the only honest read on trading. Gross margin percentage and its mix effect. Sales per square foot or per store, for productivity. Stock turn or weeks of cover, because that is the working capital. And store contribution margin, for portfolio decisions. <b>What I would leave out:</b> total revenue growth on its own — it flatters you every time you open a store, whether or not the store is any good."},
+{c:"FP&A",q:"What makes a management pack useful rather than long?",
+ a:"One page that answers: what happened, why, and what we are doing. Variance against both budget and forecast, because they answer different questions. Commentary that names the driver rather than restating the number — \"margin fell 80bp on channel mix\", not \"margin fell 80bp\". Forward-looking risk with a size on it. <b>The test I use:</b> if a reader could not act differently after reading a page, that page comes out."},
+{c:"Behavioural",q:"Why should we hire you?",
+ a:"Three sentences, no more. \"You need someone who can own a close and a consolidation without supervision — I have done that for seven years across two countries and two reporting frameworks. You are putting in a new system or cleaning up after one — I led that implementation and know where it goes wrong. And I have done it in retail, so store economics and lease accounting are not something I would be learning on your time.\" <b>Map it to their job ad,</b> not to your CV."},
+{c:"Behavioural",q:"Where do you see yourself in five years?",
+ a:"Be specific and make it their problem to solve, not a fantasy. \"Finance Director or CFO of a business this size. The gap between where I am and that is breadth — treasury, tax structuring and investor-facing work — which is exactly what full controllership here would give me.\" <b>Saying \"CFO\" alone sounds like ambition without a plan;</b> naming the gap sounds like someone who has thought about it."},
+{c:"The move",q:"What do you know about our company?",
+ a:"The unforgivable one to fumble. Before any interview, know: their brands and roughly how many outlets, which markets they operate in, who owns them and whether they are listed, one recent development from the last six months, and who the finance leadership is. <b>Then convert it into a question</b> — \"I saw you have been expanding in Saudi; is the finance function following that, or is it run centrally from Dubai?\" That is the difference between having read a page and being interested."},
+{c:"The move",q:"What questions do you have for us?",
+ a:"Never \"none\", and never only about package. Ask: what does the first ninety days look like, and what would success be at the end of them? Why is the role open — growth, replacement, restructure? How does finance relate to the commercial teams here? What is the biggest problem in the function right now? <b>The last one is the best question you can ask</b> — it gets an honest answer, and it tells you whether you want the job."},
+];
+
+/* ══ TECHNICAL REFERENCE ══════════════════════════════════════════════════ */
+const REF = [
+{t:"IFRS 16 — the whole model in six lines",
+ b:"<b>Recognise:</b> right-of-use asset and lease liability at PV of remaining payments, discounted at the implicit rate or the incremental borrowing rate.<br><b>Then:</b> asset depreciates straight-line, liability unwinds at the discount rate.<br><b>Effect:</b> rent becomes depreciation + interest — EBITDA rises, and the total charge is front-loaded.<br><b>Modification</b> (scope or consideration changes): remeasure at a <i>revised</i> rate.<br><b>Reassessment</b> (index or option reassessed): remeasure at the <i>original</i> rate.<br><b>Exemptions:</b> short-term (≤12 months) and low-value — expensed straight-line."},
+{t:"Consolidation — the order of operations",
+ b:"1. Align policies and reporting dates.<br>2. Convert local GAAP to group GAAP (for you: MPERS → IFRS).<br>3. Translate: P&L at average rate, assets and liabilities at closing rate, equity at historical — difference to FCTR in OCI.<br>4. Eliminate intercompany balances, trading, dividends.<br>5. Remove unrealised profit in closing inventory.<br>6. Aggregate line by line; split non-controlling interest.<br><b>Where it goes wrong:</b> intercompany that does not agree between the two ledgers. Fix the process, not the journal."},
+{t:"The variance bridge",
+ b:"Decompose every variance the same way, in this order, and never mix them:<br><b>Price</b> — (actual price − budget price) × actual volume<br><b>Volume</b> — (actual volume − budget volume) × budget price<br><b>Mix</b> — the shift between products or channels at different margins<br><b>FX</b> — the translation effect, isolated so operating performance is visible without it<br><b>The discipline:</b> the pieces must sum exactly to the total variance. If they do not, the bridge is wrong and so is the story you are about to tell."},
+{t:"Working capital — the cash conversion cycle",
+ b:"<b>CCC = DIO + DSO − DPO.</b><br>DIO — inventory ÷ COGS × 365. In retail this is the whole game.<br>DSO — receivables ÷ revenue × 365. Near zero at the till; only matters for wholesale and concessions.<br>DPO — payables ÷ COGS × 365. Extending it is free financing, up to the point it costs you price or supply.<br><b>The retail read:</b> a negative cycle means suppliers fund your stock. That is the structural prize, and it is won on stock turn, not on payment terms."},
+{t:"Deferred tax, quickly",
+ b:"Temporary difference = carrying amount − tax base. Multiply by the enacted future rate.<br><b>DTL</b> — the asset's book value exceeds its tax base (accelerated allowances). Tax deferred, not avoided.<br><b>DTA</b> — deductible differences and unused losses. Recognised <i>only</i> to the extent future taxable profit is probable.<br><b>Permanent differences</b> — non-deductible entertainment, exempt income — create no deferred tax at all.<br><b>Under IFRS 16</b> you carry deferred tax on both the ROU asset and the lease liability."},
+{t:"Impairment of a store (CGU)",
+ b:"Carrying amount — including the right-of-use asset — versus recoverable amount, which is the <b>higher</b> of value in use and fair value less costs of disposal.<br>Value in use = discounted pre-tax cash flows of that store over the remaining lease.<br>Loss is allocated to goodwill first, then pro-rata to other assets.<br><b>Reversal:</b> permitted if the indicators reverse — except for goodwill, never.<br><b>Trigger it</b> on external indicators (catchment decline, competitor opening) as well as internal ones."},
+{t:"FX — translation versus transaction",
+ b:"<b>Transaction</b> risk hits the P&L: a payable in a foreign currency is retranslated at each reporting date and the movement is a real gain or loss.<br><b>Translation</b> risk hits OCI: consolidating a foreign subsidiary moves the FCTR, and it never touches profit until that subsidiary is disposed of.<br><b>Why interviewers ask:</b> people conflate them and then propose hedging translation exposure, which protects a reserve nobody is measured on while leaving the transaction exposure that actually costs cash."},
+{t:"Internal controls — what a Controller is accountable for",
+ b:"<b>Segregation of duties</b> — nobody initiates, approves and records the same transaction. The single highest-value control.<br><b>Authorisation matrix</b> — value thresholds mapped to named roles, reviewed when people move.<br><b>Reconciliations</b> — bank, intercompany, sub-ledger to GL, on a schedule with a reviewer who is not the preparer.<br><b>Access</b> — ERP roles reviewed on joiners, movers and leavers. The one everyone forgets is movers.<br><b>Say this:</b> a control nobody has tested is a control you do not have."},
+];
+</script>
+<script>
+(function(){
+"use strict";
+const $  = (s,r)=> (r||document).querySelector(s);
+const $$ = (s,r)=> Array.from((r||document).querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* localStorage throws outright in some contexts (private windows, blocked site
+   data, thumbnailers) — not just returns null. Every access goes through here
+   so a storage failure degrades to an unsaved page rather than a blank one. */
+const store = {
+  get(k, d){ try { const v = localStorage.getItem("ak:"+k); return v===null ? d : JSON.parse(v); }
+             catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem("ak:"+k, JSON.stringify(v)); } catch(e){} }
+};
+
+/* ── THEME ─────────────────────────────────────────────────────────────── */
+const root = document.documentElement;
+root.setAttribute("data-theme", store.get("theme", "dark"));
+$("#themeBtn").addEventListener("click", ()=>{
+  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", next); store.set("theme", next);
+  const m = $('meta[name="theme-color"]'); if (m) m.content = next==="dark" ? "#0B0F14" : "#FFFFFF";
+});
+
+/* ── COUNTERS & THE COUNTDOWN ──────────────────────────────────────────── */
+/* The campaign clock starts on first visit rather than on a date hard-coded
+   at build time, which would already be stale by the time it is read. */
+const DAYS = 90;
+let start = store.get("start", null);
+if (!start) { start = new Date().toISOString().slice(0,10); store.set("start", start); }
+
+function paintStats(){
+  const gone = Math.floor((Date.now() - new Date(start+"T00:00:00").getTime()) / 86400000);
+  const left = DAYS - gone;
+  const el = $("#stDays");
+  el.textContent = left > 0 ? left : "over";
+  el.parentElement.classList.toggle("hot", left <= 21);
+  $("#stApps").textContent = store.get("apps", 0);
+  $("#stConv").textContent = store.get("conv", 0);
+  const rated = store.get("conf", {});
+  const green = Object.values(rated).filter(v => v === 3).length;
+  $("#stDrill").innerHTML = green + '<small style="font-size:.55em;color:var(--dim)">/' + BANK.length + '</small>';
+}
+$$("[data-inc]").forEach(b => b.addEventListener("click", ()=>{
+  const k = b.dataset.inc, d = b.dataset.dec ? -1 : 1;
+  store.set(k, Math.max(0, store.get(k,0) + d)); paintStats();
+}));
+
+/* ── CHECKBOXES ────────────────────────────────────────────────────────── */
+$$("[data-ck]").forEach(cb=>{
+  cb.checked = !!store.get("ck:"+cb.dataset.ck, false);
+  cb.addEventListener("change", ()=> store.set("ck:"+cb.dataset.ck, cb.checked));
+});
+$("#resetWeek").addEventListener("click", ()=>{
+  ["d1","d2","d3"].forEach(k=>{ store.set("ck:"+k,false); const b=$('[data-ck="'+k+'"]'); if(b) b.checked=false; });
+});
+
+/* ── TODAY: a deterministic daily rotation ─────────────────────────────── */
+/* Seeded on the date so it is stable all day, moves tomorrow, and needs no
+   stored state — reopening the page at noon shows the same three as at 6am. */
+const FOCUS = [
+ "Today is a <b>contact</b> day. One message to a person who already knows the market you want. Do it before you open a job board.",
+ "Today is a <b>drill</b> day. Take the three below and answer them out loud, standing up. Recording yourself once is worth ten silent read-throughs.",
+ "Today is a <b>targeting</b> day. One application, and rewrite the summary line for that specific role — or do not send it.",
+ "Today is a <b>numbers</b> day. Say your six numbers from §06 without looking. Any hesitation is a gap to close before the next call.",
+ "Today is a <b>follow-up</b> day. Anyone who has not replied in a week gets one short, polite nudge. Most conversations die of silence, not refusal.",
+ "Today is a <b>research</b> day. Pick two names from §07 and find the actual finance lead. A name beats a careers portal.",
+ "Today is a <b>review</b> day. Read your own CV as a stranger would. Would you call you?"
+];
+const dayNum = Math.floor(new Date(new Date().toDateString()).getTime() / 86400000);
+function pick(n, len, salt){            // n distinct indices, stable for the day
+  const out = []; let i = 0;
+  while (out.length < Math.min(n, len)) {
+    const v = (dayNum * 7919 + salt * 104729 + i * 31337) % len;
+    if (!out.includes(v)) out.push(v);
+    i++; if (i > len * 12) break;
+  }
+  return out;
+}
+$("#todayFocus").innerHTML = FOCUS[dayNum % FOCUS.length];
+$("#todayQs").innerHTML = pick(3, BANK.length, 3).map(i=>{
+  const q = BANK[i];
+  return '<div class="card" style="margin:0"><span class="pill acc">'+esc(q.c)+'</span>'+
+         '<p style="margin-top:10px;color:var(--text);font-weight:500">'+esc(q.q)+'</p>'+
+         '<p style="margin-top:8px"><a href="#drill" data-jump="'+i+'">Answer →</a></p></div>';
+}).join("");
+
+/* ── THE BANK ──────────────────────────────────────────────────────────── */
+const CATS = ["All"].concat([...new Set(BANK.map(q=>q.c))]);
+let cat = "All", term = "";
+$("#drillFilters").innerHTML = CATS.map(c=>
+  '<button class="chip" data-cat="'+esc(c)+'" aria-pressed="'+(c==="All")+'">'+esc(c)+
+  (c==="All" ? " <span style='opacity:.6'>"+BANK.length+"</span>" : "")+'</button>').join("");
+
+function drawBank(){
+  const t = term.toLowerCase();
+  const rows = BANK.map((q,i)=>({q,i}))
+    .filter(({q}) => (cat==="All" || q.c===cat) &&
+                     (!t || (q.q+" "+q.a+" "+q.c).toLowerCase().includes(t)));
+  const conf = store.get("conf", {});
+  $("#drillList").innerHTML = rows.length ? rows.map(({q,i})=>{
+    const c = conf[i] || 0;
+    return '<div class="q" data-i="'+i+'" id="q'+i+'">'+
+      '<button class="q-h" type="button" aria-expanded="false">'+
+        '<span class="q-n">'+String(i+1).padStart(2,"0")+'</span>'+
+        '<span class="q-t">'+esc(q.q)+'<span class="q-tag">'+esc(q.c)+
+          (c ? ' · '+["","shaky","ok","cold"][c] : '')+'</span></span>'+
+        '<span class="q-x" aria-hidden="true">+</span>'+
+      '</button>'+
+      '<div class="q-b"><span class="lbl">The answer</span><p>'+q.a+'</p>'+
+        '<div class="conf"><span>How solid?</span>'+
+          [1,2,3].map(v=>'<button type="button" data-v="'+v+'" class="'+(c===v?"sel":"")+'">'+
+            ["","Shaky","OK","Cold"][v]+'</button>').join("")+
+        '</div></div></div>';
+  }).join("") : '<div class="empty">Nothing matches. Clear the search or pick another category.</div>';
+}
+
+$("#drillFilters").addEventListener("click", e=>{
+  const b = e.target.closest("[data-cat]"); if(!b) return;
+  cat = b.dataset.cat;
+  $$("#drillFilters .chip").forEach(c=>c.setAttribute("aria-pressed", String(c===b)));
+  drawBank();
+});
+$("#drillList").addEventListener("click", e=>{
+  const head = e.target.closest(".q-h");
+  if (head){ const q = head.parentElement; const open = q.classList.toggle("open");
+             head.setAttribute("aria-expanded", String(open)); return; }
+  const rate = e.target.closest(".conf button");
+  if (rate){
+    const i = rate.closest(".q").dataset.i, v = +rate.dataset.v;
+    const conf = store.get("conf", {});
+    if (conf[i] === v) delete conf[i]; else conf[i] = v;
+    store.set("conf", conf);
+    const box = rate.parentElement;
+    $$("button", box).forEach(b=> b.classList.toggle("sel", +b.dataset.v === conf[i]));
+    const tag = $(".q-tag", rate.closest(".q"));
+    tag.textContent = BANK[i].c + (conf[i] ? " · " + ["","shaky","ok","cold"][conf[i]] : "");
+    paintStats();
+  }
+});
+
+/* ── REFERENCE ─────────────────────────────────────────────────────────── */
+$("#refList").innerHTML = REF.map((r,i)=>
+  '<div class="q" id="r'+i+'"><button class="q-h" type="button" aria-expanded="false">'+
+    '<span class="q-n">'+String(i+1).padStart(2,"0")+'</span>'+
+    '<span class="q-t">'+esc(r.t)+'</span><span class="q-x" aria-hidden="true">+</span></button>'+
+  '<div class="q-b"><p>'+r.b+'</p></div></div>').join("");
+$("#refList").addEventListener("click", e=>{
+  const h = e.target.closest(".q-h"); if(!h) return;
+  h.setAttribute("aria-expanded", String(h.parentElement.classList.toggle("open")));
+});
+
+/* ── SEARCH ────────────────────────────────────────────────────────────── */
+const qbox = $("#q");
+let tmr = null;
+qbox.addEventListener("input", ()=>{
+  clearTimeout(tmr);
+  tmr = setTimeout(()=>{                       // setTimeout, not rAF: rAF is
+    term = qbox.value.trim();                  // frozen in a background tab
+    drawBank();
+    if (term) {
+      const first = $("#drillList .q");
+      if (first && !$$("#drillList .q").every(q=>q.classList.contains("open"))) {
+        $$("#drillList .q").forEach(q=>{ q.classList.add("open");
+          $(".q-h",q).setAttribute("aria-expanded","true"); });
+      }
+      document.getElementById("drill").scrollIntoView({block:"start"});
+    }
+  }, 120);
+});
+document.addEventListener("keydown", e=>{
+  if (e.key === "/" && document.activeElement !== qbox && !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) {
+    e.preventDefault(); qbox.focus(); qbox.select();
+  }
+  if (e.key === "Escape" && document.activeElement === qbox) { qbox.value=""; term=""; drawBank(); qbox.blur(); }
+});
+
+/* ── JUMP FROM TODAY ───────────────────────────────────────────────────── */
+document.addEventListener("click", e=>{
+  const j = e.target.closest("[data-jump]"); if(!j) return;
+  e.preventDefault();
+  cat = "All"; term = ""; qbox.value = "";
+  $$("#drillFilters .chip").forEach(c=>c.setAttribute("aria-pressed", String(c.dataset.cat==="All")));
+  drawBank();
+  const el = document.getElementById("q"+j.dataset.jump);
+  if (el){ el.classList.add("open"); $(".q-h",el).setAttribute("aria-expanded","true");
+           el.scrollIntoView({block:"center"}); }
+});
+
+/* ── SCROLL SPY ────────────────────────────────────────────────────────── */
+/* A scroll listener, deliberately NOT IntersectionObserver: an IO never fires
+   in a tab the browser considers hidden, and the nav then reads as broken. */
+const links = $$(".rail a[data-s]");
+const secs  = links.map(a=>document.getElementById(a.dataset.s)).filter(Boolean);
+let spy = null;
+function markActive(){
+  const y = window.scrollY + 140;
+  let cur = secs[0];
+  for (const s of secs) if (s.offsetTop <= y) cur = s;
+  links.forEach(a=> a.classList.toggle("on", a.dataset.s === (cur && cur.id)));
+}
+window.addEventListener("scroll", ()=>{ if(spy) return;
+  spy = setTimeout(()=>{ spy = null; markActive(); }, 90); }, {passive:true});
+
+/* ── GO ────────────────────────────────────────────────────────────────── */
+drawBank(); paintStats(); markActive();
+})();
+</script>
+</body>
+</html>

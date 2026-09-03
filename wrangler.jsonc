@@ -1,0 +1,26 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "career",
+  "compatibility_date": "2026-05-01",
+
+  // ASSETS-ONLY WORKER. There is no src/index.js and no "main": this site has
+  // no API, no database and no secrets — it is one static page. Adding a Worker
+  // script here would buy nothing and add a cold start to every request.
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
+
+  // CUSTOM DOMAIN — askakshay.com already sits in this Cloudflare account, so
+  // Cloudflare provisions the cert and the route itself. There is no A/CNAME
+  // record to add by hand; adding one is what causes the conflict people then
+  // spend an afternoon debugging.
+  "routes": [{ "pattern": "career.askakshay.com", "custom_domain": true }],
+
+  // Deliberately OFF. This page carries salary targets, employer shortlists and
+  // interview notes. It is not secret, but there is no reason to hand it a
+  // second public hostname that nothing links to and nobody audits.
+  "workers_dev": false,
+
+  "observability": { "enabled": true }
+}

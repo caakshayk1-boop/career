@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Not for search engines. This is a private working surface.
