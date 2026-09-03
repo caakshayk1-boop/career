@@ -215,6 +215,31 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .empty{padding:30px 16px;text-align:center;color:var(--dim);font-size:var(--t-5);
   border:1px dashed var(--line2);border-radius:var(--r-4)}
 
+
+/* ── OPENINGS ──────────────────────────────────────────────────────────── */
+.role{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
+  padding:16px 17px;margin-bottom:11px;border-left:3px solid var(--line2)}
+.role.t-S{border-left-color:var(--up)} .role.t-A{border-left-color:var(--accent)}
+.role.t-B{border-left-color:var(--warn)}
+.role-h{display:flex;align-items:flex-start;gap:12px}
+.role-t{flex:1;min-width:0}
+.role-t b{display:block;font:600 var(--t-6)/1.35 var(--ui);color:var(--text)}
+.role-t span{display:block;font-size:var(--t-4);color:var(--muted);margin-top:3px}
+.role-sc{flex:none;text-align:center;border:1px solid var(--line2);border-radius:var(--r-2);
+  padding:6px 9px;min-width:48px}
+.role-sc b{display:block;font:600 var(--t-7)/1 var(--mono);color:var(--text)}
+.role-sc span{display:block;font:500 var(--t-1)/1 var(--mono);color:var(--dim);margin-top:3px}
+.role-m{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px;align-items:center}
+.role-w{margin-top:11px;padding-top:10px;border-top:1px solid var(--line)}
+.role-w li{font-size:var(--t-4);color:var(--muted);line-height:1.6;margin-bottom:5px}
+.role-w li.warn{color:var(--warn)}
+.role-a{display:flex;gap:9px;align-items:center;margin-top:12px;flex-wrap:wrap}
+.role-a a.go{background:var(--ink-btn);color:var(--on-ink);text-decoration:none;
+  font:600 var(--t-3)/1 var(--ui);padding:10px 15px;border-radius:var(--r-2);min-height:36px;
+  display:inline-flex;align-items:center}
+.role-a a.alt{font:500 var(--t-3)/1 var(--ui);color:var(--muted)}
+.role-a em{margin-left:auto;font-style:normal;font:500 var(--t-1)/1 var(--mono);color:var(--dim)}
+
 /* ── CHECKLIST ─────────────────────────────────────────────────────────── */
 .ck{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
 .ck:last-child{border-bottom:0}
@@ -252,17 +277,18 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
 <nav class="rail" aria-label="Sections">
   <span class="rail-h">Daily</span>
   <a href="#today"   data-s="today"><i>01</i>Today</a>
-  <a href="#drill"   data-s="drill"><i>02</i>Interview bank</a>
-  <a href="#ref"     data-s="ref"><i>03</i>Technical</a>
+  <a href="#roles"   data-s="roles"><i>02</i>Openings</a>
+  <a href="#drill"   data-s="drill"><i>03</i>Interview bank</a>
+  <a href="#ref"     data-s="ref"><i>04</i>Technical</a>
   <span class="rail-h">Campaign</span>
-  <a href="#why"     data-s="why"><i>04</i>Why it stalled</a>
-  <a href="#plan"    data-s="plan"><i>05</i>The plan</a>
-  <a href="#pitch"   data-s="pitch"><i>06</i>Positioning</a>
-  <a href="#targets" data-s="targets"><i>07</i>Targets</a>
+  <a href="#why"     data-s="why"><i>05</i>Why it stalled</a>
+  <a href="#plan"    data-s="plan"><i>06</i>The plan</a>
+  <a href="#pitch"   data-s="pitch"><i>07</i>Positioning</a>
+  <a href="#targets" data-s="targets"><i>08</i>Targets</a>
   <span class="rail-h">Leverage</span>
-  <a href="#intel"   data-s="intel"><i>08</i>Market intel</a>
-  <a href="#money"   data-s="money"><i>09</i>Money</a>
-  <a href="#long"    data-s="long"><i>10</i>The long game</a>
+  <a href="#intel"   data-s="intel"><i>09</i>Market intel</a>
+  <a href="#money"   data-s="money"><i>10</i>Money</a>
+  <a href="#long"    data-s="long"><i>11</i>The long game</a>
 </nav>
 
 <main>
@@ -319,9 +345,25 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 02 DRILL ══════════════════════════════════════════════════════════ -->
+<!-- ══ 02 OPENINGS ═══════════════════════════════════════════════════════ -->
+<section class="sec" id="roles">
+  <span class="sec-k">02 — Openings</span>
+  <h2>Live roles, scored against your CV</h2>
+  <p class="sec-s">Senior finance openings in the UAE, Saudi, Malaysia and Oman, scraped daily and
+     ranked on fit, employer quality and whether the application link actually works — not on
+     recency. Every card carries a direct apply link unless it says otherwise.</p>
+  <hr class="rule">
+  <div id="rolesMeta" class="warnbox" style="border-left-color:var(--accent);background:var(--accent-soft)">
+    Loading the feed…
+  </div>
+  <div class="hero-m" id="rolesStats" hidden></div>
+  <div class="chips" id="rolesFilters" hidden></div>
+  <div id="rolesList"></div>
+</section>
+
+<!-- ══ 03 DRILL ══════════════════════════════════════════════════════════ -->
 <section class="sec" id="drill">
-  <span class="sec-k">02 — Interview bank</span>
+  <span class="sec-k">03 — Interview bank</span>
   <h2>Forty questions, answered in your own facts</h2>
   <p class="sec-s">Every model answer below is built from your actual record — Landmark, D365,
      two-country consolidation, 60+ leases. Rate each one honestly. The rating is the only
@@ -331,9 +373,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   <div id="drillList"></div>
 </section>
 
-<!-- ══ 03 TECHNICAL ══════════════════════════════════════════════════════ -->
+<!-- ══ 04 TECHNICAL ══════════════════════════════════════════════════════ -->
 <section class="sec" id="ref">
-  <span class="sec-k">03 — Technical</span>
+  <span class="sec-k">04 — Technical</span>
   <h2>The eight things a Controller interview actually tests</h2>
   <p class="sec-s">Not a textbook. The eight mechanisms you will be asked to explain on a
      whiteboard or over a call, each in the shortest form that survives a follow-up question.</p>
@@ -341,9 +383,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   <div id="refList"></div>
 </section>
 
-<!-- ══ 04 WHY IT STALLED ═════════════════════════════════════════════════ -->
+<!-- ══ 05 WHY IT STALLED ═════════════════════════════════════════════════ -->
 <section class="sec" id="why">
-  <span class="sec-k">04 — Diagnosis</span>
+  <span class="sec-k">05 — Diagnosis</span>
   <h2>Why a hundred applications returned nothing</h2>
   <p class="sec-s">Ranked by how much each one cost you. The first is the big one and it is not
      the CV.</p>
@@ -413,9 +455,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 05 PLAN ═══════════════════════════════════════════════════════════ -->
+<!-- ══ 06 PLAN ═══════════════════════════════════════════════════════════ -->
 <section class="sec" id="plan">
-  <span class="sec-k">05 — The plan</span>
+  <span class="sec-k">06 — The plan</span>
   <h2>Ninety days, four fortnights</h2>
   <p class="sec-s">The only structural change that matters: move effort out of portals and into
      people. Everything below serves that.</p>
@@ -493,9 +535,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 06 POSITIONING ════════════════════════════════════════════════════ -->
+<!-- ══ 07 POSITIONING ════════════════════════════════════════════════════ -->
 <section class="sec" id="pitch">
-  <span class="sec-k">06 — Positioning</span>
+  <span class="sec-k">07 — Positioning</span>
   <h2>One sentence, three stories, six numbers</h2>
   <p class="sec-s">If you can say these without preparing, you are ready for any first-round call.</p>
   <hr class="rule">
@@ -565,9 +607,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 07 TARGETS ════════════════════════════════════════════════════════ -->
+<!-- ══ 08 TARGETS ════════════════════════════════════════════════════════ -->
 <section class="sec" id="targets">
-  <span class="sec-k">07 — Targets</span>
+  <span class="sec-k">08 — Targets</span>
   <h2>Where your exact experience transfers</h2>
   <p class="sec-s">Multi-country retail, IFRS plus a local GAAP, lease-heavy store estate, ERP
      migration. These are the groups where that is the job description, not a nice-to-have.</p>
@@ -638,9 +680,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 08 MARKET INTEL ═══════════════════════════════════════════════════ -->
+<!-- ══ 09 MARKET INTEL ═══════════════════════════════════════════════════ -->
 <section class="sec" id="intel">
-  <span class="sec-k">08 — Market intel</span>
+  <span class="sec-k">09 — Market intel</span>
   <h2>The rule change that just repriced you</h2>
   <p class="sec-s">Verified at source on 2 September 2026. This is the single most useful thing
      on this page and most candidates in your position do not know it yet.</p>
@@ -742,9 +784,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 09 MONEY ══════════════════════════════════════════════════════════ -->
+<!-- ══ 10 MONEY ══════════════════════════════════════════════════════════ -->
 <section class="sec" id="money">
-  <span class="sec-k">09 — Money</span>
+  <span class="sec-k">10 — Money</span>
   <h2>Negotiation, in the order it actually happens</h2>
   <p class="sec-s">Most of the money is lost in the first two minutes of the first call, before
      anyone has said the word "offer".</p>
@@ -802,9 +844,9 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 10 THE LONG GAME ══════════════════════════════════════════════════ -->
+<!-- ══ 11 THE LONG GAME ══════════════════════════════════════════════════ -->
 <section class="sec" id="long">
-  <span class="sec-k">10 — The long game</span>
+  <span class="sec-k">11 — The long game</span>
   <h2>The part nobody schedules</h2>
   <p class="sec-s">A job search is eight to twelve weeks of rejection with no feedback. The people
      who land well are not the most qualified; they are the ones still executing in week ten.</p>
@@ -1175,6 +1217,115 @@ function markActive(){
 }
 window.addEventListener("scroll", ()=>{ if(spy) return;
   spy = setTimeout(()=>{ spy = null; markActive(); }, 90); }, {passive:true});
+
+
+/* ══ OPENINGS ══════════════════════════════════════════════════════════════
+   Fetched live from news.askakshay.com/jobs.json, which jobs.py rescrapes
+   every morning and which already sends Access-Control-Allow-Origin: *. The
+   scraper is NOT duplicated here — one pipeline, two surfaces. */
+const FEED = "https://news.askakshay.com/jobs.json";
+let ROLES = [], rFilter = {country:"All", tier:"All"};
+
+function roleCard(j){
+  const tier = j.tier || "-";
+  const why  = (j.why_fit || []).slice(0, 3);
+  const warn = (j.watch_out || []).slice(0, 2);
+  const loc  = [j.location, j.country].filter(Boolean).join(", ") || j.country || "";
+  const sal  = (j.salary_min || j.salary_max)
+      ? `${j.salary_currency || ""} ${j.salary_min || ""}${j.salary_max ? "–" + j.salary_max : ""}`.trim()
+      : "Salary not disclosed";
+  const exp  = j.experience_min ? `${j.experience_min}+ yrs` : "";
+  const st   = {NEW:"up", ACTIVE:"acc", AGING:"warn", STALE:"down"}[j.status] || "";
+  return `<article class="role t-${esc(tier)}">
+    <div class="role-h">
+      <div class="role-t">
+        <b>${esc(j.title || "Untitled role")}</b>
+        <span>${esc(j.company || j.source || "")}${loc ? " · " + esc(loc) : ""}</span>
+      </div>
+      <div class="role-sc"><b>${j.opportunity_score ?? "–"}</b><span>${esc(tier)}</span></div>
+    </div>
+    <div class="role-m">
+      ${j.status ? `<span class="pill ${st}">${esc(j.status)}</span>` : ""}
+      ${j.posted_date ? `<span class="pill">Posted ${esc(j.posted_date)}</span>` : ""}
+      ${j.candidate_fit_score != null ? `<span class="pill">Fit ${j.candidate_fit_score}</span>` : ""}
+      ${j.employer_score != null ? `<span class="pill">Employer ${j.employer_score}</span>` : ""}
+      ${exp ? `<span class="pill">${esc(exp)}</span>` : ""}
+      ${j.emiratisation_requirement ? `<span class="pill warn">Emiratisation stated</span>` : ""}
+      ${!j.application_url_verified ? `<span class="pill warn">Link unverified</span>` : ""}
+    </div>
+    <p style="font-size:var(--t-3);color:var(--dim);margin-top:8px">${esc(sal)}</p>
+    ${(why.length || warn.length) ? `<ul class="role-w plain">
+      ${why.map(w => `<li>${esc(w)}</li>`).join("")}
+      ${warn.map(w => `<li class="warn">${esc(w)}</li>`).join("")}
+    </ul>` : ""}
+    <div class="role-a">
+      ${j.application_url ? `<a class="go" href="${esc(j.application_url)}" target="_blank" rel="noopener">
+        ${j.is_direct_apply ? "Apply direct" : "Open posting"}</a>` : ""}
+      ${j.source_url && j.source_url !== j.application_url
+        ? `<a class="alt" href="${esc(j.source_url)}" target="_blank" rel="noopener">View posting</a>` : ""}
+      <em>${esc(j.source || "")}</em>
+    </div>
+  </article>`;
+}
+
+function drawRoles(){
+  const rows = ROLES.filter(j =>
+      (rFilter.country === "All" || j.country === rFilter.country) &&
+      (rFilter.tier === "All" ||
+       (rFilter.tier === "S+A" ? ["S","A"].includes(j.tier) : j.tier === rFilter.tier)));
+  document.getElementById("rolesList").innerHTML = rows.length
+    ? rows.map(roleCard).join("")
+    : '<div class="empty">Nothing matches that filter.</div>';
+}
+
+(async function loadRoles(){
+  const meta = document.getElementById("rolesMeta");
+  try {
+    const res = await fetch(FEED, {cache:"no-store"});
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    const d = await res.json();
+    // Excluded rows are scored and kept in the file on purpose; they are not
+    // opportunities, so they do not belong on this page.
+    ROLES = (d.jobs || []).filter(j => !j.is_excluded)
+              .sort((a,b) => (b.opportunity_score||0) - (a.opportunity_score||0));
+    const st = d.stats || {};
+    const when = d.generated_at ? new Date(d.generated_at) : null;
+    const ageH = when ? Math.round((Date.now() - when) / 3600000) : null;
+    meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b> Scraped
+      ${when ? when.toISOString().slice(0,16).replace("T"," ") + " UTC" : "—"}
+      ${ageH != null ? `(${ageH}h ago)` : ""} ·
+      ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·
+      ${st.urls_verified ?? "?"} links verified.
+      ${ageH != null && ageH > 30 ? "<b> Feed is stale — the scraper has not run.</b>" : ""}`;
+    const by = st.by_country || {};
+    document.getElementById("rolesStats").innerHTML =
+      [["Roles", ROLES.length], ["High fit", st.high_fit ?? "–"],
+       ["UAE", by["UAE"] ?? 0], ["Malaysia", by["Malaysia"] ?? 0]]
+      .map(([l,v]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+    document.getElementById("rolesStats").hidden = false;
+
+    const countries = ["All", ...new Set(ROLES.map(j => j.country).filter(Boolean))];
+    const f = document.getElementById("rolesFilters");
+    f.innerHTML = countries.map(c =>
+        `<button class="chip" data-rc="${esc(c)}" aria-pressed="${c==="All"}">${esc(c)}</button>`).join("")
+      + '<span style="width:12px"></span>'
+      + ["All","S+A","S","A","B"].map(t =>
+        `<button class="chip" data-rt="${esc(t)}" aria-pressed="${t==="All"}">${t==="All"?"Any tier":t}</button>`).join("");
+    f.hidden = false;
+    f.addEventListener("click", e => {
+      const c = e.target.closest("[data-rc]"), t = e.target.closest("[data-rt]");
+      if (c){ rFilter.country = c.dataset.rc;
+              f.querySelectorAll("[data-rc]").forEach(b => b.setAttribute("aria-pressed", String(b===c))); }
+      if (t){ rFilter.tier = t.dataset.rt;
+              f.querySelectorAll("[data-rt]").forEach(b => b.setAttribute("aria-pressed", String(b===t))); }
+      if (c || t) drawRoles();
+    });
+    drawRoles();
+  } catch (err) {
+    meta.innerHTML = `<b>Could not load the feed.</b> ${esc(String(err.message || err))}.
+      The scraper publishes to <code>news.askakshay.com/jobs.json</code> — check that it ran.`;
+  }
+})();
 
 /* ── GO ────────────────────────────────────────────────────────────────── */
 drawBank(); paintStats(); markActive();
