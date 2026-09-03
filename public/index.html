@@ -287,8 +287,22 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   body{background:#fff;color:#000}
 }
 </style>
+<style>
+/* Scroll progress. --accent is this site's blue, so it inherits the theme
+   rather than importing signal's amber. Above the sticky header, which would
+   otherwise slide over it. */
+.prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);
+  z-index:2000;transition:width .1s linear;pointer-events:none}
+@media (prefers-reduced-motion:reduce){ .prog{transition:none} }
+</style>
 </head>
 <body>
+<!-- HOW MUCH OF THIS PAGE IS LEFT. Same bar as signal.askakshay.com and the
+     newspaper: two pixels across the top, filling as you scroll. This page is
+     one long single-file document with no section pagination, so the native
+     scrollbar is the only cue and on a phone it is not one. -->
+<div class="prog" id="prog" role="progressbar" aria-label="Page scrolled"
+     aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
 <header class="bar">
   <a class="mark" href="#top"><i>◆</i> The Campaign</a>
   <div class="bar-sp"></div>
@@ -317,10 +331,7 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   <a href="#money"   data-s="money"><i>10</i>Money</a>
   <a href="#long"    data-s="long"><i>11</i>The long game</a>
   <span class="rail-h">Life</span>
-  <a href="#learn"   data-s="learn"><i>12</i>Reading</a>
-  <a href="#prac"    data-s="prac"><i>13</i>Practice</a>
-  <a href="#mindsec" data-s="mindsec"><i>14</i>Mind</a>
-  <a href="#drills"  data-s="drills"><i>15</i>Drills</a>
+  <a href="#life"    data-s="life"><i>12</i>Life</a>
 </nav>
 
 <main>
@@ -922,41 +933,26 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   </div>
 </section>
 
-<!-- ══ 12–15 LIFE ════════════════════════════════════════════════════════
-     Rendered from news.askakshay.com/today.json ["desk"] — the same objects
-     generate.py already builds for the paper. No generator runs here. -->
-<section class="sec" id="learn">
-  <span class="sec-k">12 — Reading</span>
-  <h2>The book, the wire, the listening</h2>
-  <p class="sec-s">One chapter a day with the whole argument underneath it, the analysis worth
-     ten minutes, and what is worth listening to.</p>
+<!-- ══ 12 LIFE ═══════════════════════════════════════════════════════════
+     One section, four panes. Rendered from news.askakshay.com/today.json
+     ["desk"] — the same objects generate.py already builds for the paper. No
+     generator runs here. -->
+<section class="sec" id="life">
+  <span class="sec-k">12 — Life</span>
+  <h2>Everything that is not the job search</h2>
+  <p class="sec-s">The book and the wire, the daily reps, the thinking, and the drills. Rebuilt
+     every morning by the same build that publishes the ledger.</p>
   <hr class="rule">
-  <div id="lifeLearn"><div class="empty">Loading…</div></div>
-</section>
-
-<section class="sec" id="prac">
-  <span class="sec-k">13 — Practice</span>
-  <h2>The daily reps</h2>
-  <p class="sec-s">Spanish, the word, the speaking drill, and one thing to do with your daughter
-     today.</p>
-  <hr class="rule">
-  <div id="lifePrac"><div class="empty">Loading…</div></div>
-</section>
-
-<section class="sec" id="mindsec">
-  <span class="sec-k">14 — Mind</span>
-  <h2>How to think, and what thinking is already done</h2>
-  <p class="sec-s">The day's wisdom, the traditions, the way, and the week's review prompt.</p>
-  <hr class="rule">
-  <div id="lifeMind"><div class="empty">Loading…</div></div>
-</section>
-
-<section class="sec" id="drills">
-  <span class="sec-k">15 — Drills</span>
-  <h2>Scored against a board</h2>
-  <p class="sec-s">The CFO track's four a day, the chess lesson, and yesterday's games.</p>
-  <hr class="rule">
-  <div id="lifeDrills"><div class="empty">Loading…</div></div>
+  <div class="chips" id="lifeTabs">
+    <button class="chip" data-lt="learn"  aria-pressed="true">Reading</button>
+    <button class="chip" data-lt="prac"   aria-pressed="false">Practice</button>
+    <button class="chip" data-lt="mind"   aria-pressed="false">Mind</button>
+    <button class="chip" data-lt="drills" aria-pressed="false">Drills</button>
+  </div>
+  <div id="lifeLearn"  data-pane="learn"><div class="empty">Loading…</div></div>
+  <div id="lifePrac"   data-pane="prac"   hidden></div>
+  <div id="lifeMind"   data-pane="mind"   hidden></div>
+  <div id="lifeDrills" data-pane="drills" hidden></div>
 </section>
 
 </main>
@@ -1277,15 +1273,41 @@ document.addEventListener("click", e=>{
    in a tab the browser considers hidden, and the nav then reads as broken. */
 const links = $$(".rail a[data-s]");
 const secs  = links.map(a=>document.getElementById(a.dataset.s)).filter(Boolean);
-let spy = null;
+let spy = null, spyLast = 0;
 function markActive(){
   const y = window.scrollY + 140;
   let cur = secs[0];
   for (const s of secs) if (s.offsetTop <= y) cur = s;
-  links.forEach(a=> a.classList.toggle("on", a.dataset.s === (cur && cur.id)));
+  setActive(cur && cur.id);
 }
-window.addEventListener("scroll", ()=>{ if(spy) return;
-  spy = setTimeout(()=>{ spy = null; markActive(); }, 90); }, {passive:true});
+function setActive(id){
+  links.forEach(a => a.classList.toggle("on", a.dataset.s === id));
+}
+/* THROTTLE **PLUS A TRAILING CALL**. The first version was leading-edge only:
+   it scheduled one markActive per 90ms window and never re-armed, so the last
+   run could land mid-scroll and the FINAL position was never measured. Click
+   "Openings" and the rail stayed on "Today" — which is exactly what happened.
+   The trailing timeout guarantees one measurement after scrolling stops. */
+function onScroll(){
+  const now = Date.now();
+  if (now - spyLast > 90){ spyLast = now; markActive(); }
+  clearTimeout(spy);
+  spy = setTimeout(()=>{ spyLast = Date.now(); markActive(); }, 130);
+}
+window.addEventListener("scroll", onScroll, {passive:true});
+/* Where it exists, scrollend is the authoritative "the animation is over"
+   signal and costs nothing. */
+if ("onscrollend" in window) window.addEventListener("scrollend", markActive, {passive:true});
+/* And highlight on the click itself. Smooth scrolling means the rail would
+   otherwise lag the user's own intent by the length of the animation. */
+document.querySelector(".rail").addEventListener("click", e => {
+  const a = e.target.closest("a[data-s]");
+  if (a) { setActive(a.dataset.s); spyLast = Date.now() + 400; }
+});
+window.addEventListener("hashchange", () => {
+  const id = location.hash.slice(1);
+  if (id && document.getElementById(id)) setActive(id);
+});
 
 
 /* ══ OPENINGS ══════════════════════════════════════════════════════════════
@@ -1541,8 +1563,40 @@ function renderDrills(d){
   }
 })();
 
+/* ── LIFE TABS ────────────────────────────────────────────────────────── */
+document.getElementById("lifeTabs").addEventListener("click", e => {
+  const b = e.target.closest("[data-lt]"); if (!b) return;
+  const want = b.dataset.lt;
+  document.querySelectorAll("#lifeTabs .chip")
+    .forEach(c => c.setAttribute("aria-pressed", String(c === b)));
+  document.querySelectorAll("#life [data-pane]")
+    .forEach(p => { p.hidden = p.dataset.pane !== want; });
+});
+
 /* ── GO ────────────────────────────────────────────────────────────────── */
 drawBank(); paintStats(); markActive();
+})();
+</script>
+<script>
+/* rAF as a COALESCER, not an animation loop: scroll fires far faster than the
+   screen refreshes, and without this the height is recomputed dozens of times
+   per frame. Safe in a background tab for the reason a marquee is not — a
+   scroll handler has nothing to do when nobody is scrolling. */
+(function(){
+  var bar = document.getElementById('prog'); if(!bar) return;
+  var queued = false;
+  function draw(){
+    var d = document.documentElement, h = d.scrollHeight - window.innerHeight;
+    var pc = h > 0 ? Math.min(100, Math.max(0, window.scrollY / h * 100)) : 0;
+    bar.style.width = pc + '%';
+    bar.setAttribute('aria-valuenow', Math.round(pc));
+    queued = false;
+  }
+  addEventListener('scroll', function(){
+    if(!queued){ queued = true; requestAnimationFrame(draw); }
+  }, {passive:true});
+  addEventListener('resize', draw, {passive:true});
+  draw();
 })();
 </script>
 </body>
