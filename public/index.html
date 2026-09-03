@@ -1375,6 +1375,18 @@ window.addEventListener("hashchange", () => {
    every morning and which already sends Access-Control-Allow-Origin: *. The
    scraper is NOT duplicated here — one pipeline, two surfaces. */
 const FEED = "https://news.askakshay.com/jobs.json";
+/* MYT EVERYWHERE. The feeds publish UTC; nothing on this page displays it.
+   A fixed +8 offset rather than toLocaleString with a timeZone, so the string
+   is identical no matter what the reader's machine is set to — this page is
+   read on a phone abroad as often as on the desk in KL. */
+const MYT_MS = 8 * 3600 * 1000;
+function myt(v, withTime = true){
+  if (!v) return "—";
+  const d = new Date(v);
+  if (isNaN(d)) return String(v);
+  const s = new Date(d.getTime() + MYT_MS).toISOString();
+  return withTime ? s.slice(0, 16).replace("T", " ") + " MYT" : s.slice(0, 10);
+}
 /* What a grade actually means, so A and B are readable at a glance instead of
    being a letter you have to remember the scale for. */
 const TIER_LABEL = {S:"S · Top of the list", A:"A · Strong fit",
@@ -1449,7 +1461,7 @@ function drawRoles(){
     const when = d.generated_at ? new Date(d.generated_at) : null;
     const ageH = when ? Math.round((Date.now() - when) / 3600000) : null;
     meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b> Scraped
-      ${when ? when.toISOString().slice(0,16).replace("T"," ") + " UTC" : "—"}
+      ${myt(d.generated_at)}
       ${ageH != null ? `(${ageH}h ago)` : ""} ·
       ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·
       ${st.urls_verified ?? "?"} links verified.
@@ -1540,7 +1552,7 @@ function renderLearn(d){
         return `<div class="epi">
         ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title || "")}</a></b>`
             : `<b>${esc(e.title || "")}</b>`}
-        <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(e.published) : ""}${
+        <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(String(e.published).length > 10 ? myt(e.published, false) : e.published) : ""}${
               e.category ? " · " + esc(e.category) : ""}</span>
         ${tk.length ? `<ul class="tick" style="margin-top:7px">${
               tk.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
