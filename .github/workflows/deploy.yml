@@ -1,0 +1,55 @@
+# Deploy career.askakshay.com, then check the page a browser actually renders.
+#
+# This site had no CI at all: every change went live only when somebody ran
+# `npx wrangler deploy` from a laptop, which is the same gap that left
+# signal.askakshay.com serving 33-hour-old data while every workflow was green.
+#
+# THE TOKEN IS REQUIRED, NOT OPTIONAL. signal.askakshay.com carried a gate that
+# skipped the deploy when the secret was missing and reported success — thirteen
+# green runs that published nothing. A deploy step that cannot deploy has
+# failed, so this exits 1 and names the command that fixes it.
+name: deploy
+
+on:
+  push:
+    branches: [main]
+    paths-ignore: ["**/*.md"]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+
+      - name: Require a Cloudflare token
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_API_TOKEN }}" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN not set — this push has NOT been deployed."
+            echo "  gh secret set CLOUDFLARE_API_TOKEN  --repo caakshayk1-boop/career"
+            echo "  gh secret set CLOUDFLARE_ACCOUNT_ID --repo caakshayk1-boop/career"
+            exit 1
+          fi
+
+      - run: npm install --no-audit --no-fund
+
+      - name: Deploy the Worker
+        run: npx wrangler deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # The check is the point. Everything on this page is one inline script,
+      # so a single syntax error leaves a page that still looks finished — which
+      # is exactly how a broken deploy survives a green build.
+      - name: Check the rendered page
+        run: |
+          npm install --no-save playwright@1.62.1
+          npx playwright install chromium --with-deps
+          node scripts/check.mjs "${{ vars.CAREER_URL || 'https://career.askakshay.com' }}"
