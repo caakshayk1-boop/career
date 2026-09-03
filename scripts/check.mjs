@@ -48,7 +48,7 @@ ok("content rendered", (await page.locator("body").innerText()).length > 2000);
 await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight * 0.5));
 await page.waitForTimeout(400);
 const pct = await page.evaluate(() => {
-  const b = document.getElementById("prog");
+  const b = document.getElementById("scrollprog");
   return b ? parseFloat(b.style.width) || 0 : -1;
 });
 ok("the scroll progress bar tracks the page", pct > 5, `${pct}%`);
