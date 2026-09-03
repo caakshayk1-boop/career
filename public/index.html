@@ -263,6 +263,8 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .epi{padding:11px 0;border-bottom:1px solid var(--line)}
 .epi:last-child{border-bottom:0}
 .epi b{display:block;font-size:var(--t-5);color:var(--text);line-height:1.45}
+.epi b a{color:var(--text);text-decoration:none;background-image:linear-gradient(var(--line2),var(--line2));background-size:100% 1px;background-repeat:no-repeat;background-position:0 100%}
+.epi b a:hover{color:var(--accent);background-image:linear-gradient(var(--accent),var(--accent))}
 .epi span{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
   text-transform:uppercase;color:var(--dim);margin-top:5px}
 .epi p{font-size:var(--t-4);color:var(--muted);margin-top:6px;line-height:1.6}
@@ -1273,40 +1275,60 @@ document.addEventListener("click", e=>{
    in a tab the browser considers hidden, and the nav then reads as broken. */
 const links = $$(".rail a[data-s]");
 const secs  = links.map(a=>document.getElementById(a.dataset.s)).filter(Boolean);
-let spy = null, spyLast = 0;
-function markActive(){
-  const y = window.scrollY + 140;
-  let cur = secs[0];
-  for (const s of secs) if (s.offsetTop <= y) cur = s;
-  setActive(cur && cur.id);
+let spy = null, spyLast = 0, lockUntil = 0;
+
+/* THE PROBE LINE. A section is current once its top passes just under the
+   sticky bar — NOT 140px down the viewport, which is what the first version
+   used and which is why the rail read one section behind. Taken from the live
+   token so it cannot drift from the CSS. */
+function probeLine(){
+  const bar = parseFloat(getComputedStyle(document.documentElement)
+                .getPropertyValue("--barh")) || 56;
+  return bar + 26;
 }
+
 function setActive(id){
   links.forEach(a => a.classList.toggle("on", a.dataset.s === id));
 }
-/* THROTTLE **PLUS A TRAILING CALL**. The first version was leading-edge only:
-   it scheduled one markActive per 90ms window and never re-armed, so the last
-   run could land mid-scroll and the FINAL position was never measured. Click
-   "Openings" and the rail stayed on "Today" — which is exactly what happened.
-   The trailing timeout guarantees one measurement after scrolling stops. */
+
+function markActive(){
+  /* A rail click sets the highlight at once and locks it for the length of the
+     smooth scroll. Without the lock the trailing measurement lands mid-flight
+     and drags the highlight back one section — the bug that survived the first
+     fix, because that fix only addressed WHEN we measure, not what a
+     half-finished animation measures. */
+  if (Date.now() < lockUntil) return;
+  const line = probeLine();
+  let cur = null;
+  for (const s of secs) if (s.getBoundingClientRect().top - line <= 0) cur = s;
+  /* The last section can never reach the probe line on a short final screen,
+     so it could otherwise never be selected. */
+  if (window.innerHeight + window.scrollY >=
+      document.documentElement.scrollHeight - 2) cur = secs[secs.length - 1];
+  setActive((cur || secs[0]).id);
+}
+
+/* Throttle PLUS a trailing call — a leading-edge-only throttle never measures
+   the FINAL position. */
 function onScroll(){
   const now = Date.now();
   if (now - spyLast > 90){ spyLast = now; markActive(); }
   clearTimeout(spy);
-  spy = setTimeout(()=>{ spyLast = Date.now(); markActive(); }, 130);
+  spy = setTimeout(() => { spyLast = Date.now(); markActive(); }, 130);
 }
 window.addEventListener("scroll", onScroll, {passive:true});
-/* Where it exists, scrollend is the authoritative "the animation is over"
-   signal and costs nothing. */
-if ("onscrollend" in window) window.addEventListener("scrollend", markActive, {passive:true});
-/* And highlight on the click itself. Smooth scrolling means the rail would
-   otherwise lag the user's own intent by the length of the animation. */
+if ("onscrollend" in window)
+  window.addEventListener("scrollend", () => { lockUntil = 0; markActive(); }, {passive:true});
+
 document.querySelector(".rail").addEventListener("click", e => {
   const a = e.target.closest("a[data-s]");
-  if (a) { setActive(a.dataset.s); spyLast = Date.now() + 400; }
+  if (!a) return;
+  setActive(a.dataset.s);
+  lockUntil = Date.now() + 900;   // scrollend clears this earlier where supported
 });
 window.addEventListener("hashchange", () => {
   const id = location.hash.slice(1);
-  if (id && document.getElementById(id)) setActive(id);
+  if (id && document.getElementById(id)) { setActive(id); lockUntil = Date.now() + 900; }
 });
 
 
@@ -1451,24 +1473,34 @@ function renderLearn(d){
   const sr = d.smart_reads;
   const items = Array.isArray(sr) ? sr : (sr && (sr.items || sr.reads || sr.articles)) || [];
   if (items.length) {
-    h += `<div class="lc"><span class="k">Smart reads</span>` +
-      items.slice(0, 6).map(a => `<div class="epi">
-        <b>${esc(a.title || a.headline || "")}</b>
-        <span>${esc(a.source || a.site || "")}${a.section ? " · " + esc(a.section) : ""}</span>
-        ${a.summary || a.takeaway ? `<p>${esc(a.summary || a.takeaway)}</p>` : ""}
-        ${a.url ? `<p><a href="${esc(a.url)}" target="_blank" rel="noopener">Read →</a></p>` : ""}
-      </div>`).join("") + `</div>`;
+    h += `<div class="lc"><span class="k">Smart reads · ${items.length}</span>` +
+      items.map(a => { const u = a.link || a.url; return `<div class="epi">
+        ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(a.title || "")}</a></b>`
+            : `<b>${esc(a.title || "")}</b>`}
+        <span>${esc(a.source || "")}${a.date ? " · " + esc(a.date) : ""}${a.cat ? " · " + esc(a.cat) : ""}</span>
+        ${a.summary ? `<p>${esc(a.summary)}</p>` : ""}
+      </div>`; }).join("") + `</div>`;
   }
   const pod = d.podcasts;
   const eps = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
   if (eps.length) {
-    h += `<div class="lc"><span class="k">Podcasts${pod.shows ? ` · ${pod.shows} shows` : ""}</span>` +
-      eps.slice(0, 8).map(e => `<div class="epi">
-        <b>${esc(e.title || "")}</b>
-        <span>${esc(e.show || e.channel || "")}${e.date ? " · " + esc(e.date) : ""}</span>
-        ${e.takeaway || e.summary ? `<p>${esc(e.takeaway || e.summary)}</p>` : ""}
-        ${e.url ? `<p><a href="${esc(e.url)}" target="_blank" rel="noopener">Listen →</a></p>` : ""}
-      </div>`).join("") + `</div>`;
+    // Fields are link / published / takeaways (a LIST). All three were guessed
+    // wrong, so there was no link, no date and no takeaway. No slice either —
+    // 20 shows meant 20 episodes and only 8 were being shown.
+    h += `<div class="lc"><span class="k">Podcasts · ${eps.length} episodes${
+        pod.shows ? ` from ${pod.shows} shows` : ""}</span>` +
+      eps.map(e => {
+        const u = e.link || e.url;
+        const tk = Array.isArray(e.takeaways) ? e.takeaways
+                 : (e.takeaways ? [e.takeaways] : (e.takeaway ? [e.takeaway] : []));
+        return `<div class="epi">
+        ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title || "")}</a></b>`
+            : `<b>${esc(e.title || "")}</b>`}
+        <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(e.published) : ""}${
+              e.category ? " · " + esc(e.category) : ""}</span>
+        ${tk.length ? `<ul class="tick" style="margin-top:7px">${
+              tk.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+      </div>`; }).join("") + `</div>`;
   }
   return h || '<div class="empty">No reading in today\'s edition.</div>';
 }
