@@ -58,6 +58,11 @@
   --ls-tight:-.02em; --ls-snug:-.012em; --ls-wide:.05em; --ls-wider:.1em; --ls-widest:.14em;
   --t-fast:140ms; --t-mid:220ms; --ease:cubic-bezier(.22,.61,.36,1);
   --gut:clamp(16px,4vw,32px); --barh:56px; --rail:216px;
+  /* The shell grew in steps rather than by a percentage: prose has a correct
+     measure and a fluid width would stretch it past readable at 2000px. Card
+     GRIDS take the extra room (they reflow into more columns); prose blocks
+     are capped separately by --measure. */
+  --shell:1240px; --measure:74ch;
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -97,9 +102,11 @@ button{font:inherit;color:inherit}
 @media(max-width:640px){.srch kbd{display:none}}
 
 /* ── SHELL ─────────────────────────────────────────────────────────────── */
-.shell{max-width:1240px;margin:0 auto;padding:0 var(--gut);
+.shell{max-width:var(--shell);margin:0 auto;padding:0 var(--gut);
   display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
 @media(max-width:900px){.shell{grid-template-columns:minmax(0,1fr);gap:0}}
+@media(min-width:1400px){:root{--shell:1460px; --rail:232px}}
+@media(min-width:1760px){:root{--shell:1680px}}
 
 .rail{position:sticky;top:calc(var(--barh) + 20px);padding:28px 0 40px;display:flex;flex-direction:column;gap:2px}
 .rail a{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--dim);
@@ -128,7 +135,7 @@ main{padding:clamp(26px,4vw,44px) 0 100px;min-width:0}
 .sec{padding:0 0 clamp(48px,6vw,76px);scroll-margin-top:calc(var(--barh) + 24px)}
 .sec-k{display:block;font:500 var(--t-2)/1 var(--mono);letter-spacing:var(--ls-widest);
   text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.sec h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px}
+.sec h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px;max-width:22ch}
 .sec-s{color:var(--muted);font-size:var(--t-6);max-width:66ch;margin-bottom:clamp(20px,2.6vw,30px)}
 .rule{height:1px;background:var(--line);border:0;margin:0 0 clamp(22px,3vw,32px)}
 
@@ -152,9 +159,12 @@ main{padding:clamp(26px,4vw,44px) 0 100px;min-width:0}
 .card strong,.card b{color:var(--text);font-weight:600}
 .grid{display:grid;gap:14px}
 @media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
-.lede{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--r-3) var(--r-3) 0;
+/* Auto-fill, not a fixed count: the same rule gives 2 columns at 1240 and 4 at
+   1680 without another breakpoint to keep in step. */
+@media(min-width:1400px){.g2{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}}
+.lede{max-width:var(--measure);border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--r-3) var(--r-3) 0;
   padding:15px 17px;margin-bottom:20px;font-size:var(--t-6);color:var(--text);line-height:1.62}
-.warnbox{border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--warn-soft);
+.warnbox{max-width:var(--measure);border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--warn-soft);
   border-radius:0 var(--r-3) var(--r-3) 0;padding:15px 17px;margin-bottom:16px;font-size:var(--t-5);color:var(--muted)}
 .warnbox b{color:var(--text)}
 ul.tick,ul.plain{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
@@ -191,7 +201,7 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
   min-height:34px;transition:all var(--t-fast) var(--ease)}
 .chip:hover{color:var(--text);border-color:var(--line2)}
 .chip[aria-pressed="true"]{background:var(--ink-btn);color:var(--on-ink);border-color:var(--ink-btn)}
-.q{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);margin-bottom:10px;overflow:hidden}
+.q{max-width:var(--measure);border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);margin-bottom:10px;overflow:hidden}
 .q-h{display:flex;align-items:flex-start;gap:12px;width:100%;text-align:left;background:none;border:0;
   padding:15px 17px;cursor:pointer;min-height:52px}
 .q-h:hover{background:var(--raised)}
@@ -221,7 +231,12 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 
 
 /* ── OPENINGS ──────────────────────────────────────────────────────────── */
-.role{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
+#rolesList{display:grid;gap:11px;
+  /* min(...,100%) — a bare minmax(420px,1fr) cannot shrink below 420px and
+     overflows a 343px phone column. */
+  grid-template-columns:repeat(auto-fill,minmax(min(420px,100%),1fr));
+  align-items:start}
+.role{margin-bottom:0!important;border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
   padding:16px 17px;margin-bottom:11px;border-left:3px solid var(--line2)}
 .role.t-S{border-left-color:var(--up)} .role.t-A{border-left-color:var(--accent)}
 .role.t-B{border-left-color:var(--warn)}
@@ -246,6 +261,12 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 
 
 /* ── LIFE ──────────────────────────────────────────────────────────────── */
+#life [data-pane]{display:grid;gap:11px;align-items:start;
+  grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
+#life [data-pane] > .lc{margin-bottom:0}
+/* A card that carries a LIST of episodes or reads needs the full row — two
+   columns of 20 podcast titles is a worse read, not a denser one. */
+#life [data-pane] > .lc:has(.epi){grid-column:1/-1}
 .lc{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
   padding:15px 17px;margin-bottom:11px}
 .lc h4{margin:0 0 7px;font:600 var(--t-6)/1.35 var(--ui);color:var(--text);font-family:var(--ui)}
@@ -305,7 +326,7 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 .ck input:checked+span{color:var(--dim);text-decoration:line-through}
 
 /* ── FOOT ──────────────────────────────────────────────────────────────── */
-.foot{max-width:1240px;margin:0 auto;padding:26px var(--gut) 40px;border-top:1px solid var(--line);
+.foot{max-width:var(--shell);margin:0 auto;padding:26px var(--gut) 40px;border-top:1px solid var(--line);
   font:400 var(--t-3)/1.75 var(--mono);color:var(--dim)}
 mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2px}
 @media print{
