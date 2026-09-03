@@ -261,12 +261,19 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:now
 
 
 /* ── LIFE ──────────────────────────────────────────────────────────────── */
-#life [data-pane]{display:grid;gap:11px;align-items:start;
-  grid-template-columns:repeat(auto-fill,minmax(min(380px,100%),1fr))}
-#life [data-pane] > .lc{margin-bottom:0}
-/* A card that carries a LIST of episodes or reads needs the full row — two
-   columns of 20 podcast titles is a worse read, not a denser one. */
-#life [data-pane] > .lc:has(.epi){grid-column:1/-1}
+/* Each GROUP owns its grid. One flat grid across the whole pane meant a
+   full-width list card sat beside narrow ones and left a dead column, and
+   cards of different heights produced ragged rows. */
+.lgroup{margin-bottom:clamp(26px,3vw,38px)}
+.lgroup:last-child{margin-bottom:0}
+.lgh{font:600 var(--t-7)/1.3 var(--serif);color:var(--text);margin:0 0 3px}
+.lgd{font-size:var(--t-4);color:var(--dim);margin:0 0 13px;max-width:62ch}
+.lgrid{display:grid;gap:11px;align-items:stretch;
+  grid-template-columns:repeat(auto-fill,minmax(min(330px,100%),1fr))}
+.lgrid.wide{grid-template-columns:minmax(0,1fr)}
+.lgrid > .lc{margin-bottom:0;display:flex;flex-direction:column}
+/* Push the DO/WHY footer to the bottom so cards in a row line up. */
+.lgrid > .lc > .do{margin-top:auto}
 .lc{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
   padding:15px 17px;margin-bottom:11px}
 .lc h4{margin:0 0 7px;font:600 var(--t-6)/1.35 var(--ui);color:var(--text);font-family:var(--ui)}
@@ -1535,121 +1542,144 @@ const doLine = (label, text) => text
 const counter = o => (o && o.index != null && o.total)
   ? `${o.index} of ${o.total}` : "";
 
+/* A labelled group: heading, one line saying what it is, then its own grid.
+   `wide` for groups whose cards carry lists and need the full row. */
+function group(title, blurb, body, wide){
+  if (!body) return "";
+  return `<div class="lgroup">
+    <h3 class="lgh">${esc(title)}</h3>
+    ${blurb ? `<p class="lgd">${esc(blurb)}</p>` : ""}
+    <div class="lgrid${wide ? " wide" : ""}">${body}</div>
+  </div>`;
+}
+
 function renderLearn(d){
   let h = "";
   const b = d.book;
   if (has(b)) {
     const crux = Array.isArray(b.crux) ? b.crux.slice(0, 6) : [];
-    h += card(`Book · ${counter(b) || ""}`, `${b.book || ""}${b.author ? " — " + b.author : ""}`,
-      b.chapter ? `Chapter: ${b.chapter}` : "",
-      `${b.lesson ? `<p>${esc(b.lesson)}</p>` : ""}
-       ${b.key_quote ? `<p><b>&ldquo;${esc(b.key_quote)}&rdquo;</b></p>` : ""}
-       ${crux.length ? `<ul class="tick">${crux.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}
-       ${doLine("Do", b.action)}`);
+    h += group("The book", `${b.book || ""}${b.author ? " — " + b.author : ""}${
+        counter(b) ? " · chapter " + counter(b) : ""}`,
+      card("Today's chapter", b.chapter || "",
+        b.lesson || "",
+        `${b.key_quote ? `<p><b>&ldquo;${esc(b.key_quote)}&rdquo;</b></p>` : ""}
+         ${crux.length ? `<ul class="tick">${crux.map(c => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}
+         ${doLine("Do", b.action)}`), true);
   }
   const sr = d.smart_reads;
   const items = Array.isArray(sr) ? sr : (sr && (sr.items || sr.reads || sr.articles)) || [];
   if (items.length) {
-    h += `<div class="lc"><span class="k">Smart reads · ${items.length}</span>` +
-      items.map(a => { const u = a.link || a.url; return `<div class="epi">
+    h += group("Smart reads", `${items.length} pieces worth the ten minutes — analysis, not headlines.`,
+      `<div class="lc">` + items.map(a => { const u = a.link || a.url; return `<div class="epi">
         ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(a.title || "")}</a></b>`
             : `<b>${esc(a.title || "")}</b>`}
         <span>${esc(a.source || "")}${a.date ? " · " + esc(a.date) : ""}${a.cat ? " · " + esc(a.cat) : ""}</span>
         ${a.summary ? `<p>${esc(a.summary)}</p>` : ""}
-      </div>`; }).join("") + `</div>`;
+      </div>`; }).join("") + `</div>`, true);
   }
   const pod = d.podcasts;
   const eps = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
   if (eps.length) {
-    // Fields are link / published / takeaways (a LIST). All three were guessed
-    // wrong, so there was no link, no date and no takeaway. No slice either —
-    // 20 shows meant 20 episodes and only 8 were being shown.
-    h += `<div class="lc"><span class="k">Podcasts · ${eps.length} episodes${
-        pod.shows ? ` from ${pod.shows} shows` : ""}</span>` +
-      eps.map(e => {
+    h += group("Podcasts", `${eps.length} episodes${pod.shows ? ` from ${pod.shows} shows` : ""}, newest first.`,
+      `<div class="lc">` + eps.map(e => {
         const u = e.link || e.url;
         const tk = Array.isArray(e.takeaways) ? e.takeaways
                  : (e.takeaways ? [e.takeaways] : (e.takeaway ? [e.takeaway] : []));
         return `<div class="epi">
         ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title || "")}</a></b>`
             : `<b>${esc(e.title || "")}</b>`}
-        <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(String(e.published).length > 10 ? myt(e.published, false) : e.published) : ""}${
+        <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(e.published) : ""}${
               e.category ? " · " + esc(e.category) : ""}</span>
         ${tk.length ? `<ul class="tick" style="margin-top:7px">${
               tk.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
-      </div>`; }).join("") + `</div>`;
+      </div>`; }).join("") + `</div>`, true);
   }
   return h || '<div class="empty">No reading in today\'s edition.</div>';
 }
 
 function renderPrac(d){
-  let h = "";
-  if (has(d.spanish)) h += `<div class="lc"><span class="k">Spanish</span>` +
+  let h = "", lang = "";
+  if (has(d.spanish)) lang += `<div class="lc"><span class="k">Spanish</span>` +
     d.spanish.map(w => `<div class="wordr"><b>${esc(w.word || "")}</b>
       <span>${esc(w.meaning || "")}${w.es ? `<br><i>${esc(w.es)}</i>` : ""}
       ${w.en ? `<br>${esc(w.en)}` : ""}</span></div>`).join("") + `</div>`;
-  if (has(d.vocab)) h += `<div class="lc"><span class="k">Vocabulary</span>` +
+  if (has(d.vocab)) lang += `<div class="lc"><span class="k">Vocabulary</span>` +
     d.vocab.map(w => `<div class="wordr"><b>${esc(w.word || "")}</b>
       <span>${w.say ? `<i>${esc(w.say)}</i> — ` : ""}${esc(w.meaning || "")}
       ${w.example ? `<br>${esc(w.example)}` : ""}</span></div>`).join("") + `</div>`;
   const sp = d.speaking;
-  if (has(sp)) h += card("Speaking", sp.title, sp.drill, doLine("Why", sp.why));
-  if (has(d.father)) h += `<div class="lgrid two">` + d.father.map(f =>
-    card("Father", f.title, f.do, doLine("Why", f.why))).join("") + `</div>`;
+  if (has(sp)) lang += card("Speaking drill", sp.title, sp.drill, doLine("Why", sp.why));
+  h += group("Language", "Two words, a phrase and one speaking drill a day.", lang);
+
+  let fam = "";
+  if (has(d.father)) fam += d.father.map(f =>
+    card("Father", f.title, f.do, doLine("Why", f.why))).join("");
   const dg = d.daughter;
-  if (has(dg)) h += card("Daughter", dg.heading,
+  if (has(dg)) fam += card("Daughter", dg.heading,
     [dg.months != null ? `${dg.months} months` : "", dg.days != null ? `${dg.days} days` : "",
      dg.band || ""].filter(Boolean).join(" · "));
-  return h || '<div class="empty">No practice in today\'s edition.</div>';
+  h += group("Family", "One thing to do with her today, and where she is.", fam);
+  return h.trim() || '<div class="empty">No practice in today\'s edition.</div>';
 }
 
 function renderMind(d){
   let h = "";
-  if (has(d.wisdom)) h += card(`Wisdom · ${counter(d.wisdom)}`, d.wisdom.title, d.wisdom.body);
-  if (has(d.life_wisdom)) h += `<div class="lgrid two">` + d.life_wisdom.map(w =>
-    card(w.tradition, `${w.term || ""}${w.translation ? " — " + w.translation : ""}`,
-         w.teaching, doLine("Apply", w.apply))).join("") + `</div>`;
+  if (has(d.wisdom))
+    h += group("Today's wisdom", counter(d.wisdom) ? `Lesson ${counter(d.wisdom)}.` : "",
+      card("", d.wisdom.title, d.wisdom.body));
+  if (has(d.life_wisdom))
+    h += group("Traditions", "The same idea, arrived at separately, in different words.",
+      d.life_wisdom.map(w => card(w.tradition,
+        `${w.term || ""}${w.translation ? " — " + w.translation : ""}`,
+        w.teaching, doLine("Apply", w.apply))).join(""));
   const way = d.way;
   if (has(way)) {
     const parts = Object.values(way).filter(v => v && v.title);
-    if (parts.length) h += `<div class="lgrid two">` + parts.map(v =>
-      card(v.label || "The Way", v.title, v.body, doLine("Do", v.action))).join("") + `</div>`;
+    if (parts.length) h += group("The Way", "How to carry yourself, one habit at a time.",
+      parts.map(v => card(v.label || "", v.title, v.body, doLine("Do", v.action))).join(""));
   }
-  if (has(d.quote)) h += card("Quote", d.quote.name, `“${d.quote.quote || ""}”`);
-  if (has(d.lesson)) h += card(d.lesson.tradition || "Lesson", "", d.lesson.lesson,
+  let think = "";
+  if (has(d.quote)) think += card("Quote", d.quote.name, `“${d.quote.quote || ""}”`);
+  if (has(d.lesson)) think += card(d.lesson.tradition || "Lesson", "", d.lesson.lesson,
     d.lesson.source ? `<p class="do"><span>Source</span>${esc(d.lesson.source)}</p>` : "");
-  if (has(d.case)) h += card("Case study", d.case.title, d.case.story,
-    doLine("Lesson", d.case.lesson));
+  if (has(d.case)) think += card("Case study", d.case.title, d.case.story, doLine("Lesson", d.case.lesson));
+  h += group("Thinking", "A quote, a tradition and one business that got it right or wrong.", think);
   const rv = d.review;
-  if (has(rv)) h += card(`The Review · week ${rv.week || ""}`, rv.prompt, rv.why,
-    rv.days_left != null ? `<p class="do"><span>Days left</span>${rv.days_left}</p>` : "");
-  return h || '<div class="empty">No reflection in today\'s edition.</div>';
+  if (has(rv)) h += group("The Review", `Week ${rv.week || ""} — one question to sit with.`,
+    card("", rv.prompt, rv.why,
+      rv.days_left != null ? `<p class="do"><span>Days left</span>${rv.days_left}</p>` : ""), true);
+  return h.trim() || '<div class="empty">No reflection in today\'s edition.</div>';
 }
 
 function renderDrills(d){
   let h = "";
   const qs = [].concat(d.interview_tech || [], d.interview_soft || [], d.cfo_field || []);
-  if (qs.length) h += `<div class="lc"><span class="k">CFO track — today's four</span>` +
-    qs.map(q => `<div class="epi"><b>${esc(q.q || q.title || "")}</b>
+  if (qs.length) h += group("CFO track", `${qs.length} a day — two technical, two not.`,
+    `<div class="lc">` + qs.map(q => `<div class="epi"><b>${esc(q.q || q.title || "")}</b>
       ${q.a || q.body ? `<p>${esc(q.a || q.body)}</p>` : ""}
-      ${q.who ? `<span>${esc(q.who)}</span>` : ""}</div>`).join("") + `</div>`;
-  if (has(d.chess)) h += card(`Chess · ${counter(d.chess)}`, d.chess.title, d.chess.body);
+      ${q.who ? `<span>${esc(q.who)}</span>` : ""}</div>`).join("") + `</div>`, true);
+
+  let chess = "";
+  if (has(d.chess)) chess += card(counter(d.chess) ? `Lesson ${counter(d.chess)}` : "Lesson",
+    d.chess.title, d.chess.body);
+  const pz = d.lichess_puzzle;
+  if (has(pz)) chess += card("Puzzle", pz.title || `Rating ${pz.rating || "—"}`,
+    pz.description || pz.fen || "",
+    pz.url ? `<p class="do"><span>Solve</span><a href="${esc(pz.url)}" target="_blank" rel="noopener">Open on Lichess →</a></p>` : "");
+  if (chess) h += group("Chess", "The day's idea, and a puzzle.", chess);
+
   const sum = d.lichess_summary, games = d.lichess_games || [];
   if (has(sum) || games.length) {
     const line = typeof sum === "string" ? sum
-      : (sum && (sum.text || sum.summary)) || `${games.length} games yesterday`;
-    h += card("Lichess", "Yesterday", line,
-      games.length ? `<div style="margin-top:9px">` + games.slice(0, 5).map(g =>
+      : (sum && (sum.text || sum.summary)) || `${games.length} games`;
+    h += group("Yesterday's games", esc(String(line)),
+      games.length ? `<div class="lc">` + games.slice(0, 12).map(g =>
         `<div class="wordr"><b>${esc(g.result || g.outcome || "—")}</b>
          <span>${esc(g.opponent || g.vs || "")}${g.opening ? " · " + esc(g.opening) : ""}
          ${g.url ? ` · <a href="${esc(g.url)}" target="_blank" rel="noopener">replay</a>` : ""}</span></div>`
-      ).join("") + `</div>` : "");
+      ).join("") + `</div>` : "", true);
   }
-  const pz = d.lichess_puzzle;
-  if (has(pz)) h += card("Puzzle", pz.title || `Rating ${pz.rating || "—"}`,
-    pz.description || pz.fen || "",
-    pz.url ? `<p class="do"><span>Solve</span><a href="${esc(pz.url)}" target="_blank" rel="noopener">Open on Lichess →</a></p>` : "");
-  return h || '<div class="empty">No drills in today\'s edition.</div>';
+  return h.trim() || '<div class="empty">No drills in today\'s edition.</div>';
 }
 
 (async function loadLife(){
