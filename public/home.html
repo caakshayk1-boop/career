@@ -1,0 +1,2029 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Home Book — Akshay Kothari</title>
+<meta name="description" content="The other campaign: father, husband, and the daily system for an infant in Kuala Lumpur.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
+
+<style>
+/* Same three faces, same paths, as index.html. This page is a sibling
+   document on the same Worker, not a second design. */
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-500-latin.woff2')format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-600-latin.woff2')format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-700-latin.woff2')format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'JBMono';src:url('/fonts/JetBrainsMono-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JBMono';src:url('/fonts/JetBrainsMono-500-latin.woff2')format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-600-latin.woff2')format('woff2');font-weight:600;font-display:swap}
+
+:root[data-theme="dark"]{
+  --bg:#0B0F14; --surface:#141A22; --raised:#1B222C;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#F2F5F9; --muted:#B3BDCA; --dim:#8D97A5;
+  --ink-btn:#F2F5F9; --on-ink:#0B0F14;
+  --accent:#5B9CFF; --accent-soft:rgba(91,156,255,.13); --on-accent:#06101F;
+  --up:#2BD07C; --down:#FF6B6B; --warn:#F0B429;
+  --up-soft:rgba(43,208,124,.13); --down-soft:rgba(255,107,107,.13); --warn-soft:rgba(240,180,41,.13);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#FFFFFF; --surface:#FFFFFF; --raised:#F6F7F8;
+  --line:rgba(0,0,0,.09); --line2:rgba(0,0,0,.14);
+  --text:#0A0A0A; --muted:#3E3E3E; --dim:#6B6B6B;
+  --ink-btn:#111111; --on-ink:#FFFFFF;
+  --accent:#1B5FD9; --accent-soft:rgba(27,95,217,.07); --on-accent:#FFFFFF;
+  --up:#0E7C48; --down:#C23B2E; --warn:#8A6208;
+  --up-soft:rgba(14,124,72,.09); --down-soft:rgba(194,59,46,.08); --warn-soft:rgba(138,98,8,.09);
+  color-scheme:light;
+}
+:root{
+  --ui:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JBMono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --t-1:10px; --t-2:11px; --t-3:12px; --t-4:13px; --t-5:14px;
+  --t-6:16px; --t-7:18px; --t-8:21px; --t-9:25px; --t-10:30px;
+  --r-1:4px; --r-2:6px; --r-3:8px; --r-4:12px; --r-5:16px; --r-pill:999px;
+  --ls-tight:-.02em; --ls-snug:-.012em; --ls-wide:.05em; --ls-wider:.1em; --ls-widest:.14em;
+  --t-fast:140ms; --t-mid:220ms; --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(16px,4vw,32px); --barh:56px; --rail:216px;
+  --shell:1240px; --measure:74ch;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:400 var(--t-6)/1.6 var(--ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:600;letter-spacing:var(--ls-snug);line-height:1.22}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:2px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-1)}
+::selection{background:var(--accent);color:var(--on-accent)}
+
+.bar{position:sticky;top:0;z-index:40;height:var(--barh);display:flex;align-items:center;
+  gap:12px;padding:0 var(--gut);border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.mark{font:700 var(--t-6)/1 var(--ui);letter-spacing:var(--ls-tight);text-decoration:none;color:var(--text);white-space:nowrap}
+.mark i{color:var(--accent);font-style:normal}
+.bar-sp{flex:1}
+.backlink{font:500 var(--t-3)/1 var(--ui);color:var(--dim);text-decoration:none;white-space:nowrap}
+.backlink:hover{color:var(--text)}
+.icon-btn{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);
+  border-radius:var(--r-3);background:none;color:var(--muted);cursor:pointer;font-size:var(--t-5);
+  transition:color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease)}
+.icon-btn:hover{color:var(--text);border-color:var(--line2)}
+
+.shell{max-width:var(--shell);margin:0 auto;padding:0 var(--gut);
+  display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media(max-width:900px){.shell{grid-template-columns:minmax(0,1fr);gap:0}}
+@media(min-width:1400px){:root{--shell:1460px; --rail:232px}}
+@media(min-width:1760px){:root{--shell:1680px}}
+
+.rail{position:sticky;top:calc(var(--barh) + 20px);padding:28px 0 40px;display:flex;flex-direction:column;gap:2px}
+.rail a{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--dim);
+  font:500 var(--t-4)/1 var(--ui);padding:9px 10px;border-radius:var(--r-2);
+  transition:color var(--t-fast) var(--ease),background var(--t-fast) var(--ease)}
+.rail a i{font:500 var(--t-1)/1 var(--mono);color:var(--dim);opacity:.7;font-style:normal;min-width:16px}
+.rail a:hover{color:var(--text);background:var(--raised)}
+.rail a.on{color:var(--text);background:var(--accent-soft)}
+.rail a.on i{color:var(--accent);opacity:1}
+.rail-h{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-widest);text-transform:uppercase;
+  color:var(--dim);padding:16px 10px 7px}
+@media(max-width:900px){
+  .rail{position:sticky;top:var(--barh);z-index:39;flex-direction:row;gap:6px;overflow-x:auto;
+    padding:10px 0;background:var(--bg);border-bottom:1px solid var(--line);
+    scrollbar-width:none;-ms-overflow-style:none}
+  .rail::-webkit-scrollbar{display:none}
+  .rail a{flex:none;border:1px solid var(--line);border-radius:var(--r-pill);padding:8px 13px;white-space:nowrap}
+  .rail a i{display:none}
+  .rail-h{display:none}
+}
+main{padding:clamp(26px,4vw,44px) 0 100px;min-width:0}
+
+.sec{padding:0 0 clamp(48px,6vw,76px);scroll-margin-top:calc(var(--barh) + 24px)}
+.sec-k{display:block;font:500 var(--t-2)/1 var(--mono);letter-spacing:var(--ls-widest);
+  text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.sec h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:10px;max-width:24ch}
+.sec h3{font-size:var(--t-8);margin:clamp(26px,3vw,34px) 0 10px;max-width:40ch}
+.sec h4{font-size:var(--t-6);font-family:var(--ui);font-weight:600;margin:20px 0 8px}
+.sec-s{color:var(--muted);font-size:var(--t-6);max-width:66ch;margin-bottom:clamp(20px,2.6vw,30px)}
+.rule{height:1px;background:var(--line);border:0;margin:0 0 clamp(22px,3vw,32px)}
+.prose{max-width:var(--measure);color:var(--muted);font-size:var(--t-6);line-height:1.72}
+.prose+.prose{margin-top:13px}
+.prose b,.prose strong{color:var(--text);font-weight:600}
+
+.hero{padding:clamp(20px,3vw,34px) 0 clamp(34px,4.4vw,52px);border-bottom:1px solid var(--line);margin-bottom:clamp(34px,4vw,50px)}
+.hero h1{font-size:clamp(32px,5.4vw,54px);letter-spacing:var(--ls-tight);margin-bottom:14px;max-width:19ch}
+.hero p{color:var(--muted);max-width:62ch;font-size:var(--t-7)}
+.hero-m{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.stat{border:1px solid var(--line);border-radius:var(--r-3);padding:11px 14px;background:var(--surface);min-width:112px}
+.stat b{display:block;font:600 var(--t-8)/1.1 var(--mono);font-variant-numeric:tabular-nums;letter-spacing:var(--ls-tight)}
+.stat span{display:block;font:500 var(--t-1)/1.3 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--dim);margin-top:5px}
+.stat.hot b{color:var(--warn)}
+
+.card{border:1px solid var(--line);border-radius:var(--r-4);padding:clamp(16px,2.2vw,22px);
+  background:var(--surface);margin-bottom:14px}
+.card h3{font-size:var(--t-7);margin:0 0 8px}
+.card h4{margin:0 0 7px;font:600 var(--t-6)/1.35 var(--ui);color:var(--text)}
+.card p+p{margin-top:10px}
+.card p,.card li{color:var(--muted);font-size:var(--t-5);line-height:1.68}
+.card strong,.card b{color:var(--text);font-weight:600}
+.card .k{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.grid{display:grid;gap:14px;align-items:start}
+@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1400px){.g2{grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr))}}
+.grid>.card{margin-bottom:0}
+
+.lede{max-width:var(--measure);border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--r-3) var(--r-3) 0;
+  padding:15px 17px;margin-bottom:20px;font-size:var(--t-6);color:var(--text);line-height:1.62}
+.warnbox{max-width:var(--measure);border:1px solid var(--line);border-left:3px solid var(--warn);background:var(--warn-soft);
+  border-radius:0 var(--r-3) var(--r-3) 0;padding:15px 17px;margin-bottom:16px;font-size:var(--t-5);color:var(--muted);line-height:1.68}
+.warnbox b{color:var(--text)}
+.stopbox{max-width:var(--measure);border:1px solid var(--line);border-left:3px solid var(--down);background:var(--down-soft);
+  border-radius:0 var(--r-3) var(--r-3) 0;padding:15px 17px;margin-bottom:16px;font-size:var(--t-5);color:var(--muted);line-height:1.68}
+.stopbox b{color:var(--text)}
+ul.tick,ul.plain,ul.no{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+ul.tick li,ul.plain li,ul.no li{color:var(--muted);font-size:var(--t-5);line-height:1.66}
+ul.tick li{padding-left:22px;position:relative}
+ul.tick li::before{content:"→";position:absolute;left:0;color:var(--accent);font-family:var(--mono);font-size:var(--t-4)}
+ul.no li{padding-left:22px;position:relative}
+ul.no li::before{content:"✕";position:absolute;left:0;color:var(--down);font-family:var(--mono);font-size:var(--t-3)}
+ul.plain li{padding-left:16px;position:relative}
+ul.plain li::before{content:"·";position:absolute;left:5px;color:var(--dim)}
+ul b,ul strong{color:var(--text);font-weight:600}
+.src{font:400 var(--t-2)/1.6 var(--mono);color:var(--dim);margin-top:12px;padding-top:10px;border-top:1px solid var(--line);max-width:var(--measure)}
+.src a{color:var(--dim)}
+
+.tw{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-4);margin-bottom:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:var(--t-4)}
+th{text-align:left;font:500 var(--t-1)/1.3 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
+  color:var(--dim);padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--raised)}
+td{padding:12px 14px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top;line-height:1.55}
+tr:last-child td{border-bottom:0}
+td b,td strong{color:var(--text)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--text)}
+td.t{white-space:nowrap;font-family:var(--mono);color:var(--accent);font-size:var(--t-3)}
+
+.pill{display:inline-flex;align-items:center;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;padding:4px 7px;border-radius:var(--r-1);border:1px solid var(--line2);
+  color:var(--dim);white-space:nowrap}
+.pill.up{color:var(--up);border-color:var(--up);background:var(--up-soft)}
+.pill.warn{color:var(--warn);border-color:var(--warn);background:var(--warn-soft)}
+.pill.down{color:var(--down);border-color:var(--down);background:var(--down-soft)}
+.pill.acc{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+
+.ck{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.ck:last-child{border-bottom:0}
+.ck input{appearance:none;-webkit-appearance:none;flex:none;width:19px;height:19px;margin:2px 0 0;cursor:pointer;
+  border:1px solid var(--line2);border-radius:var(--r-1);background:none;display:grid;place-items:center}
+.ck input:checked{background:var(--accent);border-color:var(--accent)}
+.ck input:checked::after{content:"✓";color:var(--on-accent);font-size:12px;font-weight:700;line-height:1}
+.ck span{font-size:var(--t-5);color:var(--muted);line-height:1.6}
+.ck input:checked+span{color:var(--dim);text-decoration:line-through}
+
+/* A timed block in a routine: the time is the anchor, the body is what happens. */
+.blk{display:grid;grid-template-columns:78px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.blk:last-child{border-bottom:0}
+.blk>time{font:500 var(--t-3)/1.5 var(--mono);color:var(--accent);white-space:nowrap}
+.blk b{display:block;color:var(--text);font:600 var(--t-5)/1.5 var(--ui);margin-bottom:4px}
+.blk p{color:var(--muted);font-size:var(--t-4);line-height:1.66}
+.blk p+p{margin-top:7px}
+.blk .who{display:inline-block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--dim);border:1px solid var(--line2);border-radius:var(--r-1);
+  padding:3px 5px;margin-left:7px;vertical-align:2px}
+.blk .who.you{color:var(--accent);border-color:var(--accent)}
+@media(max-width:560px){.blk{grid-template-columns:minmax(0,1fr);gap:5px}}
+
+.foot{max-width:var(--shell);margin:0 auto;padding:26px var(--gut) 40px;border-top:1px solid var(--line);
+  font:400 var(--t-3)/1.75 var(--mono);color:var(--dim)}
+.totop{position:fixed;right:20px;bottom:20px;z-index:38;width:44px;height:44px;
+  display:grid;place-items:center;border:1px solid var(--line2);border-radius:var(--r-pill);
+  background:var(--surface);color:var(--text);cursor:pointer;font-size:var(--t-6);
+  box-shadow:0 6px 20px rgba(0,0,0,.18);opacity:0;visibility:hidden;
+  transition:opacity var(--t-mid) var(--ease),visibility var(--t-mid),transform var(--t-fast) var(--ease)}
+.totop.show{opacity:1;visibility:visible}
+.totop:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--accent)}
+.scrollprog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);
+  z-index:2000;transition:width .1s linear;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.scrollprog{transition:none}}
+mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2px}
+@media print{
+  .bar,.rail,.totop,.scrollprog{display:none!important}
+  .shell{grid-template-columns:1fr}
+  body{background:#fff;color:#000}
+}
+</style>
+</head>
+<body>
+<div class="scrollprog" id="scrollprog" role="progressbar" aria-label="Page scrolled"
+     aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+<header class="bar">
+  <a class="mark" href="#top"><i>◆</i> The Home Book</a>
+  <div class="bar-sp"></div>
+  <a class="backlink" href="/#life">← The Campaign</a>
+  <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch theme"><span aria-hidden="true">◐</span></button>
+</header>
+
+<div class="shell" id="top">
+<nav class="rail" aria-label="Sections">
+  <span class="rail-h">The problem</span>
+  <a href="#start"  data-s="start"><i>01</i>Start here</a>
+  <a href="#ledger" data-s="ledger"><i>02</i>The load ledger</a>
+  <span class="rail-h">The system</span>
+  <a href="#weekday" data-s="weekday"><i>03</i>The weekday</a>
+  <a href="#weekend" data-s="weekend"><i>04</i>The weekend</a>
+  <a href="#food"    data-s="food"><i>05</i>Food</a>
+  <a href="#sleep"   data-s="sleep"><i>06</i>Sleep</a>
+  <span class="rail-h">Her</span>
+  <a href="#books"   data-s="books"><i>07</i>Books</a>
+  <a href="#play"    data-s="play"><i>08</i>Play &amp; development</a>
+  <a href="#grow"    data-s="grow"><i>09</i>As she grows</a>
+  <span class="rail-h">Them</span>
+  <a href="#wife"    data-s="wife"><i>10</i>Being a husband</a>
+  <span class="rail-h">Operations</span>
+  <a href="#tricks"  data-s="tricks"><i>11</i>Tips &amp; tricks</a>
+  <a href="#red"     data-s="red"><i>12</i>Red flags</a>
+  <a href="#daily"   data-s="daily"><i>13</i>The daily card</a>
+  <a href="#limits"  data-s="limits"><i>14</i>What this is not</a>
+</nav>
+
+<main>
+<section class="hero">
+  <h1>She is doing a 105-hour week. You are doing 55.</h1>
+  <p>This is the other campaign. One daughter, born 25 December 2025. One wife holding a
+     household in Kuala Lumpur with no helper, no family, and no day off. This page is the
+     operating system for your half of it — what you do daily, what you do at the weekend,
+     what you feed her, how she sleeps, how she learns to read, and how you stay married
+     while all of that happens.</p>
+  <div class="hero-m">
+    <div class="stat"><b id="stAge">—</b><span>Her age</span></div>
+    <div class="stat"><b id="stDays">—</b><span>Days old</span></div>
+    <div class="stat"><b id="stBday">—</b><span>Days to birthday 1</span></div>
+    <div class="stat hot"><b id="stMmr">—</b><span>Days to MMR-1</span></div>
+    <div class="stat"><b id="stDone">0<small style="font-size:.55em;color:var(--dim)">/12</small></b><span>Today's card</span></div>
+  </div>
+</section>
+
+<!-- ══ 01 START HERE ═════════════════════════════════════════════════════ -->
+<section class="sec" id="start">
+  <span class="sec-k">01 — Start here</span>
+  <h2>The honest version, before the routines</h2>
+  <p class="sec-s">You asked for brutal. Here it is, in four paragraphs, and then the rest of the
+     page is the fix. Read this part when you are not tired.</p>
+  <hr class="rule">
+
+  <div class="lede">You framed this as <b>&ldquo;I am not able to contribute much.&rdquo;</b> That is
+    the sentence to delete. It describes the situation as weather — something happening to you.
+    It is not weather. It is a schedule and a budget, and you control both.</div>
+
+  <p class="prose"><b>The arithmetic.</b> An eight-month-old who is crawling and pulling up cannot
+    be left alone in a room while awake. So every waking hour of hers is a working hour of somebody's.
+    At this age she sleeps roughly 12–16 hours in 24 including naps, which leaves about 12 waking
+    hours a day that must be covered — 84 hours a week. On top of that: cooking her food from scratch
+    (you are vegetarian, so almost nothing comes out of a jar), the family's meals, dishes, the daily
+    infant laundry, cleaning, groceries, and the night wakings. Call the whole thing <b>100 to 110
+    hours a week, with no days off and no lunch break.</b></p>
+
+  <p class="prose">Your side: nine hours in the office plus about two hours of commuting, five days. Call it 55 hours, with
+    a chair, a lunch, adult conversation, and a door you walk out of. <b>Both of you are working. Only
+    one of you is off duty at 7pm and on Saturday.</b> That gap — not effort, not love, not intention —
+    is the entire problem. Nothing on this page works if you do not accept the gap first.</p>
+
+  <p class="prose"><b>Why &ldquo;helping more&rdquo; will not close it.</b> Helping means she still owns
+    the job and delegates pieces of it to you. She still has to notice the nappies are running out,
+    decide what the baby eats on Tuesday, remember the vaccine is due, and then ask you. The noticing
+    and deciding <em>is</em> the work. It is the part that does not stop when she sits down. You cannot
+    fix a 105-hour week by doing more tasks. You fix it by <b>taking whole domains off her desk</b> —
+    she never thinks about them again — and by <b>buying hours</b> with money.</p>
+
+  <p class="prose"><b>The thing you are avoiding.</b> You have a Dubai plan. If that plan lands, she
+    moves again — to a third country, further from family, with a toddler. If you carry this
+    arrangement across, you will import the problem at a higher rent. The childcare-and-support plan
+    is not something to sort out after the offer. It goes in the same spreadsheet as the salary
+    target, and it goes in now.</p>
+
+  <h3>The three moves, in order of leverage</h3>
+
+  <div class="grid g3">
+    <div class="card">
+      <span class="k">Move 1 · costs money</span>
+      <h4>Buy hours back</h4>
+      <p>The single highest-leverage action on this page, and the only one that works while you are
+        physically at the office. Two hires, both part-time, both routine in KL:</p>
+      <ul class="tick">
+        <li><b>A part-time cleaner</b>, twice a week, ~4 hours each. Removes cleaning, floors,
+          bathrooms and the laundry mountain permanently.</li>
+        <li><b>A babysitter</b>, twice a week, ~3 hours, so she can leave the house <em>alone</em>
+          in daylight — not to run errands. To sit somewhere and be a person.</li>
+      </ul>
+      <p style="margin-top:11px"><b>Likely cost:</b> KL listing platforms in 2026 quote part-time
+        helpers at roughly RM15–25/hour and babysitters at roughly RM15–35/hour. At RM25/hour, the
+        14 hours a week above is <b>~RM350/week, ~RM1,500/month</b>. Get three actual quotes before
+        you trust that number.</p>
+      <p><b>Assumed:</b> RM1,500/month is under 10% of household income. If that is wrong, cut the
+        babysitter first and keep the cleaner — but do not cut both, and do not use &ldquo;we can
+        manage&rdquo; as the reason. Managing is what she is already doing.</p>
+    </div>
+    <div class="card">
+      <span class="k">Move 2 · costs ego</span>
+      <h4>Own domains, not tasks</h4>
+      <p>A domain means: you own the outcome, the noticing, the restocking, and the decision. She is
+        never the fallback. Take these six, whole, starting this week:</p>
+      <ul class="tick">
+        <li><b>Bedtime.</b> Every night. Yours. See §06 — this one is load-bearing.</li>
+        <li><b>All of her food prep.</b> Sunday batch cook, weekday assembly. See §05.</li>
+        <li><b>Medical.</b> Vaccines, appointments, the KKM health book, the paediatrician's number.</li>
+        <li><b>Groceries and household stock.</b> Nappies, wipes, formula, rice, dal. You track it.</li>
+        <li><b>Dishes, bottles and sterilising.</b> All of them, every night. Non-negotiable.</li>
+        <li><b>Admin.</b> Bills, insurance, visas, school waitlists, the passport.</li>
+      </ul>
+      <p style="margin-top:11px">Rule: if she has to remind you about anything in this list, you do
+        not own it yet. You are still being helped.</p>
+    </div>
+    <div class="card">
+      <span class="k">Move 3 · costs nothing</span>
+      <h4>The Off-Duty Block</h4>
+      <p><b>Four continuous hours, twice each weekend</b>, where she is not responsible for the baby
+        and — ideally — not in the house. Not &ldquo;go rest, I've got her&rdquo; while she folds
+        laundry in the next room. Out. Phone on silent.</p>
+      <p><b>Continuous is the whole point.</b> Six separate twenty-minute breaks do not add up to two
+        hours of rest; they add up to six interruptions. Fragmented time does not restore anyone.</p>
+      <p>This is also the cheapest protective factor you have available. Poor social support is a
+        repeatedly identified risk factor for perinatal depressive symptoms — and in this house, you
+        <em>are</em> the social support. There is nobody else.</p>
+    </div>
+  </div>
+
+  <div class="warnbox"><b>The one-line test.</b> At the end of any given week, ask: <em>did she get
+    eight continuous off-duty hours, and did she have to ask for any of it?</em> Eight hours she had
+    to negotiate for is a worse week than six she did not. If the answer is no two weeks running,
+    stop reading the rest of this page and fix that. Everything else here is optimisation on top of
+    a system that is not yet solvent.</div>
+
+  <div class="src">Sleep duration 12–16 h/24 h for ages 4–12 months: American Academy of Sleep
+    Medicine consensus, echoed by CDC. Perinatal depression and social support: Rashid &amp; Mohd
+    (2017), <em>Reproductive Health</em>; ASEAN Journal of Psychiatry review of Malaysian PPD.
+    Wage ranges: KL babysitting/helper listing platforms, read September 2026 — indicative, not quoted.</div>
+</section>
+
+<!-- ══ 02 THE LOAD LEDGER ════════════════════════════════════════════════ -->
+<section class="sec" id="ledger">
+  <span class="sec-k">02 — The load ledger</span>
+  <h2>What &ldquo;no helper&rdquo; actually costs, line by line</h2>
+  <p class="sec-s">You are a finance person. So here is the household as a resourcing problem rather
+     than a feelings problem. Rerun the numbers with your own inputs — the point is the method, not
+     my estimate.</p>
+  <hr class="rule">
+
+  <h3>The weekly hours, estimated</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Line</th><th>Basis</th><th>Hrs/wk</th><th>Owner today</th></tr></thead>
+    <tbody>
+      <tr><td><b>Active supervision, waking baby</b></td><td>~12 waking hrs/day &times; 7</td><td class="num">84</td><td>Her</td></tr>
+      <tr><td><b>Her food: cook, feed, clean up</b></td><td>3 meals + milk, ~1.5 hr/day</td><td class="num">10</td><td>Her</td></tr>
+      <tr><td><b>Family cooking</b></td><td>~1 hr/day</td><td class="num">7</td><td>Her</td></tr>
+      <tr><td><b>Laundry</b></td><td>Infant laundry is daily</td><td class="num">5</td><td>Her</td></tr>
+      <tr><td><b>Cleaning, dishes, tidying</b></td><td>~1 hr/day</td><td class="num">7</td><td>Her</td></tr>
+      <tr><td><b>Groceries, errands, admin</b></td><td>—</td><td class="num">3</td><td>Her</td></tr>
+      <tr><td><b>Night wakings</b></td><td>~1 hr/night</td><td class="num">7</td><td>Her</td></tr>
+      <tr><td><b>The mental load</b></td><td>Unmeasurable. Never zero.</td><td class="num">—</td><td>Her</td></tr>
+      <tr><td colspan="2"><b>Total, before overlap</b></td><td class="num"><b>123</b></td><td>—</td></tr>
+      <tr><td colspan="2">Less overlap (cooking while baby naps, etc.), ~15%</td><td class="num">−18</td><td>—</td></tr>
+      <tr><td colspan="2"><b>Realistic weekly load</b></td><td class="num"><b>~105</b></td><td><b>Her</b></td></tr>
+      <tr><td colspan="2"><b>Your paid work + commute</b></td><td class="num"><b>~55</b></td><td><b>You</b></td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="prose"><b>Assumed:</b> ~12 waking hours, a two-hour round-trip commute, and a 15% overlap
+    discount. Change any of those and the total moves — but it does not move below ~90, and yours does
+    not rise above ~60. <b>The gap is the finding, not the decimal.</b> Do not argue with the estimate;
+    argue with the gap.</p>
+
+  <h3>The distinction that matters: doing versus noticing</h3>
+  <p class="prose">Two people can spend the same hour on the same task and only one of them is
+    carrying it. The carrier is the person who knew the task existed. Some worked examples from a house
+    with an eight-month-old:</p>
+
+  <div class="tw"><table>
+    <thead><tr><th>Task</th><th>&ldquo;Helping&rdquo; looks like</th><th>Owning looks like</th></tr></thead>
+    <tbody>
+      <tr><td>Nappies</td><td>You change one when asked</td><td>You know the stock level and it never runs out</td></tr>
+      <tr><td>Her dinner</td><td>&ldquo;What should I feed her?&rdquo;</td><td>You built the menu; Tuesday is already in the freezer</td></tr>
+      <tr><td>Vaccines</td><td>You drive to the clinic</td><td>You booked it; it was in your calendar first</td></tr>
+      <tr><td>Bedtime</td><td>You take over when she's exhausted</td><td>7:00pm is yours every night without discussion</td></tr>
+      <tr><td>Her clothes</td><td>You fold what's in the basket</td><td>You noticed she's outgrown 6–9m and ordered 9–12m</td></tr>
+      <tr><td>The paediatrician</td><td>You ask your wife for the number</td><td>It's in your phone, and you've met them</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="stopbox"><b>Delete this sentence: &ldquo;Just tell me what to do.&rdquo;</b> It sounds
+    cooperative. What it actually does is hand her a second job — managing you — on top of the first
+    one. The correct move is to take a domain, learn it badly for two weeks, get it wrong without
+    being rescued, and end up owning it. The two bad weeks are the price. Pay them.</div>
+
+  <h3>The handover, when you walk in the door</h3>
+  <p class="prose">The first ninety seconds of your evening set the next four hours. Do this, in this
+    order, every weekday. It takes under two minutes and it is the highest-return two minutes in
+    the day.</p>
+  <div class="card">
+    <ul class="tick">
+      <li><b>Put the phone down first.</b> Before the door, not after the greeting. She will notice
+        which came first and she will be right to.</li>
+      <li><b>Greet your wife before the baby.</b> One sentence, eye contact, actual contact. The baby
+        is delighted to see you either way; your wife has been waiting since 8am for an adult.</li>
+      <li><b>Ask one specific question, never &ldquo;how was your day.&rdquo;</b> Try: <em>&ldquo;What
+        was the worst twenty minutes?&rdquo;</em> It is answerable, and it gives her permission to say
+        something true.</li>
+      <li><b>Take the baby physically, immediately.</b> Not in ten minutes. Not after you change.
+        Hands out, take her, walk away with her.</li>
+      <li><b>Say the handover line out loud:</b> <em>&ldquo;I've got her until she's asleep.&rdquo;</em>
+        Then actually have her until she's asleep.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ 03 THE WEEKDAY ════════════════════════════════════════════════════ -->
+<section class="sec" id="weekday">
+  <span class="sec-k">03 — The weekday</span>
+  <h2>Monday to Friday, hour by hour</h2>
+  <p class="sec-s">Built around a 9–6 office and a round-trip commute of about two hours. Shift every
+     time by the same offset if yours differs; the <em>order</em> is what matters, not the clock.
+     Blocks marked <span class="pill acc">YOU</span> are yours and do not get renegotiated on a
+     bad day — that is the whole point of writing them down.</p>
+  <hr class="rule">
+
+  <div class="lede">The design principle: <b>she should be off duty from the moment you walk in until
+    the moment the baby is asleep.</b> Everything below is arranged to make that true even on the
+    days you are wrecked.</div>
+
+  <h3>Before work</h3>
+  <div class="card">
+    <div class="blk"><time>05:45</time><div>
+      <b>You are up before the house<span class="who you">You</span></b>
+      <p>Not for productivity content. For the only forty-five minutes today that belong to you, so
+        that you are not chasing them at 10pm when your wife needs you awake.</p>
+      <p>Order: water, then movement (20 min — walk, weights, anything), then shower. Phone stays
+        face-down. The market will still be there.</p></div></div>
+    <div class="blk"><time>06:30</time><div>
+      <b>Kitchen block — her food for the day<span class="who you">You</span></b>
+      <p>Pull today's portions from the freezer to thaw. Cut and steam any fresh finger food. Wash and
+        sterilise bottles and her bowls from last night if you did not do it then. Fill the water bottle.</p>
+      <p>Fifteen minutes. This single block is why your wife does not spend her morning cooking with
+        a baby on her hip.</p></div></div>
+    <div class="blk"><time>06:45</time><div>
+      <b>Baby is usually up — you take the first shift<span class="who you">You</span></b>
+      <p>Nappy, change, milk feed, then breakfast (§05). Your wife stays in bed or in the shower,
+        uninterrupted, for the whole shift. This is her only guaranteed lie-in of the weekday and it
+        costs you forty minutes.</p>
+      <p>Talk the entire time. Narrate what you are doing — &ldquo;now we open the drawer, blue shirt,
+        arm in&rdquo;. This is not silly; it is the single best-evidenced thing you can do for her
+        language, and it is free.</p></div></div>
+    <div class="blk"><time>07:45</time><div>
+      <b>Handover and go<span class="who you">You</span></b>
+      <p>Say goodbye to the baby out loud, cheerfully, even though she may cry. <b>Do not sneak out.</b>
+        Sneaking teaches her that people vanish without warning, which makes separation worse, not
+        better. A short, cheerful, identical goodbye every day teaches her that you leave and you
+        come back.</p>
+      <p>Before you leave: text your wife one line about what you have already handled today. She
+        should not have to discover it.</p></div></div>
+  </div>
+
+  <h3>While you are at the office</h3>
+  <div class="card">
+    <p>You are not present, but you are not absent either. Four rules, all of which cost under a minute:</p>
+    <ul class="tick">
+      <li><b>One text at ~11am that is not logistics.</b> Not &ldquo;did she nap&rdquo;. Something for
+        your wife, about your wife. The logistics text can come separately.</li>
+      <li><b>Order things during the day.</b> Nappies, wipes, groceries, that 9–12m clothing. You have
+        a desk and a browser; she has a baby pulling on her leg. Ordering is a job that can be done
+        from an office and it should never be hers.</li>
+      <li><b>Take the call.</b> If she calls in the middle of the day, she has weighed it against
+        interrupting you. Answer it or call back within ten minutes.</li>
+      <li><b>Leave when you said you would.</b> Every unannounced hour of overtime is an hour she
+        does solo, past the point she had budgeted for. If you will be late, tell her by 5pm, not 6:30.</li>
+    </ul>
+  </div>
+
+  <h3>The evening — the Golden 90</h3>
+  <div class="card">
+    <div class="blk"><time>19:00</time><div>
+      <b>Door. Run the handover (§02).<span class="who you">You</span></b>
+      <p>Ninety seconds. Phone away, wife first, take the baby, say the line.</p></div></div>
+    <div class="blk"><time>19:05</time><div>
+      <b>Dinner and floor time<span class="who you">You</span></b>
+      <p>You feed her the evening meal. You clean up the evening meal. Then get on the floor — actually
+        on the floor, at her level — for twenty minutes of §08 play. No phone in the room. She is
+        eight months old and can tell the difference between a father who is present and one who is
+        nearby.</p></div></div>
+    <div class="blk"><time>19:35</time><div>
+      <b>Bath, then the bedtime sequence<span class="who you">You</span></b>
+      <p>The full seven-step sequence is in §06. Same order, same words, same lights, every single
+        night. Yours. Not shared, not swapped, not &ldquo;whoever has energy&rdquo;.</p></div></div>
+    <div class="blk"><time>20:15</time><div>
+      <b>Kitchen close-down<span class="who you">You</span></b>
+      <p>All dishes. All bottles sterilised. Her food containers for tomorrow out of the freezer.
+        Bag packed, clothes laid out. Bin out. Kitchen visibly finished.</p>
+      <p>Waking up to a clean kitchen is worth more to a person doing a 105-hour week than almost
+        anything you can say to them.</p></div></div>
+    <div class="blk"><time>20:45</time><div>
+      <b>Twenty minutes that are hers, on her terms</b>
+      <p>Ask what she wants: talk, silence, a series, a walk, nothing. Then do that thing, and do not
+        convert it into a planning meeting. Logistics are for Sunday (§04). This block is not for
+        problem-solving unless she starts it.</p></div></div>
+    <div class="blk"><time>21:30</time><div>
+      <b>Lights down for both of you</b>
+      <p>You are both sleep-deprived. Staying up to reclaim the evening is the most common and most
+        expensive mistake in this phase — it borrows tomorrow's patience to buy tonight's freedom.
+        Some nights, take the loan knowingly. Not most nights.</p></div></div>
+  </div>
+
+  <h3>Nights</h3>
+  <div class="card">
+    <p>The default that fails: whoever the baby will accept goes, which becomes your wife every time,
+      which means she has not slept unbroken since December. Fix it structurally, not heroically.</p>
+    <ul class="tick">
+      <li><b>You take everything before midnight.</b> Every waking, every night, weekdays included.
+        You are awake anyway.</li>
+      <li><b>She takes the after-midnight wakings on work nights</b> — but only until the baby will
+        accept you at 3am, which is the point of you owning bedtime. Once she will, split the night
+        in half properly.</li>
+      <li><b>You take the whole night on Friday and Saturday.</b> Non-negotiable. Two nights a week
+        where she goes to bed knowing she will not be woken is the difference between coping and not.</li>
+      <li><b>If she is still breastfeeding at night</b>, you still get up: you do the nappy, the
+        settle and the return to cot. She feeds and goes straight back to sleep. The feed is the short
+        part; the settling is the long part.</li>
+    </ul>
+  </div>
+
+  <div class="warnbox"><b>Honest caveat about this routine.</b> No week will run like this. Teething,
+    illness, work travel and bad nights will break it — and on those days the routine's job is not to
+    be followed, it is to tell you what to restore first. Priority order when the day collapses:
+    <b>bedtime, then the kitchen close-down, then the Golden 90.</b> Drop everything else guilt-free.</div>
+</section>
+
+<!-- ══ 04 THE WEEKEND ════════════════════════════════════════════════════ -->
+<section class="sec" id="weekend">
+  <span class="sec-k">04 — The weekend</span>
+  <h2>Saturday and Sunday have different jobs</h2>
+  <p class="sec-s">Do not run one undifferentiated two-day blob. Saturday's job is <b>recovery</b>;
+     Sunday's job is <b>the week ahead</b>. Mixing them means you get neither.</p>
+  <hr class="rule">
+
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Saturday · recovery</span>
+      <h4>Her day. You run the house.</h4>
+      <div class="blk"><time>06:30</time><div><b>You are on from wake-up<span class="who you">You</span></b>
+        <p>She does not get up. Whatever time the baby wakes, that is your morning. Breakfast, nappy,
+          dressed, out of the house for a walk by 8 so the flat is quiet.</p></div></div>
+      <div class="blk"><time>09:30</time><div><b>The Off-Duty Block begins<span class="who you">You</span></b>
+        <p>Four continuous hours. She leaves — salon, friend, café, gym, a mall bench, anywhere that
+          is not this flat. If she genuinely wants to stay in and sleep, she sleeps and you take the
+          baby out. You do not text her unless something is actually wrong.</p></div></div>
+      <div class="blk"><time>13:30</time><div><b>She returns to a house that is fine</b>
+        <p>Baby fed, napped, flat not a disaster. The block is worth half as much if she comes back to
+          a mess she now has to fix.</p></div></div>
+      <div class="blk"><time>16:00</time><div><b>All three of you, out</b>
+        <p>Park, lake, mall, a friend's place. The point is that she is not the person carrying the
+          bag, watching the baby and finding the changing room. You are.</p></div></div>
+      <div class="blk"><time>19:30</time><div><b>Bedtime, then a real evening<span class="who you">You</span></b>
+        <p>Bath, sequence, cot. Then Saturday night is the one that is not about admin. Eat something
+          you did not cook. Watch something. Talk about anything other than the baby for one hour —
+          this is harder than it sounds and it is the point.</p></div></div>
+    </div>
+    <div class="card">
+      <span class="k">Sunday · the week ahead</span>
+      <h4>Your day. You build the machine that runs Mon–Fri.</h4>
+      <div class="blk"><time>07:00</time><div><b>Your shift again<span class="who you">You</span></b>
+        <p>Same as Saturday. Two mornings in a row is what makes it a weekend for her rather than a
+          slightly different weekday.</p></div></div>
+      <div class="blk"><time>09:00</time><div><b>THE BATCH COOK — 2 hours<span class="who you">You</span></b>
+        <p>The whole week of her food, made once, frozen in portions. Full method and menu in §05.
+          This is the most valuable two hours you will spend all week and it is invisible until the
+          Wednesday it saves.</p></div></div>
+      <div class="blk"><time>11:30</time><div><b>Her Off-Duty Block — four hours</b>
+        <p>Same rules as Saturday. Two of these a week. Not one. Not &ldquo;most weeks&rdquo;.</p></div></div>
+      <div class="blk"><time>16:00</time><div><b>Stock, admin, order<span class="who you">You</span></b>
+        <p>Count nappies, wipes, formula, dal, rice, fruit. Order everything short. Check the medical
+          calendar. Pay what is due. Twenty minutes with a list beats a week of small emergencies.</p></div></div>
+      <div class="blk"><time>20:30</time><div><b>The Sunday Twenty</b>
+        <p>Twenty minutes, together, with a timer. The only scheduled logistics conversation of the
+          week — which is what keeps logistics out of the other six evenings. Agenda below.</p></div></div>
+    </div>
+  </div>
+
+  <h3>The Sunday Twenty — fixed agenda</h3>
+  <div class="card">
+    <p>Same five questions every week, in this order. Timer on. When it rings, you stop, even
+      mid-sentence — an unfinished item goes to next Sunday, and that constraint is what stops it
+      becoming a two-hour grievance session.</p>
+    <ul class="tick">
+      <li><b>1. What is on the calendar this week?</b> Both of you. Late nights, travel, appointments.
+        Five minutes.</li>
+      <li><b>2. What did I drop last week?</b> You answer first, and you answer honestly. If you make
+        her raise it, she has done the emotional work of complaining before she gets the fix.</li>
+      <li><b>3. What is the worst part of your day right now?</b> Her answer. You do not defend, you
+        do not solve out loud. You write it down.</li>
+      <li><b>4. What are we buying our way out of this week?</b> Cleaner hours, a delivery, a
+        babysitter, an appliance. There should be a nonzero answer most weeks.</li>
+      <li><b>5. What are her two Off-Duty Blocks next weekend, in the calendar, with times?</b>
+        Not &ldquo;we'll see&rdquo;. Times.</li>
+    </ul>
+    <p style="margin-top:12px"><b>Rule:</b> no phones on the table, and no defending. If you find
+      yourself explaining why something was reasonable, you have stopped listening. &ldquo;You're
+      right, I'll fix it&rdquo; is a complete sentence and it ends the item faster than the truth does.</p>
+  </div>
+
+  <h3>The monthly and quarterly items</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Cadence</th><th>Item</th><th>Why it exists</th></tr></thead>
+    <tbody>
+      <tr><td class="t">Monthly</td><td><b>One evening out, just the two of you</b></td><td>Book the sitter first, decide what to do second. Reverse that order and it never happens.</td></tr>
+      <tr><td class="t">Monthly</td><td><b>One full solo day for her</b></td><td>Not four hours. A whole day, dawn to bedtime, where you are the only parent. It changes what she believes is possible.</td></tr>
+      <tr><td class="t">Monthly</td><td><b>Photos and video, backed up</b></td><td>You will not remember this year. Nobody does. Ten minutes, offloaded and backed up somewhere that is not one phone.</td></tr>
+      <tr><td class="t">Monthly</td><td><b>Money review, together</b></td><td>Ten minutes. She should know exactly where you stand. Financial opacity is corrosive when one partner has stopped earning.</td></tr>
+      <tr><td class="t">Quarterly</td><td><b>Her career conversation</b></td><td>See §10. This is the item most likely to be skipped and most expensive to skip.</td></tr>
+      <tr><td class="t">Quarterly</td><td><b>Re-read this page</b></td><td>The routine will have drifted. It always drifts. Reset it deliberately rather than noticing in six months.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- ══ 05 FOOD ═══════════════════════════════════════════════════════════ -->
+<section class="sec" id="food">
+  <span class="sec-k">05 — Food</span>
+  <h2>Feeding a vegetarian eight-month-old, honestly</h2>
+  <p class="sec-s">This is the section with a real downside if it is wrong, so everything below is
+     either sourced or explicitly flagged as a judgement call. Read the risk box first. It is the
+     part most Indian vegetarian families get wrong, and it is fixable in a week.</p>
+  <hr class="rule">
+
+  <div class="stopbox"><b>The risk, stated plainly.</b> Iron is the number-one nutritional problem for
+    a vegetarian infant, and it is not a small one — iron deficiency in infancy is associated with
+    learning difficulties, not just tiredness. The CDC states it directly: plant (non-heme) iron is
+    less easily absorbed than animal (heme) iron, and <b>&ldquo;getting your baby enough iron from
+    non-heme iron sources alone will require careful planning.&rdquo;</b> You do not eat meat, so you
+    are in the careful-planning case by definition. Planning here means the four rules below, not good
+    intentions.</div>
+
+  <h3>The four iron rules</h3>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Rule 1</span>
+      <h4>Iron-fortified infant cereal, most days</h4>
+      <p>The CDC lists it first among non-heme sources, and it is the most reliable one because the
+        dose is on the label rather than in your estimate. Widely stocked in KL supermarkets and pharmacies.</p>
+      <p>Many Indian families skip it on principle — homemade is better, shop-bought is lazy. On iron,
+        that instinct is <b>backwards</b>. Homemade ragi and dal are good food; fortified cereal is
+        the one item where you know the number. Use both.</p>
+    </div>
+    <div class="card">
+      <span class="k">Rule 2</span>
+      <h4>Pair every iron meal with vitamin C</h4>
+      <p>Vitamin C markedly improves absorption of plant iron. The CDC's own list: citrus, broccoli,
+        cabbage, berries, papaya, tomatoes, sweet potato.</p>
+      <p>In practice, in your kitchen: a squeeze of lemon into the dal after cooking; tomato in the
+        khichdi; mashed papaya or steamed sweet potato served alongside. Cheap, invisible, and it does
+        more than swapping the lentil.</p>
+    </div>
+    <div class="card">
+      <span class="k">Rule 3</span>
+      <h4>Keep big dairy away from the iron meal</h4>
+      <p>Calcium competes with non-heme iron for absorption. So the large milk feed and the iron-dense
+        meal should not be the same event.</p>
+      <p>Practical version: <b>solids first, milk feed about an hour later.</b> A spoon of curd with
+        lunch is fine — a full bottle of milk with the dal is the pattern to avoid. This costs nothing
+        and most people never hear it.</p>
+    </div>
+    <div class="card">
+      <span class="k">Rule 4</span>
+      <h4>Test <em>your wife's</em> B12, not just the baby's</h4>
+      <p>Plants do not make vitamin B12. A breastfed baby's B12 comes from the mother's stores — so if
+        your wife has been vegetarian for years and is not supplementing, <b>the baby's supply is her
+        supply.</b> Long-term vegetarians frequently run low without symptoms.</p>
+      <p>Action: ask the GP for a maternal B12 (and ferritin) test at the next visit. This is a
+        blood test, not a debate. If it is low, it is corrected with a supplement in weeks.</p>
+    </div>
+  </div>
+
+  <div class="warnbox"><b>Do not start any supplement on the strength of this page.</b> Doses for
+    infants depend on weight, milk intake and blood results, and I am not in a position to set one.
+    Take these four rules to the paediatrician at the 9-month visit and ask the direct question:
+    <em>&ldquo;She is vegetarian and breastfed. Do you want to check iron and B12, and does she need
+    a supplement?&rdquo;</em> That sentence gets you a better answer than an hour of searching.
+    Anaemia screening is routinely done around 12 months — you can ask for it earlier given the diet.</div>
+
+  <h3>Where she is right now</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Age band</th><th>Meals/day</th><th>Milk</th><th>Texture</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td><b>6–8 months</b></td><td class="num">2–3</td><td>Breastmilk/formula still primary</td><td>Mashed, thick purée, first soft finger foods</td><td><span class="pill">Just left</span></td></tr>
+      <tr><td><b>9–11 months</b></td><td class="num">3–4</td><td>Continues alongside</td><td>Mashed, minced, finely chopped, soft finger foods</td><td><span class="pill warn">Next, in 21 days</span></td></tr>
+      <tr><td><b>12–24 months</b></td><td class="num">3–4 + 1–2 snacks</td><td>Cow's milk now allowed as a drink</td><td>Chopped family food</td><td><span class="pill">From 25 Dec</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose"><b>Your action this month:</b> she turns nine months on 25 September, so step her up
+    from three eating occasions a day to four, and push texture on. The most common mistake at this
+    point is staying on smooth purée too long because it is tidier. She should be handling lumps,
+    minced food and things she picks up herself. Expect mess; mess is the skill being learned.</p>
+
+  <h3>The daily food chart</h3>
+  <p class="prose">A weekday shape you can run without thinking. Times assume a ~06:45 wake and a
+    ~19:45 bedtime — slide them with her actual day. <b>Milk feeds continue on top of all of this</b>;
+    breastmilk or formula is still a major part of her nutrition until twelve months.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Time</th><th>What</th><th>The job it does</th><th>Who</th></tr></thead>
+    <tbody>
+      <tr><td class="t">06:45</td><td>Milk feed on waking</td><td>Hydration and the bulk of her calories</td><td>Wife / you</td></tr>
+      <tr><td class="t">07:30</td><td><b>Breakfast.</b> Iron-fortified cereal mixed with breastmilk or formula + 2 tsp mashed fruit (papaya, banana, mashed berries)</td><td><b>The iron meal.</b> Fruit is the vitamin C. Never sweeten it.</td><td><b>You</b></td></tr>
+      <tr><td class="t">09:30</td><td>Milk feed, then morning nap</td><td>Spaced an hour after the iron meal on purpose</td><td>Wife</td></tr>
+      <tr><td class="t">11:30</td><td><b>Lunch.</b> Dal-based: moong or masoor dal khichdi with vegetables, mashed. Lemon squeezed in after cooking. 1 tsp ghee.</td><td>Iron + protein + energy. Ghee is fine and useful — babies need fat.</td><td>Wife (from your batch)</td></tr>
+      <tr><td class="t">14:00</td><td>Milk feed, afternoon nap</td><td>—</td><td>Wife</td></tr>
+      <tr><td class="t">15:30</td><td><b>Small third meal.</b> Plain full-fat unsweetened yogurt / mashed avocado / soft-steamed vegetable sticks she feeds herself</td><td>The self-feeding slot. Calcium and fat.</td><td>Wife</td></tr>
+      <tr><td class="t">17:30</td><td>Milk feed</td><td>—</td><td>Wife</td></tr>
+      <tr><td class="t">18:45</td><td><b>Dinner.</b> Soft roti pieces or rice with mashed vegetable; or ragi porridge; or mashed tofu with tomato</td><td>Simple, familiar, not the meal to trial anything new</td><td><b>You</b></td></tr>
+      <tr><td class="t">19:30</td><td>Final milk feed, in the bedtime sequence</td><td>See §06</td><td><b>You</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose"><b>Portions:</b> start each meal at two to three tablespoons and follow her, not the
+    bowl. WHO's guidance leans hard on <em>responsive feeding</em> — you offer, she decides how much.
+    Turning away, closing her mouth or pushing the spoon is a complete answer. Do not chase, do not
+    distract-feed with a screen, do not finish the bowl on principle. A baby who is allowed to stop
+    eating when full is learning something worth more than the last two spoons.</p>
+
+  <h3>The fourteen-day rotation</h3>
+  <p class="prose">Every one of these is vegetarian, KL-sourceable, and freezes. Cook the lunch column
+    in bulk on Sunday. Repetition is fine — variety over a fortnight matters, not variety at every meal.</p>
+  <div class="tw"><table>
+    <thead><tr><th>Day</th><th>Breakfast</th><th>Lunch (batch)</th><th>Third meal</th><th>Dinner</th></tr></thead>
+    <tbody>
+      <tr><td class="num">1</td><td>Fortified cereal + papaya</td><td>Moong dal khichdi, carrot, lemon</td><td>Plain yogurt</td><td>Ragi porridge</td></tr>
+      <tr><td class="num">2</td><td>Fortified cereal + banana</td><td>Masoor dal + rice + tomato</td><td>Steamed sweet potato fingers</td><td>Soft roti + mashed dal</td></tr>
+      <tr><td class="num">3</td><td>Ragi + mashed berries</td><td>Palak-moong khichdi, lemon</td><td>Avocado, mashed</td><td>Mashed tofu + tomato</td></tr>
+      <tr><td class="num">4</td><td>Fortified cereal + mango</td><td>Vegetable dal (bottle gourd)</td><td>Paneer, soft-crumbled</td><td>Curd rice, no salt</td></tr>
+      <tr><td class="num">5</td><td>Oats porridge + banana</td><td>Chana dal + pumpkin, mashed</td><td>Steamed broccoli florets</td><td>Ragi + apple purée</td></tr>
+      <tr><td class="num">6</td><td>Fortified cereal + guava (deseeded, mashed)</td><td>Moong dal khichdi, beans</td><td>Yogurt + mashed peach</td><td>Soft idli, no salt, crumbled</td></tr>
+      <tr><td class="num">7</td><td>Semolina (suji) porridge + fruit</td><td>Toor dal + rice + spinach</td><td>Steamed carrot batons</td><td>Mashed potato + peas</td></tr>
+      <tr><td class="num">8</td><td>Fortified cereal + papaya</td><td>Masoor dal + sweet potato</td><td>Plain yogurt + banana</td><td>Ragi porridge</td></tr>
+      <tr><td class="num">9</td><td>Ragi + banana</td><td>Moong dal + mixed veg + lemon</td><td>Tofu cubes, soft</td><td>Soft roti + mashed pumpkin</td></tr>
+      <tr><td class="num">10</td><td>Fortified cereal + berries</td><td>Vegetable-rice porridge, ghee</td><td>Steamed apple slices</td><td>Curd rice</td></tr>
+      <tr><td class="num">11</td><td>Oats + mashed pear</td><td>Chana dal + bottle gourd</td><td>Paneer + tomato, mashed</td><td>Ragi + fruit</td></tr>
+      <tr><td class="num">12</td><td>Fortified cereal + banana</td><td>Palak dal + rice, lemon</td><td>Yogurt</td><td>Mashed potato + carrot</td></tr>
+      <tr><td class="num">13</td><td>Suji porridge + fruit</td><td>Moong dal khichdi, courgette</td><td>Soft-steamed beans</td><td>Soft idli, crumbled</td></tr>
+      <tr><td class="num">14</td><td>Fortified cereal + papaya</td><td>Mixed dal + pumpkin + tomato</td><td>Avocado + yogurt</td><td>Ragi porridge</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>The do-not list — this one is not negotiable</h3>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Before her first birthday</span>
+      <h4>Absolutely not, until 25 Dec 2026</h4>
+      <ul class="no">
+        <li><b>Honey.</b> Any amount, in any form — food, water, on a dummy. It can cause infant
+          botulism, which is severe. This is the single most-broken rule in Indian households, usually
+          with the best intentions.</li>
+        <li><b>Cow's milk as a drink.</b> Risk of intestinal bleeding, and too much protein and
+          mineral load for her kidneys. Dairy <em>in food</em> — yogurt, paneer, cheese, milk cooked
+          into porridge — is fine from six months.</li>
+        <li><b>Fruit juice.</b> None at all before twelve months. Whole fruit instead, always.</li>
+        <li><b>Added salt, stock cubes, bouillon.</b> Her kidneys cannot handle it. Cook her portion
+          out before you salt the family's.</li>
+        <li><b>Added sugar and jaggery.</b> Including in her porridge, including &ldquo;just a little
+          for taste&rdquo;. She has no requirement for it and it costs her teeth and her palate.</li>
+        <li><b>Tea and coffee.</b> No caffeine under two. Tannins also block iron absorption — a
+          double loss in a vegetarian diet.</li>
+        <li><b>Unpasteurised milk, yogurt or cheese.</b> And no mould-ripened or blue cheeses.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Choking</span>
+      <h4>Form matters as much as food</h4>
+      <ul class="no">
+        <li><b>Whole nuts:</b> not until five years. Ground or as a thin smear of nut butter <em>on</em>
+          something — never a spoonful of nut butter on its own.</li>
+        <li><b>Whole grapes and cherry tomatoes:</b> quarter them lengthways. Every time.</li>
+        <li><b>Raw carrot, raw apple, hard raw vegetables:</b> steam until they squash between your
+          finger and thumb.</li>
+        <li><b>Raw jelly cubes:</b> a choking hazard in themselves.</li>
+        <li><b>Popcorn, boiled sweets, chunks of hard cheese, whole cherry-sized anything.</b></li>
+        <li><b>Rice drinks</b> as a milk substitute, under five — arsenic. Eating rice is fine.</li>
+      </ul>
+      <p style="margin-top:11px"><b>The two positive rules:</b> she eats <em>sitting upright</em>, in a
+        highchair, never in a car seat, never lying back, never walking around. And an adult stays with
+        her the entire meal — in the room, looking at her, not in the kitchen.</p>
+      <p><b>Learn infant choking first aid.</b> Both of you, this month. Back blows and chest thrusts
+        for an infant are different from the adult manoeuvre. A twenty-minute video is not the same as
+        a class; do the class.</p>
+    </div>
+  </div>
+
+  <h3>Allergens</h3>
+  <div class="card">
+    <p>Current guidance is to introduce common allergens early rather than delay them, one at a time,
+      in small amounts, at home, earlier in the day so you have hours to observe. For your household
+      the relevant ones are <b>peanut (as smooth butter thinned into food), tree nuts (ground),
+      sesame (as tahini or ground til), wheat, soy and dairy</b>.</p>
+    <p><b>One new food every three days</b>, nothing new at dinner, nothing new on a day she is unwell
+      or being vaccinated. Watch for hives, swelling around the mouth or eyes, vomiting, or wheeze.</p>
+    <p><b>If there is a family history of food allergy, eczema or asthma — talk to the doctor before
+      the first introduction, not after.</b> That is the one case where you do not just try it at home.</p>
+  </div>
+
+  <h3>Water, milk and cups</h3>
+  <div class="card">
+    <ul class="tick">
+      <li><b>Water:</b> small amounts with meals, from an open or straw cup, from six months. Boiled
+        and cooled, or filtered — this is KL, use what you already drink.</li>
+      <li><b>Start the open cup now.</b> Not a bottle, not a sippy with a valve. She will spill most of
+        it for a month and then she will be able to drink from a cup, which is a real skill.</li>
+      <li><b>Milk feeds stay the backbone</b> until twelve months. Solids are practice and iron; they
+        are not yet replacing milk.</li>
+      <li><b>No bottle in the cot</b>, ever. Pooled milk against teeth overnight causes decay, and it
+        builds a sleep association you will spend months undoing.</li>
+      <li><b>Teeth:</b> once any tooth is through, brush twice a day with a smear of fluoride
+        toothpaste. Start now and it is normal; start at two and it is a war.</li>
+    </ul>
+  </div>
+
+  <h3>The Sunday batch cook — your two hours</h3>
+  <div class="card">
+    <p>One session, whole week done. This is the block that makes every other weekday possible.</p>
+    <ul class="tick">
+      <li><b>1. Cook three bases, big.</b> A moong dal khichdi, a masoor dal, and one plain grain
+        (rice or ragi). No salt in any of them.</li>
+      <li><b>2. Steam a tray of vegetables.</b> Carrot, sweet potato, pumpkin, beans, broccoli. Some
+        mashed, some left as batons for self-feeding.</li>
+      <li><b>3. Portion into an ice-cube tray or 60–100 ml pots.</b> Cube-sized portions are the trick:
+        you thaw exactly what you need instead of a whole day's worth.</li>
+      <li><b>4. Freeze flat, label with the date.</b> Use within about a month. Rotate front to back.</li>
+      <li><b>5. Reheat once, thoroughly, and never refreeze.</b> Reheat until piping hot, then cool to
+        lukewarm before serving. Test on your wrist, not your finger.</li>
+      <li><b>6. Never re-serve from a bowl she has eaten out of.</b> Saliva in the bowl means the
+        leftovers go in the bin, not the fridge. Serve from a portion, keep the rest untouched.</li>
+    </ul>
+    <p style="margin-top:12px"><b>What to buy once:</b> a stack of small freezer pots, two ice-cube
+      trays with lids, a hand blender, a steamer basket, a highchair with a footrest, six bibs and a
+      floor mat. Total cost is a rounding error against the hours it returns.</p>
+  </div>
+
+  <div class="src">Meal frequency by age and responsive feeding: WHO, <em>Complementary feeding</em>
+    (6–23 months guideline). Iron, heme vs non-heme, vitamin C pairing, 12-month anaemia screening:
+    US CDC, <em>Iron — Infant and Toddler Nutrition</em>, updated 14 Apr 2026. Honey/botulism, cow's
+    milk, juice, added sugar, sodium, unpasteurised foods, caffeine: US CDC, <em>Foods and Drinks to
+    Avoid or Limit</em>, 14 Apr 2026. Salt, sugar, whole nuts and nut butter, cheeses, rice drinks,
+    raw jelly: NHS, <em>Foods to avoid giving babies and young children</em>, reviewed 18 Feb 2026.
+    B12 is not made by plants: The Vegan Society. Nutrients of concern in plant-based infant diets:
+    Nutrients (MDPI) 2023 and <em>Toward Supplementation Guidelines for Vegan Complementary Feeding</em>,
+    2024. <b>The 14-day menu is my construction, not a published plan</b> — it applies the sourced
+    rules to a vegetarian Indian kitchen. Take it to your paediatrician before you treat it as complete.</div>
+</section>
+
+<!-- ══ 06 SLEEP ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="sleep">
+  <span class="sec-k">06 — Sleep</span>
+  <h2>Getting her down, every night, by you</h2>
+  <p class="sec-s">Sleep is where you can take the most weight off your wife for the least skill.
+     It is also the area with the most confident nonsense written about it, so the sourced parts and
+     the judgement parts are marked separately below.</p>
+  <hr class="rule">
+
+  <div class="lede"><b>Why bedtime must be yours and not shared.</b> If you only do bedtime when your
+    wife is exhausted, the baby learns that mum settles her and you are the substitute. Then at 3am
+    she will accept only mum — and your wife can never be off duty, no matter how willing you are.
+    Owning bedtime every night is not a chore you are taking on. It is the mechanism that makes her
+    sleep possible. Expect three to four hard weeks. Pay them.</div>
+
+  <h3>The numbers</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Item</th><th>Where she is</th><th>Confidence</th></tr></thead>
+    <tbody>
+      <tr><td><b>Total sleep in 24 h</b></td><td>12–16 hours including naps</td><td><span class="pill up">Sourced — AASM / AAP / CDC</span></td></tr>
+      <tr><td><b>Naps per day</b></td><td>Typically 2 at this age, dropping to 1 somewhere between 12 and 18 months</td><td><span class="pill warn">Typical, not a rule</span></td></tr>
+      <tr><td><b>Wake window between sleeps</b></td><td>Roughly 2.5–3.5 hours</td><td><span class="pill warn">Rule of thumb, not from a guideline body</span></td></tr>
+      <tr><td><b>Sleeping through the night</b></td><td>Many do by 6 months. Many do not — a significant share of <em>twelve</em>-month-olds still do not sleep six hours straight.</td><td><span class="pill up">Sourced — Sleep Foundation</span></td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose"><b>Use that last row.</b> &ldquo;She should be sleeping through by now&rdquo; is
+    false, and it is the sentence that makes tired parents feel like failing ones. She is not behind.
+    You are not doing it wrong. Some babies wake at eight months, some at fourteen, and that variation
+    is normal rather than diagnostic.</p>
+
+  <h3>The bedtime sequence — seven steps, same order, every night</h3>
+  <div class="card">
+    <p>The evidence for a <em>consistent</em> bedtime routine is good: it helps children fall asleep
+      faster and reduces night wakings. The specific steps matter far less than the fact that they
+      never change. Pick these, then do not improvise.</p>
+    <div class="blk"><time>1</time><div><b>19:30 — Lights down, house down</b>
+      <p>Overheads off, one lamp. TV off. Voices drop. The environment change is the first cue and it
+        starts before she is in the room.</p></div></div>
+    <div class="blk"><time>2</time><div><b>19:35 — Bath</b>
+      <p>Ten minutes, warm, unhurried. On nights you skip the bath, still do a warm wipe-down so the
+        step exists. Skipping steps entirely is what breaks the sequence.</p></div></div>
+    <div class="blk"><time>3</time><div><b>19:45 — Massage and dress, on the same mat, in the same room</b>
+      <p>Slow hands. Talk quietly the whole time. Sleepsuit, nappy, sleeping bag if you use one.</p></div></div>
+    <div class="blk"><time>4</time><div><b>19:55 — Milk feed, dim light, no screens in the room</b>
+      <p>Yours to give if bottle-fed. If your wife is feeding, she feeds and hands her straight back
+        — the feed is not the end of the sequence, and it should not be the thing that puts her to sleep.</p></div></div>
+    <div class="blk"><time>5</time><div><b>20:05 — Two books, always the same two at bedtime</b>
+      <p>The predictability is the point at bedtime; keep the variety for daytime reading (§07).
+        Quiet voice, slow pace, no lifting-flap excitement.</p></div></div>
+    <div class="blk"><time>6</time><div><b>20:12 — The same short song, then the same sentence</b>
+      <p>Pick one line and never change the wording: <em>&ldquo;Goodnight, I love you, I'll see you in
+        the morning.&rdquo;</em> Then into the cot.</p></div></div>
+    <div class="blk"><time>7</time><div><b>20:15 — Into the cot awake, and you leave</b>
+      <p><b>Drowsy but awake.</b> If she only ever arrives in the cot already asleep, she wakes at 1am
+        somewhere unfamiliar and calls for the thing that was there when she went under — you, or a
+        feed. Putting her down awake is what teaches her the cot is where sleep happens.</p></div></div>
+  </div>
+
+  <h3>The sleep environment</h3>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Safe sleep — non-negotiable</span>
+      <h4>What goes in the cot: her</h4>
+      <ul class="tick">
+        <li><b>On her back to sleep</b>, every sleep. Once she rolls herself over in the night you do
+          not need to keep flipping her back — but you always put her down on her back.</li>
+        <li><b>Firm, flat mattress. Fitted sheet. Nothing else.</b> No pillows, no duvet, no bumpers,
+          no soft toys, no positioners. Soft items in the cot are a SIDS risk factor.</li>
+        <li><b>Not too warm.</b> KL is hot; the instinct to over-dress at night is the wrong one. Feel
+          the back of her neck, not her hands — hands run cool and mislead you.</li>
+        <li><b>Cot clear of cords, blind pulls and anything she can pull in.</b> She can pull to
+          standing now, so re-check the reachable radius at cot-rail height.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Conditions</span>
+      <h4>Dark, dull and boring</h4>
+      <ul class="tick">
+        <li><b>Dark.</b> Blackout the room. A dim red-toned nightlight if you need one to see by.</li>
+        <li><b>White noise</b>, steady, not loud, on all night rather than switched off once she is
+          down — so a 2am noise does not stand out against silence.</li>
+        <li><b>Cool as you can get it.</b> Fan or air-con; keep the airflow off her directly.</li>
+        <li><b>Daylight in the morning, deliberately.</b> Get her outside or by a window early. Light
+          exposure in the day is what anchors her body clock to the actual day/night cycle — and it is
+          also the easiest thing to skip in a hot city.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Night wakings — the ladder</h3>
+  <div class="card">
+    <p>Climb it one rung at a time. Most wakings are resolved on rungs one to three, and going
+      straight to rung five every time is how a two-minute wake becomes a ninety-minute one.</p>
+    <ul class="tick">
+      <li><b>1. Wait two minutes.</b> Actually look at a clock — two minutes feels like ten at 3am.
+        Babies cycle and resettle constantly. A great many wakings end here if you do not intervene.</li>
+      <li><b>2. Listen to the cry.</b> Grizzling and complaining is different from distress. Only the
+        second one needs you immediately.</li>
+      <li><b>3. Go in, but do not lift.</b> Hand on the chest, same quiet phrase, low light. See if she
+        goes down from there.</li>
+      <li><b>4. Lift, settle, put back down still awake.</b> Not asleep in your arms and transferred —
+        that is rung six with extra steps.</li>
+      <li><b>5. Check the obvious.</b> Nappy, too hot, teething, hungry, unwell. Feed if she is
+        genuinely hungry; she is eight months old, not being manipulative.</li>
+      <li><b>6. If it goes past an hour, or she is inconsolable and not usually like this</b> — that is
+        different from a normal waking. Temperature, ears, rash. See §12.</li>
+    </ul>
+  </div>
+
+  <h3>The eight-month regression, honestly</h3>
+  <div class="card">
+    <p><b>What is true:</b> around this age several things land at once — teething, a sharp rise in
+      separation anxiety, new motor skills she wants to practise at 2am, and much more awareness of her
+      surroundings. Any of those disrupts sleep, and they often arrive together.</p>
+    <p><b>What is oversold:</b> &ldquo;the 8-month regression&rdquo; as a fixed, universal event on a
+      schedule. Sleep Foundation is explicit that not all babies experience it and that infant sleep
+      patterns vary widely. It is a useful label for a real cluster of causes, not a diagnosis, and it
+      is not a thing you have to wait out passively.</p>
+    <p><b>What to do:</b> hold the routine rather than inventing new ones. A regression is exactly when
+      people start bringing the baby into their bed, feeding to sleep, or driving her around the block
+      — and each of those becomes a new habit that outlives the regression by months. Change nothing,
+      offer more comfort inside the existing structure, wait it out.</p>
+  </div>
+
+  <h3>Separation anxiety, and the mistake that makes it worse</h3>
+  <div class="card">
+    <ul class="tick">
+      <li><b>Never sneak out.</b> Not at bedtime, not when you leave for work. A cheerful, identical,
+        two-second goodbye every time teaches her that departures are announced and survivable.
+        Vanishing teaches her to monitor you constantly.</li>
+      <li><b>Practise short separations in daylight.</b> Leave the room, call out from the next room,
+        come back. Thirty seconds, then a minute. You are building the evidence base that you return.</li>
+      <li><b>Say &ldquo;Daddy's back!&rdquo; on the way in.</b> Announce returns as clearly as departures.</li>
+      <li><b>Peek-a-boo is not just a game</b> — it is object permanence practice, which is the exact
+        cognitive skill underneath separation anxiety. Play it constantly right now.</li>
+      <li><b>Do not lift her out of the cot for crying that is separation protest</b> rather than
+        distress. Comfort her in the cot. Lifting teaches that crying reverses bedtime.</li>
+    </ul>
+  </div>
+
+  <h3>Sleep training — this is a values decision, not a technical one</h3>
+  <div class="card">
+    <p>You will get absolute confidence from both directions on this. Here is the fork, stated without
+      me picking for you, because this one is genuinely yours and your wife's to choose together:</p>
+    <ul class="plain">
+      <li><b>No formal training.</b> Respond every time; treat night waking as developmental and wait
+        it out. Costs the most parental sleep. Chosen by many families with no ill effect.</li>
+      <li><b>Gradual / fading.</b> You stay in the room and reduce your involvement over one to two
+        weeks — sitting by the cot, then further, then out. Slowest and gentlest. Requires consistency
+        more than nerve.</li>
+      <li><b>Timed checks.</b> Leave, return at set and lengthening intervals, comfort briefly without
+        lifting. Usually the fastest of the structured methods.</li>
+    </ul>
+    <p style="margin-top:12px"><b>The two things that are true whichever you pick:</b> the method
+      matters far less than doing the same thing every night for at least two weeks; and if you and
+      your wife pick differently, the baby gets neither. <b>Decide together, out loud, on a Sunday —
+      not at 2am in the dark.</b> That is when this argument actually happens, and it is the worst
+      possible time to have it.</p>
+  </div>
+
+  <div class="src">Sleep duration 12–16 h/24 h (ages 4–12 months): AASM consensus statement; repeated
+    in CDC's 9-month and 1-year guidance. Consistent bedtime routine, drowsy-but-awake, dark/quiet
+    environment, white noise, daytime natural light, separation anxiety at ~8 months, cheerful
+    goodbyes, not all babies experience a regression, and many 12-month-olds still do not sleep six
+    hours straight: Sleep Foundation, <em>8-Month Sleep Regression</em>, and CDC <em>Milestones by 9
+    Months / 1 Year</em>. Safe-sleep and SIDS-risk items are standard AAP safe-sleep guidance.
+    Wake-window figures and the night-waking ladder are practitioner rules of thumb, flagged as such.</div>
+</section>
+
+<!-- ══ 07 BOOKS ══════════════════════════════════════════════════════════ -->
+<section class="sec" id="books">
+  <span class="sec-k">07 — Books</span>
+  <h2>How to actually build a reader</h2>
+  <p class="sec-s">You asked how to teach her to read and how to make her understand. The honest
+     answer is that at eight months you are not teaching reading at all — you are building the thing
+     reading is made of, which is spoken language. Get that right now and reading arrives almost on
+     its own at five or six.</p>
+  <hr class="rule">
+
+  <div class="lede"><b>The one idea to take from this section.</b> The books are not the active
+    ingredient. <b>Your voice is.</b> A child who is talked to and read <em>with</em> — questions,
+    pauses, back-and-forth — builds vocabulary faster than one who is read <em>at</em>. The technique
+    below has a name and an evidence base, and it is free.</div>
+
+  <h3>The method: dialogic reading</h3>
+  <div class="card">
+    <p>Ordinary shared reading is: adult reads, child listens. <b>Dialogic reading inverts it — you
+      gradually make the child the teller of the story and you become the listener.</b> It is the
+      best-evidenced shared-reading practice there is for boosting oral vocabulary and expressive
+      language.</p>
+    <p><b>Honest scope note:</b> the technique proper is designed for roughly two- to five-year-olds.
+      At eight months you run the infant version below, and you switch to the real thing around
+      eighteen months to two years. Knowing where it is going tells you what to build now.</p>
+
+    <h4>PEER — the four-move loop, used on a single page</h4>
+    <ul class="tick">
+      <li><b>P — Prompt.</b> Ask about something on the page. <em>&ldquo;What's that?&rdquo;</em></li>
+      <li><b>E — Evaluate.</b> Respond to her answer. <em>&ldquo;That's right!&rdquo;</em></li>
+      <li><b>E — Expand.</b> Add to it. <em>&ldquo;Yes — a big brown dog.&rdquo;</em></li>
+      <li><b>R — Repeat.</b> Ask it back so she uses the longer version. <em>&ldquo;Can you say big
+        brown dog?&rdquo;</em></li>
+    </ul>
+
+    <h4>CROWD — the five kinds of prompt, in rising difficulty</h4>
+    <ul class="plain">
+      <li><b>C — Completion.</b> Leave the last word of a rhyming line for her to fill in.</li>
+      <li><b>R — Recall.</b> &ldquo;What happened to the little bear?&rdquo;</li>
+      <li><b>O — Open-ended.</b> &ldquo;Tell me what's happening on this page.&rdquo;</li>
+      <li><b>W — Wh-.</b> What, where, who, why questions about the picture.</li>
+      <li><b>D — Distancing.</b> Link the book to her life: &ldquo;We saw a dog like that at the park,
+        didn't we?&rdquo; — the hardest and the most valuable.</li>
+    </ul>
+  </div>
+
+  <h3>What reading looks like at each stage</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Stage</th><th>What you actually do</th><th>What she does</th><th>Session</th></tr></thead>
+    <tbody>
+      <tr><td><b>8–12 months</b><br><span class="pill acc">now</span></td>
+        <td>Point and name. One word per picture. Big sound effects. Let her hold, chew and slam the book — board books exist for this. Follow her gaze rather than the page order.</td>
+        <td>Grabs, mouths, turns pages badly, loses interest in ninety seconds</td><td>2–5 min, several times a day</td></tr>
+      <tr><td><b>12–18 months</b></td>
+        <td>Short sentences. Ask &ldquo;where's the...?&rdquo; and let her point — pointing is the first answer she can give. Lift-the-flap books earn their keep here.</td>
+        <td>Points, brings you the book, demands the same one repeatedly</td><td>5 min</td></tr>
+      <tr><td><b>18–24 months</b></td>
+        <td><b>Start real PEER.</b> Completion prompts on rhyming lines. Pause and wait — the silence is the invitation, and most adults fill it too fast.</td>
+        <td>Fills in words, names things, protests if you skip a page</td><td>10 min</td></tr>
+      <tr><td><b>2–3 years</b></td>
+        <td>Full CROWD. Wh- questions, then distancing. Let her &ldquo;read&rdquo; the book back to you from the pictures — that is early narrative, not pretending.</td>
+        <td>Retells, invents, asks why relentlessly</td><td>15 min</td></tr>
+      <tr><td><b>3–5 years</b></td>
+        <td>Longer stories over several nights. Now point at words as you read, play rhyming and first-sound games. Letters follow sounds, not the other way round.</td>
+        <td>Recognises her name, hears rhymes, starts sounding out</td><td>20 min</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>The shelf, staged</h3>
+  <p class="prose">Titles and authors below are from my own knowledge, not checked against a shop's
+    catalogue — <b>verify the edition before you order</b>, and buy board-book editions for anything
+    under eighteen months.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Now · 8–12 months</span>
+      <h4>Touch, flap, mirror, rhythm</h4>
+      <ul class="tick">
+        <li><b>That's Not My...</b> series — Fiona Watt, ill. Rachel Wells (Usborne). Touch patches on
+          every page. Perfect for this exact age. Buy three.</li>
+        <li><b>Dear Zoo</b> — Rod Campbell. Lift-the-flap, one repeated structure, animal noises.</li>
+        <li><b>Where's Spot?</b> — Eric Hill. Flaps and a hunt.</li>
+        <li><b>Brown Bear, Brown Bear, What Do You See?</b> — Bill Martin Jr, ill. Eric Carle. Rhythm
+          and repetition; you will have it memorised inside a week, which is the idea.</li>
+        <li><b>Moo, Baa, La La La!</b> and <b>The Going to Bed Book</b> — Sandra Boynton. Short, funny,
+          excellent read-aloud rhythm.</li>
+        <li><b>Goodnight Moon</b> — Margaret Wise Brown. A bedtime fixture; use it as one of your two.</li>
+        <li><b>Ten Little Fingers and Ten Little Toes</b> — Mem Fox.</li>
+        <li><b>A baby-safe mirror book</b> — any. Faces and her own reflection hold attention longer
+          than anything else at this age.</li>
+      </ul>
+      <p style="margin-top:11px"><b>How to use them now:</b> do not read the words in order. Open
+        anywhere, name one thing, make its noise, let her chew it. Two minutes is a full session and a
+        success.</p>
+    </div>
+    <div class="card">
+      <span class="k">Next · 12–24 months</span>
+      <h4>Repetition, then story</h4>
+      <ul class="tick">
+        <li><b>The Very Hungry Caterpillar</b> — Eric Carle. Counting, days, holes to poke.</li>
+        <li><b>Press Here</b> — Hervé Tullet. She acts on the book; it responds. Extraordinary for this age.</li>
+        <li><b>Hug</b> — Jez Alborough. Almost wordless, so she supplies the story.</li>
+        <li><b>Llama Llama Red Pajama</b> — Anna Dewdney. Bedtime separation, in rhyme.</li>
+        <li><b>Owl Babies</b> — Martin Waddell. Separation and return — read it during the clingy phase.</li>
+        <li><b>We're Going on a Bear Hunt</b> — Michael Rosen, ill. Helen Oxenbury. Do the actions.
+          Loudly. This is a performance, not a reading.</li>
+        <li><b>Each Peach Pear Plum</b> — Janet and Allan Ahlberg.</li>
+      </ul>
+      <p style="margin-top:11px"><b>Warning you will need:</b> she will demand the same book forty
+        nights running. Read it forty times. The repetition is her doing the work — each pass she
+        predicts one word further ahead.</p>
+    </div>
+    <div class="card">
+      <span class="k">Later · 2–5 years</span>
+      <h4>Narrative, humour, and the first real reading</h4>
+      <ul class="tick">
+        <li><b>The Gruffalo</b>, <b>Room on the Broom</b>, <b>The Snail and the Whale</b>, <b>Zog</b> —
+          Julia Donaldson, ill. Axel Scheffler. The best rhyming read-alouds in English. Start here.</li>
+        <li><b>The Tiger Who Came to Tea</b> — Judith Kerr.</li>
+        <li><b>Not a Box</b> — Antoinette Portis. Teaches imaginative play as much as reading.</li>
+        <li><b>Mr Gumpy's Outing</b> — John Burningham. <b>Dogger</b> — Shirley Hughes.</li>
+        <li><b>Where the Wild Things Are</b> — Maurice Sendak. Anger, and coming home to dinner.</li>
+        <li><b>Elephant &amp; Piggie</b> — Mo Willems. The best bridge into her reading to you: two
+          characters, speech bubbles, huge fun.</li>
+        <li><b>Frog and Toad</b> — Arnold Lobel. First chapter books, and quietly about friendship.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Throughout</span>
+      <h4>Books where she can see herself</h4>
+      <p>She is Indian, growing up in Malaysia, reading mostly British and American picture books. Put
+        some deliberate weight on the other side of the shelf — not as a lesson, just as normality.</p>
+      <ul class="tick">
+        <li><b>Amma, Tell Me About...</b> series — Bhakti Mathur. Diwali, Holi, Krishna and more, in
+          rhyme. Aimed at slightly older, but the illustrations work early.</li>
+        <li><b>Bindu's Bindis</b> — Supriya Kelkar.</li>
+        <li><b>Tulika Books</b> and <b>Pratham Books</b> — two Indian publishers with strong board-book
+          and bilingual lists. Pratham's StoryWeaver platform puts a large number of titles online free,
+          in many Indian languages.</li>
+        <li><b>Any book in your own mother tongue.</b> If you and your wife speak a language to each
+          other that she does not hear in books, that gap gets wider every year. Buy the books now.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The three habits that matter more than the shelf</h3>
+  <div class="card">
+    <ul class="tick">
+      <li><b>Books at her height, not yours.</b> A low basket she can raid, in the room she plays in.
+        A shelf she cannot reach is a shelf she does not read. Rotate eight titles in and out weekly
+        instead of putting all forty out at once.</li>
+      <li><b>Read at a fixed time and at random times.</b> Two books at bedtime, always. Plus books
+        lying around that get picked up for ninety seconds. The fixed one builds the habit; the random
+        ones build the appetite.</li>
+      <li><b>Let her see you read.</b> Not a phone — a book, in front of her, regularly. Children copy
+        what adults evidently enjoy far more reliably than what adults instruct.</li>
+    </ul>
+  </div>
+
+  <div class="stopbox"><b>Screens.</b> The CDC's line is unambiguous: <b>screen time is not
+    recommended for children younger than two</b>, other than video calls with family. Babies learn
+    language from talking, playing and interacting with people — a screen cannot do the back-and-forth
+    that is the actual mechanism. In practice this means the specific thing every tired parent does:
+    <b>no rhymes on the phone to get her to finish her food.</b> It works, and it costs you the meal as
+    a language opportunity and the meal as a hunger cue. Video-calling her grandparents is different,
+    and worth doing often.</div>
+
+  <div class="src">Dialogic reading, PEER and CROWD: Reading Rockets, <em>Dialogic Reading: An
+    Effective Way to Read Aloud with Young Children</em>; What Works Clearinghouse intervention report;
+    Morgan &amp; Meier (2010). Shared reading and language outcomes: Noble et al. (2019),
+    <em>Educational Research Review</em>. &ldquo;Read to your baby / reading can be talking about
+    pictures&rdquo; and the under-2 screen guidance: CDC, <em>Milestones by 9 Months</em> and
+    <em>by 1 Year</em>. That's Not My... authorship: Usborne / Wikipedia. Book titles otherwise from
+    my own knowledge — verify editions before ordering.</div>
+</section>
+
+<!-- ══ 08 PLAY & DEVELOPMENT ═════════════════════════════════════════════ -->
+<section class="sec" id="play">
+  <span class="sec-k">08 — Play &amp; development</span>
+  <h2>What to do with her in the twenty minutes on the floor</h2>
+  <p class="sec-s">Not enrichment. Not flashcards. The list below is the CDC's own, and almost all of
+     it costs nothing and needs no equipment.</p>
+  <hr class="rule">
+
+  <h3>What most babies do by nine months</h3>
+  <p class="prose">This is the CDC checklist verbatim in substance — &ldquo;milestones&rdquo; here
+    means things <b>75% or more</b> of children can do by that age, which is a useful bar: missing one
+    is a reason to mention it, not to panic. She hits nine months on 25 September.</p>
+
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Social / emotional</span>
+      <ul class="plain">
+        <li>Is shy, clingy or fearful around strangers</li>
+        <li>Shows several facial expressions — happy, sad, angry, surprised</li>
+        <li>Looks when you call her name</li>
+        <li>Reacts when you leave: looks, reaches for you, or cries</li>
+        <li>Smiles or laughs when you play peek-a-boo</li>
+      </ul>
+      <p style="margin-top:11px"><b>Note the third and fourth.</b> The clinginess and the crying when
+        you leave are not a problem to be fixed — they are listed as developmental achievements. She
+        is upset when you go because she has worked out that you are a specific person who exists when
+        she cannot see you. That is a milestone wearing an unpleasant costume.</p>
+    </div>
+    <div class="card">
+      <span class="k">Language / communication</span>
+      <ul class="plain">
+        <li>Makes a lot of different sounds, like &ldquo;mamamama&rdquo; and &ldquo;bababababa&rdquo;</li>
+        <li>Lifts arms up to be picked up</li>
+      </ul>
+      <span class="k" style="margin-top:16px">Cognitive</span>
+      <ul class="plain">
+        <li>Looks for objects when dropped out of sight — her spoon, a toy</li>
+        <li>Bangs two things together</li>
+      </ul>
+      <span class="k" style="margin-top:16px">Movement / physical</span>
+      <ul class="plain">
+        <li>Gets to a sitting position by herself</li>
+        <li>Sits without support</li>
+        <li>Moves things from one hand to the other</li>
+        <li>Uses fingers to &ldquo;rake&rdquo; food towards herself</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>The daily games — the CDC's list, which is also just good fun</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Game</th><th>How</th><th>What it is actually building</th></tr></thead>
+    <tbody>
+      <tr><td><b>Peek-a-boo</b></td><td>Cover your head with a cloth, let her pull it off</td><td>Object permanence — the exact skill under separation anxiety</td></tr>
+      <tr><td><b>Echo her</b></td><td>She says &ldquo;bababa&rdquo;, you say &ldquo;bababa&rdquo;, then say &ldquo;book&rdquo;</td><td>Turn-taking, and the map from her sounds to real words</td></tr>
+      <tr><td><b>Toy just out of reach</b></td><td>Place it on the mat a little too far away, cheer when she gets there</td><td>Crawling, persistence, and that effort pays</td></tr>
+      <tr><td><b>My turn, your turn</b></td><td>Pass one toy back and forth</td><td>The root of conversation</td></tr>
+      <tr><td><b>In and out</b></td><td>Dump blocks from a container, put them back together</td><td>Cause and effect, hands</td></tr>
+      <tr><td><b>Hide and find</b></td><td>Hide a toy under a cloth while she watches; ask where it went</td><td>Memory and search</td></tr>
+      <tr><td><b>Drop and return</b></td><td>She drops it, you hand it back, she drops it again. Make it the game.</td><td>She is running an experiment, not annoying you</td></tr>
+      <tr><td><b>Wave bye-bye</b></td><td>Wave and say it every single departure</td><td>Gesture before speech; also see §06 on goodbyes</td></tr>
+      <tr><td><b>Narrate everything</b></td><td>&ldquo;Red, round ball.&rdquo; &ldquo;Daddy is washing your hands.&rdquo;</td><td>Vocabulary. The single highest-value thing on this table.</td></tr>
+      <tr><td><b>Pots and pans</b></td><td>Give her a wooden spoon and the kitchen drawer</td><td>Cause, effect, noise, and twenty free minutes for you</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Baby-proofing — she is mobile now, so this is overdue</h3>
+  <div class="card">
+    <p>Do this on a Saturday, on your hands and knees, at her eye level. You will find things standing
+      up that you cannot see standing up.</p>
+    <ul class="tick">
+      <li><b>Medicines, cleaning products and chemicals locked</b>, not just high. She will climb sooner
+        than you think.</li>
+      <li><b>Anchor every tall or heavy piece of furniture to the wall.</b> Bookcases, chests of
+        drawers, the TV. She pulls to standing on whatever is nearest. This is the one that actually
+        kills children and it is the one people skip.</li>
+      <li><b>Blind and curtain cords</b> tied up and out of reach — strangulation risk, and cots are
+        often placed near windows.</li>
+      <li><b>Socket covers, corner guards, a stair gate</b> at both top and bottom if you have stairs.</li>
+      <li><b>Nothing small enough to swallow at floor level.</b> Test: if it fits through a toilet-roll
+        tube, it is a choking risk. Button batteries and magnets are the two genuine emergencies —
+        both cause severe internal injury fast.</li>
+      <li><b>Hot drinks nowhere near the edge of a table.</b> Scalds from a pulled-down mug are one of
+        the most common serious injuries at this exact age.</li>
+      <li><b>Bath: never unattended, not even for ten seconds.</b> Not to answer the door, not to get a
+        towel. Take her with you, wet.</li>
+      <li><b>Save the emergency numbers in both phones now</b> — see §12.</li>
+    </ul>
+  </div>
+
+  <div class="warnbox"><b>Act early rather than wait and see.</b> The CDC's own framing: if she is not
+    meeting one or more milestones, <b>or has lost a skill she once had</b>, talk to the doctor and ask
+    specifically about developmental screening. Losing a skill is the one that always warrants a call.
+    &ldquo;Let's give it a few months&rdquo; is the most common and most costly advice in this area,
+    because early intervention works better the earlier it starts. You lose nothing by asking.</div>
+
+  <div class="src">Milestones, the 75% threshold, the activity list, screen-time guidance and the
+    act-early framing: US CDC, <em>Learn the Signs. Act Early.</em> — <em>Milestones by 9 Months</em>
+    (updated 15 May 2026), <em>Milestones In Action: By 9 Months</em>, and <em>Milestones by 1 Year</em>.
+    Full checklists at cdc.gov/act-early. Baby-proofing items are standard child-safety guidance.</div>
+</section>
+
+<!-- ══ 09 AS SHE GROWS ═══════════════════════════════════════════════════ -->
+<section class="sec" id="grow">
+  <span class="sec-k">09 — As she grows</span>
+  <h2>The calendar, from here to five</h2>
+  <p class="sec-s">What changes, what you start, and — the part people forget — what you stop.</p>
+  <hr class="rule">
+
+  <div class="warnbox"><b>The nearest thing on the calendar.</b> Under Malaysia's National Immunisation
+    Programme, <b>MMR dose 1 is given at 9 months</b> and dose 2 at 12 months. She turns nine months on
+    <b>25 September 2026</b> — <span id="mmrDays">about three weeks</span> away. Book it now.
+    <b>Verify the rest of her schedule against her own KKM health record book</b> (buku rekod kesihatan)
+    rather than any web page including this one: the book is the authoritative per-child record and it
+    shows exactly what she has had and what is next. NIP vaccines are free at government clinics.</div>
+
+  <div class="tw"><table>
+    <thead><tr><th>Stage</th><th>What is happening</th><th>You start</th><th>You stop</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>8–12 months</b><br><span class="pill acc">now</span></td>
+        <td>Crawling, pulling up, cruising. Separation anxiety peaks. First words appear. Teething.</td>
+        <td>Four meals a day from nine months · self-feeding and an open cup · daily books · baby-proofing · MMR-1</td>
+        <td>Smooth purées · carrying her everywhere · sneaking out of the room</td>
+      </tr>
+      <tr>
+        <td><b>12–18 months</b></td>
+        <td>Walking. Cow's milk now allowed as a drink. Vocabulary starts to accelerate. Two naps become one.</td>
+        <td>Family food, chopped · MMR-2 at 12 months · anaemia screening around 12 months · pointing games · a fixed daily rhythm</td>
+        <td>Bottles — move fully to cups · the highchair as a restraint device · finishing her bowl for her</td>
+      </tr>
+      <tr>
+        <td><b>18–24 months</b></td>
+        <td>Language explosion. Tantrums begin — a normal consequence of wanting more than she can say. Fierce independence.</td>
+        <td>Real dialogic reading (§07) · &ldquo;I can see you're angry&rdquo; naming of feelings · letting her do slow things herself · toddler-safe chores</td>
+        <td>Winning arguments · &ldquo;because I said so&rdquo; · rushing her through everything</td>
+      </tr>
+      <tr>
+        <td><b>2–3 years</b></td>
+        <td>Sentences. Toilet learning, usually somewhere in here. Playing near other children, then with them.</td>
+        <td>Choices instead of commands (&ldquo;red cup or blue cup&rdquo;) · a consistent response to tantrums · playgroup or nursery · counting and sorting in play</td>
+        <td>Comparing her to other children out loud · negotiating with a tantrum mid-flow</td>
+      </tr>
+      <tr>
+        <td><b>3–5 years</b></td>
+        <td>Why, endlessly. Real friendships. Pre-reading: rhyme, first sounds, her own name.</td>
+        <td>Rhyming and sound games · pointing at words as you read · letting her lose at things · answering the why properly, even at the fourth one</td>
+        <td>Reading to her only at bedtime · doing things for her that she can do slowly herself</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <h3>Things to do once, that you will be glad you did</h3>
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">This year</span>
+      <ul class="tick">
+        <li><b>Infant CPR and choking class</b> — both of you, in person. Before she is one.</li>
+        <li><b>Her passport and paperwork</b> sorted while she is small and photographs are easy.</li>
+        <li><b>A named paediatrician you have actually met</b>, not a clinic you would search for at 2am.</li>
+        <li><b>Term life insurance on you, and a will.</b> You are the earner. This is the least
+          romantic and most loving item on the page, and it is a two-hour job you have been putting off.</li>
+        <li><b>An education fund started</b> — small and monthly beats large and later. You know this
+          arithmetic better than anyone; the mistake is not starting because the right amount is unclear.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Every year, forever</span>
+      <ul class="tick">
+        <li><b>Write her a letter on her birthday.</b> One page, sealed, put away. Give her the stack
+          when she is eighteen. Start this December — you will never regret it and you cannot backfill it.</li>
+        <li><b>One photo in the same spot, same date</b>, every year.</li>
+        <li><b>A video of her voice</b> each year — not a montage, just her talking. Voices are what you
+          forget first.</li>
+        <li><b>One thing that is only yours and hers.</b> A Saturday breakfast place, a walk, a song.
+          Start it now while she is too young to remember it starting.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="src">MMR at 9 and 12 months under Malaysia's NIP: Ministry of Health Malaysia schedule as
+    published by Immunise4Life, Klinik As-Salam and reported by CodeBlue (Aug 2025); NIP vaccines are
+    free at government clinics. Cow's milk from 12 months and anaemia screening around 12 months: US CDC.
+    Stage columns are my synthesis of the CDC milestone bands and are guidance, not a schedule.</div>
+</section>
+
+<!-- ══ 10 BEING A HUSBAND ════════════════════════════════════════════════ -->
+<section class="sec" id="wife">
+  <span class="sec-k">10 — Being a husband</span>
+  <h2>The marriage is the thing most likely to be quietly damaged this year</h2>
+  <p class="sec-s">You asked how to be a loving husband at the same time. The honest answer is that
+     &ldquo;at the same time&rdquo; is the wrong frame — most of being a good husband this year <em>is</em>
+     the childcare. But not all of it, and the rest is below.</p>
+  <hr class="rule">
+
+  <div class="lede"><b>The diagnosis.</b> Right now she is a full-time carer in a country where she
+    has no mother, no sister, no friend who can take the baby for an hour. Her entire adult social
+    world is one person, and that person is out of the house from 8 to 7. That is not a marriage under
+    strain because of a baby — it is <b>one adult carrying an unshared load and slowly running out of
+    self</b>. Affection does not fix that. Structure does. Sections 03 and 04 are the actual love
+    letter; this section is what goes on top.</div>
+
+  <h3>The thing to watch for, stated without softening</h3>
+  <div class="card">
+    <p>Malaysian studies put postnatal depression at around <b>14% of mothers</b>, with estimates across
+      studies ranging from roughly 7% to 27% depending on method and population. Poor social support is
+      one of the consistently identified risk factors — and her social support, structurally, is you.
+      Depression that begins after birth frequently persists well past the first few months, so
+      &ldquo;she's eight months in, that window has passed&rdquo; is not reassurance.</p>
+    <h4>What to actually look for</h4>
+    <ul class="tick">
+      <li>Flatness rather than sadness — nothing is enjoyable, including things that used to be</li>
+      <li>Withdrawal: not calling home, not messaging friends, declining every invitation</li>
+      <li>Anxiety that will not switch off, or a constant sense that something is wrong with the baby</li>
+      <li>Not sleeping even when the baby sleeps</li>
+      <li>Irritability and anger — depression in exhausted people very often presents as rage, not tears</li>
+      <li>Saying she is a bad mother, or that the baby would be better off without her</li>
+      <li>Eating badly or not at all, and losing interest in how she looks in a way that is new</li>
+    </ul>
+    <p style="margin-top:12px"><b>What you do:</b> say it out loud and kindly — <em>&ldquo;I think you
+      are having a much harder time than you are telling me, and I want us to see someone.&rdquo;</em>
+      Then book the appointment yourself and go with her. A GP or a Klinik Kesihatan can screen for this
+      routinely; the standard screening instrument is a short questionnaire, not an ordeal. <b>Do not
+      wait for her to raise it.</b> The illness is the thing that stops people raising it.</p>
+    <p><b>If she ever says anything about harming herself or the baby, that is not a Sunday
+      conversation — get help the same day.</b></p>
+  </div>
+
+  <h3>The five daily acts</h3>
+  <div class="card">
+    <p>All five cost under twenty minutes combined. Do all five every day and the routine sections
+      become a marriage rather than a shift rota.</p>
+    <ul class="tick">
+      <li><b>1. Ask a real question and hear the answer.</b> Not &ldquo;how was your day&rdquo;. Try:
+        <em>&ldquo;What was the worst twenty minutes?&rdquo;</em> or <em>&ldquo;What did she do that you
+        wanted to tell someone about?&rdquo;</em> Then listen without solving. She is not raising a
+        problem for you to close; she is trying to be known.</li>
+      <li><b>2. Name one specific thing she did.</b> Not &ldquo;thanks for everything&rdquo; — that is
+        noise. <em>&ldquo;You got her to eat the whole bowl of dal today. I couldn't have.&rdquo;</em>
+        Specific praise says <em>I was paying attention</em>, which is the actual message.</li>
+      <li><b>3. Touch her once, non-sexually, with no agenda.</b> A hand on the back, a hug in the
+        kitchen, sitting close. Touch that never leads anywhere is what makes touch that does lead
+        somewhere welcome instead of another demand.</li>
+      <li><b>4. Take something off her list before she asks.</b> Anything. Every day. The unprompted
+        part is the whole value.</li>
+      <li><b>5. Say something that is about her, not about the mother.</b> She has been Amma all day.
+        Ask about the book she is reading, the thing she used to be good at, the argument she had with
+        her sister. <b>Ten minutes a day of being treated as a person is the cheapest antidepressant
+        available.</b></li>
+    </ul>
+  </div>
+
+  <h3>What never to say</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Do not say</th><th>What she hears</th><th>Say instead</th></tr></thead>
+    <tbody>
+      <tr><td>&ldquo;I've been at work all day.&rdquo;</td><td>Your work counts; mine does not.</td><td>Nothing. There is no version of this sentence that lands.</td></tr>
+      <tr><td>&ldquo;Just tell me what to do.&rdquo;</td><td>Managing me is now also your job.</td><td>&ldquo;I'm taking bedtime and the kitchen. Don't think about them.&rdquo;</td></tr>
+      <tr><td>&ldquo;Did you manage to...?&rdquo;</td><td>I am checking whether you performed.</td><td>&ldquo;What still needs doing? I'll do it.&rdquo;</td></tr>
+      <tr><td>&ldquo;I'm babysitting tonight.&rdquo;</td><td>She is not mine in the way she is yours.</td><td>&ldquo;I've got her tonight.&rdquo; You do not babysit your own child.</td></tr>
+      <tr><td>&ldquo;Why is she still not sleeping?&rdquo;</td><td>This is a failure and it is yours.</td><td>&ldquo;Rough night. I'll take the first half tonight.&rdquo;</td></tr>
+      <tr><td>&ldquo;My mother says...&rdquo;</td><td>You are being assessed by people who are not here.</td><td>Only if she asked. Otherwise, keep it.</td></tr>
+      <tr><td>&ldquo;You should just...&rdquo;</td><td>The obvious solution has not occurred to you.</td><td>&ldquo;Do you want ideas, or do you want me to just listen?&rdquo;</td></tr>
+      <tr><td>&ldquo;Calm down.&rdquo;</td><td>Your reaction is the problem, not the cause.</td><td>&ldquo;You're right to be angry about this.&rdquo;</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>The repair script</h3>
+  <div class="card">
+    <p>You will get this wrong regularly. Repair matters more than avoidance — couples do not survive
+      by never fighting, they survive by repairing fast. Four moves, in order, and skipping straight to
+      the fourth is the usual mistake:</p>
+    <ul class="tick">
+      <li><b>1. Name it without qualifying.</b> &ldquo;I checked my phone while you were talking. That
+        was dismissive.&rdquo; No &ldquo;but&rdquo;. The word <em>but</em> deletes everything before it.</li>
+      <li><b>2. Say what it cost her</b>, not what you meant. Your intention is not the injury.</li>
+      <li><b>3. Say the specific change.</b> &ldquo;Phone goes in the drawer at seven.&rdquo; Not
+        &ldquo;I'll do better.&rdquo;</li>
+      <li><b>4. Then do it, visibly, for long enough that she notices without being told.</b> That
+        last part is the apology. The first three were the preamble.</li>
+    </ul>
+    <p style="margin-top:12px"><b>And when she is angry about something that is genuinely not your
+      fault:</b> she is not filing a claim, she is at the end of a 105-hour week. &ldquo;That sounds
+      awful, I'm sorry&rdquo; costs you nothing and is true. Defending yourself against an accusation
+      she has not actually made is how a bad day becomes a bad fortnight.</p>
+  </div>
+
+  <h3>Intimacy, honestly</h3>
+  <div class="card">
+    <p>Nobody writes this part down, so it festers. Plainly:</p>
+    <ul class="tick">
+      <li><b>Exhaustion is not rejection</b>, and eight months in it is still the most likely
+        explanation by a wide margin.</li>
+      <li><b>Being touched all day changes what touch means.</b> A person who has had a baby on her
+        body for twelve hours may want physical space, not more contact. That is not about you.</li>
+      <li><b>The route back is almost always non-sexual affection first, and rest.</b> Point 3 of the
+        five daily acts is not a tactic — but it is also the mechanism.</li>
+      <li><b>Talk about it in daylight, kindly, once.</b> Not at night, not as a complaint, not as a
+        tally. &ldquo;I miss you. Not as a demand — I just want you to know I do.&rdquo;</li>
+      <li><b>If it has been a long time and neither of you will say so, say so.</b> Silence around this
+        reliably becomes resentment on both sides, each convinced it is the other's doing.</li>
+    </ul>
+  </div>
+
+  <h3>The item nobody raises: her career</h3>
+  <div class="card">
+    <p><b>This is the most consequential thing in this section and the most likely to be skipped.</b>
+      A woman who leaves work to raise a child in a foreign country, with no support network, does not
+      pause her career — she starts losing it. The gap compounds: skills, network, confidence, and the
+      story she can tell an interviewer. By the time the child is three, the re-entry is materially
+      harder than it would have been at one.</p>
+    <p>You are the person in this house who runs campaigns to get jobs. You have a whole site for it.
+      Turn some of that on her.</p>
+    <ul class="tick">
+      <li><b>Ask her, properly, once a quarter:</b> <em>does she want to go back, and to what?</em> Not
+        as a hint. As a genuine question with time to answer it, and with the assumption that the answer
+        may change.</li>
+      <li><b>If yes: the plan starts now, not at three.</b> That means budgeted childcare, a live CV and
+        LinkedIn, a course, and one protected hour a week that is hers for skills. One hour. Put it in
+        the calendar like a meeting.</li>
+      <li><b>If no, or not yet: say that is a real choice and mean it</b> — and then make sure she has
+        something of her own anyway. Not a hobby you assigned. Something she picked.</li>
+      <li><b>Whichever it is, do not let her financial position depend on your goodwill.</b> Joint
+        visibility on everything, her own account, her own savings. This is not about trust; it is about
+        her not being someone whose options narrowed while she was busy.</li>
+    </ul>
+  </div>
+
+  <div class="stopbox"><b>The Dubai problem — the honest attack on your own plan.</b> Your stated
+    priority is a Controller or Head of FP&amp;A role in the UAE by mid-2026, and that plan currently
+    has a hole in it. If you land it, your wife moves to a third country — further from family, on a
+    dependent visa, with a toddler, having to rebuild a support network from nothing for the second
+    time in two years. If you carry the current arrangement across, you will be paying a much larger
+    rent for the same isolation. <b>The support plan is part of the offer evaluation, not something to
+    sort out afterwards:</b> what is childcare there, what will you actually pay for it, what is her
+    visa and work status, and can she work at all? Price those before you negotiate salary, because
+    they change what a number is worth. A package that looks better and leaves her more alone is a worse
+    package.</div>
+
+  <div class="src">Postnatal depression prevalence in Malaysia (~14.3%, range across studies ~6.8–27.3%)
+    and poor social support as a risk factor: Muhamad et al. (2025), <em>JMIR Research Protocols</em>;
+    ASEAN Journal of Psychiatry review; Rashid &amp; Mohd (2017), <em>Reproductive Health</em>. Screening
+    in primary care uses a short standard questionnaire. Everything else in this section is judgement,
+    not research — argue with it.</div>
+</section>
+
+<!-- ══ 11 TIPS & TRICKS ══════════════════════════════════════════════════ -->
+<section class="sec" id="tricks">
+  <span class="sec-k">11 — Tips &amp; tricks</span>
+  <h2>The operational list</h2>
+  <p class="sec-s">Small, specific, mostly learned the hard way. None of these is important on its own;
+     together they are the difference between a household that runs and one that is always
+     firefighting.</p>
+  <hr class="rule">
+
+  <div class="grid g2">
+    <div class="card">
+      <span class="k">Systems</span>
+      <h4>Make the house do the remembering</h4>
+      <ul class="tick">
+        <li><b>Two of everything, in two places.</b> Nappies, wipes, spare clothes, muslins — one set
+          in her room, one by the door. The trip across the flat with a naked baby is the trip you
+          will regret.</li>
+        <li><b>The bag never gets unpacked, only restocked.</b> Restock it at the kitchen close-down,
+          not on the way out. Keep a laminated card of contents inside it.</li>
+        <li><b>Buy on a subscription, not on noticing.</b> Nappies, wipes, formula. Running out is a
+          failure of process, and the process is yours now.</li>
+        <li><b>One shared calendar, and it is the truth.</b> Vaccines, appointments, your late nights,
+          her blocks. If it is not in there it does not exist.</li>
+        <li><b>A whiteboard on the fridge with today's feeds, naps and anything unusual.</b> It ends
+          the handover interrogation and it is genuinely useful when a doctor asks.</li>
+        <li><b>Clothes one size up, bought early.</b> She will outgrow things overnight and you will
+          discover it at 6:45am.</li>
+        <li><b>Keep a stocked medicine box</b> — infant paracetamol, a digital thermometer, oral
+          rehydration salts, saline drops, barrier cream. Check the dates twice a year. Ask the
+          pharmacist for the correct dose for her weight and write it on the box.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Crying and settling</span>
+      <h4>The order to try things in</h4>
+      <ul class="tick">
+        <li><b>Run the checklist before you improvise:</b> hungry, wind, nappy, too hot or cold, tired,
+          overstimulated, teething, bored, unwell. Most crying is on that list.</li>
+        <li><b>Change the environment, not the technique.</b> Take her outside. Nine times in ten,
+          walking out of the front door resets a crying baby faster than anything you do indoors.</li>
+        <li><b>Water works.</b> Bath, shower, running tap. An unscheduled bath at 5pm is a legitimate
+          tool, not a failure.</li>
+        <li><b>Your voice low and slow beats loud and soothing.</b> Drop your pitch and your pace; she
+          matches you.</li>
+        <li><b>Wear her.</b> A carrier buys you two hands and she sleeps. Learn to put it on alone,
+          properly, before you need it.</li>
+        <li><b>The witching hour is real.</b> Late afternoon is hard for a lot of babies. Plan the day
+          so that 5–7pm has no ambitions in it.</li>
+        <li><b>When you are past it — put her down safely in the cot and walk out for two minutes.</b>
+          A baby crying alone in a cot for two minutes is safe. A parent who has stopped coping while
+          holding her is not. Never shake a baby, ever, and never let anyone else.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Teething</span>
+      <h4>Blamed for everything, cause of some of it</h4>
+      <ul class="tick">
+        <li>Cold, damp washcloth to chew. A chilled — not frozen — teether.</li>
+        <li>Clean finger, firm gum massage. She will bite. Let her.</li>
+        <li>Extra drooling means a rash on the chin: barrier cream, and change the bib often.</li>
+        <li><b>Avoid amber necklaces</b> — strangulation and choking risk with no established benefit.
+          Also avoid teething gels containing sugar or unlabelled ingredients.</li>
+        <li><b>Teething does not cause a high fever.</b> If she has a real fever, look for a real
+          cause — see §12. This is the single most common misattribution and it delays diagnoses.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Illness</span>
+      <h4>The first sick week</h4>
+      <ul class="tick">
+        <li><b>Fluids beat food.</b> A day of not eating is survivable; a day of not drinking is not.
+          Milk feeds count.</li>
+        <li><b>Write down times and temperatures.</b> By hour eighteen you will not remember, and the
+          doctor's first question will be exactly that.</li>
+        <li><b>One parent sleeps properly.</b> Split the night formally instead of both of you being
+          half-awake — you will need a functioning adult tomorrow.</li>
+        <li><b>Do not restart sleep training during illness.</b> Comfort freely; return to the routine
+          when she is well. You are not undoing months of work.</li>
+        <li><b>Expect a sleep and appetite hangover</b> for about a week after she recovers.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Out of the house</span>
+      <h4>Restaurants, malls, cars</h4>
+      <ul class="tick">
+        <li><b>Go early.</b> First sitting, before the crowd and before she is tired. An 11:30 lunch
+          out is easy; a 1:30 one is a fight.</li>
+        <li><b>Feed her first, then go.</b> Do not rely on the restaurant to solve the meal.</li>
+        <li><b>Ask for the bill when the food arrives.</b> You may need to leave in ninety seconds and
+          you do not want to be waving at anyone.</li>
+        <li><b>KL malls are the underrated infrastructure</b> — air-conditioned, flat, with nursing
+          rooms and lifts. On a bad-weather day, a mall lap is a legitimate outing.</li>
+        <li><b>Car seat every single time, no exceptions, including the five-minute trip.</b> Rear
+          facing as long as the seat allows.</li>
+        <li><b>Never leave her in a parked car.</b> In this climate a car interior becomes lethal in
+          minutes, not hours.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Flying and travel</span>
+      <h4>For the India trips</h4>
+      <ul class="tick">
+        <li><b>Feed or offer a cup on take-off and descent</b> — swallowing sorts out her ears.</li>
+        <li><b>Book the bassinet row</b> the moment you book the ticket, and reconfirm at check-in.</li>
+        <li><b>Twice the nappies you think, in the cabin.</b> Delays happen; hold luggage does not help.</li>
+        <li><b>A change of clothes for you as well as her.</b> Learned once, never forgotten.</li>
+        <li><b>Take the routine with you</b> — same sleeping bag, same two bedtime books, same song.
+          The portable cues are what let her sleep in an unfamiliar room.</li>
+        <li><b>Do not expect the schedule to survive.</b> Give it three days back home to reset and
+          do not conclude anything about her sleep from a trip.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">Family and advice</span>
+      <h4>The politics</h4>
+      <ul class="tick">
+        <li><b>You handle your family; she handles hers.</b> Never make her deliver a difficult message
+          to your parents. This one rule prevents a large fraction of all in-law conflict.</li>
+        <li><b>&ldquo;That's interesting, we'll think about it&rdquo;</b> ends any unwanted advice
+          without a fight. Use it liberally and then do what you decided.</li>
+        <li><b>Some old advice is dangerous, not just outdated:</b> honey before one, rice water instead
+          of milk, sleeping on the front, water for a young infant, gripe waters of unknown composition.
+          Be polite and be immovable.</li>
+        <li><b>Visitors are a cost unless they cook or clean.</b> A guest who holds the baby for an hour
+          and then expects tea has made the day harder. It is fine to say so, and it is your job to say
+          it rather than hers.</li>
+        <li><b>Praise your wife in front of your family, specifically.</b> It changes how they treat her
+          when you are not in the room.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <span class="k">You</span>
+      <h4>The father, honestly</h4>
+      <ul class="tick">
+        <li><b>You are allowed to find this hard and boring in places.</b> Saying so out loud is not
+          disloyalty; pretending otherwise is what makes men withdraw.</li>
+        <li><b>Fathers get postnatal depression too.</b> If you are numb, angry, drinking more, or
+          working late to avoid coming home — that last one especially — take it seriously.</li>
+        <li><b>Do not let your entire self become work and baby.</b> One thing a week that is yours,
+          and grant it to her without keeping score.</li>
+        <li><b>Keep one friend you tell the truth to.</b> Most men lose this in the first year and do
+          not notice until much later.</li>
+        <li><b>Your daughter does not need you to be impressive.</b> She needs you to be there, the
+          same way, repeatedly, in a way she can predict. That is the whole job.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ══ 12 RED FLAGS ══════════════════════════════════════════════════════ -->
+<section class="sec" id="red">
+  <span class="sec-k">12 — Red flags</span>
+  <h2>Numbers, and when to stop reading and go</h2>
+  <p class="sec-s">Put these in both phones tonight. Not next week.</p>
+  <hr class="rule">
+
+  <div class="tw"><table>
+    <thead><tr><th>Who</th><th>Number</th><th>For</th></tr></thead>
+    <tbody>
+      <tr><td><b>Emergency — Malaysia</b></td><td class="num">999</td><td>Ambulance, police, fire</td></tr>
+      <tr><td><b>Emergency from a mobile</b></td><td class="num">112</td><td>Works without a SIM or signal on your network</td></tr>
+      <tr><td><b>National Poison Centre (Pusat Racun Negara)</b></td><td class="num">04-653 6999</td><td>Swallowed a chemical, a medicine, a plant, a battery</td></tr>
+      <tr><td><b>Your paediatrician</b></td><td class="num">— add it —</td><td>Everything else. Have a name, not a search.</td></tr>
+      <tr><td><b>Nearest 24h A&amp;E</b></td><td class="num">— add it —</td><td>Know the route before you need it, and which way is one-way</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="stopbox"><b>Go now — do not wait for morning, do not message a group chat.</b>
+    <ul class="no" style="margin-top:10px">
+      <li>Difficulty breathing, fast or laboured breathing, grunting, ribs sucking in, blue or grey lips</li>
+      <li>A rash that does not fade when you press a glass against it</li>
+      <li>Unusually drowsy, floppy, or very hard to wake</li>
+      <li>A fit or seizure</li>
+      <li>A bulging or sunken soft spot on the head</li>
+      <li>Repeated vomiting, especially green vomit, or blood in vomit or stool</li>
+      <li>Signs of dehydration: no wet nappy for many hours, no tears, dry mouth, sunken eyes</li>
+      <li>Any swallowed button battery or magnet — <b>this is an emergency in minutes, not hours</b></li>
+      <li>A significant head injury, especially with vomiting or drowsiness</li>
+      <li>Any fever in a baby that is accompanied by any item above</li>
+      <li>Your own strong instinct that something is badly wrong. Trust it. You know her baseline.</li>
+    </ul>
+  </div>
+
+  <div class="warnbox"><b>Call the doctor the same day (not an emergency, but do not sit on it):</b>
+    a fever that persists, refusing all feeds, far fewer wet nappies than normal, diarrhoea lasting
+    more than a day, an ear she keeps pulling at with distress, a rash that is spreading, unusual
+    persistent crying that is not like her, or a skill she used to have and has lost.
+    <b>This page is not medical advice and I am not a clinician</b> — when in doubt, the correct
+    action is always to ask a doctor rather than to read more.</div>
+
+  <div class="src">Emergency numbers: MERS 999 (999.gov.my) and 112 from mobile. National Poison Centre
+    04-653 6999, Universiti Sains Malaysia, Penang (prn.usm.my) — listed by them as the preferred
+    channel. Red-flag lists are standard paediatric safety-netting advice; they are a prompt to seek
+    care, not a diagnostic tool.</div>
+</section>
+
+<!-- ══ 13 THE DAILY CARD ═════════════════════════════════════════════════ -->
+<section class="sec" id="daily">
+  <span class="sec-k">13 — The daily card</span>
+  <h2>Twelve boxes. Tick them or do not.</h2>
+  <p class="sec-s">Resets itself every day at midnight. Lives in this browser only and is sent
+     nowhere. If you are ticking under eight most days, the problem is not this page — it is the
+     schedule, and you should go back to §01.</p>
+  <hr class="rule">
+  <div class="card" id="dailyCard">
+    <label class="ck"><input type="checkbox" data-d="d1"><span><b>Morning shift taken</b> — she stayed in bed or showered uninterrupted</span></label>
+    <label class="ck"><input type="checkbox" data-d="d2"><span><b>Her food handled</b> — thawed, prepped, and I fed at least one meal</span></label>
+    <label class="ck"><input type="checkbox" data-d="d3"><span><b>Cheerful goodbye</b> — said out loud, did not sneak out</span></label>
+    <label class="ck"><input type="checkbox" data-d="d4"><span><b>One non-logistics message</b> to my wife during the day</span></label>
+    <label class="ck"><input type="checkbox" data-d="d5"><span><b>Home when I said</b>, or told her by 5pm that I would not be</span></label>
+    <label class="ck"><input type="checkbox" data-d="d6"><span><b>The handover run properly</b> — phone away, wife first, baby taken</span></label>
+    <label class="ck"><input type="checkbox" data-d="d7"><span><b>Twenty minutes on the floor</b>, no phone in the room</span></label>
+    <label class="ck"><input type="checkbox" data-d="d8"><span><b>Two books read</b> — pointed, named, made the noises</span></label>
+    <label class="ck"><input type="checkbox" data-d="d9"><span><b>Bedtime sequence, all seven steps, by me</b></span></label>
+    <label class="ck"><input type="checkbox" data-d="d10"><span><b>Kitchen closed down</b> — dishes, bottles, tomorrow's food out</span></label>
+    <label class="ck"><input type="checkbox" data-d="d11"><span><b>One specific thing named</b> that she did well today</span></label>
+    <label class="ck"><input type="checkbox" data-d="d12"><span><b>Ten minutes talking to her as a person</b>, not as the baby's mother</span></label>
+  </div>
+
+  <h3>The weekly review — Sunday, five boxes</h3>
+  <div class="card" id="weeklyCard">
+    <label class="ck"><input type="checkbox" data-w="w1"><span>She got <b>two Off-Duty Blocks</b> of four continuous hours — and did not have to ask</span></label>
+    <label class="ck"><input type="checkbox" data-w="w2"><span>The <b>batch cook</b> happened, and the week's food is in the freezer</span></label>
+    <label class="ck"><input type="checkbox" data-w="w3"><span><b>Stock counted and reordered</b> — nothing ran out this week</span></label>
+    <label class="ck"><input type="checkbox" data-w="w4"><span>The <b>Sunday Twenty</b> happened, with the timer, all five questions</span></label>
+    <label class="ck"><input type="checkbox" data-w="w5"><span>We <b>bought our way out of something</b> this week</span></label>
+  </div>
+</section>
+
+<!-- ══ 14 WHAT THIS IS NOT ═══════════════════════════════════════════════ -->
+<section class="sec" id="limits">
+  <span class="sec-k">14 — What this is not</span>
+  <h2>The honest limits of this page</h2>
+  <hr class="rule">
+  <div class="card">
+    <ul class="tick">
+      <li><b>It is not medical advice, and I am not a clinician.</b> The feeding rules, the do-not list,
+        the milestones and the red flags are quoted from WHO, the CDC, the NHS and Malaysia's Ministry
+        of Health, and sourced at the foot of each section. The menus, routines, scripts and judgement
+        calls are mine. Where I could not verify something, I said so in the text rather than rounding
+        it up to fact.</li>
+      <li><b>No supplement doses appear anywhere on this page.</b> Deliberately. Doses depend on her
+        weight, her milk intake and her blood results, and that is a conversation with your
+        paediatrician — bring the four iron rules from §05 with you.</li>
+      <li><b>The hours in §02 are estimates with the inputs shown.</b> Rerun them. The gap is the
+        finding, not the number.</li>
+      <li><b>The KL wage ranges in §01 are from listing platforms, not quotes.</b> Get three real ones
+        before you budget.</li>
+      <li><b>Her vaccination schedule lives in her KKM health record book, not here.</b> I have listed
+        only MMR at 9 and 12 months because that is what I could verify against the Ministry's published
+        schedule. Check the book.</li>
+      <li><b>It assumes a specific household</b> — one earner, 9–6, a vegetarian kitchen, no helper, no
+        family in the country. Every routine here bends to a different reality; the priority order does
+        not.</li>
+      <li><b>The brutal parts are aimed at the arrangement, not at you.</b> A man asking for a manual on
+        how to carry more is not the problem in this story. But asking for the manual is not the same as
+        running it, and only one of those two things helps your wife.</li>
+    </ul>
+  </div>
+  <div class="lede">If you do nothing else on this page: <b>own bedtime every night, do the Sunday batch
+    cook, guarantee her two four-hour Off-Duty Blocks a week, and book three cleaner quotes this
+    week.</b> That is roughly eighty per cent of the available benefit and it can start on Monday.</div>
+</section>
+
+</main>
+</div>
+
+<button class="totop" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+
+<footer class="foot">
+  The Home Book · career.askakshay.com/home · a private working surface, not published.<br>
+  Checkboxes live in this browser only and are never sent anywhere. The daily card resets at midnight.<br>
+  Health guidance sourced from WHO, US CDC, NHS and Malaysia's MOH — read at source, September 2026.
+  Not medical advice. When in doubt, ask a doctor.
+</footer>
+
+<script>
+(function(){
+"use strict";
+const $  = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+
+/* localStorage THROWS outright in private windows and when site data is
+   blocked — it does not return null. Every access goes through here.
+   Prefix "ak:" is shared with index.html on purpose: the theme choice should
+   follow you between the two pages rather than being set twice. */
+const store = {
+  get(k, d){ try { const v = localStorage.getItem("ak:"+k); return v===null ? d : JSON.parse(v); }
+             catch(e){ return d; } },
+  set(k, v){ try { localStorage.setItem("ak:"+k, JSON.stringify(v)); } catch(e){} }
+};
+
+/* ── THEME ────────────────────────────────────────────────────────────── */
+const root = document.documentElement;
+root.setAttribute("data-theme", store.get("theme", "dark"));
+$("#themeBtn").addEventListener("click", () => {
+  const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", next); store.set("theme", next);
+  const m = $('meta[name="theme-color"]'); if (m) m.content = next==="dark" ? "#0B0F14" : "#FFFFFF";
+});
+
+/* ── DATES ────────────────────────────────────────────────────────────────
+   Born 25 Dec 2025. Everything below is derived, never hardcoded, so the page
+   stays correct the day after it is deployed. Dates are built with the local
+   constructor rather than parsed from an ISO string: a bare "2025-12-25"
+   parses as UTC and reads a day early in MYT. */
+const BORN = new Date(2025, 11, 25);
+const midnight = d => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+const DAY = 864e5;
+const daysBetween = (a, b) => Math.round((midnight(b) - midnight(a)) / DAY);
+
+function ageParts(from, to){
+  let m = (to.getFullYear()-from.getFullYear())*12 + (to.getMonth()-from.getMonth());
+  if (to.getDate() < from.getDate()) m--;
+  const anchor = new Date(from.getFullYear(), from.getMonth()+m, from.getDate());
+  return { months: m, days: daysBetween(anchor, to) };
+}
+function nthMonthDate(n){ return new Date(BORN.getFullYear(), BORN.getMonth()+n, BORN.getDate()); }
+
+const now  = new Date();
+const age  = ageParts(BORN, now);
+const bday = (function(){
+  let d = new Date(now.getFullYear(), BORN.getMonth(), BORN.getDate());
+  if (daysBetween(now, d) < 0) d = new Date(now.getFullYear()+1, BORN.getMonth(), BORN.getDate());
+  return d;
+})();
+const mmr1 = nthMonthDate(9);   /* MMR dose 1 — Malaysia NIP, 9 months */
+const mmr2 = nthMonthDate(12);  /* MMR dose 2 — 12 months */
+
+const toMmr1 = daysBetween(now, mmr1);
+const toMmr2 = daysBetween(now, mmr2);
+
+$("#stAge").textContent  = age.months + "m " + age.days + "d";
+$("#stDays").textContent = daysBetween(BORN, now);
+$("#stBday").textContent = daysBetween(now, bday);
+
+/* Once dose 1 is behind us the tile has to say something true rather than a
+   negative number, so it rolls forward to dose 2 and then retires. */
+const mmrEl = $("#stMmr"), mmrTile = mmrEl.closest(".stat");
+if (toMmr1 >= 0)      { mmrEl.textContent = toMmr1; }
+else if (toMmr2 >= 0) { mmrEl.textContent = toMmr2;
+                        mmrTile.querySelector("span").textContent = "Days to MMR-2"; }
+else                  { mmrEl.textContent = "—";
+                        mmrTile.classList.remove("hot");
+                        mmrTile.querySelector("span").textContent = "Check the KKM book"; }
+
+const mmrText = $("#mmrDays");
+if (mmrText) mmrText.textContent = toMmr1 > 0 ? toMmr1 + " days"
+                                 : toMmr1 === 0 ? "today"
+                                 : "already passed — check the book";
+
+/* ── CHECKLISTS ───────────────────────────────────────────────────────────
+   The daily card resets at midnight and the weekly one on Monday, by storing
+   the period key alongside the ticks rather than running a timer: a page left
+   open overnight would never fire one, and a page opened fresh does not need
+   one. */
+function periodBox(sel, attr, key, currentPeriod, onChange){
+  const boxes = $$(sel + " input[" + attr + "]");
+  let state = store.get(key, null);
+  if (!state || state.p !== currentPeriod) state = { p: currentPeriod, v: {} };
+  boxes.forEach(b => { b.checked = !!state.v[b.getAttribute(attr)]; });
+  const save = () => {
+    state.v = {};
+    boxes.forEach(b => { if (b.checked) state.v[b.getAttribute(attr)] = 1; });
+    store.set(key, state);
+    if (onChange) onChange(boxes.filter(b => b.checked).length, boxes.length);
+  };
+  boxes.forEach(b => b.addEventListener("change", save));
+  if (onChange) onChange(boxes.filter(b => b.checked).length, boxes.length);
+  return save;
+}
+
+const todayKey = now.getFullYear() + "-" + (now.getMonth()+1) + "-" + now.getDate();
+/* Week key = the date of the most recent Monday, so a Sunday-evening review
+   and the Monday morning after it are NOT the same week. */
+const weekKey = (function(){
+  const d = midnight(now);
+  const shift = (d.getDay() + 6) % 7;          /* Mon=0 … Sun=6 */
+  const mon = new Date(d.getTime() - shift*DAY);
+  return mon.getFullYear() + "-" + (mon.getMonth()+1) + "-" + mon.getDate();
+})();
+
+const doneEl = $("#stDone");
+periodBox("#dailyCard", "data-d", "home:daily", todayKey, (n, total) => {
+  doneEl.innerHTML = n + '<small style="font-size:.55em;color:var(--dim)">/' + total + '</small>';
+  doneEl.style.color = n >= 10 ? "var(--up)" : n >= 7 ? "" : "var(--warn)";
+});
+periodBox("#weeklyCard", "data-w", "home:weekly", weekKey, null);
+
+/* ── SCROLL SPY ───────────────────────────────────────────────────────────
+   NO IntersectionObserver and NO requestAnimationFrame anywhere on this page.
+   Neither fires in a tab the browser considers hidden — which the in-app
+   browser pane always is — and the nav then reads as permanently broken.
+   A throttled scroll listener on setTimeout works everywhere. */
+const links = $$(".rail a[data-s]");
+const secs  = links.map(a => document.getElementById(a.dataset.s)).filter(Boolean);
+let lockUntil = 0;
+
+function setActive(id){
+  links.forEach(a => a.classList.toggle("on", a.dataset.s === id));
+}
+function markActive(){
+  if (Date.now() < lockUntil) return;
+  const line = window.scrollY + (parseFloat(getComputedStyle(root).getPropertyValue("--barh")) || 56) + 90;
+  let cur = secs[0];
+  for (const s of secs){ if (s.offsetTop <= line) cur = s; else break; }
+  if (cur) setActive(cur.id);
+}
+function paintProgress(){
+  const h = document.documentElement;
+  const max = h.scrollHeight - h.clientHeight;
+  const pct = max > 0 ? Math.min(100, Math.max(0, (window.scrollY / max) * 100)) : 0;
+  const bar = $("#scrollprog");
+  bar.style.width = pct + "%";
+  bar.setAttribute("aria-valuenow", Math.round(pct));
+}
+const toTop = $("#toTop");
+function paintToTop(){ toTop.classList.toggle("show", window.scrollY > 600); }
+
+let spy = null, spyLast = 0;
+window.addEventListener("scroll", () => {
+  paintProgress(); paintToTop();
+  const t = Date.now();
+  if (t - spyLast > 90){ spyLast = t; markActive(); return; }
+  clearTimeout(spy);
+  spy = setTimeout(() => { spyLast = Date.now(); markActive(); }, 130);
+}, {passive:true});
+
+/* A clicked link wins over the spy for a moment, or smooth scrolling drags the
+   highlight backwards through every section on the way. */
+document.addEventListener("click", e => {
+  const a = e.target.closest(".rail a[data-s]");
+  if (!a) return;
+  setActive(a.dataset.s);
+  lockUntil = Date.now() + 900;
+});
+if ("onscrollend" in window)
+  window.addEventListener("scrollend", () => { lockUntil = 0; markActive(); }, {passive:true});
+
+toTop.addEventListener("click", () => {
+  window.scrollTo({top:0, behavior:"smooth"});
+  setActive(secs[0] && secs[0].id);
+  lockUntil = Date.now() + 900;
+});
+
+markActive(); paintProgress(); paintToTop();
+})();
+</script>
+</body>
+</html>

@@ -18,6 +18,28 @@ API, no database, no secrets.
 | 09 | Money | Negotiation order, anchors, scripts |
 | 10 | The long game | Process discipline over outcome |
 
+### `/home` — The Home Book
+
+A second, self-contained page on the same assets Worker: the fatherhood and
+marriage manual (routines, feeding, sleep, reading, growth calendar, red flags).
+Linked from §12 Life and from the rail as `13`.
+
+It is a **separate document on purpose**. §12 Life renders from
+`news.askakshay.com/today.json`, which is built in another repo — a 60KB static
+book bolted into that section would double the weight of the job-search page and
+would sit behind a "Loading…" state it has nothing to do with. As a sibling file
+it costs one more asset and cannot break `index.html`.
+
+Every date on it (her age, days to the first birthday, days to MMR-1/MMR-2) is
+**derived from a single `BORN` constant at run time**, never hardcoded, so the
+page does not rot. Dates are built with `new Date(y, m, d)` rather than parsed
+from an ISO string — a bare `"2025-12-25"` parses as UTC and reads a day early
+in MYT.
+
+Health claims are sourced inline at the foot of each section (WHO, US CDC, NHS,
+Malaysia MOH). **No supplement doses appear anywhere, deliberately.** If you
+edit the feeding or red-flag sections, keep that rule.
+
 ## Running it
 
 ```bash
