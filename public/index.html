@@ -449,8 +449,10 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   <span class="sec-k">02 — Openings</span>
   <h2>Live roles, scored against your CV</h2>
   <p class="sec-s">Senior finance openings in the UAE, Saudi, Malaysia and Oman, scraped daily and
-     ranked on fit, employer quality and whether the application link actually works — not on
-     recency. Every card carries a direct apply link unless it says otherwise.</p>
+     ranked on fit, employer quality and whether the application link actually works.
+     <b>Only tiers S, A and B, and only postings from the last 30 days</b> — everything weaker or
+     older is scored and kept in the feed, but it is not an opportunity, so it is not shown here.
+     Every card carries a direct apply link unless it says otherwise.</p>
   <hr class="rule">
   <div id="rolesMeta" class="warnbox" style="border-left-color:var(--accent);background:var(--accent-soft)">
     Loading the feed…
@@ -1431,6 +1433,28 @@ function myt(v, withTime = true){
    being a letter you have to remember the scale for. */
 const TIER_LABEL = {S:"S · Top of the list", A:"A · Strong fit",
                     B:"B · Worth a look",   C:"C · Long shot", D:"D · Weak"};
+/* THE SHELF RULE. Applied before anything renders, not as a default chip
+   position — a chip can be clicked off by accident and a stale D-grade role
+   then looks like a live lead. C and D are deliberately unreachable here.
+   Both numbers are constants so the rule can be changed in one place. */
+const MAX_AGE_DAYS = 30;
+const TIERS_SHOWN  = ["S", "A", "B"];
+
+/* Age in days, or null if it cannot be established.
+   posted_date is the truth. scraped_at is a FLOOR, not a measurement: it says
+   when this pipeline first saw the row, so a job posted long before our first
+   scrape reads younger than it is. Using it keeps a genuinely-scored role from
+   being dropped over a scraper gap, and cards that rely on it say "First seen"
+   rather than "Posted" so the difference is visible rather than implied. */
+function roleAge(j){
+  const raw = j.posted_date || j.scraped_at;
+  if (!raw) return null;
+  const t = Date.parse(raw);
+  if (isNaN(t)) return null;
+  return Math.floor((Date.now() - t) / 864e5);
+}
+const roleIsCurrent = j => { const a = roleAge(j); return a !== null && a <= MAX_AGE_DAYS; };
+
 let ROLES = [], rFilter = {country:"All", tier:"All"};
 
 function roleCard(j){
@@ -1455,7 +1479,11 @@ function roleCard(j){
       ${TIER_LABEL[tier] ? `<span class="pill tier-${esc(tier)}">${esc(TIER_LABEL[tier])}</span>` : ""}
       ${j.application_priority ? `<span class="pill">${esc(j.application_priority)}</span>` : ""}
       ${j.status ? `<span class="pill ${st}">${esc(j.status)}</span>` : ""}
-      ${j.posted_date ? `<span class="pill">Posted ${esc(j.posted_date)}</span>` : ""}
+      ${(() => { const a = roleAge(j);
+          const age = a === null ? "" : a === 0 ? " · today" : ` · ${a}d`;
+          if (j.posted_date) return `<span class="pill${a !== null && a > 21 ? " warn" : ""}">Posted ${esc(j.posted_date)}${age}</span>`;
+          if (j.scraped_at)  return `<span class="pill">First seen ${esc(String(j.scraped_at).slice(0,10))}${age}</span>`;
+          return ""; })()}
       ${j.candidate_fit_score != null ? `<span class="pill">Fit ${j.candidate_fit_score}</span>` : ""}
       ${j.employer_score != null ? `<span class="pill">Employer ${j.employer_score}</span>` : ""}
       ${exp ? `<span class="pill">${esc(exp)}</span>` : ""}
@@ -1484,7 +1512,8 @@ function drawRoles(){
        (rFilter.tier === "S+A" ? ["S","A"].includes(j.tier) : j.tier === rFilter.tier)));
   document.getElementById("rolesList").innerHTML = rows.length
     ? rows.map(roleCard).join("")
-    : '<div class="empty">Nothing matches that filter.</div>';
+    : `<div class="empty">Nothing matches that filter. The shelf is already limited to
+         tiers S, A and B posted within ${MAX_AGE_DAYS} days.</div>`;
 }
 
 (async function loadRoles(){
@@ -1495,21 +1524,35 @@ function drawRoles(){
     const d = await res.json();
     // Excluded rows are scored and kept in the file on purpose; they are not
     // opportunities, so they do not belong on this page.
-    ROLES = (d.jobs || []).filter(j => !j.is_excluded)
-              .sort((a,b) => (b.opportunity_score||0) - (a.opportunity_score||0));
+    const pool = (d.jobs || []).filter(j => !j.is_excluded);
+    ROLES = pool.filter(j => TIERS_SHOWN.includes(j.tier) && roleIsCurrent(j))
+                .sort((a,b) => (b.opportunity_score||0) - (a.opportunity_score||0));
+    // Counted separately so the meta line can say WHY a role is missing. A
+    // number that only says "14 shown" invites the reading that the market is
+    // empty, when in fact most of what was dropped was dropped on grade.
+    const cutTier = pool.filter(j => !TIERS_SHOWN.includes(j.tier)).length;
+    const cutAge  = pool.filter(j => TIERS_SHOWN.includes(j.tier) && !roleIsCurrent(j)).length;
     const st = d.stats || {};
     const when = d.generated_at ? new Date(d.generated_at) : null;
     const ageH = when ? Math.round((Date.now() - when) / 3600000) : null;
-    meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b> Scraped
+    meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b>
+      S, A and B only, posted in the last ${MAX_AGE_DAYS} days.
+      Held back from ${pool.length} scored roles: <b>${cutTier}</b> below tier B,
+      <b>${cutAge}</b> older than ${MAX_AGE_DAYS} days. · Scraped
       ${myt(d.generated_at)}
       ${ageH != null ? `(${ageH}h ago)` : ""} ·
       ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·
       ${st.urls_verified ?? "?"} links verified.
-      ${ageH != null && ageH > 30 ? "<b> Feed is stale — the scraper has not run.</b>" : ""}`;
-    const by = st.by_country || {};
+      ${ageH != null && ageH > 30 ? "<b> Feed is stale — the scraper has not run.</b>" : ""}
+      ${ROLES.length === 0 ? "<b> Nothing clears the bar today. That is a real answer, not a broken feed.</b>" : ""}`;
+    // Counted off ROLES, not off d.stats: the feed's own totals cover the whole
+    // scrape, and showing "UAE 30" above 14 cards is just a wrong number.
+    const n = f => ROLES.filter(f).length;
     document.getElementById("rolesStats").innerHTML =
-      [["Roles", ROLES.length], ["High fit", st.high_fit ?? "–"],
-       ["UAE", by["UAE"] ?? 0], ["Malaysia", by["Malaysia"] ?? 0]]
+      [["Shown", ROLES.length],
+       ["S + A", n(j => j.tier === "S" || j.tier === "A")],
+       ["UAE", n(j => j.country === "UAE")],
+       ["Malaysia", n(j => j.country === "Malaysia")]]
       .map(([l,v]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
     document.getElementById("rolesStats").hidden = false;
 
