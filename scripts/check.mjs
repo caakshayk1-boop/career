@@ -40,7 +40,14 @@ const browser = await chromium.launch();
 
 /* One fresh page per document: `errors` must not carry over between them, or a
  * failure on the first page is reported again against the second. */
-async function checkPage(path, label, extra) {
+/**
+ * @param {number} [minText] characters of rendered text below which the page is
+ *   considered blank. Per-page, because "blank" is not one number: the campaign
+ *   and the home book are large documents, while /podcasts in its empty state is
+ *   deliberately about 800 characters — a good empty state is short, and a
+ *   generic 2000-character floor fails it for being correct.
+ */
+async function checkPage(path, label, extra, minText = 2000) {
   const page = await browser.newPage();
   const errors = [];
   page.on("pageerror", (e) => errors.push(String(e).slice(0, 200)));
@@ -57,7 +64,8 @@ async function checkPage(path, label, extra) {
   ok(`${label}: no script errors`, errors.length === 0, errors.slice(0, 2).join(" | "));
 
   ok(`${label}: has a title`, (await page.title()).length > 3, await page.title());
-  ok(`${label}: content rendered`, (await page.locator("body").innerText()).length > 2000);
+  const textLen = (await page.locator("body").innerText()).length;
+  ok(`${label}: content rendered`, textLen > minText, `${textLen} chars, floor ${minText}`);
 
   /* The progress bar is 0% at the top of any page, so its existence proves
    * nothing. Scroll, then read it. */
@@ -100,6 +108,11 @@ await checkPage("/", "campaign", async (page) => {
   ok("campaign: §12 Life resolves rather than hanging on Loading", !/Loading…/.test(life), life.slice(0, 80));
 });
 
+/* 400, not 2000: with no episodes published this page is one paragraph saying
+ * so, and that is the correct output rather than a failure. The assertions that
+ * actually matter for this page — that the feed parses, that the empty state
+ * explains itself, that a card exists per episode — are below and are not
+ * satisfied by a wall of text. */
 await checkPage("/podcasts", "podcasts", async (page) => {
   /* The feed is fetched, so the page is empty for a moment on any run. Wait for
    * the render rather than racing it — the 3.5s in checkPage is for scripts, not
@@ -222,7 +235,7 @@ await checkPage("/podcasts", "podcasts", async (page) => {
 
   await page.evaluate(() => { location.hash = ""; });
   await page.waitForTimeout(300);
-});
+}, 400);
 
 await checkPage("/home", "home book", async (page) => {
   /* Every date on this page is derived at run time from one BORN constant. If
