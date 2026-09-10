@@ -162,12 +162,12 @@ blocked, rather than returning null.
   sideways scroll
 - `/` still renders; §12 Life leads with points and read-time
 
-**Not verified from here, and you must do it before the first real run:** the
-feed URLs in `pipeline/sources.json` were written in an offline environment and
-are marked `"verified": false`. Egress in that environment reached npm and
-GitHub only, so no podcast feed was ever fetched. Run `npm run podcasts:verify`
-— it fetches each one, prints the show title and newest episode, and says
-whether it can be read for free.
+**Verified against the real feeds on 10 Sep 2026.** The Diary Of A CEO parses
+(882 items), publishes `<podcast:transcript>`, and produced 20 points from a
+146-minute episode at `$0.000`. Invest Like the Best parses (596 items) but
+nothing fell inside the 72-hour window that day, so whether it publishes a
+transcript is **still unknown** — run `npm run podcasts:verify`, which says per
+source whether it can be read for free.
 
 ## Verified 2026-09-03
 

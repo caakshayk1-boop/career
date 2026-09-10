@@ -11,6 +11,14 @@
     "  url            the feed URL, or a bare UC... channel id for YouTube",
     "  verified       set true once `npm run podcasts:verify` has confirmed it",
     "",
+    "STATUS, 10 Sep 2026, from a real run rather than from memory:",
+    "  diary-of-a-ceo        VERIFIED. 882 items, publishes <podcast:transcript>,",
+    "                        produced 20 points from a 146m episode at $0.000.",
+    "  invest-like-the-best  Feed parses (596 items). NOT verified end to end —",
+    "                        nothing fell inside the 72h window on the day it was",
+    "                        enabled, so whether it publishes a transcript is",
+    "                        still unknown. Run podcasts:verify to find out.",
+    "",
     "READ THIS BEFORE THE FIRST RUN. This deployment has no paid transcription",
     "key, so an episode is only readable if the transcript is already free:",
     "",
@@ -41,7 +49,7 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/thediaryofaceo",
       "enabled": true,
-      "verified": false
+      "verified": true
     },
     {
       "id": "invest-like-the-best",
