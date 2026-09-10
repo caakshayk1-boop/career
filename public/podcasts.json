@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T14:29:51.639Z",
+  "generatedAt": "2026-09-10T14:41:01.205Z",
   "today": "2026-09-10",
   "retentionDays": 7,
   "days": [
@@ -339,6 +339,17 @@
       "readSeconds": 96
     }
   ],
+  "pending": [
+    {
+      "id": "invest-like-the-best-bb3003b987c2",
+      "title": "Walter Russell Mead - How America Keeps Winning - [Invest Like the Best, EP.490]",
+      "show": "Invest Like the Best",
+      "url": "https://colossus.com/episode/god-gold-silicon/",
+      "takeaways": [],
+      "date": "2026-09-08",
+      "reason": "audio only, and no transcript — needs DEEPGRAM_API_KEY, or use a source that publishes captions"
+    }
+  ],
   "generator": {
     "processingVersion": "1.0.0",
     "promptVersion": "2026-09-10.b",
@@ -347,14 +358,27 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-10T14:29:51.236Z",
-    "discovered": 1478,
-    "eligible": 0,
+    "at": "2026-09-10T14:41:01.205Z",
+    "discovered": 1498,
+    "eligible": 2,
     "processed": 0,
-    "skipped": 1478,
-    "failed": 0,
+    "skipped": 1496,
+    "failed": 2,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "process",
+        "id": "desk-47f780d7c5c2",
+        "message": "no caption track published for this video",
+        "at": "2026-09-10T14:41:01.071Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-21c81f724b0d",
+        "message": "no caption track published for this video",
+        "at": "2026-09-10T14:41:01.199Z"
+      }
+    ],
     "estimatedCostUsd": 0
   }
 }
