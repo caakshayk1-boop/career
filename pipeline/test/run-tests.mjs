@@ -43,6 +43,7 @@ const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio
 const { request } = await import("../lib/http.mjs");
 const { assessQuality, parseCues, parseJsonTranscript } = await import("../lib/transcript.mjs");
 const { TRANSCRIPT, EPISODE, SEGMENTS } = await import("./fixtures/transcript.mjs");
+const MESSY = await import("./fixtures/messy.mjs");
 const { mytDate } = await import("../config.mjs");
 
 let passed = 0, failed = 0;
@@ -272,6 +273,52 @@ group("extractive — points without a model");
 
   ok("passageAt is bounded", passageAt(SEGMENTS, 232).length <= 950, passageAt(SEGMENTS, 232).length);
   ok("passageAt on an unknown offset returns nothing", passageAt(SEGMENTS, 999999) === "");
+}
+
+/* ── THE REGRESSION THAT SHIPPED ─────────────────────────────────────────── */
+group("standalone-ness — what the first production run got wrong");
+{
+  /* The first live run returned 20 points of which 13 contained "because" and
+     most were dependent fragments: sentences whose subject lived in the
+     sentence before them. They read as broken text in a list, which is exactly
+     the "not meaningful" failure this feature exists to fix. Every BAD line in
+     the fixture is copied in shape from that run. */
+  const r = takeaways(stripNoise(MESSY.TRANSCRIPT.segments).segments,
+    { min: 3, max: 12, duration: MESSY.TRANSCRIPT.durationSec });
+
+  const isBad = (p) => MESSY.BAD.some((b) => b.startsWith(p.detail.slice(0, 40)));
+  const isGood = (p) => MESSY.GOOD.some((g) => g.startsWith(p.detail.slice(0, 40)));
+  const picked = r.points.filter(isBad).map((p) => p.point.slice(0, 60));
+
+  ok("not one dependent fragment is selected", picked.length === 0, picked.join(" | "));
+  ok("the standalone sentences are selected instead",
+    r.points.filter(isGood).length >= 8, `${r.points.filter(isGood).length} of ${r.points.length}`);
+
+  /* Each gate, asserted on its own, so a future change that removes one is
+     attributable rather than showing up as a vague quality drop. */
+  const rejects = (text) => {
+    const seg = [{ t: 100, d: 20, speaker: "", text }];
+    return takeaways([...stripNoise(MESSY.TRANSCRIPT.segments).segments, ...seg],
+      { min: 1, max: 30, duration: MESSY.TRANSCRIPT.durationSec })
+      .points.every((p) => !p.detail.startsWith(text.slice(0, 30)));
+  };
+  ok("a sentence opening on 'Because' is rejected",
+    rejects("Because the entire structure of the compensation plan was rebuilt around retention that year."));
+  ok("'That is because…' is rejected",
+    rejects("That is because the selfless helpers in the study had a completely different story arc."));
+  ok("a demonstrative with no antecedent is rejected",
+    rejects("This is the single most important mechanism in the whole negotiation process, honestly."));
+  ok("talk about the conversation is rejected",
+    rejects("Let me ask you about the second framework you mentioned earlier in this episode today."));
+  ok("a restarted thought is rejected",
+    rejects("The reason why we'll often we're processing, we're processing and then we're going somewhere."));
+
+  /* And the other half: the gates must not eat good sentences. */
+  const keeps = (text) => !rejects(text);
+  ok("a mid-sentence 'because' with a claim on both sides survives",
+    keeps("Most cost programmes fail because they cut discretionary spend instead of cutting the commitments underneath it."));
+  ok("a first-person claim that names something survives",
+    keeps("I stopped screening for technical accuracy after about forty interviews and started screening for calibrated uncertainty."));
 }
 
 group("the free path, end to end");

@@ -38,16 +38,31 @@ fields are present.
 
 ## How points are chosen
 
-Removal first, because it is worth more than any amount of clever ranking:
-sponsor reads, housekeeping, questions (the host's job, not the guest's
-insight), agreement noise, and anything under six content words.
+**Standalone-ness is a hard gate, not a score.** A takeaway is read out of
+context by definition — it sits in a list with no sentence before it — so a
+sentence that depends on the previous one is not a takeaway however much
+information it carries. Rejected outright: anything opening on a subordinating
+conjunction (`Because…`, `So that…`, `Which…`), a demonstrative or pronoun with
+no antecedent (`That is because…`, `This is why…`), talk about the conversation
+rather than in it (`Let me ask you…`, `earlier in this episode`), a restarted
+thought (`we're processing, we're processing`), and any question.
+
+That gate exists because the first production run did not have it: 13 of 20
+points contained "because" and most were fragments. `because` is one of the most
+common words in speech and a plain regex signal scored a dependent clause
+exactly as highly as a mechanism. Causality is now only credited when there is a
+claim on one side of the connective and a reason on the other.
+
+Removal first, then: sponsor reads, housekeeping, agreement noise, and anything
+under six content words.
 
 What survives is scored on nine signals — quantification, money, causal
 structure (`because`, `which means`), correction (`most people think`,
 `turns out`), rules and frameworks, definitions, enumeration, concrete personal
 specifics — plus centrality (how much of the sentence's vocabulary recurs across
-the whole conversation) and information density. Filler, over-length and the
-first/last 3% of the episode are penalised.
+the whole conversation) and information density. Filler, over-length, opening on
+a pronoun, and the first/last 3% of the episode are penalised; naming something
+specific is rewarded.
 
 Where the transcript is diarised, the **host is identified by question rate** and
 demoted: the most quotable-sounding line in an interview is often the

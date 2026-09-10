@@ -116,7 +116,13 @@ export const cfg = {
      inventing a separate "reprocess everything" switch that someone will
      eventually run by accident. */
   processingVersion: "1.0.0",
-  promptVersion: "2026-09-10.a",
+  /* BUMPING THIS REPROCESSES EVERYTHING. The ledger marks an episode settled
+     under the version that produced it, so a scoring change that is not
+     accompanied by a bump silently leaves yesterday's worse points on the page
+     forever. .b: the first production run returned dependent fragments —
+     sentences beginning "Because…", "That is because…" — because the causal
+     signal matched the single most common word in conversational speech. */
+  promptVersion: "2026-09-10.b",
 
   /* ── PATHS ──────────────────────────────────────────────────────────────── */
   out: join(ROOT, "public", "podcasts.json"),
