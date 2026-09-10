@@ -17,6 +17,23 @@ on:
   push:
     branches: [main]
     paths-ignore: ["**/*.md"]
+
+  # THE MORNING JOB'S COMMIT DOES NOT TRIGGER THE PUSH EVENT ABOVE. GitHub
+  # deliberately suppresses workflow triggers for pushes made with the default
+  # GITHUB_TOKEN, to stop a workflow that commits from re-triggering itself
+  # forever. Without this block the podcast job would commit new points every
+  # morning and the live site would never change — silently, and for as long as
+  # nobody happened to compare the repo against the page.
+  #
+  # workflow_run fires on the completion of a named workflow instead, and is
+  # exempt from that rule. On a morning with nothing new the podcast job commits
+  # nothing and this redeploys identical assets, which costs ~90 seconds and
+  # changes nothing at the edge — cheaper than the alternative, which is a page
+  # that quietly stops updating.
+  workflow_run:
+    workflows: [podcasts]
+    types: [completed]
+
   workflow_dispatch:
 
 concurrency:
@@ -26,8 +43,16 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # A failed podcast run has nothing new to publish, and deploying after one
+    # would overwrite nothing while reporting success.
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
+      # workflow_run starts from the ref that triggered it, which for a run
+      # begun before the commit is the ref WITHOUT it. Check out main by name so
+      # the deploy always ships the artifact the job just wrote.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-node@v4
         with: { node-version: "22" }
 
