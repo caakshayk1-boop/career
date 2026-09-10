@@ -3,11 +3,19 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "career.askakshay.com — the job campaign: plan, positioning, interview bank, market intel.",
+  "description": "career.askakshay.com — the job campaign: plan, positioning, interview bank, market intel, podcast intelligence.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "podcasts": "node pipeline/run.mjs",
+    "podcasts:dry": "node pipeline/run.mjs --dry-run",
+    "podcasts:republish": "node pipeline/run.mjs --republish",
+    "podcasts:verify": "node pipeline/verify-sources.mjs",
+    "podcasts:test": "node pipeline/test/run-tests.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.72.0"
   },
   "devDependencies": {
     "wrangler": "^4.42.0"

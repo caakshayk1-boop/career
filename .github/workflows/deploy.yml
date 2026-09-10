@@ -4,6 +4,9 @@
 # `npx wrangler deploy` from a laptop, which is the same gap that left
 # signal.askakshay.com serving 33-hour-old data while every workflow was green.
 #
+# The podcast pipeline's unit suite runs here too — it needs no credentials and
+# no network, so there is no reason for it to live anywhere else.
+#
 # THE TOKEN IS REQUIRED, NOT OPTIONAL. signal.askakshay.com carried a gate that
 # skipped the deploy when the secret was missing and reported success — thirteen
 # green runs that published nothing. A deploy step that cannot deploy has
@@ -38,6 +41,13 @@ jobs:
           fi
 
       - run: npm install --no-audit --no-fund
+
+      # The pipeline's own suite: offline, no keys, ~2 seconds. It runs BEFORE
+      # the deploy because public/podcasts.json is a deployed asset and the
+      # suite asserts its shape — a malformed artifact would otherwise reach the
+      # edge and leave the page rendering its error state.
+      - name: Test the podcast pipeline
+        run: npm run podcasts:test
 
       - name: Deploy the Worker
         run: npx wrangler deploy

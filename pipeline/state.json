@@ -1,0 +1,5 @@
+{
+  "//": "The ledger. One row per episode ever seen, so the morning job never pays to process the same conversation twice. Written by pipeline/run.mjs; committed so the memory survives a fresh CI runner. Safe to delete only if you are willing to reprocess everything in the lookback window.",
+  "version": 1,
+  "episodes": {}
+}
