@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T14:25:48.842Z",
+  "generatedAt": "2026-09-10T14:29:51.639Z",
   "today": "2026-09-10",
   "retentionDays": 7,
   "days": [
@@ -347,11 +347,11 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-10T14:25:48.841Z",
+    "at": "2026-09-10T14:29:51.236Z",
     "discovered": 1478,
-    "eligible": 1,
-    "processed": 1,
-    "skipped": 1477,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 1478,
     "failed": 0,
     "pruned": 0,
     "errors": [],
