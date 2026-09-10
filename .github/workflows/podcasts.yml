@@ -1,11 +1,17 @@
 # Podcast Intelligence — the morning refresh.
 #
+# IT COSTS NOTHING TO RUN. No API key, no model, no transcription bill, no
+# object storage. Transcripts come from what shows already publish — a
+# <podcast:transcript> URL or a YouTube caption track — and the points are
+# sentences chosen out of that transcript by a scoring function in this repo.
+# The only budget it consumes is GitHub Actions minutes, and a run is ~30
+# seconds. If any of that changes, this comment is wrong and should be fixed.
+#
 # WHY A GITHUB ACTION AND NOT A CRON TRIGGER ON THE WORKER. This site is an
 # assets-only Worker with no script, no database and no secrets, and that is
 # worth keeping: every request is served from the edge with no cold start and
-# nothing to attack. Running the pipeline here instead means the API keys live
-# in GitHub secrets and never reach Cloudflare, the output is a plain static
-# asset, and the whole morning's work arrives as a reviewable commit.
+# nothing to attack. The output here is a plain static asset, and the whole
+# morning's work arrives as a reviewable commit.
 #
 # WHAT IT DOES. Reads the feeds, processes what is new, rewrites
 # public/podcasts.json, commits it, and lets the existing deploy workflow ship
@@ -64,19 +70,28 @@ jobs:
 
       - name: Refresh
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
-          ELEVENLABS_VOICE_ID: ${{ vars.ELEVENLABS_VOICE_ID }}
-          DEEPGRAM_API_KEY: ${{ secrets.DEEPGRAM_API_KEY }}
-          R2_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          R2_BUCKET: ${{ vars.R2_BUCKET }}
-          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
-          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
-          R2_PUBLIC_BASE: ${{ vars.R2_PUBLIC_BASE }}
-          MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '3' }}
+          # NOTHING HERE IS REQUIRED. Every one of these is a knob with a
+          # working default, and the pipeline runs to completion with all of
+          # them unset — that is the point. The commented block below is what
+          # you would add to turn the paid features back on.
+          MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '2' }}
           PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '7' }}
+          MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '10' }}
+          TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
           FORCE_REPROCESS: ${{ inputs.force }}
           DRY_RUN: ${{ inputs.dry_run }}
+          #
+          # TO ADD THE INTERPRETATION LAYER (~$0.50/episode):
+          #   EXTRACTOR: ai
+          #   ANTHROPIC_API_KEY: (from a repository secret)
+          #
+          # TO READ SHOWS THAT PUBLISH NO TRANSCRIPT (~$0.26/episode):
+          #   DEEPGRAM_API_KEY: (from a repository secret)
+          #
+          # TO ADD SPOKEN BRIEFINGS (~$1.05/episode, and needs R2 for storage):
+          #   TTS_PROVIDER: elevenlabs
+          #   ELEVENLABS_API_KEY / R2_BUCKET / R2_ACCESS_KEY_ID /
+          #   R2_SECRET_ACCESS_KEY / R2_PUBLIC_BASE
         run: npm run podcasts
 
       # A morning with no new episodes changes nothing, and an empty commit
@@ -92,7 +107,8 @@ jobs:
             exit 0
           fi
           COUNT=$(node -p "require('./public/podcasts.json').episodes.length")
-          git commit -m "podcasts: morning refresh — ${COUNT} episode(s) in the window"
+          POINTS=$(node -p "require('./public/podcasts.json').episodes.reduce((n,e)=>n+e.learnings.length,0)")
+          git commit -m "podcasts: morning refresh — ${COUNT} episode(s), ${POINTS} points"
           # The deploy workflow runs on push to main and ships the new artifact.
           for i in 1 2 3 4; do
             git push && break

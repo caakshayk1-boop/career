@@ -22,19 +22,26 @@ and commits its output as an asset — see below.
 
 ### `/podcasts` — Podcast Intelligence
 
-Two- and three-hour conversations, read in full every morning and reduced to the
-ideas worth knowing. Each learning carries the sentence it came from, the moment
-it was said, and a label saying **how it is known**: `said` by the guest,
-`interpretation` of what they said, or `recommendation` that nobody on the
-podcast made. Seven days, then it is gone.
+Two- and three-hour conversations cut down to **10–20 scannable points**, each
+one a sentence somebody actually said, at the moment they said it. Tap a point
+to read it back in the passage it came from. Seven days, then it is gone.
 
-That label is the point of the whole thing. A summariser that presents its own
-inference in the guest's voice is worse than no summariser, because you act on
-it. The pipeline drops any quotation it cannot find in the transcript, and
-demotes any claim it cannot quote.
+**Every point is verbatim.** Nothing on the page is written by a machine, which
+is why nothing on it can be made up — and also why there is no commentary on
+what any of it means. It selects sentences; it does not write them.
 
-The full pipeline — how it works, what it costs, how to configure it and what it
-cannot do — is documented in [`pipeline/README.md`](pipeline/README.md).
+**It costs nothing to run.** No API key, no model, no transcription bill, no npm
+dependency. Transcripts come from what shows already publish
+(`<podcast:transcript>` or a YouTube caption track) and the points are chosen by
+a scoring function in this repo. A morning run is about thirty seconds of GitHub
+Actions time and prints `≈ $0.000`.
+
+The paid interpretation layer still exists behind a flag — `EXTRACTOR=ai` plus an
+`ANTHROPIC_API_KEY` adds ranking, a rationale per point and a written summary at
+roughly $0.50 an episode. Nothing else changes.
+
+The pipeline — how points are chosen, what it will not do, and the one thing
+that will bite you — is documented in [`pipeline/README.md`](pipeline/README.md).
 
 ### `/home` — The Home Book
 
@@ -66,8 +73,9 @@ npx wrangler dev
 ```
 
 Or any static server — `python3 -m http.server --directory public`. There is
-nothing to compile. The one dependency (`@anthropic-ai/sdk`) is used by the
-podcast pipeline only; it is never loaded by a page and never reaches the edge.
+nothing to compile. The one dependency (`@anthropic-ai/sdk`) is loaded on demand
+by the optional paid extractor only — the default pipeline runs from a bare
+checkout with no `npm install` at all.
 
 ```bash
 npm run check              # load all three pages in a real browser and assert behaviour
@@ -95,18 +103,24 @@ secret, but it is not for search engines.
 
 `.github/workflows/podcasts.yml` runs at 22:30 UTC — 06:30 MYT — reads the
 configured feeds, processes what is new, and commits `public/podcasts.json`.
-That push triggers the deploy workflow, which ships it. Two files change on a
-normal morning: the artifact and `pipeline/state.json`, the ledger that stops
-the job paying to process the same conversation twice.
+That push triggers the deploy workflow, which ships it. **It requires no
+secrets.** Two files change on a normal morning: the artifact and
+`pipeline/state.json`, the ledger that stops the job reprocessing the same
+conversation twice.
 
 **It is idempotent.** Run it twice and the second run does nothing. Episode
 identity comes from the feed's own GUID, never the title — shows retitle
 episodes after publishing, and a title-derived id would bring every one of them
 back as new.
 
-**Nothing is published to hit a number.** If a conversation yields six ideas
-worth knowing, six are published. If fewer than five survive validation the
+**Nothing is published to hit a number.** Below the floor of 10 points the
 episode is held as `NEEDS_REVIEW` and does not appear at all.
+
+**A source that publishes no transcript cannot be read.** Without a paid
+transcription key, an episode needs either a `<podcast:transcript>` URL or a
+YouTube caption track. Anything else is skipped, with that reason, before any
+work is done. `npm run podcasts:verify` reports which case every source is in —
+run it before enabling a source.
 
 ## State
 
@@ -130,21 +144,24 @@ blocked, rather than returning null.
 
 ## Verified 2026-09-10 — podcast intelligence
 
-- 93 pipeline checks pass offline (feed parsing, episode identity, eligibility,
-  chunk coverage over a 3-hour transcript, grounding, timestamp repair,
-  deduplication, retry, retention, idempotence, end-to-end)
-- `/podcasts` exercised in Chromium against a fixture artifact: feed, day
-  grouping, detail view, attribution labels, quotation toggles, timestamp deep
-  links, empty state, 320px with no sideways scroll
-- `/` still renders; §12 Life now leads with podcast intelligence and falls back
-  to the old desk-feed list when the job has not run
+- 143 pipeline checks pass offline (feed parsing, VTT/SRT/JSON transcripts,
+  episode identity, eligibility, host detection, verbatim guarantee, timeline
+  spread, chunk coverage, grounding, timestamp repair, deduplication, retry,
+  retention, idempotence, end-to-end)
+- a full run rehearsed against a local feed with **no credentials of any kind**
+  and **no `node_modules`**: 4 discovered, 2 processed, 20 points each,
+  `≈ $0.000`, 0.8s — and a second run correctly did nothing
+- `/podcasts` exercised in Chromium: 20 collapsed points, expand one, expand
+  all, timestamps, passage expansion, the empty state, and 320px with no
+  sideways scroll
+- `/` still renders; §12 Life leads with points and read-time
 
 **Not verified from here, and you must do it before the first real run:** the
 feed URLs in `pipeline/sources.json` were written in an offline environment and
-are marked `"verified": false`. Run `npm run podcasts:verify` — it fetches each
-one and prints the show title and newest episode so you can see it is the right
-show. No AI provider or TTS provider has been called; the suite runs entirely
-against the mock provider.
+are marked `"verified": false`. Egress in that environment reached npm and
+GitHub only, so no podcast feed was ever fetched. Run `npm run podcasts:verify`
+— it fetches each one, prints the show title and newest episode, and says
+whether it can be read for free.
 
 ## Verified 2026-09-03
 

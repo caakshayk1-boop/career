@@ -44,11 +44,15 @@ export async function getTranscript(ep) {
   });
 }
 
+/* CHEAPEST FIRST, ALWAYS. The two free providers are tried before the paid one,
+   and the paid one is only reachable when a key exists. On a caption-bearing
+   source this pipeline's transcript cost is zero. */
 function pickOrder(ep) {
   if (cfg.transcriptProvider !== "auto") return [cfg.transcriptProvider];
   const order = [];
-  if (ep.ytId) order.push("youtube");
-  if (cfg.deepgramKey && ep.audioUrl) order.push("deepgram");
+  if (ep.transcriptUrl) order.push("published");   // free — the show published one
+  if (ep.ytId) order.push("youtube");              // free — caption track
+  if (cfg.deepgramKey && ep.audioUrl) order.push("deepgram"); // ~$0.26/episode
   return order;
 }
 
@@ -90,6 +94,28 @@ const PROVIDERS = {
 
     if (!segments.length) throw new Error("caption track was empty");
     return finish("youtube-captions", lang, segments);
+  },
+
+  /**
+   * A transcript the show published itself, via Podcasting 2.0's
+   * <podcast:transcript> tag.
+   *
+   * This is the best transcript available and it is free: it was produced by
+   * the publisher, usually from the master audio, often with speaker labels
+   * already correct. Where it exists nothing else should run. VTT and SRT are
+   * the common formats; JSON appears occasionally and its shape is not
+   * standardised, so only the obvious segment arrays are read.
+   */
+  async published(ep) {
+    if (!ep.transcriptUrl) throw new Error("no published transcript for this episode");
+    const body = await request(ep.transcriptUrl, { timeout: 45000, retries: 2, label: "transcript" });
+
+    let segments;
+    if (/json/.test(ep.transcriptType) || /^\s*[[{]/.test(body)) segments = parseJsonTranscript(body);
+    else segments = parseCues(body);
+
+    if (!segments.length) throw new Error(`published transcript parsed to nothing (${ep.transcriptType || "unknown format"})`);
+    return finish("published", "en", segments);
   },
 
   /** Deepgram pre-recorded, from the enclosure URL — no download, no ffmpeg,
@@ -153,6 +179,66 @@ function finish(provider, language, segments) {
     durationSec: last ? last.t + (last.d || 0) : 0,
     chars: segments.reduce((n, s) => n + s.text.length, 0),
   };
+}
+
+/**
+ * WebVTT and SubRip, which differ in three details and nothing else: SRT
+ * numbers its cues, uses a comma before the milliseconds, and has no header.
+ * One parser reads both rather than two that drift apart.
+ *
+ *   00:04:37.120 --> 00:04:41.000
+ *   <v Speaker>the text
+ */
+export function parseCues(body) {
+  const out = [];
+  const blocks = String(body).replace(/\r\n?/g, "\n").split(/\n{2,}/);
+
+  for (const block of blocks) {
+    const lines = block.split("\n").filter((l) => l.trim() && !/^WEBVTT\b/i.test(l));
+    const idx = lines.findIndex((l) => l.includes("-->"));
+    if (idx === -1) continue;
+
+    const m = lines[idx].match(/(\d{1,2}:)?(\d{1,2}):(\d{2})[.,](\d{1,3})\s*-->\s*(?:(\d{1,2}:)?(\d{1,2}):(\d{2})[.,](\d{1,3}))?/);
+    if (!m) continue;
+    const t = num(m[1]) * 3600 + num(m[2]) * 60 + num(m[3]);
+    const end = m[6] != null ? num(m[5]) * 3600 + num(m[6]) * 60 + num(m[7]) : t;
+
+    /* <v Alice>text</v> carries the speaker; anything else in angle brackets is
+       styling and must not survive into a prompt as tokens we pay for. */
+    let text = lines.slice(idx + 1).join(" ");
+    const voice = text.match(/<v\s+([^>]+)>/i);
+    text = text.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+    if (!text) continue;
+
+    /* Cue-level granularity is far finer than anything downstream needs — a
+       2-hour VTT is ~4,000 cues of six words each. Merge consecutive cues from
+       the same speaker into sentence-sized segments so chunking has something
+       to work with and the offsets stay honest (the FIRST cue's time wins). */
+    const speaker = voice ? voice[1].trim() : "";
+    const last = out[out.length - 1];
+    if (last && last.speaker === speaker && last.text.length < 340 && t - last.t < 45) {
+      last.text += " " + text;
+      last.d = Math.max(last.d, end - last.t);
+    } else {
+      out.push({ t, d: Math.max(1, end - t), speaker, text });
+    }
+  }
+  return out;
+}
+const num = (v) => parseInt(String(v || "0").replace(":", ""), 10) || 0;
+
+/** JSON transcripts have no agreed shape. Read the two that actually occur and
+ *  refuse the rest rather than guessing at a field name. */
+export function parseJsonTranscript(body) {
+  const doc = JSON.parse(body);
+  const rows = Array.isArray(doc) ? doc : doc.segments || doc.results || doc.transcript || [];
+  if (!Array.isArray(rows)) return [];
+  return rows.map((r) => ({
+    t: Math.round(Number(r.startTime ?? r.start ?? r.t ?? 0)),
+    d: Math.max(1, Math.round(Number(r.endTime ?? r.end ?? 0) - Number(r.startTime ?? r.start ?? 0)) || 1),
+    speaker: String(r.speaker || r.speakerName || "").trim(),
+    text: String(r.body ?? r.text ?? "").replace(/\s+/g, " ").trim(),
+  })).filter((r) => r.text && Number.isFinite(r.t));
 }
 
 /**

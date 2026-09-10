@@ -17,7 +17,7 @@ import { request } from "./http.mjs";
 import { log, run } from "./log.mjs";
 import { cfg } from "../config.mjs";
 import { episodeId } from "./store.mjs";
-import { items, tag, attr, stripHtml, durationSeconds } from "./xml.mjs";
+import { items, tag, attr, stripHtml, durationSeconds, decode } from "./xml.mjs";
 
 const YT_ID = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/;
 
@@ -60,6 +60,18 @@ function parseItem(block, source) {
   const publishedAt = tag(block, "pubDate") || tag(block, "published") || tag(block, "updated");
   const ytId = tag(block, "yt:videoId") || (url.match(YT_ID) || [])[1] || "";
 
+  /* PODCASTING 2.0 <podcast:transcript>. This is the difference between a
+     free pipeline and a paid one: a show that publishes a transcript URL costs
+     nothing to read, and one that does not needs paid ASR at ~$0.26 an episode.
+     Increasingly common and worth preferring wherever it exists.
+     Several are often listed (VTT, SRT, JSON, HTML) — take the first machine
+     -readable one and ignore the HTML, which is a web page, not a transcript. */
+  const transcripts = [...block.matchAll(/<podcast:transcript\b[^>]*>/gi)].map((m) => ({
+    url: (m[0].match(/\burl\s*=\s*"([^"]*)"|\burl\s*=\s*'([^']*)'/i) || []).slice(1).find(Boolean) || "",
+    type: ((m[0].match(/\btype\s*=\s*"([^"]*)"|\btype\s*=\s*'([^']*)'/i) || []).slice(1).find(Boolean) || "").toLowerCase(),
+  })).filter((t) => t.url);
+  const transcript = transcripts.find((t) => /vtt|srt|subrip|json/.test(t.type)) || null;
+
   const rec = {
     sourceId: source.id,
     show: source.show || source.id,
@@ -68,6 +80,8 @@ function parseItem(block, source) {
     url: ytId ? `https://www.youtube.com/watch?v=${ytId}` : url,
     ytId,
     audioUrl,
+    transcriptUrl: transcript ? decode(transcript.url) : "",
+    transcriptType: transcript ? transcript.type : "",
     guid: tag(block, "guid") || tag(block, "id") || "",
     publishedAt: toIso(publishedAt),
     durationSec: durationSeconds(tag(block, "itunes:duration")),
@@ -111,7 +125,12 @@ export function selectEligible(candidates, state, isSettled) {
     const mins = c.durationSec / 60;
     if (c.durationSec && mins < cfg.minEpisodeMinutes) { skip(`${Math.round(mins)}m — under the ${cfg.minEpisodeMinutes}m floor`); continue; }
     if (c.durationSec && mins > cfg.maxEpisodeMinutes) { skip(`${Math.round(mins)}m — over the ${cfg.maxEpisodeMinutes}m ceiling`); continue; }
-    if (!c.audioUrl && !c.ytId) { skip("no audio and no video id — nothing to transcribe"); continue; }
+    /* FAIL FAST, AND SAY WHY. An episode with an audio URL and no transcript is
+       unreadable unless paid ASR is configured. Discovering that one episode at
+       a time, after the run has already spent time on it, produces a morning of
+       identical FAILED rows and no obvious cause. Check the configuration here,
+       once, and name the fix. */
+    if (!transcribable(c)) { skip(untranscribableReason(c)); continue; }
 
     eligible.push(c);
   }
@@ -129,3 +148,16 @@ export function selectEligible(candidates, state, isSettled) {
 }
 
 const skip2 = (arr, c, reason) => arr.push({ id: c.id, title: c.title, reason });
+
+/** Can this episode be read with the providers actually configured right now? */
+export function transcribable(c) {
+  if (cfg.transcriptProvider === "fixture") return true;
+  if (c.ytId) return true;                              // caption track, free
+  if (c.transcriptUrl) return true;                     // <podcast:transcript>, free
+  return Boolean(cfg.deepgramKey && c.audioUrl);        // paid ASR
+}
+
+const untranscribableReason = (c) =>
+  c.audioUrl
+    ? "audio only, and no transcript — needs DEEPGRAM_API_KEY, or use a source that publishes captions"
+    : "no audio, no video and no transcript — nothing to read";

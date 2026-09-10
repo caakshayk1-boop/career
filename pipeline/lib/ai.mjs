@@ -24,7 +24,6 @@
  * explicit instruction plus a single available tool gets the same result on
  * every model in the family.
  */
-import Anthropic from "@anthropic-ai/sdk";
 import { cfg } from "../config.mjs";
 import { log, charge } from "./log.mjs";
 
@@ -37,6 +36,17 @@ const PRICES = {
   "claude-haiku-4-5": { in: 1, out: 5 },
 };
 
+/**
+ * @returns {Promise<object>|object} the mock provider is synchronous; the
+ * anthropic one is not, because the SDK is loaded on demand.
+ *
+ * WHY THE SDK IS NOT IMPORTED AT THE TOP. The default pipeline never calls a
+ * model, and a top-level import would make a package the free path never uses
+ * a hard requirement for running it at all — a bare checkout with no
+ * `npm install` would fail on an import for code it was never going to reach.
+ * Loading it inside the provider keeps the free path dependency-free and turns
+ * a missing install into a clear message at the point of use.
+ */
 export function makeAI(name = cfg.aiProvider) {
   const impl = PROVIDERS[name];
   if (!impl) throw new Error(`unknown AI provider "${name}"`);
@@ -49,8 +59,11 @@ export function estimateCost(inTokens, outTokens, model = cfg.aiModel) {
 }
 
 const PROVIDERS = {
-  anthropic() {
+  async anthropic() {
     if (!cfg.anthropicKey) throw new Error("ANTHROPIC_API_KEY is not set");
+    const { default: Anthropic } = await import("@anthropic-ai/sdk").catch(() => {
+      throw new Error("EXTRACTOR=ai needs the Anthropic SDK — run `npm install`");
+    });
     /* maxRetries 0: http.mjs owns retry policy for the rest of the pipeline,
        but the SDK's own backoff is better informed than ours for this API
        (it reads the rate-limit headers), so it keeps its default of 2 and we

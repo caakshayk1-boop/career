@@ -1,27 +1,79 @@
 # Podcast Intelligence — the pipeline
 
-Turns a 2-3 hour conversation into the ten things worth knowing, with the
-sentence each one came from and the moment it was said.
+Turns a 2–3 hour conversation into 10–20 scannable points, each one a sentence
+somebody actually said, expandable to the passage it came from.
+
+**It costs nothing to run.** No API key, no model, no transcription bill, no
+object storage, no npm dependency. A run is about thirty seconds of GitHub
+Actions time.
 
 ```
-sources.json ──▶ ingest ──▶ transcript ──▶ chunk ──▶ extract ──▶ validate ──▶ audio ──▶ publish
-   feeds          RSS /       captions     14k-char   pass 1:     CODE, NOT    briefing   podcasts
-                  YouTube     or ASR       overlap    per chunk   A MODEL      (optional)  .json
-                  Atom        (cached)     windows    pass 2:
-                                                      merge+rank
-                                     ▲                                            ▲
-                                     └── everything cached on disk ───────────────┘
-                              (a re-run after a failure costs nothing it already paid for)
+sources.json ──▶ ingest ──▶ transcript ──▶ score ──▶ validate ──▶ publish
+   feeds          RSS /      published      sentences   dedupe,     podcasts
+                  YouTube    transcript     ranked by   grounding    .json
+                  Atom       or captions    density,    check
+                             ($0)           spread
 ```
 
-Three seams, so no vendor is load-bearing:
+## What "free" costs you, and what it buys
 
-| Interface | Implementations | Default with no credentials |
-|---|---|---|
-| `AIProvider` (`lib/ai.mjs`) | `anthropic`, `mock` | `mock` — offline, deterministic |
-| `AudioProvider` (`lib/audio.mjs`) | `elevenlabs`, `none` | `none` — text publishes, no player |
-| transcript (`lib/transcript.mjs`) | `youtube`, `deepgram`, `fixture` | captions first, ASR only if needed |
-| NotebookLM (`lib/notebooklm.mjs`) | — | not wired up, on purpose. See that file. |
+The free path selects sentences. It does not write any. That is the entire
+trade and it cuts both ways:
+
+**What you lose.** No "why this matters". No rephrasing into a crisp headline.
+No characterisation of the conversation. Writing any of that means generating
+text, which is the thing that costs money — so the pipeline does not do it, and
+does not pretend to. Fields it cannot honestly fill are left empty and the page
+skips them.
+
+**What you get.** Fabrication is structurally impossible. A point *is* its
+evidence; its timestamp is the timestamp of the words. There is no gap between
+what the page prints and what was said for an error to live in. The tests
+assert this directly: every point must be a substring of the transcript.
+
+Set `EXTRACTOR=ai` with an `ANTHROPIC_API_KEY` and the interpretation layer
+turns on — ranking, rationale, a written summary, an optional spoken briefing —
+at roughly $0.50 an episode. Nothing else changes; the page renders whichever
+fields are present.
+
+## How points are chosen
+
+Removal first, because it is worth more than any amount of clever ranking:
+sponsor reads, housekeeping, questions (the host's job, not the guest's
+insight), agreement noise, and anything under six content words.
+
+What survives is scored on nine signals — quantification, money, causal
+structure (`because`, `which means`), correction (`most people think`,
+`turns out`), rules and frameworks, definitions, enumeration, concrete personal
+specifics — plus centrality (how much of the sentence's vocabulary recurs across
+the whole conversation) and information density. Filler, over-length and the
+first/last 3% of the episode are penalised.
+
+Where the transcript is diarised, the **host is identified by question rate** and
+demoted: the most quotable-sounding line in an interview is often the
+interviewer's, and it is not the guest's claim.
+
+Selection then **spreads across the timeline**. Taking the global top 20 reliably
+returns 20 sentences from whichever fifteen minutes happened to be dense and
+silently drops the other ninety, so the episode is bucketed by time and the best
+of each bucket taken in rotation.
+
+Display is **chronological**, not ranked. A score-ordered list of twenty
+context-free sentences reads as noise even when every one is good.
+
+## Transcripts, and the one thing that will bite you
+
+With no paid transcription key, an episode is readable only if the transcript is
+already free:
+
+- the feed publishes `<podcast:transcript>` (Podcasting 2.0), or
+- it is a YouTube video with a caption track.
+
+**A show that publishes audio and nothing else cannot be read here.** It is
+skipped at eligibility with that reason — before any work is done — rather than
+failing per-episode at 6am with no obvious cause. `npm run podcasts:verify`
+tells you, per source, which case each one is in. Run it before enabling
+anything.
 
 ## Why there is no database and no admin dashboard
 
@@ -74,34 +126,37 @@ AI_PROVIDER=mock npm run podcasts:dry
 
 ## Configuration
 
-All of it is environment variables; nothing is hard-coded and no key is ever in
-source. Secrets go in GitHub **secrets**, tunables in GitHub **variables**.
+All of it is environment variables. **Every one has a working default and the
+pipeline runs to completion with all of them unset.**
 
 | Variable | Default | What it does |
 |---|---|---|
-| `ANTHROPIC_API_KEY` | — | secret. Absent ⇒ the mock provider, which publishes nothing real. |
-| `AI_MODEL` | `claude-opus-5` | the judging model: merge, rank, summary, script |
-| `AI_MODEL_CHEAP` | `claude-haiku-4-5` | the reading model: per-chunk candidate extraction |
-| `ELEVENLABS_API_KEY` | — | secret. Absent ⇒ no audio, text still publishes. |
-| `ELEVENLABS_VOICE_ID` | a stock voice | |
-| `DEEPGRAM_API_KEY` | — | secret. Only used when a source has no caption track. |
-| `R2_BUCKET`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_PUBLIC_BASE` | — | where briefings live. Audio is **not** in git — see below. |
-| `MAX_DAILY_EPISODES` | `3` | hard cap per run. The main cost brake. |
+| `EXTRACTOR` | `local` | `local` = free, verbatim, no model. `ai` = the five-pass model pipeline. |
+| `MAX_DAILY_EPISODES` | `2` | hard cap per run |
+| `MIN_LEARNINGS` | `10` | floor — below this the episode is held, not published |
+| `TARGET_LEARNINGS` | `20` | ceiling |
 | `MAX_EPISODE_MINUTES` | `240` | skip anything longer |
-| `MIN_EPISODE_MINUTES` | `20` | skip anything shorter — it will not hold ten ideas |
-| `MAX_LOOKBACK_HOURS` | `72` | ignore anything older; the page only shows 7 days |
-| `TARGET_LEARNINGS` | `10` | a **ceiling**, never a quota |
-| `MIN_LEARNINGS` | `5` | below this the episode is held, not published |
+| `MIN_EPISODE_MINUTES` | `20` | skip anything shorter |
+| `MAX_LOOKBACK_HOURS` | `72` | ignore anything older; the page shows 7 days |
 | `PUBLIC_RETENTION_DAYS` | `7` | how long an episode is on the page |
 | `DATA_RETENTION_DAYS` | `400` | how long we remember it existed |
-| `TRANSCRIPT_PROVIDER` | `auto` | `youtube` / `deepgram` / `fixture`, or `auto` to try captions then ASR |
-| `FIXTURE_TRANSCRIPT` | — | path to a JSON segments file, for rehearsing a run without paying for one |
+| `TRANSCRIPT_PROVIDER` | `auto` | `published` / `youtube` / `deepgram` / `fixture` |
+| `FIXTURE_TRANSCRIPT` | — | a JSON segments file, to rehearse a run offline |
+
+Everything below is **off** and costs money when switched on:
+
+| Variable | Cost | What it adds |
+|---|---|---|
+| `EXTRACTOR=ai` + `ANTHROPIC_API_KEY` | ~$0.50/episode | interpretation, ranking, written summary |
+| `DEEPGRAM_API_KEY` | ~$0.26/episode | reads shows that publish no transcript |
+| `TTS_PROVIDER=elevenlabs` + key + R2 | ~$1.05/episode | spoken briefings |
 
 `PUBLIC_RETENTION_DAYS` and `DATA_RETENTION_DAYS` are separate on purpose. If
 the ledger were pruned on the public clock, the job would rediscover the whole
-back catalogue on day eight and pay to process it again — a site that deletes
-its content weekly would re-buy it weekly.
+back catalogue on day eight and reprocess it — a site that deletes its content
+weekly would re-buy it weekly.
 
+### Audio is not in git
 ### Audio is not in git
 
 Three briefings a day at ~3MB is 60MB a week, and git keeps every byte forever:
@@ -113,49 +168,29 @@ order to tidy up after itself.
 
 ## What it costs
 
-Per 2-hour episode, at list prices, with a caption track available:
+**$0.00.** Transcripts are already published, selection is a scoring function in
+this repo, there is no model call, no storage, and no npm dependency on the free
+path. `npm run podcasts` prints the total at the end of every run and it reads
+`≈ $0.000`.
 
-| Step | Basis | Cost |
-|---|---|---|
-| Transcript | YouTube captions | $0 |
-| Transcript | Deepgram Nova-3, if no captions | ~$0.26 |
-| Pass 1 — read (Haiku 4.5) | ~12 chunks, ~90k in / 12k out | ~$0.15 |
-| Pass 2 — merge and rank (Opus 5) | ~25k in / 4k out | ~$0.23 |
-| Passes 4-5 — summary and script (Opus 5) | ~8k in / 3k out | ~$0.12 |
-| Audio briefing (ElevenLabs, ~7,000 chars) | Creator-tier rate | ~$1.05 |
-| **Total, captions + audio** | | **≈ $1.55** |
-| **Total, captions, no audio** | | **≈ $0.50** |
-| **Total, ASR + audio** | | **≈ $1.81** |
-
-At the default cap of 3 episodes a day that is roughly **$140/month with audio,
-$45/month without**. Audio is two thirds of the bill; if that is not worth it,
-leave `ELEVENLABS_API_KEY` unset and the product still works.
-
-The system prompt is identical across every chunk of every episode and is
-cached, so 11 of a 12-chunk episode's calls read the prompt at a tenth of the
-price. Every expensive step is also cached on disk by episode id and prompt
-version: a re-run after a TTS failure re-reads nothing and re-pays nothing.
-`npm run podcasts` prints an estimate at the end of every run.
+The paid opt-ins are in the second table above. Turning all three on takes a
+2-hour episode to roughly $1.81.
 
 ## What it will not do
 
-- **It will not invent a tenth idea.** `TARGET_LEARNINGS` is a ceiling. Six
-  strong ideas publish as six. Fewer than `MIN_LEARNINGS` and the episode is
-  held as `NEEDS_REVIEW` and never appears.
-- **It will not print a quotation it cannot find.** Validation (`lib/validate.mjs`)
-  is deterministic code, not a model call — a model asked to check its own
-  citation confirms it. Two independent signals must agree: content-word
-  coverage, and a shared four-word run *in order*. A quote assembled from words
-  the conversation did contain, in an order nobody said them in, fails the
-  second and is demoted from `said` to `interpretation`.
-- **It will not print a timestamp it cannot support.** A citation whose
-  quotation is found more than 90 seconds away is corrected to where the words
-  actually are; one that cannot be placed at all is printed without a
-  timestamp. A wrong timestamp is worse than none — the reader clicks it, hears
-  something else, and stops trusting all of them.
-- **It will not present its own inference as something the guest said.** Every
-  learning carries `said` / `interpretation` / `recommendation`, and the page
-  shows it.
+- **It will not write anything.** On the free path every point is a substring of
+  the transcript. This is asserted in the test suite, not assumed.
+- **It will not pad to hit a number.** `TARGET_LEARNINGS` is a ceiling. Below
+  `MIN_LEARNINGS` the episode is held as `NEEDS_REVIEW` and never appears.
+- **It will not print a quotation it cannot find.** Validation is deterministic
+  code, not a model call — a model asked to check its own citation confirms it.
+  Two signals must agree: content-word coverage, and a shared four-word run *in
+  order*.
+- **It will not print a timestamp it cannot support.** A citation whose words are
+  more than 90 seconds away is corrected; one that cannot be placed is printed
+  without a timestamp. A wrong timestamp is worse than none.
+- **It will not present the host's framing as the guest's claim.** Where the
+  transcript is diarised, the host is identified and demoted.
 
 ## Known limitations
 
@@ -180,8 +215,12 @@ version: a re-run after a TTS failure re-reads nothing and re-pays nothing.
    version widened its window by ±45 seconds and ate the first substantive
    answer of an episode. Leaving one line of ad copy in is much cheaper than
    deleting content, and the extraction prompt discards promos anyway.
-8. **Nothing here has called a real AI or TTS provider.** The suite runs against
-   the mock provider by design. The first live run is the first live run.
+8. **Point quality is bounded by what was said.** A guest who never says
+   anything specific produces twenty unspecific points. The scorer can rank
+   sentences; it cannot improve them. If a source reliably yields weak points,
+   the source is the problem — disable it.
+9. **`<podcast:transcript>` is not universal.** Adoption is growing but plenty of
+   major shows still publish audio only. `podcasts:verify` tells you which.
 
 ## Files
 
@@ -197,7 +236,9 @@ pipeline/
     xml.mjs            a small, tested reader for RSS and Atom
     transcript.mjs     captions / ASR behind one interface, plus a quality gate
     chunk.mjs          timestamped, overlapping, speaker-aware segmentation
-    ai.mjs             AIProvider: anthropic | mock
+    extractive.mjs     the free extractor — scoring, spread, pills, passages
+    text.mjs           content words, coverage, ordered-run matching
+    ai.mjs             AIProvider: anthropic | mock (only used when EXTRACTOR=ai)
     prompts.mjs        the product. Versioned by cfg.promptVersion.
     extract.mjs        the passes
     validate.mjs       the grounding gate — deterministic, no AI

@@ -25,45 +25,7 @@
  * timestamp where it is not — a missing citation is honest, a wrong one is not.
  */
 import { cfg } from "../config.mjs";
-import { segmentAt } from "./chunk.mjs";
-
-const STOP = new Set(("a an the and or but if of to in on at for with is are was were be been it its this that these those " +
-  "you your they their we our i he she as from by not do does did so than then there here about into over " +
-  "can could should would will just really very much more most some any what which who how why when").split(" "));
-
-const words = (s) => String(s || "").toLowerCase().replace(/[^a-z0-9\s']/g, " ").split(/\s+/).filter(Boolean);
-const content = (s) => words(s).filter((w) => w.length > 2 && !STOP.has(w));
-
-/** Fraction of a's content words that appear in b. Asymmetric on purpose: a
- *  short quotation inside a long segment should score 1.0, and it would not
- *  under Jaccard. */
-function coverage(a, b) {
-  const A = content(a);
-  if (!A.length) return 0;
-  const B = new Set(content(b));
-  return A.filter((w) => B.has(w)).length / A.length;
-}
-
-/**
- * Does a run of consecutive content words from the quotation appear, in order,
- * in the candidate text?
- *
- * WHY COVERAGE ALONE IS NOT ENOUGH. Coverage is a bag of words, and a bag of
- * words cannot tell "he said the forecast is a commitment device" from a
- * sentence assembled out of the same vocabulary that nobody ever uttered — the
- * exact shape of a fabricated quote built from the surrounding context. Word
- * ORDER is what distinguishes them. A quotation that shares a four-word run
- * with the transcript was almost certainly copied from it; one that shares none
- * was almost certainly written.
- */
-function hasOrderedRun(quote, text, n = 4) {
-  const q = content(quote);
-  if (q.length < n) return coverage(quote, text) >= 0.9; // too short to n-gram
-  const hay = " " + content(text).join(" ") + " ";
-  for (let i = 0; i + n <= q.length; i++)
-    if (hay.includes(" " + q.slice(i, i + n).join(" ") + " ")) return true;
-  return false;
-}
+import { content, coverage, hasOrderedRun } from "./text.mjs";
 
 /** Parse h:mm:ss / m:ss into seconds. Returns null, never NaN — NaN compares
  *  false against everything and would silently pass every range check. */
@@ -138,14 +100,19 @@ export function validateLearnings(learnings, transcript, ep) {
     l.kind = ["said", "interpretation", "recommendation"].includes(l.kind) ? l.kind : "interpretation";
     l.confidence = Number.isFinite(l.confidence) ? Math.min(1, Math.max(0, l.confidence)) : 0.5;
 
-    if (!l.headline || !l.idea || !l.why) { drop(l, "missing headline, idea or why"); continue; }
+    /* The AI path writes an idea and a rationale; the local extractor writes
+       neither, because a point that IS a quotation needs no restatement and an
+       invented rationale is exactly what this product refuses to print. Require
+       only what every path genuinely produces. */
+    if (!l.headline) { drop(l, "no headline"); continue; }
+    if (!l.evidence && !l.idea) { drop(l, "nothing to show and nothing to cite"); continue; }
     if (l.headline.length > 90) l.headline = l.headline.slice(0, 88).replace(/\s+\S*$/, "") + "…";
 
     /* ── non-echo ────────────────────────────────────────────────────────────
        If 80% of the content words in "why it matters" already appear in the
        idea, it is a restatement. That is the whole difference between this
        product and a summariser, so it is a rejection and not a warning. */
-    if (coverage(l.why, l.idea) > 0.8 && content(l.why).length > 4) {
+    if (l.why && l.idea && coverage(l.why, l.idea) > 0.8 && content(l.why).length > 4) {
       drop(l, "“why it matters” restates the idea"); continue;
     }
     /* Filler actions are removed rather than rejected — the idea can be sound
@@ -204,7 +171,8 @@ export function validateLearnings(learnings, transcript, ep) {
      same claim, which is exactly what a padded list looks like. */
   const deduped = [];
   for (const l of kept) {
-    const twin = deduped.find((k) => coverage(l.idea, k.idea) > 0.72 || coverage(l.headline, k.headline) > 0.85);
+    const body = (x) => x.idea || x.detail || x.headline;
+    const twin = deduped.find((k) => coverage(body(l), body(k)) > 0.72 || coverage(l.headline, k.headline) > 0.85);
     if (twin) { rejected.push({ headline: l.headline, reason: `duplicate of “${twin.headline}”` }); continue; }
     deduped.push(l);
   }

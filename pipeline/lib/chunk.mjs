@@ -18,16 +18,10 @@
  *               yields half an idea, twice.
  */
 import { cfg } from "../config.mjs";
+import { hhmmss } from "./text.mjs";
 
-/** Seconds → 04:37 or 1:04:37. Used in prompts and on the page, so it lives in
- *  one place; two implementations drift and the page then disagrees with the
- *  citation the model was given. */
-export function hhmmss(sec) {
-  const s = Math.max(0, Math.round(sec || 0));
-  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), ss = s % 60;
-  const pad = (n) => String(n).padStart(2, "0");
-  return h ? `${h}:${pad(m)}:${pad(ss)}` : `${m}:${pad(ss)}`;
-}
+export { hhmmss };
+
 
 /* Sponsor reads are the highest-density source of confident, well-structured,
    completely worthless "insights" in any commercial podcast — they are written

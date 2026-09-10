@@ -9,15 +9,30 @@
     "  enabled:false  pause a source without losing its configuration",
     "  type           'rss' for a podcast feed, 'youtube' for a channel",
     "  url            the feed URL, or a bare UC... channel id for YouTube",
-    "  verified       set true once `npm run podcasts:verify` has confirmed the",
-    "                 feed parses. The URLs below were written from memory in an",
-    "                 offline environment and MUST be verified before the first",
-    "                 real run — a feed that 404s costs a wasted morning, and one",
-    "                 that redirects to a different show costs worse than that.",
+    "  verified       set true once `npm run podcasts:verify` has confirmed it",
     "",
-    "Shows are chosen for the campaign this site exists for: operators, finance,",
-    "and decisions under constraint. A source that reliably yields no learnings",
-    "is costing money for nothing — disable it."
+    "READ THIS BEFORE THE FIRST RUN. This deployment has no paid transcription",
+    "key, so an episode is only readable if the transcript is already free:",
+    "",
+    "  · the feed publishes <podcast:transcript> (Podcasting 2.0), or",
+    "  · it is a YouTube video with a caption track.",
+    "",
+    "A show that publishes audio and nothing else CANNOT be read here. It will be",
+    "skipped with that reason rather than failing silently, and it costs nothing",
+    "— but it also produces nothing, so do not leave such a source enabled.",
+    "",
+    "`npm run podcasts:verify` fetches every feed below and tells you, per source,",
+    "whether its newest episode is free-readable. Run it first. Fix or disable",
+    "anything it flags, then set verified:true by hand — the flag means a person",
+    "looked, which is not something a script can assert for itself.",
+    "",
+    "TO ADD A YOUTUBE CHANNEL: open the channel, View Source, search for",
+    "\"channelId\" — it is the UC... string. Put that bare id in `url`, not the",
+    "@handle and not the page URL.",
+    "",
+    "The shows below are chosen for the campaign this site exists for: operators,",
+    "finance, and decisions under constraint. A source that reliably yields no",
+    "learnings is costing model calls for nothing — disable it."
   ],
   "sources": [
     {
@@ -37,18 +52,18 @@
       "verified": false
     },
     {
-      "id": "odd-lots",
-      "show": "Odd Lots",
-      "type": "rss",
-      "url": "https://feeds.bloomberg.fm/BLM3999844716",
-      "enabled": false,
-      "verified": false
-    },
-    {
       "id": "knowledge-project",
       "show": "The Knowledge Project",
       "type": "rss",
       "url": "https://theknowledgeproject.libsyn.com/rss",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "example-youtube-channel",
+      "show": "Replace me with a real channel",
+      "type": "youtube",
+      "url": "UC0000000000000000000000",
       "enabled": false,
       "verified": false
     }

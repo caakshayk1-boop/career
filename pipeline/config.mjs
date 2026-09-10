@@ -39,7 +39,7 @@ export const cfg = {
   /* ── COST CONTROL ───────────────────────────────────────────────────────
      A 3-hour podcast is not free. These are the brakes.
      maxDailyEpisodes is a hard stop on a single run, not a target. */
-  maxDailyEpisodes: int(process.env.MAX_DAILY_EPISODES, 3),
+  maxDailyEpisodes: int(process.env.MAX_DAILY_EPISODES, 2),
   maxEpisodeMinutes: int(process.env.MAX_EPISODE_MINUTES, 240),
   minEpisodeMinutes: int(process.env.MIN_EPISODE_MINUTES, 20),
   maxLookbackHours: int(process.env.MAX_LOOKBACK_HOURS, 72),
@@ -48,8 +48,20 @@ export const cfg = {
      targetLearnings is a CEILING, never a quota. minLearnings is the floor
      below which the episode is not worth publishing at all. If an episode
      yields 6 good ideas it ships with 6. */
-  targetLearnings: int(process.env.TARGET_LEARNINGS, 10),
-  minLearnings: int(process.env.MIN_LEARNINGS, 5),
+  targetLearnings: int(process.env.TARGET_LEARNINGS, 20),
+  minLearnings: int(process.env.MIN_LEARNINGS, 10),
+
+  /* ── EXTRACTOR ──────────────────────────────────────────────────────────
+     "local"  sentences chosen from the transcript by information density.
+              Costs nothing, ever. Cannot fabricate — every point IS a
+              quotation. Cannot interpret either: there is no "why this
+              matters", because writing that would mean generating text.
+     "ai"     the five-pass model pipeline. Adds interpretation, ranking and a
+              written summary, at roughly $0.50 an episode.
+     Local is the default because the running cost of this site is zero and the
+     whole point of that is that it stays zero. Setting ANTHROPIC_API_KEY does
+     NOT silently switch it — EXTRACTOR=ai is a separate, deliberate decision. */
+  extractor: process.env.EXTRACTOR || "local",
   chunkChars: int(process.env.CHUNK_CHARS, 14000),
   chunkOverlapChars: int(process.env.CHUNK_OVERLAP_CHARS, 900),
 
@@ -67,7 +79,11 @@ export const cfg = {
   aiModelCheap: process.env.AI_MODEL_CHEAP || "claude-haiku-4-5",
   anthropicKey: process.env.ANTHROPIC_API_KEY || "",
 
-  ttsProvider: process.env.TTS_PROVIDER || (process.env.ELEVENLABS_API_KEY ? "elevenlabs" : "none"),
+  /* AUDIO IS OFF. It was two thirds of the running cost — roughly $1.05 of a
+     $1.55 episode — for a convenience nobody asked to keep. The provider
+     interface stays: set TTS_PROVIDER=elevenlabs and a key to turn it back on,
+     and everything downstream already handles an episode that has audio. */
+  ttsProvider: process.env.TTS_PROVIDER || "none",
   elevenKey: process.env.ELEVENLABS_API_KEY || "",
   elevenVoice: process.env.ELEVENLABS_VOICE_ID || "JBFqnCBsd6RMkjVDRZzb",
   elevenModel: process.env.ELEVENLABS_MODEL || "eleven_turbo_v2_5",

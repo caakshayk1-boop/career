@@ -22,7 +22,9 @@
  */
 import { cfg } from "../config.mjs";
 import { log } from "./log.mjs";
-import { chunk, stripNoise, hhmmss } from "./chunk.mjs";
+import { chunk, stripNoise } from "./chunk.mjs";
+import { hhmmss } from "./text.mjs";
+import { takeaways, describe } from "./extractive.mjs";
 import {
   SYSTEM_EXTRACT, SYSTEM_RANK, SYSTEM_META, SYSTEM_SCRIPT,
   SCHEMA_CANDIDATES, SCHEMA_RANKED, SCHEMA_META,
@@ -41,6 +43,49 @@ async function mapLimit(items, limit, fn) {
     }
   }));
   return out;
+}
+
+/**
+ * The free path: no model, no key, no network.
+ *
+ * Returns the same shape the AI path returns, so nothing downstream — the
+ * validator, the retention builder, the page — knows or cares which ran. The
+ * fields it cannot honestly fill are left empty rather than filled with
+ * something that sounds like analysis.
+ */
+export function extractLocal(ep, transcript) {
+  const cleaned = stripNoise(transcript.segments);
+  if (cleaned.droppedCount) log.info("extract", `${ep.id}: dropped ${cleaned.droppedCount} ad/housekeeping segments`);
+
+  const r = takeaways(cleaned.segments, {
+    min: cfg.minLearnings, max: cfg.targetLearnings,
+    duration: transcript.durationSec || ep.durationSec || 0,
+  });
+  if (!r.points.length) throw new Error(`no takeaways: ${r.reason}`);
+
+  log.stage("extract", `${ep.id}: ${r.points.length} points`, {
+    from: r.considered, scored: r.scored, host: r.host || "undiarised" });
+
+  return {
+    learnings: r.points.map((p) => ({
+      rank: p.rank,
+      headline: p.point,
+      /* No idea/why/action. The local extractor does not write prose, and an
+         empty field the page skips is honest where invented text would not be. */
+      idea: "", why: "", action: "",
+      detail: p.detail,
+      passage: p.passage,
+      /* It is a quotation by construction, at the offset the words are at. */
+      evidence: p.detail,
+      timestamp: hhmmss(p.t),
+      kind: "said",
+      confidence: Math.min(0.95, 0.55 + p.score / 20),
+    })),
+    summary: describe(r.points, ep),
+    candidateCount: r.scored,
+    chunkCount: 0,
+    extractor: "local",
+  };
 }
 
 export async function extract(ai, ep, transcript) {
@@ -89,7 +134,7 @@ export async function extract(ai, ep, transcript) {
     .slice(0, cfg.targetLearnings)
     .map((l, i) => ({ ...l, rank: i + 1 }));
 
-  return { learnings, candidateCount: candidates.length, chunkCount: chunks.length };
+  return { learnings, candidateCount: candidates.length, chunkCount: chunks.length, extractor: "ai" };
 }
 
 /** Pass 4. Fed the metadata and the surviving learnings rather than the

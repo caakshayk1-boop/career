@@ -20,9 +20,13 @@ import { items, tag, attr, durationSeconds } from "./lib/xml.mjs";
 
 const all = JSON.parse(readFileSync(cfg.sourcesPath, "utf8")).sources || [];
 const enabled = loadSources();
-let bad = 0;
+let bad = 0, unreadable = 0;
 
-console.log(`\n${all.length} sources configured, ${enabled.length} enabled\n`);
+const PAID_ASR = Boolean(cfg.deepgramKey);
+console.log(`\n${all.length} sources configured, ${enabled.length} enabled`);
+console.log(PAID_ASR
+  ? "Paid transcription IS configured — audio-only shows can be read.\n"
+  : "No paid transcription key. A source is only readable if it publishes a\ntranscript or is a YouTube video with captions.\n");
 
 for (const s of all) {
   const state = s.enabled === false ? "paused " : "enabled";
@@ -30,36 +34,65 @@ for (const s of all) {
     ? `https://www.youtube.com/feeds/videos.xml?channel_id=${s.url}` : s.url;
   process.stdout.write(`  ${state}  ${s.id.padEnd(24)} `);
 
+  if (s.type === "youtube" && !/^UC[\w-]{22}$/.test(s.url)) {
+    console.log("not a channel id — open the channel, View Source, find \"channelId\"\n");
+    if (s.enabled !== false) bad++;
+    continue;
+  }
+
   try {
     const res = await fetch(url, { redirect: "follow", signal: AbortSignal.timeout(25000),
       headers: { "user-agent": "career.askakshay.com podcast-intelligence/1.0" } });
-    if (!res.ok) { console.log(`HTTP ${res.status}`); bad++; continue; }
+    if (!res.ok) { console.log(`HTTP ${res.status}\n`); bad++; continue; }
 
     const xml = await res.text();
     const feedTitle = tag(xml, "title");
     const list = items(xml);
-    if (!list.length) { console.log("parsed, but contains no items"); bad++; continue; }
+    if (!list.length) { console.log("parsed, but contains no items\n"); bad++; continue; }
 
     const newest = list[0];
     const mins = Math.round(durationSeconds(tag(newest, "itunes:duration")) / 60);
-    const hasMedia = Boolean(attr(newest, "enclosure", "url") || tag(newest, "yt:videoId"));
+    const ytId = tag(newest, "yt:videoId");
+    const hasAudio = Boolean(attr(newest, "enclosure", "url") || attr(newest, "media:content", "url"));
+    const transcriptTag = newest.match(/<podcast:transcript\b[^>]*>/i);
+    const transcriptUrl = transcriptTag
+      ? (transcriptTag[0].match(/\burl\s*=\s*["']([^"']*)["']/i) || [])[1] : "";
 
-    console.log(`OK  “${feedTitle.slice(0, 40)}”  ${list.length} items`);
-    console.log(`${" ".repeat(35)}newest: ${tag(newest, "title").slice(0, 60)}`);
-    console.log(`${" ".repeat(35)}${tag(newest, "pubDate") || tag(newest, "published") || "no date"}${mins ? ` · ${mins}m` : " · no duration declared"}${hasMedia ? "" : " · NO MEDIA URL"}`);
+    console.log(`OK  \u201c${feedTitle.slice(0, 40)}\u201d  ${list.length} items`);
+    const pad = " ".repeat(35);
+    console.log(`${pad}newest: ${tag(newest, "title").slice(0, 58)}`);
+    console.log(`${pad}${tag(newest, "pubDate") || tag(newest, "published") || "no date"}${mins ? ` \u00b7 ${mins}m` : " \u00b7 no duration declared"}`);
+
+    /* THE QUESTION THAT DECIDES WHETHER THIS SOURCE IS WORTH ENABLING. */
+    let how, free = true;
+    if (transcriptUrl) how = "publishes a transcript \u2014 free";
+    else if (ytId) how = "YouTube captions \u2014 free (subject to the caption track existing)";
+    else if (hasAudio && PAID_ASR) { how = "audio only \u2014 paid ASR, ~$0.26/episode"; free = false; }
+    else if (hasAudio) { how = "AUDIO ONLY, AND NO WAY TO READ IT \u2014 every episode will be skipped"; free = false; }
+    else { how = "no audio, no video, no transcript \u2014 nothing to read"; free = false; }
+
+    console.log(`${pad}transcript: ${how}`);
+    if (transcriptUrl) console.log(`${pad}            ${transcriptUrl.slice(0, 70)}`);
+
+    if (!free && s.enabled !== false) {
+      unreadable++;
+      console.log(`${pad}>> DISABLE THIS SOURCE, or set DEEPGRAM_API_KEY to pay for transcription.`);
+    }
 
     /* The show title in sources.json is what the page prints. If it disagrees
        with the feed, the page is lying about which podcast this is. */
     if (s.show && feedTitle && !feedTitle.toLowerCase().includes(s.show.toLowerCase().slice(0, 12)))
-      console.log(`${" ".repeat(35)}WARNING: configured show "${s.show}" does not match the feed title`);
-    if (!hasMedia) bad++;
-    if (res.url !== url) console.log(`${" ".repeat(35)}NOTE: redirected to ${res.url}`);
+      console.log(`${pad}WARNING: configured show "${s.show}" does not match the feed title`);
+    if (res.url !== url) console.log(`${pad}NOTE: redirected to ${res.url}`);
   } catch (e) {
-    console.log(`FAILED — ${e.message}`);
+    console.log(`FAILED \u2014 ${e.message}`);
     bad++;
   }
   console.log("");
 }
 
-console.log(bad ? `${bad} source(s) need attention\n` : "All sources reachable and parseable\n");
-process.exit(bad ? 1 : 0);
+if (unreadable) console.log(`${unreadable} enabled source(s) cannot be read with the current configuration.`);
+if (bad) console.log(`${bad} source(s) could not be reached or parsed.`);
+if (!bad && !unreadable) console.log("Every enabled source is reachable and readable for free.");
+console.log("");
+process.exit(bad || unreadable ? 1 : 0);

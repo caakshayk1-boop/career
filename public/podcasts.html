@@ -161,31 +161,54 @@ main{padding:clamp(22px,4vw,38px) 0 120px;min-width:0}
 .player audio{width:100%;height:40px;display:block}
 .player .none{font-size:var(--t-4);color:var(--dim);line-height:1.6}
 
-/* ── LEARNING CARD ─────────────────────────────────────────────────────── */
+/* ── POINT CARD ────────────────────────────────────────────────────────────
+   A point is a headline you can scan and a body you can open. The closed state
+   is the product — twenty of these should read in about three minutes — so the
+   closed card carries nothing but the line, its timestamp and its label. */
+.lnbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:var(--measure);
+  margin:0 0 12px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.lnbar span{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--dim)}
+.lnall{margin-left:auto;background:none;border:1px solid var(--line2);border-radius:var(--r-2);
+  color:var(--muted);cursor:pointer;font:500 var(--t-3)/1 var(--ui);padding:9px 13px;min-height:36px}
+.lnall:hover{color:var(--text);border-color:var(--text)}
+
 .ln{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
-  padding:clamp(16px,2.4vw,20px);margin-bottom:12px;max-width:var(--measure)}
-.ln-h{display:flex;align-items:flex-start;gap:13px;margin-bottom:11px}
+  margin-bottom:9px;max-width:var(--measure);overflow:hidden}
+.ln.open{border-color:var(--line2)}
+
+/* The header is a <button> when the card opens, a <div> when it does not.
+   Both need identical geometry or the list jumps between the two. */
+.ln-h{display:flex;align-items:flex-start;gap:13px;width:100%;text-align:left;
+  background:none;border:0;padding:15px 17px;min-height:56px}
+.ln.x > .ln-h{cursor:pointer}
+.ln.x > .ln-h:hover{background:var(--raised)}
 .ln-n{flex:none;font:500 var(--t-2)/1 var(--mono);color:var(--accent);border:1px solid var(--accent);
-  background:var(--accent-soft);border-radius:var(--r-1);padding:6px 7px;margin-top:2px}
-.ln-h h3{flex:1;font-size:var(--t-7);line-height:1.34;min-width:0}
-.ln .idea{font-size:var(--t-5);color:var(--text);line-height:1.68}
-.ln .lbl{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
-  text-transform:uppercase;color:var(--accent);margin:16px 0 6px}
-.ln .lbl.do{color:var(--up)}
-.ln p.body{font-size:var(--t-5);color:var(--muted);line-height:1.68}
-.ln .foot{display:flex;flex-wrap:wrap;gap:8px;align-items:center;
-  margin-top:15px;padding-top:12px;border-top:1px solid var(--line)}
-.ln .ts{font:500 var(--t-2)/1 var(--mono);color:var(--text);text-decoration:none;
-  border:1px solid var(--line2);border-radius:var(--r-1);padding:6px 8px;white-space:nowrap}
-.ln .ts:hover{border-color:var(--accent);color:var(--accent)}
-.ln .ts.flat{color:var(--dim);border-style:dashed}
-.ln .quote-btn{background:none;border:0;color:var(--dim);cursor:pointer;
-  font:500 var(--t-2)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
-  padding:7px 0;min-height:32px}
-.ln .quote-btn:hover{color:var(--text)}
-.ln blockquote{margin:12px 0 0;padding:12px 15px;border-left:2px solid var(--line2);
+  background:var(--accent-soft);border-radius:var(--r-1);padding:6px 7px;margin-top:1px}
+.ln-h h3{flex:1;font:500 var(--t-6)/1.5 var(--ui);letter-spacing:0;color:var(--text);min-width:0}
+.ln-x{flex:none;color:var(--dim);font:400 var(--t-7)/1 var(--mono);margin-top:2px;
+  transition:transform var(--t-fast) var(--ease)}
+.ln.open .ln-x{transform:rotate(45deg)}
+
+.ln-m{display:flex;flex-wrap:wrap;gap:7px;align-items:center;padding:0 17px 14px 47px}
+@media(max-width:480px){.ln-m{padding-left:17px}}
+
+.ln-d{padding:0 17px 17px 47px;border-top:1px solid var(--line);margin-top:2px}
+@media(max-width:480px){.ln-d{padding-left:17px}}
+.ln-d .lbl{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--accent);margin:16px 0 7px}
+.ln-d .lbl.do{color:var(--up)}
+.ln-d p.body{font-size:var(--t-5);color:var(--muted);line-height:1.7}
+/* The untruncated sentence, when the scannable line had to be cut. It is the
+   point itself, so it reads at full strength rather than as supporting text. */
+.ln-d p.body.full{color:var(--text);margin-bottom:2px}
+.ln-d blockquote{margin:0;padding:13px 16px;border-left:2px solid var(--line2);
   background:var(--raised);border-radius:0 var(--r-2) var(--r-2) 0;
-  font:400 var(--t-5)/1.66 var(--serif);font-style:italic;color:var(--muted)}
+  font:400 var(--t-5)/1.72 var(--serif);color:var(--muted)}
+
+.ts{font:500 var(--t-2)/1 var(--mono);color:var(--text);text-decoration:none;
+  border:1px solid var(--line2);border-radius:var(--r-1);padding:6px 8px;white-space:nowrap}
+a.ts:hover{border-color:var(--accent);color:var(--accent)}
+.ts.flat{color:var(--dim);border-style:dashed}
 
 /* The attribution pill. This is the honesty mechanism and the reason the page
    can be trusted, so it is always visible and never abbreviated away. */
@@ -233,7 +256,7 @@ main{padding:clamp(22px,4vw,38px) 0 120px;min-width:0}
   <div id="viewIndex">
     <div class="ph">
       <span class="k">Podcast Intelligence</span>
-      <h1 id="phTitle">The ten things worth knowing</h1>
+      <h1 id="phTitle">The things worth knowing</h1>
       <p id="phLede">Long-form conversations, read for you. Each one reduced to the ideas a busy
          reader would regret missing — with the sentence it came from and the moment it was said.</p>
       <div class="meta" id="phMeta"></div>
@@ -250,9 +273,10 @@ main{padding:clamp(22px,4vw,38px) 0 120px;min-width:0}
 
 <footer class="foot-p">
   Podcast Intelligence · career.askakshay.com · a private working surface, not published.<br>
-  Rebuilt every morning. Only the last seven days are kept — older editions are removed, not archived.<br>
-  Every learning is labelled with how it is known: <b>said</b> by the guest, an <b>interpretation</b>,
-  or a <b>recommendation</b> that nobody on the podcast made.
+  Rebuilt every morning from published transcripts and caption tracks. Only the last seven days
+  are kept — older editions are removed, not archived.<br>
+  Every point is a sentence taken verbatim from the conversation, at the moment it was said.
+  Nothing on this page is written by a machine.
 </footer>
 
 <script>
@@ -365,14 +389,20 @@ function renderIndex(doc){
   const count = eps.length;
   const learnings = eps.reduce((n,e) => n + (e.learnings || []).length, 0);
   const withAudio = eps.filter(e => e.audio && e.audio.url).length;
+  const readMins = Math.max(1, Math.round(eps.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
+  const heard = eps.reduce((n, e) => n + (e.durationSec || 0), 0);
   document.getElementById("phTitle").textContent =
     count === 1 ? "One conversation worth your time" : count + " conversations worth your time";
   document.getElementById("phLede").textContent =
-    learnings + " ideas from the last " + (doc.retentionDays || 7) + " days, each traceable to the sentence it came from. " +
-    "Nothing older is kept.";
+    learnings + " points from the last " + (doc.retentionDays || 7) + " days. Each one is a sentence somebody " +
+    "actually said, at the moment they said it — open any of them to read it back in context. Nothing older is kept.";
 
+  /* The claim the page has to make good on, stated as a number: this many hours
+     of conversation, readable in this many minutes. */
   meta.innerHTML =
-    '<span class="pill acc">' + learnings + " learnings</span>" +
+    '<span class="pill acc">' + learnings + " points</span>" +
+    '<span class="pill up">' + readMins + " min to read all of it</span>" +
+    (heard ? '<span class="pill">from ' + dur(heard) + " of conversation</span>" : "") +
     (withAudio ? '<span class="pill">' + withAudio + " audio briefing" + (withAudio > 1 ? "s" : "") + "</span>" : "") +
     '<span class="pill">' + (doc.retentionDays || 7) + "-day window</span>" +
     (doc.generatedAt ? '<span class="pill">built ' + esc(new Date(doc.generatedAt)
@@ -404,12 +434,12 @@ function epCard(e){
     (e.guest ? '<span class="guest">' + esc(e.guest) + "</span>" : "") +
     (e.summary ? '<p class="sum">' + esc(e.summary) + "</p>" : "") +
     '<div class="foot">' +
-      '<span class="pill acc">' + ls.length + " learning" + (ls.length === 1 ? "" : "s") + "</span>" +
-      (said ? '<span class="pill up">' + said + " quoted</span>" : "") +
-      (e.durationSec ? '<span class="pill">' + dur(e.durationSec) + " conversation</span>" : "") +
-      '<span class="pill">' + Math.max(1, Math.round((e.readSeconds || 120)/60)) + " min read</span>" +
+      '<span class="pill acc">' + ls.length + " points</span>" +
+      '<span class="pill up">' + Math.max(1, Math.round((e.readSeconds || 120)/60)) + " min read</span>" +
+      (e.durationSec ? '<span class="pill">from ' + dur(e.durationSec) + "</span>" : "") +
+      (said ? '<span class="pill">' + said + " quoted</span>" : "") +
       (e.audio && e.audio.url ? '<span class="pill">&#9654; ' + dur(e.audio.durationSec) + " listen</span>" : "") +
-      '<span class="go">Read the ' + ls.length + " &rarr;</span>" +
+      '<span class="go">Read the ' + ls.length + " points &rarr;</span>" +
     "</div></button>";
 }
 
@@ -433,57 +463,121 @@ function renderDetail(doc, id){
       "<h1>" + esc(e.title || "") + "</h1>" +
       (e.guest ? '<p class="guest">' + esc(e.guest) + "</p>" : "") +
       '<div class="meta">' +
-        '<span class="pill acc">' + ls.length + " learning" + (ls.length === 1 ? "" : "s") + "</span>" +
+        '<span class="pill acc">' + ls.length + " points</span>" +
         (e.durationSec ? '<span class="pill">' + dur(e.durationSec) + " original</span>" : "") +
         '<span class="pill">' + esc(dayLabel(e.date)) + ", " + esc(prettyDate(e.date)) + "</span>" +
         (e.url ? '<a class="pill acc" href="' + esc(e.url) + '" target="_blank" rel="noopener">Original &nearr;</a>' : "") +
       "</div></div>" +
     (e.summary ? '<p class="dsum">' + esc(e.summary) + "</p>" : "") +
     player(e) +
+    (ls.length ? '<div class="lnbar"><span>' + ls.length +
+      (e.extractor === "local" ? " points, verbatim, in the order they were said" : " points, in the order they were said") + "</span>" +
+      '<button class="lnall" id="expandAll" type="button">Expand all</button></div>' : "") +
     ls.map(learningCard.bind(null, e)).join("") +
     provenance(e);
 
 }
 
+/* Audio is off. An episode that carries a briefing still renders one, because
+   the artifact can contain one and a page that ignored it would be lying about
+   its own data — but the absence of audio is silent. An empty panel explaining
+   that a feature you did not ask for is not present is noise. */
 function player(e){
-  if (e.audio && e.audio.url) {
-    return '<div class="player"><div class="lbl"><b>' +
-      (e.learnings || []).length + ' ideas in ' + dur(e.audio.durationSec) + "</b>" +
-      "<span>spoken briefing</span></div>" +
-      '<audio controls preload="none" src="' + esc(e.audio.url) + '"></audio></div>';
-  }
-  return '<div class="player"><div class="lbl"><b>No audio briefing</b><span>text only</span></div>' +
-    '<p class="none">The briefing is generated after the text passes validation. This one was not produced ' +
-    "&mdash; either the speech provider is not configured, or it failed and the text was published anyway.</p></div>";
+  if (!(e.audio && e.audio.url)) return "";
+  return '<div class="player"><div class="lbl"><b>' +
+    (e.learnings || []).length + ' ideas in ' + dur(e.audio.durationSec) + "</b>" +
+    "<span>spoken briefing</span></div>" +
+    '<audio controls preload="none" src="' + esc(e.audio.url) + '"></audio></div>';
 }
 
+/**
+ * One point.
+ *
+ * TWO SHAPES, ONE CARD. The free extractor produces a point that IS a
+ * quotation, with the surrounding passage as its expansion. The model pipeline
+ * produces an idea plus a rationale plus an action. The card renders whichever
+ * fields are present rather than branching on a mode flag — an artifact built
+ * by one and read after a switch to the other still renders correctly, and
+ * there is no third state where the page and the pipeline disagree.
+ *
+ * The scannable line is always the headline. Everything else is behind the
+ * expansion, because the promise of this page is that you can read twenty
+ * points without reading twenty paragraphs.
+ */
 function learningCard(e, l){
   const n = String(l.rank).padStart(2, "0");
-  const qid = esc(e.id + "-" + l.rank);
-  return '<article class="ln">' +
-    '<div class="ln-h"><span class="ln-n">' + n + "</span><h3>" + esc(l.headline || "") + "</h3></div>" +
-    '<p class="idea">' + esc(l.idea || "") + "</p>" +
+  const id = esc(e.id + "-" + l.rank);
+  const more = l.passage || l.evidence || "";
+  const hasBody = Boolean(l.idea || l.why || l.action);
+  const expandable = Boolean(more || hasBody);
+
+  /* A pill that had to be trimmed loses the end of the sentence, and the end is
+     often where the payoff is. Show the whole sentence first when that happened;
+     skip it when the pill already IS the sentence, because repeating a line
+     verbatim directly under itself reads as a rendering bug. */
+  const trimmed = l.detail && l.detail.length > (l.headline || "").replace(/…$/, "").length + 4;
+
+  const body =
+    (trimmed ? '<p class="body full">' + esc(l.detail) + "</p>" : "") +
+    (l.idea ? '<p class="body">' + esc(l.idea) + "</p>" : "") +
     (l.why ? '<span class="lbl">Why it matters</span><p class="body">' + esc(l.why) + "</p>" : "") +
     (l.action ? '<span class="lbl do">Do</span><p class="body">' + esc(l.action) + "</p>" : "") +
-    '<div class="foot">' +
-      '<span class="kind ' + esc(l.kind) + '" title="' + esc(KIND_TITLE[l.kind] || "") + '">' + esc(l.kind) + "</span>" +
+    (more ? '<span class="lbl">In context</span><blockquote>' + esc(more) + "</blockquote>" : "");
+
+  return '<article class="ln' + (expandable ? " x" : "") + '">' +
+    (expandable
+      ? '<button class="ln-h" type="button" data-open="' + id + '" aria-expanded="false" aria-controls="d' + id + '">'
+      : '<div class="ln-h">') +
+      '<span class="ln-n">' + n + "</span>" +
+      '<h3>' + esc(l.headline || "") + "</h3>" +
+      (expandable ? '<span class="ln-x" aria-hidden="true">+</span>' : "") +
+    (expandable ? "</button>" : "</div>") +
+    /* The said/interpretation/recommendation label earns its space only where
+       it can differ. On the free path every point is verbatim by construction,
+       so twenty identical SAID badges are pure noise — the guarantee is stated
+       once, in the header, instead. */
+    '<div class="ln-m">' +
       citation(e, l.t) +
-      (l.evidence ? '<button class="quote-btn" type="button" data-quote="' + qid +
-        '" aria-expanded="false">Show the quotation</button>' : "") +
+      (e.extractor === "local" ? "" :
+        '<span class="kind ' + esc(l.kind) + '" title="' + esc(KIND_TITLE[l.kind] || "") + '">' + esc(l.kind) + "</span>") +
+      (l.speaker && l.isHost ? '<span class="pill">host</span>' : "") +
     "</div>" +
-    (l.evidence ? '<blockquote id="q' + qid + '" hidden>&ldquo;' + esc(l.evidence) + "&rdquo;</blockquote>" : "") +
+    (expandable ? '<div class="ln-d" id="d' + id + '" hidden>' + body + "</div>" : "") +
     "</article>";
 }
 
 /* How this page was made, on the page. Not decoration: a reader deciding
    whether to act on an idea needs to know it came from an automatic caption
    track read by a model, not from a person listening. */
+/**
+ * How this page was made, on the page.
+ *
+ * Not decoration. A reader deciding whether to act on a point needs to know it
+ * was selected by a scoring function from an automatic transcript, not chosen
+ * by a person who listened — and, on the free path, that nothing here is
+ * interpretation, because nothing here was written.
+ */
 function provenance(e){
+  const local = e.extractor === "local";
   const repaired = (e.learnings || []).filter(l => l.repaired).length;
+
+  if (local) {
+    return '<div class="note"><b>How these were chosen.</b> ' +
+      "The transcript came from " + esc(e.transcriptProvider || "an automated source") +
+      ". Sponsor reads, questions and small talk were removed, and the remaining sentences were " +
+      "ranked by information density — numbers, causal claims, corrections, rules — then spread across " +
+      "the conversation so the list covers all of it rather than its densest ten minutes." +
+      "<br><br><b>Every point above is verbatim.</b> Nothing was written, rephrased or inferred, which is " +
+      "why nothing here can be made up — and also why there is no commentary on what any of it means. " +
+      "Open a point to read it back in the passage it came from." +
+      (e.timestamped ? "" : " This transcript carried no timings, so no timestamps are shown.") +
+      "</div>";
+  }
+
   return '<div class="note"><b>How this was made.</b> ' +
     "The transcript came from " + esc(e.transcriptProvider || "an automated source") +
-    ", was read in sections by a model, and every idea below was checked against the transcript before it was printed" +
-    (e.rejectedCount ? " &mdash; " + e.rejectedCount + " candidate idea" + (e.rejectedCount === 1 ? " was" : "s were") +
+    ", was read in sections by a model, and every point was checked against the transcript before it was printed" +
+    (e.rejectedCount ? " &mdash; " + e.rejectedCount + " candidate" + (e.rejectedCount === 1 ? " was" : "s were") +
       " discarded for being unsupported, duplicated, or a restatement" : "") + "." +
     (repaired ? " " + repaired + " citation" + (repaired === 1 ? " was" : "s were") +
       " corrected or downgraded where the source did not support the claim as made." : "") +
@@ -530,13 +624,26 @@ document.getElementById("viewIndex").addEventListener("click", ev => {
 });
 
 document.getElementById("viewDetail").addEventListener("click", ev => {
-  const q = ev.target.closest("[data-quote]");
-  if (q) {
-    const box = document.getElementById("q" + q.dataset.quote);
+  const head = ev.target.closest("[data-open]");
+  if (head) {
+    const box = document.getElementById("d" + head.dataset.open);
     if (!box) return;
     box.hidden = !box.hidden;
-    q.textContent = box.hidden ? "Show the quotation" : "Hide the quotation";
-    q.setAttribute("aria-expanded", String(!box.hidden));
+    head.setAttribute("aria-expanded", String(!box.hidden));
+    head.closest(".ln").classList.toggle("open", !box.hidden);
+    return;
+  }
+  if (ev.target.closest("#expandAll")) {
+    /* Twenty taps to read everything is not a feature. */
+    const boxes = [...document.querySelectorAll(".ln-d")];
+    const opening = boxes.some(b => b.hidden);
+    for (const b of boxes) {
+      b.hidden = !opening;
+      const h = b.closest(".ln");
+      h.classList.toggle("open", opening);
+      h.querySelector("[data-open]").setAttribute("aria-expanded", String(opening));
+    }
+    ev.target.closest("#expandAll").textContent = opening ? "Collapse all" : "Expand all";
     return;
   }
   if (ev.target.closest("#back")) {

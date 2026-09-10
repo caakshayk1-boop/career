@@ -23,7 +23,7 @@ import { log, run, finishRun, charge } from "./lib/log.mjs";
 import { loadState, saveState, remember, isSettled, cached, pruneCache, savePublished } from "./lib/store.mjs";
 import { discover, selectEligible } from "./lib/ingest.mjs";
 import { getTranscript, assessQuality } from "./lib/transcript.mjs";
-import { extract, meta, script } from "./lib/extract.mjs";
+import { extract, extractLocal, meta, script } from "./lib/extract.mjs";
 import { validateLearnings, verdict } from "./lib/validate.mjs";
 import { makeAI, estimateCost } from "./lib/ai.mjs";
 import { makeAudio } from "./lib/audio.mjs";
@@ -47,9 +47,13 @@ const S = {
 
 async function main() {
   const state = loadState();
-  const ai = makeAI();
+  const LOCAL = cfg.extractor === "local";
+  /* The AI provider is not even constructed on the free path — constructing it
+     throws without a key, and the whole point is that no key is needed. */
+  const ai = LOCAL ? null : await makeAI();
   const audio = makeAudio();
-  log.stage("start", `ai=${ai.name}:${ai.model} tts=${audio.name} retention=${cfg.publicRetentionDays}d${cfg.dryRun ? " DRY-RUN" : ""}`);
+  log.stage("start", `extractor=${cfg.extractor}${ai ? ` (${ai.name}:${ai.model})` : " — no model, no cost"}` +
+    ` tts=${audio.name} points=${cfg.minLearnings}-${cfg.targetLearnings} retention=${cfg.publicRetentionDays}d${cfg.dryRun ? " DRY-RUN" : ""}`);
 
   if (!REPUBLISH_ONLY) {
     const sources = loadSources();
@@ -87,7 +91,7 @@ async function main() {
   const doc = buildPublic(published, {
     generator: {
       processingVersion: cfg.processingVersion, promptVersion: cfg.promptVersion,
-      ai: `${ai.name}:${ai.model}`, tts: audio.name,
+      extractor: cfg.extractor, ai: ai ? `${ai.name}:${ai.model}` : "none", tts: audio.name,
     },
     run: summarise(),
   });
@@ -118,9 +122,12 @@ async function processEpisode(ep, state, ai, audio) {
     throw new Error(`transcript unusable: ${quality.problems.join("; ")}`);
 
   remember(state, ep.id, { status: S.ANALYZING });
-  /* Cached on episode id + prompt version: a re-run after a TTS failure or a
-     crashed publish costs nothing, and a prompt change legitimately busts it. */
-  const analysis = await cached("insights", `${ep.id}|${cfg.promptVersion}`, () => extract(ai, ep, transcript));
+  /* Cached on episode id + extractor + prompt version: a re-run after a crashed
+     publish costs nothing, and changing either legitimately busts it. The local
+     extractor is fast and free, so the cache is about determinism there rather
+     than money — the same episode must not produce a different list tomorrow. */
+  const analysis = await cached("insights", `${ep.id}|${cfg.extractor}|${cfg.promptVersion}`,
+    () => (ai ? extract(ai, ep, transcript) : extractLocal(ep, transcript)));
 
   remember(state, ep.id, { status: S.VALIDATING });
   const checked = validateLearnings(analysis.learnings, transcript, ep);
@@ -136,13 +143,18 @@ async function processEpisode(ep, state, ai, audio) {
     return;
   }
 
-  const m = await cached("meta", `${ep.id}|${cfg.promptVersion}`, () => meta(ai, ep, checked.learnings));
+  /* The header. On the free path there is no model to write one, so the guest
+     is left empty rather than guessed at from the title, and the summary states
+     what the list is rather than pretending to characterise the conversation. */
+  const m = ai
+    ? await cached("meta", `${ep.id}|${cfg.promptVersion}`, () => meta(ai, ep, checked.learnings))
+    : { guest: "", summary: analysis.summary || "", topics: [] };
 
   /* AUDIO LAST. Validation has passed, so this is speech for something that
      will definitely be published. */
   remember(state, ep.id, { status: S.GENERATING_AUDIO });
   let audioAsset = null;
-  if (audio.name !== "none") {
+  if (audio.name !== "none" && ai) {
     try {
       const spoken = await cached("script", `${ep.id}|${cfg.promptVersion}`, () => script(ai, ep, checked.learnings, m.guest));
       audioAsset = await audio.generateAudio(spoken, `briefings/${ep.id}.mp3`);
@@ -164,8 +176,12 @@ async function processEpisode(ep, state, ai, audio) {
     status: S.PUBLISHED,
     transcriptProvider: transcript.provider,
     timestamped: Boolean(transcript.timestamped),
+    extractor: analysis.extractor || cfg.extractor,
     learnings: checked.learnings.map((l) => ({
       rank: l.rank, headline: l.headline, idea: l.idea, why: l.why, action: l.action,
+      /* `passage` is the expansion — the point back in the conversation. Only
+         the local extractor produces one; the page shows it when it is there. */
+      detail: l.detail || "", passage: l.passage || "",
       evidence: l.evidence, t: l.t, kind: l.kind, confidence: l.confidence,
       grounding: l.groundingScore, repaired: Boolean(l.tRepaired || l.demoted),
     })),
@@ -176,7 +192,7 @@ async function processEpisode(ep, state, ai, audio) {
 
   remember(state, ep.id, { status: S.PUBLISHED, title: ep.title, show: ep.show, payload });
   run.counts.processed++;
-  log.stage("published", `${ep.id}: ${payload.learnings.length} learnings${audioAsset ? `, ${Math.round(audioAsset.durationSec / 60)}m audio` : ", no audio"}`);
+  log.stage("published", `${ep.id}: ${payload.learnings.length} points${audioAsset ? `, ${Math.round(audioAsset.durationSec / 60)}m audio` : ""}`);
 }
 
 /* 220 wpm is a scanning rate, not a reading rate — this page is skimmed, and an

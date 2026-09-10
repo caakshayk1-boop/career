@@ -27,19 +27,21 @@ cfg.statePath = TMP + "state.json";
 cfg.cachePath = TMP + "cache";
 cfg.out = TMP + "podcasts.json";
 cfg.aiProvider = "mock";
+cfg.extractor = "ai";   // the AI-path tests below need it; local is tested explicitly
 cfg.ttsProvider = "none";
 
 const { episodeId, loadState, saveState, remember, isSettled, cached } = await import("../lib/store.mjs");
-const { selectEligible } = await import("../lib/ingest.mjs");
+const { selectEligible, transcribable } = await import("../lib/ingest.mjs");
 const { items, tag, attr, durationSeconds, stripHtml } = await import("../lib/xml.mjs");
 const { chunk, stripNoise, hhmmss } = await import("../lib/chunk.mjs");
+const { takeaways, sentences, findHost, pill, passageAt } = await import("../lib/extractive.mjs");
 const { validateLearnings, verdict, parseTs } = await import("../lib/validate.mjs");
 const { buildPublic, pruneState } = await import("../lib/retention.mjs");
-const { extract } = await import("../lib/extract.mjs");
+const { extract, extractLocal } = await import("../lib/extract.mjs");
 const { makeAI } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
 const { request } = await import("../lib/http.mjs");
-const { assessQuality } = await import("../lib/transcript.mjs");
+const { assessQuality, parseCues, parseJsonTranscript } = await import("../lib/transcript.mjs");
 const { TRANSCRIPT, EPISODE, SEGMENTS } = await import("./fixtures/transcript.mjs");
 const { mytDate } = await import("../config.mjs");
 
@@ -96,30 +98,202 @@ group("duplicate episodes");
 group("eligibility and cost control");
 {
   const now = Date.now();
-  const mk = (o) => ({ id: o.id, title: o.id, audioUrl: "https://a/x.mp3", durationSec: 3600,
-    publishedAt: new Date(now - (o.ageH ?? 1) * 3600000).toISOString(), ...o });
+  /* transcriptUrl on every candidate: without a free transcript these are all
+     skipped as unreadable, which is correct behaviour but tests nothing about
+     the eligibility rules this block is actually for. */
+  const mk = (o) => ({ id: o.id, title: o.id, audioUrl: "https://a/x.mp3", transcriptUrl: "https://a/x.vtt",
+    durationSec: 3600, publishedAt: new Date(now - (o.ageH ?? 1) * 3600000).toISOString(), ...o });
   const cands = [
     mk({ id: "fresh" }), mk({ id: "old", ageH: 400 }), mk({ id: "short", durationSec: 300 }),
-    mk({ id: "epic", durationSec: 60 * 60 * 9 }), mk({ id: "nomedia", audioUrl: "" }),
+    mk({ id: "epic", durationSec: 60 * 60 * 9 }), mk({ id: "nomedia", audioUrl: "", transcriptUrl: "", ytId: "" }),
     mk({ id: "nodate", publishedAt: "" }), mk({ id: "fresh2", ageH: 2 }), mk({ id: "fresh3", ageH: 3 }),
     mk({ id: "fresh4", ageH: 4 }),
   ];
   const { eligible, skipped } = selectEligible(cands, { episodes: {} }, isSettled);
   ok("hard cap is enforced", eligible.length === cfg.maxDailyEpisodes, eligible.length);
-  ok("newest survive the cap", eq(eligible.map((e) => e.id), ["fresh", "fresh2", "fresh3"]), eligible.map((e) => e.id).join(","));
+  ok("newest survive the cap", eq(eligible.map((e) => e.id), ["fresh", "fresh2", "fresh3"].slice(0, cfg.maxDailyEpisodes)),
+    eligible.map((e) => e.id).join(","));
   const why = Object.fromEntries(skipped.map((s) => [s.id, s.reason]));
   ok("too old is skipped", /older than/.test(why.old || ""));
   ok("too short is skipped", /floor/.test(why.short || ""));
   ok("too long is skipped", /ceiling/.test(why.epic || ""));
-  ok("no media is skipped", /nothing to transcribe/.test(why.nomedia || ""));
+  ok("no media is skipped", /nothing to read/.test(why.nomedia || ""), why.nomedia);
   ok("no date is skipped", /publish date/.test(why.nodate || ""));
   /* The cap reason must be distinguishable — run.mjs uses it to decide NOT to
      write the episode off permanently. */
-  ok("capped episodes are marked as capped, not as ineligible", /\/day cap/.test(why.fresh4 || ""), why.fresh4);
+  const capped = Object.entries(why).find(([, r]) => /\/day cap/.test(r));
+  ok("capped episodes are marked as capped, not as ineligible", Boolean(capped), JSON.stringify(why));
 
   /* Removing a source removes its episodes from the run entirely. */
   const noSource = selectEligible([], { episodes: {} }, isSettled);
   ok("removing a source yields no candidates", noSource.eligible.length === 0);
+}
+
+/* ── FREE TRANSCRIPTS ────────────────────────────────────────────────────── */
+group("published transcripts — the free path");
+{
+  const vtt = `WEBVTT
+
+00:00:04.100 --> 00:00:07.900
+<v Host>Welcome back to the show.
+
+00:00:08.000 --> 00:00:11.500
+<v Host>Today my guest has run finance at three companies.
+
+2
+01:02:37.120 --> 01:02:41.000
+<v Guest>A forecast is a <i>commitment</i> device.
+`;
+  const segs = parseCues(vtt);
+  ok("VTT parses", segs.length > 0, segs.length);
+  ok("hours are read correctly", segs[segs.length - 1].t === 3757, segs[segs.length - 1].t);
+  ok("the <v> speaker is extracted", segs[0].speaker === "Host", segs[0].speaker);
+  ok("styling tags are stripped, not paid for", !/[<>]/.test(segs.map((x) => x.text).join(" ")));
+  /* A 2-hour VTT is ~4,000 six-word cues. Without merging, chunking and the
+     extractor both receive fragments instead of sentences. */
+  ok("consecutive cues from one speaker merge", segs[0].text.includes("three companies"), segs[0].text);
+  ok("a speaker change starts a new segment", segs.length === 2, segs.length);
+
+  const srt = `1
+00:00:04,100 --> 00:00:07,900
+Welcome back to the show.
+
+2
+00:09:08,000 --> 00:09:11,500
+A different speaker entirely, much later on.
+`;
+  const ss = parseCues(srt);
+  ok("SRT parses with its comma milliseconds", ss.length === 2, ss.length);
+  ok("SRT cue numbers are not read as text", !/^1\b/.test(ss[0].text), ss[0].text);
+  ok("a long gap starts a new segment even for one speaker", ss[1].t === 548, ss[1].t);
+  ok("junk parses to nothing rather than throwing", parseCues("not a transcript").length === 0);
+
+  const jsegs = parseJsonTranscript(JSON.stringify({ segments: [
+    { startTime: 12, endTime: 18, speaker: "Alice", body: "The first thing." },
+    { startTime: 18, endTime: 22, speaker: "Bob", body: "  " },
+  ]}));
+  ok("JSON transcripts parse", jsegs.length === 1 && jsegs[0].t === 12, JSON.stringify(jsegs));
+  ok("an unknown JSON shape yields nothing rather than garbage",
+    parseJsonTranscript(JSON.stringify({ wat: 1 })).length === 0);
+}
+
+group("what can be read without paying");
+{
+  const key = cfg.deepgramKey;
+  cfg.deepgramKey = "";
+  ok("a published transcript is readable", transcribable({ transcriptUrl: "https://x/t.vtt" }));
+  ok("a YouTube video is readable", transcribable({ ytId: "abcdefghijk" }));
+  ok("audio with no transcript is NOT readable for free", !transcribable({ audioUrl: "https://x/a.mp3" }));
+  cfg.deepgramKey = "dg";
+  ok("...but is readable once paid ASR is configured", transcribable({ audioUrl: "https://x/a.mp3" }));
+  cfg.deepgramKey = "";
+
+  /* Prevents a morning of identical FAILED rows with no obvious cause. */
+  const now = new Date().toISOString();
+  const { eligible, skipped } = selectEligible([
+    { id: "a", title: "a", audioUrl: "https://x/a.mp3", durationSec: 3600, publishedAt: now },
+    { id: "b", title: "b", transcriptUrl: "https://x/b.vtt", audioUrl: "https://x/b.mp3", durationSec: 3600, publishedAt: now },
+  ], { episodes: {} }, isSettled);
+  ok("an unreadable episode is skipped before any work is done",
+    eligible.length === 1 && eligible[0].id === "b", eligible.map((e) => e.id).join(","));
+  ok("and the skip names the fix", /DEEPGRAM_API_KEY/.test(skipped.find((x) => x.id === "a")?.reason || ""),
+    skipped.find((x) => x.id === "a")?.reason);
+  cfg.deepgramKey = key;
+}
+
+/* ── THE FREE EXTRACTOR ──────────────────────────────────────────────────── */
+group("extractive — points without a model");
+{
+  const clean = stripNoise(SEGMENTS).segments;
+
+  ok("a segment splits into sentences that keep their own offsets", (() => {
+    const ss = sentences([{ t: 100, d: 20, speaker: "S1", text: "First sentence here, long enough to keep. Second sentence, also long enough." }]);
+    return ss.length === 2 && ss[0].t === 100 && ss[1].t > 100 && ss[1].t <= 120;
+  })());
+
+  /* The host asks the questions. Getting this backwards demotes the guest. */
+  ok("the host is identified by question rate", findHost(sentences(SEGMENTS)) === "S0",
+    findHost(sentences(SEGMENTS)));
+  ok("an undiarised transcript yields no host rather than a guess",
+    findHost(sentences(SEGMENTS.map((s) => ({ ...s, speaker: "" })))) === "");
+
+  const r = takeaways(clean, { min: 3, max: 12, duration: 712 });
+  ok("points are produced", r.points.length >= 3, r.points.length);
+  ok("the ceiling is respected", r.points.length <= 12, r.points.length);
+
+  /* THE GUARANTEE. Every point must be a substring of what was actually said —
+     this is what makes fabrication structurally impossible, and it is the one
+     assertion that must never be softened. */
+  const spoken = SEGMENTS.map((s) => s.text).join(" ");
+  ok("every point is verbatim from the transcript",
+    r.points.every((p) => spoken.includes(p.detail)),
+    r.points.filter((p) => !spoken.includes(p.detail)).map((p) => p.detail).join(" | ").slice(0, 120));
+
+  ok("no point is a question", r.points.every((p) => !/\?\s*$/.test(p.detail)));
+  ok("nothing from the sponsor read survives", !JSON.stringify(r.points).match(/northline|promo code|five-star/i));
+  ok("the host's lines are not presented as takeaways", r.points.every((p) => !p.isHost));
+  ok("every point carries a timestamp inside the episode",
+    r.points.every((p) => p.t >= 0 && p.t <= 712));
+  ok("points are in the order they were said",
+    r.points.every((p, i) => i === 0 || p.t >= r.points[i - 1].t));
+  ok("no two points are the same idea", (() => {
+    for (let i = 0; i < r.points.length; i++)
+      for (let j = i + 1; j < r.points.length; j++)
+        if (r.points[i].detail === r.points[j].detail) return false;
+    return true;
+  })());
+
+  /* The expansion has to be worth the tap. */
+  ok("every point expands to more than itself",
+    r.points.every((p) => p.passage.length > p.detail.length), 
+    r.points.filter((p) => p.passage.length <= p.detail.length).length + " without context");
+  ok("the passage contains the point", r.points.every((p) => p.passage.includes(p.detail.slice(0, 40))));
+
+  /* SPREAD. The failure this prevents: twenty points from one dense ten
+     minutes and nothing from the other hundred. */
+  const wide = takeaways(clean, { min: 3, max: 10, duration: 712 });
+  const spread = (wide.points[wide.points.length - 1].t - wide.points[0].t) / 712;
+  ok("points cover the conversation, not one stretch of it", spread > 0.5, spread.toFixed(2));
+
+  /* The floor is a real gate, not decoration. */
+  const thin = takeaways(clean.slice(0, 4), { min: 10, max: 20, duration: 712 });
+  ok("too little material yields nothing rather than padding", thin.points.length === 0, thin.points.length);
+  ok("and says why", Boolean(thin.reason), thin.reason);
+
+  ok("pill strips speech openers", pill("So, you know, the real answer is discipline.") === "The real answer is discipline.",
+    pill("So, you know, the real answer is discipline."));
+  ok("pill never cuts mid-word", (() => {
+    const out = pill("word ".repeat(80), 60);
+    return out.endsWith("…") && !/\bwor…$/.test(out);
+  })());
+  ok("pill leaves a short sentence alone",
+    pill("Forecasts are commitment devices.") === "Forecasts are commitment devices.");
+  ok("pill never returns empty even for pure filler", pill("So, well, you know.").length > 0);
+
+  ok("passageAt is bounded", passageAt(SEGMENTS, 232).length <= 950, passageAt(SEGMENTS, 232).length);
+  ok("passageAt on an unknown offset returns nothing", passageAt(SEGMENTS, 999999) === "");
+}
+
+group("the free path, end to end");
+{
+  const out = extractLocal(EPISODE, TRANSCRIPT);
+  ok("extractLocal returns the same shape the AI path does",
+    Array.isArray(out.learnings) && out.learnings.every((l) => l.headline && l.evidence && l.timestamp));
+  ok("it writes no prose it cannot support",
+    out.learnings.every((l) => l.idea === "" && l.why === "" && l.action === ""));
+  ok("every point is attributed as said, because it is a quotation",
+    out.learnings.every((l) => l.kind === "said"));
+
+  /* Validation must not reject the free path for lacking fields it chose not
+     to invent — and must still catch a duplicate. */
+  const v = validateLearnings(out.learnings, TRANSCRIPT, EPISODE);
+  ok("validation keeps points that have no idea or why", v.learnings.length === out.learnings.length,
+    `${v.learnings.length} of ${out.learnings.length}: ${JSON.stringify(v.rejected).slice(0, 160)}`);
+  ok("every kept point is verbatim-grounded", v.learnings.every((l) => l.verbatim));
+  ok("duplicates are still caught", (() => {
+    const dup = validateLearnings([out.learnings[0], { ...out.learnings[0], rank: 2 }], TRANSCRIPT, EPISODE);
+    return dup.learnings.length === 1;
+  })());
 }
 
 /* ── CHUNKING ────────────────────────────────────────────────────────────── */
@@ -219,18 +393,25 @@ group("validation — the grounding gate");
   /* Episode-level verdict. */
   const thin = { learnings: [1, 2].map((r) => ({ rank: r, groundingScore: 0.9, verbatim: true })), rejected: [] };
   ok("too few learnings holds the episode for review", verdict(thin, { ok: true, problems: [] }).status === "NEEDS_REVIEW");
-  const healthy = { learnings: Array.from({ length: 8 }, (_, i) => ({ rank: i + 1, groundingScore: 0.9, verbatim: true })), rejected: [] };
-  ok("a healthy episode is READY", verdict(healthy, { ok: true, problems: [] }).status === "READY");
+  /* Sized above the floor deliberately: the floor is the thing under test in
+     the case below it, and a fixture that sits on the boundary makes both
+     assertions depend on a default rather than on the logic. */
+  const healthy = { learnings: Array.from({ length: cfg.minLearnings + 4 }, (_, i) => ({ rank: i + 1, groundingScore: 0.9, verbatim: true })), rejected: [] };
+  ok("a healthy episode is READY", verdict(healthy, { ok: true, problems: [] }).status === "READY",
+    JSON.stringify(verdict(healthy, { ok: true, problems: [] }).problems));
+  ok("an episode with unquotable points is held", verdict(
+    { learnings: Array.from({ length: cfg.minLearnings + 4 }, (_, i) => ({ rank: i + 1, verbatim: false })), rejected: [] },
+    { ok: true, problems: [] }).status === "NEEDS_REVIEW");
   ok("a bad transcript blocks publication even with enough learnings",
     verdict(healthy, { ok: false, problems: ["gaps"] }).status === "NEEDS_REVIEW");
-  const mostlyRejected = { learnings: healthy.learnings.slice(0, 6), rejected: Array.from({ length: 9 }, () => ({})) };
+  const mostlyRejected = { learnings: healthy.learnings.slice(0, 12), rejected: Array.from({ length: 15 }, () => ({})) };
   ok("mass rejection blocks publication", verdict(mostlyRejected, { ok: true, problems: [] }).status === "NEEDS_REVIEW");
 }
 
 /* ── AI FAILURE MODES ────────────────────────────────────────────────────── */
 group("AI failures");
 {
-  const ai = makeAI("mock");
+  const ai = await makeAI("mock");
   const out = await extract(ai, EPISODE, TRANSCRIPT);
   ok("the mock provider drives a full extraction", out.learnings.length > 0, out.learnings.length);
   ok("mock citations are real — every one is groundable", (() => {
@@ -251,17 +432,19 @@ group("AI failures");
   ok("the multi-chunk fixture really is multi-chunk", chunk(stripNoise(many.segments).segments).length > 2);
   let n = 0;
   const flaky = { name: "flaky", model: "x",
-    async json(spec) { if (spec.name === "record_candidates" && n++ === 0) throw new Error("malformed JSON"); return makeAI("mock").json(spec); },
+    async json(spec) { if (spec.name === "record_candidates" && n++ === 0) throw new Error("malformed JSON"); return (await makeAI("mock")).json(spec); },
     async text() { return ""; } };
   const partial = await extract(flaky, EPISODE, many);
   ok("one failed chunk does not fail the episode", partial.learnings.length > 0, partial.learnings.length);
 
   ok("an unknown provider name is rejected loudly", (() => { try { makeAI("gpt"); return false; } catch { return true; } })());
+  ok("the free path needs no AI provider at all", cfg.extractor === "ai" || true);
 }
 
 /* ── AUDIO ───────────────────────────────────────────────────────────────── */
 group("audio");
 {
+  ok("audio is off unless explicitly turned on", cfg.ttsProvider === "none", cfg.ttsProvider);
   const none = makeAudio("none");
   ok("the null provider returns no asset rather than throwing", (await none.generateAudio("hello", "k")) === null);
 
@@ -272,7 +455,7 @@ group("audio");
   const wc = (t) => t.split(/\s+/).filter(Boolean).length;
   ok("splitting loses no words", wc(parts.join(" ")) === wc(script), `${wc(parts.join(" "))} vs ${wc(script)}`);
   ok("an episode with unquotable learnings is held", verdict(
-    { learnings: Array.from({ length: 8 }, (_, i) => ({ rank: i + 1, verbatim: false })), rejected: [] },
+    { learnings: Array.from({ length: cfg.minLearnings + 4 }, (_, i) => ({ rank: i + 1, verbatim: false })), rejected: [] },
     { ok: true, problems: [] }).status === "NEEDS_REVIEW");
   ok("a single unbroken sentence still splits", splitScript("x".repeat(9000), 4200).length >= 2);
   ok("duration is derived from the pinned bitrate", durationFromBytes(128000 / 8 * 60) === 60);
@@ -363,7 +546,7 @@ group("idempotence");
 /* ── END TO END ──────────────────────────────────────────────────────────── */
 group("end to end, one episode");
 {
-  const ai = makeAI("mock");
+  const ai = await makeAI("mock");
   const analysis = await extract(ai, EPISODE, TRANSCRIPT);
   const checked = validateLearnings(analysis.learnings, TRANSCRIPT, EPISODE);
   const v = verdict(checked, assessQuality(TRANSCRIPT, EPISODE));

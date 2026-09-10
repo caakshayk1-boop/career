@@ -1015,11 +1015,11 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
 
   <div class="lc" style="border-left:3px solid var(--accent);margin-bottom:22px">
     <span class="k">The reading you do not have time for</span>
-    <h4>Podcast Intelligence — the ten things worth knowing</h4>
-    <p>Two- and three-hour conversations, read in full every morning and reduced to the ideas a busy
-       reader would regret missing. Each one carries the sentence it came from, the moment it was said,
-       and a label saying whether the guest actually said it, whether it is a reading of what they said,
-       or whether nobody said it at all. Seven days, then it is gone.</p>
+    <h4>Podcast Intelligence — twenty points, three minutes</h4>
+    <p>Two- and three-hour conversations, read every morning and cut down to the twenty sentences worth
+       knowing. Each point is <b>verbatim</b> — the words that were actually said, at the moment they
+       were said — so nothing on the page is written by a machine and nothing can be invented. Tap any
+       point to read it back in the passage it came from. Seven days, then it is gone.</p>
     <p class="do"><span>Open</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>
   </div>
 
@@ -1663,12 +1663,12 @@ function renderPodcasts(d){
   if (eps.length) {
     const learnings = eps.reduce((n, e) => n + ((e.learnings || []).length), 0);
     const today = eps.filter(e => e.date === (P.today || "")).length;
+    const mins = Math.max(1, Math.round(eps.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
     return group("Podcast intelligence",
-      `${learnings} ideas from ${eps.length} conversation${eps.length === 1 ? "" : "s"} in the last ${P.retentionDays || 7} days` +
-      `${today ? `, ${today} of them today` : ""}. Read in full, not skimmed.`,
+      `${learnings} points from ${eps.length} conversation${eps.length === 1 ? "" : "s"} in the last ${P.retentionDays || 7} days` +
+      `${today ? `, ${today} of them today` : ""} — about ${mins} minutes to read all of it.`,
       `<div class="lc">` + eps.slice(0, 6).map(e => {
         const ls = e.learnings || [];
-        const said = ls.filter(l => l.kind === "said").length;
         return `<div class="epi">
           <b><a href="/podcasts#e=${encodeURIComponent(e.id)}">${esc(e.title || "")}</a></b>
           <span>${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
@@ -1676,8 +1676,8 @@ function renderPodcasts(d){
               ? Math.floor(e.durationSec/3600) + "h " + (Math.round(e.durationSec%3600/60) || "") + (e.durationSec%3600 >= 30 ? "m" : "")
               : Math.round(e.durationSec/60) + "m") + " conversation" : ""}</span>
           ${e.summary ? `<p>${esc(e.summary)}</p>` : ""}
-          <p class="do"><span>${ls.length} learning${ls.length === 1 ? "" : "s"}${
-            said ? `, ${said} quoted` : ""}</span><a href="/podcasts#e=${encodeURIComponent(e.id)}">Read them &rarr;</a></p>
+          <p class="do"><span>${ls.length} points${
+            e.readSeconds ? ` · ${Math.max(1, Math.round(e.readSeconds / 60))} min read` : ""}</span><a href="/podcasts#e=${encodeURIComponent(e.id)}">Read them &rarr;</a></p>
         </div>`; }).join("") +
       `</div><p class="do" style="margin-top:12px"><span>All of it</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>`, true);
   }

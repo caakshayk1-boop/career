@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "career.askakshay.com — the job campaign: plan, positioning, interview bank, market intel, podcast intelligence.",
+  "description": "career.askakshay.com \u2014 the job campaign: plan, positioning, interview bank, market intel, podcast intelligence.",
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
