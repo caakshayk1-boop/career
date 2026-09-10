@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T14:41:01.205Z",
+  "generatedAt": "2026-09-10T14:45:37.749Z",
   "today": "2026-09-10",
   "retentionDays": 7,
   "days": [
@@ -341,6 +341,222 @@
   ],
   "pending": [
     {
+      "id": "desk-14bfab36c866",
+      "title": "5 Companies Capturing the Biggest Market Share?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=NUtPCAXq9-o",
+      "takeaways": [
+        "What makes a company keep gaining market share while competitors fall behind?",
+        "In this video, we analyse five businesses that have steadily expanded their position in large and growing industries."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-1ea3eb67afce",
+      "title": "RBI vs Government: Who Really Controls Money?",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
+      "takeaways": [
+        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
+        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-07895296b3b0",
+      "title": "11 Crore Voters Erased: Are U In The List? | Can EC Be Criminally Prosecuted For SIR Scam? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=gvM8O3qkHpY",
+      "takeaways": [
+        "A Padma Shri awardee summoned over a spelling mismatch.",
+        "A World Cup winner, a Nobel laureate, a Bharat Ratna, a two-time MP...."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-8b8f325c3845",
+      "title": "Uncertainty and Anxiety Over SIR in Odisha’s Muslim Neighbourhoods",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=Q00l-06R6rc",
+      "takeaways": [
+        "The SIR of electoral rolls in Odisha began in June.",
+        "Residents in Muslim‑majority localities say the revision has triggered anxiety about whether their names will remain on the voters list."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-2ba3641011ec",
+      "title": "Samrat Choudhary on His Rise From MLA to Bihar CM",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=XszbPNPhk5k",
+      "takeaways": [
+        "Samrat Choudhary discusses his personal journey from being an MLA to becoming the Chief Minister of Bihar.",
+        "The episode touches on themes of politics, bureaucracy, and corruption."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-8decbaad034c",
+      "title": "99% Indians Are Making THESE Oral Hygiene Mistakes | TOP Dentist Dr. Niranjan P On TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=ytI2t4uh4LE",
+      "takeaways": [
+        "Brushing at night matters so much.",
+        "You shouldn’t brush immediately after eating."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-0d4af485b600",
+      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
+      "takeaways": [
+        "You ever hear that 2AM voice telling you everything's about to go wrong?",
+        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-5be722ccbec8",
+      "title": "Land, Soil, Water, Natural Vegetation and Wildlife Resources | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=bCEbMlUvqCE",
+      "takeaways": [
+        "Buniyad – NCERT Geography Foundation Series by Drishti IAS In this lecture, Ms.",
+        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 8 Geography, Chapter 2 – “Land, Soil, Water, Natural Vegetation and Wildlife Resources” in a simple, engaging, and exam-oriented manner."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-0dfb491a0eca",
+      "title": "How To Train Your Brain, Boost Focus & Beat Burnout | Dr Sahar Yousef | FO559 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=4Vz6L8B73i4",
+      "takeaways": [
+        "your phone measurably reduces your cognitive capacity even when it is switched off and face down",
+        "your brain is physically incapable of doing two things at once."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-3a342472d20e",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "takeaways": [
+        "The FCNR scheme may not live up to its promised returns.",
+        "It affects both NRIs and Indian resident investors."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-26e0deff1237",
+      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
+      "takeaways": [
+        "Most people build a plan to reach financial freedom.",
+        "Very few plan for what happens after."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-f8802be4b133",
+      "title": "Are Index Funds Breaking the Stock Market?",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=z7esg6Ts25E",
+      "takeaways": [
+        "seven out of ten active managers fail to beat benchmark indices",
+        "passive dominance impacts corporate accountability"
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-6a1b6a2cf1be",
+      "title": "#AskAbhijit 379: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=QmaCrQiH6jo",
+      "takeaways": [
+        "Episode 379 of the #AskAbhijit show: Ask me your best questions in the live chat and super chat, and I shall answer them.",
+        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-cf755fe7119b",
+      "title": "The Real story behind Zero1 by Zerodha",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=gxED-fFZalA",
+      "takeaways": [
+        "People changed their buying decisions after watching a Zero1 video.",
+        "Families began discussing money together because of Zero1."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-0116d1d09ac7",
+      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
+      "takeaways": [
+        "A live AI workshop is scheduled for tomorrow, 6 Sept at 7 pm IST, focusing on using ChatGPT for content creation and productivity.",
+        "The video’s purpose is to spread awareness and educate viewers, and any errors should be reported via email to contact@dhruvrathee.com."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-4d0454c8475d",
+      "title": "Why Rupee Keeps Falling? | Depreciation, Foreign Flows & Market Reflexivity Explained",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=qyudC07oPOI",
+      "takeaways": [
+        "The Indian rupee has gone from 65 to 95 against the dollar in less than a decade — but does the number itself actually matter?",
+        "In this wide-ranging conversation, former currency trader and ex-SEBI whole-time member Ananth Narayan joins Nithin Sasikumar and Pranav Agarwal to unpack what's really driving the rupee, and why the psychology around \"100\" might matter more than the fundamentals."
+      ],
+      "date": "2026-09-10",
+      "reason": "over the 2/day cap"
+    },
+    {
+      "id": "desk-47f780d7c5c2",
+      "title": "How Tim Cook Built Apple’s $4.5 Trillion Empire | Untold Story of the Man Who Made Apple Unstoppable",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=GpJhBB7Gv0c",
+      "takeaways": [
+        "Over the next 15 years, Tim Cook grew Apple’s market value from roughly $350 billion to $4.7 trillion.",
+        "He expanded Apple’s revenue from $108 billion to $416 billion and built a services business that now generates $109 billion annually."
+      ],
+      "date": "2026-09-10",
+      "reason": "no caption track published for this video"
+    },
+    {
+      "id": "desk-21c81f724b0d",
+      "title": "Planning a ₹7L House at 22 | Money Matters Ep. 125 | Ankur Warikoo Hindi",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=zHPv2r9cZng",
+      "takeaways": [
+        "Delay construction by six months, build an emergency fund, and continue pursuing the PM Awas Yojana before taking on debt.",
+        "Developing new skills could dramatically increase his earning potential."
+      ],
+      "date": "2026-09-10",
+      "reason": "no caption track published for this video"
+    },
+    {
       "id": "invest-like-the-best-bb3003b987c2",
       "title": "Walter Russell Mead - How America Keeps Winning - [Invest Like the Best, EP.490]",
       "show": "Invest Like the Best",
@@ -358,7 +574,7 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-10T14:41:01.205Z",
+    "at": "2026-09-10T14:45:37.747Z",
     "discovered": 1498,
     "eligible": 2,
     "processed": 0,
@@ -370,13 +586,13 @@
         "stage": "process",
         "id": "desk-47f780d7c5c2",
         "message": "no caption track published for this video",
-        "at": "2026-09-10T14:41:01.071Z"
+        "at": "2026-09-10T14:45:37.681Z"
       },
       {
         "stage": "process",
         "id": "desk-21c81f724b0d",
         "message": "no caption track published for this video",
-        "at": "2026-09-10T14:41:01.199Z"
+        "at": "2026-09-10T14:45:37.735Z"
       }
     ],
     "estimatedCostUsd": 0
