@@ -185,6 +185,26 @@ A different speaker entirely, much later on.
     parseJsonTranscript(JSON.stringify({ wat: 1 })).length === 0);
 }
 
+group("the default cap agrees with itself");
+{
+  /* A default duplicated in config.mjs and in the workflow YAML is a default
+     that will disagree with itself: the workflow's literal said '2' while the
+     config said 12, and 16 of 20 desk episodes were held back as "over the
+     2/day cap" on a run meant to process all of them. */
+  const yml = readFileSync(new URL("../../.github/workflows/podcasts.yml", import.meta.url).pathname, "utf8");
+  const m = yml.match(/MAX_DAILY_EPISODES:\s*\$\{\{\s*vars\.MAX_DAILY_EPISODES\s*\|\|\s*'(\d+)'/);
+  ok("the workflow fallback matches the config default",
+    m && Number(m[1]) === cfg.maxDailyEpisodes, m ? `${m[1]} vs ${cfg.maxDailyEpisodes}` : "not found");
+
+  const ymlMin = yml.match(/MIN_LEARNINGS:\s*\$\{\{\s*vars\.MIN_LEARNINGS\s*\|\|\s*'(\d+)'/);
+  ok("and so does the points floor",
+    ymlMin && Number(ymlMin[1]) === cfg.minLearnings, ymlMin ? `${ymlMin[1]} vs ${cfg.minLearnings}` : "not found");
+
+  const ymlMax = yml.match(/TARGET_LEARNINGS:\s*\$\{\{\s*vars\.TARGET_LEARNINGS\s*\|\|\s*'(\d+)'/);
+  ok("and the ceiling",
+    ymlMax && Number(ymlMax[1]) === cfg.targetLearnings, ymlMax ? `${ymlMax[1]} vs ${cfg.targetLearnings}` : "not found");
+}
+
 group("what can be read without paying");
 {
   const key = cfg.deepgramKey;
