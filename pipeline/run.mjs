@@ -27,7 +27,7 @@ import { extract, extractLocal, meta, script } from "./lib/extract.mjs";
 import { validateLearnings, verdict } from "./lib/validate.mjs";
 import { makeAI, estimateCost } from "./lib/ai.mjs";
 import { makeAudio } from "./lib/audio.mjs";
-import { buildPublic, buildPending, pruneState } from "./lib/retention.mjs";
+import { buildPublic, buildPending, mergePending, pruneState } from "./lib/retention.mjs";
 
 const argv = new Set(process.argv.slice(2));
 const REPUBLISH_ONLY = argv.has("--republish");
@@ -86,6 +86,18 @@ async function main() {
         log.fail("process", ep.id, e.message);
         remember(state, ep.id, { status: S.FAILED, reason: e.message.slice(0, 300), title: ep.title, show: ep.show });
         run.counts.failed++;
+        /* A FAILURE MUST NOT DELETE THE EPISODE FROM THE PAGE. The two desk
+           episodes that failed on "no caption track published for this video"
+           were neither read nor listed — they simply vanished, which is the
+           same complaint that made the desk feed a source in the first place.
+           A failure means we could not read it today, not that it stopped
+           existing. It is listed, with the reason. */
+        pending.push({
+          id: ep.id, title: ep.title, show: ep.show, url: ep.url,
+          takeaways: ep.deskTakeaways || [],
+          date: mytDate(ep.curated ? new Date() : new Date(ep.publishedAt || Date.now())),
+          reason: e.message.slice(0, 160),
+        });
       }
       /* Saved after EVERY episode, not at the end. A run killed by the CI job
          timeout must not lose the two episodes it already paid for. */
@@ -98,7 +110,9 @@ async function main() {
     .map((e) => e.payload);
 
   const doc = buildPublic(published, {
-    pending,
+    /* Dedupe: an episode can be named by eligibility AND by a processing
+       failure in the same run. One row each. */
+    pending: mergePending(pending),
     generator: {
       processingVersion: cfg.processingVersion, promptVersion: cfg.promptVersion,
       extractor: cfg.extractor, ai: ai ? `${ai.name}:${ai.model}` : "none", tts: audio.name,
@@ -180,7 +194,9 @@ async function processEpisode(ep, state, ai, audio) {
     guest: (m.guest || "").trim(), topics: m.topics || [], summary: m.summary || "",
     url: ep.url, type: ep.type, image: ep.image,
     publishedAt: ep.publishedAt,
-    date: mytDate(new Date(ep.publishedAt || Date.now())),
+    /* A curated episode is dated by the digest that listed it, not by when it
+       aired: it belongs on the day the reader was told about it. */
+    date: mytDate(ep.curated ? new Date() : new Date(ep.publishedAt || Date.now())),
     durationSec: transcript.durationSec || ep.durationSec || 0,
     processedAt: new Date().toISOString(),
     status: S.PUBLISHED,

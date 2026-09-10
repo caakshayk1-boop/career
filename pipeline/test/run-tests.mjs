@@ -36,7 +36,7 @@ const { items, tag, attr, durationSeconds, stripHtml } = await import("../lib/xm
 const { chunk, stripNoise, hhmmss } = await import("../lib/chunk.mjs");
 const { takeaways, sentences, findHost, pill, passageAt } = await import("../lib/extractive.mjs");
 const { validateLearnings, verdict, parseTs } = await import("../lib/validate.mjs");
-const { buildPublic, buildPending, pruneState } = await import("../lib/retention.mjs");
+const { buildPublic, buildPending, mergePending, pruneState } = await import("../lib/retention.mjs");
 const { extract, extractLocal } = await import("../lib/extract.mjs");
 const { makeAI } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
@@ -613,6 +613,38 @@ group("an episode we cannot read is still shown");
   /* A pending episode must NOT be written off in the ledger: configuring paid
      transcription later should pick it up rather than skip it forever. */
   ok("pending is not a terminal state", !isSettled({ episodes: {} }, "no"));
+
+  /* CURATED ITEMS. The desk feed is today's list — somebody already decided
+     these matter. Age-filtering them drops most of the list, which is how 18 of
+     20 desk episodes silently vanished on the first run with this source. */
+  const ancient = { id: "c1", title: "Aired three weeks ago", show: "S", ytId: "abcdefghijk",
+    publishedAt: new Date(Date.now() - 21 * 86400000).toISOString(), curated: true };
+  const cur = selectEligible([ancient], { episodes: {} }, isSettled);
+  ok("a curated item is not dropped for age", cur.eligible.length === 1,
+    JSON.stringify(cur.skipped.map((x) => x.reason)));
+
+  const noDuration = { id: "c2", title: "No duration declared", show: "S", ytId: "abcdefghijk",
+    publishedAt: "", durationSec: 0, curated: true };
+  ok("nor for a missing date or duration",
+    selectEligible([noDuration], { episodes: {} }, isSettled).eligible.length === 1);
+
+  /* Over the cap, a curated item is listed rather than dropped. */
+  const realCap2 = cfg.maxDailyEpisodes;
+  cfg.maxDailyEpisodes = 1;
+  const many = [1, 2, 3].map((i) => ({ id: "m" + i, title: "Item " + i, show: "S",
+    ytId: "abcdefghijk", publishedAt: new Date().toISOString(), curated: true }));
+  const capped = selectEligible(many, { episodes: {} }, isSettled);
+  ok("over the cap, curated items are pending rather than gone",
+    capped.eligible.length === 1 && buildPending(capped.skipped).length === 2,
+    `${capped.eligible.length} eligible, ${buildPending(capped.skipped).length} pending`);
+  cfg.maxDailyEpisodes = realCap2;
+
+  /* Two sources of pending, one row each. */
+  const merged = mergePending(
+    [{ id: "a", title: "A", date: "2026-09-10" }, { id: "b", title: "B", date: "2026-09-09" }],
+    [{ id: "a", title: "A", date: "2026-09-10", reason: "failed later" }]);
+  ok("pending rows are deduplicated by id", merged.length === 2, merged.length);
+  ok("and the later reason wins", merged.find((x) => x.id === "a").reason === "failed later");
 }
 
 /* ── IDEMPOTENCE ─────────────────────────────────────────────────────────── */
