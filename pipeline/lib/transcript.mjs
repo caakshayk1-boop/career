@@ -70,16 +70,40 @@ const PROVIDERS = {
    * episode with invented timestamps.
    */
   async youtube(ep) {
-    const tracks = await request(
+    /* type=list reports MANUALLY UPLOADED caption tracks only. Almost every
+       podcast channel has none of those and only auto-generated ones, so a bare
+       list request comes back empty and the episode looks captionless when it
+       is not — which is how sixteen readable YouTube episodes were reported as
+       "no caption track published for this video".
+       Auto-captions are fetched by asking for them directly with kind=asr. */
+    const listed = await request(
       `https://www.youtube.com/api/timedtext?type=list&v=${encodeURIComponent(ep.ytId)}`,
-      { timeout: 20000, retries: 2, label: "yt-captions" });
-    const langs = [...tracks.matchAll(/lang_code="([^"]+)"/g)].map((m) => m[1]);
-    const lang = langs.find((l) => l.startsWith("en")) || langs[0];
-    if (!lang) throw new Error("no caption track published for this video");
+      { timeout: 20000, retries: 2, label: "yt-captions" }).catch(() => "");
+    const langs = [...String(listed).matchAll(/lang_code="([^"]+)"/g)].map((m) => m[1]);
+    const manual = langs.find((l) => l.startsWith("en")) || langs[0] || "";
 
-    const xml = await request(
-      `https://www.youtube.com/api/timedtext?lang=${encodeURIComponent(lang)}&v=${encodeURIComponent(ep.ytId)}`,
-      { timeout: 25000, retries: 2, label: "yt-captions" });
+    /* Ordered cheapest-first in the sense that matters here: a human-made track
+       is more accurate than ASR, and English before whatever else exists. */
+    const attempts = [
+      manual && `lang=${encodeURIComponent(manual)}`,
+      "lang=en&kind=asr",
+      "lang=en-US&kind=asr",
+      "lang=hi&kind=asr",        // several of these shows are Hindi or Hinglish
+      manual && `lang=${encodeURIComponent(manual)}&kind=asr`,
+    ].filter(Boolean);
+
+    let xml = "";
+    for (const q of attempts) {
+      xml = await request(
+        `https://www.youtube.com/api/timedtext?${q}&v=${encodeURIComponent(ep.ytId)}`,
+        { timeout: 25000, retries: 1, label: "yt-captions" }).catch(() => "");
+      if (/<text\b/.test(xml)) break;
+      xml = "";
+    }
+    if (!xml) throw new Error(
+      `no caption track this endpoint will serve (tried ${attempts.length} variants` +
+      `${manual ? `, listed: ${langs.join("/")}` : ", none listed"})`);
+    const lang = manual || "en";
 
     const segments = [...xml.matchAll(/<text start="([\d.]+)"(?:\s+dur="([\d.]+)")?[^>]*>([\s\S]*?)<\/text>/g)]
       .map((m) => ({
