@@ -246,11 +246,14 @@ The paid opt-ins are in the second table above. Turning all three on takes a
 
 ## Known limitations
 
-1. **YouTube captions are not a documented API.** `api/timedtext` needs no key
-   and is by far the cheapest transcript available, but it is fetched from a
-   datacentre IP and Google sometimes answers those with an empty body. When it
-   does, the run falls through to Deepgram if a key is set, and otherwise
-   records the episode `FAILED` with the reason. It never fabricates timings.
+1. **YouTube captions are not a documented API, and the obvious endpoint does
+   not work from CI.** `api/timedtext` needs no key, but Google serves it empty
+   to datacentre IPs — every CI runner. Twelve readable episodes came back "no
+   caption track" from GitHub Actions while having perfectly good auto-captions.
+   The pipeline therefore reads the watch page's `captionTracks`, whose signed
+   `baseUrl`s answer from the same IP, and falls back to the bare endpoint.
+   Both are undocumented and either can stop working; when both fail the episode
+   is LISTED with the reason, never deleted and never given invented timings.
 2. **No YouTube audio download.** Without captions and without an enclosure URL
    there is nothing to transcribe. Prefer RSS sources, which carry one.
 3. **Timestamp deep links only work for YouTube.** A generic podcast page has no
