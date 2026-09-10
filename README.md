@@ -103,8 +103,14 @@ secret, but it is not for search engines.
 
 `.github/workflows/podcasts.yml` runs at 22:30 UTC — 06:30 MYT — reads the
 configured feeds, processes what is new, and commits `public/podcasts.json`.
-That push triggers the deploy workflow, which ships it. **It requires no
-secrets.** Two files change on a normal morning: the artifact and
+**It requires no secrets.**
+
+That commit does **not** trigger the deploy workflow's `push` event: GitHub
+suppresses workflow triggers for pushes made with the default `GITHUB_TOKEN`,
+to stop a workflow that commits from re-triggering itself. `deploy.yml`
+therefore also listens on `workflow_run` for `podcasts` completing, which is
+exempt from that rule. Remove that trigger and the morning job will keep
+committing points that never reach the site. Two files change on a normal morning: the artifact and
 `pipeline/state.json`, the ledger that stops the job reprocessing the same
 conversation twice.
 
