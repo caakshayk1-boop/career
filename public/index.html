@@ -388,6 +388,7 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
   <span class="rail-h">Life</span>
   <a href="#life"    data-s="life"><i>12</i>Life</a>
   <a href="/home"><i>13</i>The Home Book</a>
+  <a href="/podcasts"><i>14</i>Podcast Intelligence</a>
 </nav>
 
 <main>
@@ -1012,6 +1013,16 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
     <p class="do"><span>Open</span><a href="/home">The Home Book &rarr;</a></p>
   </div>
 
+  <div class="lc" style="border-left:3px solid var(--accent);margin-bottom:22px">
+    <span class="k">The reading you do not have time for</span>
+    <h4>Podcast Intelligence — twenty points, three minutes</h4>
+    <p>Two- and three-hour conversations, read every morning and cut down to the twenty sentences worth
+       knowing. Each point is <b>verbatim</b> — the words that were actually said, at the moment they
+       were said — so nothing on the page is written by a machine and nothing can be invented. Tap any
+       point to read it back in the passage it came from. Seven days, then it is gone.</p>
+    <p class="do"><span>Open</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>
+  </div>
+
   <div class="chips" id="lifeTabs">
     <button class="chip" data-lt="learn"  aria-pressed="true">Reading</button>
     <button class="chip" data-lt="prac"   aria-pressed="false">Practice</button>
@@ -1632,24 +1643,63 @@ function renderLearn(d){
         ${a.summary ? `<p>${esc(a.summary)}</p>` : ""}
       </div>`; }).join("") + `</div>`, true);
   }
-  const pod = d.podcasts;
-  const eps = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
-  if (eps.length) {
-    h += group("Podcasts", `${eps.length} episodes${pod.shows ? ` from ${pod.shows} shows` : ""}, newest first.`,
-      `<div class="lc">` + eps.map(e => {
-        const u = e.link || e.url;
-        const tk = Array.isArray(e.takeaways) ? e.takeaways
-                 : (e.takeaways ? [e.takeaways] : (e.takeaway ? [e.takeaway] : []));
-        return `<div class="epi">
-        ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title || "")}</a></b>`
-            : `<b>${esc(e.title || "")}</b>`}
-        <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(e.published) : ""}${
-              e.category ? " · " + esc(e.category) : ""}</span>
-        ${tk.length ? `<ul class="tick" style="margin-top:7px">${
-              tk.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
-      </div>`; }).join("") + `</div>`, true);
-  }
+  h += renderPodcasts(d);
   return h || '<div class="empty">No reading in today\'s edition.</div>';
+}
+
+/* PODCASTS. This section used to print an episode title, a link and whatever
+   one-line "takeaway" the upstream feed happened to carry — a list of things
+   you had not listened to, which is a to-do list, not intelligence.
+   /podcasts.json is the real product now: episodes read in full, reduced to the
+   ideas worth knowing, each traceable to the sentence it came from.
+
+   The old desk list is kept as the FALLBACK and not deleted. It is what shows
+   before the morning job has ever run, and if the job stops running this
+   section degrades to what it always was rather than to nothing. */
+function renderPodcasts(d){
+  const P = window.__PODCASTS;
+  const eps = (P && Array.isArray(P.episodes)) ? P.episodes : [];
+
+  if (eps.length) {
+    const learnings = eps.reduce((n, e) => n + ((e.learnings || []).length), 0);
+    const today = eps.filter(e => e.date === (P.today || "")).length;
+    const mins = Math.max(1, Math.round(eps.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
+    return group("Podcast intelligence",
+      `${learnings} points from ${eps.length} conversation${eps.length === 1 ? "" : "s"} in the last ${P.retentionDays || 7} days` +
+      `${today ? `, ${today} of them today` : ""} — about ${mins} minutes to read all of it.`,
+      `<div class="lc">` + eps.slice(0, 6).map(e => {
+        const ls = e.learnings || [];
+        return `<div class="epi">
+          <b><a href="/podcasts#e=${encodeURIComponent(e.id)}">${esc(e.title || "")}</a></b>
+          <span>${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
+            e.durationSec ? " · " + (e.durationSec >= 3600
+              ? Math.floor(e.durationSec/3600) + "h " + (Math.round(e.durationSec%3600/60) || "") + (e.durationSec%3600 >= 30 ? "m" : "")
+              : Math.round(e.durationSec/60) + "m") + " conversation" : ""}</span>
+          ${e.summary ? `<p>${esc(e.summary)}</p>` : ""}
+          <p class="do"><span>${ls.length} points${
+            e.readSeconds ? ` · ${Math.max(1, Math.round(e.readSeconds / 60))} min read` : ""}</span><a href="/podcasts#e=${encodeURIComponent(e.id)}">Read them &rarr;</a></p>
+        </div>`; }).join("") +
+      `</div><p class="do" style="margin-top:12px"><span>All of it</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>`, true);
+  }
+
+  const pod = d.podcasts;
+  const old = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
+  if (!old.length) return "";
+  return group("Podcasts", `${old.length} episodes${pod && pod.shows ? ` from ${pod.shows} shows` : ""}, newest first. ` +
+      `Titles only — the morning job has not published a reading of these yet.`,
+    `<div class="lc">` + old.map(e => {
+      const u = e.link || e.url;
+      const tk = Array.isArray(e.takeaways) ? e.takeaways
+               : (e.takeaways ? [e.takeaways] : (e.takeaway ? [e.takeaway] : []));
+      return `<div class="epi">
+      ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title || "")}</a></b>`
+          : `<b>${esc(e.title || "")}</b>`}
+      <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(e.published) : ""}${
+            e.category ? " · " + esc(e.category) : ""}</span>
+      ${tk.length ? `<ul class="tick" style="margin-top:7px">${
+            tk.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+    </div>`; }).join("") +
+    `</div><p class="do" style="margin-top:12px"><span>When it runs</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>`, true);
 }
 
 function renderPrac(d){
@@ -1740,8 +1790,16 @@ function renderDrills(d){
 (async function loadLife(){
   const targets = {lifeLearn: renderLearn, lifePrac: renderPrac,
                    lifeMind: renderMind, lifeDrills: renderDrills};
+  /* Two feeds, fetched together and failing separately. /podcasts.json is a
+     same-origin static asset written by this repo's own morning job; the desk
+     feed is produced in another repo. A failure of one must not blank the
+     other, which is why the podcast fetch resolves to null instead of
+     throwing — §12 has four panes and only one of them is podcasts. */
+  const podcasts = fetch("/podcasts.json", {cache:"no-store"})
+    .then(r => r.ok ? r.json() : null).catch(() => null);
   try {
     const res = await fetch(DESK_FEED, {cache:"no-store"});
+    window.__PODCASTS = await podcasts;
     if (!res.ok) throw new Error("HTTP " + res.status);
     const desk = (await res.json()).desk || {};
     for (const [id, fn] of Object.entries(targets)) {
@@ -1750,8 +1808,13 @@ function renderDrills(d){
       catch (e) { el.innerHTML = `<div class="empty">Could not render this section — ${esc(e.message)}</div>`; }
     }
   } catch (err) {
+    /* The desk feed is gone. Podcast intelligence is ours and same-origin, so
+       it very likely is not — render it rather than showing four dead panes. */
+    window.__PODCASTS = window.__PODCASTS || await podcasts;
+    const pods = renderPodcasts({});
     for (const id of Object.keys(targets))
       document.getElementById(id).innerHTML =
+        (id === "lifeLearn" && pods ? pods : "") +
         `<div class="empty">Feed unavailable — ${esc(String(err.message || err))}.
          The daily build publishes it to <code>news.askakshay.com/today.json</code>.</div>`;
   }

@@ -1,0 +1,117 @@
+# Podcast Intelligence — the morning refresh.
+#
+# IT COSTS NOTHING TO RUN. No API key, no model, no transcription bill, no
+# object storage. Transcripts come from what shows already publish — a
+# <podcast:transcript> URL or a YouTube caption track — and the points are
+# sentences chosen out of that transcript by a scoring function in this repo.
+# The only budget it consumes is GitHub Actions minutes, and a run is ~30
+# seconds. If any of that changes, this comment is wrong and should be fixed.
+#
+# WHY A GITHUB ACTION AND NOT A CRON TRIGGER ON THE WORKER. This site is an
+# assets-only Worker with no script, no database and no secrets, and that is
+# worth keeping: every request is served from the edge with no cold start and
+# nothing to attack. The output here is a plain static asset, and the whole
+# morning's work arrives as a reviewable commit.
+#
+# WHAT IT DOES. Reads the feeds, processes what is new, rewrites
+# public/podcasts.json, commits it, and lets the existing deploy workflow ship
+# it. Two files change on a normal morning: the artifact and the ledger.
+#
+# THE TIME. 22:30 UTC is 06:30 the next day in Malaysia, which is the point —
+# the page is read before the day starts. GitHub's scheduler is best-effort and
+# routinely fires late under load; that is acceptable for a morning read and is
+# the reason nothing downstream assumes an exact time.
+name: podcasts
+
+on:
+  schedule:
+    - cron: "30 22 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Reprocess episodes already in the ledger (costs money)"
+        type: boolean
+        default: false
+      dry_run:
+        description: "Run everything but write nothing"
+        type: boolean
+        default: false
+
+# One at a time. Two overlapping runs would both read the ledger, both process
+# the same episode, and the second would overwrite the first's commit.
+concurrency:
+  group: podcasts
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+
+      # THE CACHE IS THE MONEY. Transcripts and extracted insights are keyed by
+      # episode id and prompt version, so a re-run after a failure re-uses
+      # everything it already paid for. Losing it costs a run's API spend, not
+      # correctness — which is why a cache miss is not an error.
+      - name: Restore the transcript and insight cache
+        uses: actions/cache@v4
+        with:
+          path: pipeline/.cache
+          key: podcast-cache-${{ github.run_id }}
+          restore-keys: podcast-cache-
+
+      - run: npm install --no-audit --no-fund
+
+      - name: Refresh
+        env:
+          # NOTHING HERE IS REQUIRED. Every one of these is a knob with a
+          # working default, and the pipeline runs to completion with all of
+          # them unset — that is the point. The commented block below is what
+          # you would add to turn the paid features back on.
+          MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '2' }}
+          PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '7' }}
+          MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '10' }}
+          TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
+          FORCE_REPROCESS: ${{ inputs.force }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          #
+          # TO ADD THE INTERPRETATION LAYER (~$0.50/episode):
+          #   EXTRACTOR: ai
+          #   ANTHROPIC_API_KEY: (from a repository secret)
+          #
+          # TO READ SHOWS THAT PUBLISH NO TRANSCRIPT (~$0.26/episode):
+          #   DEEPGRAM_API_KEY: (from a repository secret)
+          #
+          # TO ADD SPOKEN BRIEFINGS (~$1.05/episode, and needs R2 for storage):
+          #   TTS_PROVIDER: elevenlabs
+          #   ELEVENLABS_API_KEY / R2_BUCKET / R2_ACCESS_KEY_ID /
+          #   R2_SECRET_ACCESS_KEY / R2_PUBLIC_BASE
+        run: npm run podcasts
+
+      # A morning with no new episodes changes nothing, and an empty commit
+      # every day would bury the mornings that did produce something.
+      - name: Commit if anything changed
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name  "podcast-intelligence"
+          git config user.email "noreply@askakshay.com"
+          git add public/podcasts.json pipeline/state.json
+          if git diff --cached --quiet; then
+            echo "Nothing new this morning — no commit."
+            exit 0
+          fi
+          COUNT=$(node -p "require('./public/podcasts.json').episodes.length")
+          POINTS=$(node -p "require('./public/podcasts.json').episodes.reduce((n,e)=>n+e.learnings.length,0)")
+          git commit -m "podcasts: morning refresh — ${COUNT} episode(s), ${POINTS} points"
+          # The deploy workflow runs on push to main and ships the new artifact.
+          for i in 1 2 3 4; do
+            git push && break
+            echo "push failed, retrying"; sleep $((2 ** i))
+            git pull --rebase origin main || true
+          done

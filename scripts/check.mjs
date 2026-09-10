@@ -13,10 +13,16 @@
  * fetched the HTML would pass while the page sat there inert. So this loads
  * them in a real browser and asserts behaviour, not bytes.
  *
- * BOTH PAGES ARE CHECKED. `/home` was added on 2026-09-04 and is a second,
- * larger inline script. Checking only `/` would have left it in precisely the
- * blind spot this file exists to close: a green build over a page whose script
- * died on load and which still looks finished.
+ * ALL THREE PAGES ARE CHECKED. `/home` was added on 2026-09-04 and `/podcasts`
+ * on 2026-09-10; each is a second and third inline script. Checking only `/`
+ * would leave them in precisely the blind spot this file exists to close: a
+ * green build over a page whose script died on load and which still looks
+ * finished.
+ *
+ * `/podcasts` renders entirely from /podcasts.json. When the morning job has
+ * not run, that file is the committed seed with no episodes — so the checks
+ * below assert the EMPTY state is correct too, rather than skipping. A page
+ * that only works once it has content is a page that is broken on day one.
  *
  *   node scripts/check.mjs https://career.askakshay.com
  */
@@ -79,10 +85,143 @@ async function checkPage(path, label, extra) {
 await checkPage("/", "campaign", async (page) => {
   /* The rail link into the second page. If this silently disappears, /home is
    * still live but unreachable, which is the same as gone. */
-  const linked = await page.evaluate(() =>
-    !!document.querySelector('.rail a[href="/home"]') &&
-    !!document.querySelector('#life a[href="/home"]'));
-  ok("campaign: links to /home from the rail and from §12 Life", linked);
+  const linked = await page.evaluate(() => ({
+    home: !!document.querySelector('.rail a[href="/home"]') && !!document.querySelector('#life a[href="/home"]'),
+    pods: !!document.querySelector('.rail a[href="/podcasts"]') && !!document.querySelector('#life a[href="/podcasts"]'),
+  }));
+  ok("campaign: links to /home from the rail and from §12 Life", linked.home);
+  ok("campaign: links to /podcasts from the rail and from §12 Life", linked.pods);
+
+  /* §12 renders podcasts from /podcasts.json when the morning job has produced
+   * anything, and falls back to the desk feed's bare titles when it has not.
+   * Either is correct; a pane stuck on "Loading…" is not. */
+  await page.waitForTimeout(1500);
+  const life = await page.evaluate(() => (document.getElementById("lifeLearn") || {}).textContent || "");
+  ok("campaign: §12 Life resolves rather than hanging on Loading", !/Loading…/.test(life), life.slice(0, 80));
+});
+
+await checkPage("/podcasts", "podcasts", async (page) => {
+  /* The feed is fetched, so the page is empty for a moment on any run. Wait for
+   * the render rather than racing it — the 3.5s in checkPage is for scripts, not
+   * for the network. */
+  await page.waitForFunction(() => {
+    const f = document.getElementById("feed");
+    return f && !/Loading/.test(f.textContent);
+  }, { timeout: 15000 }).catch(() => {});
+
+  const shape = await page.evaluate(async () => {
+    const doc = await (await fetch("/podcasts.json", { cache: "no-store" })).json();
+    return {
+      episodes: (doc.episodes || []).length,
+      cards: document.querySelectorAll(".ep").length,
+      days: document.querySelectorAll(".day").length,
+      dayHeadings: [...document.querySelectorAll(".day-h b")].map((b) => b.textContent),
+      empty: !!document.querySelector("#feed .empty"),
+      retention: doc.retentionDays,
+      /* Every day heading must have episodes under it, and every episode a day.
+       * A mismatch renders an empty heading, which reads as a bug in the feed. */
+      orphanDays: (doc.days || []).filter((d) => !(d.episodeIds || []).length).length,
+      undated: (doc.episodes || []).filter((e) => !e.date).length,
+      thin: (doc.episodes || []).filter((e) => (e.learnings || []).length < 5).length,
+    };
+  });
+
+  ok("podcasts: the feed parses and declares a retention window", shape.retention > 0, shape.retention);
+  ok("podcasts: a card for every published episode", shape.cards === shape.episodes, `${shape.cards} cards / ${shape.episodes} episodes`);
+  ok("podcasts: every episode carries at least the floor of points",
+    shape.thin === 0, `${shape.thin} episode(s) below the floor`);
+  ok("podcasts: no episode without a date", shape.undated === 0, shape.undated);
+  ok("podcasts: no day heading without episodes", shape.orphanDays === 0, shape.orphanDays);
+
+  if (shape.episodes === 0) {
+    /* The seed state. It must SAY it is empty, not render a blank page. */
+    ok("podcasts: an empty feed explains itself", shape.empty);
+    return;
+  }
+
+  ok("podcasts: episodes are grouped into days", shape.days > 0, shape.days);
+  ok("podcasts: the newest group is Today or Yesterday",
+    /^(Today|Yesterday)$/.test(shape.dayHeadings[0] || ""), shape.dayHeadings[0]);
+
+  /* THE DETAIL VIEW IS THE PRODUCT. Everything above it is navigation. */
+  await page.locator(".ep").first().click();
+  await page.waitForTimeout(400);
+
+  const detail = await page.evaluate(async () => {
+    const doc = await (await fetch("/podcasts.json", { cache: "no-store" })).json();
+    const ep = doc.episodes.find((e) => !document.getElementById("viewDetail").hidden) || doc.episodes[0];
+    return {
+      visible: !document.getElementById("viewDetail").hidden,
+      points: document.querySelectorAll(".ln").length,
+      expandable: document.querySelectorAll(".ln [data-open]").length,
+      openByDefault: [...document.querySelectorAll(".ln-d")].filter((d) => !d.hidden).length,
+      lazyAudio: document.querySelectorAll('audio:not([preload="none"])').length,
+      provenance: (document.querySelector(".note") || {}).textContent || "",
+      extractor: ep.extractor || "",
+      /* The guarantee, asserted against the artifact rather than the markup:
+       * on the free path every point must be a substring of its own evidence,
+       * because the point IS the quotation. If this ever fails, something has
+       * started writing text and the page is no longer verbatim. */
+      notVerbatim: (doc.episodes || []).filter((e) => e.extractor === "local")
+        .flatMap((e) => e.learnings || [])
+        .filter((l) => !l.evidence || !l.evidence.includes(String(l.headline).replace(/…$/, "").slice(0, 40))).length,
+      untimed: (doc.episodes || []).flatMap((e) => e.timestamped ? (e.learnings || []) : [])
+        .filter((l) => l.t == null).length,
+    };
+  });
+
+  ok("podcasts: a card opens its detail view", detail.visible);
+  ok("podcasts: the detail view renders points", detail.points > 0, detail.points);
+  ok("podcasts: every point can be expanded", detail.expandable === detail.points,
+    `${detail.expandable} of ${detail.points}`);
+  /* The closed state IS the product — twenty points that read in three minutes.
+   * A card that starts open defeats the entire page. */
+  ok("podcasts: points start collapsed", detail.openByDefault === 0, detail.openByDefault);
+  ok("podcasts: no audio preloads", detail.lazyAudio === 0, detail.lazyAudio);
+  ok("podcasts: the page explains how the points were chosen",
+    /verbatim|interpretation/.test(detail.provenance));
+  ok("podcasts: every point is verbatim from its source", detail.notVerbatim === 0, detail.notVerbatim);
+  ok("podcasts: a timestamped episode timestamps every point", detail.untimed === 0, detail.untimed);
+
+  /* The regression that shipped once: opening a second episode without a page
+   * load left two live click handlers, so every quotation toggled twice and
+   * appeared not to work. */
+  const toggles = await page.evaluate(async () => {
+    const open = () => {
+      const h = document.querySelector(".ln [data-open]");
+      if (!h) return null;
+      h.click();
+      return !document.getElementById("d" + h.dataset.open).hidden;
+    };
+    const first = open();
+    if (first === null) return "no expandable points";
+    document.getElementById("back").click();
+    await new Promise((r) => setTimeout(r, 200));
+    const second = document.querySelectorAll(".ep")[1];
+    if (!second) return first ? "ok" : "first expand failed";
+    second.click();
+    await new Promise((r) => setTimeout(r, 300));
+    const again = open();
+    return first && again ? "ok" : "double-toggle regression";
+  });
+  ok("podcasts: points expand once, on every episode", /^(ok|no expandable)/.test(toggles), toggles);
+
+  /* Twenty taps to read everything is not a feature. */
+  const all = await page.evaluate(async () => {
+    const b = document.getElementById("expandAll");
+    if (!b) return "no control";
+    b.click();
+    await new Promise((r) => setTimeout(r, 150));
+    const opened = [...document.querySelectorAll(".ln-d")].every((d) => !d.hidden);
+    b.click();
+    await new Promise((r) => setTimeout(r, 150));
+    const closed = [...document.querySelectorAll(".ln-d")].every((d) => d.hidden);
+    return opened && closed ? "ok" : `opened=${opened} closed=${closed}`;
+  });
+  ok("podcasts: expand-all opens and closes every point", /^(ok|no control)/.test(all), all);
+
+  await page.evaluate(() => { location.hash = ""; });
+  await page.waitForTimeout(300);
 });
 
 await checkPage("/home", "home book", async (page) => {

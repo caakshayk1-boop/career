@@ -1,7 +1,9 @@
 # career.askakshay.com — The Campaign
 
-A private working surface for the 2026 job search. One page, no build step, no
-API, no database, no secrets.
+A private working surface for the 2026 job search. Static pages served from an
+assets-only Cloudflare Worker: no build step, no server, no database. The one
+thing that is not static is the podcast pipeline, which runs in GitHub Actions
+and commits its output as an asset — see below.
 
 ## What it is
 
@@ -17,6 +19,29 @@ API, no database, no secrets.
 | 08 | Market intel | Malaysia EP thresholds (verified at source) and UAE bands |
 | 09 | Money | Negotiation order, anchors, scripts |
 | 10 | The long game | Process discipline over outcome |
+
+### `/podcasts` — Podcast Intelligence
+
+Two- and three-hour conversations cut down to **10–20 scannable points**, each
+one a sentence somebody actually said, at the moment they said it. Tap a point
+to read it back in the passage it came from. Seven days, then it is gone.
+
+**Every point is verbatim.** Nothing on the page is written by a machine, which
+is why nothing on it can be made up — and also why there is no commentary on
+what any of it means. It selects sentences; it does not write them.
+
+**It costs nothing to run.** No API key, no model, no transcription bill, no npm
+dependency. Transcripts come from what shows already publish
+(`<podcast:transcript>` or a YouTube caption track) and the points are chosen by
+a scoring function in this repo. A morning run is about thirty seconds of GitHub
+Actions time and prints `≈ $0.000`.
+
+The paid interpretation layer still exists behind a flag — `EXTRACTOR=ai` plus an
+`ANTHROPIC_API_KEY` adds ranking, a rationale per point and a written summary at
+roughly $0.50 an episode. Nothing else changes.
+
+The pipeline — how points are chosen, what it will not do, and the one thing
+that will bite you — is documented in [`pipeline/README.md`](pipeline/README.md).
 
 ### `/home` — The Home Book
 
@@ -43,11 +68,21 @@ edit the feeding or red-flag sections, keep that rule.
 ## Running it
 
 ```bash
+npm install
 npx wrangler dev
 ```
 
 Or any static server — `python3 -m http.server --directory public`. There is
-nothing to compile.
+nothing to compile. The one dependency (`@anthropic-ai/sdk`) is loaded on demand
+by the optional paid extractor only — the default pipeline runs from a bare
+checkout with no `npm install` at all.
+
+```bash
+npm run check              # load all three pages in a real browser and assert behaviour
+npm run podcasts:test      # the pipeline's own suite — offline, no keys, ~2s
+npm run podcasts:verify    # confirm every configured podcast feed is the show it claims to be
+npm run podcasts:dry       # a full run that writes nothing
+```
 
 ## Deploying
 
@@ -63,6 +98,29 @@ no reason to hold a second public hostname.
 
 `robots.txt` disallows everything and the page is `noindex,nofollow`. It is not
 secret, but it is not for search engines.
+
+## The morning job
+
+`.github/workflows/podcasts.yml` runs at 22:30 UTC — 06:30 MYT — reads the
+configured feeds, processes what is new, and commits `public/podcasts.json`.
+That push triggers the deploy workflow, which ships it. **It requires no
+secrets.** Two files change on a normal morning: the artifact and
+`pipeline/state.json`, the ledger that stops the job reprocessing the same
+conversation twice.
+
+**It is idempotent.** Run it twice and the second run does nothing. Episode
+identity comes from the feed's own GUID, never the title — shows retitle
+episodes after publishing, and a title-derived id would bring every one of them
+back as new.
+
+**Nothing is published to hit a number.** Below the floor of 10 points the
+episode is held as `NEEDS_REVIEW` and does not appear at all.
+
+**A source that publishes no transcript cannot be read.** Without a paid
+transcription key, an episode needs either a `<podcast:transcript>` URL or a
+YouTube caption track. Anything else is skipped, with that reason, before any
+work is done. `npm run podcasts:verify` reports which case every source is in —
+run it before enabling a source.
 
 ## State
 
@@ -83,6 +141,27 @@ blocked, rather than returning null.
   pair clears WCAG AA in both themes, lowest 5.33:1.)
 - **Counts are asserted in three places** — the `<h2>`, the hero stat and a code
   comment. If you add questions to `BANK`, update all three.
+
+## Verified 2026-09-10 — podcast intelligence
+
+- 143 pipeline checks pass offline (feed parsing, VTT/SRT/JSON transcripts,
+  episode identity, eligibility, host detection, verbatim guarantee, timeline
+  spread, chunk coverage, grounding, timestamp repair, deduplication, retry,
+  retention, idempotence, end-to-end)
+- a full run rehearsed against a local feed with **no credentials of any kind**
+  and **no `node_modules`**: 4 discovered, 2 processed, 20 points each,
+  `≈ $0.000`, 0.8s — and a second run correctly did nothing
+- `/podcasts` exercised in Chromium: 20 collapsed points, expand one, expand
+  all, timestamps, passage expansion, the empty state, and 320px with no
+  sideways scroll
+- `/` still renders; §12 Life leads with points and read-time
+
+**Not verified from here, and you must do it before the first real run:** the
+feed URLs in `pipeline/sources.json` were written in an offline environment and
+are marked `"verified": false`. Egress in that environment reached npm and
+GitHub only, so no podcast feed was ever fetched. Run `npm run podcasts:verify`
+— it fetches each one, prints the show title and newest episode, and says
+whether it can be read for free.
 
 ## Verified 2026-09-03
 
