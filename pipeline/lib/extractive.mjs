@@ -25,7 +25,7 @@
  * restatement. Cutting those is worth more than any amount of clever ranking
  * over what is left.
  */
-import { content, coverage, hhmmss } from "./text.mjs";
+import { content, coverage, hhmmss, words } from "./text.mjs";
 
 /* ── SIGNALS ───────────────────────────────────────────────────────────────
    Weights are deliberately blunt integers. Fractional tuning here is fitting
@@ -39,27 +39,87 @@ const SIGNALS = [
   { w: 2.2, re: /[$£€]\s?\d|\b\d+\s*(million|billion|thousand|k\b|m\b|bn\b)/i, why: "money" },
   { w: 1.6, re: /\b(\d+|one|two|three|four|five|six|seven|ten|twenty)\s+(years?|months?|weeks?|days?|hours?|people|companies|times)\b/i, why: "magnitude" },
 
-  /* Causal structure. "X because Y" and "which means Z" are where a claim
-     stops being an observation and becomes a mechanism. */
-  { w: 2.4, re: /\b(because|which means|the reason (is|was|why)|so that|therefore|as a result|that's why|leads to|causes)\b/i, why: "causal" },
+  /* Causal structure — but only when the sentence carries the claim AND the
+     reason. "because" is one of the most common words in speech and matches a
+     dependent fragment just as readily as a mechanism, so the signal is scored
+     by `causalMidSentence` below rather than by a bare regex. The first
+     production run returned thirteen points containing "because", most of them
+     fragments, because this was a plain 2.4-weight match. */
+  { w: 1.4, re: /\b(which means|the reason (is|was)|therefore|as a result|leads to|causes|so that you)\b/i, why: "causal" },
 
   /* Correction and contrast. The highest-value thing in an interview is
      usually the moment the guest disagrees with the obvious answer. */
-  { w: 2.6, re: /\b(most people (think|believe|assume)|contrary to|the opposite|counterintuitive|actually,|in fact,|but the truth|what nobody|the mistake|got (it )?wrong|turns out)\b/i, why: "counterintuitive" },
+  { w: 2.6, re: /\b(most people (think|believe|assume)|contrary to|the opposite|counterintuitive|in fact,|but the truth|what nobody|the mistake|got (it )?wrong|turns out)\b/i, why: "counterintuitive" },
 
   /* Rules, frameworks and definitions — the things that transfer to another
      situation, which is the whole point of listening to somebody else's. */
   { w: 2.0, re: /\b(the rule (is|was)|the key (is|was)|what matters is|the way to|the trick is|I (always|never)|you (have to|need to|should)|the question (I|to) ask)\b/i, why: "rule" },
-  { w: 1.4, re: /\b(is defined as|means that|is really about|is not|isn't about|the difference between)\b/i, why: "definition" },
+  { w: 1.4, re: /\b(is defined as|means that|is really about|isn't about|the difference between)\b/i, why: "definition" },
 
   /* Enumeration. "Three things" almost always introduces a list worth having. */
   { w: 1.5, re: /\b(first(ly)?|second(ly)?|third(ly)?|two things|three things|the first|the second)\b/i, why: "enumerated" },
 
   /* Personal specificity — a concrete lived example rather than a generality. */
-  { w: 1.2, re: /\b(I (learned|realised|realized|discovered|changed|stopped|started)|we (tried|built|shipped|cut|hired))\b/i, why: "concrete" },
+  { w: 1.2, re: /\b(I (learned|realised|realized|discovered|changed|stopped|started)|we (tried|built|shipped|cut|hired|tested|found))\b/i, why: "concrete" },
 ];
 
-/* Sentences that are structurally not takeaways, however well they score. A
+/**
+ * DOES THIS SENTENCE STAND ALONE?
+ *
+ * The hard gate, and the most important function in this file. A takeaway is
+ * read out of context by definition — it sits in a list, with no sentence
+ * before it — so a sentence that depends on the one before it is not a
+ * takeaway however much information it contains. Speech is full of them:
+ *
+ *   "Because some people haven't figured out what their goal is."
+ *   "That is because selfless helpers, their entire story is about giving."
+ *   "It's actually just because you haven't learned the mechanics."
+ *
+ * Each is a fragment whose subject lives in the previous sentence. Scoring them
+ * down is not enough — a fragment with a number in it still wins. They are
+ * rejected outright.
+ */
+const DEPENDENT = [
+  /* Opens with a subordinating conjunction: the main clause is elsewhere. */
+  /^\s*(because|so that|which|whereas|although|though|unless|until|whether|plus|and|but|or|nor)\b/i,
+  /* Demonstrative or pronoun + copula with no antecedent in the sentence. */
+  /^\s*(this|that|these|those|it|there|they|he|she)\s*('s|s\b|\s+(is|was|are|were|means|explains))/i,
+  /* "The reason why…" without the thing it is the reason FOR. */
+  /^\s*(the reason why|that('s| is) (why|because|when|how)|which is why)\b/i,
+];
+
+/* Talk ABOUT the conversation rather than in it. Never a takeaway, however it
+   scores — the reader is not in the room. */
+const META = [
+  /\b(we're talking|I'm asking|let me ask you|let's (double click|talk about|move on)|as I (said|mentioned)|earlier (on )?in this (episode|conversation)|coming back to|going back to|to your point)\b/i,
+  /\b(this (episode|podcast|conversation|show)|the last question|my next question|before we (start|finish|go))\b/i,
+];
+
+/**
+ * Disfluency: the same words repeated inside one sentence, which is what a
+ * person restarting mid-thought produces — "I want to, I want to", "my
+ * planners, my planners", "we're processing, we're processing". Reads as
+ * broken text on a page even when the underlying point is fine.
+ */
+function stutterRatio(text) {
+  const w = words(text);
+  if (w.length < 6) return 0;
+  let repeats = 0;
+  for (let i = 0; i + 3 < w.length; i++)
+    for (let j = i + 2; j + 1 < w.length && j < i + 7; j++)
+      if (w[i] === w[j] && w[i + 1] === w[j + 1]) { repeats++; break; }
+  return repeats / w.length;
+}
+
+/** Is the causal connective doing real work — a claim on one side, a reason on
+ *  the other — rather than opening a fragment? */
+function causalMidSentence(text) {
+  const m = /\b(because|since|which is why|so that)\b/i.exec(text);
+  if (!m || m.index < 25) return false;
+  return content(text.slice(0, m.index)).length >= 4 && content(text.slice(m.index)).length >= 4;
+}
+
+/* Sentences that are structurally not takeaways/* Sentences that are structurally not takeaways, however well they score. A
    question is the host's job, not the guest's insight; agreement noise is
    conversational glue. These are removed before scoring, not penalised during
    it — a heavily-penalised sentence can still win, and none of these should
@@ -135,17 +195,29 @@ export function findHost(sents) {
 function score(sent, vocab, host, duration) {
   const text = sent.text;
 
-  /* A question is not a takeaway. This is a hard exclusion, not a penalty. */
-  if (/\?\s*$/.test(text)) return null;
+  /* ── HARD GATES ────────────────────────────────────────────────────────
+     Exclusions, not penalties. A penalised sentence with a number in it still
+     wins, and every one of these is disqualifying no matter what else it
+     contains. */
+  if (/\?\s*$/.test(text)) return null;              // a question is the host's job
   if (NEVER.some((re) => re.test(text))) return null;
+  if (DEPENDENT.some((re) => re.test(text))) return null;  // needs the sentence before it
+  if (META.some((re) => re.test(text))) return null;       // about the conversation, not in it
 
   const cw = content(text);
   if (cw.length < 6) return null;                 // too thin to say anything
   if (text.length > 420) return null;             // a run-on, not a point
+  if (stutterRatio(text) > 0.14) return null;     // a restarted thought, not a sentence
 
   let s = 0;
   const why = [];
   for (const sig of SIGNALS) if (sig.re.test(text)) { s += sig.w; why.push(sig.why); }
+
+  /* Causality is scored here rather than as a regex signal, because "because"
+     matches a mechanism and a fragment equally well and the fragment is far
+     more common in speech. It only counts when there is a claim on one side of
+     the connective and a reason on the other. */
+  if (causalMidSentence(text)) { s += 2.0; why.push("causal"); }
 
   /* Centrality: how much of this sentence's vocabulary recurs across the whole
      conversation. The classic extractive signal — a sentence about what the
@@ -165,6 +237,18 @@ function score(sent, vocab, host, duration) {
   /* Filler, proportionally. */
   const filler = (text.match(FILLER) || []).length;
   s -= filler * 0.9;
+
+  /* A sentence that opens on a pronoun is usually still reaching back for its
+     subject even when it survives the DEPENDENT gate. Not disqualifying —
+     "I always assume the best in people" is fine — but it should lose to a
+     sentence that names what it is about. */
+  if (/^\s*(it|this|that|they|these|those|there|we|he|she)\b/i.test(text)) s -= 1.1;
+
+  /* Reward a sentence that names something. Proper nouns and long content
+     words are the cheapest proxy for "this is about a specific thing" that
+     does not need a parser. */
+  const named = (text.match(/\b[A-Z][a-z]{3,}/g) || []).filter((w, i) => i > 0).length;
+  s += Math.min(1.2, named * 0.4);
 
   /* The host frames, the guest claims. Only applied when diarisation told us
      who is who — guessing would systematically demote the wrong person. */
