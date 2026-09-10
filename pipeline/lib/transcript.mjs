@@ -58,66 +58,37 @@ function pickOrder(ep) {
 
 const PROVIDERS = {
   /**
-   * YouTube caption tracks.
+   * YouTube captions.
    *
-   * BE HONEST ABOUT THIS ONE: the timedtext endpoint is not a documented API.
-   * It works, it needs no key, and it is by far the cheapest transcript
-   * available — but it is fetched from a datacentre IP here and Google
-   * sometimes answers those with an empty body rather than an error. That is
-   * why it is a provider behind an interface and not the pipeline's backbone:
-   * when it returns nothing, the run falls through to ASR or the episode is
-   * recorded FAILED with the reason. It never degrades into publishing an
-   * episode with invented timestamps.
+   * TWO ROUTES, AND THE ORDER MATTERS.
+   *
+   * The bare timedtext endpoint needs no key and is the obvious one, but Google
+   * serves it EMPTY to datacentre IPs — which is every CI runner. Twelve
+   * readable episodes came back "no caption track" from GitHub Actions while
+   * having perfectly good auto-captions.
+   *
+   * The watch page carries `captionTracks` with a SIGNED baseUrl per track.
+   * Those URLs carry the parameters the bare endpoint is missing and answer
+   * from the same IP it refuses. So: watch page first, bare endpoint as the
+   * fallback for when the page is a consent wall but the endpoint replies.
+   *
+   * Neither is a documented API, and this is why the provider sits behind an
+   * interface rather than being the pipeline's backbone. When both fail the
+   * episode is LISTED with the reason, never deleted and never published with
+   * invented timings.
    */
   async youtube(ep) {
-    /* type=list reports MANUALLY UPLOADED caption tracks only. Almost every
-       podcast channel has none of those and only auto-generated ones, so a bare
-       list request comes back empty and the episode looks captionless when it
-       is not — which is how sixteen readable YouTube episodes were reported as
-       "no caption track published for this video".
-       Auto-captions are fetched by asking for them directly with kind=asr. */
-    const listed = await request(
-      `https://www.youtube.com/api/timedtext?type=list&v=${encodeURIComponent(ep.ytId)}`,
-      { timeout: 20000, retries: 2, label: "yt-captions" }).catch(() => "");
-    const langs = [...String(listed).matchAll(/lang_code="([^"]+)"/g)].map((m) => m[1]);
-    const manual = langs.find((l) => l.startsWith("en")) || langs[0] || "";
+    const tried = [];
 
-    /* Ordered cheapest-first in the sense that matters here: a human-made track
-       is more accurate than ASR, and English before whatever else exists. */
-    const attempts = [
-      manual && `lang=${encodeURIComponent(manual)}`,
-      "lang=en&kind=asr",
-      "lang=en-US&kind=asr",
-      "lang=hi&kind=asr",        // several of these shows are Hindi or Hinglish
-      manual && `lang=${encodeURIComponent(manual)}&kind=asr`,
-    ].filter(Boolean);
+    const fromPage = await captionsFromWatchPage(ep.ytId, tried)
+      .catch((e) => { tried.push(`watch page: ${e.message.slice(0, 60)}`); return null; });
+    if (fromPage) return fromPage;
 
-    let xml = "";
-    for (const q of attempts) {
-      xml = await request(
-        `https://www.youtube.com/api/timedtext?${q}&v=${encodeURIComponent(ep.ytId)}`,
-        { timeout: 25000, retries: 1, label: "yt-captions" }).catch(() => "");
-      if (/<text\b/.test(xml)) break;
-      xml = "";
-    }
-    if (!xml) throw new Error(
-      `no caption track this endpoint will serve (tried ${attempts.length} variants` +
-      `${manual ? `, listed: ${langs.join("/")}` : ", none listed"})`);
-    const lang = manual || "en";
+    const fromApi = await captionsFromTimedText(ep.ytId, tried)
+      .catch((e) => { tried.push(`timedtext: ${e.message.slice(0, 60)}`); return null; });
+    if (fromApi) return fromApi;
 
-    const segments = [...xml.matchAll(/<text start="([\d.]+)"(?:\s+dur="([\d.]+)")?[^>]*>([\s\S]*?)<\/text>/g)]
-      .map((m) => ({
-        t: Math.round(parseFloat(m[1])),
-        d: Math.round(parseFloat(m[2] || "0")),
-        speaker: "",
-        /* Caption XML is double-escaped: &amp;#39; is an apostrophe. One decode
-           pass leaves &#39; sitting in the text and it reaches the page. */
-        text: decode(decode(m[3])).replace(/\s+/g, " ").trim(),
-      }))
-      .filter((s) => s.text);
-
-    if (!segments.length) throw new Error("caption track was empty");
-    return finish("youtube-captions", lang, segments);
+    throw new Error(`no caption track reachable — ${tried.join("; ")}`);
   },
 
   /**
@@ -203,6 +174,94 @@ function finish(provider, language, segments) {
     durationSec: last ? last.t + (last.d || 0) : 0,
     chars: segments.reduce((n, s) => n + s.text.length, 0),
   };
+}
+
+/**
+ * The watch page's own caption index.
+ *
+ * YouTube embeds a player config containing `captionTracks`, each with a signed
+ * `baseUrl`. Fetching that URL returns the same timedtext XML the public
+ * endpoint would, but with the parameters that make it actually answer.
+ */
+async function captionsFromWatchPage(videoId, tried) {
+  const BROWSER = {
+    /* A real browser UA and a consent cookie. Without them the response is a
+       cookie wall carrying no player config at all. */
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "accept-language": "en-US,en;q=0.9",
+    cookie: "CONSENT=YES+cb; SOCS=CAI",
+  };
+
+  const html = await request(`https://www.youtube.com/watch?v=${encodeURIComponent(videoId)}`,
+    { timeout: 30000, retries: 2, label: "yt-page", headers: BROWSER });
+
+  const block = html.match(/"captionTracks":\s*(\[.*?\])/s);
+  if (!block) {
+    tried.push(/consent\.youtube\.com|CONSENT_BUMP/.test(html)
+      ? "watch page: consent wall" : "watch page: no captionTracks in the player config");
+    return null;
+  }
+
+  let tracks;
+  try { tracks = JSON.parse(block[1].replace(/\\u0026/g, "&")); }
+  catch { tried.push("watch page: captionTracks did not parse"); return null; }
+  if (!Array.isArray(tracks) || !tracks.length) { tried.push("watch page: zero tracks"); return null; }
+
+  /* A human-made English track first, then auto English, then anything at all —
+     several of these shows are Hindi or Hinglish, and an ASR Hindi track is far
+     better than no transcript. */
+  const pick =
+    tracks.find((t) => /^en/i.test(t.languageCode || "") && t.kind !== "asr") ||
+    tracks.find((t) => /^en/i.test(t.languageCode || "")) ||
+    tracks[0];
+  if (!pick || !pick.baseUrl) { tried.push("watch page: track carries no url"); return null; }
+
+  const xml = await request(pick.baseUrl.replace(/\\u0026/g, "&"),
+    { timeout: 30000, retries: 2, label: "yt-captions", headers: BROWSER });
+
+  const segments = parseTimedText(xml);
+  if (!segments.length) { tried.push(`watch page: the ${pick.languageCode} track was empty`); return null; }
+  return finish("youtube-captions", pick.languageCode || "en", segments);
+}
+
+/** The bare public endpoint. Kept as a fallback: it occasionally answers when
+ *  the watch page is a consent wall. */
+async function captionsFromTimedText(videoId, tried) {
+  const listed = await request(
+    `https://www.youtube.com/api/timedtext?type=list&v=${encodeURIComponent(videoId)}`,
+    { timeout: 20000, retries: 1, label: "yt-captions" }).catch(() => "");
+  const langs = [...String(listed).matchAll(/lang_code="([^"]+)"/g)].map((m) => m[1]);
+  const manual = langs.find((l) => l.startsWith("en")) || langs[0] || "";
+
+  /* type=list reports MANUALLY UPLOADED tracks only, and almost every podcast
+     channel has none. Auto-captions must be asked for by name. */
+  const attempts = [
+    manual && `lang=${encodeURIComponent(manual)}`,
+    "lang=en&kind=asr", "lang=en-US&kind=asr", "lang=hi&kind=asr",
+  ].filter(Boolean);
+
+  for (const q of attempts) {
+    const xml = await request(
+      `https://www.youtube.com/api/timedtext?${q}&v=${encodeURIComponent(videoId)}`,
+      { timeout: 25000, retries: 1, label: "yt-captions" }).catch(() => "");
+    const segments = parseTimedText(xml);
+    if (segments.length) return finish("youtube-captions", manual || "en", segments);
+  }
+  tried.push(`timedtext: ${attempts.length} variants empty${manual ? `, listed ${langs.join("/")}` : ", none listed"}`);
+  return null;
+}
+
+/** YouTube's timedtext XML. Entities are DOUBLE-escaped in it — one decode pass
+ *  leaves `&#39;` sitting in the text and it reaches the page. */
+export function parseTimedText(xml) {
+  return [...String(xml).matchAll(/<text start="([\d.]+)"(?:\s+dur="([\d.]+)")?[^>]*>([\s\S]*?)<\/text>/g)]
+    .map((m) => ({
+      t: Math.round(parseFloat(m[1])),
+      d: Math.round(parseFloat(m[2] || "0")),
+      speaker: "",
+      text: decode(decode(m[3])).replace(/\s+/g, " ").trim(),
+    }))
+    .filter((s) => s.text);
 }
 
 /**

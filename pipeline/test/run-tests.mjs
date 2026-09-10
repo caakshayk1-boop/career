@@ -41,7 +41,7 @@ const { extract, extractLocal } = await import("../lib/extract.mjs");
 const { makeAI } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
 const { request } = await import("../lib/http.mjs");
-const { assessQuality, parseCues, parseJsonTranscript } = await import("../lib/transcript.mjs");
+const { assessQuality, parseCues, parseJsonTranscript, parseTimedText } = await import("../lib/transcript.mjs");
 const { TRANSCRIPT, EPISODE, SEGMENTS } = await import("./fixtures/transcript.mjs");
 const MESSY = await import("./fixtures/messy.mjs");
 const { mytDate } = await import("../config.mjs");
@@ -203,6 +203,23 @@ group("the default cap agrees with itself");
   const ymlMax = yml.match(/TARGET_LEARNINGS:\s*\$\{\{\s*vars\.TARGET_LEARNINGS\s*\|\|\s*'(\d+)'/);
   ok("and the ceiling",
     ymlMax && Number(ymlMax[1]) === cfg.targetLearnings, ymlMax ? `${ymlMax[1]} vs ${cfg.targetLearnings}` : "not found");
+}
+
+group("youtube caption XML");
+{
+  const xml = '<transcript>' +
+    '<text start="4.1" dur="3.8">it&amp;#39;s the mechanics of conversation</text>' +
+    '<text start="12" dur="2">second line &amp;amp; more</text>' +
+    '<text start="20" dur="1">   </text></transcript>';
+  const r = parseTimedText(xml);
+  ok("timedtext parses", r.length === 2, r.length);
+  /* Entities are DOUBLE escaped in this format. One decode pass leaves &#39;
+     sitting in the text and it reaches the page as literal characters. */
+  ok("entities are decoded twice", r[0].text === "it's the mechanics of conversation", r[0].text);
+  ok("and ampersands survive", r[1].text === "second line & more", r[1].text);
+  ok("blank cues are dropped", r.every((x) => x.text));
+  ok("offsets are seconds", r[0].t === 4 && r[1].t === 12);
+  ok("junk yields nothing rather than throwing", parseTimedText("<html>consent</html>").length === 0);
 }
 
 group("what can be read without paying");
