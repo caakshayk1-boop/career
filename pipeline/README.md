@@ -96,6 +96,21 @@ a transcription key later picks those episodes up rather than skipping them
 forever. It is subject to the same 7-day window as everything else, so it is a
 list of what is current and not a graveyard.
 
+**Three things that used to delete an episode now list it instead:**
+
+| | |
+|---|---|
+| No free transcript | listed as pending |
+| A processing failure (`no caption track published for this video`) | listed, with the reason |
+| Over the daily cap | listed, and picked up on the next run |
+
+**Curated sources skip the age and duration gates.** The desk feed is today's
+list — somebody already decided these episodes matter — so filtering them by air
+date asks the wrong question, and an episode that aired three weeks ago but
+appears in today's digest belongs on today's page. They are dated by the digest,
+not by the air date. Without this, 18 of 20 desk episodes vanished on the first
+run that used the source.
+
 A feature meant to add depth must never remove content.
 
 ## Transcripts, and the one thing that will bite you

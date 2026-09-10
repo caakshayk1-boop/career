@@ -156,6 +156,12 @@ async function discoverDesk(source) {
         /* Whatever one-liner the feed already carried. Kept so a PENDING entry
            still shows what it always showed rather than becoming a bare title. */
         deskTakeaways: [].concat(e.takeaways || e.takeaway || []).filter(Boolean).map(String),
+        /* CURATED. The desk feed is today's list — somebody already decided
+           these are the episodes worth knowing about. Filtering them by air
+           date is the wrong question: an episode that aired three weeks ago and
+           appears in today's digest belongs on today's page. Eligibility skips
+           the age check for these, and retention dates them by the digest. */
+        curated: true,
       };
       rec.id = episodeId(source.id, rec);
       return rec;
@@ -183,16 +189,18 @@ export function selectEligible(candidates, state, isSettled) {
       skipped.push({ id: c.id, title: c.title, reason, pending, episode: pending ? c : null });
 
     if (isSettled(state, c.id)) { skip("already processed"); continue; }
-    if (!c.publishedAt) { skip("no usable publish date"); continue; }
+    if (!c.publishedAt && !c.curated) { skip("no usable publish date"); continue; }
 
-    const ageHours = (now - Date.parse(c.publishedAt)) / 3600000;
-    if (ageHours > cfg.maxLookbackHours) { skip(`older than ${cfg.maxLookbackHours}h`); continue; }
-    if (ageHours < -2) { skip("published in the future"); continue; }
+    if (!c.curated) {
+      const ageHours = (now - Date.parse(c.publishedAt)) / 3600000;
+      if (ageHours > cfg.maxLookbackHours) { skip(`older than ${cfg.maxLookbackHours}h`); continue; }
+      if (ageHours < -2) { skip("published in the future"); continue; }
+    }
 
     /* Duration of 0 means the feed did not declare one. That is common and not
        a reason to skip — the transcript step will find out. Only an explicitly
        declared out-of-range duration is disqualifying. */
-    const mins = c.durationSec / 60;
+    const mins = c.curated ? 0 : c.durationSec / 60;
     if (c.durationSec && mins < cfg.minEpisodeMinutes) { skip(`${Math.round(mins)}m — under the ${cfg.minEpisodeMinutes}m floor`); continue; }
     if (c.durationSec && mins > cfg.maxEpisodeMinutes) { skip(`${Math.round(mins)}m — over the ${cfg.maxEpisodeMinutes}m ceiling`); continue; }
     /* FAIL FAST, AND SAY WHY. An episode with an audio URL and no transcript is
@@ -214,7 +222,11 @@ export function selectEligible(candidates, state, isSettled) {
      three that happened to sort first alphabetically. */
   eligible.sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
   const over = eligible.splice(cfg.maxDailyEpisodes);
-  for (const o of over) skip2(skipped, o, `over the ${cfg.maxDailyEpisodes}/day cap`);
+  for (const o of over)
+    /* A curated item over the cap is still shown, as a title. Silently dropping
+       it recreates the "where did my podcasts go" problem one layer down. */
+    skipped.push({ id: o.id, title: o.title, reason: `over the ${cfg.maxDailyEpisodes}/day cap`,
+                   pending: Boolean(o.curated), episode: o.curated ? o : null });
 
   run.counts.eligible += eligible.length;
   run.counts.skipped += skipped.length;

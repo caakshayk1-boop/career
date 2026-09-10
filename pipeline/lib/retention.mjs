@@ -39,7 +39,7 @@ export function buildPending(entries) {
       return {
         id: e.id, title: e.title, show: e.show, url: e.url,
         takeaways: e.deskTakeaways || [],
-        date: mytDate(new Date(e.publishedAt || Date.now())),
+        date: mytDate(e.curated ? new Date() : new Date(e.publishedAt || Date.now())),
         reason: s.reason,
       };
     })
@@ -48,6 +48,15 @@ export function buildPending(entries) {
       return age >= 0 && age < cfg.publicRetentionDays;
     })
     .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+/** Merge pending entries from eligibility and from processing failures, keeping
+ *  one row per episode. Both paths can name the same episode when a run retries
+ *  something that was pending yesterday. */
+export function mergePending(...lists) {
+  const by = new Map();
+  for (const list of lists) for (const p of list || []) if (p && p.id) by.set(p.id, p);
+  return [...by.values()].sort((a, b) => String(b.date).localeCompare(String(a.date)));
 }
 
 export function buildPublic(episodes, extra = {}) {
