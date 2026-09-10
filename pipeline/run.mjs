@@ -27,7 +27,7 @@ import { extract, extractLocal, meta, script } from "./lib/extract.mjs";
 import { validateLearnings, verdict } from "./lib/validate.mjs";
 import { makeAI, estimateCost } from "./lib/ai.mjs";
 import { makeAudio } from "./lib/audio.mjs";
-import { buildPublic, pruneState } from "./lib/retention.mjs";
+import { buildPublic, buildPending, pruneState } from "./lib/retention.mjs";
 
 const argv = new Set(process.argv.slice(2));
 const REPUBLISH_ONLY = argv.has("--republish");
@@ -45,6 +45,8 @@ const S = {
   PUBLISHED: "PUBLISHED", NEEDS_REVIEW: "NEEDS_REVIEW", FAILED: "FAILED", SKIPPED: "SKIPPED",
 };
 
+let pending = [];
+
 async function main() {
   const state = loadState();
   const LOCAL = cfg.extractor === "local";
@@ -61,11 +63,18 @@ async function main() {
 
     const candidates = (await Promise.all(sources.map(discover))).flat();
     const { eligible, skipped } = selectEligible(candidates, state, isSettled);
+    /* Held for the artifact: everything the reader was told about that we could
+       not read. These are shown as titles rather than removed from the page. */
+    pending = buildPending(skipped);
 
     for (const s of skipped) {
       /* Only ineligibility that will still hold tomorrow is written to the
          ledger. "over the daily cap" must NOT settle the episode — it is
          genuinely eligible and should be picked up on the next run. */
+      /* An episode we could not READ is not settled — it is pending, and a
+         later run with different providers configured should pick it up. Only
+         permanent ineligibility is written to the ledger. */
+      if (s.pending) continue;
       if (/^(older than|no usable|published in the future|under the|over the \d+m)/.test(s.reason))
         remember(state, s.id, { status: S.SKIPPED, reason: s.reason, title: s.title });
     }
@@ -89,6 +98,7 @@ async function main() {
     .map((e) => e.payload);
 
   const doc = buildPublic(published, {
+    pending,
     generator: {
       processingVersion: cfg.processingVersion, promptVersion: cfg.promptVersion,
       extractor: cfg.extractor, ai: ai ? `${ai.name}:${ai.model}` : "none", tts: audio.name,

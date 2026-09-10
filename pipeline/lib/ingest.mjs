@@ -24,6 +24,7 @@ const YT_ID = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([\w-
 /** Discover from one configured source. Never throws: one dead feed must not
  *  take the other four down with it. */
 export async function discover(source) {
+  if (source.type === "desk") return discoverDesk(source);
   try {
     const xml = await request(feedUrl(source), {
       timeout: 25000, retries: 3, label: "ingest",
@@ -102,6 +103,74 @@ function toIso(s) {
 }
 
 /**
+ * The desk feed — the podcast list this site already had.
+ *
+ * WHY THIS IS A SOURCE AND NOT A FALLBACK. §12 has listed these episodes since
+ * before any of this existed, and the first version of Podcast Intelligence
+ * REPLACED that list the moment it processed one episode of its own. That is
+ * the wrong shape: the desk feed is the curated list of what to read, so it
+ * belongs at the front of the pipeline, not behind it as a consolation prize.
+ *
+ * It carries no media URL and no transcript — just a title, a show and a link —
+ * so what happens next depends entirely on where that link points. A YouTube
+ * link can be read for free. Anything else is listed as PENDING rather than
+ * dropped, because an episode disappearing from the page is exactly the
+ * complaint this is fixing.
+ */
+async function discoverDesk(source) {
+  try {
+    const doc = await request(source.url, {
+      timeout: 25000, retries: 3, label: "desk", as: "json",
+      headers: { "user-agent": "career.askakshay.com podcast-intelligence/1.0" },
+    });
+
+    /* Read it exactly as index.html reads it, key fallbacks and all — the
+       producer lives in another repo and the two must not disagree about what
+       the payload is called. */
+    const pod = doc?.desk?.podcasts ?? doc?.podcasts;
+    const list = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
+
+    if (list.length) {
+      /* Logged once per run: the shape is defined elsewhere and this is the
+         only way a change in it becomes visible before it becomes a bug. */
+      log.info("desk", `keys on the first item: ${Object.keys(list[0]).join(",")}`);
+    }
+
+    const out = list.map((e) => {
+      const url = e.link || e.url || "";
+      const ytId = (String(url).match(YT_ID) || [])[1] || "";
+      const rec = {
+        sourceId: source.id,
+        show: e.show || e.author || e.podcast || source.show || "Podcast",
+        type: ytId ? "youtube" : "link",
+        title: e.title || "",
+        url, ytId,
+        audioUrl: e.audio || e.enclosure || "",
+        transcriptUrl: e.transcript || "",
+        transcriptType: "",
+        guid: url || e.id || e.guid || e.title || "",
+        publishedAt: toIso(e.published || e.date || e.pubDate) || new Date().toISOString(),
+        durationSec: durationSeconds(e.duration),
+        description: stripHtml(e.summary || e.description || ""),
+        image: e.image || e.thumbnail || "",
+        /* Whatever one-liner the feed already carried. Kept so a PENDING entry
+           still shows what it always showed rather than becoming a bare title. */
+        deskTakeaways: [].concat(e.takeaways || e.takeaway || []).filter(Boolean).map(String),
+      };
+      rec.id = episodeId(source.id, rec);
+      return rec;
+    }).filter((r) => r.title);
+
+    log.info("ingest", `${source.id}: ${out.length} items`);
+    run.counts.discovered += out.length;
+    return out;
+  } catch (e) {
+    log.fail("ingest", source.id, e.message);
+    return [];
+  }
+}
+
+/**
  * @returns {{eligible: object[], skipped: {id:string,title:string,reason:string}[]}}
  */
 export function selectEligible(candidates, state, isSettled) {
@@ -110,7 +179,8 @@ export function selectEligible(candidates, state, isSettled) {
   const eligible = [];
 
   for (const c of candidates) {
-    const skip = (reason) => skipped.push({ id: c.id, title: c.title, reason });
+    const skip = (reason, pending = false) =>
+      skipped.push({ id: c.id, title: c.title, reason, pending, episode: pending ? c : null });
 
     if (isSettled(state, c.id)) { skip("already processed"); continue; }
     if (!c.publishedAt) { skip("no usable publish date"); continue; }
@@ -130,7 +200,11 @@ export function selectEligible(candidates, state, isSettled) {
        a time, after the run has already spent time on it, produces a morning of
        identical FAILED rows and no obvious cause. Check the configuration here,
        once, and name the fix. */
-    if (!transcribable(c)) { skip(untranscribableReason(c)); continue; }
+    /* NOT A DROP. An episode we cannot read is still an episode the reader was
+       told about, so it is marked pending and shown as a title — which is what
+       it always was — rather than vanishing from the page. Removing content
+       because we could not improve it is worse than leaving it alone. */
+    if (!transcribable(c)) { skip(untranscribableReason(c), true); continue; }
 
     eligible.push(c);
   }

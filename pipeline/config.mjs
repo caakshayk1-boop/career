@@ -39,10 +39,17 @@ export const cfg = {
   /* ── COST CONTROL ───────────────────────────────────────────────────────
      A 3-hour podcast is not free. These are the brakes.
      maxDailyEpisodes is a hard stop on a single run, not a target. */
-  maxDailyEpisodes: int(process.env.MAX_DAILY_EPISODES, 2),
+  /* Raised from 2. The desk feed is a curated daily list and the reader expects
+     to see all of it, not the two most recent — a cap that quietly drops the
+     rest recreates the "where did my podcasts go" problem in a different place.
+     It stays a cap because it is still the only brake on a runaway feed. */
+  maxDailyEpisodes: int(process.env.MAX_DAILY_EPISODES, 12),
   maxEpisodeMinutes: int(process.env.MAX_EPISODE_MINUTES, 240),
   minEpisodeMinutes: int(process.env.MIN_EPISODE_MINUTES, 20),
-  maxLookbackHours: int(process.env.MAX_LOOKBACK_HOURS, 72),
+  /* 8 days, one more than the public window: an episode that appears in the
+     desk feed a few days after airing should still be processed while it can
+     still be shown. */
+  maxLookbackHours: int(process.env.MAX_LOOKBACK_HOURS, 192),
 
   /* ── EXTRACTION ─────────────────────────────────────────────────────────
      targetLearnings is a CEILING, never a quota. minLearnings is the floor
