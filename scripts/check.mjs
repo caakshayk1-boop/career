@@ -171,13 +171,28 @@ await checkPage("/podcasts", "podcasts", async (page) => {
       lazyAudio: document.querySelectorAll('audio:not([preload="none"])').length,
       provenance: (document.querySelector(".note") || {}).textContent || "",
       extractor: ep.extractor || "",
-      /* The guarantee, asserted against the artifact rather than the markup:
-       * on the free path every point must be a substring of its own evidence,
-       * because the point IS the quotation. If this ever fails, something has
-       * started writing text and the page is no longer verbatim. */
+      /* THE GUARANTEE, asserted against the artifact rather than the markup.
+       *
+       * The invariant is `detail` inside `passage`: the passage is assembled
+       * verbatim from transcript segments, so a detail found inside it is
+       * verbatim too. That is the whole claim this page makes.
+       *
+       * It is deliberately NOT asserted against `headline`. The headline is the
+       * scannable pill, which strips leading discourse markers ("So, you know,
+       * …") and is therefore correctly not a substring of the source. An
+       * earlier version of this check compared the two and failed 8 of 20
+       * points for behaving exactly as designed. */
       notVerbatim: (doc.episodes || []).filter((e) => e.extractor === "local")
         .flatMap((e) => e.learnings || [])
-        .filter((l) => !l.evidence || !l.evidence.includes(String(l.headline).replace(/…$/, "").slice(0, 40))).length,
+        .filter((l) => !l.detail || !l.passage || !l.passage.includes(l.detail)).length,
+      /* And the pill must still be honest: whatever it kept must appear in the
+       * detail, in order. Stripping is allowed; rewriting is not. */
+      pillRewritten: (doc.episodes || []).filter((e) => e.extractor === "local")
+        .flatMap((e) => e.learnings || [])
+        .filter((l) => {
+          const tail = String(l.headline).replace(/…$/, "").trim().slice(-40);
+          return tail.length > 12 && l.detail && !l.detail.includes(tail);
+        }).length,
       untimed: (doc.episodes || []).flatMap((e) => e.timestamped ? (e.learnings || []) : [])
         .filter((l) => l.t == null).length,
     };
@@ -194,6 +209,7 @@ await checkPage("/podcasts", "podcasts", async (page) => {
   ok("podcasts: the page explains how the points were chosen",
     /verbatim|interpretation/.test(detail.provenance));
   ok("podcasts: every point is verbatim from its source", detail.notVerbatim === 0, detail.notVerbatim);
+  ok("podcasts: the scannable line strips but never rewrites", detail.pillRewritten === 0, detail.pillRewritten);
   ok("podcasts: a timestamped episode timestamps every point", detail.untimed === 0, detail.untimed);
 
   /* The regression that shipped once: opening a second episode without a page
