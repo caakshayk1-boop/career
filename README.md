@@ -122,6 +122,12 @@ back as new.
 **Nothing is published to hit a number.** Below the floor of 10 points the
 episode is held as `NEEDS_REVIEW` and does not appear at all.
 
+**Nothing disappears either.** The desk feed's podcast list is a source, not a
+fallback: every episode it names is either read into points or listed as
+*pending* — the title and its original one-liner, unchanged, with a note saying
+why it could not be read. The first version replaced that list as soon as it
+processed one episode of its own, which removed content instead of adding it.
+
 **A source that publishes no transcript cannot be read.** Without a paid
 transcription key, an episode needs either a `<podcast:transcript>` URL or a
 YouTube caption track. Anything else is skipped, with that reason, before any

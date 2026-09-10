@@ -1647,59 +1647,80 @@ function renderLearn(d){
   return h || '<div class="empty">No reading in today\'s edition.</div>';
 }
 
-/* PODCASTS. This section used to print an episode title, a link and whatever
-   one-line "takeaway" the upstream feed happened to carry — a list of things
-   you had not listened to, which is a to-do list, not intelligence.
-   /podcasts.json is the real product now: episodes read in full, reduced to the
-   ideas worth knowing, each traceable to the sentence it came from.
+/* PODCASTS.
+   §12 has listed these episodes since before Podcast Intelligence existed, and
+   the first version of this function REPLACED that list the moment one episode
+   was processed — so the rest of the feed vanished. That was the wrong shape.
 
-   The old desk list is kept as the FALLBACK and not deleted. It is what shows
-   before the morning job has ever run, and if the job stops running this
-   section degrades to what it always was rather than to nothing. */
+   Processed and unprocessed are now shown TOGETHER, always. An episode we could
+   read gets its points; one we could not still appears as the title it always
+   was. A feature meant to add depth must never remove content. */
 function renderPodcasts(d){
   const P = window.__PODCASTS;
-  const eps = (P && Array.isArray(P.episodes)) ? P.episodes : [];
+  const done = (P && Array.isArray(P.episodes)) ? P.episodes : [];
+  const pending = (P && Array.isArray(P.pending)) ? P.pending : [];
 
-  if (eps.length) {
-    const learnings = eps.reduce((n, e) => n + ((e.learnings || []).length), 0);
-    const today = eps.filter(e => e.date === (P.today || "")).length;
-    const mins = Math.max(1, Math.round(eps.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
-    return group("Podcast intelligence",
-      `${learnings} points from ${eps.length} conversation${eps.length === 1 ? "" : "s"} in the last ${P.retentionDays || 7} days` +
-      `${today ? `, ${today} of them today` : ""} — about ${mins} minutes to read all of it.`,
-      `<div class="lc">` + eps.slice(0, 6).map(e => {
-        const ls = e.learnings || [];
-        return `<div class="epi">
-          <b><a href="/podcasts#e=${encodeURIComponent(e.id)}">${esc(e.title || "")}</a></b>
-          <span>${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
-            e.durationSec ? " · " + (e.durationSec >= 3600
-              ? Math.floor(e.durationSec/3600) + "h " + (Math.round(e.durationSec%3600/60) || "") + (e.durationSec%3600 >= 30 ? "m" : "")
-              : Math.round(e.durationSec/60) + "m") + " conversation" : ""}</span>
-          ${e.summary ? `<p>${esc(e.summary)}</p>` : ""}
-          <p class="do"><span>${ls.length} points${
-            e.readSeconds ? ` · ${Math.max(1, Math.round(e.readSeconds / 60))} min read` : ""}</span><a href="/podcasts#e=${encodeURIComponent(e.id)}">Read them &rarr;</a></p>
-        </div>`; }).join("") +
-      `</div><p class="do" style="margin-top:12px"><span>All of it</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>`, true);
+  /* The desk feed is still read directly, for anything the pipeline has not
+     seen at all — a source removed from sources.json, or a run that has not
+     happened yet. Deduplicated against both lists by URL. */
+  const pod = d.podcasts;
+  const raw = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
+  const known = new Set([...done, ...pending].map(e => (e.url || "").replace(/[?#].*$/, "")));
+  const unseen = raw.filter(e => {
+    const u = (e.link || e.url || "").replace(/[?#].*$/, "");
+    return !u || !known.has(u);
+  });
+
+  if (!done.length && !pending.length && !unseen.length) return "";
+
+  const points = done.reduce((n, e) => n + ((e.learnings || []).length), 0);
+  const mins = Math.max(1, Math.round(done.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
+  const total = done.length + pending.length + unseen.length;
+
+  const blurb = done.length
+    ? `${points} points from ${done.length} of ${total} conversation${total === 1 ? "" : "s"}` +
+      ` — about ${mins} minutes to read. The rest are listed below as they always were.`
+    : `${total} episode${total === 1 ? "" : "s"}. None has been read yet — the morning job publishes points here.`;
+
+  const readCard = e => {
+    const ls = e.learnings || [];
+    return `<div class="epi">
+      <b><a href="/podcasts#e=${encodeURIComponent(e.id)}">${esc(e.title || "")}</a></b>
+      <span>${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
+        e.durationSec ? " · " + (e.durationSec >= 3600
+          ? Math.floor(e.durationSec/3600) + "h " + (Math.round(e.durationSec%3600/60) || "")
+          : Math.round(e.durationSec/60) + "m") : ""}</span>
+      ${e.summary ? `<p>${esc(e.summary)}</p>` : ""}
+      <p class="do"><span>${ls.length} points${
+        e.readSeconds ? ` · ${Math.max(1, Math.round(e.readSeconds / 60))} min read` : ""}</span><a href="/podcasts#e=${encodeURIComponent(e.id)}">Read them &rarr;</a></p>
+    </div>`;
+  };
+
+  /* Unread episodes keep whatever one-liner the feed carried, so they show
+     exactly what they showed before rather than degrading to a bare title. */
+  const listCard = (title, show, url, takeaways, note) => `<div class="epi">
+    ${url ? `<b><a href="${esc(url)}" target="_blank" rel="noopener">${esc(title)}</a></b>`
+          : `<b>${esc(title)}</b>`}
+    <span>${esc(show || "")}${note ? " · " + esc(note) : ""}</span>
+    ${takeaways && takeaways.length ? `<ul class="tick" style="margin-top:7px">${
+      takeaways.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
+  </div>`;
+
+  let body = "";
+  if (done.length) body += `<div class="lc">` + done.slice(0, 8).map(readCard).join("") + `</div>`;
+
+  const rest = [
+    ...pending.map(p => listCard(p.title, p.show, p.url, p.takeaways, "not readable for free")),
+    ...unseen.map(e => listCard(e.title || "", e.show || e.author || "", e.link || e.url || "",
+      [].concat(e.takeaways || e.takeaway || []).filter(Boolean), e.published || "")),
+  ];
+  if (rest.length) {
+    body += `<div class="lc" style="margin-top:11px">
+      <span class="k">Listed, not yet read — ${rest.length}</span>` + rest.join("") + `</div>`;
   }
 
-  const pod = d.podcasts;
-  const old = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
-  if (!old.length) return "";
-  return group("Podcasts", `${old.length} episodes${pod && pod.shows ? ` from ${pod.shows} shows` : ""}, newest first. ` +
-      `Titles only — the morning job has not published a reading of these yet.`,
-    `<div class="lc">` + old.map(e => {
-      const u = e.link || e.url;
-      const tk = Array.isArray(e.takeaways) ? e.takeaways
-               : (e.takeaways ? [e.takeaways] : (e.takeaway ? [e.takeaway] : []));
-      return `<div class="epi">
-      ${u ? `<b><a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.title || "")}</a></b>`
-          : `<b>${esc(e.title || "")}</b>`}
-      <span>${esc(e.show || e.author || "")}${e.published ? " · " + esc(e.published) : ""}${
-            e.category ? " · " + esc(e.category) : ""}</span>
-      ${tk.length ? `<ul class="tick" style="margin-top:7px">${
-            tk.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
-    </div>`; }).join("") +
-    `</div><p class="do" style="margin-top:12px"><span>When it runs</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>`, true);
+  return group("Podcast intelligence", blurb,
+    body + `<p class="do" style="margin-top:12px"><span>All of it</span><a href="/podcasts">Podcast Intelligence &rarr;</a></p>`, true);
 }
 
 function renderPrac(d){

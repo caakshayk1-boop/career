@@ -22,6 +22,34 @@ import { run } from "./log.mjs";
  * this function is one commit away from being fixed rather than something that
  * has already destroyed data.
  */
+/**
+ * Episodes the reader was told about but which could not be read.
+ *
+ * They appear on the page as titles, which is what they were before any of this
+ * existed. The alternative — showing only what the pipeline could process — is
+ * how a feature that was meant to add depth ends up REMOVING content, and that
+ * is exactly what the first version did.
+ */
+export function buildPending(entries) {
+  const today = mytDate();
+  return entries
+    .filter((s) => s.pending && s.episode)
+    .map((s) => {
+      const e = s.episode;
+      return {
+        id: e.id, title: e.title, show: e.show, url: e.url,
+        takeaways: e.deskTakeaways || [],
+        date: mytDate(new Date(e.publishedAt || Date.now())),
+        reason: s.reason,
+      };
+    })
+    .filter((p) => {
+      const age = daysBetween(p.date, today);
+      return age >= 0 && age < cfg.publicRetentionDays;
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
 export function buildPublic(episodes, extra = {}) {
   const today = mytDate();
 

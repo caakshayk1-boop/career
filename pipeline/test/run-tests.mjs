@@ -36,7 +36,7 @@ const { items, tag, attr, durationSeconds, stripHtml } = await import("../lib/xm
 const { chunk, stripNoise, hhmmss } = await import("../lib/chunk.mjs");
 const { takeaways, sentences, findHost, pill, passageAt } = await import("../lib/extractive.mjs");
 const { validateLearnings, verdict, parseTs } = await import("../lib/validate.mjs");
-const { buildPublic, pruneState } = await import("../lib/retention.mjs");
+const { buildPublic, buildPending, pruneState } = await import("../lib/retention.mjs");
 const { extract, extractLocal } = await import("../lib/extract.mjs");
 const { makeAI } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
@@ -110,9 +110,14 @@ group("eligibility and cost control");
     mk({ id: "nodate", publishedAt: "" }), mk({ id: "fresh2", ageH: 2 }), mk({ id: "fresh3", ageH: 3 }),
     mk({ id: "fresh4", ageH: 4 }),
   ];
+  /* Pinned rather than inherited: this block tests the cap MECHANISM, and a
+     test that reads the live default silently stops testing anything the day
+     the default rises above the fixture size. */
+  const realCap = cfg.maxDailyEpisodes;
+  cfg.maxDailyEpisodes = 3;
   const { eligible, skipped } = selectEligible(cands, { episodes: {} }, isSettled);
-  ok("hard cap is enforced", eligible.length === cfg.maxDailyEpisodes, eligible.length);
-  ok("newest survive the cap", eq(eligible.map((e) => e.id), ["fresh", "fresh2", "fresh3"].slice(0, cfg.maxDailyEpisodes)),
+  ok("hard cap is enforced", eligible.length === 3, eligible.length);
+  ok("newest survive the cap", eq(eligible.map((e) => e.id), ["fresh", "fresh2", "fresh3"]),
     eligible.map((e) => e.id).join(","));
   const why = Object.fromEntries(skipped.map((s) => [s.id, s.reason]));
   ok("too old is skipped", /older than/.test(why.old || ""));
@@ -124,6 +129,8 @@ group("eligibility and cost control");
      write the episode off permanently. */
   const capped = Object.entries(why).find(([, r]) => /\/day cap/.test(r));
   ok("capped episodes are marked as capped, not as ineligible", Boolean(capped), JSON.stringify(why));
+
+  cfg.maxDailyEpisodes = realCap;
 
   /* Removing a source removes its episodes from the run entirely. */
   const noSource = selectEligible([], { episodes: {} }, isSettled);
@@ -564,6 +571,48 @@ group("7-day retention");
   const dropped = pruneState(st);
   ok("a month-old ledger row survives the 7-day public window", Boolean(st.episodes.lastMonth), "reprocessing risk");
   ok("only rows past the data window are dropped", dropped === 1 && !st.episodes.ancient, dropped);
+}
+
+/* ── NOTHING DISAPPEARS ──────────────────────────────────────────────────── */
+group("an episode we cannot read is still shown");
+{
+  /* THE REGRESSION THIS PREVENTS. The first version replaced the desk feed's
+     podcast list the moment it processed one episode of its own, so the rest of
+     the feed vanished from §12. A feature that adds depth must never remove
+     content. */
+  const now = new Date().toISOString();
+  const readable = { id: "ok", title: "Readable", show: "S", ytId: "abcdefghijk",
+    durationSec: 3600, publishedAt: now };
+  const unreadable = { id: "no", title: "Audio only", show: "S", url: "https://x/ep",
+    audioUrl: "https://x/a.mp3", durationSec: 3600, publishedAt: now,
+    deskTakeaways: ["the one line the feed already carried"] };
+
+  const key = cfg.deepgramKey;
+  cfg.deepgramKey = "";
+  const { eligible, skipped } = selectEligible([readable, unreadable], { episodes: {} }, isSettled);
+
+  ok("the readable one is processed", eligible.length === 1 && eligible[0].id === "ok");
+  const held = skipped.find((x) => x.id === "no");
+  ok("the unreadable one is marked pending, not merely skipped", held && held.pending === true,
+    JSON.stringify(held));
+  ok("and it carries the episode, so the page can show it", Boolean(held && held.episode));
+
+  const pending = buildPending(skipped);
+  ok("it survives into the artifact", pending.length === 1, pending.length);
+  ok("with its title and link intact", pending[0].title === "Audio only" && pending[0].url === "https://x/ep");
+  ok("and whatever one-liner the feed already carried",
+    pending[0].takeaways[0] === "the one line the feed already carried");
+
+  /* Pending is subject to the same public window as everything else — it is a
+     list of what is current, not an ever-growing graveyard. */
+  const old = { ...unreadable, id: "ancient", publishedAt: new Date(Date.now() - 30 * 86400000).toISOString() };
+  const stale = buildPending([{ id: "ancient", pending: true, reason: "r", episode: old }]);
+  ok("but not past the retention window", stale.length === 0, stale.length);
+  cfg.deepgramKey = key;
+
+  /* A pending episode must NOT be written off in the ledger: configuring paid
+     transcription later should pick it up rather than skip it forever. */
+  ok("pending is not a terminal state", !isSettled({ episodes: {} }, "no"));
 }
 
 /* ── IDEMPOTENCE ─────────────────────────────────────────────────────────── */

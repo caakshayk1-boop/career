@@ -226,6 +226,19 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
 .note dt{display:inline}
 .note dd{margin:0 0 0 0;display:inline}
 
+/* Listed-but-unread episodes. Deliberately quieter than a processed card — it
+   is a title, not a reading — but present, which is the whole point. */
+.pnote{font-size:var(--t-4);color:var(--dim);line-height:1.65;margin:0 0 12px;max-width:var(--measure)}
+.pend{border:1px solid var(--line);border-left:3px solid var(--line2);border-radius:0 var(--r-3) var(--r-3) 0;
+  background:var(--surface);padding:13px 15px;margin-bottom:8px;max-width:var(--measure)}
+.pend b{display:block;font:500 var(--t-5)/1.45 var(--ui);color:var(--text)}
+.pend b a{color:var(--text);text-decoration:none}
+.pend b a:hover{color:var(--accent)}
+.pend > span{display:block;font:500 var(--t-1)/1.5 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--dim);margin-top:5px}
+.pend ul{margin:9px 0 0;padding:0 0 0 16px;display:grid;gap:5px}
+.pend li{font-size:var(--t-4);color:var(--muted);line-height:1.6}
+
 .empty{padding:36px 20px;text-align:center;color:var(--dim);font-size:var(--t-5);line-height:1.7;
   border:1px dashed var(--line2);border-radius:var(--r-4);max-width:var(--measure)}
 .empty b{display:block;color:var(--text);font-size:var(--t-6);margin-bottom:7px}
@@ -379,10 +392,15 @@ function renderIndex(doc){
   const feed = document.getElementById("feed");
 
   if (!eps.length) {
-    meta.innerHTML = '<span class="pill">nothing published yet</span>';
-    feed.innerHTML = '<div class="empty"><b>No conversations processed yet.</b>' +
-      'The morning job publishes here. If this is still empty after a run, check the workflow log ' +
-      '&mdash; the run reports its own failures rather than publishing an empty page quietly.</div>';
+    const p = (doc.pending || []).length;
+    meta.innerHTML = p ? '<span class="pill">' + p + " listed, none readable</span>"
+                       : '<span class="pill">nothing published yet</span>';
+    feed.innerHTML = '<div class="empty"><b>' +
+      (p ? "Nothing could be read yet." : "No conversations processed yet.") + "</b>" +
+      (p ? "The episodes below are in the feed but publish no transcript and are not on YouTube."
+         : "The morning job publishes here. If this is still empty after a run, check the workflow log " +
+           "&mdash; the run reports its own failures rather than publishing an empty page quietly.") +
+      "</div>" + pendingBlock(doc);
     return;
   }
 
@@ -404,6 +422,7 @@ function renderIndex(doc){
     '<span class="pill up">' + readMins + " min to read all of it</span>" +
     (heard ? '<span class="pill">from ' + dur(heard) + " of conversation</span>" : "") +
     (withAudio ? '<span class="pill">' + withAudio + " audio briefing" + (withAudio > 1 ? "s" : "") + "</span>" : "") +
+    ((doc.pending || []).length ? '<span class="pill">' + doc.pending.length + " listed, not read</span>" : "") +
     '<span class="pill">' + (doc.retentionDays || 7) + "-day window</span>" +
     (doc.generatedAt ? '<span class="pill">built ' + esc(new Date(doc.generatedAt)
       .toLocaleString("en-GB",{timeZone:MYT,day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})) + " MYT</span>" : "");
@@ -421,8 +440,33 @@ function renderIndex(doc){
   feed.innerHTML = dates.map(date =>
     '<section class="day"><div class="day-h"><b>' + esc(dayLabel(date)) + "</b><span>" +
     esc(prettyDate(date)) + "</span></div>" +
-    byDate.get(date).map(epCard).join("") + "</section>").join("");
+    byDate.get(date).map(epCard).join("") + "</section>").join("") + pendingBlock(doc);
+}
 
+/**
+ * Episodes that were listed but could not be read.
+ *
+ * They are on the page because they were always on the page. Showing only what
+ * the pipeline could process is how a feature meant to add depth ends up
+ * REMOVING content — which is exactly what the first version of this did, and
+ * the reason this block exists.
+ */
+function pendingBlock(doc){
+  const p = (doc.pending || []).filter(x => x && x.title);
+  if (!p.length) return "";
+  return '<section class="day"><div class="day-h"><b>Listed, not read</b><span>' +
+    p.length + " episode" + (p.length === 1 ? "" : "s") + "</span></div>" +
+    '<p class="pnote">These are in the feed but publish no transcript and are not on YouTube, ' +
+    "so there is nothing to read for free. They are here because they were always here \u2014 " +
+    "the title and whatever the feed carried, unchanged.</p>" +
+    p.map(e =>
+      '<div class="pend">' +
+      (e.url ? '<b><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + "</a></b>"
+             : "<b>" + esc(e.title) + "</b>") +
+      "<span>" + esc(e.show || "") + "</span>" +
+      ((e.takeaways || []).length
+        ? "<ul>" + e.takeaways.map(t => "<li>" + esc(t) + "</li>").join("") + "</ul>" : "") +
+      "</div>").join("") + "</section>";
 }
 
 function epCard(e){

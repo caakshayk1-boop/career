@@ -76,6 +76,28 @@ of each bucket taken in rotation.
 Display is **chronological**, not ranked. A score-ordered list of twenty
 context-free sentences reads as noise even when every one is good.
 
+## Nothing disappears
+
+The first version of this replaced §12's existing podcast list the moment it
+processed one episode of its own — so the rest of the feed vanished from the
+page. That was wrong, and the fix is structural rather than cosmetic.
+
+The desk feed (`news.askakshay.com/today.json` → `desk.podcasts`) is now a
+SOURCE, at the front of the pipeline, not a fallback behind it. Every episode it
+lists is either:
+
+- **read** — points, timestamps, expansions, like any other source; or
+- **pending** — shown as the title and whatever one-liner the feed already
+  carried, exactly as it looked before, with a note saying it publishes no
+  transcript and is not on YouTube.
+
+Pending is not a terminal state: it is not written to the ledger, so configuring
+a transcription key later picks those episodes up rather than skipping them
+forever. It is subject to the same 7-day window as everything else, so it is a
+list of what is current and not a graveyard.
+
+A feature meant to add depth must never remove content.
+
 ## Transcripts, and the one thing that will bite you
 
 With no paid transcription key, an episode is readable only if the transcript is
@@ -147,12 +169,12 @@ pipeline runs to completion with all of them unset.**
 | Variable | Default | What it does |
 |---|---|---|
 | `EXTRACTOR` | `local` | `local` = free, verbatim, no model. `ai` = the five-pass model pipeline. |
-| `MAX_DAILY_EPISODES` | `2` | hard cap per run |
+| `MAX_DAILY_EPISODES` | `12` | hard cap per run — the desk feed is a curated list and the reader expects all of it |
 | `MIN_LEARNINGS` | `10` | floor — below this the episode is held, not published |
 | `TARGET_LEARNINGS` | `20` | ceiling |
 | `MAX_EPISODE_MINUTES` | `240` | skip anything longer |
 | `MIN_EPISODE_MINUTES` | `20` | skip anything shorter |
-| `MAX_LOOKBACK_HOURS` | `72` | ignore anything older; the page shows 7 days |
+| `MAX_LOOKBACK_HOURS` | `192` | ignore anything older — 8 days, one more than the public window |
 | `PUBLIC_RETENTION_DAYS` | `7` | how long an episode is on the page |
 | `DATA_RETENTION_DAYS` | `400` | how long we remember it existed |
 | `TRANSCRIPT_PROVIDER` | `auto` | `published` / `youtube` / `deepgram` / `fixture` |
