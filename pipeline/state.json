@@ -15127,8 +15127,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-10T14:41:00.909Z",
-      "updatedAt": "2026-09-10T14:45:37.681Z",
-      "reason": "no caption track published for this video"
+      "updatedAt": "2026-09-10T14:49:23.814Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
     },
     "desk-21c81f724b0d": {
       "status": "FAILED",
@@ -15139,8 +15139,128 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-10T14:41:01.075Z",
-      "updatedAt": "2026-09-10T14:45:37.735Z",
-      "reason": "no caption track published for this video"
+      "updatedAt": "2026-09-10T14:49:24.096Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-14bfab36c866": {
+      "status": "FAILED",
+      "title": "5 Companies Capturing the Biggest Market Share?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=NUtPCAXq9-o",
+      "id": "desk-14bfab36c866",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:24.101Z",
+      "updatedAt": "2026-09-10T14:49:24.273Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-1ea3eb67afce": {
+      "status": "FAILED",
+      "title": "RBI vs Government: Who Really Controls Money?",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
+      "id": "desk-1ea3eb67afce",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:24.278Z",
+      "updatedAt": "2026-09-10T14:49:24.499Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-07895296b3b0": {
+      "status": "FAILED",
+      "title": "11 Crore Voters Erased: Are U In The List? | Can EC Be Criminally Prosecuted For SIR Scam? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=gvM8O3qkHpY",
+      "id": "desk-07895296b3b0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:24.504Z",
+      "updatedAt": "2026-09-10T14:49:24.678Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-8b8f325c3845": {
+      "status": "FAILED",
+      "title": "Uncertainty and Anxiety Over SIR in Odisha’s Muslim Neighbourhoods",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=Q00l-06R6rc",
+      "id": "desk-8b8f325c3845",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:24.682Z",
+      "updatedAt": "2026-09-10T14:49:24.860Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-2ba3641011ec": {
+      "status": "FAILED",
+      "title": "Samrat Choudhary on His Rise From MLA to Bihar CM",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=XszbPNPhk5k",
+      "id": "desk-2ba3641011ec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:24.864Z",
+      "updatedAt": "2026-09-10T14:49:25.152Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-8decbaad034c": {
+      "status": "FAILED",
+      "title": "99% Indians Are Making THESE Oral Hygiene Mistakes | TOP Dentist Dr. Niranjan P On TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=ytI2t4uh4LE",
+      "id": "desk-8decbaad034c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:25.160Z",
+      "updatedAt": "2026-09-10T14:49:25.334Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-0d4af485b600": {
+      "status": "FAILED",
+      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
+      "id": "desk-0d4af485b600",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:25.338Z",
+      "updatedAt": "2026-09-10T14:49:25.655Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-5be722ccbec8": {
+      "status": "FAILED",
+      "title": "Land, Soil, Water, Natural Vegetation and Wildlife Resources | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=bCEbMlUvqCE",
+      "id": "desk-5be722ccbec8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:25.659Z",
+      "updatedAt": "2026-09-10T14:49:25.974Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-0dfb491a0eca": {
+      "status": "FAILED",
+      "title": "How To Train Your Brain, Boost Focus & Beat Burnout | Dr Sahar Yousef | FO559 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=4Vz6L8B73i4",
+      "id": "desk-0dfb491a0eca",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:25.978Z",
+      "updatedAt": "2026-09-10T14:49:26.807Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
+    },
+    "desk-3a342472d20e": {
+      "status": "FAILED",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "id": "desk-3a342472d20e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-10T14:49:26.862Z",
+      "updatedAt": "2026-09-10T14:49:27.052Z",
+      "reason": "no caption track this endpoint will serve (tried 3 variants, none listed)"
     }
   }
 }
