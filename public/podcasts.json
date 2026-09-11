@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-10T19:26:29.945Z",
+  "generatedAt": "2026-09-11T00:16:42.356Z",
   "today": "2026-09-11",
   "retentionDays": 7,
   "days": [
@@ -353,18 +353,6 @@
       "reason": "over the 12/day cap"
     },
     {
-      "id": "desk-f8802be4b133",
-      "title": "Are Index Funds Breaking the Stock Market?",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=z7esg6Ts25E",
-      "takeaways": [
-        "seven out of ten active managers fail to beat benchmark indices",
-        "passive dominance impacts corporate accountability"
-      ],
-      "date": "2026-09-11",
-      "reason": "over the 12/day cap"
-    },
-    {
       "id": "desk-6a1b6a2cf1be",
       "title": "#AskAbhijit 379: Ask Me Anything - Any Topic",
       "show": "Abhijit Chavda",
@@ -383,7 +371,7 @@
       "url": "https://www.youtube.com/watch?v=gxED-fFZalA",
       "takeaways": [
         "People changed their buying decisions after watching a Zero1 video.",
-        "Families began discussing money together because of Zero1."
+        "Families began talking about money together because of Zero1."
       ],
       "date": "2026-09-11",
       "reason": "over the 12/day cap"
@@ -394,8 +382,8 @@
       "show": "Dhruv Rathee",
       "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
       "takeaways": [
-        "A live AI workshop is scheduled for tomorrow, 6 Sept at 7 pm IST, focusing on using ChatGPT for content creation and productivity.",
-        "The video’s purpose is to spread awareness and educate viewers, and any errors should be reported via email to contact@dhruvrathee.com."
+        "The fastest and the most affordable way to upskill yourself in AI.",
+        "Live workshop happening on TOMORROW!"
       ],
       "date": "2026-09-11",
       "reason": "over the 12/day cap"
@@ -413,13 +401,96 @@
       "reason": "over the 12/day cap"
     },
     {
+      "id": "desk-8679a5d516c6",
+      "title": "The India That Gujarat Built | Shut Up Ya Kunal w/ Kunal Kamra ft Aakar Patel | Episode 36",
+      "show": "Shut Up Ya Kunal",
+      "url": "https://www.youtube.com/watch?v=-BucDdCiD-s",
+      "takeaways": [
+        "Patel examines the rise of Narendra Modi and the BJP’s political model in Gujarat’s transformation.",
+        "He discusses how India’s institutions have changed over the past decade."
+      ],
+      "date": "2026-09-11",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-338f935c708b",
+      "title": "Protecting the President: Security, VIP Threats & ADC Life | Major Rishabh | FO560 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=x63HCoDfAhQ",
+      "takeaways": [
+        "Surviving Para SF selection can involve 90 days with no food, water, or sleep.",
+        "An ADC to the President anticipates every need before it arises."
+      ],
+      "date": "2026-09-11",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-21d2ef51e359",
+      "title": "How to Invest in Your 20s | Complete Step-by-Step Plan",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
+      "takeaways": [
+        "Starting wealth‑creation in your 20s gives you an unmatched compounding advantage.",
+        "The episode outlines a step‑by‑step investment blueprint focused on optimal asset allocation, strategic portfolio balance, and disciplined long‑term growth."
+      ],
+      "date": "2026-09-11",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-85b4d0fcc1ff",
+      "title": "Netanyahu Knew About The Hamas Attack? | Shocking Revelations Rock Israeli Politics | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=xSuZJ-Vn0FI",
+      "takeaways": [
+        "Now a bombshell 1.5-year Haaretz investigation now confirms the rumours, Netanyahu knew about the impending Hamas attacks - but he CHOSE not to share this intelligence with his own military or intelligence chiefs.",
+        "Haaretz claims that on the evening of October 7 itself Hamas offered to release every civilian hostage, unconditionally, through Qatar."
+      ],
+      "date": "2026-09-11",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-6b4ed2f2651a",
+      "title": "Grief, Fear and Concern After Chongtham Vikram Singh's Horrific Lynching in Delhi",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=eyahTFOZgoo",
+      "takeaways": [
+        "Chongtham Vikram Singh, a 55-year-old guitarist and music teacher from Manipur, objected to a group of men drinking and causing a loud disturbance outside his home.",
+        "What began as a verbal dispute ended with his death."
+      ],
+      "date": "2026-09-11",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-2ab430ad3575",
+      "title": "“Fancy equipment from overseas does not make you win the war” Air Marshal Jeetendra Mishra",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=VB8kC6jWtww",
+      "takeaways": [
+        "“Fancy equipment from overseas does not make you win the war” Air Marshal Jeetendra Mishra #ANIPodcast #SmitaPrakash #JeetendraMishra #IAF #IndianAirForce #OperationSindoor #India #Pakistan #China #Turkey Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-11",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-608f125c0baf",
+      "title": "Mineral and Power Resources | Class 8 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=xG3XYYlJET4",
+      "takeaways": [
+        "The chapter helps students understand the importance of mineral and power resources, their classification, distribution and uses.",
+        "It introduces conventional and non‑conventional sources of energy and highlights the need for their conservation and sustainable use."
+      ],
+      "date": "2026-09-11",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
       "id": "desk-47f780d7c5c2",
       "title": "How Tim Cook Built Apple’s $4.5 Trillion Empire | Untold Story of the Man Who Made Apple Unstoppable",
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=GpJhBB7Gv0c",
       "takeaways": [
-        "Over the next 15 years, Tim Cook grew Apple’s market value from roughly $350 billion to $4.7 trillion.",
-        "He expanded Apple’s revenue from $108 billion to $416 billion and built a services business that now generates $109 billion annually."
+        "Over the next 15 years, Apple’s market value grew from roughly $350 billion to $4.7 trillion.",
+        "Apple’s revenue increased from $108 billion to $416 billion, and its services business now generates about $109 billion annually."
       ],
       "date": "2026-09-11",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
@@ -430,8 +501,8 @@
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=zHPv2r9cZng",
       "takeaways": [
-        "Delay construction by six months, build an emergency fund, and continue pursuing the PM Awas Yojana before taking on debt.",
-        "Developing new skills could dramatically increase his earning potential."
+        "He should delay construction by six months and build an emergency fund.",
+        "He should continue trying to access the PM Awas Yojana before taking on debt."
       ],
       "date": "2026-09-11",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
@@ -442,8 +513,8 @@
       "show": "Groww",
       "url": "https://www.youtube.com/watch?v=NUtPCAXq9-o",
       "takeaways": [
-        "What makes a company keep gaining market share while competitors fall behind?",
-        "In this video, we analyse five businesses that have steadily expanded their position in large and growing industries."
+        "We analyse five businesses that have steadily expanded their position in large and growing industries.",
+        "The video is for educational purposes only and is not a buy or sell recommendation."
       ],
       "date": "2026-09-11",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
@@ -461,54 +532,6 @@
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-07895296b3b0",
-      "title": "11 Crore Voters Erased: Are U In The List? | Can EC Be Criminally Prosecuted For SIR Scam? | Akash B",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=gvM8O3qkHpY",
-      "takeaways": [
-        "A Padma Shri awardee summoned over a spelling mismatch.",
-        "A World Cup winner, a Nobel laureate, a Bharat Ratna, a two-time MP...."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-8b8f325c3845",
-      "title": "Uncertainty and Anxiety Over SIR in Odisha’s Muslim Neighbourhoods",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=Q00l-06R6rc",
-      "takeaways": [
-        "The SIR of electoral rolls in Odisha began in June.",
-        "Residents in Muslim‑majority localities say the revision has triggered anxiety about whether their names will remain on the voters list."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-2ba3641011ec",
-      "title": "Samrat Choudhary on His Rise From MLA to Bihar CM",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=XszbPNPhk5k",
-      "takeaways": [
-        "Samrat Choudhary discusses his personal journey from being an MLA to becoming the Chief Minister of Bihar.",
-        "The episode touches on themes of politics, bureaucracy, and corruption."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-8decbaad034c",
-      "title": "99% Indians Are Making THESE Oral Hygiene Mistakes | TOP Dentist Dr. Niranjan P On TRS",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=ytI2t4uh4LE",
-      "takeaways": [
-        "Brushing at night matters so much.",
-        "You shouldn’t brush immediately after eating."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
       "id": "desk-0d4af485b600",
       "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
       "show": "Sid Warrier",
@@ -521,37 +544,13 @@
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-5be722ccbec8",
-      "title": "Land, Soil, Water, Natural Vegetation and Wildlife Resources | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=bCEbMlUvqCE",
-      "takeaways": [
-        "Buniyad – NCERT Geography Foundation Series by Drishti IAS In this lecture, Ms.",
-        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 8 Geography, Chapter 2 – “Land, Soil, Water, Natural Vegetation and Wildlife Resources” in a simple, engaging, and exam-oriented manner."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-0dfb491a0eca",
-      "title": "How To Train Your Brain, Boost Focus & Beat Burnout | Dr Sahar Yousef | FO559 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=4Vz6L8B73i4",
-      "takeaways": [
-        "your phone measurably reduces your cognitive capacity even when it is switched off and face down",
-        "your brain is physically incapable of doing two things at once."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
       "id": "desk-3a342472d20e",
       "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
       "takeaways": [
         "The FCNR scheme may not live up to its promised returns.",
-        "It affects both NRIs and Indian resident investors."
+        "Listeners are reminded that the content is not investment advice and they should conduct their own due diligence."
       ],
       "date": "2026-09-11",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
@@ -574,7 +573,7 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-10T19:26:29.944Z",
+    "at": "2026-09-11T00:16:42.355Z",
     "discovered": 1498,
     "eligible": 12,
     "processed": 0,
@@ -584,75 +583,75 @@
     "errors": [
       {
         "stage": "process",
+        "id": "desk-338f935c708b",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-11T00:16:30.945Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-21d2ef51e359",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-11T00:16:32.105Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-85b4d0fcc1ff",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-11T00:16:33.136Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-6b4ed2f2651a",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-11T00:16:34.297Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-2ab430ad3575",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-11T00:16:35.215Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-608f125c0baf",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-11T00:16:36.236Z"
+      },
+      {
+        "stage": "process",
         "id": "desk-47f780d7c5c2",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:18.624Z"
+        "at": "2026-09-11T00:16:37.073Z"
       },
       {
         "stage": "process",
         "id": "desk-21c81f724b0d",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:19.460Z"
+        "at": "2026-09-11T00:16:38.248Z"
       },
       {
         "stage": "process",
         "id": "desk-14bfab36c866",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:20.310Z"
+        "at": "2026-09-11T00:16:39.300Z"
       },
       {
         "stage": "process",
         "id": "desk-1ea3eb67afce",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:21.279Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-07895296b3b0",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:22.204Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-8b8f325c3845",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:23.193Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2ba3641011ec",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:24.114Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-8decbaad034c",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:25.462Z"
+        "at": "2026-09-11T00:16:40.283Z"
       },
       {
         "stage": "process",
         "id": "desk-0d4af485b600",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:26.845Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-5be722ccbec8",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:27.869Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-0dfb491a0eca",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:28.957Z"
+        "at": "2026-09-11T00:16:41.425Z"
       },
       {
         "stage": "process",
         "id": "desk-3a342472d20e",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-10T19:26:29.939Z"
+        "at": "2026-09-11T00:16:42.349Z"
       }
     ],
     "estimatedCostUsd": 0
