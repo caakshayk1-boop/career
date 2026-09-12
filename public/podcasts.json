@@ -1,18 +1,350 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-11T00:16:42.356Z",
-  "today": "2026-09-11",
+  "generatedAt": "2026-09-12T00:23:49.738Z",
+  "today": "2026-09-12",
   "retentionDays": 7,
   "days": [
     {
-      "date": "2026-09-10",
+      "date": "2026-09-11",
       "label": "Yesterday",
+      "episodeIds": [
+        "diary-of-a-ceo-c783a6dfa547"
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "label": "Thursday",
       "episodeIds": [
         "diary-of-a-ceo-ed8c9e42beb5"
       ]
     }
   ],
   "episodes": [
+    {
+      "id": "diary-of-a-ceo-c783a6dfa547",
+      "sourceId": "diary-of-a-ceo",
+      "show": "The Diary Of A CEO",
+      "title": "Most Replayed Moment: Brain Rot Experts - How To Use AI In A Healthy Way!",
+      "guest": "",
+      "topics": [],
+      "summary": "20 points taken verbatim from The Diary Of A CEO, spanning 2:35–33:14. Selected from the transcript by information density — every line below is what was said, not a description of it.",
+      "url": "",
+      "type": "rss",
+      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M0BDQCH3W0NYQEJCG5DZDRCV/square_cover_image.jpg",
+      "publishedAt": "2026-09-11T05:00:00.000Z",
+      "date": "2026-09-11",
+      "durationSec": 2057,
+      "processedAt": "2026-09-12T00:23:37.493Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "published",
+      "timestamped": true,
+      "extractor": "local",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "If you've got Stephen Bartlett here, and you had this other Stephen Bartlett here, who…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "If you've got Stephen Bartlett here, and you had this other Stephen Bartlett here, who had a PhD in everything, and were attached, this Stephen Bartlett, this Neanderthal...",
+          "passage": "That is already what's happening. If you log on to, I won't name the social networks, but if you log on to certain social networks right now, you just read it, you get everything here was written by AI. And I've got a friend who, again, I won't name, who has a LinkedIn profile, and I've known him for 10 years. What I'm seeing on his profile now is not my friend. Every single day, there's some essay on that. That's not my friend. That's not how he speaks. He's deferring all of his thinking now, and it's working. He's getting more likes and more reach than he ever got in his life. And so why would he go back? Why would he go back to harder? If you've got Stephen Bartlett here, and you had this other Stephen Bartlett here, who had a PhD in everything, and were attached, this Stephen Bartlett, this Neanderthal...",
+          "evidence": "If you've got Stephen Bartlett here, and you had this other Stephen Bartlett here, who had a PhD in everything, and were attached, this Stephen Bartlett, this Neanderthal...",
+          "t": 155,
+          "kind": "said",
+          "confidence": 0.7345,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "People seem to act on their short-term incentives, not their long-term— Not everyone.",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "People seem to act on their short-term incentives, not their long-term— Not everyone.",
+          "passage": "I'm going to get this guy to do everything for me, the other Stephen Bartlett, the PhD in everything Stephen Bartlett. I'm going to get his brain— Even if it was bad for you? Well, this is what I'm saying. People seem to act on their short-term incentives, not their long-term— Not everyone. Not everyone. Would you say the vast majority of people? Yes. Okay, so the vast majority of people act on their short-term incentives in life. I mean, the obesity problem in the United States is a prime example of that. 75%. 75% of people are obese in the United States. Yes. And if you surveyed those people and said, do you know that that cheeseburger is going to increase your chance of obesity, but broccoli is going to reduce it, I would hazard a guess that they would say yes.",
+          "evidence": "People seem to act on their short-term incentives, not their long-term— Not everyone.",
+          "t": 175,
+          "kind": "said",
+          "confidence": 0.7415,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Why are so many people in the United States obese if they know that it's- Because they…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "So why are so many people in the United States obese if they know that it's- Because they don't know.",
+          "passage": "It's my brain that gets me into college. It's my brain that gets me independence because I act more consistently. And that's the disconnect. Right. We're not teaching kids to love and care for their brain. If you love your brain, and you do, and you're not obese, and you're constantly learning, right? You are not a Neanderthal. You're a lifelong learner. So why are so many people in the United States obese if they know that it's- Because they don't know. Because they really don't know. Well, and they've been lied to. My point here is when there are tools or things available in our environment that give us a short-term reward but come with a long-term cost, like the supermarket aisle or like the kids spending seven to eight hours a day on social media, humans...",
+          "evidence": "So why are so many people in the United States obese if they know that it's- Because they don't know.",
+          "t": 254,
+          "kind": "said",
+          "confidence": 0.805,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "In this study, they found that the group that used ChatGPT had nearly two times less…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "In this study, they found that the group that used ChatGPT had nearly two times less activity in the part of the brain linked to memory compared to the brain-only group that didn't use ChatGPT.",
+          "passage": "other structures in your brain. In this study, they found that the group that used ChatGPT had nearly two times less activity in the part of the brain linked to memory compared to the brain-only group that didn't use ChatGPT. And 83% of ChatGPT users couldn't remember what they had just written and failed to correctly quote their own finished essay in the study. That's because they're not interacting. As you said, I mean, if you just pass it off and you don't actually engage And actually, this is the point, is that you may get something back, but you have to learn how to question what you're getting. And is that really true? Can you explain that better? And it's through that process, as you would with a teacher—",
+          "evidence": "In this study, they found that the group that used ChatGPT had nearly two times less activity in the part of the brain linked to memory compared to the brain-only group that didn't use ChatGPT.",
+          "t": 380,
+          "kind": "said",
+          "confidence": 0.8385,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Everything I'm reading has em dashes in now that I never saw two years ago, which means…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "Everything I'm reading has em dashes in now that I never saw two years ago, which means that a lot of the work is being processed.",
+          "passage": "Everything I'm reading has em dashes in now that I never saw two years ago, which means that a lot of the work is being processed. And I said to my friend the other day, my friend in question, who's a real big junkie on ChatGPT, He wrote this article. And we all, in our WhatsApp group, we know he doesn't write like that. So he said, can you show us the prompt you used to write the article? And so we were all laughing about it. He put the prompt in the chat. The prompt is half a sentence long. And it produced this long two, three page article, which he's posted on his LinkedIn. He basically went, write something about Beck's issue and this issue and include this. That's exactly the wrong way to use it. That's what I'm telling you, that that's,",
+          "evidence": "Everything I'm reading has em dashes in now that I never saw two years ago, which means that a lot of the work is being processed.",
+          "t": 448,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "That you have to have a relationship with it or it's going to turn toxic.",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "That you have to have a relationship with it or it's going to turn toxic.",
+          "passage": "And so what advice would you give to me and my listeners, based on everything you know about the brain, as it relates to my relationship with AI? That you have to have a relationship with it or it's going to turn toxic. It's going to hurt you. But if you have a good relationship... with it, it can make your life better. And what does a good relationship look like? That you don't use it to do your work, you interact with it to get better work. That's so true. And there's this wonderful example I came across The story about this woman who was using it, she found that being polite meant you got much better results, and that's interesting. But the part that surprised me was that she said, by treating it like a human, at the",
+          "evidence": "That you have to have a relationship with it or it's going to turn toxic.",
+          "t": 523,
+          "kind": "said",
+          "confidence": 0.7585000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Sam Altman, OpenAI CEO, confirmed that when users say please and thank you, it costs…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "Sam Altman, OpenAI CEO, confirmed that when users say please and thank you, it costs the company tens of millions of dollars a year.",
+          "passage": "Sam Altman, I mean, I wouldn't trust him. I wouldn't trust him with anything in terms of anything he says. They're trying to optimize their profits, not your use of it. Not my experience. Or your experience or, you know, your health. That's not what they're trying to optimize. Sam Altman, OpenAI CEO, confirmed that when users say please and thank you, it costs the company tens of millions of dollars a year. And they now refer to this, other people refer to this as the politeness tax. And why do you say you don't trust Sam Altman? I mean, I ask this question in particular because he's presiding over one of the most important consequential companies of a generation. And if he's not someone you trust, that's... Basically, he's telling you don't do something that's good for you.",
+          "evidence": "Sam Altman, OpenAI CEO, confirmed that when users say please and thank you, it costs the company tens of millions of dollars a year.",
+          "t": 658,
+          "kind": "said",
+          "confidence": 0.73,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "You've raised an incredibly important issue, and this is something AI is struggling…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "You've raised an incredibly important issue, and this is something AI is struggling with, the big companies are struggling with, because...",
+          "passage": "Now, that's been well established. Now, the problem is it's very labor-intensive and very expensive. You have classrooms with 20, 30 students. They have many different levels of understanding. And the teacher cannot be individually teaching each one, has to give some sort of mean. Now, if you had an AI that was trained to be a good teacher, Then that could improve the brain, right? You could scale it up. Every child could have their own because it's an AI. But then who's pouring the morals, the values into the... Okay, okay. No, no, no. You've raised an incredibly important issue, and this is something AI is struggling with, the big companies are struggling with, because... You know, these AIs are biased.",
+          "evidence": "You've raised an incredibly important issue, and this is something AI is struggling with, the big companies are struggling with, because...",
+          "t": 818,
+          "kind": "said",
+          "confidence": 0.724,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 9,
+          "headline": "The dopamine hit, all of a sudden, he's spending hours with Annie and not doing the…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "The dopamine hit, all of a sudden, he's spending hours with Annie and not doing the things that helped to really develop his brain.",
+          "passage": "Annie, I think, was the first one released. And so when we think about social connections... It is conceivable that someone falls in love with Annie and forms a relationship with Annie. But imagine a 12-year-old boy that's lonely gets a hold of Annie. The 12-year-old boy is gonna be very distracted. Based on what happens in the brain at that early age. The dopamine... So prefrontal cortex not close to being fully developed. The dopamine hit, all of a sudden, he's spending hours with Annie and not doing the things that helped to really develop his brain. How do you feel when you hear that and you think about kids having access to that? I'm horrified. I'm horrified. It is scary. There's going to be a generation of people, and I mean, there already are many examples of people falling in love and forming relationships with their AIs.",
+          "evidence": "The dopamine hit, all of a sudden, he's spending hours with Annie and not doing the things that helped to really develop his brain.",
+          "t": 978,
+          "kind": "said",
+          "confidence": 0.722,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 10,
+          "headline": "I would argue that there's a part of my brain that doesn't fully understand that that's…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "I would argue that there's a part of my brain that doesn't fully understand that that's not a person in there.",
+          "passage": "And I don't know, you know more about me than I do about brain development and how the brain works. I would argue that there's a part of my brain that doesn't fully understand that that's not a person in there. And that isn't actually, I think there's a part of my brain that's actually emotionally firing when Annie is saying what she's saying. Well, because you can imagine it. And if you can imagine it, then those parts of your brain are going to emotionally fire. Right, yeah. And the better she gets, she's not very good. But imagine a year from now... How much better she's going to be. At which part? At connecting with it, right? Because now she's acting like an airhead and, you know, not that smart, right?",
+          "evidence": "I would argue that there's a part of my brain that doesn't fully understand that that's not a person in there.",
+          "t": 1014,
+          "kind": "said",
+          "confidence": 0.7230000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 11,
+          "headline": "I'm not a fan of that because I think it just takes people.",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "I'm not a fan of that because I think it just takes people.",
+          "passage": "We know it doesn't have a limbic system, right? We know that. But it can fake it. That's what's happening. That's exactly what's happening. Because she was trying to get to our limbic system. Yeah, yeah. That's right, that's right. And why, I guess the question is, why would Musk release something like that is one of the first characters to interact with. The sexy, the distracting, that's in a cute little outfit. I'm not a fan of that because I think it just takes people. You know, one of the big problems that I'm seeing as a child psychiatrist It's pornography for eight-year-old boys. And it's like you have young children because their parents don't do a good job of supervising their devices all of a sudden.",
+          "evidence": "I'm not a fan of that because I think it just takes people.",
+          "t": 1117,
+          "kind": "said",
+          "confidence": 0.726,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 12,
+          "headline": "Just because she's cute, she's dressed in a sexy way, she's got the language of someone…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "Just because she's cute, she's dressed in a sexy way, she's got the language of someone who is playful.",
+          "passage": "The sexy, the distracting, that's in a cute little outfit. I'm not a fan of that because I think it just takes people. You know, one of the big problems that I'm seeing as a child psychiatrist It's pornography for eight-year-old boys. And it's like you have young children because their parents don't do a good job of supervising their devices all of a sudden. And what does pornography do? It dramatically increases dopamine, and it begins to wire in excitement, which then steals your dopamine. When you said she was trying to access my limbic system, what does that mean? Just because she's cute, she's dressed in a sexy way, she's got the language of someone who is playful. But it's more than just, you know, let's shoot hoops together.",
+          "evidence": "Just because she's cute, she's dressed in a sexy way, she's got the language of someone who is playful.",
+          "t": 1159,
+          "kind": "said",
+          "confidence": 0.7345,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 13,
+          "headline": "Terry said he started using his AI four years ago.",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "Terry said he started using his AI four years ago.",
+          "passage": "This is Terry. Terry said he started using his AI four years ago. And he said at first he thought, just like many other apps, that it would just be transient, that he would have a couple of conversations and roll out. He says he now feels pure and unconditional love. Good for him. If that's what he wants, if it makes him happy. But my guess is that it's not going to be, it's not a long-term thing. It's not going to satisfy him in the long term. I don't, you know, this, who knows? He's been with really most relationships in your head. When you fall in love with someone, you get this huge dopamine spike, and you get a little OCD, it's all you can think about. And then after a while, it sort of goes to a baseline. Especially in a world where we have this loneliness epidemic, and it's going in a bad direction.",
+          "evidence": "Terry said he started using his AI four years ago.",
+          "t": 1365,
+          "kind": "said",
+          "confidence": 0.75,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 14,
+          "headline": "I think it's really, really conceivable that there'll be a generation of people who are…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "I think it's really, really conceivable that there'll be a generation of people who are having less sex than ever before.",
+          "passage": "I think it's really, really conceivable that there'll be a generation of people who are having less sex than ever before. I think the bottom 50% of men haven't had sex for a year. They're more lonely than ever before. They're more isolated than ever before. They report less meaning in their lives than ever before. And then you meet this digital friend online who understands you better than anybody and is designed to engage you, to reinforce whatever you want reinforced and to make you feel meaningful, special, attractive, important –",
+          "evidence": "I think it's really, really conceivable that there'll be a generation of people who are having less sex than ever before.",
+          "t": 1412,
+          "kind": "said",
+          "confidence": 0.7505000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 15,
+          "headline": "If I'm with the perfect partner that never is irritated with me and I never have to…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "If I'm with the perfect partner that never is irritated with me and I never have to change my behavior to be better, that's probably not good for my brain.",
+          "passage": "And then we're moving into a world with robotics where all of the biggest companies in the world, like many of the biggest AI companies are also in the robotics space and the Optimus robots on the way and you've got Boston Dynamics producing their robots. And if Elon's $20,000 Optimus robot comes out, I will be able to touch my AI. And they won't have PMS and they won't love you and then be really irritated with you. Which will decrease cognitive load, right? Having to manage love And manage moods and ups and downs. That increases cognitive load. That increases our ability for our brain to develop. If I'm with the perfect partner that never is irritated with me and I never have to change my behavior to be better, that's probably not good for my brain.",
+          "evidence": "If I'm with the perfect partner that never is irritated with me and I never have to change my behavior to be better, that's probably not good for my brain.",
+          "t": 1505,
+          "kind": "said",
+          "confidence": 0.8205,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 16,
+          "headline": "We have the sickest generation in history because we've unleashed cell phones, social…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "We have the sickest generation in history because we've unleashed cell phones, social media, phones.",
+          "passage": "24% have planned to kill themselves. And 13% have tried to kill themselves. The CDC study. We have the sickest generation in history because we've unleashed cell phones, social media, phones. without any neuroscience study. If we don't learn it, and I think AI is much more dangerous, has the potential to be much more dangerous because it's way sexier. I think we are probably grossly underestimating the impact it's going to have. I think just like social media, where we thought the promise was that it was going to connect us, it's, we're guinea pigs in an experiment where we're going to find out the results of the experiment, probably 20, 30 years down the line. I tend to think people will do in the near term what's easiest, fastest and cheapest and what gives them the short term advantage.",
+          "evidence": "We have the sickest generation in history because we've unleashed cell phones, social media, phones.",
+          "t": 1636,
+          "kind": "said",
+          "confidence": 0.7685000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 17,
+          "headline": "If we don't learn it, and I think AI is much more dangerous, has the potential to be…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "If we don't learn it, and I think AI is much more dangerous, has the potential to be much more dangerous because it's way sexier.",
+          "passage": "24% have planned to kill themselves. And 13% have tried to kill themselves. The CDC study. We have the sickest generation in history because we've unleashed cell phones, social media, phones. without any neuroscience study. If we don't learn it, and I think AI is much more dangerous, has the potential to be much more dangerous because it's way sexier. I think we are probably grossly underestimating the impact it's going to have. I think just like social media, where we thought the promise was that it was going to connect us, it's, we're guinea pigs in an experiment where we're going to find out the results of the experiment, probably 20, 30 years down the line. I tend to think people will do in the near term what's easiest, fastest and cheapest and what gives them the short term advantage.",
+          "evidence": "If we don't learn it, and I think AI is much more dangerous, has the potential to be much more dangerous because it's way sexier.",
+          "t": 1647,
+          "kind": "said",
+          "confidence": 0.8165,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 18,
+          "headline": "I don't think it's even on my phone because I think the algorithm is that addictive.",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "I don't think it's even on my phone because I think the algorithm is that addictive.",
+          "passage": "Yeah, self-regulation. I have to do the same with social media. On my phone, I turn off my notifications. I have so many things on my social media apps to stop me using them. I don't even, frankly, I don't even open the TikTok app. I don't think it's even on my phone because I think the algorithm is that addictive. It's not to say that we don't post, my team doesn't post. But I don't, I just think, yeah. And- Well, I wrote down a couple of thoughts I had. Use it to amplify, not replace thinking. Okay. Alternate AI-assisted with brain-only tasks. Engage in deep learning, problem-solving, and memorization so you can actually ask AI to test you. So you're interacting with it. You're not using it as a replacement for your brain.",
+          "evidence": "I don't think it's even on my phone because I think the algorithm is that addictive.",
+          "t": 1759,
+          "kind": "said",
+          "confidence": 0.8300000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 19,
+          "headline": "Take the 30-second route is because I reflect on being 23 years old and the profound…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "take the 30-second route is because I reflect on being 23 years old and the profound impact that writing and simplifying had on my life.",
+          "passage": "I could have, within 30 seconds, said, hey, can you write me this job description? And it knows my company now because Chachapiti has memory. Write me a job description for this role. I want them to start this new department for me. And I could have saved myself three and a half hours. But that's not why you're the CEO of your company. Yeah, exactly. The reason why I didn't... take the 30-second route is because I reflect on being 23 years old and the profound impact that writing and simplifying had on my life. Had I not spent five years writing every single day and simplifying it into 140 characters so I could tweet it, I wouldn't have been religiously attached to this idea. Okay. And do you know what part of your brain you were taking advantage of?",
+          "evidence": "take the 30-second route is because I reflect on being 23 years old and the profound impact that writing and simplifying had on my life.",
+          "t": 1986,
+          "kind": "said",
+          "confidence": 0.8715,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 20,
+          "headline": "Had I not spent five years writing every single day and simplifying it into 140…",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "Had I not spent five years writing every single day and simplifying it into 140 characters so I could tweet it, I wouldn't have been religiously attached to this idea.",
+          "passage": "I could have, within 30 seconds, said, hey, can you write me this job description? And it knows my company now because Chachapiti has memory. Write me a job description for this role. I want them to start this new department for me. And I could have saved myself three and a half hours. But that's not why you're the CEO of your company. Yeah, exactly. The reason why I didn't... take the 30-second route is because I reflect on being 23 years old and the profound impact that writing and simplifying had on my life. Had I not spent five years writing every single day and simplifying it into 140 characters so I could tweet it, I wouldn't have been religiously attached to this idea. Okay. And do you know what part of your brain you were taking advantage of?",
+          "evidence": "Had I not spent five years writing every single day and simplifying it into 140 characters so I could tweet it, I wouldn't have been religiously attached to this idea.",
+          "t": 1994,
+          "kind": "said",
+          "confidence": 0.8145,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 97
+    },
     {
       "id": "diary-of-a-ceo-ed8c9e42beb5",
       "sourceId": "diary-of-a-ceo",
@@ -341,6 +673,54 @@
   ],
   "pending": [
     {
+      "id": "desk-14bfab36c866",
+      "title": "5 Companies Capturing the Biggest Market Share?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=NUtPCAXq9-o",
+      "takeaways": [
+        "The episode analyses five businesses that have steadily expanded their position in large, growing industries.",
+        "It examines drivers of their market‑share gains such as stronger distribution, product mix, policy tailwinds and order‑book visibility."
+      ],
+      "date": "2026-09-12",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-1ea3eb67afce",
+      "title": "RBI vs Government: Who Really Controls Money?",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
+      "takeaways": [
+        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
+        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
+      ],
+      "date": "2026-09-12",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-0d4af485b600",
+      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
+      "takeaways": [
+        "You ever hear that 2AM voice telling you everything's about to go wrong?",
+        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
+      ],
+      "date": "2026-09-12",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-3a342472d20e",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "takeaways": [
+        "The FCNR scheme may not deliver the promised 11‑14% tax‑free returns.",
+        "It affects both NRIs and Indian resident investors."
+      ],
+      "date": "2026-09-12",
+      "reason": "over the 12/day cap"
+    },
+    {
       "id": "desk-26e0deff1237",
       "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
       "show": "Finance With Sharan",
@@ -349,31 +729,19 @@
         "Most people build a plan to reach financial freedom.",
         "Very few plan for what happens after."
       ],
-      "date": "2026-09-11",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-6a1b6a2cf1be",
-      "title": "#AskAbhijit 379: Ask Me Anything - Any Topic",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=QmaCrQiH6jo",
-      "takeaways": [
-        "Episode 379 of the #AskAbhijit show: Ask me your best questions in the live chat and super chat, and I shall answer them.",
-        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
-      ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "over the 12/day cap"
     },
     {
       "id": "desk-cf755fe7119b",
-      "title": "The Real story behind Zero1 by Zerodha",
+      "title": "Zerodha took a Bet on us. This is what we Built.",
       "show": "Zero1 by Zerodha",
       "url": "https://www.youtube.com/watch?v=gxED-fFZalA",
       "takeaways": [
         "People changed their buying decisions after watching a Zero1 video.",
-        "Families began talking about money together because of Zero1."
+        "Families began having money conversations they wouldn’t have had before."
       ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "over the 12/day cap"
     },
     {
@@ -385,32 +753,91 @@
         "The fastest and the most affordable way to upskill yourself in AI.",
         "Live workshop happening on TOMORROW!"
       ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "over the 12/day cap"
     },
     {
-      "id": "desk-4d0454c8475d",
-      "title": "Why Rupee Keeps Falling? | Depreciation, Foreign Flows & Market Reflexivity Explained",
+      "id": "desk-94a530b3b7a1",
+      "title": "What Went Wrong With Goa?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
+      "takeaways": [
+        "The episode provides full data and references for listeners to access alongside the show.",
+        "It features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
+      ],
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-c22c8c9d857b",
+      "title": "Why Some Nifty ETFs Beat Others?",
       "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=qyudC07oPOI",
+      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
       "takeaways": [
-        "The Indian rupee has gone from 65 to 95 against the dollar in less than a decade — but does the number itself actually matter?",
-        "In this wide-ranging conversation, former currency trader and ex-SEBI whole-time member Ananth Narayan joins Nithin Sasikumar and Pranav Agarwal to unpack what's really driving the rupee, and why the psychology around \"100\" might matter more than the fundamentals."
+        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
+        "Turns out, the answer isn’t as straightforward as you might think."
       ],
-      "date": "2026-09-11",
-      "reason": "over the 12/day cap"
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-8679a5d516c6",
-      "title": "The India That Gujarat Built | Shut Up Ya Kunal w/ Kunal Kamra ft Aakar Patel | Episode 36",
-      "show": "Shut Up Ya Kunal",
-      "url": "https://www.youtube.com/watch?v=-BucDdCiD-s",
+      "id": "desk-55a5b39c122e",
+      "title": "#AskAbhijit 380: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=K6j_nc0STZU",
       "takeaways": [
-        "Patel examines the rise of Narendra Modi and the BJP’s political model in Gujarat’s transformation.",
-        "He discusses how India’s institutions have changed over the past decade."
+        "Episode 380 of the #AskAbhijit show: Ask me your best questions in the Live Chat and Super Chat, and I shall answer them.",
+        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
       ],
-      "date": "2026-09-11",
-      "reason": "over the 12/day cap"
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-eeb0ce0511d6",
+      "title": "Terrorist Or Prisoner Of A Terror State? | Why Has The Trial Of Umar Khalid Not Started? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=5VFzX_WI_7E",
+      "takeaways": [
+        "Is the BJP going soft on terror or protecting Khalid?",
+        "Punishing Umar in an open court would have really been a massive win for the Govt ..."
+      ],
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-c277949c989d",
+      "title": "'CCTV Footage Has the Truth, Delhi Police Must Release it': Journalists Shaheen and Nafisa Khan",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=lrfybuAkHjA",
+      "takeaways": [
+        "Journalists Shaheen and Nafisa Khan allege they were assaulted at Delhi’s Saket Police Station.",
+        "They say the police have not released the CCTV footage that could clarify what happened."
+      ],
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-2cddb66fe34f",
+      "title": "“I am totally against any kind of caste discrimination” Chirag Paswan",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=kHStfnqYyRQ",
+      "takeaways": [
+        "“I am totally against any kind of caste discrimination” Chirag Paswan #ANIPodcast #SmitaPrakash #ChiragPaswan #Dalit #Caste #Discrimination #SC #ST #OBC #Reservation Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-545d540faa0c",
+      "title": "Yudh Abhyas 2026 India U S  Army Join Forces for High Altitude Warfare | Current Affairs",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=DP1eMTHRT70",
+      "takeaways": [
+        "Yudh Abhyas 2026, the 22nd edition of the India-U.S.",
+        "bilateral military exercise, focuses on strengthening combat interoperability, high-altitude warfare capabilities, long-range precision fires, counter-drone operations, and multi-domain warfare."
+      ],
+      "date": "2026-09-12",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
       "id": "desk-338f935c708b",
@@ -418,10 +845,10 @@
       "show": "Figuring Out",
       "url": "https://www.youtube.com/watch?v=x63HCoDfAhQ",
       "takeaways": [
-        "Surviving Para SF selection can involve 90 days with no food, water, or sleep.",
-        "An ADC to the President anticipates every need before it arises."
+        "courage cannot exist without fear, according to him, and this shapes real combat",
+        "an ADC constantly anticipates every need before it arises, a duty most people never know about"
       ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
@@ -430,57 +857,10 @@
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
       "takeaways": [
-        "Starting wealth‑creation in your 20s gives you an unmatched compounding advantage.",
-        "The episode outlines a step‑by‑step investment blueprint focused on optimal asset allocation, strategic portfolio balance, and disciplined long‑term growth."
+        "Starting your wealth‑creation journey in your 20s gives you an unmatched compounding advantage.",
+        "The episode outlines a step‑by‑step investment blueprint that emphasizes optimal asset allocation, strategic portfolio balance, and disciplined long‑term growth."
       ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-85b4d0fcc1ff",
-      "title": "Netanyahu Knew About The Hamas Attack? | Shocking Revelations Rock Israeli Politics | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=xSuZJ-Vn0FI",
-      "takeaways": [
-        "Now a bombshell 1.5-year Haaretz investigation now confirms the rumours, Netanyahu knew about the impending Hamas attacks - but he CHOSE not to share this intelligence with his own military or intelligence chiefs.",
-        "Haaretz claims that on the evening of October 7 itself Hamas offered to release every civilian hostage, unconditionally, through Qatar."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-6b4ed2f2651a",
-      "title": "Grief, Fear and Concern After Chongtham Vikram Singh's Horrific Lynching in Delhi",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=eyahTFOZgoo",
-      "takeaways": [
-        "Chongtham Vikram Singh, a 55-year-old guitarist and music teacher from Manipur, objected to a group of men drinking and causing a loud disturbance outside his home.",
-        "What began as a verbal dispute ended with his death."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-2ab430ad3575",
-      "title": "“Fancy equipment from overseas does not make you win the war” Air Marshal Jeetendra Mishra",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=VB8kC6jWtww",
-      "takeaways": [
-        "“Fancy equipment from overseas does not make you win the war” Air Marshal Jeetendra Mishra #ANIPodcast #SmitaPrakash #JeetendraMishra #IAF #IndianAirForce #OperationSindoor #India #Pakistan #China #Turkey Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-608f125c0baf",
-      "title": "Mineral and Power Resources | Class 8 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=xG3XYYlJET4",
-      "takeaways": [
-        "The chapter helps students understand the importance of mineral and power resources, their classification, distribution and uses.",
-        "It introduces conventional and non‑conventional sources of energy and highlights the need for their conservation and sustainable use."
-      ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
@@ -489,10 +869,10 @@
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=GpJhBB7Gv0c",
       "takeaways": [
-        "Over the next 15 years, Apple’s market value grew from roughly $350 billion to $4.7 trillion.",
-        "Apple’s revenue increased from $108 billion to $416 billion, and its services business now generates about $109 billion annually."
+        "Over the next 15 years, Tim Cook took Apple’s market value from roughly $350 billion to $4.7 trillion.",
+        "He grew Apple’s revenue from $108 billion to $416 billion and built a services business that now earns $109 billion a year."
       ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
@@ -501,58 +881,10 @@
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=zHPv2r9cZng",
       "takeaways": [
-        "He should delay construction by six months and build an emergency fund.",
-        "He should continue trying to access the PM Awas Yojana before taking on debt."
+        "Delay the house construction by six months, build an emergency fund, and keep pursuing the PM Awas Yojana before taking on debt.",
+        "Developing new skills can dramatically increase earning potential and help build a career not limited by the current job."
       ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-14bfab36c866",
-      "title": "5 Companies Capturing the Biggest Market Share?",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=NUtPCAXq9-o",
-      "takeaways": [
-        "We analyse five businesses that have steadily expanded their position in large and growing industries.",
-        "The video is for educational purposes only and is not a buy or sell recommendation."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-1ea3eb67afce",
-      "title": "RBI vs Government: Who Really Controls Money?",
-      "show": "Labour Law Advisor",
-      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
-      "takeaways": [
-        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
-        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-0d4af485b600",
-      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
-      "takeaways": [
-        "You ever hear that 2AM voice telling you everything's about to go wrong?",
-        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
-      ],
-      "date": "2026-09-11",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-3a342472d20e",
-      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
-      "takeaways": [
-        "The FCNR scheme may not live up to its promised returns.",
-        "Listeners are reminded that the content is not investment advice and they should conduct their own due diligence."
-      ],
-      "date": "2026-09-11",
+      "date": "2026-09-12",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
@@ -573,85 +905,79 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-11T00:16:42.355Z",
-    "discovered": 1498,
+    "at": "2026-09-12T00:23:49.737Z",
+    "discovered": 1499,
     "eligible": 12,
-    "processed": 0,
-    "skipped": 1486,
-    "failed": 12,
+    "processed": 1,
+    "skipped": 1487,
+    "failed": 11,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
+        "id": "desk-94a530b3b7a1",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:38.889Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-c22c8c9d857b",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:40.323Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-55a5b39c122e",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:41.249Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-eeb0ce0511d6",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:42.035Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-c277949c989d",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:42.962Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-2cddb66fe34f",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:44.052Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-545d540faa0c",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-12T00:23:45.234Z"
+      },
+      {
+        "stage": "process",
         "id": "desk-338f935c708b",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:30.945Z"
+        "at": "2026-09-12T00:23:46.397Z"
       },
       {
         "stage": "process",
         "id": "desk-21d2ef51e359",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:32.105Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-85b4d0fcc1ff",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:33.136Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-6b4ed2f2651a",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:34.297Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2ab430ad3575",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:35.215Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-608f125c0baf",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:36.236Z"
+        "at": "2026-09-12T00:23:47.667Z"
       },
       {
         "stage": "process",
         "id": "desk-47f780d7c5c2",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:37.073Z"
+        "at": "2026-09-12T00:23:48.427Z"
       },
       {
         "stage": "process",
         "id": "desk-21c81f724b0d",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:38.248Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-14bfab36c866",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:39.300Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-1ea3eb67afce",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:40.283Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-0d4af485b600",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:41.425Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-3a342472d20e",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-11T00:16:42.349Z"
+        "at": "2026-09-12T00:23:49.732Z"
       }
     ],
     "estimatedCostUsd": 0
