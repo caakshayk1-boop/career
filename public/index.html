@@ -1682,11 +1682,24 @@ function renderPodcasts(d){
       ` — about ${mins} minutes to read. The rest are listed below as they always were.`
     : `${total} episode${total === 1 ? "" : "s"}. None has been read yet — the morning job publishes points here.`;
 
+  /* Air date, and it was missing from both cards while sitting in the payload.
+     Parsed from the YYYY-MM-DD parts by hand rather than through new Date():
+     a bare date string is read as UTC midnight, and formatting that in a
+     local zone moves it a day in every negative offset. Splitting the string
+     cannot drift. */
+  const airDate = e => {
+    const raw = String(e.date || e.publishedAt || "").slice(0, 10);
+    const m = raw.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (!m) return "";
+    const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${Number(m[3])} ${MON[Number(m[2]) - 1]}`;
+  };
+
   const readCard = e => {
     const ls = e.learnings || [];
     return `<div class="epi">
       <b><a href="/podcasts#e=${encodeURIComponent(e.id)}">${esc(e.title || "")}</a></b>
-      <span>${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
+      <span>${airDate(e) ? esc(airDate(e)) + " · " : ""}${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
         e.durationSec ? " · " + (e.durationSec >= 3600
           ? Math.floor(e.durationSec/3600) + "h " + (Math.round(e.durationSec%3600/60) || "")
           : Math.round(e.durationSec/60) + "m") : ""}</span>
@@ -1698,10 +1711,10 @@ function renderPodcasts(d){
 
   /* Unread episodes keep whatever one-liner the feed carried, so they show
      exactly what they showed before rather than degrading to a bare title. */
-  const listCard = (title, show, url, takeaways, note) => `<div class="epi">
+  const listCard = (title, show, url, takeaways, note, date) => `<div class="epi">
     ${url ? `<b><a href="${esc(url)}" target="_blank" rel="noopener">${esc(title)}</a></b>`
           : `<b>${esc(title)}</b>`}
-    <span>${esc(show || "")}${note ? " · " + esc(note) : ""}</span>
+    <span>${date ? esc(date) + " · " : ""}${esc(show || "")}${note ? " · " + esc(note) : ""}</span>
     ${takeaways && takeaways.length ? `<ul class="tick" style="margin-top:7px">${
       takeaways.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}
   </div>`;
@@ -1710,9 +1723,9 @@ function renderPodcasts(d){
   if (done.length) body += `<div class="lc">` + done.slice(0, 8).map(readCard).join("") + `</div>`;
 
   const rest = [
-    ...pending.map(p => listCard(p.title, p.show, p.url, p.takeaways, "not readable for free")),
+    ...pending.map(p => listCard(p.title, p.show, p.url, p.takeaways, "not readable for free", airDate(p))),
     ...unseen.map(e => listCard(e.title || "", e.show || e.author || "", e.link || e.url || "",
-      [].concat(e.takeaways || e.takeaway || []).filter(Boolean), e.published || "")),
+      [].concat(e.takeaways || e.takeaway || []).filter(Boolean), e.published || "", airDate(e))),
   ];
   if (rest.length) {
     body += `<div class="lc" style="margin-top:11px">
