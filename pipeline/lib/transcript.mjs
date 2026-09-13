@@ -201,11 +201,36 @@ const INNERTUBE_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"; // the public w
 /* Ordered by how reliably each is answered from a server. ANDROID and IOS are
    the ones that work; TVHTML5 is a third shape worth trying before giving up. */
 const INNERTUBE_CLIENTS = [
-  { name: "ANDROID", ctx: { clientName: "ANDROID", clientVersion: "19.44.38", androidSdkVersion: 34, hl: "en", gl: "US" },
+  /* WEB first. It is the shape InnerTube is least fussy about — the mobile
+     clients now reject a context missing fields their apps always send, which
+     is what the ANDROID and IOS 400s were, and the caption tracks are the same
+     either way. */
+  { name: "WEB", id: 1,
+    ctx: { clientName: "WEB", clientVersion: "2.20250101.00.00", hl: "en", gl: "US",
+           userAgent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36,gzip(gfe)" },
+    ua: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" },
+
+  { name: "MWEB", id: 2,
+    ctx: { clientName: "MWEB", clientVersion: "2.20250101.00.00", hl: "en", gl: "US" },
+    ua: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1" },
+
+  /* The mobile clients want a fuller context than a bare name and version. */
+  { name: "ANDROID", id: 3,
+    ctx: { clientName: "ANDROID", clientVersion: "19.44.38", androidSdkVersion: 34,
+           osName: "Android", osVersion: "14", platform: "MOBILE", hl: "en", gl: "US",
+           userAgent: "com.google.android.youtube/19.44.38 (Linux; U; Android 14) gzip" },
     ua: "com.google.android.youtube/19.44.38 (Linux; U; Android 14) gzip" },
-  { name: "IOS", ctx: { clientName: "IOS", clientVersion: "19.45.4", deviceModel: "iPhone16,2", hl: "en", gl: "US" },
+
+  { name: "IOS", id: 5,
+    ctx: { clientName: "IOS", clientVersion: "19.45.4", deviceMake: "Apple", deviceModel: "iPhone16,2",
+           osName: "iPhone", osVersion: "18.1.0.22B83", platform: "MOBILE", hl: "en", gl: "US",
+           userAgent: "com.google.ios.youtube/19.45.4 (iPhone16,2; U; CPU iOS 18_1_0 like Mac OS X)" },
     ua: "com.google.ios.youtube/19.45.4 (iPhone16,2; U; CPU iOS 18_1_0 like Mac OS X)" },
-  { name: "TVHTML5", ctx: { clientName: "TVHTML5_SIMPLY_EMBEDDED_PLAYER", clientVersion: "2.0", hl: "en", gl: "US" },
+
+  /* Last, and with a real version string — "2.0" was rejected as an unsupported
+     device, which is the endpoint answering rather than refusing. */
+  { name: "TVHTML5", id: 85,
+    ctx: { clientName: "TVHTML5_SIMPLY_EMBEDDED_PLAYER", clientVersion: "2.20250101.00.00", hl: "en", gl: "US" },
     ua: "Mozilla/5.0 (PlayStation; PlayStation 4/12.00) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" },
 ];
 
@@ -219,13 +244,19 @@ async function captionsFromInnerTube(videoId, tried) {
           "content-type": "application/json",
           "user-agent": client.ua,
           "accept-language": "en-US,en;q=0.9",
-          "x-youtube-client-name": client.name === "IOS" ? "5" : client.name === "ANDROID" ? "3" : "85",
+          "x-youtube-client-name": String(client.id),
           "x-youtube-client-version": client.ctx.clientVersion,
         },
         body: JSON.stringify({ videoId, context: { client: client.ctx },
           contentCheckOk: true, racyCheckOk: true }),
       });
-    } catch (e) { tried.push(`innertube ${client.name}: ${e.message.slice(0, 40)}`); continue; }
+    } catch (e) {
+      /* The response body on a 400 says exactly which context field InnerTube
+         objected to. Truncating it to 40 characters threw away the only useful
+         part and left three identical, unactionable lines in the log. */
+      tried.push(`innertube ${client.name}: ${e.message.replace(/\s+/g, " ").slice(0, 180)}`);
+      continue;
+    }
 
     /* A playability failure is per-video, not per-client: age gates and private
        videos will refuse every client, so say so once and stop. */
