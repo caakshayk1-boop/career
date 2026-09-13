@@ -134,6 +134,15 @@ YouTube caption track. Anything else is skipped, with that reason, before any
 work is done. `npm run podcasts:verify` reports which case every source is in —
 run it before enabling a source.
 
+### Running the morning job locally
+
+YouTube refuses caption access to datacentre IPs, so the GitHub Action cannot
+read YouTube shows — but **the same pipeline reads them fine from a home
+connection**. `./scripts/morning.sh` runs it here and pushes the result;
+[`scripts/SCHEDULING.md`](scripts/SCHEDULING.md) has the launchd, cron and Task
+Scheduler setup. The Action stays on for the RSS shows and for days this machine
+is off.
+
 ## State
 
 Ratings, counters and checkboxes live in `localStorage` under the `ak:` prefix,
