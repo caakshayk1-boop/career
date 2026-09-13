@@ -36,6 +36,10 @@ on:
         description: "Run everything but write nothing"
         type: boolean
         default: false
+      verify_only:
+        description: "Only check the sources: is each feed reachable, and can it be read for free?"
+        type: boolean
+        default: false
 
 # One at a time. Two overlapping runs would both read the ledger, both process
 # the same episode, and the second would overwrite the first's commit.
@@ -68,7 +72,15 @@ jobs:
 
       - run: npm install --no-audit --no-fund
 
+      # Source verification is a separate, read-only errand: it fetches each feed
+      # and reports whether it publishes a transcript. Run it before enabling a
+      # source — a feed that cannot be read only fills the page with titles.
+      - name: Verify the sources
+        if: ${{ inputs.verify_only }}
+        run: npm run podcasts:verify || true
+
       - name: Refresh
+        if: ${{ !inputs.verify_only }}
         env:
           # NOTHING HERE IS REQUIRED. Every one of these is a knob with a
           # working default, and the pipeline runs to completion with all of
@@ -102,7 +114,7 @@ jobs:
       # A morning with no new episodes changes nothing, and an empty commit
       # every day would bury the mornings that did produce something.
       - name: Commit if anything changed
-        if: ${{ !inputs.dry_run }}
+        if: ${{ !inputs.dry_run && !inputs.verify_only }}
         run: |
           git config user.name  "podcast-intelligence"
           git config user.email "noreply@askakshay.com"
