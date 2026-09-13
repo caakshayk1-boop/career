@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T20:26:08.670Z",
+  "generatedAt": "2026-09-13T20:32:06.342Z",
   "today": "2026-09-14",
   "retentionDays": 7,
   "days": [
@@ -11,7 +11,9 @@
         "desk-dea7fc29ad07",
         "desk-55a5b39c122e",
         "desk-f858c727a9fa",
+        "desk-b145addb16b5",
         "desk-19d757ecb503",
+        "desk-dfded789bd87",
         "desk-0d80e4fb8e8d",
         "desk-22d2ea727a75",
         "desk-1f07c9986f81"
@@ -679,6 +681,136 @@
       "readSeconds": 60
     },
     {
+      "id": "desk-b145addb16b5",
+      "sourceId": "desk",
+      "show": "Think School",
+      "title": "Start a Business With No Money | Eric Ries’ Guide for First-Time Founders",
+      "guest": "",
+      "topics": [],
+      "summary": "7 points taken verbatim from Think School, spanning 3:03–58:26. Selected from the transcript by information density — every line below is what was said, not a description of it.",
+      "url": "https://www.youtube.com/watch?v=eErcrQQHzg4",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-12T00:00:00.000Z",
+      "date": "2026-09-14",
+      "durationSec": 3959,
+      "processedAt": "2026-09-13T20:29:45.195Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "local",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Team can send emails, add notes, tag",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "team can send emails, add notes, tag",
+          "passage": "and even break down complex tasks into smaller subtasks so nothing gets missed. And you can view your work in whatever way makes the most sense to you. The Carbon view keeps your pipeline organized like a visual board. The grant view gives you a full timeline of tasks and their dependencies. And the list view shows you everything in one simple powerful screen. Collaboration also becomes far more efficient because every task has a built-in chatter where your team can send emails, add notes, tag colleagues, schedule meetings, attach files, all without leaving the platform. And the best part is you can get started with ODO for free today. And as your business scales, you can access the full suite for just 580 rupees per user per month. So if you want to manage your projects the smart way and actually focus on building your product, click the link in the description and get started with ODO today. And now on with",
+          "evidence": "team can send emails, add notes, tag",
+          "t": 183,
+          "kind": "said",
+          "confidence": 0.625,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Suite for just 580 rupees per user per",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "suite for just 580 rupees per user per",
+          "passage": "and their dependencies. And the list view shows you everything in one simple powerful screen. Collaboration also becomes far more efficient because every task has a built-in chatter where your team can send emails, add notes, tag colleagues, schedule meetings, attach files, all without leaving the platform. And the best part is you can get started with ODO for free today. And as your business scales, you can access the full suite for just 580 rupees per user per month. So if you want to manage your projects the smart way and actually focus on building your product, click the link in the description and get started with ODO today. And now on with the episode. Eric, what is the right way to find a gap in the market? Let's say I'm 21 years old in India and I have less than $1,000 to build a company. >> Yeah. >> Do you think a 21-year-old with less than $1,000 can lay the foundations for",
+          "evidence": "suite for just 580 rupees per user per",
+          "t": 195,
+          "kind": "said",
+          "confidence": 0.5925,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "He ran ads that cost him $233 to $388 to",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "he ran ads that cost him $233 to $388 to",
+          "passage": "to without building the product. And then he said, let's measure how much does it cost to get real customers. because if I build the product and then take it to the market and eventually realize that the customer acquisition cost is very high the business will end up in a failure. And that's when he thought a lot of people want this product that is fine but let's measure how much does it cost to get real paying customers because only then the business model will be considered successful. So he ran ads that cost him $233 to $388 to acquire one customer who only paid $99 a year. So his learning was that ads won't scale his product. If this is clear, let's move on. Let me give you another problem statement. >> Let's say I'm a 21-year-old and I want to start a coffee brand using lean startup principles. How do I even validate whether this idea is worth pursuing or not? >> What is the thesis here? Like what what",
+          "evidence": "he ran ads that cost him $233 to $388 to",
+          "t": 555,
+          "kind": "said",
+          "confidence": 0.7050000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Today, because of meta ads, it's so easy",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "Today, because of meta ads, it's so easy",
+          "passage": "other AI company was building all this other ancillary stuff and they stayed focused on just making their core product better for their own customers. I think that's a big part of why they've been successful.\" Eric, you know, the reason why I'm asking you this question on product market fit is because in India, there's this trend of D2C that's going on just like in the US in early 2000s. And I'll tell you where the problem is. The problem is performance marketing. Today, because of meta ads, it's so easy to get 1,000 customers and convince yourself and lie to your own self that you've got product market fit. >> Oh, yeah. >> That has become dangerous. >> Yeah, very dangerous. So help me understand how do I pierce through this facade and understand whether my product truly has product market fit or not. So, one of the least popular and least known parts of lean startup is a chapter on",
+          "evidence": "Today, because of meta ads, it's so easy",
+          "t": 1035,
+          "kind": "said",
+          "confidence": 0.665,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "I think now most people view soda as",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "now I think now most people view soda as",
+          "passage": "purpose and you have a hard time putting it down. That's what makes it addictive. So those products, the measurement of success is about that retention effect. >> Where would you place Coca-Cola? >> For most consumer products like that, um, they are either designed to be paid engine of growth or they're designed to be sticky engine of growth. So, um, soda now I think now most people view soda as more of a discretionary purchase. I think this wasn't true, you know, 50 years ago. So, I think there was a time when people would be like really loyal to a certain brand and they would stock it in their kitchen and they would be like a regular customer of it. You still see that in commercial buyers of Coca-Cola. Think about how many startup incubators stock Diet Coke or something in the in the refrigerator. You know, they they buy the soda every week reliably, but most people now don't.",
+          "evidence": "now I think now most people view soda as",
+          "t": 1790,
+          "kind": "said",
+          "confidence": 0.7255,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "122 ft, I think it's 200 ft because blah",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "122 ft, I think it's 200 ft because blah",
+          "passage": "is close to 122 two would increase our average as a group. No. Adding people who are wrong helps the group improve. How? How is that possible? Because when we're brainstorming and talking, we need to be able to evaluate each other's ideas critically. And sometimes somebody who is wrong or disagrees in a constructive way increases everybody else's acumen and says, \"Wait a sec.\" They bring up an issue. If it was only 122 ft, I think it's 200 ft because blah blah blah. and what they're saying is wrong but they say it in a way that stimulates other people to say well actually that's not right but that's a good point we should consider it from this other angle you know that is what the research shows so that we have to evaluate fit through the lens of that um of that criteria >> now once I get these people in who have a b cde e f how do I maintain a great culture as a leader so that my organization keeps thriving",
+          "evidence": "122 ft, I think it's 200 ft because blah",
+          "t": 3308,
+          "kind": "said",
+          "confidence": 0.6965000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "\"Oh, don't hear don't let anybody hear",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "\"Oh, don't hear don't let anybody hear",
+          "passage": "it and beg you to beta test it. I remember talking to people like during the building of the product, which was years late and way over budget, obviously. You already can tell. And I remember we would have these play tests. We would all get the whole company together, hundreds of people. We would play the It was online entertainment. We'd play the game together. It was a virtual world. We'd play together because I would remember saying, \"This is pretty fun. Maybe we should have some customers try it.\" and they'd be like, \"Oh, don't hear don't let anybody hear you say that. This is our secret. Our secret.\" So, I can still remember if you checked out the business plan, you look to appendix B, every business plan has an appendex. The appendix has a beautiful graph, the hockey stickshaped graph curve, >> and it said, I remember this so vividly, >> according to the graph, 6 months after the product launches, we",
+          "evidence": "\"Oh, don't hear don't let anybody hear",
+          "t": 3506,
+          "kind": "said",
+          "confidence": 0.5800000000000001,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 60
+    },
+    {
       "id": "desk-19d757ecb503",
       "sourceId": "desk",
       "show": "Ankur Warikoo",
@@ -1002,6 +1134,151 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 76
+    },
+    {
+      "id": "desk-dfded789bd87",
+      "sourceId": "desk",
+      "show": "CA Rachana Ranade",
+      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
+      "guest": "",
+      "topics": [],
+      "summary": "8 points taken verbatim from CA Rachana Ranade, spanning 4:57–18:17. Selected from the transcript by information density — every line below is what was said, not a description of it.",
+      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-12T00:00:00.000Z",
+      "date": "2026-09-14",
+      "durationSec": 1149,
+      "processedAt": "2026-09-13T20:29:45.262Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "local",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "This number is extremely important because if I want to compare this",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "this number is extremely important because if I want to compare this",
+          "passage": "can be further broken down into transaction charges which are from cash market, from futures, from options and even from mutual funds. And there is a very small chunk for others. But again if you see the maximum chunk is coming from what options. Options accounts for almost ₹10 thousand crore out of the total ₹157 crore of the transaction charges. But this number is extremely important because if I want to compare this with the total revenue from operations, this number comes to almost 60% of revenue from operations. Keep this in your mind I'm going to come back to this number sometime. Ok? So, this is the first set of revenue transaction charges. Second number is listing services. Any company which comes up with an IPO. Typically listed on both exchanges. BSE NSC The moment you want to list the stock on the exchange you will have to pay a listing fee. Now listing fee accounts for 2.12%",
+          "evidence": "this number is extremely important because if I want to compare this",
+          "t": 297,
+          "kind": "said",
+          "confidence": 0.6950000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Mind I'm going to come back to this number sometime.",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "mind I'm going to come back to this number sometime.",
+          "passage": "there is a very small chunk for others. But again if you see the maximum chunk is coming from what options. Options accounts for almost ₹10 thousand crore out of the total ₹157 crore of the transaction charges. But this number is extremely important because if I want to compare this with the total revenue from operations, this number comes to almost 60% of revenue from operations. Keep this in your mind I'm going to come back to this number sometime. Ok? So, this is the first set of revenue transaction charges. Second number is listing services. Any company which comes up with an IPO. Typically listed on both exchanges. BSE NSC The moment you want to list the stock on the exchange you will have to pay a listing fee. Now listing fee accounts for 2.12% of the total revenue of NSC. Which is the third one? The third one is data center and rack charges. Now what is this all about? So if I'm",
+          "evidence": "mind I'm going to come back to this number sometime.",
+          "t": 307,
+          "kind": "said",
+          "confidence": 0.67,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Simple whenever I buy a stock money has to",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "simple whenever I buy a stock money has to",
+          "passage": "index right and there will be a lot of mutual funds which will have Nifty 50 Index Fund and Nifty Next 50 Index Fund whatever c they are using the name Nifty all these mutual fund houses right and for that they will have to pay a licensing fee to Nifty which accounts for barely 1% of the total revenue. The next one is clearing and settlement fee which is 1.51% of the total revenue. Now what is this clearing and settlement? See simple whenever I buy a stock money has to go from my account next day the stock has to actually come to my account t plus one settlement. Now who ensures that money will actually get paid. Two- Two shares will actually come into my account. That is nothing but clearing and settlement. And for that also money is charged and the exchange earns money out of that. Ok? Finally, it's number at other operating revenue, that's like other income kind of a thing which is a",
+          "evidence": "simple whenever I buy a stock money has to",
+          "t": 564,
+          "kind": "said",
+          "confidence": 0.7165,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Pin codes Available in 1400 plus cities",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "pin codes Available in 1400 plus cities",
+          "passage": "company. Now if you have a look at this global ranking they are at number one as far as the multi asset classes is concern or cash equity is concern equity derivatives is concern and for listing platform it is at number two. Look at the market share also for cash market 93% market share. Equity Futures 99.72% Market Share That's as good as a Monopoly Equity Options 68.48% Look at the reach They are available over 99% of the pin codes Available in 1400 plus cities 3000 plus listed entities under them. Trading Infra and Clearing Infra numbers are also amazing, right? Now, if you look at the company structure, this is also interesting because many people feel NSC is just like a stock exchange and nothing else. But they also have a lot of subsidiaries. They have associates as well. For example, National Coal Exchange of India Limited is like their 100% subsidiary. Even if it looks at the Associates Power Exchange",
+          "evidence": "pin codes Available in 1400 plus cities",
+          "t": 667,
+          "kind": "said",
+          "confidence": 0.5850000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Trading metrics, the higher the average daily trading",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "trading metrics, the higher the average daily trading",
+          "passage": "performance indicators and if you expect that I move to read out this whole thing. That's not going to happen. I'm just going to tell you some KPIs out of this. And I'm not going to read out the numbers. You can very well do that. I am just going to tell you the overall understanding thought process. See Unique Registered Investors Obviously Hire the Better. Listed entities on the exchange are obviously higher the better. And if you check this number has been increasing. Now if you check the trading metrics, the higher the average daily trading volume the better. Has it increased from 24 to 25 yes it has dropped in 26 and exactly the same pattern you can see for equity futures and the same pattern you can see even for options equity options ah premium value as well as notional value. Now Listing Matrix Number of IPOs Getting Listed Main Board of Course Higher the Better Right. So the main board has been",
+          "evidence": "trading metrics, the higher the average daily trading",
+          "t": 844,
+          "kind": "said",
+          "confidence": 0.6125,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "IPOs Getting Listed Main Board of Course",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "IPOs Getting Listed Main Board of Course",
+          "passage": "obviously higher the better. And if you check this number has been increasing. Now if you check the trading metrics, the higher the average daily trading volume the better. Has it increased from 24 to 25 yes it has dropped in 26 and exactly the same pattern you can see for equity futures and the same pattern you can see even for options equity options ah premium value as well as notional value. Now Listing Matrix Number of IPOs Getting Listed Main Board of Course Higher the Better Right. So the main board has been increasing for SMEs, there was a small drop in 26. If I am talking about financial metrics in here if I talk about the data center, rack charges, data connectivity, data feed and terminal services obviously all three will be higher the better. Licensing services, clearing settlement also hire the better. Now, if see for these five pointers. For the first one, it has been increasing. Second one",
+          "evidence": "IPOs Getting Listed Main Board of Course",
+          "t": 864,
+          "kind": "said",
+          "confidence": 0.7050000000000001,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Asset value per share NSC is lower than BSE",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "asset value per share NSC is lower than BSE",
+          "passage": "similar. In the fourth and fifth one again is more or less increasing. Fifth on of course that you can see a small drop for valuation if you see now this is interesting revenue for NSC is way higher as compare to its only listed pair which is BSE by the way their profit is also way higher as compare to BSE but if I am talking about the EPS EPS is for NSC it is lower than BSE return on net worth NSC is lower than BSE net asset value per share NSC is lower than BSE and the PE is also lower as compare to BSE but this peer comparison lesson is like very basic level. If you want a deep dive of how BSE vs NSE stack up? I want you all to tell me in the comments section. Just type out NSCE vs BSE. More number of comments is equal to higher the chances that I will do a separate video on it. Now let's move on with the risk. The company has very clearly mentioned that if the overall volume and value of",
+          "evidence": "asset value per share NSC is lower than BSE",
+          "t": 917,
+          "kind": "said",
+          "confidence": 0.7135,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "₹1700 to ₹1785 zero as fresh issue offer for",
+          "idea": "",
+          "why": "",
+          "action": "",
+          "detail": "₹1700 to ₹1785 zero as fresh issue offer for",
+          "passage": "strong. But they are saying that if there is any disruption, any failure, any ad-hoc errors in the IT infrastructure, then it can also impact their business. Ultimately talking about the litigation, I always check criminal proceedings. Criminal proceedings against the company there are 17 ah aggregate amount involved is 25842 million and against their directors 10 criminal proceedings amounting to 25.18 million ah talking about the IPO details price band is ₹1700 to ₹1785 zero as fresh issue offer for sale is 100% ₹22561 crore. And that's where we had started the whole discussion right that it's an entire offer for sale. Ah we did talk about SBI as one of their selling shareholders. But I hope through this whole IPO summary video you found a lot of value you understood a lot about the company and if you did please don't forget to smash the like button please don't forget to share this",
+          "evidence": "₹1700 to ₹1785 zero as fresh issue offer for",
+          "t": 1097,
+          "kind": "said",
+          "confidence": 0.6165,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 60
     },
     {
       "id": "desk-0d80e4fb8e8d",
@@ -2541,90 +2818,6 @@
   ],
   "pending": [
     {
-      "id": "desk-c22c8c9d857b",
-      "title": "Why Some Nifty ETFs Beat Others?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
-      "takeaways": [
-        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
-        "Turns out, the answer isn’t as straightforward as you might think."
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-21d2ef51e359",
-      "title": "How to Invest in Your 20s | Complete Step-by-Step Plan",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
-      "takeaways": [
-        "Starting your wealth-creation journey in your 20s provides an unmatched compounding advantage for your financial future.",
-        "This video breaks down a structured and practical investment blueprint tailored specifically for this decade, focusing on optimal asset allocation, strategic portfolio balance, and disciplined long-term growth."
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-1ea3eb67afce",
-      "title": "Who controls your EMI",
-      "show": "Labour Law Advisor",
-      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
-      "takeaways": [
-        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
-        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-0d4af485b600",
-      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
-      "takeaways": [
-        "You ever hear that 2AM voice telling you everything's about to go wrong?",
-        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-3a342472d20e",
-      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
-      "takeaways": [
-        "The recent FCNR scheme by the RBI seems lucrative, but is it actually what it is promising.",
-        "I have done an in depth analysis in this macro video - how it not only affects NRIs but also Indian resident investors."
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-26e0deff1237",
-      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
-      "takeaways": [
-        "Most people build a plan to reach financial freedom.",
-        "Very few plan for what happens after."
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-0116d1d09ac7",
-      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
-      "takeaways": [
-        "The fastest and the most affordable way to upskill yourself in AI.",
-        "Live workshop happening on TOMORROW!"
-      ],
-      "date": "2026-09-14",
-      "reason": "over the 12/day cap"
-    },
-    {
       "id": "desk-b3b592c74955",
       "title": "“Kamal Haasan and Mani Ratnam Were Worth My Time” Manu Josephcast for Short Clip 05",
       "show": "ANI Podcast (clips)",
@@ -2633,31 +2826,7 @@
         "“Kamal Haasan and Mani Ratnam Were Worth My Time” Manu Joseph #ANIPodcast #SmitaPrakash #ManuJoseph #Vijay #KamalHaasan #ManiRatnam #Rajinikanth Tune in here: linktr.ee/podcastwithsmitaprakash"
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: only 1 distinct points (floor is 10)"
-    },
-    {
-      "id": "desk-b145addb16b5",
-      "title": "Start a Business With No Money | Eric Ries’ Guide for First-Time Founders",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=eErcrQQHzg4",
-      "takeaways": [
-        "Your startup can have 10,000 customers and STILL have zero Product-Market Fit.",
-        "In the age of Meta ads, vanity metrics and AI, it has never been easier to convince yourself that your startup is working."
-      ],
-      "date": "2026-09-14",
-      "reason": "no takeaways: only 7 distinct points (floor is 10)"
-    },
-    {
-      "id": "desk-dfded789bd87",
-      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
-      "takeaways": [
-        "In this video, we take a closer look at the National Stock Exchange (NSE), its business model, key revenue streams, financial performance, valuation, industry outlook, key risks and IPO details.",
-        "From transaction charges and options revenue to listing, data services, clearing & settlement and Nifty licensing, understand how NSE actually makes money."
-      ],
-      "date": "2026-09-14",
-      "reason": "no takeaways: only 8 distinct points (floor is 10)"
+      "reason": "no takeaways: only 1 distinct points (floor is 6)"
     },
     {
       "id": "desk-ba0747405cad",
@@ -2682,6 +2851,90 @@
       ],
       "date": "2026-09-14",
       "reason": "no takeaways: no sentence scored above zero"
+    },
+    {
+      "id": "desk-c22c8c9d857b",
+      "title": "Why Some Nifty ETFs Beat Others?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "takeaways": [
+        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
+        "Turns out, the answer isn’t as straightforward as you might think."
+      ],
+      "date": "2026-09-14",
+      "reason": "no takeaways: only 2 distinct points (floor is 6)"
+    },
+    {
+      "id": "desk-21d2ef51e359",
+      "title": "How to Invest in Your 20s | Complete Step-by-Step Plan",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
+      "takeaways": [
+        "Starting your wealth-creation journey in your 20s provides an unmatched compounding advantage for your financial future.",
+        "This video breaks down a structured and practical investment blueprint tailored specifically for this decade, focusing on optimal asset allocation, strategic portfolio balance, and disciplined long-term growth."
+      ],
+      "date": "2026-09-14",
+      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+    },
+    {
+      "id": "desk-1ea3eb67afce",
+      "title": "Who controls your EMI",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
+      "takeaways": [
+        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
+        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
+      ],
+      "date": "2026-09-14",
+      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+    },
+    {
+      "id": "desk-0d4af485b600",
+      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
+      "takeaways": [
+        "You ever hear that 2AM voice telling you everything's about to go wrong?",
+        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
+      ],
+      "date": "2026-09-14",
+      "reason": "no takeaways: only 1 distinct points (floor is 6)"
+    },
+    {
+      "id": "desk-3a342472d20e",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "takeaways": [
+        "The recent FCNR scheme by the RBI seems lucrative, but is it actually what it is promising.",
+        "I have done an in depth analysis in this macro video - how it not only affects NRIs but also Indian resident investors."
+      ],
+      "date": "2026-09-14",
+      "reason": "no takeaways: only 3 distinct points (floor is 6)"
+    },
+    {
+      "id": "desk-26e0deff1237",
+      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
+      "takeaways": [
+        "Most people build a plan to reach financial freedom.",
+        "Very few plan for what happens after."
+      ],
+      "date": "2026-09-14",
+      "reason": "no takeaways: only 3 distinct points (floor is 6)"
+    },
+    {
+      "id": "desk-0116d1d09ac7",
+      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
+      "takeaways": [
+        "The fastest and the most affordable way to upskill yourself in AI.",
+        "Live workshop happening on TOMORROW!"
+      ],
+      "date": "2026-09-14",
+      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
     }
   ],
   "generator": {
@@ -2692,43 +2945,73 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-13T20:26:08.669Z",
+    "at": "2026-09-13T20:32:06.334Z",
     "discovered": 903,
     "eligible": 12,
-    "processed": 7,
+    "processed": 2,
     "skipped": 891,
-    "failed": 5,
+    "failed": 10,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "desk-b3b592c74955",
-        "message": "no takeaways: only 1 distinct points (floor is 10)",
-        "at": "2026-09-13T20:25:33.083Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-b145addb16b5",
-        "message": "no takeaways: only 7 distinct points (floor is 10)",
-        "at": "2026-09-13T20:25:33.793Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-dfded789bd87",
-        "message": "no takeaways: only 8 distinct points (floor is 10)",
-        "at": "2026-09-13T20:25:33.893Z"
+        "message": "no takeaways: only 1 distinct points (floor is 6)",
+        "at": "2026-09-13T20:29:44.990Z"
       },
       {
         "stage": "process",
         "id": "desk-ba0747405cad",
         "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-13T20:26:08.514Z"
+        "at": "2026-09-13T20:30:16.941Z"
       },
       {
         "stage": "process",
         "id": "desk-94a530b3b7a1",
         "message": "no takeaways: no sentence scored above zero",
-        "at": "2026-09-13T20:26:08.662Z"
+        "at": "2026-09-13T20:30:16.951Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-c22c8c9d857b",
+        "message": "no takeaways: only 2 distinct points (floor is 6)",
+        "at": "2026-09-13T20:30:21.207Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-21d2ef51e359",
+        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
+        "at": "2026-09-13T20:30:51.632Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-1ea3eb67afce",
+        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
+        "at": "2026-09-13T20:31:23.582Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-0d4af485b600",
+        "message": "no takeaways: only 1 distinct points (floor is 6)",
+        "at": "2026-09-13T20:31:26.858Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-3a342472d20e",
+        "message": "no takeaways: only 3 distinct points (floor is 6)",
+        "at": "2026-09-13T20:31:30.941Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-26e0deff1237",
+        "message": "no takeaways: only 3 distinct points (floor is 6)",
+        "at": "2026-09-13T20:31:34.775Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-0116d1d09ac7",
+        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
+        "at": "2026-09-13T20:32:06.315Z"
       }
     ],
     "estimatedCostUsd": 0
