@@ -23,11 +23,14 @@
     "GitHub Actions. The desk feed stays enabled so its episodes remain LISTED on",
     "the page, but the ones pointing at YouTube will not be read here.",
     "",
-    "The shows below are RSS candidates: the path that demonstrably works is a feed",
-    "publishing <podcast:transcript>, which Diary of a CEO does and which yields 20",
-    "points an episode at zero cost. They are PAUSED until `podcasts:verify` proves",
-    "each one publishes a transcript \u2014 enabling a feed that does not just fills the",
-    "page with unread titles.",
+    "MEASURED, 13 SEP 2026, NOT GUESSED. Fourteen real feeds were fetched in CI and",
+    "EXACTLY ONE publishes <podcast:transcript>: Diary of a CEO, via flightcast.",
+    "Tim Ferriss, Huberman, Acquired, Founders, My First Million, Modern Wisdom,",
+    "The Knowledge Project and Invest Like the Best are all audio-only. Podcasting",
+    "2.0 transcript adoption among large shows is close to zero, so the pool of",
+    "shows this pipeline can read for free is small and every addition has to be",
+    "checked. Each source below carries a `checked` note recording what was found,",
+    "so nobody re-adds one on a hunch. Run `podcasts:verify` before enabling.",
     "",
     "STATUS, 10 Sep 2026, from a real run rather than from memory:",
     "  diary-of-a-ceo        VERIFIED. 882 items, publishes <podcast:transcript>,",
@@ -75,15 +78,17 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/thediaryofaceo",
       "enabled": true,
-      "verified": true
+      "verified": true,
+      "checked": "publishes <podcast:transcript> via flightcast \u2014 20 points/episode, $0"
     },
     {
       "id": "invest-like-the-best",
       "show": "Invest Like the Best",
       "type": "rss",
       "url": "https://feeds.megaphone.fm/investlikethebest",
-      "enabled": true,
-      "verified": false
+      "enabled": false,
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "knowledge-project",
@@ -91,7 +96,8 @@
       "type": "rss",
       "url": "https://theknowledgeproject.libsyn.com/rss",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "lennys-podcast",
@@ -99,7 +105,8 @@
       "type": "rss",
       "url": "https://api.substack.com/feed/podcast/10845.rss",
       "enabled": false,
-      "verified": false
+      "verified": false,
+      "checked": "HTTP 403 \u2014 this feed URL is wrong"
     },
     {
       "id": "acquired",
@@ -107,7 +114,8 @@
       "type": "rss",
       "url": "https://feeds.transistor.fm/acquired",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "dwarkesh",
@@ -115,7 +123,8 @@
       "type": "rss",
       "url": "https://api.substack.com/feed/podcast/69345.rss",
       "enabled": false,
-      "verified": false
+      "verified": false,
+      "checked": "HTTP 403 \u2014 this feed URL is wrong"
     },
     {
       "id": "founders",
@@ -123,7 +132,8 @@
       "type": "rss",
       "url": "https://feeds.simplecast.com/3hnxp7yk",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "twenty-minute-vc",
@@ -131,7 +141,8 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/thetwentyminutevc",
       "enabled": false,
-      "verified": false
+      "verified": false,
+      "checked": "HTTP 404 \u2014 this feed URL is wrong"
     },
     {
       "id": "my-first-million",
@@ -139,7 +150,8 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/HS2300184645",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "modern-wisdom",
@@ -147,7 +159,8 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/SIXMSB5088139739",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "huberman-lab",
@@ -155,7 +168,8 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/hubermanlab",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "tim-ferriss",
@@ -163,7 +177,8 @@
       "type": "rss",
       "url": "https://rss.art19.com/tim-ferriss-show",
       "enabled": false,
-      "verified": false
+      "verified": true,
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "all-in",
@@ -171,7 +186,8 @@
       "type": "rss",
       "url": "https://feeds.megaphone.fm/all-in",
       "enabled": false,
-      "verified": false
+      "verified": false,
+      "checked": "HTTP 404 \u2014 this feed URL is wrong"
     },
     {
       "id": "odd-lots",
@@ -179,7 +195,8 @@
       "type": "rss",
       "url": "https://feeds.bloomberg.fm/BLM3999844716",
       "enabled": false,
-      "verified": false
+      "verified": false,
+      "checked": "unreachable \u2014 this feed URL is wrong"
     }
   ]
 }
