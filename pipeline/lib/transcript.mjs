@@ -80,6 +80,12 @@ const PROVIDERS = {
   async youtube(ep) {
     const tried = [];
 
+    /* InnerTube FIRST. It is the only one of the three that is designed to be
+       called by a non-browser, and it is what actually answers from a server. */
+    const fromInner = await captionsFromInnerTube(ep.ytId, tried)
+      .catch((e) => { tried.push(`innertube: ${e.message.slice(0, 60)}`); return null; });
+    if (fromInner) return fromInner;
+
     const fromPage = await captionsFromWatchPage(ep.ytId, tried)
       .catch((e) => { tried.push(`watch page: ${e.message.slice(0, 60)}`); return null; });
     if (fromPage) return fromPage;
@@ -174,6 +180,83 @@ function finish(provider, language, segments) {
     durationSec: last ? last.t + (last.d || 0) : 0,
     chars: segments.reduce((n, s) => n + s.text.length, 0),
   };
+}
+
+/**
+ * InnerTube — YouTube's own player API, the one the apps use.
+ *
+ * WHY THIS EXISTS AFTER TWO OTHER ROUTES FAILED. Scraping the watch page and
+ * hitting the public timedtext endpoint both assume a browser on a residential
+ * connection, and Google withholds captions from datacentre IPs on both. The
+ * mobile and TV clients cannot scrape a web page — they call
+ * /youtubei/v1/player and are answered — so a request that presents itself as
+ * one of those clients gets the caption track list that the web routes are
+ * denied. This is what every working server-side transcript tool does.
+ *
+ * Still undocumented, still Google's to change. It sits behind the same
+ * interface as the others and a failure still LISTS the episode.
+ */
+const INNERTUBE_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"; // the public web key, in every page
+
+/* Ordered by how reliably each is answered from a server. ANDROID and IOS are
+   the ones that work; TVHTML5 is a third shape worth trying before giving up. */
+const INNERTUBE_CLIENTS = [
+  { name: "ANDROID", ctx: { clientName: "ANDROID", clientVersion: "19.44.38", androidSdkVersion: 34, hl: "en", gl: "US" },
+    ua: "com.google.android.youtube/19.44.38 (Linux; U; Android 14) gzip" },
+  { name: "IOS", ctx: { clientName: "IOS", clientVersion: "19.45.4", deviceModel: "iPhone16,2", hl: "en", gl: "US" },
+    ua: "com.google.ios.youtube/19.45.4 (iPhone16,2; U; CPU iOS 18_1_0 like Mac OS X)" },
+  { name: "TVHTML5", ctx: { clientName: "TVHTML5_SIMPLY_EMBEDDED_PLAYER", clientVersion: "2.0", hl: "en", gl: "US" },
+    ua: "Mozilla/5.0 (PlayStation; PlayStation 4/12.00) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15" },
+];
+
+async function captionsFromInnerTube(videoId, tried) {
+  for (const client of INNERTUBE_CLIENTS) {
+    let data;
+    try {
+      data = await request(`https://www.youtube.com/youtubei/v1/player?key=${INNERTUBE_KEY}&prettyPrint=false`, {
+        method: "POST", as: "json", timeout: 30000, retries: 1, label: "innertube",
+        headers: {
+          "content-type": "application/json",
+          "user-agent": client.ua,
+          "accept-language": "en-US,en;q=0.9",
+          "x-youtube-client-name": client.name === "IOS" ? "5" : client.name === "ANDROID" ? "3" : "85",
+          "x-youtube-client-version": client.ctx.clientVersion,
+        },
+        body: JSON.stringify({ videoId, context: { client: client.ctx },
+          contentCheckOk: true, racyCheckOk: true }),
+      });
+    } catch (e) { tried.push(`innertube ${client.name}: ${e.message.slice(0, 40)}`); continue; }
+
+    /* A playability failure is per-video, not per-client: age gates and private
+       videos will refuse every client, so say so once and stop. */
+    const status = data?.playabilityStatus?.status;
+    if (status && status !== "OK") {
+      tried.push(`innertube ${client.name}: ${status}${data.playabilityStatus.reason ? ` (${data.playabilityStatus.reason})` : ""}`);
+      continue;
+    }
+
+    const tracks = data?.captions?.playerCaptionsTracklistRenderer?.captionTracks;
+    if (!Array.isArray(tracks) || !tracks.length) { tried.push(`innertube ${client.name}: no caption tracks`); continue; }
+
+    /* Human English, then auto English, then anything — several of these shows
+       are Hindi or Hinglish and an ASR Hindi track beats no transcript. */
+    const pick =
+      tracks.find((t) => /^en/i.test(t.languageCode || "") && t.kind !== "asr") ||
+      tracks.find((t) => /^en/i.test(t.languageCode || "")) ||
+      tracks[0];
+    if (!pick?.baseUrl) { tried.push(`innertube ${client.name}: track has no url`); continue; }
+
+    const xml = await request(pick.baseUrl, {
+      timeout: 30000, retries: 2, label: "yt-captions",
+      headers: { "user-agent": client.ua },
+    }).catch(() => "");
+    const segments = parseTimedText(xml);
+    if (!segments.length) { tried.push(`innertube ${client.name}: ${pick.languageCode} track empty`); continue; }
+
+    log.info("transcript", `innertube ${client.name}: ${pick.languageCode}${pick.kind === "asr" ? " (auto)" : ""}`);
+    return finish("youtube-captions", pick.languageCode || "en", segments);
+  }
+  return null;
 }
 
 /**
