@@ -89,7 +89,35 @@ export const cfg = {
   /* ── PROVIDERS ──────────────────────────────────────────────────────────
      Named, not imported. "mock" and "none" are first-class: they are what the
      test suite and a credential-free dry run use. */
-  aiProvider: process.env.AI_PROVIDER || (process.env.ANTHROPIC_API_KEY ? "anthropic" : "mock"),
+  /* Groq before Anthropic when both are present: it is free and this site's
+     running cost is the reason the local extractor was the default at all.
+     AI_PROVIDER still wins over both, and with neither key it is still mock. */
+  aiProvider: process.env.AI_PROVIDER
+    || (process.env.GROQ_API_KEY ? "groq"
+        : process.env.ANTHROPIC_API_KEY ? "anthropic" : "mock"),
+  groqKey: process.env.GROQ_API_KEY || "",
+  /* MEASURED ON THIS ACCOUNT, not chosen from a docs page. Asked for one
+     schema-constrained tool call, qwen3.8-27b returned it with every field
+     populated and gpt-oss-120b returned nothing parseable — the reasoning-model
+     failure already on record here, where hidden tokens eat max_tokens and
+     leave an empty 200. Overridable because Groq has retired models twice. */
+  groqModel: process.env.GROQ_MODEL_PODCASTS || "qwen/qwen3.8-27b",
+  /* The free tier is token-per-minute limited, so calls are serialised and
+     spaced rather than raced into a 429. */
+  groqGapMs: int(process.env.GROQ_GAP_MS, 2500),
+  /* OUTPUT tokens per minute is the binding limit on the free tier, and it is
+     enforced on the REQUEST: asking for 8,000 output tokens is refused before a
+     single token is generated — "Request too large ... on output tokens per
+     minute (OTPM)" — so a retry cannot help. Ask for less instead. */
+  groqMaxTokens: int(process.env.GROQ_MAX_TOKENS, 2400),
+  /* The model the run will actually use, so the cost estimate prices the right
+     thing. Without it estimateCost falls back to cfg.aiModel — an Anthropic
+     model — whichever provider is in use. */
+  get activeAiModel() {
+    return this.aiProvider === "groq" ? this.groqModel
+         : this.aiProvider === "anthropic" ? this.aiModel
+         : "mock";
+  },
   /* TWO MODELS, BY TASK. Pass 1 is recall over a dozen chunks — read this
      section, list anything that might qualify — and it is where the token
      volume is; the cheap model is genuinely good enough and is 80% of the

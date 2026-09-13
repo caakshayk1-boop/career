@@ -34,6 +34,14 @@ const PRICES = {
   "claude-opus-5": { in: 5, out: 25 },
   "claude-sonnet-5": { in: 2, out: 10 },
   "claude-haiku-4-5": { in: 1, out: 5 },
+  /* Groq's free tier is free. Zero here rather than absent, because an unknown
+     model falls back to the Opus row below and would print a run that cost
+     nothing as though it cost dollars — an alarm that cries wolf is worse than
+     no alarm. */
+  "qwen/qwen3.8-27b": { in: 0, out: 0 },
+  "qwen/qwen3.6-27b": { in: 0, out: 0 },
+  "openai/gpt-oss-120b": { in: 0, out: 0 },
+  "openai/gpt-oss-20b": { in: 0, out: 0 },
 };
 
 /**
@@ -59,6 +67,116 @@ export function estimateCost(inTokens, outTokens, model = cfg.aiModel) {
 }
 
 const PROVIDERS = {
+  /**
+   * Groq — the free one.
+   *
+   * OpenAI-compatible, so structured output is function calling rather than
+   * Anthropic's tools block, and there is no prompt caching: the system prompt
+   * is re-sent per chunk. That costs nothing here because the tier is free, but
+   * it is why this provider does not try to be clever about prompt ordering.
+   *
+   * MODEL CHOICE WAS MEASURED, NOT PICKED. On this account the generation-
+   * capable models are gpt-oss-120b/20b and qwen3.6/3.8-27b. Asked for one
+   * schema-constrained tool call:
+   *
+   *     qwen/qwen3.8-27b      returned the call, 2 learnings, fields populated
+   *     openai/gpt-oss-120b   returned nothing parseable
+   *
+   * which is the failure already recorded against gpt-oss elsewhere in this
+   * estate: it is a REASONING model whose hidden tokens consume max_tokens and
+   * leave an empty 200 behind. It is not the default here for that reason, and
+   * GROQ_MODEL overrides in case this account's roster changes again — Groq has
+   * retired models twice without notice.
+   *
+   * PACED FOR THE FREE TIER, which is token-per-minute limited. Calls are
+   * serialised and spaced; a 429 waits out the window the header names and
+   * retries once. Without this an episode's five passes race each other into
+   * the limit and the run dies half-written.
+   */
+  async groq() {
+    if (!cfg.groqKey) throw new Error("GROQ_API_KEY is not set");
+    const URL = "https://api.groq.com/openai/v1/chat/completions";
+    let chain = Promise.resolve(), last = 0;
+    const nap = (ms) => new Promise((r) => setTimeout(r, ms));
+
+    const gate = () => {
+      const w = chain.then(async () => {
+        const since = Date.now() - last;
+        if (since < cfg.groqGapMs) await nap(cfg.groqGapMs - since);
+        last = Date.now();
+      });
+      chain = w.catch(() => {});
+      return w;
+    };
+
+    const post = async (body, attempt = 0) => {
+      await gate();
+      const res = await fetch(URL, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${cfg.groqKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(180000),
+      });
+      if (res.status === 429 && attempt < 1) {
+        /* The header says how long the window has left; trust it over a guess,
+           and fall back to a minute when it is absent. */
+        const hinted = Number(res.headers.get("retry-after")) * 1000;
+        await nap(Number.isFinite(hinted) && hinted > 0 ? hinted + 1000 : 60000);
+        last = Date.now();
+        return post(body, attempt + 1);
+      }
+      if (!res.ok) {
+        const t = await res.text().catch(() => "");
+        throw new Error(`groq ${res.status}: ${t.slice(0, 180)}`);
+      }
+      const d = await res.json();
+      const u = d.usage || {};
+      charge({ inTokens: u.prompt_tokens || 0, outTokens: u.completion_tokens || 0 });
+      return d;
+    };
+
+    return {
+      name: "groq",
+      model: cfg.groqModel,
+
+      async json({ system, user, schema, name, description, maxTokens = 8000 }) {
+        const d = await post({
+          model: cfg.groqModel,
+          /* CLAMPED. The free tier limits OUTPUT tokens per minute and enforces
+             it on the request, so asking for 8,000 is refused outright — not
+             throttled, refused, which no retry can fix. The caller's number is
+             a ceiling for a paid provider; here it is whichever is smaller. */
+          max_tokens: Math.min(maxTokens, cfg.groqMaxTokens),
+          messages: [{ role: "system", content: system }, { role: "user", content: user }],
+          tools: [{ type: "function", function: {
+            name, description: description || name,
+            parameters: { ...schema, additionalProperties: false },
+          } }],
+          tool_choice: "required",
+        });
+        const msg = (d.choices || [{}])[0].message || {};
+        const call = (msg.tool_calls || [])[0];
+        if (!call) {
+          throw new Error(`no ${name} tool call — model said: ${String(msg.content || "").slice(0, 200)}`);
+        }
+        try {
+          return JSON.parse(call.function.arguments);
+        } catch {
+          throw new Error(`${name} arguments were not valid JSON`);
+        }
+      },
+
+      async text({ system, user, maxTokens = 4000 }) {
+        const d = await post({
+          model: cfg.groqModel,
+          max_tokens: Math.min(maxTokens, cfg.groqMaxTokens),
+          messages: [{ role: "system", content: system }, { role: "user", content: user }],
+        });
+        return String(((d.choices || [{}])[0].message || {}).content || "").trim();
+      },
+    };
+  },
+
   async anthropic() {
     if (!cfg.anthropicKey) throw new Error("ANTHROPIC_API_KEY is not set");
     const { default: Anthropic } = await import("@anthropic-ai/sdk").catch(() => {

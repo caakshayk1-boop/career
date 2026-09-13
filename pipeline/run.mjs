@@ -233,12 +233,17 @@ const summarise = () => ({
   at: new Date().toISOString(),
   ...run.counts,
   errors: run.errors.slice(0, 20),
-  estimatedCostUsd: Math.round(estimateCost(run.cost.inTokens, run.cost.outTokens) * 10000) / 10000,
+  estimatedCostUsd: Math.round(estimateCost(run.cost.inTokens, run.cost.outTokens, cfg.activeAiModel) * 10000) / 10000,
 });
 
 function report() {
   const r = finishRun();
-  const ai$ = estimateCost(r.cost.inTokens, r.cost.outTokens);
+  /* PRICED AGAINST THE MODEL THAT ACTUALLY RAN. estimateCost defaults to
+     cfg.aiModel, which is the Anthropic model whatever provider is in use — so
+     a free Groq run of 21,853 in / 7,437 out printed "$0.295". An estimate
+     that reports a free run as costing money is worse than none: it is exactly
+     the number someone decides on. */
+  const ai$ = estimateCost(r.cost.inTokens, r.cost.outTokens, cfg.activeAiModel);
   /* ElevenLabs bills per character; the rate varies by plan, so this uses the
      Creator-tier figure as an order of magnitude and says so. */
   const tts$ = (r.cost.ttsChars / 1000) * 0.15;
