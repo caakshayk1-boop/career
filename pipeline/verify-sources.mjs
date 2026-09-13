@@ -45,6 +45,24 @@ for (const s of all) {
       headers: { "user-agent": "career.askakshay.com podcast-intelligence/1.0" } });
     if (!res.ok) { console.log(`HTTP ${res.status}\n`); bad++; continue; }
 
+    /* The desk source is JSON, not a feed. Reading it with the XML parser
+       reported "parsed, but contains no items" for a source that was working
+       perfectly — a diagnostic tool that lies about a healthy source is worse
+       than no diagnostic at all. */
+    if (s.type === "desk") {
+      const doc = JSON.parse(await res.text());
+      const pod = doc?.desk?.podcasts ?? doc?.podcasts;
+      const list = (pod && (pod.episodes || pod.items)) || (Array.isArray(pod) ? pod : []);
+      if (!list.length) { console.log("reachable, but carries no podcasts today\n"); continue; }
+      const yt = list.filter((e) => /youtu\.?be/.test(e.link || e.url || "")).length;
+      console.log(`OK  ${list.length} episodes in today's digest`);
+      const pad = " ".repeat(35);
+      console.log(`${pad}newest: ${String(list[0].title || "").slice(0, 58)}`);
+      console.log(`${pad}${yt} of ${list.length} point at YouTube — NOT readable from CI,`);
+      console.log(`${pad}so those are listed on the page rather than read.\n`);
+      continue;
+    }
+
     const xml = await res.text();
     const feedTitle = tag(xml, "title");
     const list = items(xml);

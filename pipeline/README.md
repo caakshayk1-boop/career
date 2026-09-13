@@ -113,6 +113,24 @@ run that used the source.
 
 A feature meant to add depth must never remove content.
 
+## The supply problem, measured
+
+Fourteen real feeds were fetched in CI on 13 Sep 2026. **Exactly one publishes
+`<podcast:transcript>`:** Diary of a CEO, via flightcast — which yields 20
+points an episode at $0.
+
+Audio-only, all of them: Tim Ferriss, Huberman Lab, Acquired, Founders, My First
+Million, Modern Wisdom, The Knowledge Project, Invest Like the Best.
+
+Podcasting 2.0 transcript adoption among large shows is close to zero. That is
+the binding constraint on this pipeline, not the code: **the set of podcasts it
+can read for free is small**, and every candidate has to be checked rather than
+assumed. `sources.json` records what each check found so the same feeds are not
+re-added on a hunch.
+
+`npm run podcasts:verify`, or the workflow's `verify_only` input, answers the
+question for any new feed in about a second.
+
 ## Transcripts, and the one thing that will bite you
 
 With no paid transcription key, an episode is readable only if the transcript is
