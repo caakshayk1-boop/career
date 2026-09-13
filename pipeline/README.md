@@ -264,8 +264,28 @@ The paid opt-ins are in the second table above. Turning all three on takes a
 
 ## Known limitations
 
-1. **YouTube captions are not a documented API, and the obvious endpoint does
-   not work from CI.** `api/timedtext` needs no key, but Google serves it empty
+1. **YouTube captions cannot be read from CI. This is settled, not open.**
+   Four routes were tried from GitHub Actions and all four are closed:
+
+   | Route | Result |
+   |---|---|
+   | `api/timedtext` (public) | empty body |
+   | Watch page scrape | HTML with no player config |
+   | InnerTube `WEB` / `MWEB` | `LOGIN_REQUIRED` — "Sign in to confirm you're not a bot" |
+   | InnerTube `ANDROID` / `IOS` | `400 Precondition check failed` — device attestation |
+
+   The last two are the informative ones: **InnerTube is reachable from a
+   datacentre IP** — it answers, and what it answers is that the caller must
+   authenticate or attest. That is deliberate policy, not a gap to engineer
+   around. What remains is a logged-in cookie in CI (a credential, and fragile),
+   a residential IP, or a paid third party.
+
+   **The same code reads every one of those episodes from a laptop.** `npm run
+   podcasts` on a home connection works; only the runner is refused. All four
+   routes are kept for that reason, and because any of them may start answering
+   again.
+
+1. **The other YouTube caveats.** `api/timedtext` needs no key, but Google serves it empty
    to datacentre IPs — every CI runner. Twelve readable episodes came back "no
    caption track" from GitHub Actions while having perfectly good auto-captions.
    The pipeline therefore reads the watch page's `captionTracks`, whose signed
