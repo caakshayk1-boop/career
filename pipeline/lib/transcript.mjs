@@ -60,7 +60,27 @@ const PROVIDERS = {
   /**
    * YouTube captions.
    *
-   * TWO ROUTES, AND THE ORDER MATTERS.
+   * READ THIS BEFORE ADDING A FOURTH ROUTE. Four have been tried from GitHub
+   * Actions and all four are closed, for two distinct reasons that are now
+   * proven rather than suspected:
+   *
+   *   timedtext (public)   returns an empty body
+   *   watch page scrape    HTML arrives with no player config in it
+   *   InnerTube WEB/MWEB   LOGIN_REQUIRED — "Sign in to confirm you're not a bot"
+   *   InnerTube ANDROID/IOS  400 "Precondition check failed" — device attestation
+   *
+   * The last two are the informative ones. InnerTube IS reachable from a
+   * datacentre IP; it answers, and what it answers is that this caller must
+   * authenticate or attest. That is a deliberate policy, not a gap to engineer
+   * around, and the remaining ways past it are a logged-in cookie in CI (a
+   * credential, and fragile), a residential IP (a machine, not a runner), or a
+   * paid third party.
+   *
+   * The routes below are kept because they cost nothing to try and any of them
+   * may start answering again — and because they work from a residential IP, so
+   * `npm run podcasts` on a laptop reads every one of these episodes today.
+   *
+   * ORDER MATTERS.
    *
    * The bare timedtext endpoint needs no key and is the obvious one, but Google
    * serves it EMPTY to datacentre IPs — which is every CI runner. Twelve
@@ -94,7 +114,14 @@ const PROVIDERS = {
       .catch((e) => { tried.push(`timedtext: ${e.message.slice(0, 60)}`); return null; });
     if (fromApi) return fromApi;
 
-    throw new Error(`no caption track reachable — ${tried.join("; ")}`);
+    /* Two audiences for this failure. The page needs a sentence a person can
+       act on; the log needs every detail. Splitting them stops the page showing
+       200 characters of InnerTube error and stops the log losing the detail. */
+    const blocked = tried.some((t) => /LOGIN_REQUIRED|not a bot|Precondition check/i.test(t));
+    log.warn("transcript", `${videoIdLabel(ep)} — ${tried.join("; ")}`);
+    throw new Error(blocked
+      ? "YouTube requires sign-in for caption access from a server — readable from a home connection, not from CI"
+      : `no caption track reachable — ${tried.join("; ").slice(0, 200)}`);
   },
 
   /**
@@ -196,6 +223,8 @@ function finish(provider, language, segments) {
  * Still undocumented, still Google's to change. It sits behind the same
  * interface as the others and a failure still LISTS the episode.
  */
+const videoIdLabel = (ep) => `youtube:${ep.ytId}`;
+
 const INNERTUBE_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8"; // the public web key, in every page
 
 /* Ordered by how reliably each is answered from a server. ANDROID and IOS are
