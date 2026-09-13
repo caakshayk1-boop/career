@@ -17,6 +17,18 @@
     "An episode whose link points at YouTube can be read for free; anything else",
     "is listed as PENDING and still shown as a title, never dropped.",
     "",
+    "YOUTUBE IS NOT READABLE FROM CI, AND THAT IS NOT FIXABLE HERE. Google serves",
+    "captions empty to datacentre IPs \u2014 both the timedtext endpoint and the watch",
+    "page's player config. Two routes were implemented and both are blocked from",
+    "GitHub Actions. The desk feed stays enabled so its episodes remain LISTED on",
+    "the page, but the ones pointing at YouTube will not be read here.",
+    "",
+    "The shows below are RSS candidates: the path that demonstrably works is a feed",
+    "publishing <podcast:transcript>, which Diary of a CEO does and which yields 20",
+    "points an episode at zero cost. They are PAUSED until `podcasts:verify` proves",
+    "each one publishes a transcript \u2014 enabling a feed that does not just fills the",
+    "page with unread titles.",
+    "",
     "STATUS, 10 Sep 2026, from a real run rather than from memory:",
     "  diary-of-a-ceo        VERIFIED. 882 items, publishes <podcast:transcript>,",
     "                        produced 20 points from a 146m episode at $0.000.",
@@ -82,10 +94,90 @@
       "verified": false
     },
     {
-      "id": "example-youtube-channel",
-      "show": "Replace me with a real channel",
-      "type": "youtube",
-      "url": "UC0000000000000000000000",
+      "id": "lennys-podcast",
+      "show": "Lenny's Podcast",
+      "type": "rss",
+      "url": "https://api.substack.com/feed/podcast/10845.rss",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "acquired",
+      "show": "Acquired",
+      "type": "rss",
+      "url": "https://feeds.transistor.fm/acquired",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "dwarkesh",
+      "show": "Dwarkesh Podcast",
+      "type": "rss",
+      "url": "https://api.substack.com/feed/podcast/69345.rss",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "founders",
+      "show": "Founders",
+      "type": "rss",
+      "url": "https://feeds.simplecast.com/3hnxp7yk",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "twenty-minute-vc",
+      "show": "The Twenty Minute VC",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/thetwentyminutevc",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "my-first-million",
+      "show": "My First Million",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/HS2300184645",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "modern-wisdom",
+      "show": "Modern Wisdom",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/SIXMSB5088139739",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "huberman-lab",
+      "show": "Huberman Lab",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/hubermanlab",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "tim-ferriss",
+      "show": "The Tim Ferriss Show",
+      "type": "rss",
+      "url": "https://rss.art19.com/tim-ferriss-show",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "all-in",
+      "show": "All-In Podcast",
+      "type": "rss",
+      "url": "https://feeds.megaphone.fm/all-in",
+      "enabled": false,
+      "verified": false
+    },
+    {
+      "id": "odd-lots",
+      "show": "Odd Lots",
+      "type": "rss",
+      "url": "https://feeds.bloomberg.fm/BLM3999844716",
       "enabled": false,
       "verified": false
     }
