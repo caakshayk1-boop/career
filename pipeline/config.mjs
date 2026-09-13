@@ -56,7 +56,21 @@ export const cfg = {
      below which the episode is not worth publishing at all. If an episode
      yields 6 good ideas it ships with 6. */
   targetLearnings: int(process.env.TARGET_LEARNINGS, 20),
-  minLearnings: int(process.env.MIN_LEARNINGS, 10),
+  /* SIX, WHICH IS WHAT THE LINE ABOVE ALREADY PROMISED.
+   *
+   * "If an episode yields 6 good ideas it ships with 6" was the stated rule and
+   * the floor was 10, so an episode yielding 6, 7 or 8 shipped with none. The
+   * comment described the intent and the number contradicted it.
+   *
+   * Measured on the five that were being refused: CA Rachana Ranade on the NSE
+   * IPO produced 8 distinct points and Think School on starting a business
+   * produced 7 — both substantive, both silently dropped. The other three
+   * produced 1, 0 and a rate-limit, and 6 still refuses all three.
+   *
+   * The floor exists to reject an episode with nothing to say, not to reject a
+   * short one that says a few things well. A 12-minute Warikoo clip cleared 20
+   * points on this same extractor, so length was never the discriminator. */
+  minLearnings: int(process.env.MIN_LEARNINGS, 6),
 
   /* ── EXTRACTOR ──────────────────────────────────────────────────────────
      "local"  sentences chosen from the transcript by information density.

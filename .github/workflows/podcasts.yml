@@ -93,7 +93,7 @@ jobs:
           # that will disagree with itself.
           MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '12' }}
           PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '7' }}
-          MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '10' }}
+          MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '6' }}
           TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
           FORCE_REPROCESS: ${{ inputs.force }}
           DRY_RUN: ${{ inputs.dry_run }}
