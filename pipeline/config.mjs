@@ -110,6 +110,9 @@ export const cfg = {
      single token is generated — "Request too large ... on output tokens per
      minute (OTPM)" — so a retry cannot help. Ask for less instead. */
   groqMaxTokens: int(process.env.GROQ_MAX_TOKENS, 2400),
+  /* Three, not one. A token-per-minute window can be genuinely full for most of
+     a minute, and one retry discovers that and gives up. */
+  groqRetries: int(process.env.GROQ_RETRIES, 3),
   /* The model the run will actually use, so the cost estimate prices the right
      thing. Without it estimateCost falls back to cfg.aiModel — an Anthropic
      model — whichever provider is in use. */

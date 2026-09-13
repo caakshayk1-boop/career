@@ -109,19 +109,55 @@ const PROVIDERS = {
       return w;
     };
 
+    /* PACED BY THE HEADERS, NOT BY A GUESS.
+     *
+     * A fixed gap cannot work here. The free tier meters tokens per minute, and
+     * "Request too large … on output tokens per minute" is not about the size
+     * of one request — 2,400 and 900 both succeed in isolation — it is about
+     * what is LEFT in the window when the request arrives. A five-pass episode
+     * drains it, and the next call is refused however small it is.
+     *
+     * So the budget is read from every response: x-ratelimit-remaining-tokens
+     * and x-ratelimit-reset-tokens say exactly how much is left and when it
+     * refills. When the remainder falls under what the next call could plausibly
+     * want, wait out the window rather than spend a retry discovering it.
+     *
+     * Parsed leniently because the reset arrives as "847ms" or "2m52.8s". */
+    const resetMs = (v) => {
+      const t = String(v || "").trim();
+      const m = t.match(/^(?:(\d+(?:\.\d+)?)m)?(?:(\d+(?:\.\d+)?)s)?$/);
+      if (m && (m[1] || m[2])) return (Number(m[1] || 0) * 60 + Number(m[2] || 0)) * 1000;
+      const ms = t.match(/^(\d+(?:\.\d+)?)ms$/);
+      if (ms) return Number(ms[1]);
+      const n = Number(t);
+      return Number.isFinite(n) ? n * 1000 : 0;
+    };
+    let budget = { remaining: Infinity, resetInMs: 0 };
+
     const post = async (body, attempt = 0) => {
       await gate();
+      /* If the window is nearly spent, wait for it to refill before asking.
+         Cheaper than a refusal, and it keeps the run deterministic. */
+      if (budget.remaining < cfg.groqMaxTokens * 1.5 && budget.resetInMs > 0) {
+        await nap(Math.min(budget.resetInMs + 1500, 90000));
+        budget = { remaining: Infinity, resetInMs: 0 };
+        last = Date.now();
+      }
       const res = await fetch(URL, {
         method: "POST",
         headers: { Authorization: `Bearer ${cfg.groqKey}`, "Content-Type": "application/json" },
         body: JSON.stringify(body),
         signal: AbortSignal.timeout(180000),
       });
-      if (res.status === 429 && attempt < 1) {
-        /* The header says how long the window has left; trust it over a guess,
-           and fall back to a minute when it is absent. */
-        const hinted = Number(res.headers.get("retry-after")) * 1000;
-        await nap(Number.isFinite(hinted) && hinted > 0 ? hinted + 1000 : 60000);
+      const rem = Number(res.headers.get("x-ratelimit-remaining-tokens"));
+      if (Number.isFinite(rem)) {
+        budget = { remaining: rem, resetInMs: resetMs(res.headers.get("x-ratelimit-reset-tokens")) };
+      }
+      if (res.status === 429 && attempt < cfg.groqRetries) {
+        const hinted = resetMs(res.headers.get("retry-after"))
+          || resetMs(res.headers.get("x-ratelimit-reset-tokens"));
+        await nap(Math.min(Math.max(hinted, 5000) + 1500, 90000));
+        budget = { remaining: Infinity, resetInMs: 0 };
         last = Date.now();
         return post(body, attempt + 1);
       }
