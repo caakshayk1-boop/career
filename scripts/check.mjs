@@ -136,6 +136,9 @@ await checkPage("/podcasts", "podcasts", async (page) => {
       orphanDays: (doc.days || []).filter((d) => !(d.episodeIds || []).length).length,
       undated: (doc.episodes || []).filter((e) => !e.date).length,
       thin: (doc.episodes || []).filter((e) => (e.learnings || []).length < 5).length,
+      builtHoursAgo: Math.round((Date.now() - Date.parse(doc.generatedAt || 0)) / 3600000),
+      oldestAgeDays: (doc.episodes || []).reduce((max, e) => Math.max(max,
+        Math.round((Date.now() - Date.parse(e.date + "T00:00:00Z")) / 86400000)), 0),
     };
   });
 
@@ -153,8 +156,20 @@ await checkPage("/podcasts", "podcasts", async (page) => {
   }
 
   ok("podcasts: episodes are grouped into days", shape.days > 0, shape.days);
-  ok("podcasts: the newest group is Today or Yesterday",
-    /^(Today|Yesterday)$/.test(shape.dayHeadings[0] || ""), shape.dayHeadings[0]);
+  /* NOT "the newest group is Today". Shows do not publish daily — Diary of a
+   * CEO went two days between episodes and this failed a deploy for the feed
+   * behaving normally. What matters is that the label is well-formed and the
+   * content is inside the retention window, both of which are real invariants. */
+  ok("podcasts: the newest group carries a real day label",
+    /^(Today|Yesterday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)$/
+      .test(shape.dayHeadings[0] || ""), shape.dayHeadings[0]);
+  ok("podcasts: nothing on the page is older than the retention window",
+    shape.oldestAgeDays < shape.retention, `${shape.oldestAgeDays}d, window ${shape.retention}d`);
+  /* The assertion that actually catches a dead pipeline: the artifact is being
+   * rebuilt. 72h rather than 24h because a quiet weekend is not a failure and a
+   * check that cries wolf gets ignored. */
+  ok("podcasts: the morning job is still running",
+    shape.builtHoursAgo < 72, `last built ${shape.builtHoursAgo}h ago — check the podcasts workflow`);
 
   /* THE DETAIL VIEW IS THE PRODUCT. Everything above it is navigation. */
   await page.locator(".ep").first().click();
