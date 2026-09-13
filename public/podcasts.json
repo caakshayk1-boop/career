@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-12T00:23:49.738Z",
-  "today": "2026-09-12",
+  "generatedAt": "2026-09-13T00:04:16.716Z",
+  "today": "2026-09-13",
   "retentionDays": 7,
   "days": [
     {
       "date": "2026-09-11",
-      "label": "Yesterday",
+      "label": "Friday",
       "episodeIds": [
         "diary-of-a-ceo-c783a6dfa547"
       ]
@@ -673,27 +673,39 @@
   ],
   "pending": [
     {
-      "id": "desk-14bfab36c866",
-      "title": "5 Companies Capturing the Biggest Market Share?",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=NUtPCAXq9-o",
+      "id": "desk-c22c8c9d857b",
+      "title": "Why Some Nifty ETFs Beat Others?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
       "takeaways": [
-        "The episode analyses five businesses that have steadily expanded their position in large, growing industries.",
-        "It examines drivers of their market‑share gains such as stronger distribution, product mix, policy tailwinds and order‑book visibility."
+        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
+        "Turns out, the answer isn’t as straightforward as you might think."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-21d2ef51e359",
+      "title": "How to Invest in Your 20s | Complete Step-by-Step Plan",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
+      "takeaways": [
+        "Starting your wealth-creation journey in your 20s provides an unmatched compounding advantage for your financial future.",
+        "This video breaks down a structured and practical investment blueprint tailored specifically for this decade, focusing on optimal asset allocation, strategic portfolio balance, and disciplined long-term growth."
+      ],
+      "date": "2026-09-13",
       "reason": "over the 12/day cap"
     },
     {
       "id": "desk-1ea3eb67afce",
-      "title": "RBI vs Government: Who Really Controls Money?",
+      "title": "RBI vs Government ! Who Controls your Money?",
       "show": "Labour Law Advisor",
       "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
       "takeaways": [
         "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
         "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "over the 12/day cap"
     },
     {
@@ -705,7 +717,7 @@
         "You ever hear that 2AM voice telling you everything's about to go wrong?",
         "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "over the 12/day cap"
     },
     {
@@ -714,10 +726,10 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
       "takeaways": [
-        "The FCNR scheme may not deliver the promised 11‑14% tax‑free returns.",
-        "It affects both NRIs and Indian resident investors."
+        "The recent FCNR scheme by the RBI seems lucrative, but is it actually what it is promising.",
+        "I have done an in depth analysis in this macro video - how it not only affects NRIs but also Indian resident investors."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "over the 12/day cap"
     },
     {
@@ -729,19 +741,7 @@
         "Most people build a plan to reach financial freedom.",
         "Very few plan for what happens after."
       ],
-      "date": "2026-09-12",
-      "reason": "over the 12/day cap"
-    },
-    {
-      "id": "desk-cf755fe7119b",
-      "title": "Zerodha took a Bet on us. This is what we Built.",
-      "show": "Zero1 by Zerodha",
-      "url": "https://www.youtube.com/watch?v=gxED-fFZalA",
-      "takeaways": [
-        "People changed their buying decisions after watching a Zero1 video.",
-        "Families began having money conversations they wouldn’t have had before."
-      ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "over the 12/day cap"
     },
     {
@@ -753,31 +753,79 @@
         "The fastest and the most affordable way to upskill yourself in AI.",
         "Live workshop happening on TOMORROW!"
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "over the 12/day cap"
     },
     {
-      "id": "desk-94a530b3b7a1",
-      "title": "What Went Wrong With Goa?",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
+      "id": "desk-f858c727a9fa",
+      "title": "Smriti Mandhana On Controlling Emotions, Handling Pressure & Failures | FO561 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=46P1rL0rzPE",
       "takeaways": [
-        "The episode provides full data and references for listeners to access alongside the show.",
-        "It features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
+        "Smriti Mandhana reveal the mindset, sacrifices, and mental battles behind becoming India's biggest cricket star.",
+        "◼ What Her Coach's manifestation ritual looked like and why Smriti credits it for shaping her career ◼ How Smriti handles mistakes on the field and the single phone call that completely reset her mindset ◼ Why she believes staying content and putting others first is a competitive advantage, not a weakness ◼ How to handle pressure and anxiety as a cricketer performing at the international level ◼ What a World Cup Final day actually looks like, hour by hour, from morning to the first ball ◼ Why her mindset coach told her 'You are not that player anymore' and how she responded to it ◼ What Smriti's pre-batting routine and superstitions are, and why she refuses to change them ◼ How Smriti Mandhana deals with failure and bounces back from setbacks in cricket ◼ What happened when she finally met her childhood idol and got to bat alongside her in a match Also covered: Smriti Mandhana, Indian women's cricket, cricket mindset, World Cup Final preparation, pre-batting routine, manifestation ritual, mindset coach, captaincy and leadership, Marwari upbringing, handling pressure in sports, cricket sacrifices, emotional regulation athletes, BCCI, women's IPL Raj Shamani is an entrepreneur and the host of the Figuring Out Podcast."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-c22c8c9d857b",
-      "title": "Why Some Nifty ETFs Beat Others?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "id": "desk-b145addb16b5",
+      "title": "Start a Business With No Money | Eric Ries’ Guide for First-Time Founders",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=eErcrQQHzg4",
       "takeaways": [
-        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
-        "Turns out, the answer isn’t as straightforward as you might think."
+        "Your startup can have 10,000 customers and STILL have zero Product-Market Fit.",
+        "In the age of Meta ads, vanity metrics and AI, it has never been easier to convince yourself that your startup is working."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-19d757ecb503",
+      "title": "We Recreated The 2006 Middle Class In 2026",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
+      "takeaways": [
+        "Your parents may have earned far less than you do today, yet they could buy a house, educate their children, own a car, save gold for a wedding and still build something for retirement.",
+        "In this video, I take a typical middle-class life from 2006 and calculate what that exact same life would cost in 2026."
+      ],
+      "date": "2026-09-13",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-dfded789bd87",
+      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
+      "takeaways": [
+        "In this video, we take a closer look at the National Stock Exchange (NSE), its business model, key revenue streams, financial performance, valuation, industry outlook, key risks and IPO details.",
+        "From transaction charges and options revenue to listing, data services, clearing & settlement and Nifty licensing, understand how NSE actually makes money."
+      ],
+      "date": "2026-09-13",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-0d80e4fb8e8d",
+      "title": "How are Indians earning ₹1 Lakh Buying ₹50 Lakh Cars",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=yzqgyYqAz_0",
+      "takeaways": [
+        "Abhishek just got a new car, and this one is special this is a “Luxury Car”.",
+        "But he technically did not buy it, he got it on a lease!"
+      ],
+      "date": "2026-09-13",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    {
+      "id": "desk-22d2ea727a75",
+      "title": "NSE IPO Review 2026 | National Stock Exchange IPO details, strengths, risks and full analysis",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=NF7-CVjEawA",
+      "takeaways": [
+        "National Stock Exchange of India (NSE) IPO, one of India’s most anticipated IPOs is finally here, bringing one of the country’s largest stock market infrastructure businesses to public investors.",
+        "In this video, we break down the IPO price band, lot size, issue size, offer-for-sale structure, business model, market share, revenue and profit growth, EBITDA and PAT margins, transaction revenue dependence, regulatory risks, competition, and key factors investors should understand before evaluating the issue."
+      ],
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
@@ -789,102 +837,67 @@
         "Episode 380 of the #AskAbhijit show: Ask me your best questions in the Live Chat and Super Chat, and I shall answer them.",
         "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-eeb0ce0511d6",
-      "title": "Terrorist Or Prisoner Of A Terror State? | Why Has The Trial Of Umar Khalid Not Started? | Akash B",
+      "id": "desk-ba0747405cad",
+      "title": "Can Modi Trust Xi Jinping? | Another Relationship Reset Or China Playing BRICS Game | Akash Banerjee",
       "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=5VFzX_WI_7E",
+      "url": "https://www.youtube.com/watch?v=SydNlNJeS10",
       "takeaways": [
-        "Is the BJP going soft on terror or protecting Khalid?",
-        "Punishing Umar in an open court would have really been a massive win for the Govt ..."
+        "The big new from BRICS - Xi Jinping is back in Delhi after seven years - Meeting Modi for a bilateral - Relations being 'reset'.",
+        "But behind the BRICS handshakes and the media spectacle - a high stakes diplomatic balancing act is being payed out."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-c277949c989d",
-      "title": "'CCTV Footage Has the Truth, Delhi Police Must Release it': Journalists Shaheen and Nafisa Khan",
+      "id": "desk-1f07c9986f81",
+      "title": "Earth's 5-Year Deadline: Can We Avoid the Worst of Climate Chaos? | Cracknomics Ep 108",
       "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=lrfybuAkHjA",
+      "url": "https://www.youtube.com/watch?v=g5shXMiuBno",
       "takeaways": [
-        "Journalists Shaheen and Nafisa Khan allege they were assaulted at Delhi’s Saket Police Station.",
-        "They say the police have not released the CCTV footage that could clarify what happened."
+        "Today, Earth is already 1.47°C hotter than pre-industrial times, and UNEP's 2026 report admits overshoot is unavoidable.",
+        "Peak warming could hit 1.8°C even in the best case."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-2cddb66fe34f",
-      "title": "“I am totally against any kind of caste discrimination” Chirag Paswan",
+      "id": "desk-297877405333",
+      "title": "Promo | EP-449 with author Manu Joseph premieres today at 5 PM IST",
       "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=kHStfnqYyRQ",
+      "url": "https://www.youtube.com/watch?v=2ivH-b4qdCg",
       "takeaways": [
-        "“I am totally against any kind of caste discrimination” Chirag Paswan #ANIPodcast #SmitaPrakash #ChiragPaswan #Dalit #Caste #Discrimination #SC #ST #OBC #Reservation Tune in here: linktr.ee/podcastwithsmitaprakash"
+        "Promo | EP-449 with author Manu Joseph premieres today at 5 PM IST “When I want to develop some fondness for Gurgaon, I go to Noida.” “If the government wants us to stay in India, it should make our cities liveable.” “Gen Z is actually screwed by equality.” “If there are 200 million highly qualified young people, how will you find jobs for all of them?” “Tamil Nadu CM Vijay was my classmate in the third standard.",
+        "I thought he looked rich.” #ANIPodcast #SmitaPrakash #ManuJoseph #Gurgaon #Noida #GenZ #Jobs #Vijay Tune in here: linktr.ee/podcastwithsmitaprakash"
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-545d540faa0c",
-      "title": "Yudh Abhyas 2026 India U S  Army Join Forces for High Altitude Warfare | Current Affairs",
+      "id": "desk-2648ba830fe3",
+      "title": "Money Bill | Complete Concept, Articles & Key Provisions | UPSC Polity | Drishti IAS",
       "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=DP1eMTHRT70",
+      "url": "https://www.youtube.com/watch?v=_QueVmqY1f8",
       "takeaways": [
-        "Yudh Abhyas 2026, the 22nd edition of the India-U.S.",
-        "bilateral military exercise, focuses on strengthening combat interoperability, high-altitude warfare capabilities, long-range precision fires, counter-drone operations, and multi-domain warfare."
+        "Ritesh Upadhyay provides a comprehensive explanation of Money Bill, covering all the important dimensions that UPSC aspirants need to understand for the examination.",
+        "The session covers the key constitutional provisions related to Money Bills, including Article 110, the role of the Lok Sabha and Rajya Sabha, the Speaker’s role, the procedure for passing a Money Bill, and other important concepts and provisions."
       ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
-      "id": "desk-338f935c708b",
-      "title": "Protecting the President: Security, VIP Threats & ADC Life | Major Rishabh | FO560 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=x63HCoDfAhQ",
+      "id": "desk-94a530b3b7a1",
+      "title": "What Went Wrong With Goa?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
       "takeaways": [
-        "courage cannot exist without fear, according to him, and this shapes real combat",
-        "an ADC constantly anticipates every need before it arises, a duty most people never know about"
+        "Access the full data and references used in this episode below.",
+        "Please open this alongside the episode while watching."
       ],
-      "date": "2026-09-12",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-21d2ef51e359",
-      "title": "How to Invest in Your 20s | Complete Step-by-Step Plan",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
-      "takeaways": [
-        "Starting your wealth‑creation journey in your 20s gives you an unmatched compounding advantage.",
-        "The episode outlines a step‑by‑step investment blueprint that emphasizes optimal asset allocation, strategic portfolio balance, and disciplined long‑term growth."
-      ],
-      "date": "2026-09-12",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-47f780d7c5c2",
-      "title": "How Tim Cook Built Apple’s $4.5 Trillion Empire | Untold Story of the Man Who Made Apple Unstoppable",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=GpJhBB7Gv0c",
-      "takeaways": [
-        "Over the next 15 years, Tim Cook took Apple’s market value from roughly $350 billion to $4.7 trillion.",
-        "He grew Apple’s revenue from $108 billion to $416 billion and built a services business that now earns $109 billion a year."
-      ],
-      "date": "2026-09-12",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
-    },
-    {
-      "id": "desk-21c81f724b0d",
-      "title": "Planning a ₹7L House at 22 | Money Matters Ep. 125 | Ankur Warikoo Hindi",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=zHPv2r9cZng",
-      "takeaways": [
-        "Delay the house construction by six months, build an emergency fund, and keep pursuing the PM Awas Yojana before taking on debt.",
-        "Developing new skills can dramatically increase earning potential and help build a career not limited by the current job."
-      ],
-      "date": "2026-09-12",
+      "date": "2026-09-13",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     {
@@ -905,79 +918,85 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-12T00:23:49.737Z",
+    "at": "2026-09-13T00:04:16.715Z",
     "discovered": 1499,
     "eligible": 12,
-    "processed": 1,
+    "processed": 0,
     "skipped": 1487,
-    "failed": 11,
+    "failed": 12,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
-        "id": "desk-94a530b3b7a1",
+        "id": "desk-f858c727a9fa",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:38.889Z"
+        "at": "2026-09-13T00:04:06.996Z"
       },
       {
         "stage": "process",
-        "id": "desk-c22c8c9d857b",
+        "id": "desk-b145addb16b5",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:40.323Z"
+        "at": "2026-09-13T00:04:07.727Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-19d757ecb503",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-13T00:04:08.660Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-dfded789bd87",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-13T00:04:09.741Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-0d80e4fb8e8d",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-13T00:04:10.780Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-22d2ea727a75",
+        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+        "at": "2026-09-13T00:04:11.485Z"
       },
       {
         "stage": "process",
         "id": "desk-55a5b39c122e",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:41.249Z"
+        "at": "2026-09-13T00:04:12.590Z"
       },
       {
         "stage": "process",
-        "id": "desk-eeb0ce0511d6",
+        "id": "desk-ba0747405cad",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:42.035Z"
+        "at": "2026-09-13T00:04:13.176Z"
       },
       {
         "stage": "process",
-        "id": "desk-c277949c989d",
+        "id": "desk-1f07c9986f81",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:42.962Z"
+        "at": "2026-09-13T00:04:13.924Z"
       },
       {
         "stage": "process",
-        "id": "desk-2cddb66fe34f",
+        "id": "desk-297877405333",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:44.052Z"
+        "at": "2026-09-13T00:04:14.968Z"
       },
       {
         "stage": "process",
-        "id": "desk-545d540faa0c",
+        "id": "desk-2648ba830fe3",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:45.234Z"
+        "at": "2026-09-13T00:04:15.685Z"
       },
       {
         "stage": "process",
-        "id": "desk-338f935c708b",
+        "id": "desk-94a530b3b7a1",
         "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:46.397Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-21d2ef51e359",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:47.667Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-47f780d7c5c2",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:48.427Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-21c81f724b0d",
-        "message": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
-        "at": "2026-09-12T00:23:49.732Z"
+        "at": "2026-09-13T00:04:16.706Z"
       }
     ],
     "estimatedCostUsd": 0

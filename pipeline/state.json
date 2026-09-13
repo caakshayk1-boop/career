@@ -15679,7 +15679,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:37.498Z",
-      "updatedAt": "2026-09-12T00:23:38.889Z",
+      "updatedAt": "2026-09-13T00:04:16.706Z",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     "desk-c22c8c9d857b": {
@@ -15703,7 +15703,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:40.329Z",
-      "updatedAt": "2026-09-12T00:23:41.249Z",
+      "updatedAt": "2026-09-13T00:04:12.590Z",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     "desk-eeb0ce0511d6": {
@@ -15752,6 +15752,126 @@
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:44.057Z",
       "updatedAt": "2026-09-12T00:23:45.234Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-f858c727a9fa": {
+      "status": "FAILED",
+      "title": "Smriti Mandhana On Controlling Emotions, Handling Pressure & Failures | FO561 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=46P1rL0rzPE",
+      "id": "desk-f858c727a9fa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:05.946Z",
+      "updatedAt": "2026-09-13T00:04:06.996Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-b145addb16b5": {
+      "status": "FAILED",
+      "title": "Start a Business With No Money | Eric Ries’ Guide for First-Time Founders",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=eErcrQQHzg4",
+      "id": "desk-b145addb16b5",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:07.004Z",
+      "updatedAt": "2026-09-13T00:04:07.727Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-19d757ecb503": {
+      "status": "FAILED",
+      "title": "We Recreated The 2006 Middle Class In 2026",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
+      "id": "desk-19d757ecb503",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:07.736Z",
+      "updatedAt": "2026-09-13T00:04:08.660Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-dfded789bd87": {
+      "status": "FAILED",
+      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
+      "id": "desk-dfded789bd87",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:08.671Z",
+      "updatedAt": "2026-09-13T00:04:09.741Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-0d80e4fb8e8d": {
+      "status": "FAILED",
+      "title": "How are Indians earning ₹1 Lakh Buying ₹50 Lakh Cars",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=yzqgyYqAz_0",
+      "id": "desk-0d80e4fb8e8d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:09.745Z",
+      "updatedAt": "2026-09-13T00:04:10.780Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-22d2ea727a75": {
+      "status": "FAILED",
+      "title": "NSE IPO Review 2026 | National Stock Exchange IPO details, strengths, risks and full analysis",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=NF7-CVjEawA",
+      "id": "desk-22d2ea727a75",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:10.785Z",
+      "updatedAt": "2026-09-13T00:04:11.485Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-ba0747405cad": {
+      "status": "FAILED",
+      "title": "Can Modi Trust Xi Jinping? | Another Relationship Reset Or China Playing BRICS Game | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=SydNlNJeS10",
+      "id": "desk-ba0747405cad",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:12.596Z",
+      "updatedAt": "2026-09-13T00:04:13.176Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-1f07c9986f81": {
+      "status": "FAILED",
+      "title": "Earth's 5-Year Deadline: Can We Avoid the Worst of Climate Chaos? | Cracknomics Ep 108",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=g5shXMiuBno",
+      "id": "desk-1f07c9986f81",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:13.181Z",
+      "updatedAt": "2026-09-13T00:04:13.924Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-297877405333": {
+      "status": "FAILED",
+      "title": "Promo | EP-449 with author Manu Joseph premieres today at 5 PM IST",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=2ivH-b4qdCg",
+      "id": "desk-297877405333",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:13.930Z",
+      "updatedAt": "2026-09-13T00:04:14.968Z",
+      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
+    },
+    "desk-2648ba830fe3": {
+      "status": "FAILED",
+      "title": "Money Bill | Complete Concept, Articles & Key Provisions | UPSC Polity | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=_QueVmqY1f8",
+      "id": "desk-2648ba830fe3",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-13T00:04:14.972Z",
+      "updatedAt": "2026-09-13T00:04:15.685Z",
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     }
   }
