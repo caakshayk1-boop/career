@@ -18,6 +18,12 @@
  * pricing) and should never run when a caption track exists.
  */
 import { request } from "./http.mjs";
+import { execFile } from "node:child_process";
+import { mkdtemp, readFile, rm, readdir } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { promisify } from "node:util";
+const run = promisify(execFile);
 import { log, charge } from "./log.mjs";
 import { cfg } from "../config.mjs";
 import { cached } from "./store.mjs";
@@ -52,8 +58,47 @@ function pickOrder(ep) {
   const order = [];
   if (ep.transcriptUrl) order.push("published");   // free — the show published one
   if (ep.ytId) order.push("youtube");              // free — caption track
+  /* free — the same captions through yt-dlp's player clients, which reach
+     tracks the native routes above are refused. Costs a subprocess, so it is
+     the fallback rather than the first ask. */
+  if (ep.ytId) order.push("ytdlp");
   if (cfg.deepgramKey && ep.audioUrl) order.push("deepgram"); // ~$0.26/episode
   return order;
+}
+
+/* One yt-dlp call at a time, spaced. YouTube answers a burst with 429 and that
+   error arrives in two seconds, so it reads like a broken command rather than a
+   limit. Serialised through one promise chain and spaced by YTDLP_GAP_MS; a 429
+   gets exactly one retry after a longer pause, because a second failure means
+   the limit is real rather than transient and the episode is better LISTED with
+   its reason than retried into a wall. */
+const YTDLP_GAP_MS = 4000;
+const YTDLP_RETRY_MS = 25000;
+let ytdlpChain = Promise.resolve();
+let ytdlpLast = 0;
+const napMs = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function ytdlpGate() {
+  const wait = ytdlpChain.then(async () => {
+    const since = Date.now() - ytdlpLast;
+    if (since < YTDLP_GAP_MS) await napMs(YTDLP_GAP_MS - since);
+    ytdlpLast = Date.now();
+  });
+  ytdlpChain = wait.catch(() => {});
+  return wait;
+}
+
+async function runYtDlp(args) {
+  const opts = { timeout: 180000, maxBuffer: 32 * 1024 * 1024 };
+  try {
+    return await run("yt-dlp", args, opts);
+  } catch (e) {
+    const msg = String((e && (e.stderr || e.message)) || "");
+    if (!/429|Too Many Requests/i.test(msg)) throw e;
+    await napMs(YTDLP_RETRY_MS);
+    ytdlpLast = Date.now();
+    return await run("yt-dlp", args, opts);
+  }
 }
 
 const PROVIDERS = {
@@ -97,6 +142,83 @@ const PROVIDERS = {
    * episode is LISTED with the reason, never deleted and never published with
    * invented timings.
    */
+  /**
+   * yt-dlp — THE ROUTE THE COMMENT ABOVE SAYS DOES NOT EXIST.
+   *
+   * That analysis is right about the four routes it tried and wrong about the
+   * conclusion, because there is a fifth. yt-dlp negotiates YouTube through
+   * player clients this pipeline never asked for — the successful one here is
+   * `visionos`, which is not in the WEB / MWEB / ANDROID / IOS / TVHTML5 set
+   * that returned LOGIN_REQUIRED and attestation failures.
+   *
+   * Proven on 6qmGO1ipb_o, one of the twelve episodes listed as "no caption
+   * track reachable": 321 cues, 11,169 characters, timed 0s to 757s. No
+   * cookie, no key, no residential-IP requirement, nothing paid.
+   *
+   * It is tried AFTER the native routes, not instead of them: when those work
+   * they cost one request and no subprocess, and this is the fallback for when
+   * they do not. It is tried BEFORE deepgram, because deepgram costs money.
+   *
+   * A missing binary is a STATE, not a crash — CI has no yt-dlp unless someone
+   * installs it — so it reports that plainly and the next provider runs.
+   */
+  async ytdlp(ep) {
+    if (!ep.ytId) throw new Error("yt-dlp: not a YouTube episode");
+    const dir = await mkdtemp(join(tmpdir(), "ytcap-"));
+    try {
+      /* PACED, BECAUSE YOUTUBE COUNTS. Run back to back across a batch these
+         calls earn "HTTP Error 429: Too Many Requests" - four of the first
+         twelve failed exactly that way, in two seconds each, which reads like a
+         broken command and is a rate limit. A gap between calls and one patient
+         retry costs a minute across a morning and turns those four into
+         transcripts. */
+      await ytdlpGate();
+      try {
+        await runYtDlp([
+          "--skip-download", "--write-auto-subs", "--write-subs",
+          "--sub-langs", "en.*", "--sub-format", "json3",
+          "--no-warnings", "--no-progress",
+          "-o", join(dir, "cap"),
+          `https://www.youtube.com/watch?v=${ep.ytId}`,
+        ]);
+      } catch (e) {
+        if (e && (e.code === "ENOENT" || /ENOENT/.test(String(e.message)))) {
+          throw new Error("yt-dlp is not installed on this machine (brew install yt-dlp)");
+        }
+        throw new Error(`yt-dlp failed: ${String(e.message || e).slice(0, 120)}`);
+      }
+
+      const files = (await readdir(dir)).filter((f) => f.endsWith(".json3"));
+      if (!files.length) throw new Error("yt-dlp returned no caption file");
+      /* Prefer a real English track over the auto-translated "en-orig" twin
+         yt-dlp also writes; both parse, one is the source language. */
+      files.sort((a, b) => (a.includes("en-orig") ? 1 : 0) - (b.includes("en-orig") ? 1 : 0));
+      const raw = await readFile(join(dir, files[0]), "utf8");
+
+      let parsed;
+      try { parsed = JSON.parse(raw); }
+      catch { throw new Error("yt-dlp caption file did not parse as json3"); }
+
+      const segments = [];
+      for (const ev of parsed.events || []) {
+        if (!Array.isArray(ev.segs)) continue;
+        const text = ev.segs.map((x) => x.utf8 || "").join("").replace(/\s+/g, " ").trim();
+        if (!text) continue;
+        segments.push({
+          t: Math.round((ev.tStartMs || 0) / 1000),
+          d: Math.round((ev.dDurationMs || 0) / 1000),
+          speaker: "",
+          text,
+        });
+      }
+      if (!segments.length) throw new Error("yt-dlp caption file carried no cues");
+      const lang = (files[0].match(/\.([a-zA-Z-]+)\.json3$/) || [])[1] || "en";
+      return finish("yt-dlp-captions", lang.replace(/-orig$/, ""), segments);
+    } finally {
+      await rm(dir, { recursive: true, force: true }).catch(() => {});
+    }
+  },
+
   async youtube(ep) {
     const tried = [];
 
