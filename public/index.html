@@ -1476,7 +1476,7 @@ function roleAge(j){
 }
 const roleIsCurrent = j => { const a = roleAge(j); return a !== null && a <= MAX_AGE_DAYS; };
 
-let ROLES = [], rFilter = {country:"All", tier:"All"};
+let ROLES = [], rFilter = {country:"All", tier:"All", sort:"score"};
 
 function roleCard(j){
   const tier = j.tier || "-";
@@ -1526,11 +1526,38 @@ function roleCard(j){
   </article>`;
 }
 
+/* ── SORT, NOT JUST FILTER ────────────────────────────────────────────────
+ * The shelf was always ordered by opportunity score and there was no way to
+ * ask a different question. "What is newest" is a different question from
+ * "what fits best", and on a job board it is the one with a deadline attached:
+ * a role posted yesterday is still open, and the best-scored role on the page
+ * may have been sitting there for four weeks.
+ *
+ * posted_date is present on 33 of the 54 scored roles, so undated ones sort
+ * LAST under freshness rather than being dropped or guessed at — a role with
+ * no date is not a role from the beginning of time, it is a role whose date
+ * the source did not publish, and it still deserves to be on the page. */
+function roleDate(j){
+  const v = j.posted_date || j.scraped_at || null;
+  const t = v ? Date.parse(v) : NaN;
+  return Number.isFinite(t) ? t : null;
+}
+
 function drawRoles(){
   const rows = ROLES.filter(j =>
       (rFilter.country === "All" || j.country === rFilter.country) &&
       (rFilter.tier === "All" ||
        (rFilter.tier === "S+A" ? ["S","A"].includes(j.tier) : j.tier === rFilter.tier)));
+
+  if (rFilter.sort === "fresh") {
+    rows.sort((a, b) => {
+      const da = roleDate(a), db = roleDate(b);
+      if (da === null && db === null) return (b.opportunity_score||0) - (a.opportunity_score||0);
+      if (da === null) return 1;          // undated sinks, never disappears
+      if (db === null) return -1;
+      return db - da;
+    });
+  }
   document.getElementById("rolesList").innerHTML = rows.length
     ? rows.map(roleCard).join("")
     : `<div class="empty">Nothing matches that filter. The shelf is already limited to
@@ -1583,15 +1610,21 @@ function drawRoles(){
         `<button class="chip" data-rc="${esc(c)}" aria-pressed="${c==="All"}">${esc(c)}</button>`).join("")
       + '<span style="width:12px"></span>'
       + ["All","S+A","S","A","B"].map(t =>
-        `<button class="chip" data-rt="${esc(t)}" aria-pressed="${t==="All"}">${t==="All"?"Any tier":t}</button>`).join("");
+        `<button class="chip" data-rt="${esc(t)}" aria-pressed="${t==="All"}">${t==="All"?"Any tier":t}</button>`).join("")
+      + '<span style="width:12px"></span>'
+      + [["score","Best fit"],["fresh","Freshest"]].map(([k,label]) =>
+        `<button class="chip" data-rs="${k}" aria-pressed="${k==="score"}">${label}</button>`).join("");
     f.hidden = false;
     f.addEventListener("click", e => {
-      const c = e.target.closest("[data-rc]"), t = e.target.closest("[data-rt]");
+      const c = e.target.closest("[data-rc]"), t = e.target.closest("[data-rt]"),
+            o = e.target.closest("[data-rs]");
       if (c){ rFilter.country = c.dataset.rc;
               f.querySelectorAll("[data-rc]").forEach(b => b.setAttribute("aria-pressed", String(b===c))); }
       if (t){ rFilter.tier = t.dataset.rt;
               f.querySelectorAll("[data-rt]").forEach(b => b.setAttribute("aria-pressed", String(b===t))); }
-      if (c || t) drawRoles();
+      if (o){ rFilter.sort = o.dataset.rs;
+              f.querySelectorAll("[data-rs]").forEach(b => b.setAttribute("aria-pressed", String(b===o))); }
+      if (c || t || o) drawRoles();
     });
     drawRoles();
   } catch (err) {
