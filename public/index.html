@@ -108,7 +108,17 @@ button{font:inherit;color:inherit}
 @media(min-width:1400px){:root{--shell:1460px; --rail:232px}}
 @media(min-width:1760px){:root{--shell:1680px}}
 
-.rail{position:sticky;top:calc(var(--barh) + 20px);padding:28px 0 40px;display:flex;flex-direction:column;gap:2px}
+.rail{position:sticky;top:calc(var(--barh) + 20px);padding:28px 0 40px;display:flex;flex-direction:column;gap:2px;
+  /* ── THE RAIL MUST NEVER NEED A ZOOM LEVEL ────────────────────────────
+     18 items at 31px is 668px of rail starting 76px down, so it wants ~745px
+     of viewport height. On a 1366x768 laptop, or any window shorter than
+     that, the last sections fall off the bottom — and reducing the browser to
+     90% is the workaround that makes them reappear, which is how this was
+     found. A sticky nav that only fits at a particular zoom is not sticky, it
+     is lucky. Bounded to the viewport and scrolled inside itself, so the
+     count of sections stops mattering. */
+  max-height:calc(100vh - 96px);overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:thin}
 .rail a{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:var(--dim);
   font:500 var(--t-4)/1 var(--ui);padding:9px 10px;border-radius:var(--r-2);
   transition:color var(--t-fast) var(--ease),background var(--t-fast) var(--ease)}
