@@ -82,7 +82,19 @@ export const cfg = {
      Local is the default because the running cost of this site is zero and the
      whole point of that is that it stays zero. Setting ANTHROPIC_API_KEY does
      NOT silently switch it — EXTRACTOR=ai is a separate, deliberate decision. */
-  extractor: process.env.EXTRACTOR || "local",
+  /* ── THE INTERPRETATION LAYER TURNS ITSELF ON WHEN IT CAN ────────────────
+   *
+   * This defaulted to "local" unconditionally, so adding an API key changed
+   * nothing: EXTRACTOR had to be set as well, in a second place, and the
+   * workflow shipped with both commented out. Eleven episodes published
+   * through the free path — and it says so itself, in its own header, that it
+   * "cannot tell you why a point matters".
+   *
+   * A key present and unused is a configuration that looks done and is not.
+   * With a key, interpret; without one, extract. EXTRACTOR still wins over
+   * both, so forcing either way stays one variable. */
+  extractor: process.env.EXTRACTOR
+    || ((process.env.ANTHROPIC_API_KEY || process.env.GROQ_API_KEY) ? "ai" : "local"),
   chunkChars: int(process.env.CHUNK_CHARS, 14000),
   chunkOverlapChars: int(process.env.CHUNK_OVERLAP_CHARS, 900),
 

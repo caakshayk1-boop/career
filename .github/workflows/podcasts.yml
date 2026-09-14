@@ -97,6 +97,18 @@ jobs:
           TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
           FORCE_REPROCESS: ${{ inputs.force }}
           DRY_RUN: ${{ inputs.dry_run }}
+          # ── THE INTERPRETATION LAYER ────────────────────────────────────
+          # Passed through whether or not they are set. An absent secret is an
+          # empty string, config.mjs reads that as absent, and the run falls
+          # back to the free extractive path exactly as before — so this is
+          # safe with nothing configured and live the moment a key is added,
+          # with no second switch to remember. The switch being in a second
+          # place is why eleven episodes published without interpretation.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          # Groq has retired a model under this project twice, so the name is
+          # configurable and never hardcoded at the call site.
+          GROQ_MODEL_PODCASTS: ${{ vars.GROQ_MODEL_PODCASTS }}
           #
           # TO ADD THE INTERPRETATION LAYER (~$0.50/episode):
           #   EXTRACTOR: ai
