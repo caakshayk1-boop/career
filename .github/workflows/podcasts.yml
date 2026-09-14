@@ -91,7 +91,7 @@ jobs:
           # were held back as "over the 2/day cap" on a run that was supposed to
           # process all of them. A default duplicated in two files is a default
           # that will disagree with itself.
-          MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '12' }}
+          MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '8' }}
           PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '7' }}
           MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '6' }}
           TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
@@ -109,6 +109,8 @@ jobs:
           # Groq has retired a model under this project twice, so the name is
           # configurable and never hardcoded at the call site.
           GROQ_MODEL_PODCASTS: ${{ vars.GROQ_MODEL_PODCASTS }}
+          # The per-chunk read runs here, on its own daily token bucket.
+          GROQ_MODEL_CHEAP: ${{ vars.GROQ_MODEL_CHEAP }}
           #
           # TO ADD THE INTERPRETATION LAYER (~$0.50/episode):
           #   EXTRACTOR: ai

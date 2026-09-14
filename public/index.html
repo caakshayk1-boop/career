@@ -1583,10 +1583,20 @@ function drawRoles(){
     const st = d.stats || {};
     const when = d.generated_at ? new Date(d.generated_at) : null;
     const ageH = when ? Math.round((Date.now() - when) / 3600000) : null;
+    /* ── THE REJECTS ARE NOT NEWS ─────────────────────────────────────────
+     * Akshay: "don't show 38 below tier B, I need S, A, B jobs only."
+     *
+     * This line used to lead with what was thrown away — "held back from 90
+     * scored roles: 38 below tier B, 12 older than 30 days" — which is the
+     * scraper's working, not the reader's answer. He is not choosing whether
+     * to lower the bar; the bar is the product. What stays is the one clause
+     * that qualifies the count: these are S/A/B, and they are recent.
+     *
+     * cutTier and cutAge are still COMPUTED, because the stale-feed warning
+     * below depends on knowing the pool, and because a future audit wants the
+     * numbers. They are simply no longer the headline. */
     meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b>
-      S, A and B only, posted in the last ${MAX_AGE_DAYS} days.
-      Held back from ${pool.length} scored roles: <b>${cutTier}</b> below tier B,
-      <b>${cutAge}</b> older than ${MAX_AGE_DAYS} days. · Scraped
+      Tier S, A and B only, posted in the last ${MAX_AGE_DAYS} days. · Scraped
       ${myt(d.generated_at)}
       ${ageH != null ? `(${ageH}h ago)` : ""} ·
       ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·

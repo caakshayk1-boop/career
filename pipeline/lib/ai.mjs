@@ -75,18 +75,23 @@ const PROVIDERS = {
    * is re-sent per chunk. That costs nothing here because the tier is free, but
    * it is why this provider does not try to be clever about prompt ordering.
    *
-   * MODEL CHOICE WAS MEASURED, NOT PICKED. On this account the generation-
-   * capable models are gpt-oss-120b/20b and qwen3.6/3.8-27b. Asked for one
-   * schema-constrained tool call:
+   * MODEL CHOICE WAS MEASURED, NOT PICKED — and the first measurement blamed
+   * the wrong thing. Asked for one schema-constrained tool call over a real
+   * 9,000-char transcript chunk:
    *
-   *     qwen/qwen3.8-27b      returned the call, 2 learnings, fields populated
-   *     openai/gpt-oss-120b   returned nothing parseable
+   *     openai/gpt-oss-120b   5 points, 486 out tokens, 1.8s   (effort "low")
+   *     openai/gpt-oss-20b    5 points, 424 out tokens, 0.8s   (effort "low")
+   *     qwen/qwen3.8-27b      5 points, 711 out tokens, 2.0s   (richer prose)
    *
-   * which is the failure already recorded against gpt-oss elsewhere in this
-   * estate: it is a REASONING model whose hidden tokens consume max_tokens and
-   * leave an empty 200 behind. It is not the default here for that reason, and
-   * GROQ_MODEL overrides in case this account's roster changes again — Groq has
-   * retired models twice without notice.
+   * gpt-oss "returned nothing parseable" on the earlier attempt because that
+   * attempt sent no reasoning_effort: it is a REASONING model, the hidden
+   * tokens are billed to max_tokens, and the budget ran out before the answer.
+   * That is a calling bug, not a model verdict, and it is fixed below.
+   *
+   * qwen writes the better paragraph and is still NOT the default, because
+   * this account caps it at 1,000 output tokens per minute — see config.mjs.
+   * GROQ_MODEL_PODCASTS overrides; Groq has retired models twice without
+   * notice.
    *
    * PACED FOR THE FREE TIER, which is token-per-minute limited. Calls are
    * serialised and spaced; a 429 waits out the window the header names and
@@ -153,13 +158,59 @@ const PROVIDERS = {
       if (Number.isFinite(rem)) {
         budget = { remaining: rem, resetInMs: resetMs(res.headers.get("x-ratelimit-reset-tokens")) };
       }
-      if (res.status === 429 && attempt < cfg.groqRetries) {
-        const hinted = resetMs(res.headers.get("retry-after"))
-          || resetMs(res.headers.get("x-ratelimit-reset-tokens"));
-        await nap(Math.min(Math.max(hinted, 5000) + 1500, 90000));
-        budget = { remaining: Infinity, resetInMs: 0 };
-        last = Date.now();
-        return post(body, attempt + 1);
+      /* TWO DIFFERENT 429s WEAR THE SAME STATUS CODE, and treating them alike
+         is why a run could burn three 90-second sleeps and still fail.
+
+         "Request too large … (OTPM)" is a REFUSAL, decided from max_tokens
+         before a token is generated. Waiting changes nothing — the same
+         request is refused identically a minute later. The only answer is a
+         smaller ask, so halve the budget and retry once. If that still will
+         not fit, the model is wrong for this account and the error should say
+         so rather than be buried under a timeout.
+
+         Every other 429 is genuine throttling, where waiting IS the fix. */
+      if (res.status === 429) {
+        const body429 = await res.clone().text().catch(() => "");
+        const refused = /request too large/i.test(body429);
+
+        if (refused) {
+          const room = Number((body429.match(/Limit\s+(\d+)/i) || [])[1]) || 0;
+          const asked = Number(body.max_tokens) || cfg.groqMaxTokens;
+          const next = room > 0 ? Math.min(Math.floor(room * 0.8), Math.floor(asked / 2))
+                                : Math.floor(asked / 2);
+          if (attempt < 1 && next >= 256) {
+            return post({ ...body, max_tokens: next }, attempt + 1);
+          }
+          throw new Error(
+            `groq refused the request size for ${body.model}: ${body429.slice(0, 200)}`);
+        }
+
+        /* A DAILY CAP IS NOT SOMETHING YOU WAIT OUT INSIDE A RUN.
+         *
+         * "on tokens per day (TPD): Limit 200000" resets at midnight UTC, not
+         * in the 90 seconds this loop is willing to sleep. Treated as ordinary
+         * throttling it cost THREE 90-second sleeps per call and roughly five
+         * minutes per episode, turning a dead run into a 52-minute one that
+         * still published nothing for those episodes — the log is wall-to-wall
+         * 280-second gaps between identical refusals.
+         *
+         * There is nothing to do but stop, and stop loudly. Whatever has
+         * already been processed is kept and published; the rest waits for
+         * tomorrow's bucket, which is what MAX_DAILY_EPISODES is for. */
+        if (/tokens per day|TPD/i.test(body429)) {
+          throw new Error(
+            `groq daily token budget exhausted for ${body.model} — stopping this run. ` +
+            `Already-processed episodes are kept. ${body429.slice(0, 160)}`);
+        }
+
+        if (attempt < cfg.groqRetries) {
+          const hinted = resetMs(res.headers.get("retry-after"))
+            || resetMs(res.headers.get("x-ratelimit-reset-tokens"));
+          await nap(Math.min(Math.max(hinted, 5000) + 1500, 90000));
+          budget = { remaining: Infinity, resetInMs: 0 };
+          last = Date.now();
+          return post(body, attempt + 1);
+        }
       }
       if (!res.ok) {
         const t = await res.text().catch(() => "");
@@ -175,14 +226,20 @@ const PROVIDERS = {
       name: "groq",
       model: cfg.groqModel,
 
-      async json({ system, user, schema, name, description, maxTokens = 8000 }) {
+      async json({ system, user, schema, name, description, cheap = false, maxTokens = 8000 }) {
         const d = await post({
-          model: cfg.groqModel,
+          /* The per-chunk read goes to the cheap model — not to save money,
+             which is zero either way, but because the DAILY token bucket is
+             per model and this pass is nearly all of the tokens. */
+          model: cheap ? cfg.groqModelCheap : cfg.groqModel,
           /* CLAMPED. The free tier limits OUTPUT tokens per minute and enforces
              it on the request, so asking for 8,000 is refused outright — not
              throttled, refused, which no retry can fix. The caller's number is
              a ceiling for a paid provider; here it is whichever is smaller. */
           max_tokens: Math.min(maxTokens, cfg.groqMaxTokens),
+          /* Reasoning models bill their hidden thinking to max_tokens; without
+             this the budget is spent before the tool call is emitted. */
+          reasoning_effort: cfg.groqReasoningEffort,
           messages: [{ role: "system", content: system }, { role: "user", content: user }],
           tools: [{ type: "function", function: {
             name, description: description || name,
@@ -202,10 +259,11 @@ const PROVIDERS = {
         }
       },
 
-      async text({ system, user, maxTokens = 4000 }) {
+      async text({ system, user, cheap = false, maxTokens = 4000 }) {
         const d = await post({
-          model: cfg.groqModel,
+          model: cheap ? cfg.groqModelCheap : cfg.groqModel,
           max_tokens: Math.min(maxTokens, cfg.groqMaxTokens),
+          reasoning_effort: cfg.groqReasoningEffort,
           messages: [{ role: "system", content: system }, { role: "user", content: user }],
         });
         return String(((d.choices || [{}])[0].message || {}).content || "").trim();

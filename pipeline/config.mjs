@@ -43,7 +43,14 @@ export const cfg = {
      to see all of it, not the two most recent — a cap that quietly drops the
      rest recreates the "where did my podcasts go" problem in a different place.
      It stays a cap because it is still the only brake on a runaway feed. */
-  maxDailyEpisodes: int(process.env.MAX_DAILY_EPISODES, 12),
+  /* 12 -> 8, MEASURED AGAINST THE DAILY TOKEN BUCKET, not guessed. The first
+     full AI run cost ~25,000 tokens an episode and Groq's free tier allows
+     200,000 per model per day, so twelve does not fit in one bucket: that run
+     processed 4 and was refused on the other 8. Eight episodes fully written
+     beats twelve attempted and four delivered, because the four that fail do
+     not degrade — they publish nothing at all.
+     Raise it the day the split across two models proves it has room. */
+  maxDailyEpisodes: int(process.env.MAX_DAILY_EPISODES, 8),
   maxEpisodeMinutes: int(process.env.MAX_EPISODE_MINUTES, 240),
   minEpisodeMinutes: int(process.env.MIN_EPISODE_MINUTES, 20),
   /* 8 days, one more than the public window: an episode that appears in the
@@ -108,20 +115,63 @@ export const cfg = {
     || (process.env.GROQ_API_KEY ? "groq"
         : process.env.ANTHROPIC_API_KEY ? "anthropic" : "mock"),
   groqKey: process.env.GROQ_API_KEY || "",
-  /* MEASURED ON THIS ACCOUNT, not chosen from a docs page. Asked for one
-     schema-constrained tool call, qwen3.8-27b returned it with every field
-     populated and gpt-oss-120b returned nothing parseable — the reasoning-model
-     failure already on record here, where hidden tokens eat max_tokens and
-     leave an empty 200. Overridable because Groq has retired models twice. */
-  groqModel: process.env.GROQ_MODEL_PODCASTS || "qwen/qwen3.8-27b",
+  /* MEASURED ON THIS ACCOUNT, and the earlier measurement was wrong about WHY.
+     gpt-oss did return nothing parseable — but because the call omitted
+     `reasoning_effort`, so hidden reasoning consumed the whole budget. Sent
+     with reasoning_effort:"low" it returns a populated tool call in 1.8s.
+
+     THE DECIDING CONSTRAINT IS NOT QUALITY, IT IS A WALL. This account's
+     free tier caps qwen at 1,000 OUTPUT tokens per minute, enforced on the
+     request, and no header announces it — x-ratelimit-*-tokens reports the
+     8,000 TPM bucket and says nothing about OTPM, so it cannot be paced
+     around, only clamped under. Measured: qwen spent 711 output tokens on a
+     9,000-char chunk. At the 14,000-char chunk this pipeline actually sends
+     it would cross 1,000, and crossing it does not truncate the prose — it
+     truncates the JSON, which arrives as "arguments were not valid JSON".
+
+     gpt-oss-120b carries no such cap here (4,000 accepted), so it is the
+     default. qwen is better prose and stays one env var away for a day when
+     the tier changes:  GROQ_MODEL_PODCASTS=qwen/qwen3.8-27b GROQ_MAX_TOKENS=900 */
+  groqModel: process.env.GROQ_MODEL_PODCASTS || "openai/gpt-oss-120b",
+  /* ── TWO MODELS, BECAUSE THE DAILY BUDGET IS PER MODEL ───────────────────
+   *
+   * The first full AI run died two thirds of the way through on a limit that
+   * is not per minute at all:
+   *     "Rate limit reached ... on tokens per day (TPD): Limit 200000"
+   * 12 eligible episodes, 4 processed, 8 refused. One episode costs roughly
+   * 25,000 tokens across its passes, so a day's queue wants ~300,000 and the
+   * bucket holds 200,000.
+   *
+   * That bucket is per MODEL. extract.mjs has always asked for `cheap: true`
+   * on pass 1 — the per-chunk read, which is 80% of the calls and nearly all
+   * of the tokens — and the Groq provider was throwing the flag away and
+   * spending one model's allowance on everything.
+   *
+   * Honouring it puts the bulk reading on 20b and leaves 120b's allowance for
+   * passes 2/4/5, the judgement over a short list that decides whether the
+   * page is worth reading. Two buckets, each 200k, and the volume lands in
+   * the one whose job is volume. This is the same split config already
+   * describes for Anthropic — it simply never reached Groq. */
+  groqModelCheap: process.env.GROQ_MODEL_CHEAP || "openai/gpt-oss-20b",
+  /* gpt-oss models think before answering and bill those hidden tokens to
+     max_tokens. "low" is what makes the budget reach the answer. Ignored by
+     models that do not reason, so it is safe to send unconditionally. */
+  groqReasoningEffort: process.env.GROQ_REASONING_EFFORT || "low",
   /* The free tier is token-per-minute limited, so calls are serialised and
      spaced rather than raced into a 429. */
   groqGapMs: int(process.env.GROQ_GAP_MS, 2500),
   /* OUTPUT tokens per minute is the binding limit on the free tier, and it is
      enforced on the REQUEST: asking for 8,000 output tokens is refused before a
      single token is generated — "Request too large ... on output tokens per
-     minute (OTPM)" — so a retry cannot help. Ask for less instead. */
-  groqMaxTokens: int(process.env.GROQ_MAX_TOKENS, 2400),
+     minute (OTPM)" — so a retry cannot help. Ask for less instead.
+
+     4,000 is what gpt-oss-120b accepts on this account, verified against the
+     live endpoint rather than read off a pricing page. It is a CEILING, not a
+     target: a chunk costs ~500 output tokens, and the headroom is there so a
+     long answer truncates nowhere. Lower it with the model, not on its own —
+     under a reasoning model, too small a budget spends everything thinking
+     and returns an empty 200. */
+  groqMaxTokens: int(process.env.GROQ_MAX_TOKENS, 4000),
   /* Three, not one. A token-per-minute window can be genuinely full for most of
      a minute, and one retry discovers that and gives up. */
   groqRetries: int(process.env.GROQ_RETRIES, 3),
@@ -185,8 +235,11 @@ export const cfg = {
      accompanied by a bump silently leaves yesterday's worse points on the page
      forever. .b: the first production run returned dependent fragments —
      sentences beginning "Because…", "That is because…" — because the causal
-     signal matched the single most common word in conversational speech. */
-  promptVersion: "2026-09-10.b",
+     signal matched the single most common word in conversational speech.
+     2026-09-14.a: the interpretation layer actually runs. Every episode now on
+     the page was written by the extractive path, which cannot say why a point
+     matters; without this bump they would keep their fragments forever. */
+  promptVersion: "2026-09-14.a",
 
   /* ── PATHS ──────────────────────────────────────────────────────────────── */
   out: join(ROOT, "public", "podcasts.json"),
