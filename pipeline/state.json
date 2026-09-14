@@ -15163,8 +15163,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-10T14:49:24.278Z",
-      "updatedAt": "2026-09-13T20:31:23.582Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-14T00:17:59.306Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-07895296b3b0": {
       "status": "FAILED",
@@ -15223,8 +15223,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-10T14:49:25.338Z",
-      "updatedAt": "2026-09-13T20:31:26.858Z",
-      "reason": "no takeaways: only 1 distinct points (floor is 6)"
+      "updatedAt": "2026-09-14T00:18:03.308Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-5be722ccbec8": {
       "status": "FAILED",
@@ -15259,8 +15259,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-10T14:49:26.862Z",
-      "updatedAt": "2026-09-13T20:31:30.941Z",
-      "reason": "no takeaways: only 3 distinct points (floor is 6)"
+      "updatedAt": "2026-09-14T00:18:07.308Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-338f935c708b": {
       "status": "FAILED",
@@ -15283,8 +15283,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-11T00:16:30.951Z",
-      "updatedAt": "2026-09-13T20:30:51.634Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-14T00:17:55.305Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-85b4d0fcc1ff": {
       "status": "FAILED",
@@ -15679,8 +15679,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:37.498Z",
-      "updatedAt": "2026-09-13T20:30:16.951Z",
-      "reason": "no takeaways: no sentence scored above zero"
+      "updatedAt": "2026-09-14T00:17:47.301Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-c22c8c9d857b": {
       "status": "FAILED",
@@ -15691,8 +15691,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:39.097Z",
-      "updatedAt": "2026-09-13T20:30:21.207Z",
-      "reason": "no takeaways: only 2 distinct points (floor is 6)"
+      "updatedAt": "2026-09-14T00:17:51.303Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-55a5b39c122e": {
       "status": "PUBLISHED",
@@ -17450,8 +17450,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-13T00:04:12.596Z",
-      "updatedAt": "2026-09-13T20:30:16.941Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-14T00:17:43.301Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-1f07c9986f81": {
       "status": "PUBLISHED",
@@ -17823,8 +17823,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-13T20:25:33.076Z",
-      "updatedAt": "2026-09-13T20:29:44.990Z",
-      "reason": "no takeaways: only 1 distinct points (floor is 6)"
+      "updatedAt": "2026-09-14T00:17:39.302Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-dea7fc29ad07": {
       "status": "PUBLISHED",
@@ -18036,8 +18036,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-13T20:31:30.948Z",
-      "updatedAt": "2026-09-13T20:31:34.775Z",
-      "reason": "no takeaways: only 3 distinct points (floor is 6)"
+      "updatedAt": "2026-09-14T00:18:11.311Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-0116d1d09ac7": {
       "status": "FAILED",
@@ -18048,8 +18048,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-13T20:31:34.781Z",
-      "updatedAt": "2026-09-13T20:32:06.315Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-14T00:18:15.312Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T20:32:06.342Z",
+  "generatedAt": "2026-09-14T00:18:15.324Z",
   "today": "2026-09-14",
   "retentionDays": 7,
   "days": [
@@ -2826,7 +2826,7 @@
         "“Kamal Haasan and Mani Ratnam Were Worth My Time” Manu Joseph #ANIPodcast #SmitaPrakash #ManuJoseph #Vijay #KamalHaasan #ManiRatnam #Rajinikanth Tune in here: linktr.ee/podcastwithsmitaprakash"
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: only 1 distinct points (floor is 6)"
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-ba0747405cad",
@@ -2838,7 +2838,7 @@
         "But behind the BRICS handshakes and the media spectacle - a high stakes diplomatic balancing act is being payed out."
       ],
       "date": "2026-09-14",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-94a530b3b7a1",
@@ -2850,7 +2850,7 @@
         "Please open this alongside the episode while watching."
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: no sentence scored above zero"
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-c22c8c9d857b",
@@ -2862,7 +2862,7 @@
         "Turns out, the answer isn’t as straightforward as you might think."
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: only 2 distinct points (floor is 6)"
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-21d2ef51e359",
@@ -2874,7 +2874,7 @@
         "This video breaks down a structured and practical investment blueprint tailored specifically for this decade, focusing on optimal asset allocation, strategic portfolio balance, and disciplined long-term growth."
       ],
       "date": "2026-09-14",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-1ea3eb67afce",
@@ -2886,7 +2886,7 @@
         "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
       ],
       "date": "2026-09-14",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-0d4af485b600",
@@ -2898,7 +2898,7 @@
         "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: only 1 distinct points (floor is 6)"
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-3a342472d20e",
@@ -2910,7 +2910,7 @@
         "I have done an in depth analysis in this macro video - how it not only affects NRIs but also Indian resident investors."
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: only 3 distinct points (floor is 6)"
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-26e0deff1237",
@@ -2922,7 +2922,7 @@
         "Very few plan for what happens after."
       ],
       "date": "2026-09-14",
-      "reason": "no takeaways: only 3 distinct points (floor is 6)"
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-0116d1d09ac7",
@@ -2934,7 +2934,7 @@
         "Live workshop happening on TOMORROW!"
       ],
       "date": "2026-09-14",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     }
   ],
   "generator": {
@@ -2945,73 +2945,73 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-13T20:32:06.334Z",
+    "at": "2026-09-14T00:18:15.322Z",
     "discovered": 903,
-    "eligible": 12,
-    "processed": 2,
-    "skipped": 891,
+    "eligible": 10,
+    "processed": 0,
+    "skipped": 893,
     "failed": 10,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "desk-b3b592c74955",
-        "message": "no takeaways: only 1 distinct points (floor is 6)",
-        "at": "2026-09-13T20:29:44.990Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:17:39.302Z"
       },
       {
         "stage": "process",
         "id": "desk-ba0747405cad",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-13T20:30:16.941Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:17:43.301Z"
       },
       {
         "stage": "process",
         "id": "desk-94a530b3b7a1",
-        "message": "no takeaways: no sentence scored above zero",
-        "at": "2026-09-13T20:30:16.951Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:17:47.301Z"
       },
       {
         "stage": "process",
         "id": "desk-c22c8c9d857b",
-        "message": "no takeaways: only 2 distinct points (floor is 6)",
-        "at": "2026-09-13T20:30:21.207Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:17:51.302Z"
       },
       {
         "stage": "process",
         "id": "desk-21d2ef51e359",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-13T20:30:51.632Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:17:55.305Z"
       },
       {
         "stage": "process",
         "id": "desk-1ea3eb67afce",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-13T20:31:23.582Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:17:59.306Z"
       },
       {
         "stage": "process",
         "id": "desk-0d4af485b600",
-        "message": "no takeaways: only 1 distinct points (floor is 6)",
-        "at": "2026-09-13T20:31:26.858Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:18:03.308Z"
       },
       {
         "stage": "process",
         "id": "desk-3a342472d20e",
-        "message": "no takeaways: only 3 distinct points (floor is 6)",
-        "at": "2026-09-13T20:31:30.941Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:18:07.308Z"
       },
       {
         "stage": "process",
         "id": "desk-26e0deff1237",
-        "message": "no takeaways: only 3 distinct points (floor is 6)",
-        "at": "2026-09-13T20:31:34.775Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:18:11.311Z"
       },
       {
         "stage": "process",
         "id": "desk-0116d1d09ac7",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-13T20:32:06.315Z"
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-14T00:18:15.312Z"
       }
     ],
     "estimatedCostUsd": 0
