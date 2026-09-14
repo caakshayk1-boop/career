@@ -201,12 +201,38 @@ await checkPage("/podcasts", "podcasts", async (page) => {
         .flatMap((e) => e.learnings || [])
         .filter((l) => !l.detail || !l.passage || !l.passage.includes(l.detail)).length,
       /* And the pill must still be honest: whatever it kept must appear in the
-       * detail, in order. Stripping is allowed; rewriting is not. */
+       * detail, in order. Stripping is allowed; rewriting is not.
+       *
+       * A SUBSEQUENCE, NOT A CONTIGUOUS TAIL. This compared the headline's last
+       * 40 characters against the detail with includes(), which any mid-string
+       * strip breaks — and stripping is the thing the rule explicitly permits.
+       * "pretty late in Tokyo now uh Ethan Hunt" becomes "Pretty late in Tokyo
+       * now Ethan Hunt": one filler word dropped and the first letter
+       * capitalised, both allowed, both fatal to a contiguous match.
+       *
+       * 26 points failed it and ZERO were genuine rewrites — every one was a
+       * strict subsequence of its own detail. The check was wrong, not the
+       * generator, and it took the career deploy gate red with it.
+       *
+       * Word-by-word and in order is the exact formalisation of "strips but
+       * never rewrites": a dropped word passes, an invented or altered one
+       * cannot. Case-insensitive, because capitalising the first letter of a
+       * sentence is presentation and not a change of words. */
       pillRewritten: (doc.episodes || []).filter((e) => e.extractor === "local")
         .flatMap((e) => e.learnings || [])
         .filter((l) => {
-          const tail = String(l.headline).replace(/…$/, "").trim().slice(-40);
-          return tail.length > 12 && l.detail && !l.detail.includes(tail);
+          if (!l.detail) return false;
+          const w = (t) => String(t).toLowerCase().match(/[a-z0-9']+/g) || [];
+          const head = w(String(l.headline).replace(/…$/, ""));
+          if (head.length < 3) return false;
+          const body = w(l.detail);
+          let i = 0;
+          for (const word of head) {
+            while (i < body.length && body[i] !== word) i++;
+            if (i >= body.length) return true;   // a word the detail never says
+            i++;
+          }
+          return false;
         }).length,
       untimed: (doc.episodes || []).flatMap((e) => e.timestamped ? (e.learnings || []) : [])
         .filter((l) => l.t == null).length,
