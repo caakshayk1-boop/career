@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T00:18:15.324Z",
-  "today": "2026-09-14",
+  "generatedAt": "2026-09-15T00:47:22.175Z",
+  "today": "2026-09-15",
   "retentionDays": 7,
   "days": [
     {
       "date": "2026-09-14",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-dea7fc29ad07",
         "desk-55a5b39c122e",
@@ -2818,26 +2818,134 @@
   ],
   "pending": [
     {
-      "id": "desk-b3b592c74955",
-      "title": "“Kamal Haasan and Mani Ratnam Were Worth My Time” Manu Josephcast for Short Clip 05",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=tpX-eVI6bpo",
+      "id": "desk-0d4af485b600",
+      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
       "takeaways": [
-        "“Kamal Haasan and Mani Ratnam Were Worth My Time” Manu Joseph #ANIPodcast #SmitaPrakash #ManuJoseph #Vijay #KamalHaasan #ManiRatnam #Rajinikanth Tune in here: linktr.ee/podcastwithsmitaprakash"
+        "You ever hear that 2AM voice telling you everything's about to go wrong?",
+        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-15",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-3a342472d20e",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "takeaways": [
+        "The FCNR scheme may not deliver the returns it promises.",
+        "It affects both NRIs and Indian resident investors."
+      ],
+      "date": "2026-09-15",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-26e0deff1237",
+      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
+      "takeaways": [
+        "Most people build a plan to reach financial freedom.",
+        "Very few plan for what happens after."
+      ],
+      "date": "2026-09-15",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-0116d1d09ac7",
+      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
+      "takeaways": [
+        "The video was created solely to spread awareness and educate viewers.",
+        "The information presented is claimed to be accurate to the best of the team’s knowledge."
+      ],
+      "date": "2026-09-15",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-e28c86e3708b",
+      "title": "The Billion-Dollar Monastery | How Bhutan Fought Poverty With Bitcoins",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
+      "takeaways": [
+        "Bhutan operates a secret, government‑run Bitcoin mining facility hidden in the Himalayas.",
+        "% of Bhutan’s land is unsuitable for agriculture, preventing traditional farming."
+      ],
+      "date": "2026-09-15",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
-      "id": "desk-ba0747405cad",
-      "title": "Can Xi Jinping Be Trusted? | Another ‘Reset’ With India Or China Playing A Darker Game? | Akash B",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=SydNlNJeS10",
+      "id": "desk-14ef1df16961",
+      "title": "The Fall of 5 Famous Stocks: What Really Happened?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
       "takeaways": [
-        "The big new from BRICS - Xi Jinping is back in Delhi after seven years - Meeting Modi for a bilateral - Relations being 'reset'.",
-        "But behind the BRICS handshakes and the media spectacle - a high stakes diplomatic balancing act is being payed out."
+        "Five well-known Indian stocks have fallen more than 50% from their all‑time highs.",
+        "The episode examines revenue growth, profit margins, cash flow, debt, working capital, order books, valuations, management guidance and key risks to determine if the declines are temporary challenges or deeper structural issues."
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-15",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-5886041ee66d",
+      "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
+      "show": "Shut Up Ya Kunal",
+      "url": "https://www.youtube.com/watch?v=ovC-02pLKnI",
+      "takeaways": [
+        "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
+        "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
+      ],
+      "date": "2026-09-15",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-23e7df01656d",
+      "title": "Will AI Destroy Humanity? | Real Fears Or Dirty Games Being Played By AI Companies? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
+      "takeaways": [
+        "AI tech has been advancing at a brutal pace - but now the biggest names in the AI industry are warning that the technology could pose an existential threat to humanity.",
+        "Anthropic CEO Dario Amodei, OpenAI CEO Sam Altman and Elon Musk have all raised concerns about AI safety and the need to slow 'down frontier' development."
+      ],
+      "date": "2026-09-15",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-dfbf6038e1a5",
+      "title": "Haaretz expose of Netanyahu believable, his behaviour was “criminal”: Gershon Baskin",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=Pa-mUnkHNNg",
+      "takeaways": [
+        "Haaretz expose of Netanyahu believable, his behaviour was \"criminal\": Gershon Baskin, Middle East Director, International Communities Organisation and Israeli hostage negotiator, to Karan Thapar for The Wire.",
+        "The Hamas attack on Israel on October the 7, 2023 traumatised the country."
+      ],
+      "date": "2026-09-15",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-3cea1dec46e6",
+      "title": "“Everybody is sacred in our society, and for no reason at all” Manu Joseph",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=bOVAwqrEgMQ",
+      "takeaways": [
+        "Everybody is sacred in our society, and for no reason at all."
+      ],
+      "date": "2026-09-15",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-f7527bd12c26",
+      "title": "UPSC EPFO 2026: 90-Day Complete Preparation Roadmap | Strategy to Crack the Exam",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=1X3XNewPrqI",
+      "takeaways": [
+        "Only 90 days are left for the UPSC EPFO 2026 examination!",
+        "Are you confused about how to utilize these crucial 90 days and prepare effectively for the exam?"
+      ],
+      "date": "2026-09-15",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
@@ -2846,10 +2954,9 @@
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
       "takeaways": [
-        "Access the full data and references used in this episode below.",
-        "Please open this alongside the episode while watching."
+        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
@@ -2861,7 +2968,7 @@
         "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
         "Turns out, the answer isn’t as straightforward as you might think."
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
@@ -2870,148 +2977,121 @@
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
       "takeaways": [
-        "Starting your wealth-creation journey in your 20s provides an unmatched compounding advantage for your financial future.",
-        "This video breaks down a structured and practical investment blueprint tailored specifically for this decade, focusing on optimal asset allocation, strategic portfolio balance, and disciplined long-term growth."
+        "Starting wealth creation in your 20s gives you an unmatched compounding advantage.",
+        "The video offers a step‑by‑step investment blueprint focused on optimal asset allocation, portfolio balance, and disciplined long‑term growth."
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-1ea3eb67afce",
-      "title": "Who controls your EMI",
+      "title": "RBI vs Government: Who Really Controls Money?",
       "show": "Labour Law Advisor",
       "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
       "takeaways": [
         "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
         "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
       ],
-      "date": "2026-09-14",
+      "date": "2026-09-15",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
-      "id": "desk-0d4af485b600",
-      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
-      "takeaways": [
-        "You ever hear that 2AM voice telling you everything's about to go wrong?",
-        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
-      ],
+      "id": "diary-of-a-ceo-1dfdf10698da",
+      "title": "The Man Who Predicted The Iran War: The Next 9/11 Will Target Your Bank Account! | Professor Jiang",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "takeaways": [],
       "date": "2026-09-14",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-3a342472d20e",
-      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
-      "takeaways": [
-        "The recent FCNR scheme by the RBI seems lucrative, but is it actually what it is promising.",
-        "I have done an in depth analysis in this macro video - how it not only affects NRIs but also Indian resident investors."
-      ],
-      "date": "2026-09-14",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-26e0deff1237",
-      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
-      "takeaways": [
-        "Most people build a plan to reach financial freedom.",
-        "Very few plan for what happens after."
-      ],
-      "date": "2026-09-14",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-0116d1d09ac7",
-      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
-      "takeaways": [
-        "The fastest and the most affordable way to upskill yourself in AI.",
-        "Live workshop happening on TOMORROW!"
-      ],
-      "date": "2026-09-14",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "reason": "groq 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on outpu"
     }
   ],
   "generator": {
     "processingVersion": "1.0.0",
     "promptVersion": "2026-09-10.b",
-    "extractor": "local",
-    "ai": "none",
+    "extractor": "ai",
+    "ai": "groq:qwen/qwen3.8-27b",
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-14T00:18:15.322Z",
-    "discovered": 903,
-    "eligible": 10,
+    "at": "2026-09-15T00:47:22.174Z",
+    "discovered": 904,
+    "eligible": 12,
     "processed": 0,
-    "skipped": 893,
-    "failed": 10,
+    "skipped": 892,
+    "failed": 12,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
-        "id": "desk-b3b592c74955",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:17:39.302Z"
+        "id": "diary-of-a-ceo-1dfdf10698da",
+        "message": "groq 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on output tokens per minute (OTPM): Li",
+        "at": "2026-09-15T00:46:40.696Z"
       },
       {
         "stage": "process",
-        "id": "desk-ba0747405cad",
+        "id": "desk-e28c86e3708b",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:17:43.301Z"
+        "at": "2026-09-15T00:46:42.141Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-14ef1df16961",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-15T00:46:46.141Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-5886041ee66d",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-15T00:46:50.143Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-23e7df01656d",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-15T00:46:54.144Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-dfbf6038e1a5",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-15T00:46:58.146Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-3cea1dec46e6",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-15T00:47:02.148Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-f7527bd12c26",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-15T00:47:06.150Z"
       },
       {
         "stage": "process",
         "id": "desk-94a530b3b7a1",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:17:47.301Z"
+        "at": "2026-09-15T00:47:10.160Z"
       },
       {
         "stage": "process",
         "id": "desk-c22c8c9d857b",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:17:51.302Z"
+        "at": "2026-09-15T00:47:14.155Z"
       },
       {
         "stage": "process",
         "id": "desk-21d2ef51e359",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:17:55.305Z"
+        "at": "2026-09-15T00:47:18.157Z"
       },
       {
         "stage": "process",
         "id": "desk-1ea3eb67afce",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:17:59.306Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-0d4af485b600",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:18:03.308Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-3a342472d20e",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:18:07.308Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-26e0deff1237",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:18:11.311Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-0116d1d09ac7",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-14T00:18:15.312Z"
+        "at": "2026-09-15T00:47:22.163Z"
       }
     ],
     "estimatedCostUsd": 0

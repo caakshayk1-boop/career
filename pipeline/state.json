@@ -15156,14 +15156,14 @@
     },
     "desk-1ea3eb67afce": {
       "status": "FAILED",
-      "title": "Who controls your EMI",
+      "title": "RBI vs Government: Who Really Controls Money?",
       "show": "Labour Law Advisor",
       "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
       "id": "desk-1ea3eb67afce",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-10T14:49:24.278Z",
-      "updatedAt": "2026-09-14T00:17:59.306Z",
+      "updatedAt": "2026-09-15T00:47:22.163Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-07895296b3b0": {
@@ -15283,7 +15283,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-11T00:16:30.951Z",
-      "updatedAt": "2026-09-14T00:17:55.305Z",
+      "updatedAt": "2026-09-15T00:47:18.157Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-85b4d0fcc1ff": {
@@ -15679,7 +15679,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:37.498Z",
-      "updatedAt": "2026-09-14T00:17:47.301Z",
+      "updatedAt": "2026-09-15T00:47:10.160Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-c22c8c9d857b": {
@@ -15691,7 +15691,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-12T00:23:39.097Z",
-      "updatedAt": "2026-09-14T00:17:51.303Z",
+      "updatedAt": "2026-09-15T00:47:14.155Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-55a5b39c122e": {
@@ -18049,6 +18049,102 @@
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-13T20:31:34.781Z",
       "updatedAt": "2026-09-14T00:18:15.312Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "diary-of-a-ceo-1dfdf10698da": {
+      "status": "FAILED",
+      "title": "The Man Who Predicted The Iran War: The Next 9/11 Will Target Your Bank Account! | Professor Jiang",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "id": "diary-of-a-ceo-1dfdf10698da",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:42:37.516Z",
+      "updatedAt": "2026-09-15T00:46:40.697Z",
+      "reason": "groq 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on output tokens per minute (OTPM): Li"
+    },
+    "desk-e28c86e3708b": {
+      "status": "FAILED",
+      "title": "The Billion-Dollar Monastery | How Bhutan Fought Poverty With Bitcoins",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
+      "id": "desk-e28c86e3708b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:46:40.704Z",
+      "updatedAt": "2026-09-15T00:46:42.141Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-14ef1df16961": {
+      "status": "FAILED",
+      "title": "The Fall of 5 Famous Stocks: What Really Happened?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
+      "id": "desk-14ef1df16961",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:46:42.149Z",
+      "updatedAt": "2026-09-15T00:46:46.141Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-5886041ee66d": {
+      "status": "FAILED",
+      "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
+      "show": "Shut Up Ya Kunal",
+      "url": "https://www.youtube.com/watch?v=ovC-02pLKnI",
+      "id": "desk-5886041ee66d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:46:46.148Z",
+      "updatedAt": "2026-09-15T00:46:50.143Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-23e7df01656d": {
+      "status": "FAILED",
+      "title": "Will AI Destroy Humanity? | Real Fears Or Dirty Games Being Played By AI Companies? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
+      "id": "desk-23e7df01656d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:46:50.151Z",
+      "updatedAt": "2026-09-15T00:46:54.144Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-dfbf6038e1a5": {
+      "status": "FAILED",
+      "title": "Haaretz expose of Netanyahu believable, his behaviour was “criminal”: Gershon Baskin",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=Pa-mUnkHNNg",
+      "id": "desk-dfbf6038e1a5",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:46:54.151Z",
+      "updatedAt": "2026-09-15T00:46:58.146Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-3cea1dec46e6": {
+      "status": "FAILED",
+      "title": "“Everybody is sacred in our society, and for no reason at all” Manu Joseph",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=bOVAwqrEgMQ",
+      "id": "desk-3cea1dec46e6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:46:58.153Z",
+      "updatedAt": "2026-09-15T00:47:02.148Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-f7527bd12c26": {
+      "status": "FAILED",
+      "title": "UPSC EPFO 2026: 90-Day Complete Preparation Roadmap | Strategy to Crack the Exam",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=1X3XNewPrqI",
+      "id": "desk-f7527bd12c26",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-15T00:47:02.157Z",
+      "updatedAt": "2026-09-15T00:47:06.150Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     }
   }
