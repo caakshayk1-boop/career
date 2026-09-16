@@ -18053,15 +18053,15 @@
     },
     "diary-of-a-ceo-1dfdf10698da": {
       "status": "FAILED",
-      "title": "The Man Who Predicted The Iran War: The Next 9/11 Will Target Your Bank Account! | Professor Jiang",
+      "title": "Professor Jiang: Three Predictions On the Collapse of the World Order",
       "show": "The Diary Of A CEO",
       "url": "",
       "id": "diary-of-a-ceo-1dfdf10698da",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-15T00:42:37.516Z",
-      "updatedAt": "2026-09-15T00:46:40.697Z",
-      "reason": "groq 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on output tokens per minute (OTPM): Li"
+      "updatedAt": "2026-09-16T00:36:30.700Z",
+      "reason": "groq 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on input tokens per minute (ITPM): Lim"
     },
     "desk-e28c86e3708b": {
       "status": "FAILED",
@@ -18072,7 +18072,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-15T00:46:40.704Z",
-      "updatedAt": "2026-09-15T00:46:42.141Z",
+      "updatedAt": "2026-09-16T00:36:39.463Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-14ef1df16961": {
@@ -18084,7 +18084,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-15T00:46:42.149Z",
-      "updatedAt": "2026-09-15T00:46:46.141Z",
+      "updatedAt": "2026-09-16T00:36:48.210Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-5886041ee66d": {
@@ -18096,19 +18096,19 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-15T00:46:46.148Z",
-      "updatedAt": "2026-09-15T00:46:50.143Z",
+      "updatedAt": "2026-09-16T00:36:57.218Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-23e7df01656d": {
       "status": "FAILED",
-      "title": "Will AI Destroy Humanity? | Real Fears Or Dirty Games Being Played By AI Companies? | Akash Banerjee",
+      "title": "Will AI Destroy Humanity? | Genuine Fear Or Games Being Played By AI Companies? | Akash Banerjee",
       "show": "The Deshbhakt",
       "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
       "id": "desk-23e7df01656d",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-15T00:46:50.151Z",
-      "updatedAt": "2026-09-15T00:46:54.144Z",
+      "updatedAt": "2026-09-16T00:37:06.501Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     "desk-dfbf6038e1a5": {
@@ -18145,6 +18145,90 @@
       "promptVersion": "2026-09-10.b",
       "seenAt": "2026-09-15T00:47:02.157Z",
       "updatedAt": "2026-09-15T00:47:06.150Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-82e25965bcf8": {
+      "status": "FAILED",
+      "title": "TOP Harvard Scientist: These 5 Habits Are Aging You Faster | David Sinclair | FO562 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=gfCg5srOjN0",
+      "id": "desk-82e25965bcf8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:38.446Z",
+      "updatedAt": "2026-09-16T00:32:39.772Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-09492378de3b": {
+      "status": "FAILED",
+      "title": "NSE IPO Explained | Should You Apply?",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=M_npo4c9DEA",
+      "id": "desk-09492378de3b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:39.778Z",
+      "updatedAt": "2026-09-16T00:32:43.769Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-aafe80a1879c": {
+      "status": "FAILED",
+      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
+      "id": "desk-aafe80a1879c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:43.778Z",
+      "updatedAt": "2026-09-16T00:32:47.770Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-a21e9dfc084e": {
+      "status": "FAILED",
+      "title": "Why Orangutans in Odisha Are Bad News – For India And The World",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=acycTOkTVm4",
+      "id": "desk-a21e9dfc084e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:47.777Z",
+      "updatedAt": "2026-09-16T00:32:51.772Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-d119d69c7e4f": {
+      "status": "FAILED",
+      "title": "India’s Housing Problem: Too Many Expensive Homes, Too Few Affordable Ones? | Quick Take",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=U1HjrY-X64E",
+      "id": "desk-d119d69c7e4f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:51.778Z",
+      "updatedAt": "2026-09-16T00:32:55.775Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-dd3caca8be8c": {
+      "status": "FAILED",
+      "title": "Dopamine Detox Is a Myth | Neurologist Explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=dWR6jRSMJ0U",
+      "id": "desk-dd3caca8be8c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:55.782Z",
+      "updatedAt": "2026-09-16T00:32:59.776Z",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    "desk-2fc719afd73a": {
+      "status": "FAILED",
+      "title": "UPSC Syllabus: Know Exactly What You Have to Study | Prelims & Mains | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=1DFdcGyf3kE",
+      "id": "desk-2fc719afd73a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-10.b",
+      "seenAt": "2026-09-16T00:32:59.783Z",
+      "updatedAt": "2026-09-16T00:33:03.778Z",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     }
   }

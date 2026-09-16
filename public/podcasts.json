@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-15T00:47:22.175Z",
-  "today": "2026-09-15",
+  "generatedAt": "2026-09-16T00:37:06.509Z",
+  "today": "2026-09-16",
   "retentionDays": 7,
   "days": [
     {
       "date": "2026-09-14",
-      "label": "Yesterday",
+      "label": "Monday",
       "episodeIds": [
         "desk-dea7fc29ad07",
         "desk-55a5b39c122e",
@@ -2818,15 +2818,39 @@
   ],
   "pending": [
     {
-      "id": "desk-0d4af485b600",
-      "title": "Caught in a Negative Spiral? | Neuroscience tips to RESET yourself | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=3tK8dbPavGs",
+      "id": "desk-94a530b3b7a1",
+      "title": "What Went Wrong With Goa?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
       "takeaways": [
-        "You ever hear that 2AM voice telling you everything's about to go wrong?",
-        "It's not weakness — it's a billion-year-old fear network in your brain running without your permission."
+        "Access the full data and references used in this episode below.",
+        "The episode includes Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-c22c8c9d857b",
+      "title": "Why Some Nifty ETFs Beat Others?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "takeaways": [
+        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
+        "Turns out, the answer isn’t as straightforward as you might think."
+      ],
+      "date": "2026-09-16",
+      "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-1ea3eb67afce",
+      "title": "RBI vs Government: Who Really Controls Money?",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
+      "takeaways": [
+        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
+        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
+      ],
+      "date": "2026-09-16",
       "reason": "over the 12/day cap"
     },
     {
@@ -2835,10 +2859,10 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
       "takeaways": [
-        "The FCNR scheme may not deliver the returns it promises.",
-        "It affects both NRIs and Indian resident investors."
+        "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
+        "It impacts both NRIs and Indian resident investors."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "over the 12/day cap"
     },
     {
@@ -2847,10 +2871,10 @@
       "show": "Finance With Sharan",
       "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
       "takeaways": [
-        "Most people build a plan to reach financial freedom.",
-        "Very few plan for what happens after."
+        "Karan Datta retired at 47 and is now in his eighth year of retirement.",
+        "He treats certain watch pieces as appreciating assets."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "over the 12/day cap"
     },
     {
@@ -2859,11 +2883,94 @@
       "show": "Dhruv Rathee",
       "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
       "takeaways": [
-        "The video was created solely to spread awareness and educate viewers.",
-        "The information presented is claimed to be accurate to the best of the team’s knowledge."
+        "The fastest and most affordable way to upskill yourself in AI is highlighted.",
+        "A live workshop on AI is scheduled for 6th Sept at 7 pm IST."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "over the 12/day cap"
+    },
+    {
+      "id": "desk-82e25965bcf8",
+      "title": "TOP Harvard Scientist: These 5 Habits Are Aging You Faster | David Sinclair | FO562 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=gfCg5srOjN0",
+      "takeaways": [
+        "Genetics, lifestyle, and cellular health all influence longevity.",
+        "We can take actions today to stay healthier for longer."
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-09492378de3b",
+      "title": "NSE IPO Explained | Should You Apply?",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=M_npo4c9DEA",
+      "takeaways": [
+        "The episode explains how India’s largest stock exchange generates its revenue.",
+        "It directly compares NSE’s financial performance, growth potential and valuations with those of BSE."
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-aafe80a1879c",
+      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
+      "takeaways": [
+        "Episode 382 of the #AskAbhijit show: Ask me your best questions in the live chat and Superchat, and I shall answer them.",
+        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-a21e9dfc084e",
+      "title": "Why Orangutans in Odisha Are Bad News – For India And The World",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=acycTOkTVm4",
+      "takeaways": [
+        "On September 8, authorities spotted five orangutans in the Ranakantha reserve forest in Odisha’s Balasore district.",
+        "State authorities immediately rescued them."
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-d119d69c7e4f",
+      "title": "India’s Housing Problem: Too Many Expensive Homes, Too Few Affordable Ones? | Quick Take",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=U1HjrY-X64E",
+      "takeaways": [
+        "India’s Housing Problem: Too Many Expensive Homes, Too Few Affordable Ones?",
+        "| Quick Take #QuickTake #SmitaPrakash #India #RentalHousing #RealEstate #HomeBuyers #UrbanHousing #PropertyMarket Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-dd3caca8be8c",
+      "title": "Dopamine Detox Is a Myth | Neurologist Explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=dWR6jRSMJ0U",
+      "takeaways": [
+        "The real difference between novelty dopamine and depth dopamine Why your brain is wired to avoid effort, not seek reward The 70-20-10 framework for structuring your time so dopamine compounds Why AI can trick your brain into feeling like you have knowledge you don't #DopamineDetox #Neuroscience #BrainHealth #Neurologist #DrSidWarrier #WarrierClinic #Dopamine #MentalHealthIndia #Productivity #HealthyBrain #ScienceExplained #IndianDoctor #Focus #SelfImprovement #Neurology Show your support by becoming a Channel Member and get special perks:"
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+    },
+    {
+      "id": "desk-2fc719afd73a",
+      "title": "UPSC Syllabus: Know Exactly What You Have to Study | Prelims & Mains | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=1DFdcGyf3kE",
+      "takeaways": [
+        "What exactly do you need to study for the UPSC Civil Services Examination?",
+        "Before starting UPSC preparation, the first step is to understand the complete syllabus and examination pattern."
+      ],
+      "date": "2026-09-16",
+      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-e28c86e3708b",
@@ -2871,10 +2978,10 @@
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
       "takeaways": [
-        "Bhutan operates a secret, government‑run Bitcoin mining facility hidden in the Himalayas.",
-        "% of Bhutan’s land is unsuitable for agriculture, preventing traditional farming."
+        "A journalist discovered a government‑run Bitcoin mining facility hidden in the Himalayas of Bhutan.",
+        "Bhutan has become one of the largest holders of Bitcoin on the planet."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
@@ -2883,10 +2990,10 @@
       "show": "Groww",
       "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
       "takeaways": [
-        "Five well-known Indian stocks have fallen more than 50% from their all‑time highs.",
-        "The episode examines revenue growth, profit margins, cash flow, debt, working capital, order books, valuations, management guidance and key risks to determine if the declines are temporary challenges or deeper structural issues."
+        "Five well-known Indian stocks have fallen more than 50% from their all-time highs—but does a falling stock always mean a broken business?",
+        "In this video, we analyse 5 stocks to understand why these stocks corrected sharply, what changed in their businesses, and what could potentially drive a turnaround."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
@@ -2898,111 +3005,29 @@
         "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
         "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
       ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "desk-23e7df01656d",
-      "title": "Will AI Destroy Humanity? | Real Fears Or Dirty Games Being Played By AI Companies? | Akash Banerjee",
+      "title": "Will AI Destroy Humanity? | Genuine Fear Or Games Being Played By AI Companies? | Akash Banerjee",
       "show": "The Deshbhakt",
       "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
       "takeaways": [
-        "AI tech has been advancing at a brutal pace - but now the biggest names in the AI industry are warning that the technology could pose an existential threat to humanity.",
-        "Anthropic CEO Dario Amodei, OpenAI CEO Sam Altman and Elon Musk have all raised concerns about AI safety and the need to slow 'down frontier' development."
+        "AI industry leaders such as Anthropic’s Dario Amodei, OpenAI’s Sam Altman and Elon Musk warn that AI could pose an existential threat to humanity.",
+        "They have called for slowing “frontier” AI development to address safety concerns."
       ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-dfbf6038e1a5",
-      "title": "Haaretz expose of Netanyahu believable, his behaviour was “criminal”: Gershon Baskin",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=Pa-mUnkHNNg",
-      "takeaways": [
-        "Haaretz expose of Netanyahu believable, his behaviour was \"criminal\": Gershon Baskin, Middle East Director, International Communities Organisation and Israeli hostage negotiator, to Karan Thapar for The Wire.",
-        "The Hamas attack on Israel on October the 7, 2023 traumatised the country."
-      ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-3cea1dec46e6",
-      "title": "“Everybody is sacred in our society, and for no reason at all” Manu Joseph",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=bOVAwqrEgMQ",
-      "takeaways": [
-        "Everybody is sacred in our society, and for no reason at all."
-      ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-f7527bd12c26",
-      "title": "UPSC EPFO 2026: 90-Day Complete Preparation Roadmap | Strategy to Crack the Exam",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=1X3XNewPrqI",
-      "takeaways": [
-        "Only 90 days are left for the UPSC EPFO 2026 examination!",
-        "Are you confused about how to utilize these crucial 90 days and prepare effectively for the exam?"
-      ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-94a530b3b7a1",
-      "title": "What Went Wrong With Goa?",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
-      "takeaways": [
-        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
-      ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-c22c8c9d857b",
-      "title": "Why Some Nifty ETFs Beat Others?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
-      "takeaways": [
-        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
-        "Turns out, the answer isn’t as straightforward as you might think."
-      ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-21d2ef51e359",
-      "title": "How to Invest in Your 20s | Complete Step-by-Step Plan",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=JPVLpELKSYk",
-      "takeaways": [
-        "Starting wealth creation in your 20s gives you an unmatched compounding advantage.",
-        "The video offers a step‑by‑step investment blueprint focused on optimal asset allocation, portfolio balance, and disciplined long‑term growth."
-      ],
-      "date": "2026-09-15",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
-    },
-    {
-      "id": "desk-1ea3eb67afce",
-      "title": "RBI vs Government: Who Really Controls Money?",
-      "show": "Labour Law Advisor",
-      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
-      "takeaways": [
-        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
-        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
-      ],
-      "date": "2026-09-15",
+      "date": "2026-09-16",
       "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
     },
     {
       "id": "diary-of-a-ceo-1dfdf10698da",
-      "title": "The Man Who Predicted The Iran War: The Next 9/11 Will Target Your Bank Account! | Professor Jiang",
+      "title": "Professor Jiang: Three Predictions On the Collapse of the World Order",
       "show": "The Diary Of A CEO",
       "url": "",
       "takeaways": [],
       "date": "2026-09-14",
-      "reason": "groq 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on outpu"
+      "reason": "groq 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on input"
     }
   ],
   "generator": {
@@ -3013,7 +3038,7 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-15T00:47:22.174Z",
+    "at": "2026-09-16T00:37:06.508Z",
     "discovered": 904,
     "eligible": 12,
     "processed": 0,
@@ -3023,75 +3048,75 @@
     "errors": [
       {
         "stage": "process",
+        "id": "desk-82e25965bcf8",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:32:39.772Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-09492378de3b",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:32:43.769Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-aafe80a1879c",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:32:47.770Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-a21e9dfc084e",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:32:51.772Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-d119d69c7e4f",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:32:55.775Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-dd3caca8be8c",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:32:59.776Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-2fc719afd73a",
+        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
+        "at": "2026-09-16T00:33:03.778Z"
+      },
+      {
+        "stage": "process",
         "id": "diary-of-a-ceo-1dfdf10698da",
-        "message": "groq 429: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on output tokens per minute (OTPM): Li",
-        "at": "2026-09-15T00:46:40.696Z"
+        "message": "groq 413: {\"error\":{\"message\":\"Request too large for model `qwen/qwen3.8-27b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on input tokens per minute (ITPM): Lim",
+        "at": "2026-09-16T00:36:30.700Z"
       },
       {
         "stage": "process",
         "id": "desk-e28c86e3708b",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:46:42.141Z"
+        "at": "2026-09-16T00:36:39.463Z"
       },
       {
         "stage": "process",
         "id": "desk-14ef1df16961",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:46:46.141Z"
+        "at": "2026-09-16T00:36:48.210Z"
       },
       {
         "stage": "process",
         "id": "desk-5886041ee66d",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:46:50.143Z"
+        "at": "2026-09-16T00:36:57.218Z"
       },
       {
         "stage": "process",
         "id": "desk-23e7df01656d",
         "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:46:54.144Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-dfbf6038e1a5",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:46:58.146Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-3cea1dec46e6",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:47:02.148Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-f7527bd12c26",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:47:06.150Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-94a530b3b7a1",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:47:10.160Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-c22c8c9d857b",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:47:14.155Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-21d2ef51e359",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:47:18.157Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-1ea3eb67afce",
-        "message": "yt-dlp is not installed on this machine (brew install yt-dlp)",
-        "at": "2026-09-15T00:47:22.163Z"
+        "at": "2026-09-16T00:37:06.501Z"
       }
     ],
     "estimatedCostUsd": 0
