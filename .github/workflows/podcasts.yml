@@ -72,6 +72,32 @@ jobs:
 
       - run: npm install --no-audit --no-fund
 
+      # ── THE TRANSCRIPT WALL ──────────────────────────────────────────────
+      #
+      # Measured on the 2026-09-16 run: discovered 904, eligible 12,
+      # PROCESSED 0, FAILED 12. Every one died at the transcript stage with
+      # "LOGIN_REQUIRED (Sign in to confirm you're not a bot)" — YouTube
+      # refuses caption access to datacenter addresses, and this job has run
+      # from one since it was written. The site kept publishing the same
+      # eleven cached episodes and looked alive while nothing new could ever
+      # enter it.
+      #
+      # transcript.mjs already has a yt-dlp path for exactly this, and its own
+      # log said why it never ran: "yt-dlp is not installed on this machine".
+      # Installing it is the cheapest thing that could work, because yt-dlp
+      # rotates player clients that the direct innertube calls do not.
+      #
+      # IT MAY NOT BE ENOUGH. YouTube throttles datacenter ranges whatever is
+      # asking, so if this still returns nothing the answer is a real
+      # transcript provider (TRANSCRIPT_PROVIDER=deepgram with a key, already
+      # wired) or a non-YouTube source. Not a secret-shaped workaround: a
+      # cookie jar in a repo secret is someone's live session, it expires
+      # without warning, and it fails the same way this does.
+      - name: Install yt-dlp for caption access
+        run: |
+          python3 -m pip install --quiet --upgrade yt-dlp
+          yt-dlp --version
+
       # Source verification is a separate, read-only errand: it fetches each feed
       # and reports whether it publishes a transcript. Run it before enabling a
       # source — a feed that cannot be read only fills the page with titles.
