@@ -185,7 +185,24 @@ const PROVIDERS = {
         if (e && (e.code === "ENOENT" || /ENOENT/.test(String(e.message)))) {
           throw new Error("yt-dlp is not installed on this machine (brew install yt-dlp)");
         }
-        throw new Error(`yt-dlp failed: ${String(e.message || e).slice(0, 120)}`);
+        /* ── SAY WHAT YT-DLP SAID, NOT WHAT WE ASKED IT ──────────────────
+         * This printed the first 120 characters of e.message, and e.message
+         * from a failed execFile BEGINS with the whole command line. 120
+         * characters of "Command failed: yt-dlp --skip-download
+         * --write-auto-subs ..." is spent before the URL, let alone the
+         * reason — so nine different failures logged nine identical, useless
+         * lines and the feed's real problem stayed invisible.
+         *
+         * The reason is in stderr, which execFile does attach to the error:
+         * "This video is unavailable", "Private video" and "Sign in to
+         * confirm you're not a bot" are three different problems with three
+         * different answers, and they were indistinguishable. */
+        const err = String((e && e.stderr) || "").trim();
+        const lines = err.split("\n").filter((l) => /^(ERROR|WARNING)/.test(l));
+        const why = (lines.length ? lines.slice(-2).join(" · ") : err)
+          || String((e && e.message) || e).split("\n").slice(1).join(" ").trim()
+          || "no stderr";
+        throw new Error(`yt-dlp failed: ${why.slice(0, 200)}`);
       }
 
       const files = (await readdir(dir)).filter((f) => f.endsWith(".json3"));
