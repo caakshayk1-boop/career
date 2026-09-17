@@ -73,6 +73,14 @@
       "verified": false
     },
     {
+      "id": "gunjanshouts",
+      "show": "GunjanShouts",
+      "type": "youtube",
+      "url": "UCKRpf_HZfpLwxuIgyeYnsVw",
+      "enabled": true,
+      "verified": true
+    },
+    {
       "id": "diary-of-a-ceo",
       "show": "The Diary Of A CEO",
       "type": "rss",

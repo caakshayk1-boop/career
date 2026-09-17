@@ -83,6 +83,43 @@ async function main() {
     for (const ep of eligible) {
       try { await processEpisode(ep, state, ai, audio); }
       catch (e) {
+        /* ── A SOURCE THAT CAN NEVER BE READ IS NOT A DAILY FAILURE ────────
+         *
+         * Every error here was written to the ledger as FAILED and retried on
+         * every run, forever. Measured on 2026-09-16: 12 eligible, 0
+         * processed, 12 failed — and most of those were videos with NO
+         * CAPTION TRACK AT ALL. No provider will ever return one, so the job
+         * spent its whole budget re-asking a question with a permanent answer
+         * and reported a dozen failures a day for a feed that was working.
+         *
+         * Two different things wear one label, and they need opposite
+         * handling:
+         *
+         *   PERMANENT  no captions published, video unavailable, private,
+         *              members-only. Retrying is pointless. SKIPPED, with the
+         *              reason, exactly like an episode that is too old.
+         *   TRANSIENT  LOGIN_REQUIRED (an IP block — it works from a home
+         *              connection), 429, a network fault. FAILED, retried.
+         *
+         * This is not a way to make the failure count look better. A skipped
+         * episode is still listed with its reason; what changes is that the
+         * pipeline stops treating a fact about the world as a fault of its
+         * own, and stops spending tomorrow's run on it. */
+        const why = String(e && e.message || "");
+        /* The patterns come from errors this pipeline has ACTUALLY produced,
+           now that yt-dlp's stderr is surfaced rather than the command line:
+           a premiere that has not aired is not a failure and will not be one
+           until it does; a video with no caption track never will be. A 429
+           is deliberately NOT here — that is this job asking too fast, which
+           is our fault and is worth retrying after the pacing fix. */
+        const permanent = /no caption|captionTracks|no subtitles|video is unavailable|private video|members-only|removed by the uploader|no usable audio|is not available/i.test(why);
+        if (permanent) {
+          log.info("process", `${ep.id}: ${why.slice(0, 120)} — skipped for good, no provider can read it`);
+          remember(state, ep.id, { status: S.SKIPPED, reason: why.slice(0, 300),
+                                   title: ep.title, show: ep.show });
+          run.counts.skipped = (run.counts.skipped || 0) + 1;
+          continue;
+        }
         log.fail("process", ep.id, e.message);
         remember(state, ep.id, { status: S.FAILED, reason: e.message.slice(0, 300), title: ep.title, show: ep.show });
         run.counts.failed++;

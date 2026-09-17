@@ -72,8 +72,18 @@ function pickOrder(ep) {
    gets exactly one retry after a longer pause, because a second failure means
    the limit is real rather than transient and the episode is better LISTED with
    its reason than retried into a wall. */
-const YTDLP_GAP_MS = 4000;
-const YTDLP_RETRY_MS = 25000;
+/* ── 4s WAS TOO FAST, AND THE EVIDENCE ONLY APPEARED ONCE THE ERROR TOLD
+   THE TRUTH. With the real stderr finally surfacing, four of six failures on
+   the 2026-09-17 run were "HTTP Error 429: Too Many Requests" from yt-dlp —
+   not YouTube refusing a server, which is the diagnosis that had been assumed
+   for a week, but this pipeline asking too often.
+   Each episode makes SEVERAL yt-dlp calls (the auto-sub and the manual track
+   are separate downloads), so a 4-second gap between episodes is far less
+   than 4 seconds between requests. 15s costs a few minutes on a run that
+   already takes three, and it is the difference between two episodes and
+   six. Overridable, because the right number here is empirical. */
+const YTDLP_GAP_MS = Number(process.env.YTDLP_GAP_MS || 15000);
+const YTDLP_RETRY_MS = Number(process.env.YTDLP_RETRY_MS || 60000);
 let ytdlpChain = Promise.resolve();
 let ytdlpLast = 0;
 const napMs = (ms) => new Promise((r) => setTimeout(r, ms));
