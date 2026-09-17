@@ -121,9 +121,9 @@
       "show": "Acquired",
       "type": "rss",
       "url": "https://feeds.transistor.fm/acquired",
-      "enabled": false,
+      "enabled": true,
       "verified": true,
-      "checked": "audio only \u2014 checked 13 Sep 2026"
+      "checked": "publishes a transcript - re-verified 17 Sep 2026"
     },
     {
       "id": "dwarkesh",
