@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-16T15:43:05.421Z",
-  "today": "2026-09-16",
+  "generatedAt": "2026-09-17T00:41:27.511Z",
+  "today": "2026-09-17",
   "retentionDays": 7,
   "days": [
     {
       "date": "2026-09-16",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-82e25965bcf8"
       ]
@@ -20,7 +20,6 @@
         "desk-55a5b39c122e",
         "desk-f858c727a9fa",
         "desk-b145addb16b5",
-        "desk-19d757ecb503",
         "desk-dfded789bd87",
         "desk-0d80e4fb8e8d",
         "desk-22d2ea727a75",
@@ -32,13 +31,6 @@
       "label": "Friday",
       "episodeIds": [
         "diary-of-a-ceo-c783a6dfa547"
-      ]
-    },
-    {
-      "date": "2026-09-10",
-      "label": "Thursday",
-      "episodeIds": [
-        "diary-of-a-ceo-ed8c9e42beb5"
       ]
     }
   ],
@@ -1299,331 +1291,6 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 60
-    },
-    {
-      "id": "desk-19d757ecb503",
-      "sourceId": "desk",
-      "show": "Ankur Warikoo",
-      "title": "We Recreated The 2006 Middle Class In 2026",
-      "guest": "",
-      "topics": [],
-      "summary": "20 points taken verbatim from Ankur Warikoo, spanning 0:36–10:36. Selected from the transcript by information density — every line below is what was said, not a description of it.",
-      "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
-      "type": "youtube",
-      "image": "",
-      "publishedAt": "2026-09-12T00:00:00.000Z",
-      "date": "2026-09-14",
-      "durationSec": 727,
-      "processedAt": "2026-09-13T20:25:33.878Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "local",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "₹2000, if you add everything then it means the core life",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "₹2000, if you add everything then it means the core life",
-          "passage": "man is not rich. He is a middle class person. And the month is going to be a bit tight. Took a loan of ₹15 lakh 2 years ago. So its installment is around ₹14,800. The interest is 8.5%. It was a 15 year loan. Bought a two bedroom house. ₹2000 are spent on the child's education. It is a private [music] school and around ₹6000 goes into food, drinks and utilities. Petrol transport costs ₹2500, all other miscellaneous expenses ₹2000, if you add everything then it means the core life runs for around ₹25 to ₹27,000 per month. The income is ₹8,000. So it is not that there is a lot of destruction and some savings are taking place. ₹1000 to ₹3000 savings. But by the time this man reached the age of 50. There was a house near it. He had got his children married. There was so much gold that it could have been used as a good gift at a wedding. There is a fixed deposit through which he will be able to",
-          "evidence": "₹2000, if you add everything then it means the core life",
-          "t": 36,
-          "kind": "said",
-          "confidence": 0.6445000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Much gold that it could have been used as a good gift at a wedding.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "so much gold that it could have been used as a good gift at a wedding.",
-          "passage": "is a private [music] school and around ₹6000 goes into food, drinks and utilities. Petrol transport costs ₹2500, all other miscellaneous expenses ₹2000, if you add everything then it means the core life runs for around ₹25 to ₹27,000 per month. The income is ₹8,000. So it is not that there is a lot of destruction and some savings are taking place. ₹1000 to ₹3000 savings. But by the time this man reached the age of 50. There was a house near it. He had got his children married. There was so much gold that it could have been used as a good gift at a wedding. There is a fixed deposit through which he will be able to live his retirement and remember that his income was ₹8,000. Now those who are watching this video are the children of this man. You are their child. You're probably earning a lot more than your dad. But if you are sitting today in your life, you cannot imagine that you will have your",
-          "evidence": "so much gold that it could have been used as a good gift at a wedding.",
-          "t": 56,
-          "kind": "said",
-          "confidence": 0.7175,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "We tried to measure the value of everything this man did in his life in 2006 in 2026.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "We tried to measure the value of everything this man did in his life in 2006 in 2026.",
-          "passage": "their child. You're probably earning a lot more than your dad. But if you are sitting today in your life, you cannot imagine that you will have your own house at the age of 50. The children will get married , there will be gold, there will be expenses for your retirement also. Because you don't see that happening anywhere. So we did one thing. We tried to measure the value of everything this man did in his life in 2006 in 2026. And Let's See What That Tells Us. Actually, we make a shopping list before going. If you buy a one or two bedroom house then that. He had bought a nice Maruti 800 car. Put the child in private school and then a professional degree, so he. I had saved enough gold to cover a wedding and parked my savings in a fixed deposit that could take care of my retirement. So those five items are classic middle class life in 2006. Before going further, let us talk about one thing which",
-          "evidence": "We tried to measure the value of everything this man did in his life in 2006 in 2026.",
-          "t": 99,
-          "kind": "said",
-          "confidence": 0.7095,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Put the child in private school and then a professional degree, so he.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Put the child in private school and then a professional degree, so he.",
-          "passage": ", there will be gold, there will be expenses for your retirement also. Because you don't see that happening anywhere. So we did one thing. We tried to measure the value of everything this man did in his life in 2006 in 2026. And Let's See What That Tells Us. Actually, we make a shopping list before going. If you buy a one or two bedroom house then that. He had bought a nice Maruti 800 car. Put the child in private school and then a professional degree, so he. I had saved enough gold to cover a wedding and parked my savings in a fixed deposit that could take care of my retirement. So those five items are classic middle class life in 2006. Before going further, let us talk about one thing which was not there in 2006 but is seen at every step today – credit card. At that time, having a credit card was almost a crime because it seemed as if one would live one's life on someone else's money. No no,",
-          "evidence": "Put the child in private school and then a professional degree, so he.",
-          "t": 114,
-          "kind": "said",
-          "confidence": 0.666,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Parked my savings in a fixed deposit that could take care of my retirement.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "parked my savings in a fixed deposit that could take care of my retirement.",
-          "passage": "we did one thing. We tried to measure the value of everything this man did in his life in 2006 in 2026. And Let's See What That Tells Us. Actually, we make a shopping list before going. If you buy a one or two bedroom house then that. He had bought a nice Maruti 800 car. Put the child in private school and then a professional degree, so he. I had saved enough gold to cover a wedding and parked my savings in a fixed deposit that could take care of my retirement. So those five items are classic middle class life in 2006. Before going further, let us talk about one thing which was not there in 2006 but is seen at every step today – credit card. At that time, having a credit card was almost a crime because it seemed as if one would live one's life on someone else's money. No no, today it seems that having a credit card means you have arrived. Some want platinum, some want fruit, some want dhamaka.",
-          "evidence": "parked my savings in a fixed deposit that could take care of my retirement.",
-          "t": 120,
-          "kind": "said",
-          "confidence": 0.7015,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Live one's life on someone else's money.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "live one's life on someone else's money.",
-          "passage": "car. Put the child in private school and then a professional degree, so he. I had saved enough gold to cover a wedding and parked my savings in a fixed deposit that could take care of my retirement. So those five items are classic middle class life in 2006. Before going further, let us talk about one thing which was not there in 2006 but is seen at every step today – credit card. At that time, having a credit card was almost a crime because it seemed as if one would live one's life on someone else's money. No no, today it seems that having a credit card means you have arrived. Some want platinum, some want fruit, some want dhamaka. No one has any idea which is the best credit card for them. We tried to solve this. My latest startup is monzi.co.uk. Where we choose your perfect credit card for you within 60 seconds by answering a few questions. No data requests, no spam, no tracking. We don't even know",
-          "evidence": "live one's life on someone else's money.",
-          "t": 140,
-          "kind": "said",
-          "confidence": 0.625,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Want platinum, some want fruit, some want dhamaka.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "want platinum, some want fruit, some want dhamaka.",
-          "passage": "So those five items are classic middle class life in 2006. Before going further, let us talk about one thing which was not there in 2006 but is seen at every step today – credit card. At that time, having a credit card was almost a crime because it seemed as if one would live one's life on someone else's money. No no, today it seems that having a credit card means you have arrived. Some want platinum, some want fruit, some want dhamaka. No one has any idea which is the best credit card for them. We tried to solve this. My latest startup is monzi.co.uk. Where we choose your perfect credit card for you within 60 seconds by answering a few questions. No data requests, no spam, no tracking. We don't even know who you are. Our only aim is to choose the best credit card for you from more than 400 credit cards and give it to you. After that it is your choice whether you",
-          "evidence": "want platinum, some want fruit, some want dhamaka.",
-          "t": 148,
-          "kind": "said",
-          "confidence": 0.6000000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Your perfect credit card for you within 60 seconds by answering a few questions.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "your perfect credit card for you within 60 seconds by answering a few questions.",
-          "passage": "was not there in 2006 but is seen at every step today – credit card. At that time, having a credit card was almost a crime because it seemed as if one would live one's life on someone else's money. No no, today it seems that having a credit card means you have arrived. Some want platinum, some want fruit, some want dhamaka. No one has any idea which is the best credit card for them. We tried to solve this. My latest startup is monzi.co.uk. Where we choose your perfect credit card for you within 60 seconds by answering a few questions. No data requests, no spam, no tracking. We don't even know who you are. Our only aim is to choose the best credit card for you from more than 400 credit cards and give it to you. After that it is your choice whether you apply or not or choose any other credit card. It does n't matter to us. Our job is just to make you aware. Checkout.com Let's start at home.",
-          "evidence": "your perfect credit card for you within 60 seconds by answering a few questions.",
-          "t": 158,
-          "kind": "said",
-          "confidence": 0.6845000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Choose the best credit card for you from more than 400 credit cards and",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "choose the best credit card for you from more than 400 credit cards and",
-          "passage": "means you have arrived. Some want platinum, some want fruit, some want dhamaka. No one has any idea which is the best credit card for them. We tried to solve this. My latest startup is monzi.co.uk. Where we choose your perfect credit card for you within 60 seconds by answering a few questions. No data requests, no spam, no tracking. We don't even know who you are. Our only aim is to choose the best credit card for you from more than 400 credit cards and give it to you. After that it is your choice whether you apply or not or choose any other credit card. It does n't matter to us. Our job is just to make you aware. Checkout.com Let's start at home. [nasal sound] The two- bedroom house he bought in 2006 cost around Rs 18 lakh. Which is by the way not far from what the reality is. I remember when my parents bought their first house, it was in 2002. We took it in Faridabad. Three",
-          "evidence": "choose the best credit card for you from more than 400 credit cards and",
-          "t": 172,
-          "kind": "said",
-          "confidence": 0.6945000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Bedroom house he bought in 2006 cost around Rs",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "bedroom house he bought in 2006 cost around Rs",
-          "passage": "No data requests, no spam, no tracking. We don't even know who you are. Our only aim is to choose the best credit card for you from more than 400 credit cards and give it to you. After that it is your choice whether you apply or not or choose any other credit card. It does n't matter to us. Our job is just to make you aware. Checkout.com Let's start at home. [nasal sound] The two- bedroom house he bought in 2006 cost around Rs 18 lakh. Which is by the way not far from what the reality is. I remember when my parents bought their first house, it was in 2002. We took it in Faridabad. Three bedroom house for ₹1 lakh. Yes, Faridabad is a little far from Delhi. So even if we had gone to Delhi, we could have easily got a two bedroom house for Rs 15-16 lakh at that time. What is the situation now after 20 years? let's watch. This same house in roughly the same neighborhood has become worth",
-          "evidence": "bedroom house he bought in 2006 cost around Rs",
-          "t": 188,
-          "kind": "said",
-          "confidence": 0.7165,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 11,
-          "headline": "This same house in roughly the same neighborhood has become worth",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "This same house in roughly the same neighborhood has become worth",
-          "passage": "bedroom house he bought in 2006 cost around Rs 18 lakh. Which is by the way not far from what the reality is. I remember when my parents bought their first house, it was in 2002. We took it in Faridabad. Three bedroom house for ₹1 lakh. Yes, Faridabad is a little far from Delhi. So even if we had gone to Delhi, we could have easily got a two bedroom house for Rs 15-16 lakh at that time. What is the situation now after 20 years? let's watch. This same house in roughly the same neighborhood has become worth around Rs 65 lakh. So suppose you want to buy the same house. 20% cash down will have to be put down first. Meaning ₹13 lakh should be your own. You will take a loan of the remaining ₹52 lakh. Let's take 20 years. He took 15 by the way. Let us assume that we take it at 8.5%, which is roughly what they also took. Your EMI will come to about 45 to 47,000 means [suddenly heavy breathing sound]",
-          "evidence": "This same house in roughly the same neighborhood has become worth",
-          "t": 214,
-          "kind": "said",
-          "confidence": 0.6295000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 12,
-          "headline": "Today the same 100 grams of gold is worth around ₹1 lakh.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Today the same 100 grams of gold is worth around ₹1 lakh.",
-          "passage": "I exactly remember this rate of gold. We had bought one tola of gold for around ₹6000 at that time. Today the same one tola of gold is priced between ₹90 to ₹1.5 lakh. What day are you watching Depends On? 10 to 11 times. The Fastest Growing Item in This Entire List. So let's say at that time he saved around 100 grams of gold worth ₹90,000 [sound of clearing throat] for the wedding from his salary of ₹28,000. Yes. Today the same 100 grams of gold is worth around ₹1 lakh. Let's talk about the car. In 2006, Maruti 800 was priced around ₹2 lakh. Today, if you buy the same entry-level car, you will get it for between ₹ 4 lakh to ₹ 1 lakh. Meaning two to two and a half times. Surprisingly the lowest rise in all of these items. In fact, if you adjust for inflation, the car has become cheaper. Bikes will also be seen, Hero Splendor has become ₹8,000 from around ₹35,000. So that too has become",
-          "evidence": "Today the same 100 grams of gold is worth around ₹1 lakh.",
-          "t": 302,
-          "kind": "said",
-          "confidence": 0.761,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 13,
-          "headline": "Bikes will also be seen, Hero Splendor has become",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Bikes will also be seen, Hero Splendor has become",
-          "passage": "his salary of ₹28,000. Yes. Today the same 100 grams of gold is worth around ₹1 lakh. Let's talk about the car. In 2006, Maruti 800 was priced around ₹2 lakh. Today, if you buy the same entry-level car, you will get it for between ₹ 4 lakh to ₹ 1 lakh. Meaning two to two and a half times. Surprisingly the lowest rise in all of these items. In fact, if you adjust for inflation, the car has become cheaper. Bikes will also be seen, Hero Splendor has become ₹8,000 from around ₹35,000. So that too has become cheaper inflation adjusted. If you look at Active, it has become cheaper from ₹00 to around ₹9,000, that too after inflation adjustment. Petrol has also increased from ₹45 per litre to around ₹100 per litre. So that too has become cheaper inflation adjusted. So add up the entire bill? Papa's monthly expenses are ₹27,000 and our expenses are at least ₹9,000 to get the same thing,",
-          "evidence": "Bikes will also be seen, Hero Splendor has become",
-          "t": 326,
-          "kind": "said",
-          "confidence": 0.6965000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 14,
-          "headline": "At Active, it has become cheaper from ₹00 to around ₹9,000,",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "look at Active, it has become cheaper from ₹00 to around ₹9,000,",
-          "passage": "talk about the car. In 2006, Maruti 800 was priced around ₹2 lakh. Today, if you buy the same entry-level car, you will get it for between ₹ 4 lakh to ₹ 1 lakh. Meaning two to two and a half times. Surprisingly the lowest rise in all of these items. In fact, if you adjust for inflation, the car has become cheaper. Bikes will also be seen, Hero Splendor has become ₹8,000 from around ₹35,000. So that too has become cheaper inflation adjusted. If you look at Active, it has become cheaper from ₹00 to around ₹9,000, that too after inflation adjustment. Petrol has also increased from ₹45 per litre to around ₹100 per litre. So that too has become cheaper inflation adjusted. So add up the entire bill? Papa's monthly expenses are ₹27,000 and our expenses are at least ₹9,000 to get the same thing, so 27,000 has become 90000. About three to three times the expected inflation, so nothing sensational has happened. The",
-          "evidence": "look at Active, it has become cheaper from ₹00 to around ₹9,000,",
-          "t": 333,
-          "kind": "said",
-          "confidence": 0.744,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 15,
-          "headline": "Petrol has also increased from ₹45 per litre to around ₹100 per",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Petrol has also increased from ₹45 per litre to around ₹100 per",
-          "passage": "you buy the same entry-level car, you will get it for between ₹ 4 lakh to ₹ 1 lakh. Meaning two to two and a half times. Surprisingly the lowest rise in all of these items. In fact, if you adjust for inflation, the car has become cheaper. Bikes will also be seen, Hero Splendor has become ₹8,000 from around ₹35,000. So that too has become cheaper inflation adjusted. If you look at Active, it has become cheaper from ₹00 to around ₹9,000, that too after inflation adjustment. Petrol has also increased from ₹45 per litre to around ₹100 per litre. So that too has become cheaper inflation adjusted. So add up the entire bill? Papa's monthly expenses are ₹27,000 and our expenses are at least ₹9,000 to get the same thing, so 27,000 has become 90000. About three to three times the expected inflation, so nothing sensational has happened. The sensational thing is that the",
-          "evidence": "Petrol has also increased from ₹45 per litre to around ₹100 per",
-          "t": 337,
-          "kind": "said",
-          "confidence": 0.7485,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 16,
-          "headline": "Three to three times the expected inflation, so nothing",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "three to three times the expected inflation, so nothing",
-          "passage": "₹8,000 from around ₹35,000. So that too has become cheaper inflation adjusted. If you look at Active, it has become cheaper from ₹00 to around ₹9,000, that too after inflation adjustment. Petrol has also increased from ₹45 per litre to around ₹100 per litre. So that too has become cheaper inflation adjusted. So add up the entire bill? Papa's monthly expenses are ₹27,000 and our expenses are at least ₹9,000 to get the same thing, so 27,000 has become 90000. About three to three times the expected inflation, so nothing sensational has happened. The sensational thing is that the average salary has not moved 3 times from 2006 to 2026. Entry level engineering jobs in the IT industry are flat. At that time it was around ₹3.5 lakh. Today it is ₹3 to ₹4 lakh. It is not five times. It is not double. It is flat. Salary increments at that time were around 12 to 14%. Now on an average it is 8 to 9%.",
-          "evidence": "three to three times the expected inflation, so nothing",
-          "t": 356,
-          "kind": "said",
-          "confidence": 0.7655000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 17,
-          "headline": "Average salary has not moved 3 times from 2006 to 2026.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "average salary has not moved 3 times from 2006 to 2026.",
-          "passage": "Petrol has also increased from ₹45 per litre to around ₹100 per litre. So that too has become cheaper inflation adjusted. So add up the entire bill? Papa's monthly expenses are ₹27,000 and our expenses are at least ₹9,000 to get the same thing, so 27,000 has become 90000. About three to three times the expected inflation, so nothing sensational has happened. The sensational thing is that the average salary has not moved 3 times from 2006 to 2026. Entry level engineering jobs in the IT industry are flat. At that time it was around ₹3.5 lakh. Today it is ₹3 to ₹4 lakh. It is not five times. It is not double. It is flat. Salary increments at that time were around 12 to 14%. Now on an average it is 8 to 9%. What is the biggest difference actually? Surprisingly, the things we consume in our daily lives. There was mobile data , electronics, air travel, clothes etc. but they did not grow so fast.",
-          "evidence": "average salary has not moved 3 times from 2006 to 2026.",
-          "t": 367,
-          "kind": "said",
-          "confidence": 0.9295,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 18,
-          "headline": "Independence that women never had has arrived.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "independence that women never had has arrived.",
-          "passage": "ten times more expensive. But the salary is only two or three times bigger. Then How Do You Live That Life? By adding one more salary? And that's why in most big cities everyone in a family is working. Now this is great except for the kids. Because due to this, female participation in the workforce has increased. Financial independence has arrived. A level of dignity has arrived. A level of independence that women never had has arrived. Which is great from a social perspective. But from a financial perspective, it is damaging because now all the safety nets have been removed. God forbid, if any emergency arises, someone loses their job, there is some disruption in someone's income, the entire system collapses. Because the entire system is based on two incomes. And if even half of that income is lost, everything goes to waste. Earlier there was a safety net that if God forbid some accident happened and",
-          "evidence": "independence that women never had has arrived.",
-          "t": 469,
-          "kind": "said",
-          "confidence": 0.6050000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 19,
-          "headline": "If even half of that income is lost, everything goes to waste.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "if even half of that income is lost, everything goes to waste.",
-          "passage": "Financial independence has arrived. A level of dignity has arrived. A level of independence that women never had has arrived. Which is great from a social perspective. But from a financial perspective, it is damaging because now all the safety nets have been removed. God forbid, if any emergency arises, someone loses their job, there is some disruption in someone's income, the entire system collapses. Because the entire system is based on two incomes. And if even half of that income is lost, everything goes to waste. Earlier there was a safety net that if God forbid some accident happened and money was needed, the mother could work. She can pick up an ob She can teach She can take tutions She can help in some office She can add to the income. But today when both are working. The kids' running has been outsourced to a nanny to an iPad to a mobile phone and both are loaded to the brim. The",
-          "evidence": "if even half of that income is lost, everything goes to waste.",
-          "t": 493,
-          "kind": "said",
-          "confidence": 0.6925000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 20,
-          "headline": "Number three Try to stay as far away from the credit life as you",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "number three Try to stay as far away from the credit life as you",
-          "passage": "invest for the long term and that power comes from day one. It doesn't matter how much money you are investing. The good thing is you can start from ₹500. That ₹500 will not make you a millionaire. But it will inculcate a habit of investing so that when you have to invest ₹5,000 tomorrow, you will have developed a habit. ₹00 should become a habit. That habit will make you a millionaire at the age of 40, 50 or 60. Will build your retirement fund. End number three Try to stay as far away from the credit life as you can. Getting a loan has become very easy. Earlier, millions and crores of papers had to be signed. One had to give the horoscope of one's entire life to the bank. Only then would he have probably approved the loan. Now you can apply in a jiffy. Aadhaar is linked. Everything is there. Take photo, tuck loan spot. That doesn't mean you should live your life alone. Credit should only be",
-          "evidence": "number three Try to stay as far away from the credit life as you",
-          "t": 636,
-          "kind": "said",
-          "confidence": 0.7170000000000001,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 76
     },
     {
       "id": "desk-dfded789bd87",
@@ -2979,394 +2646,9 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 97
-    },
-    {
-      "id": "diary-of-a-ceo-ed8c9e42beb5",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Likeability Expert: Stop Doing This, It’s Why People Quietly Avoid You! | Vanessa Van Edwards",
-      "guest": "",
-      "topics": [],
-      "summary": "20 points taken verbatim from The Diary Of A CEO, spanning 6:54–2:17:07. Selected from the transcript by information density — every line below is what was said, not a description of it.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M23VGBG8BY5D6GNQHSYRKY17/vanessa_van_edwards.ep_cover.jpg",
-      "publishedAt": "2026-09-10T05:00:00.000Z",
-      "date": "2026-09-10",
-      "durationSec": 8773,
-      "processedAt": "2026-09-10T14:25:48.837Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "published",
-      "timestamped": true,
-      "extractor": "local",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Accidentally, I've been doing research for this my whole life because I was very bad at…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "So accidentally, I've been doing research for this my whole life because I was very bad at conversation for 20 years.",
-          "passage": "And that's a very different way of thinking about, oh, I want to impress somebody. So how long have you spent doing the research that feeds into what we're going to talk about today and feeds into this new book? Okay. So accidentally, I've been doing research for this my whole life because I was very bad at conversation for 20 years. Then 20 years ago, I realized that there are these hidden blueprints behind our interactions. I wasn't quite sure what they were, but I could see that very good conversationalists, they were following some kind of plan. Okay. Then eight years ago, this is when the real research began, and it started with an experiment. I call it my speed networking experiment. This fundamentally changed the way I think about conversations. Here's what we did.",
-          "evidence": "So accidentally, I've been doing research for this my whole life because I was very bad at conversation for 20 years.",
-          "t": 414,
-          "kind": "said",
-          "confidence": 0.9475,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "It's very hard for someone to break out of that fact because they're stuck in that…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "So it's very hard for someone to break out of that fact because they're stuck in that social script.",
-          "passage": "That was the fifth worst. Very close to the bottom. Sixth was? Something about the weather. What do you do? What do you do? That was the worst. The worst. Okay. Why? So these last two, how are you and what do you do? They're very socially scripted, right? The moment we ask those questions, our brain goes into autopilot. So there's a lack. It is more of a performance. There's a lack of excitement in the conversation. And they ran out of things to talk about. They're fact-based questions. And this is the trap of what we'll call level one conversation, which is you are trapped in fact. Where are you from? Got any kids? Married? The facts are dead ends, right? So it's very hard for someone to break out of that fact because they're stuck in that social script.",
-          "evidence": "So it's very hard for someone to break out of that fact because they're stuck in that social script.",
-          "t": 569,
-          "kind": "said",
-          "confidence": 0.8605,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "The reason why this one is important, and I agonized over this third question because…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Now, the reason why this one is important, and I agonized over this third question because there's three questions for each level, is have any fun plans coming up is a subtle way to bring up potential shared future.",
-          "passage": "And actually saying and using in conversation these phrases is... is a way that we can create more intrigue and interest. And I know that sounds like, what? But think about this. If something crazy happened to you yesterday and you walk into dinner and you're like, guys, the craziest thing happened to me yesterday, everyone's like, phone's down. Right? Now, I couldn't say something boring. I couldn't be like, I was stuck in traffic. Yeah, yeah, yeah. Unless you want to be funny. But I think that looking for opportunities to create that little bit of conversational confetti, they come up with questions like this. And this is the last one. Have any fun plans coming up? Now, the reason why this one is important, and I agonized over this third question because there's three questions for each level, is have any fun plans coming up is a subtle way to bring up potential shared future.",
-          "evidence": "Now, the reason why this one is important, and I agonized over this third question because there's three questions for each level, is have any fun plans coming up is a subtle way to bring up potential shared future.",
-          "t": 1041,
-          "kind": "said",
-          "confidence": 0.9430000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "The mistake traps people make is they skip level one.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "So the mistake traps people make is they skip level one.",
-          "passage": "Exactly. So this is us going deeper with the person. Exactly. Or leveling up as you wish. Right. As you wish. So the mistake traps people make is they skip level one. They try to go too deep quickly and people feel like it's invasive. Right. Especially when you're like, whoa, slow down or can feel like an interrogation. So we must know those basics first as long as we do them better. We don't do them in autopilot way. Level two is when you start to understand what motivates someone. The kind of mental trick that I use is you know you're on level two with someone if you know what gets them up in the morning, like what goal is driving them all day. But you also know what keeps them up at night, what worries them. I encourage people as they're reading, like think of the five people you interact with most and place them on a level.",
-          "evidence": "So the mistake traps people make is they skip level one.",
-          "t": 1689,
-          "kind": "said",
-          "confidence": 0.8345,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "What have you always wanted to learn is an interesting question because it triggers…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Okay, so what have you always wanted to learn is an interesting question because it triggers growth mindset.",
-          "passage": "But pet projects, the things they love, have a lot of pride. And so you're trying to figure out in conversation, could you let someone feel safe enough to share either one? And are there questions that evoke dream building? Yes. Okay, so what have you always wanted to learn is an interesting question because it triggers growth mindset. right? So growth mindset is when someone believes they can change themselves, change who they are, change their trajectory, learn something new. So we like this question because you're asking, are you willing to grow with me? What have you always wanted to learn? The other easy one is, what is your biggest goal right now? So what is your biggest goal right now is a great question.",
-          "evidence": "Okay, so what have you always wanted to learn is an interesting question because it triggers growth mindset.",
-          "t": 1844,
-          "kind": "said",
-          "confidence": 0.8755000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "I was researching this book, and I was eavesdropping on everyone's conversations,…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "I was researching this book, and I was eavesdropping on everyone's conversations, because that's the best way.",
-          "passage": "And we don't want to overcomplicate or be vague. So, for example, I was sitting in a coffee shop. I was researching this book, and I was eavesdropping on everyone's conversations, because that's the best way. You know, if you listen to conversations in the wild, all the things you hear are great. And I was on my computer, and I heard – she said, so, what do you do? I think they were on, like, a date. And he goes, oh, I have a system for maximizing achievement in young learners. Right? And she was like, what? And he goes, yeah, I work with fifth grade students and I have a system for how they can learn math and reading. And she goes, oh, you're a teacher. He goes, yeah, I'm a fifth grade teacher. And I was like, wow.",
-          "evidence": "I was researching this book, and I was eavesdropping on everyone's conversations, because that's the best way.",
-          "t": 2306,
-          "kind": "said",
-          "confidence": 0.8595,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "First is let's do an intervention on this is go back if you have recorded Zoom calls…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "First is let's do an intervention on this is go back if you have recorded Zoom calls and just time yourself.",
-          "passage": "And 71% of respondents said talkative co-workers prevented them from getting their work done. Yes. How does one know if they are the person that talks too much? First is let's do an intervention on this is go back if you have recorded Zoom calls and just time yourself. There is a kind of appropriate, right, 15 to 45 seconds, 45 seconds is the most. Second, nonverbal cues. Someone is checking out if they are opening their mouth as if to say something. That is a subtle cue that someone wants to turn, but they are going to wait. So if someone is opening their mouth, I call it the open fish, okay? It means they want to turn. Like, you did it to me earlier, and I totally stopped. Yeah, you did, yeah.",
-          "evidence": "First is let's do an intervention on this is go back if you have recorded Zoom calls and just time yourself.",
-          "t": 2752,
-          "kind": "said",
-          "confidence": 0.8385,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Like if this is the person you're going to invest in and you care for and you like, you…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Like if this is the person you're going to invest in and you care for and you like, you have to you have to stand up for what you want to share.",
-          "passage": "Do you want to hear about mine? Do you want to hear about my goal? Right. Like if this is the person you're going to invest in and you care for and you like, you have to you have to stand up for what you want to share. In your experience, where does that conversational narcissism come from? Insecurity. Yeah. Right. This person's insecure. I don't even know them. They're insecure. And also, my bet is they're trying to impress you. My bet is they're trying to find something to raise your eyebrows. But they don't realize that the more they talk, the more you're like, can I go home? Do you think they know that they're a conversational narcissist? Do you think they're listening right now and think, fuck, that's me?",
-          "evidence": "Like if this is the person you're going to invest in and you care for and you like, you have to you have to stand up for what you want to share.",
-          "t": 3311,
-          "kind": "said",
-          "confidence": 0.8315,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Meaning, if you want to be likable, you have to go around assertively and aggressively…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Meaning, if you want to be likable, you have to go around assertively and aggressively liking as many people as possible.",
-          "passage": "The most popular kids were the kids who had the longest list of people they liked. Yeah. Meaning, if you want to be likable, you have to go around assertively and aggressively liking as many people as possible. Because if you go into conversations thinking, how could I like you? How could I like you? How could I like you more? It's less about you. And you're asking questions that are setting them up to be likable. I wonder, and I wish I could take a crack at this conversational narcissist that you know, but... If I were to ask more questions of them, like really set them up to entertain me, to get deep, to actually let them go to level two and maybe even level three if they want to, would they calm down?",
-          "evidence": "Meaning, if you want to be likable, you have to go around assertively and aggressively liking as many people as possible.",
-          "t": 3637,
-          "kind": "said",
-          "confidence": 0.8395,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Just generally like if it's an idea, everything in my head is a story first.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Just generally like if it's an idea, everything in my head is a story first.",
-          "passage": "Ooh, a yap challenge. A yap challenge is you open up your phone camera and you teach something or share an opinion about something without notes. And you hit record. If you go naturally 15 or 30 seconds, you're probably good. If you're hitting 45 seconds, that's the max. If you're up to a minute or two minutes, you probably talk too much. Hmm. About yourself or just about yourself, but like that, that your typical answering length is longer than conversationally appropriate to a question about you. A yap challenge could be share your opinion about veganism. Damn. I didn't think I could get that done in 15 seconds. What's your answer? No, not to veganism. Just generally like if it's an idea, everything in my head is a story first.",
-          "evidence": "Just generally like if it's an idea, everything in my head is a story first.",
-          "t": 4347,
-          "kind": "said",
-          "confidence": 0.8415,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 11,
-          "headline": "I think a mistake that people make is they are afraid of going too deep too quickly,…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "I think a mistake that people make is they are afraid of going too deep too quickly, and they're afraid of going deep in conversation because it feels scary to be vulnerable.",
-          "passage": "So we have to use dating apps. I think they're the only way that we'll be able to connect. So I'm actually, I'm pro dating app. Of course, I would love for people to approach in person, but I'm not pro not talking first. And I think if someone asks for your handle, you're fair to say, it's just for my friends and family. Let's try to get there. Okay, I concede. No, I think it makes sense. It doesn't make sense. Okay, we did it. It's hard to repeat. Okay, so this is a wonderful level, but it's reserved for your most important people. I think a mistake that people make is they are afraid of going too deep too quickly, and they're afraid of going deep in conversation because it feels scary to be vulnerable.",
-          "evidence": "I think a mistake that people make is they are afraid of going too deep too quickly, and they're afraid of going deep in conversation because it feels scary to be vulnerable.",
-          "t": 4679,
-          "kind": "said",
-          "confidence": 0.8525,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 12,
-          "headline": "When you have a contamination narrative or you're in a relationship with someone with a…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "When you have a contamination narrative or you're in a relationship with someone with a contamination narrative, the only way that I think we can change that, because our narratives are changeable, these are not fixed personality traits, is via conversation.",
-          "passage": "The other kind of narrative is a contamination narrative. People with a contamination narrative... They feel that all the hardship and all the challenge and all the struggle has happened to them and they can't make it through. They can't overcome. That no matter how hard they've worked their grit, their strength, their resilience, they're a victim of circumstance. They typically feel very unlucky and very out of control. And when you have that kind of narrative, it's less about the facts of your life and more about the frames of your life, how you're seeing those facts, how you're seeing those facts. When you have a contamination narrative or you're in a relationship with someone with a contamination narrative, the only way that I think we can change that, because our narratives are changeable, these are not fixed personality traits, is via conversation.",
-          "evidence": "When you have a contamination narrative or you're in a relationship with someone with a contamination narrative, the only way that I think we can change that, because our narratives are changeable, these are not fixed personality traits, is via conversation.",
-          "t": 4875,
-          "kind": "said",
-          "confidence": 0.8490000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 13,
-          "headline": "The third answer for Lucky Thank You is that person who is afraid to answer.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "Okay, so the third answer for Lucky Thank You is that person who is afraid to answer.",
-          "passage": "If you know their luck, you're going to be able to predict behavior. A lot of how they are in a relationship, how they are as a friend, how they are going to be at work. Right? Fate, I think, is an interesting one to ask someone. And then there's other questions that seem silly but actually have tremendous meaning. And level three is all about meaning. Okay, so the third answer for Lucky Thank You is that person who is afraid to answer. And I have asked this question of thousands of people. And you get this bucket of, um, well... Kind of. Now, this is very interesting because this tells you they're probably not that introspective. So it's one of two things. They actually don't know. They literally have not ever thought about it.",
-          "evidence": "Okay, so the third answer for Lucky Thank You is that person who is afraid to answer.",
-          "t": 5338,
-          "kind": "said",
-          "confidence": 0.8705,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 14,
-          "headline": "A really critical part of this exercise is that you ask someone about the character and…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "A really critical part of this exercise is that you ask someone about the character and then you say why, what traits, because the traits that they say next are going to tell you every single thing about that person.",
-          "passage": "And then he went on to be successful. So it was, it gave me a lot of hope. So, and he's also black. Yeah. So it was really important in that interaction that I didn't assume about that character. I asked you why, and then you told me a story about what you saw and when you saw it. A really critical part of this exercise is that you ask someone about the character and then you say why, what traits, because the traits that they say next are going to tell you every single thing about that person. For example, if I ask someone, you know, what person are you most like? And they say, Mother Teresa. I say, oh, you know, why? You know, I might not agree with them. Maybe I don't see that. But whatever they say next is going to tell me a lot about how they view themselves, whether it's true or not. And this is the hardest part about Level 3, and it's the most inconvenient part of Level 3.",
-          "evidence": "A really critical part of this exercise is that you ask someone about the character and then you say why, what traits, because the traits that they say next are going to tell you every single thing about that person.",
-          "t": 5998,
-          "kind": "said",
-          "confidence": 0.8440000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 15,
-          "headline": "The moment they have a baby, they flip into self-help because all of a sudden their…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "The moment they have a baby, they flip into self-help because all of a sudden their purpose is theirs to take care of this little person.",
-          "passage": "I've seen this happen with both moms and dads. The moment they have a baby, they flip into self-help because all of a sudden their purpose is theirs to take care of this little person. The problem is that they have a really hard time saying no. That people pleases. Yeah. They struggle with boundaries. They say yes to too much. And they put themselves last. Can be both good and bad in a relationship. And so if you're in a relationship with them, sometimes half of it is just letting them stand up to protect themselves. To not give too much. And I mentioned this very briefly earlier, but I've had many friends who are selfless helpers and they attract takers. They attract high-conflict people. You know what I mean by high-conflict?",
-          "evidence": "The moment they have a baby, they flip into self-help because all of a sudden their purpose is theirs to take care of this little person.",
-          "t": 6453,
-          "kind": "said",
-          "confidence": 0.8480000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 16,
-          "headline": "Sometimes they won't take the ball because they're worried it's selfish.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "So sometimes they won't take the ball because they're worried it's selfish.",
-          "passage": "And so if you're dealing with a selfless helper in terms of conversation. Yes. Sometimes they even think talking about themselves is taking advantage. Okay. So you might sometimes in conversation, like you're asking them a question. They're like, oh, no, no. Enough about me. Yeah, yeah, yeah. Oh, let's talk about you. Yeah. Oh, I want to help you. How can I help you? It's so funny. Like my friends who are selfless helpers, I cannot get them to tell me what I can help them with because all they want to do is check in on me. I'm like, no, no, I really do want to hear about you. So sometimes they won't take the ball because they're worried it's selfish. And so sometimes getting them to open up can be hard because they feel like their needs are not important, but their needs are very important.",
-          "evidence": "So sometimes they won't take the ball because they're worried it's selfish.",
-          "t": 6587,
-          "kind": "said",
-          "confidence": 0.8685,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 17,
-          "headline": "In this way, every human being we first meet, we're trying to answer two questions.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "In this way, every human being we first meet, we're trying to answer two questions.",
-          "passage": "And I felt like I liked him more in that moment. And I was horrified by my own response. And I realized – We so want to be liked that when someone clearly signals liking, it makes us like them more, right? So we can be charismatic. One is we send clear signals of liking. But also two, and we talked about this a little bit last time, is fundamentally 82% of our impressions of people are based on warmth and competence. So people who are first and is first signaling, I'm open, I'm friendly, and then competent, I'm capable, I'm efficient, I'm effective, make us feel like I'm in good hands. In this way, every human being we first meet, we're trying to answer two questions. Can I trust you and can I rely on you? So the second thing that charismatic people are doing is they're signaling, you can trust me.",
-          "evidence": "In this way, every human being we first meet, we're trying to answer two questions.",
-          "t": 7441,
-          "kind": "said",
-          "confidence": 0.855,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 18,
-          "headline": "The second thing that charismatic people are doing is they're signaling, you can trust me.",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "So the second thing that charismatic people are doing is they're signaling, you can trust me.",
-          "passage": "And I felt like I liked him more in that moment. And I was horrified by my own response. And I realized – We so want to be liked that when someone clearly signals liking, it makes us like them more, right? So we can be charismatic. One is we send clear signals of liking. But also two, and we talked about this a little bit last time, is fundamentally 82% of our impressions of people are based on warmth and competence. So people who are first and is first signaling, I'm open, I'm friendly, and then competent, I'm capable, I'm efficient, I'm effective, make us feel like I'm in good hands. In this way, every human being we first meet, we're trying to answer two questions. Can I trust you and can I rely on you? So the second thing that charismatic people are doing is they're signaling, you can trust me.",
-          "evidence": "So the second thing that charismatic people are doing is they're signaling, you can trust me.",
-          "t": 7448,
-          "kind": "said",
-          "confidence": 0.8390000000000001,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 19,
-          "headline": "You are actually giving away your vocal competence because I'm so far away from my…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "You are actually giving away your vocal competence because I'm so far away from my maximum resonance point.",
-          "passage": "Hello. Hello, everyone. Hi. Ooh. You are actually giving away your vocal competence because I'm so far away from my maximum resonance point. My maximum resonance point is when I speak on the out breath. So my vocal cords are relaxed. So now listen to the difference. So here's the hi. Hello. Versus hello. Both me, but you're going to treat me totally differently. So now take a deep breath and say hello on the out breath. Hello. Right. Now, that sounds more like you because you usually use your maximum resonance point. Yeah. Right? You're very good at that. And I've noticed that in work culture, people who use their maximum resonance point, they are listened to more. They are easy to talk to because we want to listen to them.",
-          "evidence": "You are actually giving away your vocal competence because I'm so far away from my maximum resonance point.",
-          "t": 7912,
-          "kind": "said",
-          "confidence": 0.8645,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 20,
-          "headline": "In India, Bulgaria, and Pakistan, nodding is a little bit different, so I always try to…",
-          "idea": "",
-          "why": "",
-          "action": "",
-          "detail": "In India, Bulgaria, and Pakistan, nodding is a little bit different, so I always try to make that note.",
-          "passage": "But I struggle with that a little bit just personally because I'm a people pleaser. So when someone's like, I actually have a friend who defaults to the disgust micro expression. He doesn't even realize he's doing it. It's a punctuator. A facial punctuator is a nonverbal habit. It doesn't actually mean anything emotionally. It's just how they are at rest. I've had to tell myself he doesn't actually feel disgusted. So you're talking about warmth. All the listening cues are about warmth. So listening cues are nodding, triple nod. In India, Bulgaria, and Pakistan, nodding is a little bit different, so I always try to make that note. A head tilt is a universal warmth signal because we're exposing our ear up to the sky.",
-          "evidence": "In India, Bulgaria, and Pakistan, nodding is a little bit different, so I always try to make that note.",
-          "t": 8227,
-          "kind": "said",
-          "confidence": 0.8745,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 96
     }
   ],
   "pending": [
-    {
-      "id": "desk-e28c86e3708b",
-      "title": "The Billion-Dollar Monastery | How Bhutan Fought Poverty With Bitcoins",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
-      "takeaways": [
-        "A journalist discovered a government‑run Bitcoin mining facility hidden in the Himalayas of Bhutan.",
-        "Bhutan has become one of the largest holders of Bitcoin on the planet."
-      ],
-      "date": "2026-09-16",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-14ef1df16961",
-      "title": "The Fall of 5 Famous Stocks: What Really Happened?",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
-      "takeaways": [
-        "Five well-known Indian stocks have fallen more than 50% from their all-time highs—but does a falling stock always mean a broken business?",
-        "In this video, we analyse 5 stocks to understand why these stocks corrected sharply, what changed in their businesses, and what could potentially drive a turnaround."
-      ],
-      "date": "2026-09-16",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-5886041ee66d",
-      "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
-      "show": "Shut Up Ya Kunal",
-      "url": "https://www.youtube.com/watch?v=ovC-02pLKnI",
-      "takeaways": [
-        "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
-        "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
-      ],
-      "date": "2026-09-16",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-23e7df01656d",
-      "title": "Will AI Destroy Humanity? | Genuine Fear Or Games Being Played By AI Companies? | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
-      "takeaways": [
-        "AI industry leaders such as Anthropic’s Dario Amodei, OpenAI’s Sam Altman and Elon Musk warn that AI could pose an existential threat to humanity.",
-        "They have called for slowing “frontier” AI development to address safety concerns."
-      ],
-      "date": "2026-09-16",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-19d757ecb503",
-      "title": "We Recreated The 2006 Middle Class In 2026",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
-      "takeaways": [
-        "Housing, education, and gold have become significantly more expensive since 2006, outpacing salary growth.",
-        "The presenter advises three principles: avoid rushing to buy a house, start investing early even with small amounts, and don’t use credit for consumption."
-      ],
-      "date": "2026-09-16",
-      "reason": "over the 8/day cap"
-    },
     {
       "id": "desk-dfded789bd87",
       "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
@@ -3376,7 +2658,7 @@
         "NSE generates revenue from transaction charges, options revenue, listing fees, data services, clearing & settlement, and Nifty licensing.",
         "The video explains the NSE’s business model, financial performance, valuation, industry outlook, risks, and IPO details."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3388,7 +2670,7 @@
         "Abhishek just got a new car, and this one is special this is a “Luxury Car”.",
         "But he technically did not buy it, he got it on a lease!"
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3400,7 +2682,7 @@
         "Access the full data and references used in this episode below.",
         "The episode includes Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3412,7 +2694,7 @@
         "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
         "Turns out, the answer isn’t as straightforward as you might think."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3424,7 +2706,7 @@
         "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
         "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3436,7 +2718,7 @@
         "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
         "It impacts both NRIs and Indian resident investors."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3448,7 +2730,7 @@
         "Karan Datta retired at 47 and is now in his eighth year of retirement.",
         "He treats certain watch pieces as appreciating assets."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3460,7 +2742,7 @@
         "The fastest and most affordable way to upskill yourself in AI is highlighted.",
         "A live workshop on AI is scheduled for 6th Sept at 7 pm IST."
       ],
-      "date": "2026-09-16",
+      "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
@@ -3472,8 +2754,8 @@
         "Episode 382 of the #AskAbhijit show: Ask me your best questions in the live chat and Superchat, and I shall answer them.",
         "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
       ],
-      "date": "2026-09-16",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 2 days."
     },
     {
       "id": "desk-d119d69c7e4f",
@@ -3484,8 +2766,8 @@
         "India’s Housing Problem: Too Many Expensive Homes, Too Few Affordable Ones?",
         "| Quick Take #QuickTake #SmitaPrakash #India #RentalHousing #RealEstate #HomeBuyers #UrbanHousing #PropertyMarket Tune in here: linktr.ee/podcastwithsmitaprakash"
       ],
-      "date": "2026-09-16",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] U1HjrY-X64E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-2fc719afd73a",
@@ -3496,8 +2778,68 @@
         "What exactly do you need to study for the UPSC Civil Services Examination?",
         "Before starting UPSC preparation, the first step is to understand the complete syllabus and examination pattern."
       ],
-      "date": "2026-09-16",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] 1DFdcGyf3kE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-e28c86e3708b",
+      "title": "The Billion-Dollar Monastery | How Bhutan Fought Poverty With Bitcoins",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
+      "takeaways": [
+        "A journalist discovered a government‑run Bitcoin mining facility hidden in the Himalayas of Bhutan.",
+        "Bhutan has become one of the largest holders of Bitcoin on the planet."
+      ],
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] Pb9KiLgqahY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-14ef1df16961",
+      "title": "The Fall of 5 Famous Stocks: What Really Happened?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
+      "takeaways": [
+        "Five well-known Indian stocks have fallen more than 50% from their all-time highs—but does a falling stock always mean a broken business?",
+        "In this video, we analyse 5 stocks to understand why these stocks corrected sharply, what changed in their businesses, and what could potentially drive a turnaround."
+      ],
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] RRoNsmry-68: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-5886041ee66d",
+      "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
+      "show": "Shut Up Ya Kunal",
+      "url": "https://www.youtube.com/watch?v=ovC-02pLKnI",
+      "takeaways": [
+        "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
+        "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
+      ],
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-23e7df01656d",
+      "title": "Will AI Destroy Humanity? | Genuine Fear Or Games Being Played By AI Companies? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
+      "takeaways": [
+        "AI industry leaders such as Anthropic’s Dario Amodei, OpenAI’s Sam Altman and Elon Musk warn that AI could pose an existential threat to humanity.",
+        "They have called for slowing “frontier” AI development to address safety concerns."
+      ],
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] 11QI7boyKQw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-19d757ecb503",
+      "title": "We Recreated The 2006 Middle Class In 2026",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
+      "takeaways": [
+        "Housing, education, and gold have become significantly more expensive since 2006, outpacing salary growth.",
+        "The presenter advises three principles: avoid rushing to buy a house, start investing early even with small amounts, and don’t use credit for consumption."
+      ],
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: [youtube] XGja7bJudvQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -3508,31 +2850,61 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-16T15:43:05.411Z",
+    "at": "2026-09-17T00:41:27.510Z",
     "discovered": 904,
     "eligible": 8,
-    "processed": 2,
+    "processed": 0,
     "skipped": 896,
-    "failed": 6,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "desk-aafe80a1879c",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-16T15:40:56.879Z"
+        "message": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 2 days.",
+        "at": "2026-09-17T00:40:59.771Z"
       },
       {
         "stage": "process",
         "id": "desk-d119d69c7e4f",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-16T15:41:29.549Z"
+        "message": "yt-dlp failed: ERROR: [youtube] U1HjrY-X64E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:03.514Z"
       },
       {
         "stage": "process",
         "id": "desk-2fc719afd73a",
-        "message": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings ",
-        "at": "2026-09-16T15:43:05.034Z"
+        "message": "yt-dlp failed: ERROR: [youtube] 1DFdcGyf3kE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:07.932Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-e28c86e3708b",
+        "message": "yt-dlp failed: ERROR: [youtube] Pb9KiLgqahY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:11.653Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-14ef1df16961",
+        "message": "yt-dlp failed: ERROR: [youtube] RRoNsmry-68: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:15.818Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-5886041ee66d",
+        "message": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:19.485Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-23e7df01656d",
+        "message": "yt-dlp failed: ERROR: [youtube] 11QI7boyKQw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:23.405Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-19d757ecb503",
+        "message": "yt-dlp failed: ERROR: [youtube] XGja7bJudvQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-17T00:41:27.502Z"
       }
     ],
     "estimatedCostUsd": 0

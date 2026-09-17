@@ -16364,16 +16364,16 @@
       }
     },
     "desk-19d757ecb503": {
-      "status": "PUBLISHED",
+      "status": "FAILED",
       "title": "We Recreated The 2006 Middle Class In 2026",
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
       "id": "desk-19d757ecb503",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-13T00:04:07.736Z",
-      "updatedAt": "2026-09-13T20:25:33.878Z",
-      "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed",
+      "updatedAt": "2026-09-17T00:41:27.502Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] XGja7bJudvQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
       "payload": {
         "id": "desk-19d757ecb503",
         "sourceId": "desk",
@@ -18311,10 +18311,10 @@
       "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
       "id": "desk-e28c86e3708b",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:40.704Z",
-      "updatedAt": "2026-09-16T00:36:39.463Z",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "updatedAt": "2026-09-17T00:41:11.653Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Pb9KiLgqahY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-14ef1df16961": {
       "status": "FAILED",
@@ -18323,10 +18323,10 @@
       "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
       "id": "desk-14ef1df16961",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:42.149Z",
-      "updatedAt": "2026-09-16T00:36:48.210Z",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "updatedAt": "2026-09-17T00:41:15.818Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] RRoNsmry-68: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-5886041ee66d": {
       "status": "FAILED",
@@ -18335,10 +18335,10 @@
       "url": "https://www.youtube.com/watch?v=ovC-02pLKnI",
       "id": "desk-5886041ee66d",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:46.148Z",
-      "updatedAt": "2026-09-16T00:36:57.218Z",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "updatedAt": "2026-09-17T00:41:19.485Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-23e7df01656d": {
       "status": "FAILED",
@@ -18347,10 +18347,10 @@
       "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
       "id": "desk-23e7df01656d",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:50.151Z",
-      "updatedAt": "2026-09-16T00:37:06.501Z",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "updatedAt": "2026-09-17T00:41:23.405Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 11QI7boyKQw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-dfbf6038e1a5": {
       "status": "FAILED",
@@ -18662,8 +18662,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:43.778Z",
-      "updatedAt": "2026-09-16T15:40:56.879Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-17T00:40:59.771Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 2 days."
     },
     "desk-a21e9dfc084e": {
       "status": "NEEDS_REVIEW",
@@ -18686,8 +18686,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:51.778Z",
-      "updatedAt": "2026-09-16T15:41:29.549Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-17T00:41:03.514Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] U1HjrY-X64E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-dd3caca8be8c": {
       "status": "NEEDS_REVIEW",
@@ -18710,8 +18710,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:59.783Z",
-      "updatedAt": "2026-09-16T15:43:05.034Z",
-      "reason": "yt-dlp failed: Command failed: yt-dlp --skip-download --write-auto-subs --write-subs --sub-langs en.* --sub-format json3 --no-warnings "
+      "updatedAt": "2026-09-17T00:41:07.932Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 1DFdcGyf3kE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }
