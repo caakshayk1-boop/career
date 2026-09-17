@@ -18720,8 +18720,8 @@
       "id": "gunjanshouts-a6da32090410",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:19:16.883Z",
-      "updatedAt": "2026-09-17T13:19:16.883Z"
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
     },
     "gunjanshouts-f4b6c9e42f9d": {
       "status": "SKIPPED",
@@ -18730,8 +18730,8 @@
       "id": "gunjanshouts-f4b6c9e42f9d",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:19:16.884Z",
-      "updatedAt": "2026-09-17T13:19:16.884Z"
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
     },
     "gunjanshouts-eb407dd17044": {
       "status": "SKIPPED",
@@ -18740,8 +18740,8 @@
       "id": "gunjanshouts-eb407dd17044",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:19:16.884Z",
-      "updatedAt": "2026-09-17T13:19:16.884Z"
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
     },
     "gunjanshouts-f10238959108": {
       "status": "SKIPPED",
@@ -18750,8 +18750,8 @@
       "id": "gunjanshouts-f10238959108",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:19:16.884Z",
-      "updatedAt": "2026-09-17T13:19:16.884Z"
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
     },
     "gunjanshouts-ca0325169e0f": {
       "status": "SKIPPED",
@@ -18760,8 +18760,2168 @@
       "id": "gunjanshouts-ca0325169e0f",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:19:16.884Z",
-      "updatedAt": "2026-09-17T13:19:16.884Z"
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-5dd26b58926a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Disney: The Renaissance and the Empire",
+      "id": "acquired-5dd26b58926a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-ff4f7f280e49": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Walt Disney Company",
+      "id": "acquired-ff4f7f280e49",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-fe06e61b9239": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Vanguard",
+      "id": "acquired-fe06e61b9239",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-7de1d48f3f6f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Ferrari",
+      "id": "acquired-7de1d48f3f6f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-803991f2f5fa": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Rolex",
+      "id": "acquired-803991f2f5fa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-da26ce7d4cf7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Costco",
+      "id": "acquired-da26ce7d4cf7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-346886dc7682": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Formula 1",
+      "id": "acquired-346886dc7682",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-93c7725ddf8c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The NFL",
+      "id": "acquired-93c7725ddf8c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-3c2b7ecb3d56": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "10 Years of Acquired (with Michael Lewis)",
+      "id": "acquired-3c2b7ecb3d56",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-3d160f1b4461": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Coca-Cola",
+      "id": "acquired-3d160f1b4461",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-90f8d0f9b422": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Trader Joe’s",
+      "id": "acquired-90f8d0f9b422",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-b20fb8010faa": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Google Part III: The AI Company",
+      "id": "acquired-b20fb8010faa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-0d99a222dbae": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Acquired Live at Radio City Music Hall (Presented by J.P. Morgan)",
+      "id": "acquired-0d99a222dbae",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.097Z",
+      "updatedAt": "2026-09-17T13:23:34.097Z"
+    },
+    "acquired-95cc2fcfeb53": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Google Part II: Alphabet",
+      "id": "acquired-95cc2fcfeb53",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-1dc4e1fe8bad": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Jamie Dimon Interview",
+      "id": "acquired-1dc4e1fe8bad",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c3bee580a49c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Google Part I: Origins of Search",
+      "id": "acquired-c3bee580a49c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-40fe6fce7c5f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Steve Ballmer Interview",
+      "id": "acquired-40fe6fce7c5f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-200d42c939ec": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Epic Systems (MyChart)",
+      "id": "acquired-200d42c939ec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e85f71387db9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Indian Premier League Cricket",
+      "id": "acquired-e85f71387db9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-879e34abb34e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "TSMC Founder Morris Chang",
+      "id": "acquired-879e34abb34e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d7145bcf3317": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Mars Inc. (the chocolate story)",
+      "id": "acquired-d7145bcf3317",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a7adf84d4503": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "IKEA",
+      "id": "acquired-a7adf84d4503",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-b1fe9563f593": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Meta",
+      "id": "acquired-b1fe9563f593",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-b9fe9f9ee817": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Acquired LIVE from Chase Center (with Daniel Ek, Emily Chang, Jensen Huang and Mark Zuckerberg)",
+      "id": "acquired-b9fe9f9ee817",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-953fb3feb9a6": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Mark Zuckerberg Interview",
+      "id": "acquired-953fb3feb9a6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-21d3b8fbbd70": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Chase Center + Summer Update",
+      "id": "acquired-21d3b8fbbd70",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-b54f98b45031": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Microsoft Volume II",
+      "id": "acquired-b54f98b45031",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-9dd26d05dadc": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Starbucks (with Howard Schultz)",
+      "id": "acquired-9dd26d05dadc",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-18df1cfe5f38": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Microsoft Volume I",
+      "id": "acquired-18df1cfe5f38",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4cf0d09d0fad": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Renaissance Technologies",
+      "id": "acquired-4cf0d09d0fad",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f93093c02e32": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Hermès",
+      "id": "acquired-f93093c02e32",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-fea65881299d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Novo Nordisk (Ozempic)",
+      "id": "acquired-fea65881299d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6d81ed371f93": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Holiday Special 2023",
+      "id": "acquired-6d81ed371f93",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-0add9de65047": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Visa",
+      "id": "acquired-0add9de65047",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4ddc2c630491": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Charlie Munger",
+      "id": "acquired-4ddc2c630491",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-8b5c6328dc7d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "NVIDIA CEO Jensen Huang",
+      "id": "acquired-8b5c6328dc7d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a6ccaa9564d8": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nvidia Part III: The Dawn of the AI Era (2022-2023)",
+      "id": "acquired-a6ccaa9564d8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-515b9f1ba342": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nike",
+      "id": "acquired-515b9f1ba342",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d0193b02ba6f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Porsche (with Doug DeMuro)",
+      "id": "acquired-d0193b02ba6f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-573bad8a42fe": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Uber CEO Dara Khosrowshahi",
+      "id": "acquired-573bad8a42fe",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-2f3b4d926907": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Lockheed Martin",
+      "id": "acquired-2f3b4d926907",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-bee813195712": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Spotify CEO Daniel Ek",
+      "id": "acquired-bee813195712",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f41268cdaa03": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Benchmark’s Mitch Lasky and Blake Robbins on The Art of Business in Gaming",
+      "id": "acquired-f41268cdaa03",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-14f35d11dc95": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Short: The Death of Sega",
+      "id": "acquired-14f35d11dc95",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e67d563e62b3": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nintendo: The Console Wars",
+      "id": "acquired-e67d563e62b3",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-db39447be3f5": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Hamilton Helmer & Chenyi Shi on How to Build an AWS-Like Second Business",
+      "id": "acquired-db39447be3f5",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-bcdda842baac": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Sessions: David Senra (Founders Podcast)",
+      "id": "acquired-bcdda842baac",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4e3f4f502b13": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nintendo's Origins",
+      "id": "acquired-4e3f4f502b13",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-57c27f0215b0": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "LVMH",
+      "id": "acquired-57c27f0215b0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-aef26ec4f87e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Holiday Special 2022",
+      "id": "acquired-aef26ec4f87e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-fdd76621bfb7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Stratechery (with Ben Thompson)",
+      "id": "acquired-fdd76621bfb7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4316947e0064": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Enron",
+      "id": "acquired-4316947e0064",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7266d9388917": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Qualcomm",
+      "id": "acquired-7266d9388917",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c0835c480b06": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Benchmark Part II: The Dinner",
+      "id": "acquired-c0835c480b06",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3794bc521914": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "ACQ Sessions: Jason Calacanis",
+      "id": "acquired-3794bc521914",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-829eab09ef31": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Benchmark Part I",
+      "id": "acquired-829eab09ef31",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-bebae7040c68": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Amazon Web Services",
+      "id": "acquired-bebae7040c68",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dc50c7e0c59d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Howard Marks & Andrew Marks: Something of Value",
+      "id": "acquired-dc50c7e0c59d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-2681cc485223": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Amazon.com",
+      "id": "acquired-2681cc485223",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d90c49a52f47": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "From NFL to Startup COO to Congressman Regulating Crypto (with Rep. Anthony Gonzalez)",
+      "id": "acquired-d90c49a52f47",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-fc7fec1ef38b": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Walmart",
+      "id": "acquired-fc7fec1ef38b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-2af27b2dff8c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Playbook: Lessons from 200+ Company Stories",
+      "id": "acquired-2af27b2dff8c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-ed7f83a02d35": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "American Dynamism (with Katherine Boyle)",
+      "id": "acquired-ed7f83a02d35",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-fee50d51be9a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Capital-Efficient Growth (with Zoom CEO Eric Yuan & Veeva CEO Peter Gassner)",
+      "id": "acquired-fee50d51be9a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-39c4e827072d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Arena Show Part II: Brooks Running (with CEO Jim Weber)",
+      "id": "acquired-39c4e827072d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7085439caa68": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Arena Show Part I: Idea Dinner + YC Continuity",
+      "id": "acquired-7085439caa68",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7d39b0822bfb": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nvidia Part II: The Machine Learning Company (2006-2022)",
+      "id": "acquired-7d39b0822bfb",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-8f6fe3ae2a67": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Platforms and Power (with Hamilton Helmer and Chenyi Shi)",
+      "id": "acquired-8f6fe3ae2a67",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-06d58bf43726": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nvidia Part I: The GPU Company (1993-2006)",
+      "id": "acquired-06d58bf43726",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3e1e38a8db83": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Altimeter (with Brad Gerstner)",
+      "id": "acquired-3e1e38a8db83",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-1943155aad75": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "SONY",
+      "id": "acquired-1943155aad75",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-05e481edfa16": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Super Pumped (with Brian Koppelman and Joseph Gordon-Levitt)",
+      "id": "acquired-05e481edfa16",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-cc717cbda072": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Browser (with Brendan Eich, Chief Architect of Netscape + Mozilla and CEO of Brave)",
+      "id": "acquired-cc717cbda072",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-2ef9466542cf": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Peloton",
+      "id": "acquired-2ef9466542cf",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-96fe95c1c20d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Taylor Swift (Acquired’s Version)",
+      "id": "acquired-96fe95c1c20d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-de1b971a6085": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "CAA (with Michael Ovitz)",
+      "id": "acquired-de1b971a6085",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d619161f8859": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "FTX (with Sam Bankman-Fried & Mario Gabriele)",
+      "id": "acquired-d619161f8859",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7c82e5ea7cb9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "7 Powers with Hamilton Helmer",
+      "id": "acquired-7c82e5ea7cb9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e1fe20ec5085": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Not Boring (with Packy McCormick)",
+      "id": "acquired-e1fe20ec5085",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a876f8ec6221": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Complexity Investing & Semiconductors (with NZS Capital)",
+      "id": "acquired-a876f8ec6221",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7802a0088567": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Standard Oil Part II",
+      "id": "acquired-7802a0088567",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e63bd7c7b238": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Michael Mauboussin Master Class — Moats, Skill, Luck, Decision Making and a Whole Lot More",
+      "id": "acquired-e63bd7c7b238",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-be177fb984c2": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Standard Oil Part I",
+      "id": "acquired-be177fb984c2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d7efee5cdb8c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "TSMC",
+      "id": "acquired-d7efee5cdb8c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-30d19c3bc292": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Kevin Rose from Web 2.0 to Web3",
+      "id": "acquired-30d19c3bc292",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6de0a17fea56": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Andreessen Horowitz Part II",
+      "id": "acquired-6de0a17fea56",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-5fba525490aa": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Andreessen Horowitz Part I",
+      "id": "acquired-5fba525490aa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f77b1638649c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Solana (with CEO Anatoly Yakovenko)",
+      "id": "acquired-f77b1638649c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4a3155bd48b9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Ethereum",
+      "id": "acquired-4a3155bd48b9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e060760fffb0": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Ho Nam from Altos Ventures — A Different Approach to VC",
+      "id": "acquired-e060760fffb0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-ca23e65fbf13": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Berkshire Hathaway Part III",
+      "id": "acquired-ca23e65fbf13",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dbcc0920c9bb": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Amazon Unbound (with Brad Stone)",
+      "id": "acquired-dbcc0920c9bb",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-1bef86eace17": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Berkshire Hathaway Part II",
+      "id": "acquired-1bef86eace17",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-754bf3130b9b": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: 2021 China Tech Trends (with Tech Buzz China)",
+      "id": "acquired-754bf3130b9b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-5f3ab399ccee": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Berkshire Hathaway Part I",
+      "id": "acquired-5f3ab399ccee",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-5dbc01181493": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: \"Why Now\" for Digital Health (with Levels founder Josh Clemente)",
+      "id": "acquired-5dbc01181493",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f96d7b229535": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Rec Room Part II (with CEO Nick Fajt)",
+      "id": "acquired-f96d7b229535",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-35e99fe43b3d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Meituan",
+      "id": "acquired-35e99fe43b3d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-02301426a96d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The New York Times Company",
+      "id": "acquired-02301426a96d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-9db728a68303": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Sequoia Capital's Investment Playbook (with Alfred Lin)",
+      "id": "acquired-9db728a68303",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f64bdd0a4fb6": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Bitcoin",
+      "id": "acquired-f64bdd0a4fb6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4f1749169d29": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Acquired x Indie Hackers",
+      "id": "acquired-4f1749169d29",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-55ed5d955956": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Airbnb",
+      "id": "acquired-55ed5d955956",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7e3e595b2b41": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "DoorDash",
+      "id": "acquired-7e3e595b2b41",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-0a0ca4ea7606": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Slack + Salesforce Emergency Pod with Packy McCormick of Not Boring",
+      "id": "acquired-0a0ca4ea7606",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c7b10cda3712": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Virgin Galactic",
+      "id": "acquired-c7b10cda3712",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-bbc60d992a20": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Superhuman Part II - Designing Software to Feel like a Game (with Rahul Vohra)",
+      "id": "acquired-bbc60d992a20",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-044fefd77508": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Twitter (with Dick Costolo)",
+      "id": "acquired-044fefd77508",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-964e3e943c83": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Invest Like the Best on Acquired",
+      "id": "acquired-964e3e943c83",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-03a3d55002fb": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The NBA",
+      "id": "acquired-03a3d55002fb",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6a81e94db10f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Acquired x My First Million",
+      "id": "acquired-6a81e94db10f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e5258f69a3e7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Epic Games",
+      "id": "acquired-e5258f69a3e7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6d9bdba02a28": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Eventbrite (with Julia & Kevin Hartz)",
+      "id": "acquired-6d9bdba02a28",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-609ec3a5f9e8": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Pinduoduo",
+      "id": "acquired-609ec3a5f9e8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-b3b4d98ba0bc": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Oprah (Harpo Studios)",
+      "id": "acquired-b3b4d98ba0bc",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-783e79b37c95": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "SpaceX",
+      "id": "acquired-783e79b37c95",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4b877d1c4e30": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Adapting Episode 3: Intel",
+      "id": "acquired-4b877d1c4e30",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-9e3baa4f5bd7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Jason Calacanis",
+      "id": "acquired-9e3baa4f5bd7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-10ee05fffb93": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Adapting Episode 2: Sequoia’s Black Swan Memo (with Roelof Botha)",
+      "id": "acquired-10ee05fffb93",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-206721421bec": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Adapting Episode 1: Canlis",
+      "id": "acquired-206721421bec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dfd9ed2614f6": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Top 10 Acquisitions of All-Time",
+      "id": "acquired-dfd9ed2614f6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f1bcaa16e060": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Sequoia Capital Part II (with Doug Leone)",
+      "id": "acquired-f1bcaa16e060",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-0b75253df858": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "WhatsApp",
+      "id": "acquired-0b75253df858",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-15c3bed1f7ba": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Lean Startup and the Long-Term Stock Exchange (with Eric Ries)",
+      "id": "acquired-15c3bed1f7ba",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f55cd494fc00": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Convoy (with CEO Dan Lewis)",
+      "id": "acquired-f55cd494fc00",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a8762c5945e7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "TikTok",
+      "id": "acquired-a8762c5945e7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f46196f9c8e7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Disney, Plus",
+      "id": "acquired-f46196f9c8e7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f005858d274b": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The WeWork “Acquisition” (with Dan Primack)",
+      "id": "acquired-f005858d274b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-657046360c09": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Atari (with Nolan Bushnell)",
+      "id": "acquired-657046360c09",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dc59d0b09494": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Sequoia Capital (Part 1)",
+      "id": "acquired-dc59d0b09494",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7e206788449e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Google Maps",
+      "id": "acquired-7e206788449e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-86614693ffc4": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Shopify IPO",
+      "id": "acquired-86614693ffc4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4627747f7854": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Huawei",
+      "id": "acquired-4627747f7854",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6d5c63f668b6": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Superhuman (with CEO Rahul Vohra)",
+      "id": "acquired-6d5c63f668b6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dfe6b31896a5": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Slack DPO",
+      "id": "acquired-dfe6b31896a5",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-17901b81ab0d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Zoom IPO (with Santi Subotovsky)",
+      "id": "acquired-17901b81ab0d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e8738075892f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Electronic Arts IPO (with Trip Hawkins)",
+      "id": "acquired-e8738075892f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6156621835c9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Uber IPO",
+      "id": "acquired-6156621835c9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-16d2ab3adf26": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Pinterest IPO",
+      "id": "acquired-16d2ab3adf26",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4dde6043080a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Lyft IPO",
+      "id": "acquired-4dde6043080a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-8806bd91905e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Instagram Revisited (with Emily White)",
+      "id": "acquired-8806bd91905e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-ee352811034f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: Spotify + Gimlet/Anchor Quick Take + Worldwide Meetup Details!",
+      "id": "acquired-ee352811034f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dace496d18e9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "ARM & SoftBank",
+      "id": "acquired-dace496d18e9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-125aebe16c71": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "ESPN",
+      "id": "acquired-125aebe16c71",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-bb02d2234ce6": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Tencent",
+      "id": "acquired-bb02d2234ce6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6c761659d28a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Netflix (Part 2)",
+      "id": "acquired-6c761659d28a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-65b565506bc0": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Netflix (Part 1)",
+      "id": "acquired-65b565506bc0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-cfb566c75154": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Venmo (live with Andrew Kortina)",
+      "id": "acquired-cfb566c75154",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-cc383a5ca6c7": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Behance (with Scott Belsky)",
+      "id": "acquired-cc383a5ca6c7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d48ee03d3caa": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Alibaba",
+      "id": "acquired-d48ee03d3caa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e9ca9fd6ce6e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Recode (with Kara Swisher)",
+      "id": "acquired-e9ca9fd6ce6e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-5bffecb5ccd0": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Sonos IPO",
+      "id": "acquired-5bffecb5ccd0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-0efcc38da361": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Xiaomi IPO",
+      "id": "acquired-0efcc38da361",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e1da352e51d4": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Tesla",
+      "id": "acquired-e1da352e51d4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3e3cfcfadfc9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Rover-DogVacay Merger (with Rover CEO Aaron Easterly)",
+      "id": "acquired-3e3cfcfadfc9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-b9afaf941ebe": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "GitHub",
+      "id": "acquired-b9afaf941ebe",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7966cc9b735e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "T-Mobile / Sprint",
+      "id": "acquired-7966cc9b735e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-ac10eddbc9b0": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "PowerPoint",
+      "id": "acquired-ac10eddbc9b0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c0e4460c82d9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Spotify’s Direct Listing",
+      "id": "acquired-c0e4460c82d9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-45d74bdc426e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Dropbox IPO",
+      "id": "acquired-45d74bdc426e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-89e4a6a58687": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "SoftBank, Fortress and the Vision Fund",
+      "id": "acquired-89e4a6a58687",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-5f63897bd4fd": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Nest",
+      "id": "acquired-5f63897bd4fd",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dfb2d311647e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Raising a Seed Round with Against Gravity CEO Nick Fajt",
+      "id": "acquired-dfb2d311647e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-92bc1d318aba": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Zappos (with Alfred Lin)",
+      "id": "acquired-92bc1d318aba",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d8cfb7daa926": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "2017 Holiday Special",
+      "id": "acquired-d8cfb7daa926",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3db7502974f9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Apple - Beats",
+      "id": "acquired-3db7502974f9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-cdac5a741edb": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Stitch Fix IPO",
+      "id": "acquired-cdac5a741edb",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a60fdce31d0a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Qualcomm - Broadcom",
+      "id": "acquired-a60fdce31d0a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d6fe09a1bb48": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Atlassian IPO",
+      "id": "acquired-d6fe09a1bb48",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-812d9228e2b2": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Blue Bottle Coffee",
+      "id": "acquired-812d9228e2b2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-bac0e4102216": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "HTC, Google and the Future of Mobile",
+      "id": "acquired-bac0e4102216",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-2f335bca596a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "AOL and Time Warner (with the Internet History Podcast)",
+      "id": "acquired-2f335bca596a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-eb49d02fe07a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Square IPO",
+      "id": "acquired-eb49d02fe07a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-ac9fbf02102c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Opsware (with Michel Feaster)",
+      "id": "acquired-ac9fbf02102c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c2a6695b168c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Booking.com with Jetsetter & Room 77 CEO Drew Patterson",
+      "id": "acquired-c2a6695b168c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-916617ac1b20": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Activision Blizzard",
+      "id": "acquired-916617ac1b20",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c5d1379451c8": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Whole Foods Market",
+      "id": "acquired-c5d1379451c8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f0da719fc52b": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "SoundJam (iTunes)",
+      "id": "acquired-f0da719fc52b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-96bd11f7dcec": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "BAMTech, Disney and \"the Biggest Media Company You've Never Heard Of”",
+      "id": "acquired-96bd11f7dcec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c58069ba3c1b": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The LA Clippers",
+      "id": "acquired-c58069ba3c1b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-8954f3b07740": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Oculus",
+      "id": "acquired-8954f3b07740",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3ece89803a47": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Starbucks IPO with Dan Levitan",
+      "id": "acquired-3ece89803a47",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a835c5b3766c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Overture (with the Internet History Podcast!)",
+      "id": "acquired-a835c5b3766c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-99502cb89078": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Snap Inc. IPO",
+      "id": "acquired-99502cb89078",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-91aedb5589f0": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Uber - Didi Chuxing Merger with Brad Stone, author of The Upstarts & The Everything Store",
+      "id": "acquired-91aedb5589f0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3e01c006d74b": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "P.A. Semi + AuthenTec",
+      "id": "acquired-3e01c006d74b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-1864e296b721": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: 2016 Review and 2017 Predictions",
+      "id": "acquired-1864e296b721",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d5e2e6dac14f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Amazon IPO with original Amazon Board Member Tom Alberg",
+      "id": "acquired-d5e2e6dac14f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4ebbb6aef93e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: A Conversation with Microsoft's Head of Strategic Investments Brian Schultz",
+      "id": "acquired-4ebbb6aef93e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-0bb352c12a1d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Marvel",
+      "id": "acquired-0bb352c12a1d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-49ef8de25be2": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "The Facebook IPO",
+      "id": "acquired-49ef8de25be2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-8be49e5b0d1d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Skype",
+      "id": "acquired-8be49e5b0d1d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7ecff57a2af3": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "NeXT (Live show at the GeekWire Summit)",
+      "id": "acquired-7ecff57a2af3",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-e7df8a715ad1": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Zillow + Trulia (with Zillow Group CFO Kathleen Philips)",
+      "id": "acquired-e7df8a715ad1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-dcabafbf5ddc": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Inside the M&A Press with Bloomberg's Alex Sherman",
+      "id": "acquired-dcabafbf5ddc",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c1974a09c803": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Android",
+      "id": "acquired-c1974a09c803",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-6168876887e9": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Jet",
+      "id": "acquired-6168876887e9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-22d963b8b39d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Special: An Acquirer’s View into M&A with Taylor Barada, head of Corp Dev at Adobe",
+      "id": "acquired-22d963b8b39d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-c7897b89186a": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Waze",
+      "id": "acquired-c7897b89186a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-35ea25bd0f58": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Midroll + Stitcher (acquired by Scripps)",
+      "id": "acquired-35ea25bd0f58",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-14e0df4d972e": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "ExactTarget (acquired by Salesforce) with Scott Dorsey",
+      "id": "acquired-14e0df4d972e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-4ef505eea4f1": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "LinkedIn",
+      "id": "acquired-4ef505eea4f1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f7fdf999d505": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Push Pop Press (Facebook Instant Articles) with Todd Bishop",
+      "id": "acquired-f7fdf999d505",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-772e3348afd4": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Snapchat",
+      "id": "acquired-772e3348afd4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-3795d16b7c41": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "PayPal",
+      "id": "acquired-3795d16b7c41",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-1e50e59cb5ad": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Virgin America",
+      "id": "acquired-1e50e59cb5ad",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-33198f522bff": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Writely (Google Docs)",
+      "id": "acquired-33198f522bff",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-f4829f2c6760": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Acompli, Sunrise, and Wunderlist (with Kurt DelBene)",
+      "id": "acquired-f4829f2c6760",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-01af065eeb01": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "YouTube",
+      "id": "acquired-01af065eeb01",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-a956e00014c8": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Lucasfilm",
+      "id": "acquired-a956e00014c8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-74abfd7fec44": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Siri",
+      "id": "acquired-74abfd7fec44",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-8671b14663aa": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Bungie (with Xbox Co-Founder Ed Fries)",
+      "id": "acquired-8671b14663aa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-7459e08dca55": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Twitch",
+      "id": "acquired-7459e08dca55",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-cfafd92e81c8": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Instagram",
+      "id": "acquired-cfafd92e81c8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-ee26e4d26385": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Pixar",
+      "id": "acquired-ee26e4d26385",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
+    },
+    "acquired-d66892020b65": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Trailer: What is Acquired?",
+      "id": "acquired-d66892020b65",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:23:34.098Z",
+      "updatedAt": "2026-09-17T13:23:34.098Z"
     },
     "gunjanshouts-d654edb4829c": {
       "status": "FAILED",
@@ -18771,21 +20931,21 @@
       "id": "gunjanshouts-d654edb4829c",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:19:16.885Z",
-      "updatedAt": "2026-09-17T13:20:25.460Z",
+      "seenAt": "2026-09-17T13:23:34.099Z",
+      "updatedAt": "2026-09-17T13:24:40.517Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-33d180bb3928": {
-      "status": "NEEDS_REVIEW",
+      "status": "FAILED",
       "title": "AI Debate Ed Zitron, Andrew McAfee, Nate Soares, Roman Yampolskiy",
       "show": "The Diary Of A CEO",
       "url": "",
       "id": "diary-of-a-ceo-33d180bb3928",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:20:25.470Z",
-      "updatedAt": "2026-09-17T13:27:06.844Z",
-      "reason": "only 3 learnings survived validation (floor is 6)"
+      "seenAt": "2026-09-17T13:24:40.525Z",
+      "updatedAt": "2026-09-17T13:31:23.007Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "gunjanshouts-9a6007494187": {
       "status": "FAILED",
@@ -18795,9 +20955,9 @@
       "id": "gunjanshouts-9a6007494187",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:27:06.852Z",
-      "updatedAt": "2026-09-17T13:28:14.601Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "seenAt": "2026-09-17T13:31:23.029Z",
+      "updatedAt": "2026-09-17T13:31:27.551Z",
+      "reason": "transcript unusable: transcript is only 2212 characters"
     },
     "gunjanshouts-4a6bd22f7842": {
       "status": "FAILED",
@@ -18807,8 +20967,8 @@
       "id": "gunjanshouts-4a6bd22f7842",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:28:14.610Z",
-      "updatedAt": "2026-09-17T13:28:30.364Z",
+      "seenAt": "2026-09-17T13:31:27.559Z",
+      "updatedAt": "2026-09-17T13:31:27.560Z",
       "reason": "transcript unusable: transcript is only 1402 characters"
     },
     "gunjanshouts-07b43092e716": {
@@ -18819,8 +20979,8 @@
       "id": "gunjanshouts-07b43092e716",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:28:30.370Z",
-      "updatedAt": "2026-09-17T13:29:47.566Z",
+      "seenAt": "2026-09-17T13:31:27.567Z",
+      "updatedAt": "2026-09-17T13:31:27.567Z",
       "reason": "transcript unusable: transcript is only 855 characters"
     },
     "gunjanshouts-0a0a871da627": {
@@ -18831,21 +20991,140 @@
       "id": "gunjanshouts-0a0a871da627",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:29:47.574Z",
-      "updatedAt": "2026-09-17T13:30:13.797Z",
+      "seenAt": "2026-09-17T13:31:27.576Z",
+      "updatedAt": "2026-09-17T13:31:27.576Z",
       "reason": "transcript unusable: transcript is only 695 characters"
     },
     "desk-4a55ec85d533": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "Putin’s Warning to the World? | The Arctic Gamble That Could Reshape World Power",
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=PK4Ty_cyCMI",
       "id": "desk-4a55ec85d533",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:30:13.804Z",
-      "updatedAt": "2026-09-17T13:31:11.460Z",
-      "reason": "no candidate ideas found in the transcript"
+      "seenAt": "2026-09-17T13:31:27.583Z",
+      "updatedAt": "2026-09-17T13:33:27.075Z",
+      "payload": {
+        "id": "desk-4a55ec85d533",
+        "sourceId": "desk",
+        "show": "Think School",
+        "title": "Putin’s Warning to the World? | The Arctic Gamble That Could Reshape World Power",
+        "guest": "",
+        "topics": [
+          "arctic geopolitics",
+          "energy resources",
+          "climate change",
+          "global trade"
+        ],
+        "summary": "The episode examines the strategic importance of the Arctic, detailing its massive untapped oil, gas, and mineral reserves and the implications for global power dynamics. It highlights Russia's dominant icebreaker fleet and resource control, as well as the potential for new shipping routes to reshape trade, while also touching on broader climate risks such as heatwaves in India and Himalayan glacier loss.",
+        "url": "https://www.youtube.com/watch?v=PK4Ty_cyCMI",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-16T00:00:00.000Z",
+        "date": "2026-09-17",
+        "durationSec": 864,
+        "processedAt": "2026-09-17T13:33:27.074Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "India faces 300 million lethal heatwave residents by 2050",
+            "idea": "By 2050, 300 million Indians would be exposed to lethal heat waves if warming continues at current rates.",
+            "why": "Highlights a massive demographic impact that most people overlook, underscoring urgent climate risk for a huge population.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "by 2050, if global warming continues the way it does, 300  million people in India will be living in a lethal heatwave region.",
+            "t": 41,
+            "kind": "said",
+            "confidence": 0.92,
+            "grounding": 0.85,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Arctic holds 90 bn barrels oil, 1.67 tcf gas, 30 trn metals",
+            "idea": "Arctic’s untapped resources could be worth $30 trillion, reshaping global energy economics.",
+            "why": "Quantifies the economic stakes of Arctic melting, indicating why nations will compete fiercely for control.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "90 billion barrels of oil, 1,670 trillion cubic feet of natural gas, and a ton of other resources.",
+            "t": 549,
+            "kind": "said",
+            "confidence": 0.87,
+            "grounding": 0.91,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Russia has 40 icebreakers, US only 3",
+            "idea": "Russia’s fleet of 40 icebreakers dwarfs the US’s three, giving it Arctic shipping dominance.",
+            "why": "Shows a tangible competitive edge Russia gains from melting ice, explaining its strategic leverage in the Arctic.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "Russia has 40 icebreakers with some nuclear‑powered, America has three icebreakers.",
+            "t": 600,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.56,
+            "repaired": true
+          },
+          {
+            "rank": 4,
+            "headline": "New Arctic route cuts Asia‑Europe shipping 35 %",
+            "idea": "The Northern Passage can reduce shipping times to Europe by up to 35 % for Asian carriers.",
+            "why": "Concrete operational advantage that reshapes global trade patterns, making the Arctic a commercial corridor.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "From Yokohama to Europe becomes 35% shorter, from Busousan 35% shorter, Hong Kong 11% shorter.",
+            "t": 503,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.89,
+            "repaired": false
+          },
+          {
+            "rank": 5,
+            "headline": "Russia controls 11 % nickel, 3 % cobalt, 4.1 % copper production",
+            "idea": "Arctic mining gives Russia a major share of key green‑tech metals, enabling geopolitical leverage.",
+            "why": "Links resource control to future green technology supply chains, highlighting strategic importance beyond fossil fuels.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "Arctic mines already produce 11% of the world’s nickel, 3% of its cobalt and 4.1% of its copper.",
+            "t": 572,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 0.88,
+            "repaired": false
+          },
+          {
+            "rank": 6,
+            "headline": "Two‑thirds of Himalayan glaciers could vanish by 2100",
+            "idea": "By 2100, roughly 66 % of Himalayan glaciers may melt, increasing flood risk.",
+            "why": "Concrete, counterintuitive glacier loss with huge downstream effects for billions living downstream.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "up to 2/3 of them could be completely gone, unleashing devastating floods.",
+            "t": 74,
+            "kind": "said",
+            "confidence": 0.88,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 82
+      }
     },
     "desk-28fe524d590d": {
       "status": "FAILED",
@@ -18855,8 +21134,8 @@
       "id": "desk-28fe524d590d",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-17T13:31:11.480Z",
-      "updatedAt": "2026-09-17T13:32:20.772Z",
+      "seenAt": "2026-09-17T13:33:27.094Z",
+      "updatedAt": "2026-09-17T13:34:46.194Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }

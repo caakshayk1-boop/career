@@ -1,9 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T13:32:20.788Z",
+  "generatedAt": "2026-09-17T13:34:46.206Z",
   "today": "2026-09-17",
   "retentionDays": 7,
   "days": [
+    {
+      "date": "2026-09-17",
+      "label": "Today",
+      "episodeIds": [
+        "desk-4a55ec85d533"
+      ]
+    },
     {
       "date": "2026-09-16",
       "label": "Yesterday",
@@ -35,6 +42,126 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-4a55ec85d533",
+      "sourceId": "desk",
+      "show": "Think School",
+      "title": "Putin’s Warning to the World? | The Arctic Gamble That Could Reshape World Power",
+      "guest": "",
+      "topics": [
+        "arctic geopolitics",
+        "energy resources",
+        "climate change",
+        "global trade"
+      ],
+      "summary": "The episode examines the strategic importance of the Arctic, detailing its massive untapped oil, gas, and mineral reserves and the implications for global power dynamics. It highlights Russia's dominant icebreaker fleet and resource control, as well as the potential for new shipping routes to reshape trade, while also touching on broader climate risks such as heatwaves in India and Himalayan glacier loss.",
+      "url": "https://www.youtube.com/watch?v=PK4Ty_cyCMI",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-16T00:00:00.000Z",
+      "date": "2026-09-17",
+      "durationSec": 864,
+      "processedAt": "2026-09-17T13:33:27.074Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "India faces 300 million lethal heatwave residents by 2050",
+          "idea": "By 2050, 300 million Indians would be exposed to lethal heat waves if warming continues at current rates.",
+          "why": "Highlights a massive demographic impact that most people overlook, underscoring urgent climate risk for a huge population.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "by 2050, if global warming continues the way it does, 300  million people in India will be living in a lethal heatwave region.",
+          "t": 41,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 0.85,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Arctic holds 90 bn barrels oil, 1.67 tcf gas, 30 trn metals",
+          "idea": "Arctic’s untapped resources could be worth $30 trillion, reshaping global energy economics.",
+          "why": "Quantifies the economic stakes of Arctic melting, indicating why nations will compete fiercely for control.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "90 billion barrels of oil, 1,670 trillion cubic feet of natural gas, and a ton of other resources.",
+          "t": 549,
+          "kind": "said",
+          "confidence": 0.87,
+          "grounding": 0.91,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Russia has 40 icebreakers, US only 3",
+          "idea": "Russia’s fleet of 40 icebreakers dwarfs the US’s three, giving it Arctic shipping dominance.",
+          "why": "Shows a tangible competitive edge Russia gains from melting ice, explaining its strategic leverage in the Arctic.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Russia has 40 icebreakers with some nuclear‑powered, America has three icebreakers.",
+          "t": 600,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.56,
+          "repaired": true
+        },
+        {
+          "rank": 4,
+          "headline": "New Arctic route cuts Asia‑Europe shipping 35 %",
+          "idea": "The Northern Passage can reduce shipping times to Europe by up to 35 % for Asian carriers.",
+          "why": "Concrete operational advantage that reshapes global trade patterns, making the Arctic a commercial corridor.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "From Yokohama to Europe becomes 35% shorter, from Busousan 35% shorter, Hong Kong 11% shorter.",
+          "t": 503,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.89,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Russia controls 11 % nickel, 3 % cobalt, 4.1 % copper production",
+          "idea": "Arctic mining gives Russia a major share of key green‑tech metals, enabling geopolitical leverage.",
+          "why": "Links resource control to future green technology supply chains, highlighting strategic importance beyond fossil fuels.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Arctic mines already produce 11% of the world’s nickel, 3% of its cobalt and 4.1% of its copper.",
+          "t": 572,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.88,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Two‑thirds of Himalayan glaciers could vanish by 2100",
+          "idea": "By 2100, roughly 66 % of Himalayan glaciers may melt, increasing flood risk.",
+          "why": "Concrete, counterintuitive glacier loss with huge downstream effects for billions living downstream.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "up to 2/3 of them could be completely gone, unleashing devastating floods.",
+          "t": 74,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 82
+    },
     {
       "id": "desk-82e25965bcf8",
       "sourceId": "desk",
@@ -2837,14 +2964,11 @@
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "desk-4a55ec85d533",
-      "title": "Putin’s Warning to the World? | The Arctic Gamble That Could Reshape World Power",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=PK4Ty_cyCMI",
-      "takeaways": [
-        "Russia is heating up twice as fast as the rest of the planet.",
-        "A brand‑new trade route from Asia to Europe is opening as the Arctic melts."
-      ],
+      "id": "diary-of-a-ceo-33d180bb3928",
+      "title": "AI Debate Ed Zitron, Andrew McAfee, Nate Soares, Roman Yampolskiy",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "takeaways": [],
       "date": "2026-09-17",
       "reason": "no candidate ideas found in the transcript"
     },
@@ -2867,7 +2991,7 @@
       "url": "https://www.youtube.com/watch?v=H0dvn6L_L0s",
       "takeaways": [],
       "date": "2026-09-16",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "transcript unusable: transcript is only 2212 characters"
     },
     {
       "id": "gunjanshouts-4a6bd22f7842",
@@ -2905,55 +3029,55 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-17T13:32:20.782Z",
-    "discovered": 920,
+    "at": "2026-09-17T13:34:46.203Z",
+    "discovered": 1137,
     "eligible": 8,
-    "processed": 0,
-    "skipped": 912,
-    "failed": 8,
+    "processed": 1,
+    "skipped": 1129,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "gunjanshouts-d654edb4829c",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-17T13:20:25.460Z"
+        "at": "2026-09-17T13:24:40.516Z"
+      },
+      {
+        "stage": "process",
+        "id": "diary-of-a-ceo-33d180bb3928",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-17T13:31:23.006Z"
       },
       {
         "stage": "process",
         "id": "gunjanshouts-9a6007494187",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-17T13:28:14.601Z"
+        "message": "transcript unusable: transcript is only 2212 characters",
+        "at": "2026-09-17T13:31:27.551Z"
       },
       {
         "stage": "process",
         "id": "gunjanshouts-4a6bd22f7842",
         "message": "transcript unusable: transcript is only 1402 characters",
-        "at": "2026-09-17T13:28:30.364Z"
+        "at": "2026-09-17T13:31:27.560Z"
       },
       {
         "stage": "process",
         "id": "gunjanshouts-07b43092e716",
         "message": "transcript unusable: transcript is only 855 characters",
-        "at": "2026-09-17T13:29:47.566Z"
+        "at": "2026-09-17T13:31:27.567Z"
       },
       {
         "stage": "process",
         "id": "gunjanshouts-0a0a871da627",
         "message": "transcript unusable: transcript is only 695 characters",
-        "at": "2026-09-17T13:30:13.797Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-4a55ec85d533",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-17T13:31:11.460Z"
+        "at": "2026-09-17T13:31:27.576Z"
       },
       {
         "stage": "process",
         "id": "desk-28fe524d590d",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-17T13:32:20.772Z"
+        "at": "2026-09-17T13:34:46.194Z"
       }
     ],
     "estimatedCostUsd": 0
