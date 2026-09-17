@@ -74,8 +74,29 @@ boot. `RunAtLoad` below is the catch-up for that case: the agent loads at login,
 the job runs then, and the pipeline is idempotent, so a duplicate run does
 nothing.
 
-Save as `~/Library/LaunchAgents/com.askakshay.podcasts.plist`, replacing the
-path with wherever this repository lives:
+### One command
+
+```bash
+./scripts/install-macos.sh
+```
+
+It refuses to install a job that would not have worked: no `.env`, not on
+`main`, or a dry run that resolves to the free extractor all stop it before
+anything is loaded. Then it writes the plist with this checkout's real paths,
+lints it with `plutil`, bootstraps it, and runs it once.
+
+```bash
+./scripts/install-macos.sh --print-plist   # show it, write nothing
+./scripts/install-macos.sh --uninstall     # stop and remove
+```
+
+### Or by hand
+
+The installer generates exactly this — it is here to read, not to copy, because
+a snippet nobody executes is a snippet that can point at the wrong script for
+weeks without failing. That is what happened to the previous version of this
+file. Save as `~/Library/LaunchAgents/com.askakshay.podcasts.plist`, replacing
+the path with wherever this repository lives:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -174,11 +195,42 @@ of `RunAtLoad`. Action: `C:\Program Files\Git\bin\bash.exe` with arguments
 - **Node 22+** and **git** on PATH
 - **git push access** — an SSH key or a cached credential. The script does not
   prompt, so a push needing a password fails and leaves the commit local.
-- **A `.env` holding `GROQ_API_KEY`**, if you want the interpretation layer.
+- **A `.env` holding `GROQ_API_KEY`** (`cp .env.example .env`), if you want
+  the interpretation layer.
   Groq's free tier covers this workload. Without a key the pipeline still runs,
   free, on the extractive path — but it will be quieter points than the page
   currently shows, and `morning.sh` warns when it detects that downgrade.
   `.env` is gitignored; never commit it and never put the key in the plist.
+
+## Rotating the key
+
+`GROQ_API_KEY` lives in exactly two places. **Update both, or neither.**
+
+| Where | How |
+|---|---|
+| The Mac | `.env` in the repo root — `cp .env.example .env` if it is missing |
+| CI | `gh secret set GROQ_API_KEY --repo caakshayk1-boop/career` |
+
+Update one and not the other and that half falls back to the free extractive
+path with no error — `config.mjs` resolves a missing key to `extractor: local`
+and carries on. Thinner points, published, nothing reporting it.
+
+Both halves now say so when it happens: `morning.sh` prints a `DEGRADED` warning
+to stderr, and the `podcasts` workflow raises a `::warning::` with the fix in the
+run summary. Neither fails the run, because running free is a legitimate mode —
+but it should be a mode you chose, which is what `EXTRACTOR=local` in `.env`
+means.
+
+After rotating, prove both:
+
+```bash
+./scripts/morning.sh --dry-run            # must print extractor=ai
+gh workflow run podcasts --repo caakshayk1-boop/career
+gh run watch --repo caakshayk1-boop/career    # no "Extractor downgraded" warning
+```
+
+Revoking the old key at <https://console.groq.com/keys> is the last step, not
+the first — do it once both halves are confirmed on the new one.
 
 ## Checking it worked
 

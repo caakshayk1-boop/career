@@ -43,8 +43,12 @@ is present: `GROQ_API_KEY` (free tier, the current default,
 `generator.extractor`, and `scripts/morning.sh` warns if a run is about to
 downgrade from the mode the last one used.
 
-**Where the key lives:** `.env` in the repo root, gitignored, read by
-`scripts/morning.sh`. Never in the plist, never in a committed file.
+**Where the key lives:** two places, and they must agree — `.env` in the repo
+root (gitignored, read by `scripts/morning.sh`) and the `GROQ_API_KEY`
+repository secret. Update one and not the other and that half silently falls
+back to the free path; both now warn when that happens. `cp .env.example .env`
+to start, and see [rotating the key](scripts/SCHEDULING.md#rotating-the-key).
+Never in the plist, never in a committed file.
 
 The pipeline — how points are chosen, what it will not do, and the one thing
 that will bite you — is documented in [`pipeline/README.md`](pipeline/README.md).
@@ -144,9 +148,10 @@ run it before enabling a source.
 
 YouTube refuses caption access to datacentre IPs, so the GitHub Action cannot
 read YouTube shows — but **the same pipeline reads them fine from a home
-connection**. `./scripts/morning.sh` runs it here and pushes the result;
-[`scripts/SCHEDULING.md`](scripts/SCHEDULING.md) has the launchd, systemd and
-Task Scheduler setup. The Action stays on for the RSS shows and for days this
+connection**. `./scripts/install-macos.sh` schedules it here in one command — it refuses to
+install a job that would not have worked — and `./scripts/morning.sh` runs it
+by hand. [`scripts/SCHEDULING.md`](scripts/SCHEDULING.md) has the launchd,
+systemd and Task Scheduler setup. The Action stays on for the RSS shows and for days this
 machine is off.
 
 **Measured, 11–17 Sep 2026: seven scheduled CI runs processed one episode

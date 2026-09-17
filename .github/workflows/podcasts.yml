@@ -105,6 +105,13 @@ jobs:
         if: ${{ inputs.verify_only }}
         run: npm run podcasts:verify || true
 
+      # What mode did the LAST published run use? Captured before this run
+      # overwrites the artifact, so the step after the refresh can tell a
+      # deliberate free run from a key that quietly stopped working.
+      - name: Note the published extractor
+        if: ${{ !inputs.verify_only }}
+        run: echo "EXTRACTOR_BEFORE=$(node -p "(require('./public/podcasts.json').generator||{}).extractor||''")" >> "$GITHUB_ENV"
+
       - name: Refresh
         if: ${{ !inputs.verify_only }}
         env:
@@ -150,6 +157,27 @@ jobs:
           #   ELEVENLABS_API_KEY / R2_BUCKET / R2_ACCESS_KEY_ID /
           #   R2_SECRET_ACCESS_KEY / R2_PUBLIC_BASE
         run: npm run podcasts
+
+      # ── THE ROTATION TRAP ────────────────────────────────────────────────
+      # config.mjs resolves a missing key to the free extractive path with NO
+      # error. So rotating GROQ_API_KEY and updating the Mac's .env but not this
+      # repo's secret — or the reverse — silently halves the quality of the feed
+      # and nothing reports it. morning.sh warns about the Mac half; this is the
+      # CI half. Not a failure: running free is a legitimate mode. But it has to
+      # be a mode somebody CHOSE, which is what EXTRACTOR=local means.
+      - name: Warn if the extractor downgraded
+        if: ${{ !inputs.verify_only }}
+        run: |
+          AFTER=$(node -p "(require('./public/podcasts.json').generator||{}).extractor||''")
+          echo "extractor: ${EXTRACTOR_BEFORE:-unknown} -> ${AFTER}"
+          if [ "$EXTRACTOR_BEFORE" = "ai" ] && [ "$AFTER" = "local" ]; then
+            echo "::warning title=Extractor downgraded::The last published run interpreted points with a model; this one did not. GROQ_API_KEY is missing or rejected in this repo's secrets. Set it, or set EXTRACTOR=local to make the free path deliberate."
+            { echo "### Extractor downgraded"
+              echo "\`ai\` -> \`local\`. \`GROQ_API_KEY\` is missing or rejected in repository secrets."
+              echo ""
+              echo "    gh secret set GROQ_API_KEY --repo caakshayk1-boop/career"
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       # A morning with no new episodes changes nothing, and an empty commit
       # every day would bury the mornings that did produce something.
