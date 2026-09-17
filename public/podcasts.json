@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T00:41:27.511Z",
+  "generatedAt": "2026-09-17T13:32:20.788Z",
   "today": "2026-09-17",
   "retentionDays": 7,
   "days": [
@@ -2650,97 +2650,48 @@
   ],
   "pending": [
     {
-      "id": "desk-dfded789bd87",
-      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
+      "id": "desk-02aab011eda4",
+      "title": "Another Global Crisis? | Houthis Capture Bab el-Mandeb & Choke Saudi Oil Supply! | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=7iLturxzvRY",
       "takeaways": [
-        "NSE generates revenue from transaction charges, options revenue, listing fees, data services, clearing & settlement, and Nifty licensing.",
-        "The video explains the NSE’s business model, financial performance, valuation, industry outlook, risks, and IPO details."
+        "The conflict in West Asia just does not stop.",
+        "First Gaza, then Iran and now its Saudi Arabia that is getting hammered by the Houthis..."
       ],
       "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-0d80e4fb8e8d",
-      "title": "How are Indians earning ₹1 Lakh Buying ₹50 Lakh Cars",
-      "show": "Zero1 by Zerodha",
-      "url": "https://www.youtube.com/watch?v=yzqgyYqAz_0",
+      "id": "desk-10e8d11118e8",
+      "title": "Why Would Someone Leave Bangladesh for India?",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=GKDGiiXph2Y",
       "takeaways": [
-        "Abhishek just got a new car, and this one is special this is a “Luxury Car”.",
-        "But he technically did not buy it, he got it on a lease!"
+        "In the past couple of years, detentions of people living in slums across India’s largest cities – on the suspicion that they are illegal immigrants – have made news, invited outrage and complaints of inconvenience and then, stopped being news.",
+        "The Bharatiya Janata Party’s aggressive hate speech – followed by law enforcement action to remove people deemed “infiltrators” by the likes of home minister Amit Shah in multiple public addresses – focuses on one particular demographic."
       ],
       "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-94a530b3b7a1",
-      "title": "What Went Wrong With Goa?",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
+      "id": "desk-ff3c910d8fec",
+      "title": "“I Feel Attention Span Is A Myth. People Have Always Managed To Read Books” Manu Joseph",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=QCLG6UcJ-fU",
       "takeaways": [
-        "Access the full data and references used in this episode below.",
-        "The episode includes Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
+        "People Have Always Managed To Read Books” Manu Joseph #ANIPodcast #SmitaPrakash #ManuJoseph #Book #AttentionSpan Tune in here: linktr.ee/podcastwithsmitaprakash"
       ],
       "date": "2026-09-17",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-c22c8c9d857b",
-      "title": "Why Some Nifty ETFs Beat Others?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "id": "desk-0a64ca772a62",
+      "title": "4 Months to be Mains Ready! Your UPSC 2027 Preparation Roadmap | UPSC | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=toWp2sKBXr0",
       "takeaways": [
-        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
-        "Turns out, the answer isn’t as straightforward as you might think."
-      ],
-      "date": "2026-09-17",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-1ea3eb67afce",
-      "title": "RBI vs Government: Who Really Controls Money?",
-      "show": "Labour Law Advisor",
-      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
-      "takeaways": [
-        "If you have ever wondered how RBI actually controls banks, inflation, interest rates and even your home loan EMI, then this is the ultimate RBI guide you need to understand how India’s central bank really works.",
-        "RBI's decisions can directly impact your loans, investments, bank deposits and the entire economy You will learn how RBI creates and controls money, the different measures RBI uses to manage India’s financial system, currency management and interventions during banking crises."
-      ],
-      "date": "2026-09-17",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-3a342472d20e",
-      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
-      "takeaways": [
-        "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
-        "It impacts both NRIs and Indian resident investors."
-      ],
-      "date": "2026-09-17",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-26e0deff1237",
-      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
-      "takeaways": [
-        "Karan Datta retired at 47 and is now in his eighth year of retirement.",
-        "He treats certain watch pieces as appreciating assets."
-      ],
-      "date": "2026-09-17",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-0116d1d09ac7",
-      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
-      "takeaways": [
-        "The fastest and most affordable way to upskill yourself in AI is highlighted.",
-        "A live workshop on AI is scheduled for 6th Sept at 7 pm IST."
+        "If your goal is to become Mains-ready by December, now is the time to move beyond simply completing lectures and making notes.",
+        "The focus should be on syllabus completion, answer writing, PYQs, revision and regular testing."
       ],
       "date": "2026-09-17",
       "reason": "over the 8/day cap"
@@ -2755,43 +2706,7 @@
         "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
       ],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 2 days."
-    },
-    {
-      "id": "desk-d119d69c7e4f",
-      "title": "India’s Housing Problem: Too Many Expensive Homes, Too Few Affordable Ones? | Quick Take",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=U1HjrY-X64E",
-      "takeaways": [
-        "India’s Housing Problem: Too Many Expensive Homes, Too Few Affordable Ones?",
-        "| Quick Take #QuickTake #SmitaPrakash #India #RentalHousing #RealEstate #HomeBuyers #UrbanHousing #PropertyMarket Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] U1HjrY-X64E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-2fc719afd73a",
-      "title": "UPSC Syllabus: Know Exactly What You Have to Study | Prelims & Mains | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=1DFdcGyf3kE",
-      "takeaways": [
-        "What exactly do you need to study for the UPSC Civil Services Examination?",
-        "Before starting UPSC preparation, the first step is to understand the complete syllabus and examination pattern."
-      ],
-      "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] 1DFdcGyf3kE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-e28c86e3708b",
-      "title": "The Billion-Dollar Monastery | How Bhutan Fought Poverty With Bitcoins",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=Pb9KiLgqahY",
-      "takeaways": [
-        "A journalist discovered a government‑run Bitcoin mining facility hidden in the Himalayas of Bhutan.",
-        "Bhutan has become one of the largest holders of Bitcoin on the planet."
-      ],
-      "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] Pb9KiLgqahY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
       "id": "desk-14ef1df16961",
@@ -2803,7 +2718,7 @@
         "In this video, we analyse 5 stocks to understand why these stocks corrected sharply, what changed in their businesses, and what could potentially drive a turnaround."
       ],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] RRoNsmry-68: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
       "id": "desk-5886041ee66d",
@@ -2815,31 +2730,171 @@
         "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
       ],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-23e7df01656d",
-      "title": "Will AI Destroy Humanity? | Genuine Fear Or Games Being Played By AI Companies? | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=11QI7boyKQw",
+      "id": "desk-dfded789bd87",
+      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
       "takeaways": [
-        "AI industry leaders such as Anthropic’s Dario Amodei, OpenAI’s Sam Altman and Elon Musk warn that AI could pose an existential threat to humanity.",
-        "They have called for slowing “frontier” AI development to address safety concerns."
+        "NSE generates revenue from transaction charges, options revenue, listing fees, data services, clearing & settlement, and Nifty licensing.",
+        "The episode reviews NSE’s business model, financial performance, valuation, industry outlook, key risks, and IPO details."
       ],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] 11QI7boyKQw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-19d757ecb503",
-      "title": "We Recreated The 2006 Middle Class In 2026",
+      "id": "desk-0d80e4fb8e8d",
+      "title": "How are Indians earning ₹1 Lakh Buying ₹50 Lakh Cars",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=yzqgyYqAz_0",
+      "takeaways": [
+        "Leasing a luxury car comes with specific costs and legal clauses that you need to understand.",
+        "An Excel sheet is provided to help you calculate the numbers and math behind a financial lease."
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-94a530b3b7a1",
+      "title": "What Went Wrong With Goa?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
+      "takeaways": [
+        "The episode includes full data and references for listeners to access while watching."
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-c22c8c9d857b",
+      "title": "Why Some Nifty ETFs Beat Others?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "takeaways": [
+        "Aastha Khurana breaks down four key factors to consider before selecting an ETF.",
+        "Even ETFs that track the same index can have important differences."
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-1ea3eb67afce",
+      "title": "RBI vs Government: Who Really Controls Money?",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
+      "takeaways": [
+        "RBI’s decisions directly affect loans, investments, bank deposits and the overall economy.",
+        "The episode explains how RBI creates and controls money and the measures it uses to manage India’s financial system."
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-3a342472d20e",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "takeaways": [
+        "The FCNR scheme is marketed as offering 11‑14% tax‑free returns.",
+        "The analysis explains that the scheme affects both NRIs and Indian resident investors."
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-26e0deff1237",
+      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
+      "takeaways": [
+        "Most people build a plan to reach financial freedom.",
+        "Very few plan for what happens after."
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-0116d1d09ac7",
+      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
+      "takeaways": [
+        "The fastest and the most affordable way to upskill yourself in AI.",
+        "Live workshop happening on TOMORROW!"
+      ],
+      "date": "2026-09-17",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "gunjanshouts-d654edb4829c",
+      "title": "STAY FOCUSED & IGNORE THE NOISE | GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=KE2YjADcfvA",
+      "takeaways": [],
+      "date": "2026-09-17",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "desk-4a55ec85d533",
+      "title": "Putin’s Warning to the World? | The Arctic Gamble That Could Reshape World Power",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=PK4Ty_cyCMI",
+      "takeaways": [
+        "Russia is heating up twice as fast as the rest of the planet.",
+        "A brand‑new trade route from Asia to Europe is opening as the Arctic melts."
+      ],
+      "date": "2026-09-17",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
+      "id": "desk-28fe524d590d",
+      "title": "How Looking Rich Can Keep You Poor",
       "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=XGja7bJudvQ",
+      "url": "https://www.youtube.com/watch?v=0s8oCWPOQCI",
       "takeaways": [
-        "Housing, education, and gold have become significantly more expensive since 2006, outpacing salary growth.",
-        "The presenter advises three principles: avoid rushing to buy a house, start investing early even with small amounts, and don’t use credit for consumption."
+        "Income and wealth are not the same.",
+        "Spending to impress others can keep you in debt."
       ],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] XGja7bJudvQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "gunjanshouts-9a6007494187",
+      "title": "HOW TO UNDERSTAND YOUR CHILD’S BRAIN & BEHAVIOUR | Dr Schweta Gandhi with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=H0dvn6L_L0s",
+      "takeaways": [],
+      "date": "2026-09-16",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "gunjanshouts-4a6bd22f7842",
+      "title": "WHY REST & RECOVERY IS SO IMPORTANT FOR MUSCLE GROWTH | Shivohaam Bhatt with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=9RCkV48jF3M",
+      "takeaways": [],
+      "date": "2026-09-16",
+      "reason": "transcript unusable: transcript is only 1402 characters"
+    },
+    {
+      "id": "gunjanshouts-07b43092e716",
+      "title": "Foods That Support Healthy Blood Flow & Sexual Function",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=kjNhy9nCDhc",
+      "takeaways": [],
+      "date": "2026-09-16",
+      "reason": "transcript unusable: transcript is only 855 characters"
+    },
+    {
+      "id": "gunjanshouts-0a0a871da627",
+      "title": "Small Things That Make Me More Consistent at the Gym",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=7zvSlyO8gxc",
+      "takeaways": [],
+      "date": "2026-09-16",
+      "reason": "transcript unusable: transcript is only 695 characters"
     }
   ],
   "generator": {
@@ -2850,61 +2905,55 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-17T00:41:27.510Z",
-    "discovered": 904,
+    "at": "2026-09-17T13:32:20.782Z",
+    "discovered": 920,
     "eligible": 8,
     "processed": 0,
-    "skipped": 896,
+    "skipped": 912,
     "failed": 8,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
-        "id": "desk-aafe80a1879c",
-        "message": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 2 days.",
-        "at": "2026-09-17T00:40:59.771Z"
+        "id": "gunjanshouts-d654edb4829c",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-17T13:20:25.460Z"
       },
       {
         "stage": "process",
-        "id": "desk-d119d69c7e4f",
-        "message": "yt-dlp failed: ERROR: [youtube] U1HjrY-X64E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:03.514Z"
+        "id": "gunjanshouts-9a6007494187",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-17T13:28:14.601Z"
       },
       {
         "stage": "process",
-        "id": "desk-2fc719afd73a",
-        "message": "yt-dlp failed: ERROR: [youtube] 1DFdcGyf3kE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:07.932Z"
+        "id": "gunjanshouts-4a6bd22f7842",
+        "message": "transcript unusable: transcript is only 1402 characters",
+        "at": "2026-09-17T13:28:30.364Z"
       },
       {
         "stage": "process",
-        "id": "desk-e28c86e3708b",
-        "message": "yt-dlp failed: ERROR: [youtube] Pb9KiLgqahY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:11.653Z"
+        "id": "gunjanshouts-07b43092e716",
+        "message": "transcript unusable: transcript is only 855 characters",
+        "at": "2026-09-17T13:29:47.566Z"
       },
       {
         "stage": "process",
-        "id": "desk-14ef1df16961",
-        "message": "yt-dlp failed: ERROR: [youtube] RRoNsmry-68: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:15.818Z"
+        "id": "gunjanshouts-0a0a871da627",
+        "message": "transcript unusable: transcript is only 695 characters",
+        "at": "2026-09-17T13:30:13.797Z"
       },
       {
         "stage": "process",
-        "id": "desk-5886041ee66d",
-        "message": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:19.485Z"
+        "id": "desk-4a55ec85d533",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-17T13:31:11.460Z"
       },
       {
         "stage": "process",
-        "id": "desk-23e7df01656d",
-        "message": "yt-dlp failed: ERROR: [youtube] 11QI7boyKQw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:23.405Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-19d757ecb503",
-        "message": "yt-dlp failed: ERROR: [youtube] XGja7bJudvQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-17T00:41:27.502Z"
+        "id": "desk-28fe524d590d",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-17T13:32:20.772Z"
       }
     ],
     "estimatedCostUsd": 0

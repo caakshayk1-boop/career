@@ -18712,6 +18712,152 @@
       "seenAt": "2026-09-16T00:32:59.783Z",
       "updatedAt": "2026-09-17T00:41:07.932Z",
       "reason": "yt-dlp failed: ERROR: [youtube] 1DFdcGyf3kE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "gunjanshouts-a6da32090410": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Which Is Your Dominant Eye? Try This Simple Test!",
+      "id": "gunjanshouts-a6da32090410",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:19:16.883Z",
+      "updatedAt": "2026-09-17T13:19:16.883Z"
+    },
+    "gunjanshouts-f4b6c9e42f9d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Why the Human Eye Is Still Better Than the Best Camera",
+      "id": "gunjanshouts-f4b6c9e42f9d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:19:16.884Z",
+      "updatedAt": "2026-09-17T13:19:16.884Z"
+    },
+    "gunjanshouts-eb407dd17044": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "How to Stop Caring About What People Think | Shalini Passi",
+      "id": "gunjanshouts-eb407dd17044",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:19:16.884Z",
+      "updatedAt": "2026-09-17T13:19:16.884Z"
+    },
+    "gunjanshouts-f10238959108": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Shalini Passi on Confidence, Aging, Manifestation & Self-Love | Shalini Passi with GunjanShouts",
+      "id": "gunjanshouts-f10238959108",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:19:16.884Z",
+      "updatedAt": "2026-09-17T13:19:16.884Z"
+    },
+    "gunjanshouts-ca0325169e0f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Do You Really Need Glasses? Eye Power, LASIK & Vision Explained | Dr Ritin with GunjanShouts",
+      "id": "gunjanshouts-ca0325169e0f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:19:16.884Z",
+      "updatedAt": "2026-09-17T13:19:16.884Z"
+    },
+    "gunjanshouts-d654edb4829c": {
+      "status": "FAILED",
+      "title": "STAY FOCUSED & IGNORE THE NOISE | GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=KE2YjADcfvA",
+      "id": "gunjanshouts-d654edb4829c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:19:16.885Z",
+      "updatedAt": "2026-09-17T13:20:25.460Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "diary-of-a-ceo-33d180bb3928": {
+      "status": "NEEDS_REVIEW",
+      "title": "AI Debate Ed Zitron, Andrew McAfee, Nate Soares, Roman Yampolskiy",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "id": "diary-of-a-ceo-33d180bb3928",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:20:25.470Z",
+      "updatedAt": "2026-09-17T13:27:06.844Z",
+      "reason": "only 3 learnings survived validation (floor is 6)"
+    },
+    "gunjanshouts-9a6007494187": {
+      "status": "FAILED",
+      "title": "HOW TO UNDERSTAND YOUR CHILD’S BRAIN & BEHAVIOUR | Dr Schweta Gandhi with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=H0dvn6L_L0s",
+      "id": "gunjanshouts-9a6007494187",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:27:06.852Z",
+      "updatedAt": "2026-09-17T13:28:14.601Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "gunjanshouts-4a6bd22f7842": {
+      "status": "FAILED",
+      "title": "WHY REST & RECOVERY IS SO IMPORTANT FOR MUSCLE GROWTH | Shivohaam Bhatt with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=9RCkV48jF3M",
+      "id": "gunjanshouts-4a6bd22f7842",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:28:14.610Z",
+      "updatedAt": "2026-09-17T13:28:30.364Z",
+      "reason": "transcript unusable: transcript is only 1402 characters"
+    },
+    "gunjanshouts-07b43092e716": {
+      "status": "FAILED",
+      "title": "Foods That Support Healthy Blood Flow & Sexual Function",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=kjNhy9nCDhc",
+      "id": "gunjanshouts-07b43092e716",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:28:30.370Z",
+      "updatedAt": "2026-09-17T13:29:47.566Z",
+      "reason": "transcript unusable: transcript is only 855 characters"
+    },
+    "gunjanshouts-0a0a871da627": {
+      "status": "FAILED",
+      "title": "Small Things That Make Me More Consistent at the Gym",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=7zvSlyO8gxc",
+      "id": "gunjanshouts-0a0a871da627",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:29:47.574Z",
+      "updatedAt": "2026-09-17T13:30:13.797Z",
+      "reason": "transcript unusable: transcript is only 695 characters"
+    },
+    "desk-4a55ec85d533": {
+      "status": "FAILED",
+      "title": "Putin’s Warning to the World? | The Arctic Gamble That Could Reshape World Power",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=PK4Ty_cyCMI",
+      "id": "desk-4a55ec85d533",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:30:13.804Z",
+      "updatedAt": "2026-09-17T13:31:11.460Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-28fe524d590d": {
+      "status": "FAILED",
+      "title": "How Looking Rich Can Keep You Poor",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=0s8oCWPOQCI",
+      "id": "desk-28fe524d590d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:31:11.480Z",
+      "updatedAt": "2026-09-17T13:32:20.772Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }
