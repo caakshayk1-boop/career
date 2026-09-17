@@ -30,15 +30,21 @@ to read it back in the passage it came from. Seven days, then it is gone.
 is why nothing on it can be made up — and also why there is no commentary on
 what any of it means. It selects sentences; it does not write them.
 
-**It costs nothing to run.** No API key, no model, no transcription bill, no npm
-dependency. Transcripts come from what shows already publish
-(`<podcast:transcript>` or a YouTube caption track) and the points are chosen by
-a scoring function in this repo. A morning run is about thirty seconds of GitHub
-Actions time and prints `≈ $0.000`.
+**It can run on nothing.** With no key configured, transcripts come from what
+shows already publish (`<podcast:transcript>` or a YouTube caption track), the
+points are chosen by a scoring function in this repo, and the run prints
+`≈ $0.000`.
 
-The paid interpretation layer still exists behind a flag — `EXTRACTOR=ai` plus an
-`ANTHROPIC_API_KEY` adds ranking, a rationale per point and a written summary at
-roughly $0.50 an episode. Nothing else changes.
+**What it actually runs on today is Groq's free tier.** The interpretation layer
+— ranking, a rationale per point, a written summary — turns itself on when a key
+is present: `GROQ_API_KEY` (free tier, the current default,
+`groq:openai/gpt-oss-120b`) or `ANTHROPIC_API_KEY` at roughly $0.50 an episode.
+`EXTRACTOR` overrides both. The published artifact records which one ran, in
+`generator.extractor`, and `scripts/morning.sh` warns if a run is about to
+downgrade from the mode the last one used.
+
+**Where the key lives:** `.env` in the repo root, gitignored, read by
+`scripts/morning.sh`. Never in the plist, never in a committed file.
 
 The pipeline — how points are chosen, what it will not do, and the one thing
 that will bite you — is documented in [`pipeline/README.md`](pipeline/README.md).
@@ -74,8 +80,8 @@ npx wrangler dev
 
 Or any static server — `python3 -m http.server --directory public`. There is
 nothing to compile. The one dependency (`@anthropic-ai/sdk`) is loaded on demand
-by the optional paid extractor only — the default pipeline runs from a bare
-checkout with no `npm install` at all.
+by the Anthropic extractor only — Groq is called over plain `fetch`, so the
+pipeline runs from a bare checkout with no `npm install` at all.
 
 ```bash
 npm run check              # load all three pages in a real browser and assert behaviour
@@ -139,9 +145,16 @@ run it before enabling a source.
 YouTube refuses caption access to datacentre IPs, so the GitHub Action cannot
 read YouTube shows — but **the same pipeline reads them fine from a home
 connection**. `./scripts/morning.sh` runs it here and pushes the result;
-[`scripts/SCHEDULING.md`](scripts/SCHEDULING.md) has the launchd, cron and Task
-Scheduler setup. The Action stays on for the RSS shows and for days this machine
-is off.
+[`scripts/SCHEDULING.md`](scripts/SCHEDULING.md) has the launchd, systemd and
+Task Scheduler setup. The Action stays on for the RSS shows and for days this
+machine is off.
+
+**Measured, 11–17 Sep 2026: seven scheduled CI runs processed one episode
+between them.** Everything published that week came from manual runs on the Mac.
+Until the local job is scheduled, the feed does not update — so `morning.sh`
+exits `2` when episodes were eligible and none could be read, and the page says
+*"The last run read nothing new"* above the feed rather than re-serving the
+cache in silence.
 
 ## State
 

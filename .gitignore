@@ -2,3 +2,12 @@ node_modules/
 .wrangler/
 .dev.vars
 pipeline/.cache/
+
+# THE MORNING JOB'S KEY LIVES HERE AND MUST NEVER BE COMMITTED.
+# scripts/morning.sh sources .env for GROQ_API_KEY. The file was untracked but
+# NOT ignored, so a single `git add .` in this repo would have staged a live
+# API key — and this repo is pushed to GitHub. Untracked is not the same as
+# ignored, and only one of the two survives a careless add.
+.env
+.env.*
+!.env.example
