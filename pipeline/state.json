@@ -20932,11 +20932,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:23:34.099Z",
-      "updatedAt": "2026-09-17T13:24:40.517Z",
+      "updatedAt": "2026-09-17T13:43:30.914Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-33d180bb3928": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "AI Debate Ed Zitron, Andrew McAfee, Nate Soares, Roman Yampolskiy",
       "show": "The Diary Of A CEO",
       "url": "",
@@ -20944,11 +20944,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:24:40.525Z",
-      "updatedAt": "2026-09-17T13:31:23.007Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-17T13:43:31.050Z",
+      "reason": "only 3 learnings survived validation (floor is 6)"
     },
     "gunjanshouts-9a6007494187": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "HOW TO UNDERSTAND YOUR CHILD’S BRAIN & BEHAVIOUR | Dr Schweta Gandhi with GunjanShouts",
       "show": "GunjanShouts",
       "url": "https://www.youtube.com/watch?v=H0dvn6L_L0s",
@@ -20956,11 +20956,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:31:23.029Z",
-      "updatedAt": "2026-09-17T13:31:27.551Z",
+      "updatedAt": "2026-09-17T13:43:31.058Z",
       "reason": "transcript unusable: transcript is only 2212 characters"
     },
     "gunjanshouts-4a6bd22f7842": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "WHY REST & RECOVERY IS SO IMPORTANT FOR MUSCLE GROWTH | Shivohaam Bhatt with GunjanShouts",
       "show": "GunjanShouts",
       "url": "https://www.youtube.com/watch?v=9RCkV48jF3M",
@@ -20968,11 +20968,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:31:27.559Z",
-      "updatedAt": "2026-09-17T13:31:27.560Z",
+      "updatedAt": "2026-09-17T13:43:31.058Z",
       "reason": "transcript unusable: transcript is only 1402 characters"
     },
     "gunjanshouts-07b43092e716": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "Foods That Support Healthy Blood Flow & Sexual Function",
       "show": "GunjanShouts",
       "url": "https://www.youtube.com/watch?v=kjNhy9nCDhc",
@@ -20980,11 +20980,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:31:27.567Z",
-      "updatedAt": "2026-09-17T13:31:27.567Z",
+      "updatedAt": "2026-09-17T13:43:31.059Z",
       "reason": "transcript unusable: transcript is only 855 characters"
     },
     "gunjanshouts-0a0a871da627": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "Small Things That Make Me More Consistent at the Gym",
       "show": "GunjanShouts",
       "url": "https://www.youtube.com/watch?v=7zvSlyO8gxc",
@@ -20992,7 +20992,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:31:27.576Z",
-      "updatedAt": "2026-09-17T13:31:27.576Z",
+      "updatedAt": "2026-09-17T13:43:31.059Z",
       "reason": "transcript unusable: transcript is only 695 characters"
     },
     "desk-4a55ec85d533": {
@@ -21135,8 +21135,20 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:33:27.094Z",
-      "updatedAt": "2026-09-17T13:34:46.194Z",
+      "updatedAt": "2026-09-17T13:44:49.399Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-02aab011eda4": {
+      "status": "FAILED",
+      "title": "Another Global Crisis? | Houthis Capture Bab el-Mandeb & Choke Saudi Oil Supply! | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=7iLturxzvRY",
+      "id": "desk-02aab011eda4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T13:44:49.407Z",
+      "updatedAt": "2026-09-17T13:46:07.538Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     }
   }
 }
