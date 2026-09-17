@@ -112,7 +112,13 @@ async function main() {
            until it does; a video with no caption track never will be. A 429
            is deliberately NOT here — that is this job asking too fast, which
            is our fault and is worth retrying after the pacing fix. */
-        const permanent = /no caption|captionTracks|no subtitles|video is unavailable|private video|members-only|removed by the uploader|no usable audio|is not available/i.test(why);
+        /* "transcript is only N characters" is a property of the VIDEO, not of this
+           attempt: transcript.mjs raises it below 6,000 chars, and a 695-character
+           clip is not going to lengthen. Four GunjanShouts shorts failed this way
+           on 2026-09-17 and, as FAILED rather than SKIPPED, would have been retried
+           every morning forever — half the 8/day cap spent re-reading the same
+           four clips and re-failing on them. */
+        const permanent = /no caption|captionTracks|no subtitles|video is unavailable|private video|members-only|removed by the uploader|no usable audio|is not available|transcript is only \d+ characters/i.test(why);
         if (permanent) {
           log.info("process", `${ep.id}: ${why.slice(0, 120)} — skipped for good, no provider can read it`);
           remember(state, ep.id, { status: S.SKIPPED, reason: why.slice(0, 300),

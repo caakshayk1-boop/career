@@ -170,12 +170,35 @@ const IDEA_PROPS = {
 };
 const IDEA_KEYS = Object.keys(IDEA_PROPS);
 
+/* ── WHAT THE MODEL MUST ACTUALLY RETURN ────────────────────────────────────
+   Requiring all eight cost a whole episode. On the 2026-09-17 run every chunk
+   of a 145-minute Diary Of A CEO episode was rejected 400 by Groq — most of
+   them "`/candidates/0`: missing property" — and the episode published
+   nothing. gpt-oss-20b omits a field it has nothing to say for rather than
+   sending "", and `action` is DOCUMENTED as "one concrete action, or empty
+   string", so the schema was rejecting exactly what the prompt invited.
+
+   These five are load-bearing: without them there is no point to show. The
+   other three are filled with safe defaults in extract.mjs, and the page
+   already treats them as optional (`l.action ? ... : ""`).
+
+   The Anthropic path sends strict:true, which enforces additionalProperties
+   and the declared `required` — it does NOT demand every property be
+   required, so this is safe there too. */
+const IDEA_REQUIRED = ["headline", "idea", "evidence", "timestamp", "kind"];
+
 export const SCHEMA_CANDIDATES = {
   type: "object",
   properties: {
     candidates: {
-      type: "array", maxItems: 8,
-      items: { type: "object", properties: IDEA_PROPS, required: IDEA_KEYS, additionalProperties: false },
+      /* NO maxItems. It was 8, the prompt says "between zero and eight", and a
+         model that returns nine had the whole call rejected with
+         "`/candidates`: maxItems: got 9" — one surplus idea destroying eight
+         good ones. A ceiling the model has to COUNT to is not a ceiling worth
+         enforcing server-side. The prompt still asks for eight and extract.mjs
+         clamps what comes back, so the limit holds without being fatal. */
+      type: "array",
+      items: { type: "object", properties: IDEA_PROPS, required: IDEA_REQUIRED, additionalProperties: false },
     },
   },
   required: ["candidates"],
@@ -189,7 +212,7 @@ export const SCHEMA_RANKED = {
       items: {
         type: "object",
         properties: { rank: { type: "integer", minimum: 1 }, ...IDEA_PROPS },
-        required: ["rank", ...IDEA_KEYS],
+        required: ["rank", ...IDEA_REQUIRED],
         additionalProperties: false,
       },
     },

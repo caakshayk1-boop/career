@@ -103,6 +103,11 @@ export const cfg = {
   extractor: process.env.EXTRACTOR
     || ((process.env.ANTHROPIC_API_KEY || process.env.GROQ_API_KEY) ? "ai" : "local"),
   chunkChars: int(process.env.CHUNK_CHARS, 14000),
+  /* How many chunks are read at once. Bounded by the cheap model's TOKENS PER
+     MINUTE, not by how fast the machine is: 4 x 14,000 chars is ~14,000 input
+     tokens in a burst against an 8,000 TPM ceiling, which is a 429 every time.
+     Raise it the day the tier changes, and measure rather than guess. */
+  chunkConcurrency: int(process.env.CHUNK_CONCURRENCY, 2),
   chunkOverlapChars: int(process.env.CHUNK_OVERLAP_CHARS, 900),
 
   /* ── PROVIDERS ──────────────────────────────────────────────────────────

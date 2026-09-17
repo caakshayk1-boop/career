@@ -99,7 +99,11 @@ export async function extract(ai, ep, transcript) {
      The cheap model does the reading. This is where the volume is — a 2-hour
      episode is a dozen calls — and the task is recall, not judgement: find
      anything that might qualify. The expensive model decides what survives. */
-  const perChunk = await mapLimit(chunks, 4, async (c) => {
+  /* CONCURRENCY IS A TOKENS-PER-MINUTE BUDGET, NOT A SPEED DIAL. Four chunks
+     of ~14,000 characters in flight is roughly 14,000 input tokens in one
+     burst, against gpt-oss-20b's 8,000 TPM ceiling on this tier — so a share
+     of every long episode was refused 429 before it was read. Two fits. */
+  const perChunk = await mapLimit(chunks, cfg.chunkConcurrency, async (c) => {
     try {
       const r = await ai.json({
         system: SYSTEM_EXTRACT,
@@ -108,7 +112,14 @@ export async function extract(ai, ep, transcript) {
         description: "Record the ideas in this section that are worth a stranger's time.",
         cheap: true, effort: "medium",
       });
-      return (r.candidates || []).map((x) => ({ ...x, chunkIndex: c.index }));
+      /* Clamp here rather than in the schema, and fill the three fields the
+         model is allowed to omit. An absent `why` is a thinner point; an
+         absent `why` that 400s the call is no point at all. */
+      return (r.candidates || []).slice(0, 8).map((x) => ({
+        why: "", action: "", confidence: 0.6,
+        ...x,
+        chunkIndex: c.index,
+      }));
     } catch (e) {
       /* One failed chunk is a hole in coverage, not a failed episode. Ten
          failed chunks will be caught by the floor check below. */
