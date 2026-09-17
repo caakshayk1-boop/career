@@ -165,7 +165,18 @@ jobs:
           fi
           COUNT=$(node -p "require('./public/podcasts.json').episodes.length")
           POINTS=$(node -p "require('./public/podcasts.json').episodes.reduce((n,e)=>n+e.learnings.length,0)")
-          git commit -m "podcasts: morning refresh — ${COUNT} episode(s), ${POINTS} points"
+          PROC=$(node -p "require('./public/podcasts.json').run.processed")
+          FAIL=$(node -p "require('./public/podcasts.json').run.failed")
+          # A run that read NOTHING still rewrites the artifact and still commits,
+          # because generatedAt and the pending list change. Saying "morning
+          # refresh — 11 episodes" on such a run is how seven consecutive days of
+          # reading nothing looked like seven successful mornings in the log.
+          # The subject line states what the run actually did.
+          if [ "$PROC" -eq 0 ]; then
+            git commit -m "podcasts: read nothing — ${FAIL} failed, still serving ${COUNT} episode(s)"
+          else
+            git commit -m "podcasts: morning refresh — +${PROC} read, ${COUNT} episode(s), ${POINTS} points"
+          fi
           # The deploy workflow runs on push to main and ships the new artifact.
           for i in 1 2 3 4; do
             git push && break

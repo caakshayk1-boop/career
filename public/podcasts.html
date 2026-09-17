@@ -239,6 +239,19 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
 .pend ul{margin:9px 0 0;padding:0 0 0 16px;display:grid;gap:5px}
 .pend li{font-size:var(--t-4);color:var(--muted);line-height:1.6}
 
+.pend .why{display:block;font:400 var(--t-3)/1.5 var(--ui);color:var(--muted);margin-top:6px}
+.pend .why i{font-style:normal;color:var(--dim);font-family:var(--mono);font-size:var(--t-1);
+  letter-spacing:var(--ls-wide);text-transform:uppercase}
+.pgrp{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;
+  color:var(--dim);margin:16px 0 8px}
+.pgrp:first-of-type{margin-top:4px}
+/* The page used to look alive while nothing could enter it. When a run reads
+   nothing this says so, with the date, rather than re-publishing the cache in
+   silence. */
+.runwarn{max-width:var(--measure);border:1px solid var(--line);border-left:3px solid var(--warn);
+  background:var(--warn-soft);border-radius:0 var(--r-3) var(--r-3) 0;padding:13px 15px;margin:0 0 18px;
+  font-size:var(--t-4);line-height:1.65;color:var(--muted)}
+.runwarn b{color:var(--text)}
 .empty{padding:36px 20px;text-align:center;color:var(--dim);font-size:var(--t-5);line-height:1.7;
   border:1px dashed var(--line2);border-radius:var(--r-4);max-width:var(--measure)}
 .empty b{display:block;color:var(--text);font-size:var(--t-6);margin-bottom:7px}
@@ -393,11 +406,11 @@ function renderIndex(doc){
 
   if (!eps.length) {
     const p = (doc.pending || []).length;
-    meta.innerHTML = p ? '<span class="pill">' + p + " listed, none readable</span>"
+    meta.innerHTML = p ? '<span class="pill">' + p + " listed, not read</span>"
                        : '<span class="pill">nothing published yet</span>';
     feed.innerHTML = '<div class="empty"><b>' +
       (p ? "Nothing could be read yet." : "No conversations processed yet.") + "</b>" +
-      (p ? "The episodes below are in the feed but publish no transcript and are not on YouTube."
+      (p ? "The episodes below are listed with the date each was seen and the reason it could not be read."
          : "The morning job publishes here. If this is still empty after a run, check the workflow log " +
            "&mdash; the run reports its own failures rather than publishing an empty page quietly.") +
       "</div>" + pendingBlock(doc);
@@ -437,10 +450,32 @@ function renderIndex(doc){
   }
   const dates = [...byDate.keys()].sort().reverse();
 
-  feed.innerHTML = dates.map(date =>
+  feed.innerHTML = runBanner(doc) + dates.map(date =>
     '<section class="day"><div class="day-h"><b>' + esc(dayLabel(date)) + "</b><span>" +
     esc(prettyDate(date)) + "</span></div>" +
     byDate.get(date).map(epCard).join("") + "</section>").join("") + pendingBlock(doc);
+}
+
+/**
+ * The honest state of the last run.
+ *
+ * A run that reads nothing still rewrites this artifact and still commits, so
+ * the page renders the same cached episodes and looks refreshed. It is not.
+ * Eligible-but-processed-none is the signal that the pipeline is alive and
+ * failing, which is the one state the page never used to show.
+ */
+function runBanner(doc){
+  const r = doc.run || {};
+  const elig = r.eligible || 0, proc = r.processed || 0, fail = r.failed || 0;
+  if (!elig || proc) return "";
+  const when = r.at
+    ? new Date(r.at).toLocaleString("en-GB", { timeZone: MYT, day: "numeric", month: "short",
+                                               hour: "2-digit", minute: "2-digit" }) + " MYT"
+    : "the last run";
+  return '<div class="runwarn"><b>The last run read nothing new.</b> ' + elig +
+    " episode" + (elig === 1 ? " was" : "s were") + " eligible and " + fail +
+    " failed at the transcript stage, so everything below is from an earlier run. Checked " +
+    esc(when) + ".</div>";
 }
 
 /**
@@ -451,22 +486,64 @@ function renderIndex(doc){
  * REMOVING content — which is exactly what the first version of this did, and
  * the reason this block exists.
  */
+/* Why an episode was not read, in the reader\u2019s terms. The raw reason is a
+   pipeline string ("yt-dlp failed: ERROR: [youtube] \u2026 Sign in to confirm") and
+   is no use on a page; the class it belongs to is. Order here is the order the
+   groups render in: the ones that will fix themselves come first. */
+const PEND_KINDS = [
+  { id: "cap",   test: /over the \d+\/day cap/i,
+    label: "Held for the next run \u2014 over the daily cap",
+    note: "Readable. The cap is the only brake on a runaway feed, so these queue rather than drop, " +
+          "and the next run picks them up." },
+  { id: "auth",  test: /sign in to confirm|login_required|not a bot|cookies/i,
+    label: "YouTube refused the caption request",
+    note: "YouTube does not serve captions to datacentre addresses, and the morning job runs from one. " +
+          "The same episode reads fine from a home connection." },
+  { id: "live",  test: /live event|premieres|will begin in/i,
+    label: "Not aired yet",
+    note: "Scheduled but not broadcast, so there is no transcript to read. It becomes eligible once it airs." },
+  { id: "notx",  test: /no caption|no transcript|no usable/i,
+    label: "No transcript published",
+    note: "The show publishes neither a transcript nor a caption track, so there is nothing to read for free." },
+];
+const pendKind = (reason) =>
+  PEND_KINDS.find(k => k.test.test(reason || "")) ||
+  { id: "other", label: "Could not be read", note: "The run recorded a reason against each of these." };
+
 function pendingBlock(doc){
   const p = (doc.pending || []).filter(x => x && x.title);
   if (!p.length) return "";
+
+  /* Grouped by WHY, because "over the daily cap" and "YouTube refused" are not
+     the same news: the first fixes itself, the second never will from CI. The
+     page used to state one reason for all of them, and it was the wrong one. */
+  const groups = new Map();
+  for (const e of p) {
+    const k = pendKind(e.reason);
+    if (!groups.has(k.id)) groups.set(k.id, { kind: k, items: [] });
+    groups.get(k.id).items.push(e);
+  }
+  const order = [...PEND_KINDS.map(k => k.id), "other"];
+  const shown = order.filter(id => groups.has(id)).map(id => groups.get(id));
+
   return '<section class="day"><div class="day-h"><b>Listed, not read</b><span>' +
     p.length + " episode" + (p.length === 1 ? "" : "s") + "</span></div>" +
-    '<p class="pnote">These are in the feed but publish no transcript and are not on YouTube, ' +
-    "so there is nothing to read for free. They are here because they were always here \u2014 " +
-    "the title and whatever the feed carried, unchanged.</p>" +
-    p.map(e =>
-      '<div class="pend">' +
-      (e.url ? '<b><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + "</a></b>"
-             : "<b>" + esc(e.title) + "</b>") +
-      "<span>" + esc(e.show || "") + "</span>" +
-      ((e.takeaways || []).length
-        ? "<ul>" + e.takeaways.map(t => "<li>" + esc(t) + "</li>").join("") + "</ul>" : "") +
-      "</div>").join("") + "</section>";
+    '<p class="pnote">Every episode the feed named is either read into points or listed here with ' +
+    "the date it was seen and the reason it could not be read. Nothing is dropped for being " +
+    "unreadable \u2014 the title and whatever the feed carried stay, unchanged.</p>" +
+    shown.map(g =>
+      '<p class="pgrp">' + esc(g.kind.label) + " \u00b7 " + g.items.length + "</p>" +
+      '<p class="pnote">' + esc(g.kind.note) + "</p>" +
+      g.items.map(e =>
+        '<div class="pend">' +
+        (e.url ? '<b><a href="' + esc(e.url) + '" target="_blank" rel="noopener">' + esc(e.title) + "</a></b>"
+               : "<b>" + esc(e.title) + "</b>") +
+        "<span>" + esc(e.show || "") + (e.date ? " \u00b7 " + esc(prettyDate(e.date)) : "") + "</span>" +
+        ((e.takeaways || []).length
+          ? "<ul>" + e.takeaways.map(t => "<li>" + esc(t) + "</li>").join("") + "</ul>" : "") +
+        (e.reason ? '<span class="why"><i>reason</i> ' + esc(e.reason) + "</span>" : "") +
+        "</div>").join("")
+    ).join("") + "</section>";
 }
 
 function epCard(e){
