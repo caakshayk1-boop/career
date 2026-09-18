@@ -158,6 +158,11 @@ export const cfg = {
    * the one whose job is volume. This is the same split config already
    * describes for Anthropic — it simply never reached Groq. */
   groqModelCheap: process.env.GROQ_MODEL_CHEAP || "openai/gpt-oss-20b",
+  /* Overridable ONLY so the refusal paths can be exercised against a local
+     server. Groq answers the same refusal under two status codes and the
+     handler for one of them was wrong for months, undetectably, because
+     nothing could reach that branch without the live endpoint. */
+  groqUrl: process.env.GROQ_URL || "https://api.groq.com/openai/v1/chat/completions",
   /* gpt-oss models think before answering and bill those hidden tokens to
      max_tokens. "low" is what makes the budget reach the answer. Ignored by
      models that do not reason, so it is safe to send unconditionally. */

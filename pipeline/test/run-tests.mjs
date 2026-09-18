@@ -529,6 +529,63 @@ group("AI failures");
 }
 
 {
+  /* THE REFUSAL PATHS, AGAINST A REAL SERVER. Groq sends the per-minute
+     refusal as 429 for one bucket and 413 for the other; the 413 was
+     unhandled and silently cost two already-read episodes. Nothing could
+     reach that branch before — the endpoint was a hard-coded constant. */
+  const seen = [];
+  const toolCall = (args) => JSON.stringify({
+    choices: [{ message: { tool_calls: [{ function: { name: "record_ranked", arguments: JSON.stringify(args) } }] } }],
+    usage: { prompt_tokens: 10, completion_tokens: 10 },
+  });
+  let mode = "tpm";
+  const srv = createServer((req, res) => {
+    let raw = "";
+    req.on("data", (d) => { raw += d; });
+    req.on("end", () => {
+      const body = JSON.parse(raw || "{}");
+      seen.push({ url: req.url, maxTokens: body.max_tokens });
+      if (mode === "tpm" && seen.length === 1) {
+        res.writeHead(413, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: { message: "Request too large for model `openai/gpt-oss-20b` on tokens per minute (TPM): Limit 8000, Requested 8500" } }));
+        return;
+      }
+      if (mode === "other413") {
+        res.writeHead(413, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: { message: "payload exceeds maximum size" } }));
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(toolCall({ ranked: [1] }));
+    });
+  });
+  await new Promise((r) => srv.listen(0, "127.0.0.1", r));
+  const port = srv.address().port;
+
+  const saved = { url: cfg.groqUrl, key: cfg.groqKey, gap: cfg.groqGapMs };
+  cfg.groqUrl = `http://127.0.0.1:${port}/v1`;
+  cfg.groqKey = "test-key";
+  cfg.groqGapMs = 0;
+  const ai = await makeAI("groq");
+  const ask = () => ai.json({ system: "s", user: "u", name: "record_ranked", schema: { type: "object", properties: { ranked: { type: "array", items: { type: "number" } } } } });
+
+  const out = await ask();
+  ok("a 413 TPM refusal is retried, not thrown", eq(out, { ranked: [1] }), JSON.stringify(out));
+  ok("the retry asks for fewer output tokens",
+     seen.length === 2 && seen[1].maxTokens < seen[0].maxTokens, JSON.stringify(seen));
+
+  mode = "other413"; seen.length = 0;
+  const began = Date.now();
+  let msg = "";
+  try { await ask(); } catch (e) { msg = e.message; }
+  const took = Date.now() - began;
+  ok("a 413 that is NOT a size refusal fails instead of sleeping", /413/.test(msg) && took < 5000, `${took}ms ${msg}`);
+
+  cfg.groqUrl = saved.url; cfg.groqKey = saved.key; cfg.groqGapMs = saved.gap;
+  await new Promise((r) => srv.close(r));
+}
+
+{
   const ai = await makeAI("mock");
   const out = await extract(ai, EPISODE, TRANSCRIPT);
   ok("the mock provider drives a full extraction", out.learnings.length > 0, out.learnings.length);

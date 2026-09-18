@@ -133,7 +133,7 @@ const PROVIDERS = {
    */
   async groq() {
     if (!cfg.groqKey) throw new Error("GROQ_API_KEY is not set");
-    const URL = "https://api.groq.com/openai/v1/chat/completions";
+    const URL = cfg.groqUrl;
     let chain = Promise.resolve(), last = 0;
     const nap = (ms) => new Promise((r) => setTimeout(r, ms));
 
