@@ -18662,8 +18662,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:43.778Z",
-      "updatedAt": "2026-09-17T00:40:59.771Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 2 days."
+      "updatedAt": "2026-09-18T00:14:19.939Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 38 hours."
     },
     "desk-a21e9dfc084e": {
       "status": "NEEDS_REVIEW",
@@ -20932,7 +20932,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:23:34.099Z",
-      "updatedAt": "2026-09-17T13:43:30.914Z",
+      "updatedAt": "2026-09-17T23:13:39.904Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-33d180bb3928": {
@@ -21135,7 +21135,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:33:27.094Z",
-      "updatedAt": "2026-09-17T13:44:49.399Z",
+      "updatedAt": "2026-09-17T23:25:31.676Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-02aab011eda4": {
@@ -21147,8 +21147,56 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:44:49.407Z",
-      "updatedAt": "2026-09-17T13:46:07.538Z",
+      "updatedAt": "2026-09-17T23:41:56.862Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
+    },
+    "desk-10e8d11118e8": {
+      "status": "FAILED",
+      "title": "Why Would Someone Leave Bangladesh for India?",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=GKDGiiXph2Y",
+      "id": "desk-10e8d11118e8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T23:41:56.870Z",
+      "updatedAt": "2026-09-17T23:57:37.705Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "desk-ff3c910d8fec": {
+      "status": "FAILED",
+      "title": "“I Feel Attention Span Is A Myth. People Have Always Managed To Read Books” Manu Joseph",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=QCLG6UcJ-fU",
+      "id": "desk-ff3c910d8fec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T23:57:37.714Z",
+      "updatedAt": "2026-09-17T23:57:43.924Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-0a64ca772a62": {
+      "status": "FAILED",
+      "title": "4 Months to be Mains Ready! Your UPSC 2027 Preparation Roadmap | UPSC | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=toWp2sKBXr0",
+      "id": "desk-0a64ca772a62",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-17T23:57:43.948Z",
+      "updatedAt": "2026-09-18T00:14:06.546Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "gunjanshouts-454212304ae6": {
+      "status": "FAILED",
+      "title": "A Healthy Relationship Needs More Than Sex | Dr Sankalp Jain with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=rSuUkS1bZd4",
+      "id": "gunjanshouts-454212304ae6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:14:19.946Z",
+      "updatedAt": "2026-09-18T00:26:49.118Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }
