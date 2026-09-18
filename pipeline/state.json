@@ -15258,10 +15258,10 @@
       "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
       "id": "desk-3a342472d20e",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-10T14:49:26.862Z",
-      "updatedAt": "2026-09-14T00:18:07.308Z",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "updatedAt": "2026-09-18T16:56:17.023Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "desk-338f935c708b": {
       "status": "FAILED",
@@ -15344,7 +15344,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:36.959Z",
-      "updatedAt": "2026-09-18T16:35:17.273Z",
+      "updatedAt": "2026-09-18T16:56:07.011Z",
       "payload": {
         "id": "diary-of-a-ceo-c783a6dfa547",
         "sourceId": "diary-of-a-ceo",
@@ -15681,7 +15681,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:37.498Z",
-      "updatedAt": "2026-09-18T16:35:19.466Z",
+      "updatedAt": "2026-09-18T16:56:09.509Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-c22c8c9d857b": {
@@ -15691,10 +15691,10 @@
       "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
       "id": "desk-c22c8c9d857b",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:39.097Z",
-      "updatedAt": "2026-09-15T00:47:14.155Z",
-      "reason": "yt-dlp is not installed on this machine (brew install yt-dlp)"
+      "updatedAt": "2026-09-18T16:56:12.010Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "desk-55a5b39c122e": {
       "status": "PUBLISHED",
@@ -16711,7 +16711,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-13T00:04:08.671Z",
-      "updatedAt": "2026-09-18T16:35:05.896Z",
+      "updatedAt": "2026-09-18T16:56:02.110Z",
       "reason": "no candidate ideas found in the transcript",
       "payload": {
         "id": "desk-dfded789bd87",
@@ -18239,7 +18239,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:46.148Z",
-      "updatedAt": "2026-09-18T16:34:26.229Z",
+      "updatedAt": "2026-09-18T16:55:34.495Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-23e7df01656d": {
@@ -21029,7 +21029,7 @@
       }
     },
     "desk-28fe524d590d": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "How Looking Rich Can Keep You Poor",
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=0s8oCWPOQCI",
@@ -21037,8 +21037,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:33:27.094Z",
-      "updatedAt": "2026-09-18T16:33:29.397Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-18T16:54:34.154Z",
+      "reason": "only 3 learnings survived validation (floor is 6)"
     },
     "desk-02aab011eda4": {
       "status": "FAILED",
@@ -21628,7 +21628,7 @@
       }
     },
     "desk-750b1a69b795": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "India – Size And Location | Class 9 Geography, Chapter 1 | NCERT Geography | Drishti IAS",
       "show": "Drishti IAS",
       "url": "https://www.youtube.com/watch?v=l0RE4--XgEM",
@@ -21636,8 +21636,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T15:52:18.266Z",
-      "updatedAt": "2026-09-18T16:33:18.104Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-18T16:54:08.265Z",
+      "reason": "only 2 learnings survived validation (floor is 6)"
     },
     "desk-98119e45f098": {
       "status": "NEEDS_REVIEW",
@@ -21684,7 +21684,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:33:41.096Z",
-      "updatedAt": "2026-09-18T16:34:18.713Z",
+      "updatedAt": "2026-09-18T16:55:26.991Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "gunjanshouts-21290098a302": {
@@ -21696,7 +21696,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:34:26.246Z",
-      "updatedAt": "2026-09-18T16:34:56.156Z",
+      "updatedAt": "2026-09-18T16:55:57.004Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "gunjanshouts-11ab217dded8": {

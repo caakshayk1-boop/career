@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T16:35:19.490Z",
+  "generatedAt": "2026-09-18T16:56:17.044Z",
   "today": "2026-09-19",
   "retentionDays": 7,
   "days": [
@@ -2635,54 +2635,6 @@
   ],
   "pending": [
     {
-      "id": "desk-c22c8c9d857b",
-      "title": "Why Some Nifty ETFs Beat Others?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
-      "takeaways": [
-        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
-        "Turns out, the answer isn’t as straightforward as you might think."
-      ],
-      "date": "2026-09-19",
-      "reason": "over the 20/day cap"
-    },
-    {
-      "id": "desk-3a342472d20e",
-      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
-      "takeaways": [
-        "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
-        "It affects both NRIs and Indian resident investors."
-      ],
-      "date": "2026-09-19",
-      "reason": "over the 20/day cap"
-    },
-    {
-      "id": "desk-750b1a69b795",
-      "title": "India – Size And Location | Class 9 Geography, Chapter 1 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=l0RE4--XgEM",
-      "takeaways": [
-        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 9 Geography, Chapter 1 – “India – Size And Location” in a simple, engaging, and exam-oriented manner.",
-        "This chapter helps students understand India’s geographical location, size, extent, latitudinal and longitudinal extent, neighbouring countries, and India’s strategic position in the world."
-      ],
-      "date": "2026-09-19",
-      "reason": "no candidate ideas found in the transcript"
-    },
-    {
-      "id": "desk-28fe524d590d",
-      "title": "How Looking Rich Can Keep You Poor",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=0s8oCWPOQCI",
-      "takeaways": [
-        "Income and wealth are not the same, and spending to impress others can keep you in debt.",
-        "Understanding your financial position involves looking at net worth, savings rate, EMI‑to‑income ratio, and emergency fund."
-      ],
-      "date": "2026-09-19",
-      "reason": "no candidate ideas found in the transcript"
-    },
-    {
       "id": "desk-5886041ee66d",
       "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
       "show": "Shut Up Ya Kunal",
@@ -2714,6 +2666,30 @@
       "takeaways": [
         "Access the full data and references used in this episode below.",
         "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
+      ],
+      "date": "2026-09-19",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
+      "id": "desk-c22c8c9d857b",
+      "title": "Why Some Nifty ETFs Beat Others?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "takeaways": [
+        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
+        "Turns out, the answer isn’t as straightforward as you might think."
+      ],
+      "date": "2026-09-19",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
+      "id": "desk-3a342472d20e",
+      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "takeaways": [
+        "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
+        "It affects both NRIs and Indian resident investors."
       ],
       "date": "2026-09-19",
       "reason": "no candidate ideas found in the transcript"
@@ -2754,61 +2730,61 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-18T16:35:19.478Z",
-    "discovered": 1138,
-    "eligible": 20,
-    "processed": 3,
-    "skipped": 1122,
-    "failed": 13,
+    "at": "2026-09-18T16:56:17.042Z",
+    "discovered": 1125,
+    "eligible": 10,
+    "processed": 0,
+    "skipped": 1115,
+    "failed": 10,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
-        "id": "desk-750b1a69b795",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:33:18.104Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-28fe524d590d",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:33:29.397Z"
-      },
-      {
-        "stage": "process",
         "id": "acquired-2a6fbe08f6fb",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:34:18.713Z"
+        "at": "2026-09-18T16:55:26.991Z"
       },
       {
         "stage": "process",
         "id": "desk-5886041ee66d",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:34:26.229Z"
+        "at": "2026-09-18T16:55:34.495Z"
       },
       {
         "stage": "process",
         "id": "gunjanshouts-21290098a302",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:34:56.155Z"
+        "at": "2026-09-18T16:55:57.004Z"
       },
       {
         "stage": "process",
         "id": "desk-dfded789bd87",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:35:05.896Z"
+        "at": "2026-09-18T16:56:02.110Z"
       },
       {
         "stage": "process",
         "id": "diary-of-a-ceo-c783a6dfa547",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:35:17.273Z"
+        "at": "2026-09-18T16:56:07.011Z"
       },
       {
         "stage": "process",
         "id": "desk-94a530b3b7a1",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:35:19.466Z"
+        "at": "2026-09-18T16:56:09.509Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-c22c8c9d857b",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-18T16:56:12.009Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-3a342472d20e",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-18T16:56:17.023Z"
       }
     ],
     "estimatedCostUsd": 0
