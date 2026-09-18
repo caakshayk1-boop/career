@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "career",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["-y", "wrangler@4", "dev", "--port", "8799"],
+      "runtimeExecutable": "./node_modules/.bin/wrangler",
+      "runtimeArgs": ["dev", "--port", "8799"],
       "port": 8799
     }
   ]

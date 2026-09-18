@@ -1730,6 +1730,23 @@ const TIER_LABEL = {S:"S · Top of the list", A:"A · Strong fit",
    Both numbers are constants so the rule can be changed in one place. */
 const MAX_AGE_DAYS = 30;
 const TIERS_SHOWN  = ["S", "A", "B"];
+/* THE GRADE IS NOT THE FIT, AND THE SHELF RULE WAS CONFUSING THE TWO.
+ *
+ * opportunity_score blends candidate fit with an EMPLOYER score, so a household
+ * name lifts a mediocre role over the bar and an unknown company sinks a good
+ * one. Measured on the 2026-09-18 feed: "Finance Manager — Retail & F&B" sat at
+ * tier C with a fit of 79, hidden, while an A-tier role with a fit of 70 was on
+ * the page. The reader was being shown brands, not matches.
+ *
+ * "I need S, A, B jobs only" was about not being shown weak roles, so this
+ * keeps that: the only thing admitted below tier B is a role whose CANDIDATE
+ * FIT clears the floor on its own. On that feed it admits five, every one of
+ * them titled Finance Manager, and still leaves forty out. They carry a pill
+ * saying why they are here, because a rule you cannot see is a rule you cannot
+ * disagree with. */
+const FIT_FLOOR = 70;
+const highFit   = j => (j.candidate_fit_score || 0) >= FIT_FLOOR;
+const onGrade   = j => TIERS_SHOWN.includes(j.tier) || highFit(j);
 
 /* Age in days, or null if it cannot be established.
    posted_date is the truth. scraped_at is a FLOOR, not a measurement: it says
@@ -1768,6 +1785,7 @@ function roleCard(j){
     </div>
     <div class="role-m">
       ${TIER_LABEL[tier] ? `<span class="pill tier-${esc(tier)}">${esc(TIER_LABEL[tier])}</span>` : ""}
+      ${(!TIERS_SHOWN.includes(tier) && highFit(j)) ? `<span class="pill">Below grade · fits you ${j.candidate_fit_score}</span>` : ""}
       ${j.application_priority ? `<span class="pill">${esc(j.application_priority)}</span>` : ""}
       ${j.status ? `<span class="pill ${st}">${esc(j.status)}</span>` : ""}
       ${(() => { const a = roleAge(j);
@@ -1843,13 +1861,14 @@ function drawRoles(){
     // Excluded rows are scored and kept in the file on purpose; they are not
     // opportunities, so they do not belong on this page.
     const pool = (d.jobs || []).filter(j => !j.is_excluded);
-    ROLES = pool.filter(j => TIERS_SHOWN.includes(j.tier) && roleIsCurrent(j))
+    ROLES = pool.filter(j => onGrade(j) && roleIsCurrent(j))
                 .sort((a,b) => (b.opportunity_score||0) - (a.opportunity_score||0));
     // Counted separately so the meta line can say WHY a role is missing. A
     // number that only says "14 shown" invites the reading that the market is
     // empty, when in fact most of what was dropped was dropped on grade.
-    const cutTier = pool.filter(j => !TIERS_SHOWN.includes(j.tier)).length;
-    const cutAge  = pool.filter(j => TIERS_SHOWN.includes(j.tier) && !roleIsCurrent(j)).length;
+    const cutTier = pool.filter(j => !onGrade(j)).length;
+    const cutAge  = pool.filter(j => onGrade(j) && !roleIsCurrent(j)).length;
+    const onFit   = ROLES.filter(j => !TIERS_SHOWN.includes(j.tier)).length;
     const st = d.stats || {};
     const when = d.generated_at ? new Date(d.generated_at) : null;
     const ageH = when ? Math.round((Date.now() - when) / 3600000) : null;
@@ -1866,7 +1885,8 @@ function drawRoles(){
      * below depends on knowing the pool, and because a future audit wants the
      * numbers. They are simply no longer the headline. */
     meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b>
-      Tier S, A and B only, posted in the last ${MAX_AGE_DAYS} days. · Scraped
+      Tier S, A and B, posted in the last ${MAX_AGE_DAYS} days${onFit ? `, plus
+      ${onFit} graded lower that still fit you ${FIT_FLOOR}+` : ""}. · Scraped
       ${myt(d.generated_at)}
       ${ageH != null ? `(${ageH}h ago)` : ""} ·
       ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·
