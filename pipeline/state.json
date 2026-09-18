@@ -14763,15 +14763,15 @@
       "updatedAt": "2026-09-10T14:25:48.354Z"
     },
     "diary-of-a-ceo-ed8c9e42beb5": {
-      "status": "PUBLISHED",
+      "status": "SKIPPED",
       "title": "Likeability Expert: Stop Doing This, It’s Why People Quietly Avoid You! | Vanessa Van Edwards",
       "show": "The Diary Of A CEO",
       "url": "",
       "id": "diary-of-a-ceo-ed8c9e42beb5",
       "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-10.b",
+      "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-10T14:16:37.130Z",
-      "updatedAt": "2026-09-10T14:25:48.837Z",
+      "updatedAt": "2026-09-18T15:25:28.184Z",
       "payload": {
         "id": "diary-of-a-ceo-ed8c9e42beb5",
         "sourceId": "diary-of-a-ceo",
@@ -15096,7 +15096,8 @@
         "rejectedCount": 0,
         "audio": null,
         "readSeconds": 96
-      }
+      },
+      "reason": "older than 192h"
     },
     "desk-2076c2e26460": {
       "status": "SKIPPED",
@@ -20932,8 +20933,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:23:34.099Z",
-      "updatedAt": "2026-09-18T00:30:08.207Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] KE2YjADcfvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:26:51.651Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-33d180bb3928": {
       "status": "NEEDS_REVIEW",
@@ -21199,7 +21200,7 @@
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-01f946ad316c": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "Former Secret Service Agent: How Presidents Are Protected | Evy Poumpouras | FO563 Raj Shamani",
       "show": "Figuring Out",
       "url": "https://www.youtube.com/watch?v=WnYgRL456ps",
@@ -21207,11 +21208,161 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:30:08.214Z",
-      "updatedAt": "2026-09-18T00:30:22.858Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:32:49.885Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+      "payload": {
+        "id": "desk-01f946ad316c",
+        "sourceId": "desk",
+        "show": "Figuring Out",
+        "title": "Former Secret Service Agent: How Presidents Are Protected | Evy Poumpouras | FO563 Raj Shamani",
+        "guest": "Evy Poumpouras",
+        "topics": [
+          "secret service",
+          "presidential security",
+          "law enforcement",
+          "protective details"
+        ],
+        "summary": "In this episode, former Secret Service agent Evy Poumpouras walks us through the rigorous processes that keep U.S. presidents safe, from hiring practices to the heavy armor on presidential vehicles. She shares behind‑the‑scenes details about polygraph screenings, training methods, and the logistical challenges of overseas travel, offering a clear picture of the agency's day‑to‑day realities.",
+        "url": "https://www.youtube.com/watch?v=WnYgRL456ps",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-17T00:00:00.000Z",
+        "date": "2026-09-18",
+        "durationSec": 7066,
+        "processedAt": "2026-09-18T15:32:49.884Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Polygraph reveals hidden criminal history",
+            "idea": "Secret Service uses polygraph tests during hiring to uncover illegal behavior, like possession of child pornography, that standard background checks might miss.",
+            "why": "It shows a concrete safeguard that catches disqualifying conduct before agents are hired, protecting the agency from insider threats.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "I we I had one scenario where the person applying for the job actually had, you know, and and I I I want to say delicately, but had video footage of children and pornography on their computer.",
+            "t": 426,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.67,
+            "repaired": true
+          },
+          {
+            "rank": 2,
+            "headline": "Public scoreboards boost training resilience",
+            "idea": "During Secret Service training, agents’ scores are written in large black letters for everyone to see, making failures visible and motivating improvement.",
+            "why": "Transparency creates accountability and a culture where agents learn from mistakes rather than hide them, raising overall performance.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "They would score it. They would write your score in big black magic marker. They would write your score out in big black letters so everybody could see how well or poorly you performed.",
+            "t": 888,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.69,
+            "repaired": true
+          },
+          {
+            "rank": 3,
+            "headline": "Shame and guilt deter criminal behavior",
+            "idea": "People who feel guilt or shame after a wrongdoing are less likely to repeat crimes; those who lack these emotions, like sociopaths, are more prone to violence.",
+            "why": "Identifies a psychological mechanism that can inform selection and training of agents, emphasizing the need for emotional awareness.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"If you feel feel guilt it means you did something wrong that you should feel bad about... If you take that guilt away... they can do that... they feel no shame... they can do that.\"",
+            "t": 1037,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 0.77,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Deeper voice conveys authority",
+            "idea": "A 2012 study found that politicians who win elections tend to speak with a deeper, stronger tone, suggesting vocal depth signals authority to listeners.",
+            "why": "Provides a measurable, reusable cue for anyone in leadership or public speaking to project credibility.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"...they were all had a deeper stronger tone voice. It's called paral linguistics... they were deemed to have more authority.\"",
+            "t": 1885,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 0.75,
+            "repaired": false
+          },
+          {
+            "rank": 5,
+            "headline": "Give interviewees autonomy to reduce resistance",
+            "idea": "Offering suspects explicit choices—like leaving at any time—creates a sense of control and lowers defensive reactions during questioning.",
+            "why": "A simple framing technique that can improve cooperation in high‑stakes interviews without sacrificing investigative goals.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"I would tell them, you can leave at any time... You have a choice... That gives them a choice so they don't feel like I'm holding all the cards.\"",
+            "t": 1677,
+            "kind": "said",
+            "confidence": 0.75,
+            "grounding": 0.58,
+            "repaired": false
+          },
+          {
+            "rank": 6,
+            "headline": "Use only U.S. Secret Service vehicles abroad",
+            "idea": "Presidents travel exclusively in U.S.‑provided, vetted, armored cars rather than host‑country vehicles to avoid unknown vulnerabilities.",
+            "why": "Ensures consistent protective capability and prevents security gaps from foreign vehicle modifications or hidden bugs.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[52:22] \"You never ever ever use that host country's cars. Look at any picture of any president... they are always in their cars. We fly the cars over.\"",
+            "t": 3142,
+            "kind": "said",
+            "confidence": 0.92,
+            "grounding": 0.86,
+            "repaired": false
+          },
+          {
+            "rank": 7,
+            "headline": "Ballistic armor adds thousands of pounds",
+            "idea": "Adding armor to a vehicle can increase its weight to over 4,000 lb, requiring suspension and chassis upgrades to maintain handling and braking.",
+            "why": "Planners must account for vehicle dynamics when selecting or modifying protective cars, affecting logistics and safety.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[58:29] \"the chassis and suspensions of a car are designed to hold 3,000 tons or 4,000…pounds… When you add ballistic on top… you may even have to change the framework of the car.\"",
+            "t": 3509,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 0.59,
+            "repaired": false
+          },
+          {
+            "rank": 8,
+            "headline": "Kevlar stops bullets but not knives",
+            "idea": "Kevlar armor is effective against firearms but cannot stop edged weapons, so protection must combine multiple materials.",
+            "why": "Highlights a limitation that influences equipment design for agents and vehicle armor.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[57:21] \"In Kevlar, it can stop bullets. It can't stop a knife.\"",
+            "t": 3441,
+            "kind": "said",
+            "confidence": 0.83,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 2,
+        "audio": null,
+        "readSeconds": 110
+      }
     },
     "desk-98119e45f098": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "Former IMF Economist: What India Lost, What China Got Right & Where Young Indians Should Bet | FWS",
       "show": "Finance With Sharan",
       "url": "https://www.youtube.com/watch?v=K8XC8mr2Rnw",
@@ -21219,8 +21370,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:30:22.866Z",
-      "updatedAt": "2026-09-18T00:30:37.844Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] K8XC8mr2Rnw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:34:38.324Z",
+      "reason": "only 3 learnings survived validation (floor is 6)"
     },
     "desk-b0250f938fed": {
       "status": "FAILED",
@@ -21231,8 +21382,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:30:37.852Z",
-      "updatedAt": "2026-09-18T00:30:52.751Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 5n7VpF9GLW0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:35:46.554Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d305b2a58483": {
       "status": "FAILED",
@@ -21243,11 +21394,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:30:52.760Z",
-      "updatedAt": "2026-09-18T00:31:07.908Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] xRZK5t7Bo1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:37:03.705Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-330b01affd80": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "#AskAbhijit 381: History / Geopolitics / Science",
       "show": "Abhijit Chavda",
       "url": "https://www.youtube.com/watch?v=IDqnsbF14hQ",
@@ -21255,8 +21406,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:31:07.915Z",
-      "updatedAt": "2026-09-18T00:31:22.854Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] IDqnsbF14hQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:39:41.709Z",
+      "reason": "only 4 learnings survived validation (floor is 6)"
     },
     "desk-b53c0e09ba0d": {
       "status": "FAILED",
@@ -21267,8 +21418,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:31:22.862Z",
-      "updatedAt": "2026-09-18T00:31:37.880Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 2In5Onb9Ya4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-18T15:40:51.426Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     "desk-12ac8cdb7898": {
       "status": "FAILED",
@@ -21281,6 +21432,28 @@
       "seenAt": "2026-09-18T00:31:37.888Z",
       "updatedAt": "2026-09-18T00:31:52.802Z",
       "reason": "yt-dlp failed: ERROR: [youtube] guSgL3i62sQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "gunjanshouts-1064dda3d9aa": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "3 Months Postpartum: Am I Ready to Get Fit Again?",
+      "id": "gunjanshouts-1064dda3d9aa",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T15:25:28.184Z",
+      "updatedAt": "2026-09-18T15:25:28.184Z"
+    },
+    "gunjanshouts-c8b00ba00f6c": {
+      "status": "SKIPPED",
+      "title": "The Right Hair Care Routine | Dr Arika Bansal with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=yeRY2XA8lKE",
+      "id": "gunjanshouts-c8b00ba00f6c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T15:25:28.185Z",
+      "updatedAt": "2026-09-18T15:25:36.311Z",
+      "reason": "transcript unusable: transcript is only 1868 characters"
     }
   }
 }

@@ -1,9 +1,16 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T00:31:52.811Z",
+  "generatedAt": "2026-09-18T15:40:51.464Z",
   "today": "2026-09-18",
   "retentionDays": 7,
   "days": [
+    {
+      "date": "2026-09-18",
+      "label": "Today",
+      "episodeIds": [
+        "desk-01f946ad316c"
+      ]
+    },
     {
       "date": "2026-09-17",
       "label": "Yesterday",
@@ -35,6 +42,156 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-01f946ad316c",
+      "sourceId": "desk",
+      "show": "Figuring Out",
+      "title": "Former Secret Service Agent: How Presidents Are Protected | Evy Poumpouras | FO563 Raj Shamani",
+      "guest": "Evy Poumpouras",
+      "topics": [
+        "secret service",
+        "presidential security",
+        "law enforcement",
+        "protective details"
+      ],
+      "summary": "In this episode, former Secret Service agent Evy Poumpouras walks us through the rigorous processes that keep U.S. presidents safe, from hiring practices to the heavy armor on presidential vehicles. She shares behind‑the‑scenes details about polygraph screenings, training methods, and the logistical challenges of overseas travel, offering a clear picture of the agency's day‑to‑day realities.",
+      "url": "https://www.youtube.com/watch?v=WnYgRL456ps",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-17T00:00:00.000Z",
+      "date": "2026-09-18",
+      "durationSec": 7066,
+      "processedAt": "2026-09-18T15:32:49.884Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Polygraph reveals hidden criminal history",
+          "idea": "Secret Service uses polygraph tests during hiring to uncover illegal behavior, like possession of child pornography, that standard background checks might miss.",
+          "why": "It shows a concrete safeguard that catches disqualifying conduct before agents are hired, protecting the agency from insider threats.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "I we I had one scenario where the person applying for the job actually had, you know, and and I I I want to say delicately, but had video footage of children and pornography on their computer.",
+          "t": 426,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.67,
+          "repaired": true
+        },
+        {
+          "rank": 2,
+          "headline": "Public scoreboards boost training resilience",
+          "idea": "During Secret Service training, agents’ scores are written in large black letters for everyone to see, making failures visible and motivating improvement.",
+          "why": "Transparency creates accountability and a culture where agents learn from mistakes rather than hide them, raising overall performance.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "They would score it. They would write your score in big black magic marker. They would write your score out in big black letters so everybody could see how well or poorly you performed.",
+          "t": 888,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.69,
+          "repaired": true
+        },
+        {
+          "rank": 3,
+          "headline": "Shame and guilt deter criminal behavior",
+          "idea": "People who feel guilt or shame after a wrongdoing are less likely to repeat crimes; those who lack these emotions, like sociopaths, are more prone to violence.",
+          "why": "Identifies a psychological mechanism that can inform selection and training of agents, emphasizing the need for emotional awareness.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"If you feel feel guilt it means you did something wrong that you should feel bad about... If you take that guilt away... they can do that... they feel no shame... they can do that.\"",
+          "t": 1037,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.77,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Deeper voice conveys authority",
+          "idea": "A 2012 study found that politicians who win elections tend to speak with a deeper, stronger tone, suggesting vocal depth signals authority to listeners.",
+          "why": "Provides a measurable, reusable cue for anyone in leadership or public speaking to project credibility.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"...they were all had a deeper stronger tone voice. It's called paral linguistics... they were deemed to have more authority.\"",
+          "t": 1885,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.75,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Give interviewees autonomy to reduce resistance",
+          "idea": "Offering suspects explicit choices—like leaving at any time—creates a sense of control and lowers defensive reactions during questioning.",
+          "why": "A simple framing technique that can improve cooperation in high‑stakes interviews without sacrificing investigative goals.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"I would tell them, you can leave at any time... You have a choice... That gives them a choice so they don't feel like I'm holding all the cards.\"",
+          "t": 1677,
+          "kind": "said",
+          "confidence": 0.75,
+          "grounding": 0.58,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Use only U.S. Secret Service vehicles abroad",
+          "idea": "Presidents travel exclusively in U.S.‑provided, vetted, armored cars rather than host‑country vehicles to avoid unknown vulnerabilities.",
+          "why": "Ensures consistent protective capability and prevents security gaps from foreign vehicle modifications or hidden bugs.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[52:22] \"You never ever ever use that host country's cars. Look at any picture of any president... they are always in their cars. We fly the cars over.\"",
+          "t": 3142,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 0.86,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Ballistic armor adds thousands of pounds",
+          "idea": "Adding armor to a vehicle can increase its weight to over 4,000 lb, requiring suspension and chassis upgrades to maintain handling and braking.",
+          "why": "Planners must account for vehicle dynamics when selecting or modifying protective cars, affecting logistics and safety.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[58:29] \"the chassis and suspensions of a car are designed to hold 3,000 tons or 4,000…pounds… When you add ballistic on top… you may even have to change the framework of the car.\"",
+          "t": 3509,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.59,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "Kevlar stops bullets but not knives",
+          "idea": "Kevlar armor is effective against firearms but cannot stop edged weapons, so protection must combine multiple materials.",
+          "why": "Highlights a limitation that influences equipment design for agents and vehicle armor.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[57:21] \"In Kevlar, it can stop bullets. It can't stop a knife.\"",
+          "t": 3441,
+          "kind": "said",
+          "confidence": 0.83,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 2,
+      "audio": null,
+      "readSeconds": 110
+    },
     {
       "id": "desk-4a55ec85d533",
       "sourceId": "desk",
@@ -2445,6 +2602,18 @@
   ],
   "pending": [
     {
+      "id": "desk-12ac8cdb7898",
+      "title": "Sab Changa Si, It’s Modi’s Birthday!",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=guSgL3i62sQ",
+      "takeaways": [
+        "As Prime Minister Narendra Modi turned 76, the state and the Bharatiya Janata Party (BJP) became one as the union ministers, BJP chief ministers and state governments pulled out all stops to celebrate his birthday.",
+        "From holding pujas, inaugurating statues, a bike rally to mark Modi's journey from Vadnagar to Varanasi, to schools being told to light lamps as a part of a nationwide Aashirwad Ka Diya campaign-governance took a backseat for the day as the prime minister's birthday was celebrated across the country."
+      ],
+      "date": "2026-09-18",
+      "reason": "over the 8/day cap"
+    },
+    {
       "id": "desk-aad0f0f9889a",
       "title": "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim",
       "show": "ANI Podcast (clips)",
@@ -2564,30 +2733,6 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-01f946ad316c",
-      "title": "Former Secret Service Agent: How Presidents Are Protected | Evy Poumpouras | FO563 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=WnYgRL456ps",
-      "takeaways": [
-        "How the Secret Service exam filters out nearly every candidate who attempts it",
-        "What presidential security actually looks like inside a clean zone with counter‑snipers and armored vehicles"
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-98119e45f098",
-      "title": "Former IMF Economist: What India Lost, What China Got Right & Where Young Indians Should Bet | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=K8XC8mr2Rnw",
-      "takeaways": [
-        "Sriram is a former IMF economist based in Washington, D.C., who has previously worked as an economist with a few international organisations.",
-        "He is an alumnus of Columbia University and the author of Kautilyanomics: For Modern Times and Dharmanomics: An Indigenous and Sustainable Economic Model, both published by Bloomsbury India."
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] K8XC8mr2Rnw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
       "id": "desk-b0250f938fed",
       "title": "Nifty is Down 9%. These 5 Stocks Are Hitting Highs",
       "show": "Groww",
@@ -2596,7 +2741,7 @@
         "These 5 stocks are hitting highs."
       ],
       "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] 5n7VpF9GLW0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
       "id": "desk-d305b2a58483",
@@ -2608,19 +2753,7 @@
         "Matching your investment horizon with the appropriate type of debt fund is essential."
       ],
       "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] xRZK5t7Bo1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-330b01affd80",
-      "title": "#AskAbhijit 381: History / Geopolitics / Science",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=IDqnsbF14hQ",
-      "takeaways": [
-        "Episode 381 of the #AskAbhijit show: Ask me your best questions in the COMMENTS, and I shall answer them.",
-        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] IDqnsbF14hQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
       "id": "desk-b53c0e09ba0d",
@@ -2632,19 +2765,7 @@
         "The description suggests the Modi government has endured a series of humiliations under Trump."
       ],
       "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] 2In5Onb9Ya4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-12ac8cdb7898",
-      "title": "Sab Changa Si, It’s Modi’s Birthday!",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=guSgL3i62sQ",
-      "takeaways": [
-        "As Prime Minister Narendra Modi turned 76, the state and the Bharatiya Janata Party (BJP) became one as the union ministers, BJP chief ministers and state governments pulled out all stops to celebrate his birthday.",
-        "From holding pujas, inaugurating statues, a bike rally to mark Modi's journey from Vadnagar to Varanasi, to schools being told to light lamps as a part of a nationwide Aashirwad Ka Diya campaign-governance took a backseat for the day as the prime minister's birthday was celebrated across the country."
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] guSgL3i62sQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     {
       "id": "gunjanshouts-d654edb4829c",
@@ -2653,7 +2774,7 @@
       "url": "https://www.youtube.com/watch?v=KE2YjADcfvA",
       "takeaways": [],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: [youtube] KE2YjADcfvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   ],
   "generator": {
@@ -2664,61 +2785,37 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-18T00:31:52.810Z",
-    "discovered": 1137,
+    "at": "2026-09-18T15:40:51.453Z",
+    "discovered": 1138,
     "eligible": 8,
-    "processed": 0,
-    "skipped": 1129,
-    "failed": 8,
+    "processed": 1,
+    "skipped": 1131,
+    "failed": 6,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "gunjanshouts-d654edb4829c",
-        "message": "yt-dlp failed: ERROR: [youtube] KE2YjADcfvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:30:08.207Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-01f946ad316c",
-        "message": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:30:22.858Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-98119e45f098",
-        "message": "yt-dlp failed: ERROR: [youtube] K8XC8mr2Rnw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:30:37.844Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:26:51.651Z"
       },
       {
         "stage": "process",
         "id": "desk-b0250f938fed",
-        "message": "yt-dlp failed: ERROR: [youtube] 5n7VpF9GLW0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:30:52.751Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:35:46.554Z"
       },
       {
         "stage": "process",
         "id": "desk-d305b2a58483",
-        "message": "yt-dlp failed: ERROR: [youtube] xRZK5t7Bo1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:31:07.908Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-330b01affd80",
-        "message": "yt-dlp failed: ERROR: [youtube] IDqnsbF14hQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:31:22.854Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:37:03.705Z"
       },
       {
         "stage": "process",
         "id": "desk-b53c0e09ba0d",
-        "message": "yt-dlp failed: ERROR: [youtube] 2In5Onb9Ya4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:31:37.880Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-12ac8cdb7898",
-        "message": "yt-dlp failed: ERROR: [youtube] guSgL3i62sQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-18T00:31:52.802Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:40:51.424Z"
       }
     ],
     "estimatedCostUsd": 0
