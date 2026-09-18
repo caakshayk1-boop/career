@@ -77,9 +77,9 @@
       "show": "GunjanShouts",
       "type": "youtube",
       "url": "UCKRpf_HZfpLwxuIgyeYnsVw",
-      "enabled": false,
+      "enabled": true,
       "verified": true,
-      "checked": "shorts only — 41-155s uploads, transcripts 687-1868 chars, 0 of 16 ever published; checked 19 Sep 2026"
+      "checked": "long-form weekly (45m-2.5h); its Atom feed also carries Shorts, filtered by the /videos tab — checked 19 Sep 2026"
     },
     {
       "id": "diary-of-a-ceo",

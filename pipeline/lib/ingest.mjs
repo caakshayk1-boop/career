@@ -15,6 +15,7 @@
  */
 import { request } from "./http.mjs";
 import { log, run } from "./log.mjs";
+import { runYtDlp, ytdlpCookieArgs } from "./transcript.mjs";
 import { cfg } from "../config.mjs";
 import { episodeId } from "./store.mjs";
 import { items, tag, attr, stripHtml, durationSeconds, decode } from "./xml.mjs";
@@ -30,7 +31,8 @@ export async function discover(source) {
       timeout: 25000, retries: 3, label: "ingest",
       headers: { "user-agent": "career.askakshay.com podcast-intelligence/1.0" },
     });
-    const raw = items(xml).map((block) => parseItem(block, source)).filter(Boolean);
+    let raw = items(xml).map((block) => parseItem(block, source)).filter(Boolean);
+    raw = await dropShorts(source, raw);
     log.info("ingest", `${source.id}: ${raw.length} items`);
     run.counts.discovered += raw.length;
     return raw;
@@ -47,6 +49,69 @@ function feedUrl(s) {
   if (s.type === "youtube" && /^UC[\w-]{22}$/.test(s.url))
     return `https://www.youtube.com/feeds/videos.xml?channel_id=${s.url}`;
   return s.url;
+}
+
+
+/** SHORTS ARE IN THE FEED AND THEY ARE NOT EPISODES.
+ *
+ * A channel's Atom feed carries every upload and declares no duration, so a
+ * 43-second Short is indistinguishable from a two-hour interview until the
+ * transcript comes back at 700 characters and is thrown away. GunjanShouts
+ * cost four of twenty slots that way in one run, and on the strength of its
+ * last fifteen uploads — all Shorts — I concluded the channel published
+ * nothing usable and disabled it. That was wrong: 110 of its 431 uploads run
+ * past thirty minutes and it posts a long one most weeks. The feed was a
+ * fifteen-item window onto a channel that posts clips far more often than
+ * episodes.
+ *
+ * YouTube already draws this line itself: the /videos tab excludes Shorts,
+ * which is a better test than any duration guess of ours. One yt-dlp call per
+ * channel returns those ids WITH durations, which also gives the eligibility
+ * check the minEpisodeMinutes it could never apply to a YouTube source.
+ *
+ * DEGRADES TO THE OLD BEHAVIOUR. CI has no yt-dlp, and a channel whose tab
+ * cannot be read must not vanish from the feed — a filter that silently
+ * empties a source is worse than the Shorts it was meant to remove.
+ */
+export async function dropShorts(source, raw, resolve = longformVideos) {
+  if (source.type !== "youtube" || !/^UC[\w-]{22}$/.test(source.url)) return raw;
+  const longform = await resolve(source.url);
+  if (!longform) return raw;                    // unreadable — keep everything
+  const kept = [];
+  let dropped = 0;
+  for (const item of raw) {
+    const id = (item.url.match(YT_ID) || [])[1] || "";
+    if (!id) { kept.push(item); continue; }
+    const secs = longform.get(id);
+    if (secs === undefined) { dropped++; continue; }
+    kept.push({ ...item, durationSec: item.durationSec || secs });
+  }
+  if (dropped) log.info("ingest", `${source.id}: ${dropped} short(s) not on the /videos tab`);
+  return kept;
+}
+
+/** id -> duration for the channel's recent long-form uploads, or null if the
+ *  tab could not be read. 40 is several months of a weekly show. */
+async function longformVideos(channelId) {
+  try {
+    const out = await runYtDlp([
+      ...ytdlpCookieArgs(),
+      "--flat-playlist", "--playlist-end", "40",
+      "--print", "%(id)s %(duration)s", "--no-warnings", "--ignore-errors",
+      `https://www.youtube.com/channel/${channelId}/videos`,
+    ]);
+    const map = new Map();
+    /* runYtDlp resolves {stdout, stderr}, not a string. String(out) on the
+       object is "[object Object]", which parses to an empty map, which reads
+       as "tab unreadable" and quietly disables the filter. */
+    for (const line of String((out && out.stdout) || "").split("\n")) {
+      const [id, dur] = line.trim().split(/\s+/);
+      if (id && /^[\w-]{11}$/.test(id)) map.set(id, Number(dur) || 0);
+    }
+    return map.size ? map : null;
+  } catch {
+    return null;                                 // no yt-dlp, or YouTube said no
+  }
 }
 
 function parseItem(block, source) {

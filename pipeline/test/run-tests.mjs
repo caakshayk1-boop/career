@@ -31,7 +31,7 @@ cfg.extractor = "ai";   // the AI-path tests below need it; local is tested expl
 cfg.ttsProvider = "none";
 
 const { episodeId, loadState, saveState, remember, isSettled, cached } = await import("../lib/store.mjs");
-const { selectEligible, transcribable } = await import("../lib/ingest.mjs");
+const { selectEligible, transcribable, dropShorts } = await import("../lib/ingest.mjs");
 const { items, tag, attr, durationSeconds, stripHtml } = await import("../lib/xml.mjs");
 const { chunk, stripNoise, hhmmss } = await import("../lib/chunk.mjs");
 const { takeaways, sentences, findHost, pill, passageAt } = await import("../lib/extractive.mjs");
@@ -500,6 +500,40 @@ group("validation — the grounding gate");
 }
 
 /* ── AI FAILURE MODES ────────────────────────────────────────────────────── */
+group("shorts are not episodes");
+{
+  /* A channel's Atom feed carries Shorts and declares no duration, so a
+     43-second clip is indistinguishable from a two-hour interview until its
+     transcript comes back at 700 characters. GunjanShouts spent four of twenty
+     slots that way in one run — and its last fifteen uploads being Shorts is
+     what made the channel look dead when 110 of its 431 videos run past half
+     an hour. YouTube's own /videos tab excludes Shorts; that is the test. */
+  const chan = { id: "x", type: "youtube", url: "UC" + "a".repeat(22) };
+  const feed = [
+    { url: "https://www.youtube.com/watch?v=LONGONE1111", title: "episode" },
+    { url: "https://www.youtube.com/shorts/SHORTONE111", title: "clip" },
+  ];
+  const resolver = async () => new Map([["LONGONE1111", 9122]]);
+
+  const kept = await dropShorts(chan, feed, resolver);
+  ok("a Short missing from the /videos tab is dropped", kept.length === 1, kept.length);
+  ok("the episode survives", kept[0].title === "episode");
+  ok("and inherits the duration the feed never declared", kept[0].durationSec === 9122,
+     kept[0].durationSec);
+
+  const unreadable = await dropShorts(chan, feed, async () => null);
+  ok("an unreadable tab keeps everything rather than emptying the source",
+     unreadable.length === 2, unreadable.length);
+
+  const rss = await dropShorts({ id: "y", type: "rss", url: "https://x.test/f.xml" }, feed,
+                               async () => new Map());
+  ok("a non-YouTube source is untouched", rss.length === 2);
+
+  const noId = await dropShorts(chan, [{ url: "https://example.test/ep", title: "no yt id" }],
+                                resolver);
+  ok("an item with no video id is kept, not silently binned", noId.length === 1);
+}
+
 group("yt-dlp cookies");
 {
   /* Signed out, YouTube answers this IP with 429 and a CI runner with "Sign in

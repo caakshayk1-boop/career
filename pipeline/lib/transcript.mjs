@@ -106,7 +106,7 @@ export function ytdlpCookieArgs(c = cfg) {
   return [];
 }
 
-async function runYtDlp(args) {
+export async function runYtDlp(args) {
   const opts = { timeout: 180000, maxBuffer: 32 * 1024 * 1024 };
   try {
     return await run("yt-dlp", args, opts);
