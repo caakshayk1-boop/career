@@ -40,6 +40,33 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PAT
 log()  { printf '%s %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*"; }
 warn() { printf '%s !! %s\n' "$(date '+%Y-%m-%d %H:%M:%S')" "$*" >&2; }
 
+# WHO RAN THIS MATTERS. run-local.sh used to commit under a personal identity and
+# CI under "podcast-intelligence", so `git log` told you which machine produced a
+# run. Folding the two scripts together lost that, and the first question asked of
+# a bad morning — did the Mac job fire, or was that CI failing again? — became
+# unanswerable from the history. The author names the machine.
+RUNNER="podcast-intelligence (${PODCAST_RUNNER:-$(hostname -s 2>/dev/null || echo local)})"
+
+# ONE commit path, because this job now commits from two places: the normal end
+# of a run, and the retry that rewinds onto a commit CI landed mid-run. Two
+# copies of one identity is the same drift that made run-local.sh and morning.sh
+# disagree, and it would show up as an author line that only sometimes names the
+# machine — a signal that is worse than none.
+commit_outputs() {  # $1 = subject
+  git add public/podcasts.json pipeline/state.json
+  git -c user.name="$RUNNER" -c user.email="noreply@askakshay.com" commit -q -m "$1"
+}
+
+# Move this branch onto origin/main WITHOUT `git reset --hard`, which is banned
+# below and for a reason that still holds. update-ref moves the branch pointer
+# and writes no file at all; the checkout then restores exactly the two paths
+# this job owns. Whatever else is in the tree, this cannot touch it — that is the
+# entire difference between the two, and it is why the ban does not apply here.
+rewind_to_origin() {
+  git update-ref "$(git symbolic-ref HEAD)" "$(git rev-parse origin/main)"
+  git checkout --quiet HEAD -- public/podcasts.json pipeline/state.json
+}
+
 command -v node >/dev/null || { warn "node is not installed — https://nodejs.org"; exit 1; }
 command -v git  >/dev/null || { warn "git is not installed"; exit 1; }
 
@@ -92,6 +119,36 @@ log "syncing with origin"
 git fetch --quiet origin
 git checkout --quiet -- public/podcasts.json pipeline/state.json 2>/dev/null || true
 
+# ── AN UNPUSHED COMMIT OF THIS JOB'S OWN OUTPUT ─────────────────────────────
+# A push that fails leaves a local commit of the two generated files. CI then
+# rewrites the SAME two files from the SAME parent, so that commit is a sibling
+# of CI's and can never rebase: it conflicts on both files, on every attempt,
+# forever. This is not an edge case. It is what happens on any morning where CI
+# commits while this run is reading, which is most of them.
+#
+# It wedged the job on 2026-09-18 — four aborted rebases at 09:59, four more at
+# 10:04, and every run after that would have exited 1 having published nothing.
+# The recovery below could not clear it: that one handles a dirty WORKTREE, and
+# this is a COMMIT. The page sat at eleven episodes while the log filled up.
+#
+# The commit is worth nothing — it holds an output origin has a newer copy of —
+# so drop it. But only after proving it holds nothing else.
+UNPUSHED=$(git rev-list --count origin/main..HEAD)
+if [ "$UNPUSHED" -gt 0 ]; then
+  # --name-only prints a blank line per commit. It survives the filter below and
+  # would read as a file this job does not own, so it goes first.
+  NOT_OURS=$(git log --format= --name-only origin/main..HEAD | grep -v '^$' | sort -u \
+    | grep -vE '^(public/podcasts\.json|pipeline/state\.json)$' || true)
+  if [ -n "$NOT_OURS" ]; then
+    warn "STOPPING: $UNPUSHED unpushed commit(s) touch files this job does not own —"
+    printf '%s\n' "$NOT_OURS" | sed 's/^/    /' >&2
+    warn "push or drop them yourself; this job will not discard your work."
+    exit 1
+  fi
+  log "dropping $UNPUSHED unpushed commit(s) of generated files (was $(git rev-parse --short HEAD), still in the reflog)"
+  rewind_to_origin
+fi
+
 # ── NEVER reset --hard. THIS ALREADY COST A FIX. ────────────────────────────
 # An earlier version fell back to `git reset --hard origin/main` when a rebase
 # would not apply. It ran at 23:38 and destroyed an uncommitted edit to
@@ -139,15 +196,8 @@ else
   else
     MSG="podcasts: morning refresh — +${PROC} read, ${COUNT} episode(s), ${POINTS} points"
   fi
-  # WHO RAN THIS MATTERS. run-local.sh used to commit under a personal identity and
-  # CI under "podcast-intelligence", so `git log` told you which machine produced a
-  # run. Folding the two scripts together lost that, and the first question asked of
-  # a bad morning — did the Mac job fire, or was that CI failing again? — became
-  # unanswerable from the history. The author now names the machine.
   log "committing: $MSG"
-  git add public/podcasts.json pipeline/state.json
-  git -c user.name="podcast-intelligence (${PODCAST_RUNNER:-$(hostname -s 2>/dev/null || echo local)})" \
-      -c user.email="noreply@askakshay.com" commit -q -m "$MSG"
+  commit_outputs "$MSG"
 
   # Retry: a laptop waking on wifi often has no route for the first few seconds,
   # and CI can land a commit during the run, which is minutes long.
@@ -155,7 +205,30 @@ else
   for i in 1 2 3 4; do
     if git push -q origin HEAD:main 2>/dev/null; then PUSHED=1; break; fi
     warn "push failed, retrying in $((2 ** i))s"; sleep $((2 ** i))
-    git fetch --quiet origin && git rebase --quiet origin/main || git rebase --abort 2>/dev/null || true
+    git fetch --quiet origin || continue
+
+    # A push fails for one of two reasons: no route, or origin moved because CI
+    # landed a commit during this run — which is minutes long, so it happens.
+    # In the second case a rebase conflicts on both generated files and aborts,
+    # which is how the same commit was retried four times and pushed zero.
+    #
+    # Nothing here needs merging. These files are OUTPUTS and this run holds the
+    # newest copy in existence, so rewind onto origin and re-commit them.
+    if ! git merge-base --is-ancestor origin/main HEAD; then
+      SAVE=$(mktemp -d)
+      cp public/podcasts.json "$SAVE/podcasts.json"
+      cp pipeline/state.json  "$SAVE/state.json"
+      rewind_to_origin
+      cp "$SAVE/podcasts.json" public/podcasts.json
+      cp "$SAVE/state.json"    pipeline/state.json
+      rm -rf "$SAVE"
+      if git diff --quiet -- public/podcasts.json pipeline/state.json; then
+        log "origin already carries this result — nothing left to push."
+        PUSHED=1; break
+      fi
+      log "origin moved during the run — re-committing onto $(git rev-parse --short HEAD)"
+      commit_outputs "$MSG"
+    fi
   done
   if [ "$PUSHED" = "1" ]; then
     log "pushed — the deploy workflow ships it to career.askakshay.com in ~90s."

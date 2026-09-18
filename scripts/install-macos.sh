@@ -84,6 +84,30 @@ info "node $(node -v)"
 git -C "$REPO" rev-parse --git-dir >/dev/null 2>&1 || die "$REPO is not a git checkout"
 BRANCH=$(git -C "$REPO" rev-parse --abbrev-ref HEAD)
 [ "$BRANCH" = "main" ] || die "The checkout is on '$BRANCH'. morning.sh only publishes from main — switch first."
+
+# ── ONE SCHEDULER, OR NONE OF THIS MEANS ANYTHING ───────────────────────────
+# A second agent pointing at this repo ran for two days beside the documented
+# one: com.askakshay.career.podcasts at 07:15, invoking the run-local.sh alias,
+# installed before the two scripts were merged. Two jobs on one checkout is not
+# a tidiness problem. They read the same sources from the same IP at the same
+# time, which is what YouTube answers with HTTP 429, and they race to commit the
+# same two generated files, which is what left an unpushed commit behind.
+#
+# Same failure as two scripts for one job, one level up. Name any other agent
+# that runs this repo and stop, rather than quietly becoming the second one.
+OTHERS=$(grep -lF "$REPO/scripts/" "$HOME/Library/LaunchAgents"/*.plist 2>/dev/null \
+  | grep -v "^$PLIST$" || true)
+if [ -n "$OTHERS" ]; then
+  printf '%s\n' "$OTHERS" | while read -r f; do
+    warn_label=$(basename "$f" .plist)
+    echo "    $warn_label  ->  $f" >&2
+  done
+  die "Another LaunchAgent already runs this repo (listed above).
+Two schedulers on one checkout race for the same files and share one IP's rate
+limit. Remove the one you do not want, then re-run:
+  launchctl bootout gui/\$(id -u)/<label>
+  rm ~/Library/LaunchAgents/<label>.plist"
+fi
 info "on main"
 
 # The one that actually matters: does the scheduled environment resolve to the
