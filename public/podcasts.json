@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T00:26:49.131Z",
+  "generatedAt": "2026-09-18T00:31:52.811Z",
   "today": "2026-09-18",
   "retentionDays": 7,
   "days": [
@@ -2445,13 +2445,48 @@
   ],
   "pending": [
     {
-      "id": "desk-14ef1df16961",
-      "title": "The Fall of 5 Famous Stocks: What Really Happened?",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=RRoNsmry-68",
+      "id": "desk-aad0f0f9889a",
+      "title": "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=XG-2DEuoFus",
       "takeaways": [
-        "Five well-known Indian stocks have fallen more than 50% from their all-time highs—but does a falling stock always mean a broken business?",
-        "In this video, we analyse 5 stocks to understand why these stocks corrected sharply, what changed in their businesses, and what could potentially drive a turnaround."
+        "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #DawoodIbrahim #Underworld #Dawood #Sharjah #Cricket #Stadium #Controversy Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-18",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-ada47704e8c3",
+      "title": "MULTIPLY Money With Gold - WATCH WITH PARENTS | Billionaire Prithviraj Kothari on TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=_5rODK60oyA",
+      "takeaways": [
+        "central banks are accumulating gold",
+        "investment demand for gold increased after COVID"
+      ],
+      "date": "2026-09-18",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-750b1a69b795",
+      "title": "India – Size And Location | Class 9 Geography, Chapter 1 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=l0RE4--XgEM",
+      "takeaways": [
+        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 9 Geography, Chapter 1 – “India – Size And Location” in a simple, engaging, and exam-oriented manner.",
+        "This chapter helps students understand India’s geographical location, size, extent, latitudinal and longitudinal extent, neighbouring countries, and India’s strategic position in the world."
+      ],
+      "date": "2026-09-18",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-28fe524d590d",
+      "title": "How Looking Rich Can Keep You Poor",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=0s8oCWPOQCI",
+      "takeaways": [
+        "Income and wealth are not the same, and spending to impress others can keep you in debt.",
+        "Understanding your financial position involves looking at net worth, savings rate, EMI‑to‑income ratio, and emergency fund."
       ],
       "date": "2026-09-18",
       "reason": "over the 8/day cap"
@@ -2474,7 +2509,7 @@
       "show": "CA Rachana Ranade",
       "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
       "takeaways": [
-        "NSE generates revenue from transaction charges, options revenue, listing fees, data services, clearing & settlement, and Nifty licensing.",
+        "NSE generates revenue through transaction charges, options revenue, listing fees, data services, clearing & settlement, and Nifty licensing.",
         "The episode reviews NSE’s business model, financial performance, valuation, industry outlook, key risks, and IPO details."
       ],
       "date": "2026-09-18",
@@ -2486,8 +2521,8 @@
       "show": "Zero1 by Zerodha",
       "url": "https://www.youtube.com/watch?v=yzqgyYqAz_0",
       "takeaways": [
-        "Leasing a luxury car comes with specific costs and legal clauses that you need to understand.",
-        "An Excel sheet is provided to help you calculate the numbers and math behind a financial lease."
+        "Abhishek just got a new car, and this one is special this is a “Luxury Car”.",
+        "But he technically did not buy it, he got it on a lease!"
       ],
       "date": "2026-09-18",
       "reason": "over the 8/day cap"
@@ -2498,7 +2533,8 @@
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
       "takeaways": [
-        "The episode includes full data and references for listeners to access while watching."
+        "Access the full data and references used in this episode below.",
+        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
       "date": "2026-09-18",
       "reason": "over the 8/day cap"
@@ -2509,20 +2545,8 @@
       "show": "Zerodha Varsity",
       "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
       "takeaways": [
-        "Aastha Khurana breaks down four key factors to consider before selecting an ETF.",
-        "Even ETFs that track the same index can have important differences."
-      ],
-      "date": "2026-09-18",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-1ea3eb67afce",
-      "title": "RBI vs Government: Who Really Controls Money?",
-      "show": "Labour Law Advisor",
-      "url": "https://www.youtube.com/watch?v=28EBqzUPTv8",
-      "takeaways": [
-        "RBI’s decisions directly affect loans, investments, bank deposits and the overall economy.",
-        "The episode explains how RBI creates and controls money and the measures it uses to manage India’s financial system."
+        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
+        "Turns out, the answer isn’t as straightforward as you might think."
       ],
       "date": "2026-09-18",
       "reason": "over the 8/day cap"
@@ -2533,106 +2557,94 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
       "takeaways": [
-        "The FCNR scheme is marketed as offering 11‑14% tax‑free returns.",
-        "The analysis explains that the scheme affects both NRIs and Indian resident investors."
+        "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
+        "It affects both NRIs and Indian resident investors."
       ],
       "date": "2026-09-18",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-26e0deff1237",
-      "title": "Retired at 47: How a Salaried Professional Built a Life of Luxury, Travel & Financial Freedom | FWS",
+      "id": "desk-01f946ad316c",
+      "title": "Former Secret Service Agent: How Presidents Are Protected | Evy Poumpouras | FO563 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=WnYgRL456ps",
+      "takeaways": [
+        "How the Secret Service exam filters out nearly every candidate who attempts it",
+        "What presidential security actually looks like inside a clean zone with counter‑snipers and armored vehicles"
+      ],
+      "date": "2026-09-18",
+      "reason": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-98119e45f098",
+      "title": "Former IMF Economist: What India Lost, What China Got Right & Where Young Indians Should Bet | FWS",
       "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=Ju51RtLhpq0",
+      "url": "https://www.youtube.com/watch?v=K8XC8mr2Rnw",
       "takeaways": [
-        "Most people build a plan to reach financial freedom.",
-        "Very few plan for what happens after."
+        "Sriram is a former IMF economist based in Washington, D.C., who has previously worked as an economist with a few international organisations.",
+        "He is an alumnus of Columbia University and the author of Kautilyanomics: For Modern Times and Dharmanomics: An Indigenous and Sustainable Economic Model, both published by Bloomsbury India."
       ],
       "date": "2026-09-18",
-      "reason": "over the 8/day cap"
+      "reason": "yt-dlp failed: ERROR: [youtube] K8XC8mr2Rnw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-0116d1d09ac7",
-      "title": "A TSUNAMI in the Himalayas | How Nepal's Worst Disaster Happened? | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=xQ3lxbRGgLY",
+      "id": "desk-b0250f938fed",
+      "title": "Nifty is Down 9%. These 5 Stocks Are Hitting Highs",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=5n7VpF9GLW0",
       "takeaways": [
-        "The fastest and the most affordable way to upskill yourself in AI.",
-        "Live workshop happening on TOMORROW!"
+        "These 5 stocks are hitting highs."
       ],
       "date": "2026-09-18",
-      "reason": "over the 8/day cap"
+      "reason": "yt-dlp failed: ERROR: [youtube] 5n7VpF9GLW0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-28fe524d590d",
-      "title": "How Looking Rich Can Keep You Poor",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=0s8oCWPOQCI",
+      "id": "desk-d305b2a58483",
+      "title": "How to Pick the Best Debt Funds",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
       "takeaways": [
-        "Income and wealth are not the same.",
-        "Spending to impress others can keep you in debt."
+        "Choosing the wrong debt fund for your investment duration can expose you to credit risk, liquidity risk, and interest rate risk.",
+        "Matching your investment horizon with the appropriate type of debt fund is essential."
       ],
       "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] xRZK5t7Bo1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-02aab011eda4",
-      "title": "Another Global Crisis? | Houthis Capture Bab el-Mandeb & Choke Saudi Oil Supply! | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=7iLturxzvRY",
-      "takeaways": [
-        "The conflict in West Asia just does not stop.",
-        "First Gaza, then Iran and now its Saudi Arabia that is getting hammered by the Houthis..."
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-10e8d11118e8",
-      "title": "Why Would Someone Leave Bangladesh for India?",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=GKDGiiXph2Y",
-      "takeaways": [
-        "In the past couple of years, detentions of people living in slums across India’s largest cities – on the suspicion that they are illegal immigrants – have made news, invited outrage and complaints of inconvenience and then, stopped being news.",
-        "The Bharatiya Janata Party’s aggressive hate speech – followed by law enforcement action to remove people deemed “infiltrators” by the likes of home minister Amit Shah in multiple public addresses – focuses on one particular demographic."
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "desk-ff3c910d8fec",
-      "title": "“I Feel Attention Span Is A Myth. People Have Always Managed To Read Books” Manu Joseph",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=QCLG6UcJ-fU",
-      "takeaways": [
-        "People Have Always Managed To Read Books” Manu Joseph #ANIPodcast #SmitaPrakash #ManuJoseph #Book #AttentionSpan Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-09-18",
-      "reason": "no candidate ideas found in the transcript"
-    },
-    {
-      "id": "desk-0a64ca772a62",
-      "title": "4 Months to be Mains Ready! Your UPSC 2027 Preparation Roadmap | UPSC | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=toWp2sKBXr0",
-      "takeaways": [
-        "If your goal is to become Mains-ready by December, now is the time to move beyond simply completing lectures and making notes.",
-        "The focus should be on syllabus completion, answer writing, PYQs, revision and regular testing."
-      ],
-      "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-aafe80a1879c",
-      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
+      "id": "desk-330b01affd80",
+      "title": "#AskAbhijit 381: History / Geopolitics / Science",
       "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
+      "url": "https://www.youtube.com/watch?v=IDqnsbF14hQ",
       "takeaways": [
-        "Episode 382 of the #AskAbhijit show: Ask me your best questions in the live chat and Superchat, and I shall answer them.",
+        "Episode 381 of the #AskAbhijit show: Ask me your best questions in the COMMENTS, and I shall answer them.",
         "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
       ],
       "date": "2026-09-18",
-      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 38 hours."
+      "reason": "yt-dlp failed: ERROR: [youtube] IDqnsbF14hQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-b53c0e09ba0d",
+      "title": "Trump’s Birthday Gift For Modi? | A 100% Tariff Slap Even As Narendra Surrenders On UPI? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=2In5Onb9Ya4",
+      "takeaways": [
+        "America passed a bill giving Trump the power to impose a 100% tariff on any country buying Russian oil, with India singled out.",
+        "The description suggests the Modi government has endured a series of humiliations under Trump."
+      ],
+      "date": "2026-09-18",
+      "reason": "yt-dlp failed: ERROR: [youtube] 2In5Onb9Ya4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-12ac8cdb7898",
+      "title": "Sab Changa Si, It’s Modi’s Birthday!",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=guSgL3i62sQ",
+      "takeaways": [
+        "As Prime Minister Narendra Modi turned 76, the state and the Bharatiya Janata Party (BJP) became one as the union ministers, BJP chief ministers and state governments pulled out all stops to celebrate his birthday.",
+        "From holding pujas, inaugurating statues, a bike rally to mark Modi's journey from Vadnagar to Varanasi, to schools being told to light lamps as a part of a nationwide Aashirwad Ka Diya campaign-governance took a backseat for the day as the prime minister's birthday was celebrated across the country."
+      ],
+      "date": "2026-09-18",
+      "reason": "yt-dlp failed: ERROR: [youtube] guSgL3i62sQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "gunjanshouts-d654edb4829c",
@@ -2641,16 +2653,7 @@
       "url": "https://www.youtube.com/watch?v=KE2YjADcfvA",
       "takeaways": [],
       "date": "2026-09-17",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "gunjanshouts-454212304ae6",
-      "title": "A Healthy Relationship Needs More Than Sex | Dr Sankalp Jain with GunjanShouts",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=rSuUkS1bZd4",
-      "takeaways": [],
-      "date": "2026-09-14",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] KE2YjADcfvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -2661,7 +2664,7 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-18T00:26:49.128Z",
+    "at": "2026-09-18T00:31:52.810Z",
     "discovered": 1137,
     "eligible": 8,
     "processed": 0,
@@ -2672,50 +2675,50 @@
       {
         "stage": "process",
         "id": "gunjanshouts-d654edb4829c",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-17T23:13:39.904Z"
+        "message": "yt-dlp failed: ERROR: [youtube] KE2YjADcfvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:30:08.207Z"
       },
       {
         "stage": "process",
-        "id": "desk-28fe524d590d",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-17T23:25:31.676Z"
+        "id": "desk-01f946ad316c",
+        "message": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:30:22.858Z"
       },
       {
         "stage": "process",
-        "id": "desk-02aab011eda4",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-17T23:41:56.862Z"
+        "id": "desk-98119e45f098",
+        "message": "yt-dlp failed: ERROR: [youtube] K8XC8mr2Rnw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:30:37.844Z"
       },
       {
         "stage": "process",
-        "id": "desk-10e8d11118e8",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-17T23:57:37.705Z"
+        "id": "desk-b0250f938fed",
+        "message": "yt-dlp failed: ERROR: [youtube] 5n7VpF9GLW0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:30:52.751Z"
       },
       {
         "stage": "process",
-        "id": "desk-ff3c910d8fec",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-17T23:57:43.924Z"
+        "id": "desk-d305b2a58483",
+        "message": "yt-dlp failed: ERROR: [youtube] xRZK5t7Bo1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:31:07.908Z"
       },
       {
         "stage": "process",
-        "id": "desk-0a64ca772a62",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-18T00:14:06.546Z"
+        "id": "desk-330b01affd80",
+        "message": "yt-dlp failed: ERROR: [youtube] IDqnsbF14hQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:31:22.854Z"
       },
       {
         "stage": "process",
-        "id": "desk-aafe80a1879c",
-        "message": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 38 hours.",
-        "at": "2026-09-18T00:14:19.939Z"
+        "id": "desk-b53c0e09ba0d",
+        "message": "yt-dlp failed: ERROR: [youtube] 2In5Onb9Ya4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:31:37.880Z"
       },
       {
         "stage": "process",
-        "id": "gunjanshouts-454212304ae6",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-18T00:26:49.118Z"
+        "id": "desk-12ac8cdb7898",
+        "message": "yt-dlp failed: ERROR: [youtube] guSgL3i62sQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-18T00:31:52.802Z"
       }
     ],
     "estimatedCostUsd": 0

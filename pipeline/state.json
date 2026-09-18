@@ -20932,8 +20932,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:23:34.099Z",
-      "updatedAt": "2026-09-17T23:13:39.904Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-18T00:30:08.207Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] KE2YjADcfvA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "diary-of-a-ceo-33d180bb3928": {
       "status": "NEEDS_REVIEW",
@@ -21197,6 +21197,90 @@
       "seenAt": "2026-09-18T00:14:19.946Z",
       "updatedAt": "2026-09-18T00:26:49.118Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-01f946ad316c": {
+      "status": "FAILED",
+      "title": "Former Secret Service Agent: How Presidents Are Protected | Evy Poumpouras | FO563 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=WnYgRL456ps",
+      "id": "desk-01f946ad316c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:30:08.214Z",
+      "updatedAt": "2026-09-18T00:30:22.858Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] WnYgRL456ps: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-98119e45f098": {
+      "status": "FAILED",
+      "title": "Former IMF Economist: What India Lost, What China Got Right & Where Young Indians Should Bet | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=K8XC8mr2Rnw",
+      "id": "desk-98119e45f098",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:30:22.866Z",
+      "updatedAt": "2026-09-18T00:30:37.844Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] K8XC8mr2Rnw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-b0250f938fed": {
+      "status": "FAILED",
+      "title": "Nifty is Down 9%. These 5 Stocks Are Hitting Highs",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=5n7VpF9GLW0",
+      "id": "desk-b0250f938fed",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:30:37.852Z",
+      "updatedAt": "2026-09-18T00:30:52.751Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 5n7VpF9GLW0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d305b2a58483": {
+      "status": "FAILED",
+      "title": "How to Pick the Best Debt Funds",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
+      "id": "desk-d305b2a58483",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:30:52.760Z",
+      "updatedAt": "2026-09-18T00:31:07.908Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] xRZK5t7Bo1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-330b01affd80": {
+      "status": "FAILED",
+      "title": "#AskAbhijit 381: History / Geopolitics / Science",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=IDqnsbF14hQ",
+      "id": "desk-330b01affd80",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:31:07.915Z",
+      "updatedAt": "2026-09-18T00:31:22.854Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] IDqnsbF14hQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-b53c0e09ba0d": {
+      "status": "FAILED",
+      "title": "Trump’s Birthday Gift For Modi? | A 100% Tariff Slap Even As Narendra Surrenders On UPI? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=2In5Onb9Ya4",
+      "id": "desk-b53c0e09ba0d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:31:22.862Z",
+      "updatedAt": "2026-09-18T00:31:37.880Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 2In5Onb9Ya4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-12ac8cdb7898": {
+      "status": "FAILED",
+      "title": "Sab Changa Si, It’s Modi’s Birthday!",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=guSgL3i62sQ",
+      "id": "desk-12ac8cdb7898",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-18T00:31:37.888Z",
+      "updatedAt": "2026-09-18T00:31:52.802Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] guSgL3i62sQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }
