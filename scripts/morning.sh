@@ -139,9 +139,15 @@ else
   else
     MSG="podcasts: morning refresh — +${PROC} read, ${COUNT} episode(s), ${POINTS} points"
   fi
+  # WHO RAN THIS MATTERS. run-local.sh used to commit under a personal identity and
+  # CI under "podcast-intelligence", so `git log` told you which machine produced a
+  # run. Folding the two scripts together lost that, and the first question asked of
+  # a bad morning — did the Mac job fire, or was that CI failing again? — became
+  # unanswerable from the history. The author now names the machine.
   log "committing: $MSG"
   git add public/podcasts.json pipeline/state.json
-  git -c user.name="podcast-intelligence" -c user.email="noreply@askakshay.com" commit -q -m "$MSG"
+  git -c user.name="podcast-intelligence (${PODCAST_RUNNER:-$(hostname -s 2>/dev/null || echo local)})" \
+      -c user.email="noreply@askakshay.com" commit -q -m "$MSG"
 
   # Retry: a laptop waking on wifi often has no route for the first few seconds,
   # and CI can land a commit during the run, which is minutes long.
