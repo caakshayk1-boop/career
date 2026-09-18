@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T15:40:51.464Z",
+  "generatedAt": "2026-09-18T15:53:37.285Z",
   "today": "2026-09-18",
   "retentionDays": 7,
   "days": [
@@ -2602,53 +2602,6 @@
   ],
   "pending": [
     {
-      "id": "desk-12ac8cdb7898",
-      "title": "Sab Changa Si, It’s Modi’s Birthday!",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=guSgL3i62sQ",
-      "takeaways": [
-        "As Prime Minister Narendra Modi turned 76, the state and the Bharatiya Janata Party (BJP) became one as the union ministers, BJP chief ministers and state governments pulled out all stops to celebrate his birthday.",
-        "From holding pujas, inaugurating statues, a bike rally to mark Modi's journey from Vadnagar to Varanasi, to schools being told to light lamps as a part of a nationwide Aashirwad Ka Diya campaign-governance took a backseat for the day as the prime minister's birthday was celebrated across the country."
-      ],
-      "date": "2026-09-18",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-aad0f0f9889a",
-      "title": "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=XG-2DEuoFus",
-      "takeaways": [
-        "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #DawoodIbrahim #Underworld #Dawood #Sharjah #Cricket #Stadium #Controversy Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-09-18",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-ada47704e8c3",
-      "title": "MULTIPLY Money With Gold - WATCH WITH PARENTS | Billionaire Prithviraj Kothari on TRS",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=_5rODK60oyA",
-      "takeaways": [
-        "central banks are accumulating gold",
-        "investment demand for gold increased after COVID"
-      ],
-      "date": "2026-09-18",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-750b1a69b795",
-      "title": "India – Size And Location | Class 9 Geography, Chapter 1 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=l0RE4--XgEM",
-      "takeaways": [
-        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 9 Geography, Chapter 1 – “India – Size And Location” in a simple, engaging, and exam-oriented manner.",
-        "This chapter helps students understand India’s geographical location, size, extent, latitudinal and longitudinal extent, neighbouring countries, and India’s strategic position in the world."
-      ],
-      "date": "2026-09-18",
-      "reason": "over the 8/day cap"
-    },
-    {
       "id": "desk-28fe524d590d",
       "title": "How Looking Rich Can Keep You Poor",
       "show": "Ankur Warikoo",
@@ -2768,6 +2721,41 @@
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     {
+      "id": "desk-aad0f0f9889a",
+      "title": "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=XG-2DEuoFus",
+      "takeaways": [
+        "\"It Did a Lot of Damage\": Mandakini Breaks Silence on Photo With Dawood Ibrahim #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #DawoodIbrahim #Underworld #Dawood #Sharjah #Cricket #Stadium #Controversy Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-18",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "desk-ada47704e8c3",
+      "title": "MULTIPLY Money With Gold - WATCH WITH PARENTS | Billionaire Prithviraj Kothari on TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=_5rODK60oyA",
+      "takeaways": [
+        "central banks are accumulating gold",
+        "investment demand for gold increased after COVID"
+      ],
+      "date": "2026-09-18",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "desk-750b1a69b795",
+      "title": "India – Size And Location | Class 9 Geography, Chapter 1 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=l0RE4--XgEM",
+      "takeaways": [
+        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 9 Geography, Chapter 1 – “India – Size And Location” in a simple, engaging, and exam-oriented manner.",
+        "This chapter helps students understand India’s geographical location, size, extent, latitudinal and longitudinal extent, neighbouring countries, and India’s strategic position in the world."
+      ],
+      "date": "2026-09-18",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
       "id": "gunjanshouts-d654edb4829c",
       "title": "STAY FOCUSED & IGNORE THE NOISE | GunjanShouts",
       "show": "GunjanShouts",
@@ -2785,37 +2773,55 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-18T15:40:51.453Z",
+    "at": "2026-09-18T15:53:37.275Z",
     "discovered": 1138,
     "eligible": 8,
-    "processed": 1,
+    "processed": 0,
     "skipped": 1131,
-    "failed": 6,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "gunjanshouts-d654edb4829c",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-18T15:26:51.651Z"
+        "at": "2026-09-18T15:45:33.980Z"
       },
       {
         "stage": "process",
         "id": "desk-b0250f938fed",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-18T15:35:46.554Z"
+        "at": "2026-09-18T15:46:51.465Z"
       },
       {
         "stage": "process",
         "id": "desk-d305b2a58483",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-18T15:37:03.705Z"
+        "at": "2026-09-18T15:48:08.911Z"
       },
       {
         "stage": "process",
         "id": "desk-b53c0e09ba0d",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-18T15:40:51.424Z"
+        "at": "2026-09-18T15:49:28.818Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-aad0f0f9889a",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:51:00.104Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-ada47704e8c3",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:52:18.255Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-750b1a69b795",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-18T15:53:37.264Z"
       }
     ],
     "estimatedCostUsd": 0
