@@ -202,7 +202,15 @@ const PROVIDERS = {
          so rather than be buried under a timeout.
 
          Every other 429 is genuine throttling, where waiting IS the fix. */
-      if (res.status === 429) {
+      /* THE SAME REFUSAL ARRIVES UNDER TWO STATUS CODES. Groq answers the
+         per-minute refusal with 429 for the output-token bucket and 413 for
+         the TPM bucket — identical message, identical remedy, and this branch
+         only ever tested for 429. So every 413 fell through to the generic
+         throw: eight of ten chunks on #AskAbhijit 381 on 2026-09-18, and both
+         that episode and Finance With Sharan then failed VALIDATION, for too
+         few surviving learnings, with nothing in the log naming the cause.
+         Two transcripts read, paid for and thrown away over a status code. */
+      if (res.status === 429 || res.status === 413) {
         const body429 = await res.clone().text().catch(() => "");
         const refused = /request too large/i.test(body429);
 
@@ -236,7 +244,10 @@ const PROVIDERS = {
             `Already-processed episodes are kept. ${body429.slice(0, 160)}`);
         }
 
-        if (attempt < cfg.groqRetries) {
+        /* Only a real 429 is throttling worth sleeping on. A 413 that did not
+           match the refusal above is something else, and belongs in the error
+           below rather than behind 90 seconds of silence. */
+        if (res.status === 429 && attempt < cfg.groqRetries) {
           const hinted = resetMs(res.headers.get("retry-after"))
             || resetMs(res.headers.get("x-ratelimit-reset-tokens"));
           await nap(Math.min(Math.max(hinted, 5000) + 1500, 90000));
