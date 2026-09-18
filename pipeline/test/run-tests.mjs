@@ -38,7 +38,7 @@ const { takeaways, sentences, findHost, pill, passageAt } = await import("../lib
 const { validateLearnings, verdict, parseTs } = await import("../lib/validate.mjs");
 const { buildPublic, buildPending, mergePending, pruneState } = await import("../lib/retention.mjs");
 const { extract, extractLocal } = await import("../lib/extract.mjs");
-const { makeAI } = await import("../lib/ai.mjs");
+const { makeAI, salvageToolArguments } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
 const { request } = await import("../lib/http.mjs");
 const { assessQuality, parseCues, parseJsonTranscript, parseTimedText } = await import("../lib/transcript.mjs");
@@ -501,6 +501,33 @@ group("validation — the grounding gate");
 
 /* ── AI FAILURE MODES ────────────────────────────────────────────────────── */
 group("AI failures");
+{
+  /* Groq answers 400 tool_use_failed when the model's own arguments will not
+     parse, and it lost a whole read episode on 2026-09-18. The recoverable
+     shapes must come back; the unrecoverable ones must come back as null, not
+     as a half-built object. */
+  const envelope = '{"name": "record_ranked", "arguments": {"ranked": [1, 2]}}';
+  ok("the {name, arguments} envelope is unwrapped",
+     eq(salvageToolArguments(envelope), { ranked: [1, 2] }), JSON.stringify(salvageToolArguments(envelope)));
+
+  const stringArgs = '{"name": "record_ranked", "arguments": "{\\"ranked\\": [3]}"}';
+  ok("arguments delivered as a JSON string are parsed",
+     eq(salvageToolArguments(stringArgs), { ranked: [3] }), JSON.stringify(salvageToolArguments(stringArgs)));
+
+  ok("a fenced block is unfenced",
+     eq(salvageToolArguments('```json\n{"ranked": [4]}\n```'), { ranked: [4] }));
+
+  ok("a bare arguments object passes through",
+     eq(salvageToolArguments('{"ranked": [5]}'), { ranked: [5] }));
+
+  ok("a schema that legitimately has an `arguments` key is NOT unwrapped",
+     eq(salvageToolArguments('{"arguments": "keep me"}'), { arguments: "keep me" }));
+
+  ok("truncated JSON is not guessed at", salvageToolArguments('{"name": "record_ranked", "argum') === null);
+  ok("an array is not an arguments object", salvageToolArguments("[1,2]") === null);
+  ok("empty input salvages nothing", salvageToolArguments("") === null && salvageToolArguments(null) === null);
+}
+
 {
   const ai = await makeAI("mock");
   const out = await extract(ai, EPISODE, TRANSCRIPT);

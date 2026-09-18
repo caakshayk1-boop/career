@@ -66,6 +66,39 @@ export function estimateCost(inTokens, outTokens, model = cfg.aiModel) {
   return (inTokens / 1e6) * p.in + (outTokens / 1e6) * p.out;
 }
 
+/* THE MODEL'S OWN TOOL CALL, RECOVERED.
+ *
+ * Groq validates the arguments the model generated and answers 400
+ * `tool_use_failed` when they will not parse — the whole call is lost, however
+ * good the rest of the answer was. The two shapes seen are the model emitting
+ * the entire envelope, {"name": …, "arguments": {…}}, where the API wanted the
+ * arguments object alone, and the same JSON inside a ```json fence.
+ *
+ * Both are recoverable from `failed_generation` without spending another call.
+ * Anything else returns null, so the caller fails loudly rather than
+ * publishing half an object — a salvage that guesses is worse than no salvage.
+ */
+export function salvageToolArguments(raw) {
+  const text = String(raw || "").trim();
+  if (!text) return null;
+  const bare = text.replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "").trim();
+  let v;
+  try { v = JSON.parse(bare); } catch { return null; }
+  const isObj = (x) => x !== null && typeof x === "object" && !Array.isArray(x);
+  if (!isObj(v)) return null;
+  /* Unwrap ONLY the envelope shape: a bare `arguments` key on a schema of our
+     own would otherwise be mistaken for one. */
+  if (typeof v.name === "string" && "arguments" in v) {
+    const a = v.arguments;
+    if (isObj(a)) return a;
+    if (typeof a === "string") {
+      try { const p = JSON.parse(a); return isObj(p) ? p : null; } catch { return null; }
+    }
+    return null;
+  }
+  return v;
+}
+
 const PROVIDERS = {
   /**
    * Groq — the free one.
@@ -139,7 +172,7 @@ const PROVIDERS = {
     };
     let budget = { remaining: Infinity, resetInMs: 0 };
 
-    const post = async (body, attempt = 0) => {
+    const post = async (body, attempt = 0, toolAttempt = 0) => {
       await gate();
       /* If the window is nearly spent, wait for it to refill before asking.
          Cheaper than a refusal, and it keeps the run deterministic. */
@@ -212,6 +245,30 @@ const PROVIDERS = {
           return post(body, attempt + 1);
         }
       }
+      /* `tool_use_failed` IS A 400 AND IT IS NOT THE REQUEST'S FAULT.
+       *
+       * Groq rejects the call when the model's own tool arguments will not
+       * parse. It fell straight through to the generic throw below with no
+       * retry, which cost desk-10e8d11118e8 its whole episode on 2026-09-18 —
+       * a transcript that had already been read and paid for.
+       *
+       * Generation is stochastic, so the same prompt usually parses on the
+       * next attempt. Retry twice, then hand the raw text out to the caller,
+       * which can often recover it. Its own counter, because the 429 path
+       * halves max_tokens off `attempt` and the two must not consume each
+       * other's budget. */
+      if (res.status === 400) {
+        const b400 = await res.clone().text().catch(() => "");
+        if (/tool_use_failed/.test(b400)) {
+          if (toolAttempt < 2) return post(body, attempt, toolAttempt + 1);
+          const tool = ((body.tools || [])[0] || {}).function || {};
+          const err = new Error(
+            `groq could not produce valid ${tool.name || "tool"} arguments in 3 attempts`);
+          try { err.failedGeneration = JSON.parse(b400)?.error?.failed_generation || ""; }
+          catch { err.failedGeneration = ""; }
+          throw err;
+        }
+      }
       if (!res.ok) {
         const t = await res.text().catch(() => "");
         throw new Error(`groq ${res.status}: ${t.slice(0, 180)}`);
@@ -227,7 +284,9 @@ const PROVIDERS = {
       model: cfg.groqModel,
 
       async json({ system, user, schema, name, description, cheap = false, maxTokens = 8000 }) {
-        const d = await post({
+        let d;
+        try {
+          d = await post({
           /* The per-chunk read goes to the cheap model — not to save money,
              which is zero either way, but because the DAILY token bucket is
              per model and this pass is nearly all of the tokens. */
@@ -246,7 +305,12 @@ const PROVIDERS = {
             parameters: { ...schema, additionalProperties: false },
           } }],
           tool_choice: "required",
-        });
+          });
+        } catch (e) {
+          const salvaged = salvageToolArguments(e && e.failedGeneration);
+          if (salvaged) return salvaged;
+          throw e;
+        }
         const msg = (d.choices || [{}])[0].message || {};
         const call = (msg.tool_calls || [])[0];
         if (!call) {
@@ -255,6 +319,9 @@ const PROVIDERS = {
         try {
           return JSON.parse(call.function.arguments);
         } catch {
+          /* Same two shapes reach us here when the API accepted them. */
+          const salvaged = salvageToolArguments(call.function.arguments);
+          if (salvaged) return salvaged;
           throw new Error(`${name} arguments were not valid JSON`);
         }
       },
