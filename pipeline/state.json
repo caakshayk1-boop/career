@@ -15260,7 +15260,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-10T14:49:26.862Z",
-      "updatedAt": "2026-09-18T16:56:17.023Z",
+      "updatedAt": "2026-09-18T22:53:03.937Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-338f935c708b": {
@@ -15344,7 +15344,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:36.959Z",
-      "updatedAt": "2026-09-18T16:56:07.011Z",
+      "updatedAt": "2026-09-18T22:52:54.007Z",
       "payload": {
         "id": "diary-of-a-ceo-c783a6dfa547",
         "sourceId": "diary-of-a-ceo",
@@ -15681,7 +15681,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:37.498Z",
-      "updatedAt": "2026-09-18T16:56:09.509Z",
+      "updatedAt": "2026-09-18T22:52:56.417Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-c22c8c9d857b": {
@@ -15693,7 +15693,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:39.097Z",
-      "updatedAt": "2026-09-18T16:56:12.010Z",
+      "updatedAt": "2026-09-18T22:52:58.894Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-55a5b39c122e": {
@@ -16711,7 +16711,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-13T00:04:08.671Z",
-      "updatedAt": "2026-09-18T16:56:02.110Z",
+      "updatedAt": "2026-09-18T22:52:48.881Z",
       "reason": "no candidate ideas found in the transcript",
       "payload": {
         "id": "desk-dfded789bd87",
@@ -18239,7 +18239,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:46.148Z",
-      "updatedAt": "2026-09-18T16:55:34.495Z",
+      "updatedAt": "2026-09-18T22:52:21.361Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-23e7df01656d": {
@@ -21684,8 +21684,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:33:41.096Z",
-      "updatedAt": "2026-09-18T16:55:26.991Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-18T22:52:13.891Z",
+      "reason": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10663"
     },
     "gunjanshouts-21290098a302": {
       "status": "FAILED",
@@ -21696,7 +21696,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:34:26.246Z",
-      "updatedAt": "2026-09-18T16:55:57.004Z",
+      "updatedAt": "2026-09-18T22:52:43.882Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "gunjanshouts-11ab217dded8": {

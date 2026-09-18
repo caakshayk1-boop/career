@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T16:56:17.044Z",
+  "generatedAt": "2026-09-18T22:53:04.237Z",
   "today": "2026-09-19",
   "retentionDays": 7,
   "days": [
@@ -2701,7 +2701,7 @@
       "url": "https://www.acquired.fm/episodes/home-depot",
       "takeaways": [],
       "date": "2026-09-14",
-      "reason": "no candidate ideas found in the transcript"
+      "reason": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec4"
     },
     {
       "id": "gunjanshouts-21290098a302",
@@ -2730,61 +2730,61 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-18T16:56:17.042Z",
-    "discovered": 1125,
-    "eligible": 10,
+    "at": "2026-09-18T22:53:04.225Z",
+    "discovered": 1138,
+    "eligible": 8,
     "processed": 0,
-    "skipped": 1115,
-    "failed": 10,
+    "skipped": 1130,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "acquired-2a6fbe08f6fb",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:55:26.991Z"
+        "message": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10663",
+        "at": "2026-09-18T22:52:13.890Z"
       },
       {
         "stage": "process",
         "id": "desk-5886041ee66d",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:55:34.495Z"
+        "at": "2026-09-18T22:52:21.361Z"
       },
       {
         "stage": "process",
         "id": "gunjanshouts-21290098a302",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:55:57.004Z"
+        "at": "2026-09-18T22:52:43.882Z"
       },
       {
         "stage": "process",
         "id": "desk-dfded789bd87",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:56:02.110Z"
+        "at": "2026-09-18T22:52:48.880Z"
       },
       {
         "stage": "process",
         "id": "diary-of-a-ceo-c783a6dfa547",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:56:07.011Z"
+        "at": "2026-09-18T22:52:54.007Z"
       },
       {
         "stage": "process",
         "id": "desk-94a530b3b7a1",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:56:09.509Z"
+        "at": "2026-09-18T22:52:56.417Z"
       },
       {
         "stage": "process",
         "id": "desk-c22c8c9d857b",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:56:12.009Z"
+        "at": "2026-09-18T22:52:58.894Z"
       },
       {
         "stage": "process",
         "id": "desk-3a342472d20e",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-18T16:56:17.023Z"
+        "at": "2026-09-18T22:53:03.934Z"
       }
     ],
     "estimatedCostUsd": 0
