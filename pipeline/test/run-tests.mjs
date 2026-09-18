@@ -41,7 +41,7 @@ const { extract, extractLocal } = await import("../lib/extract.mjs");
 const { makeAI, salvageToolArguments } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
 const { request } = await import("../lib/http.mjs");
-const { assessQuality, parseCues, parseJsonTranscript, parseTimedText } = await import("../lib/transcript.mjs");
+const { assessQuality, parseCues, parseJsonTranscript, parseTimedText, ytdlpCookieArgs } = await import("../lib/transcript.mjs");
 const { TRANSCRIPT, EPISODE, SEGMENTS } = await import("./fixtures/transcript.mjs");
 const MESSY = await import("./fixtures/messy.mjs");
 const { mytDate } = await import("../config.mjs");
@@ -500,6 +500,23 @@ group("validation — the grounding gate");
 }
 
 /* ── AI FAILURE MODES ────────────────────────────────────────────────────── */
+group("yt-dlp cookies");
+{
+  /* Signed out, YouTube answers this IP with 429 and a CI runner with "Sign in
+     to confirm you're not a bot". Measured 2026-09-19 on KE2YjADcfvA: 429
+     anonymous, 13,968 bytes of subtitles with Safari's cookies, same minute.
+     The flags must stay OFF by default so CI is unchanged. */
+  ok("no cookie flags unless asked", eq(ytdlpCookieArgs({}), []));
+  ok("a browser profile is passed through",
+     eq(ytdlpCookieArgs({ ytdlpCookiesFromBrowser: "safari" }), ["--cookies-from-browser", "safari"]));
+  ok("an exported jar is passed through",
+     eq(ytdlpCookieArgs({ ytdlpCookiesFile: "/tmp/c.txt" }), ["--cookies", "/tmp/c.txt"]));
+  ok("the explicit file wins over a browser profile",
+     eq(ytdlpCookieArgs({ ytdlpCookiesFile: "/tmp/c.txt", ytdlpCookiesFromBrowser: "safari" }),
+        ["--cookies", "/tmp/c.txt"]));
+  ok("empty strings are not flags", eq(ytdlpCookieArgs({ ytdlpCookiesFile: "", ytdlpCookiesFromBrowser: "" }), []));
+}
+
 group("AI failures");
 {
   /* Groq answers 400 tool_use_failed when the model's own arguments will not

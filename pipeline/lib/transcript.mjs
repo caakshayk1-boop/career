@@ -98,6 +98,14 @@ function ytdlpGate() {
   return wait;
 }
 
+/** The cookie flags, or nothing at all. A file beats a browser profile when
+ *  both are set: it is the explicit choice, and the one that works headless. */
+export function ytdlpCookieArgs(c = cfg) {
+  if (c.ytdlpCookiesFile) return ["--cookies", c.ytdlpCookiesFile];
+  if (c.ytdlpCookiesFromBrowser) return ["--cookies-from-browser", c.ytdlpCookiesFromBrowser];
+  return [];
+}
+
 async function runYtDlp(args) {
   const opts = { timeout: 180000, maxBuffer: 32 * 1024 * 1024 };
   try {
@@ -185,6 +193,7 @@ const PROVIDERS = {
       await ytdlpGate();
       try {
         await runYtDlp([
+          ...ytdlpCookieArgs(),
           "--skip-download", "--write-auto-subs", "--write-subs",
           "--sub-langs", "en.*", "--sub-format", "json3",
           "--no-warnings", "--no-progress",

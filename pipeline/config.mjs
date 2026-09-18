@@ -213,6 +213,29 @@ export const cfg = {
   elevenModel: process.env.ELEVENLABS_MODEL || "eleven_turbo_v2_5",
 
   transcriptProvider: process.env.TRANSCRIPT_PROVIDER || "auto",
+
+  /* THE COOKIE JAR IS THE DIFFERENCE BETWEEN A FEED AND AN EMPTY PAGE.
+   *
+   * YouTube answers an anonymous caption request from this IP with HTTP 429,
+   * and a datacentre IP with "Sign in to confirm you're not a bot". Measured
+   * on 2026-09-19 against KE2YjADcfvA, which had failed every run that day:
+   * anonymous → 429 in two seconds; with Safari's cookies → 13,968 bytes of
+   * subtitles, first try, same minute. It is not the rate of our requests. It
+   * is that they are signed out.
+   *
+   * Empty by default, so CI — which has no browser and must not pretend to —
+   * behaves exactly as before. YTDLP_COOKIES_FROM_BROWSER=safari|chrome reads
+   * the live browser profile; YTDLP_COOKIES_FILE points at an exported jar for
+   * a machine where the browser database is unreadable (a launchd job without
+   * Full Disk Access is the case that bites).
+   *
+   * THE TRADE, STATED: these are a real logged-in session. yt-dlp's own FAQ
+   * warns that heavy automated use of account cookies can get the account
+   * flagged. This job makes a few dozen caption requests a morning, which is
+   * not heavy — but it is not zero either, and that is Akshay's call to make
+   * rather than a default to switch on quietly. */
+  ytdlpCookiesFromBrowser: process.env.YTDLP_COOKIES_FROM_BROWSER || "",
+  ytdlpCookiesFile: process.env.YTDLP_COOKIES_FILE || "",
   deepgramKey: process.env.DEEPGRAM_API_KEY || "",
 
   /* ── AUDIO STORAGE ──────────────────────────────────────────────────────
