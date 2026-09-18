@@ -21361,18 +21361,6 @@
         "readSeconds": 110
       }
     },
-    "desk-98119e45f098": {
-      "status": "NEEDS_REVIEW",
-      "title": "Former IMF Economist: What India Lost, What China Got Right & Where Young Indians Should Bet | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=K8XC8mr2Rnw",
-      "id": "desk-98119e45f098",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-18T00:30:22.866Z",
-      "updatedAt": "2026-09-18T15:34:38.324Z",
-      "reason": "only 3 learnings survived validation (floor is 6)"
-    },
     "desk-b0250f938fed": {
       "status": "FAILED",
       "title": "Nifty is Down 9%. These 5 Stocks Are Hitting Highs",
@@ -21396,18 +21384,6 @@
       "seenAt": "2026-09-18T00:30:52.760Z",
       "updatedAt": "2026-09-18T15:48:08.911Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    "desk-330b01affd80": {
-      "status": "NEEDS_REVIEW",
-      "title": "#AskAbhijit 381: History / Geopolitics / Science",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=IDqnsbF14hQ",
-      "id": "desk-330b01affd80",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-18T00:31:07.915Z",
-      "updatedAt": "2026-09-18T15:39:41.709Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
     },
     "desk-b53c0e09ba0d": {
       "status": "FAILED",
