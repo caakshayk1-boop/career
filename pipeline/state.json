@@ -15260,8 +15260,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-10T14:49:26.862Z",
-      "updatedAt": "2026-09-18T22:53:03.937Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-19T00:30:10.256Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] PtSLamEHWjc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-338f935c708b": {
       "status": "FAILED",
@@ -15344,7 +15344,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:36.959Z",
-      "updatedAt": "2026-09-18T22:52:54.007Z",
+      "updatedAt": "2026-09-19T00:29:37.784Z",
       "payload": {
         "id": "diary-of-a-ceo-c783a6dfa547",
         "sourceId": "diary-of-a-ceo",
@@ -15681,8 +15681,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:37.498Z",
-      "updatedAt": "2026-09-18T22:52:56.417Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-19T00:29:40.278Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] GU4YvNZao9o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-c22c8c9d857b": {
       "status": "FAILED",
@@ -15693,8 +15693,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:39.097Z",
-      "updatedAt": "2026-09-18T22:52:58.894Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-19T00:29:55.106Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6qmGO1ipb_o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-55a5b39c122e": {
       "status": "PUBLISHED",
@@ -16711,8 +16711,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-13T00:04:08.671Z",
-      "updatedAt": "2026-09-18T22:52:48.881Z",
-      "reason": "no candidate ideas found in the transcript",
+      "updatedAt": "2026-09-19T00:29:13.572Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] zwE5G1Zh1h8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
       "payload": {
         "id": "desk-dfded789bd87",
         "sourceId": "desk",
@@ -18239,8 +18239,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-15T00:46:46.148Z",
-      "updatedAt": "2026-09-18T22:52:21.361Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-19T00:28:58.529Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-23e7df01656d": {
       "status": "FAILED",
@@ -21676,7 +21676,7 @@
       "reason": "transcript unusable: transcript is only 811 characters"
     },
     "acquired-2a6fbe08f6fb": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "The Home Depot",
       "show": "Acquired",
       "url": "https://www.acquired.fm/episodes/home-depot",
@@ -21684,8 +21684,174 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:33:41.096Z",
-      "updatedAt": "2026-09-18T22:52:13.891Z",
-      "reason": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10663"
+      "updatedAt": "2026-09-19T00:28:55.967Z",
+      "reason": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 10663",
+      "payload": {
+        "id": "acquired-2a6fbe08f6fb",
+        "sourceId": "acquired",
+        "show": "Acquired",
+        "title": "The Home Depot",
+        "guest": "",
+        "topics": [
+          "home depot",
+          "retail",
+          "ipo",
+          "entrepreneurship",
+          "finance"
+        ],
+        "summary": "This episode recounts the dramatic founding of The Home Depot, tracing how Bernie Marcus and Arthur Blank were ousted from their previous hardware chain and, with the backing of Ken Langone, built the most lucrative retail equity in U.S. history. It highlights the fragmented DIY market of the 1970s, the strategic spin‑offs and acquisitions that paved the way, and the massive long‑term returns generated for investors.",
+        "url": "https://www.acquired.fm/episodes/home-depot",
+        "type": "rss",
+        "image": "https://img.transistorcdn.com/DpYRwLVYbt09NDhOfdtKg4KNCH0yCkhX7PeHyOBbH14/rs:fill:0:0:1/w:1400/h:1400/q:60/mb:500000/aHR0cHM6Ly9pbWct/dXBsb2FkLXByb2R1/Y3Rpb24udHJhbnNp/c3Rvci5mbS81MDNm/MDk2YTNmOTBkNmFk/MzJkZmYzZTQ4OWMz/MjdhOS5qcGc.jpg",
+        "publishedAt": "2026-09-14T03:35:03.000Z",
+        "date": "2026-09-14",
+        "durationSec": 12888,
+        "processedAt": "2026-09-19T00:28:55.966Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "published",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Home Depot IPO $1,000 grew to $17 million",
+            "idea": "Investing $1,000 in Home Depot’s 1981 IPO and reinvesting dividends would be worth about $17 million today, far outpacing the S&P 500.",
+            "why": "Shows the extraordinary long‑term compounding power of a successful retail business and the importance of dividend reinvestment.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "If you reinvested the dividends that it paid out, it has compounded at nearly 25% per year for 45 years… that $1,000 invested in the IPO would be worth about $17 million dollars today.",
+            "t": 157,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Home Depot ranks 45th most valuable public company",
+            "idea": "Despite operating only in North America, Home Depot’s $350 billion market cap makes it the 45th most valuable publicly traded company worldwide.",
+            "why": "Highlights how a focused geographic strategy can still produce a global‑scale valuation, challenging the notion that scale requires worldwide presence.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "Home Depot is the world’s largest specialty retailer… Home Depot is the 45th most valuable publicly traded company in the world, period, with a $350 billion market cap.",
+            "t": 75,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Pre‑Home Depot hardware market was fragmented",
+            "idea": "Before Home Depot, DIY customers had to visit multiple tiny specialty stores for lumber, tools, plumbing, etc.; there was no single store offering everything.",
+            "why": "Explains the unmet consumer demand that Home Depot later solved, illustrating how market fragmentation creates opportunity for a one‑stop retailer.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "You couldn't actually go to one place to get everything… you would walk into these little hardware stores and good luck…",
+            "t": 788,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.78,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Homeowners reinvest 1% of house value annually",
+            "idea": "Homeowners typically spend about 1% of a house’s market value each year on maintenance, creating a steady revenue stream for hardware retailers.",
+            "why": "Provides a concrete, recurring demand metric that underpins the long‑term resilience of the home‑improvement sector.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "The rule of thumb is that homeowners need to reinvest about 1% of the house's then market value into their home every year just in maintenance before you get into improvement.",
+            "t": 1150,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 5,
+            "headline": "Ken Langone’s share purchase forced Handy Dan founders out",
+            "idea": "Ken Langone accumulated about 20% of Handy Dan by buying a 2% block from a Catholic congregation, then used that control to force the firing of founders Bernie Marcus and Arthur Blank.",
+            "why": "Demonstrates how a relatively small, strategic equity stake can trigger leadership changes that reshape an entire industry.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "Ken started buying at $3 a share, and by the time he was done, he bought almost 20% of the company… This move gave him de facto board control and triggered the firing of Bernie and Arthur.",
+            "t": 1506,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.56,
+            "repaired": false
+          },
+          {
+            "rank": 6,
+            "headline": "1970s conglomerate spin‑offs at 19% failed",
+            "idea": "Conglomerates in the 1970s spun off subsidiary shares at 19% ownership to unlock value, but these publicly traded stubs often traded at a discount to the parent, making the strategy ineffective.",
+            "why": "Warns investors that artificial carve‑outs may not create value and can mislead analysts about subsidiary performance.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "There was this kind of crazy fad going on Wall Street in the ’70s… spin off these little 19% equity stubs… Actually, in reality, it didn’t work at all. In practice, most of these publicly traded little divisional stubs traded at a further discount to the parent company’s already discounted holding company valuation.",
+            "t": 630,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 0.93,
+            "repaired": false
+          },
+          {
+            "rank": 7,
+            "headline": "Handy Dan generated $150 million in 1970s revenue",
+            "idea": "In the 1970s Handy Dan’s annual revenue was about $150 million, far smaller than today’s Lowe’s footprint.",
+            "why": "Provides a baseline to appreciate the scale of growth in the hardware sector and the magnitude of consolidation that followed.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "They were all these small store footprints that we're talking about, like a fifth or less of the size of what you know as Lowe's today. They're mostly in strip malls, and the whole company Lowe's is only doing about $150 million in annual revenue total.",
+            "t": 853,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 8,
+            "headline": "Moody’s manual revealed Handy Dan undervalued",
+            "idea": "Ken used a Moody’s manual to see Handy Dan’s post‑tax net income of $1.50 per share while the stock traded at $3, indicating a two‑year earnings valuation and a buying opportunity.",
+            "why": "Shows a low‑cost, data‑driven method for spotting mispricings using publicly available earnings data.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "He looks at the financials. Holy crap, you're right. This is a great business. But yeah, it's trading for $3 a share. And if Moody's is right, this company is going to earn post‑tax net income of $1.50 a share this year. So this company is trading at two years of post‑tax earnings.",
+            "t": 1216,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 9,
+            "headline": "Daylin’s bankruptcy killed Handy Dan despite success",
+            "idea": "Even though Handy Dan performed well, its parent Daylin filed for bankruptcy in 1975 because other divisions weighed it down, demonstrating the risk of a weak conglomerate parent.",
+            "why": "Highlights the importance of evaluating a subsidiary’s health within the context of its corporate structure, not just its own metrics.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "But that still doesn't save Daylin, the parent company, because they're so weighed down by their other divisions that they file for bankruptcy in 1975, and they bring in a noted turnaround artist as the CEO to turn it around.",
+            "t": 928,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 144
+      }
     },
     "gunjanshouts-21290098a302": {
       "status": "FAILED",
