@@ -15336,7 +15336,7 @@
       "reason": "no caption track reachable — watch page: no captionTracks in the player config; timedtext: 3 variants empty, none listed"
     },
     "diary-of-a-ceo-c783a6dfa547": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "Most Replayed Moment: Brain Rot Experts - How To Use AI In A Healthy Way!",
       "show": "The Diary Of A CEO",
       "url": "",
@@ -15344,7 +15344,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-12T00:23:36.959Z",
-      "updatedAt": "2026-09-19T00:29:37.784Z",
+      "updatedAt": "2026-09-20T00:11:30.027Z",
       "payload": {
         "id": "diary-of-a-ceo-c783a6dfa547",
         "sourceId": "diary-of-a-ceo",
@@ -15670,7 +15670,7 @@
         "audio": null,
         "readSeconds": 97
       },
-      "reason": "no candidate ideas found in the transcript"
+      "reason": "older than 192h"
     },
     "desk-94a530b3b7a1": {
       "status": "FAILED",
@@ -18564,8 +18564,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:43.778Z",
-      "updatedAt": "2026-09-18T00:14:19.939Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 38 hours."
+      "updatedAt": "2026-09-20T00:12:32.582Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-a21e9dfc084e": {
       "status": "NEEDS_REVIEW",
@@ -21876,6 +21876,90 @@
       "seenAt": "2026-09-18T16:34:56.181Z",
       "updatedAt": "2026-09-18T16:35:03.306Z",
       "reason": "transcript unusable: transcript is only 870 characters"
+    },
+    "desk-4eb5f4de2aec": {
+      "status": "FAILED",
+      "title": "How Top VCs Pick Founders, Evaluate Startups & Fund Them | Sasha Mirchandani | FO564 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=0XStJayUrUY",
+      "id": "desk-4eb5f4de2aec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:11:30.028Z",
+      "updatedAt": "2026-09-20T00:11:32.417Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 0XStJayUrUY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-1240b0b2e0b2": {
+      "status": "FAILED",
+      "title": "Elon Musk & Dario’s Final Warning | Why the AI Race Is Getting Dangerously Out of Control?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=ky6jesFvIqY",
+      "id": "desk-1240b0b2e0b2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:11:32.426Z",
+      "updatedAt": "2026-09-20T00:11:47.379Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] ky6jesFvIqY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-b6151d26d3c2": {
+      "status": "FAILED",
+      "title": "How Much Salary Do You Really Need in India?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
+      "id": "desk-b6151d26d3c2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:11:47.387Z",
+      "updatedAt": "2026-09-20T00:12:02.510Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-483eec7834c0": {
+      "status": "FAILED",
+      "title": "The Uncomfortable Truth about Mutual Funds!",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
+      "id": "desk-483eec7834c0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:12:02.520Z",
+      "updatedAt": "2026-09-20T00:12:17.660Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 3GegZ7tT4i0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-bffa57c8329b": {
+      "status": "FAILED",
+      "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=JfacDx4K6K0",
+      "id": "desk-bffa57c8329b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:12:32.592Z",
+      "updatedAt": "2026-09-20T00:12:47.422Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] JfacDx4K6K0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-1b7461822509": {
+      "status": "FAILED",
+      "title": "BRICS 2026: India’s $226 Billion Trade Deficit & The New UPI Fee Explained | Cracknomics Ep 109",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=b22bw2UvXOg",
+      "id": "desk-1b7461822509",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:12:47.430Z",
+      "updatedAt": "2026-09-20T00:13:02.645Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] b22bw2UvXOg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d8fbe0f67dc6": {
+      "status": "FAILED",
+      "title": "Promo | EP-451 with Author and Historian Vikram Sampath Premieres Today at 5 PM IST",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=6WJBfDiVJiI",
+      "id": "desk-d8fbe0f67dc6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T00:13:02.652Z",
+      "updatedAt": "2026-09-20T00:13:17.636Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6WJBfDiVJiI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

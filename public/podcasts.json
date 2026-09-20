@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-19T00:30:10.264Z",
-  "today": "2026-09-19",
+  "generatedAt": "2026-09-20T00:13:17.645Z",
+  "today": "2026-09-20",
   "retentionDays": 7,
   "days": [
     {
       "date": "2026-09-19",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-b53c0e09ba0d",
         "desk-ada47704e8c3",
@@ -15,7 +15,7 @@
     },
     {
       "date": "2026-09-18",
-      "label": "Yesterday",
+      "label": "Friday",
       "episodeIds": [
         "desk-01f946ad316c"
       ]
@@ -2802,6 +2802,78 @@
   ],
   "pending": [
     {
+      "id": "desk-e993cdbfc291",
+      "title": "Rajasthan Ki Jai! 🚩| Rajveer Sir Returns On TRS | Jauhar, Art, Jains & Ancient History",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=ZMg5MbaXmcw",
+      "takeaways": [
+        "In this 541th (overall 1046th) episode of The Ranveer Show, Ranveer Allahbadia sits down with Rajveer Sir once again for a fascinating conversation about Rajasthan’s history, Rajput history, Ancient India, and Indian culture.",
+        "They talk about the ancient Saraswati River, Indus Valley Civilization, Sindh and Partition, and explore the stories of legendary figures like Bappa Rawal, Hammir Dev Chauhan, Maharana Kumbha, Sawai Jai Singh, and Man Singh."
+      ],
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-31fd5c67ec73",
+      "title": "A New Cat Species After 100 Years! Meet Bolivia’s ‘Tilcayo’ | Current Affairs | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=JEQdEZgfxSE",
+      "takeaways": [
+        "A new species of wild cat, named Tilcayo, has been identified in Bolivia’s cloud-covered Yungas forests, marking the first formal description of a new living cat species in more than a century.",
+        "Researchers used genetic analysis to confirm that the Bolivian tiger cat is a distinct species and named it Leopardus tilcayo."
+      ],
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-75cda777ce9c",
+      "title": "BSE vs NSE: Can NSE Repeat BSE’s Massive Growth Story? | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=Z8k5_eiLraI",
+      "takeaways": [
+        "BSE has been publicly listed since 2017, while NSE is now heading towards its IPO.",
+        "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage."
+      ],
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-1a8a9df81ccc",
+      "title": "CTC vs Gross Salary vs In-Hand Salary, Explained!",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
+      "takeaways": [
+        "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
+        "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
+      ],
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-57329e6625df",
+      "title": "Deep Sea Mysteries That Science Can't Explain! | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=q678XLOueN8",
+      "takeaways": [
+        "Learn how to make content creation your part-time job or full-time career!",
+        "Learn to harness the power of ChatGPT and transform your life!"
+      ],
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-2a51a7dbc329",
+      "title": "Sadhguru Darshan Part 1 - Shiva’s Lesson for Kubera",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=_zD8lEHeVP8",
+      "takeaways": [
+        "Sharp intelligence and a balanced disposition are the true means to overcome obstacles in life.",
+        "Sadhguru explains the deeper significance of Ganesha Chaturthi beyond the celebrations and feasting."
+      ],
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
+    },
+    {
       "id": "desk-5886041ee66d",
       "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
       "show": "Shut Up Ya Kunal",
@@ -2810,65 +2882,104 @@
         "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
         "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
       ],
-      "date": "2026-09-19",
-      "reason": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-20",
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-dfded789bd87",
-      "title": "Top 5 Things You Need to Know About the NSE IPO | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=zwE5G1Zh1h8",
+      "id": "desk-4eb5f4de2aec",
+      "title": "How Top VCs Pick Founders, Evaluate Startups & Fund Them | Sasha Mirchandani | FO564 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=0XStJayUrUY",
       "takeaways": [
-        "NSE generates revenue through transaction charges, options revenue, listing fees, data services, clearing & settlement, and Nifty licensing.",
-        "The episode reviews NSE’s business model, financial performance, valuation, industry outlook, key risks, and IPO details."
+        "Conscientiousness beats raw talent in every founder he has ever backed.",
+        "He prefers funding founders who have already failed once and came back smarter."
       ],
-      "date": "2026-09-19",
-      "reason": "yt-dlp failed: ERROR: [youtube] zwE5G1Zh1h8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] 0XStJayUrUY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-94a530b3b7a1",
-      "title": "What Went Wrong With Goa?",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=GU4YvNZao9o",
+      "id": "desk-1240b0b2e0b2",
+      "title": "Elon Musk & Dario’s Final Warning | Why the AI Race Is Getting Dangerously Out of Control?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=ky6jesFvIqY",
       "takeaways": [
-        "Access the full data and references used in this episode below.",
-        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
+        "An ex‑Anthropic scientist warned that AI could kill us all, a view echoed by Bill Gates, Geoffrey Hinton, Dario Amodei, Sam Altman and Elon Musk.",
+        "Michael Burry and others argue that the AI‑danger warnings are nonsense and are being used to buy time while AI companies lose money."
       ],
-      "date": "2026-09-19",
-      "reason": "yt-dlp failed: ERROR: [youtube] GU4YvNZao9o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] ky6jesFvIqY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-c22c8c9d857b",
-      "title": "Why Some Nifty ETFs Beat Others?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=6qmGO1ipb_o",
+      "id": "desk-b6151d26d3c2",
+      "title": "How Much Salary Do You Really Need in India?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
       "takeaways": [
-        "If there are 20 ETFs tracking the same index, does it really matter which one you choose?",
-        "Turns out, the answer isn’t as straightforward as you might think."
+        "Your city, housing costs, dependants, loans, and lifestyle matter more than simply comparing salaries.",
+        "Do not assume the mentioned products are the best; you should research them yourself."
       ],
-      "date": "2026-09-19",
-      "reason": "yt-dlp failed: ERROR: [youtube] 6qmGO1ipb_o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-3a342472d20e",
-      "title": "11-14% (Tax Free) returns for NRIs | (Who will pay the price?) #FCNRb",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=PtSLamEHWjc",
+      "id": "desk-483eec7834c0",
+      "title": "The Uncomfortable Truth about Mutual Funds!",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
       "takeaways": [
-        "The recent FCNR scheme by the RBI appears lucrative but may not deliver on its promises.",
-        "It affects both NRIs and Indian resident investors."
+        "Pick any index, start an SIP, stay invested.",
+        "But if two funds are tracking the same index, does it really matter which one you choose?"
       ],
-      "date": "2026-09-19",
-      "reason": "yt-dlp failed: ERROR: [youtube] PtSLamEHWjc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] 3GegZ7tT4i0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "diary-of-a-ceo-c783a6dfa547",
-      "title": "Most Replayed Moment: Brain Rot Experts - How To Use AI In A Healthy Way!",
-      "show": "The Diary Of A CEO",
-      "url": "",
-      "takeaways": [],
-      "date": "2026-09-11",
-      "reason": "no candidate ideas found in the transcript"
+      "id": "desk-aafe80a1879c",
+      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
+      "takeaways": [
+        "The episode will answer listeners’ questions submitted through live chat and Superchat.",
+        "It covers topics from “Dark Stars to Black Holes” and other titles in the Black Hole Chronicles and Mirrors of Maya book series."
+      ],
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-bffa57c8329b",
+      "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=JfacDx4K6K0",
+      "takeaways": [
+        "If the station for Saudi Arabia was perilous two days ago - it just got a whole lot worse now.",
+        "With NO HELP coming from America - MBS has been scampering all over the place asking for help."
+      ],
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] JfacDx4K6K0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-1b7461822509",
+      "title": "BRICS 2026: India’s $226 Billion Trade Deficit & The New UPI Fee Explained | Cracknomics Ep 109",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=b22bw2UvXOg",
+      "takeaways": [
+        "What did the 2026 BRICS summit in New Delhi really expose about India’s trade tightrope?",
+        "Where does the BRICS block stand right now?"
+      ],
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] b22bw2UvXOg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-d8fbe0f67dc6",
+      "title": "Promo | EP-451 with Author and Historian Vikram Sampath Premieres Today at 5 PM IST",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=6WJBfDiVJiI",
+      "takeaways": [
+        "India’s treasures lie rotting in Chor Bazaars and Raddi shops.",
+        "The real vidambana of our historical past is that it’s written in languages we don’t understand."
+      ],
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6WJBfDiVJiI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -2879,55 +2990,61 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-19T00:30:10.263Z",
-    "discovered": 1123,
-    "eligible": 7,
-    "processed": 1,
+    "at": "2026-09-20T00:13:17.644Z",
+    "discovered": 1124,
+    "eligible": 8,
+    "processed": 0,
     "skipped": 1116,
-    "failed": 6,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-19T00:26:11.976Z"
+        "stage": "process",
+        "id": "desk-4eb5f4de2aec",
+        "message": "yt-dlp failed: ERROR: [youtube] 0XStJayUrUY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:11:32.417Z"
       },
       {
         "stage": "process",
-        "id": "desk-5886041ee66d",
-        "message": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-19T00:28:58.529Z"
+        "id": "desk-1240b0b2e0b2",
+        "message": "yt-dlp failed: ERROR: [youtube] ky6jesFvIqY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:11:47.379Z"
       },
       {
         "stage": "process",
-        "id": "desk-dfded789bd87",
-        "message": "yt-dlp failed: ERROR: [youtube] zwE5G1Zh1h8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-19T00:29:13.572Z"
+        "id": "desk-b6151d26d3c2",
+        "message": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:12:02.510Z"
       },
       {
         "stage": "process",
-        "id": "diary-of-a-ceo-c783a6dfa547",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-19T00:29:37.784Z"
+        "id": "desk-483eec7834c0",
+        "message": "yt-dlp failed: ERROR: [youtube] 3GegZ7tT4i0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:12:17.660Z"
       },
       {
         "stage": "process",
-        "id": "desk-94a530b3b7a1",
-        "message": "yt-dlp failed: ERROR: [youtube] GU4YvNZao9o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-19T00:29:40.278Z"
+        "id": "desk-aafe80a1879c",
+        "message": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:12:32.582Z"
       },
       {
         "stage": "process",
-        "id": "desk-c22c8c9d857b",
-        "message": "yt-dlp failed: ERROR: [youtube] 6qmGO1ipb_o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-19T00:29:55.106Z"
+        "id": "desk-bffa57c8329b",
+        "message": "yt-dlp failed: ERROR: [youtube] JfacDx4K6K0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:12:47.421Z"
       },
       {
         "stage": "process",
-        "id": "desk-3a342472d20e",
-        "message": "yt-dlp failed: ERROR: [youtube] PtSLamEHWjc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-19T00:30:10.256Z"
+        "id": "desk-1b7461822509",
+        "message": "yt-dlp failed: ERROR: [youtube] b22bw2UvXOg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:13:02.645Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-d8fbe0f67dc6",
+        "message": "yt-dlp failed: ERROR: [youtube] 6WJBfDiVJiI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-20T00:13:17.636Z"
       }
     ],
     "estimatedCostUsd": 0
