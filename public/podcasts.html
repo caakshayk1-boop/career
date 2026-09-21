@@ -239,7 +239,17 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
 .pend ul{margin:9px 0 0;padding:0 0 0 16px;display:grid;gap:5px}
 .pend li{font-size:var(--t-4);color:var(--muted);line-height:1.6}
 
-.pend .why{display:block;font:400 var(--t-3)/1.5 var(--ui);color:var(--muted);margin-top:6px}
+/* A REASON IS MACHINE OUTPUT AND WILL NOT ALWAYS WRAP. It is printed verbatim,
+   and on 21 Sep it was a 100-character POSIX path with no space in it —
+   ".../com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies" — which
+   cannot break at any normal opportunity and pushed the document to 789px wide
+   inside a 320px viewport. body has overflow-x:hidden, so it did not even show
+   as a scrollbar: the page was simply clipped on a phone. Anything rendering
+   untrusted machine text has to say where it may break. */
+.pend .why{display:block;font:400 var(--t-3)/1.5 var(--ui);color:var(--muted);margin-top:6px;
+  overflow-wrap:anywhere;word-break:break-word}
+/* Same reasoning: an episode title is somebody else's string. */
+.pend b{overflow-wrap:anywhere}
 .pend .why i{font-style:normal;color:var(--dim);font-family:var(--mono);font-size:var(--t-1);
   letter-spacing:var(--ls-wide);text-transform:uppercase}
 .pgrp{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;

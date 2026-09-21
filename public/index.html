@@ -465,6 +465,7 @@ mark{background:var(--warn-soft);color:var(--text);border-radius:2px;padding:0 2
      older is scored and kept in the feed, but it is not an opportunity, so it is not shown here.
      Every card carries a direct apply link unless it says otherwise.</p>
   <hr class="rule">
+  <div id="rolesWarn" hidden></div>
   <div id="rolesMeta" class="warnbox" style="border-left-color:var(--accent);background:var(--accent-soft)">
     Loading the feed…
   </div>
@@ -1884,6 +1885,50 @@ function drawRoles(){
      * cutTier and cutAge are still COMPUTED, because the stale-feed warning
      * below depends on knowing the pool, and because a future audit wants the
      * numbers. They are simply no longer the headline. */
+    /* ── IS THE SCRAPER ALIVE? ─────────────────────────────────────────────
+     * There WAS a staleness check here — one clause at the end of the meta
+     * line, after the scrape time, the source count and the link count. It was
+     * correct and it was unreadable, and it missed two cases that look exactly
+     * like a healthy quiet day:
+     *
+     *   1. NO TIMESTAMP AT ALL. ageH is null, so the >30h test never fires and
+     *      nothing is said. A feed that stopped publishing generated_at reads
+     *      as perfectly fresh.
+     *   2. A HALF-DEAD SCRAPE. sources_ok far below sources_attempted produces
+     *      a genuinely fresh file with most of the market missing from it. The
+     *      timestamp is honest; the shortlist is not.
+     *
+     * Case 2 also made the zero-roles line lie. "Nothing clears the bar today.
+     * That is a real answer, not a broken feed" is an assertion, and it is only
+     * true when the scrape was healthy — which was never checked before saying
+     * it. It is now conditional on exactly that. */
+    const srcOk = Number(st.sources_ok), srcTried = Number(st.sources_attempted);
+    const srcKnown = Number.isFinite(srcOk) && Number.isFinite(srcTried) && srcTried > 0;
+    const srcThin = srcKnown && srcOk < srcTried / 2;
+    const healthy = ageH != null && ageH <= 30 && !srcThin;
+
+    const warn = document.getElementById("rolesWarn");
+    let wMsg = "";
+    if (ageH == null)
+      wMsg = `<b>This shortlist has no build time on it.</b> The feed carries no
+        <code>generated_at</code>, so there is no way to tell whether it was scraped this
+        morning or last month. Treat every role below as unverified until the scraper is checked.`;
+    else if (ageH > 30)
+      wMsg = `<b>This shortlist is ${ageH} hours old.</b> The scraper publishes daily, so it has
+        missed at least one run. Roles below may already be filled, and anything posted since is
+        not here. Last built ${myt(d.generated_at)}.`;
+    else if (srcThin)
+      wMsg = `<b>Only ${srcOk} of ${srcTried} job sources responded.</b> The file is fresh but most
+        of the market is missing from it, so a short list below is the scrape failing rather than a
+        quiet week. Last built ${myt(d.generated_at)}.`;
+    if (wMsg) {
+      warn.className = "warnbox";
+      warn.innerHTML = wMsg;
+      warn.hidden = false;
+    } else {
+      warn.hidden = true;
+    }
+
     meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b>
       Tier S, A and B, posted in the last ${MAX_AGE_DAYS} days${onFit ? `, plus
       ${onFit} graded lower that still fit you ${FIT_FLOOR}+` : ""}. · Scraped
@@ -1891,8 +1936,8 @@ function drawRoles(){
       ${ageH != null ? `(${ageH}h ago)` : ""} ·
       ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·
       ${st.urls_verified ?? "?"} links verified.
-      ${ageH != null && ageH > 30 ? "<b> Feed is stale — the scraper has not run.</b>" : ""}
-      ${ROLES.length === 0 ? "<b> Nothing clears the bar today. That is a real answer, not a broken feed.</b>" : ""}`;
+      ${ROLES.length === 0 && healthy ? "<b> Nothing clears the bar today. That is a real answer, not a broken feed.</b>" : ""}
+      ${ROLES.length === 0 && !healthy ? "<b> Nothing is shown, and the feed above says why — do not read this as an empty market.</b>" : ""}`;
     // Counted off ROLES, not off d.stats: the feed's own totals cover the whole
     // scrape, and showing "UAE 30" above 14 cards is just a wrong number.
     const n = f => ROLES.filter(f).length;
@@ -1928,6 +1973,11 @@ function drawRoles(){
     });
     drawRoles();
   } catch (err) {
+    const warn = document.getElementById("rolesWarn");
+    warn.className = "warnbox";
+    warn.innerHTML = `<b>The openings feed did not load.</b> Nothing below is current. This is the
+      one state that cannot be mistaken for a quiet market.`;
+    warn.hidden = false;
     meta.innerHTML = `<b>Could not load the feed.</b> ${esc(String(err.message || err))}.
       The scraper publishes to <code>news.askakshay.com/jobs.json</code> — check that it ran.`;
   }
