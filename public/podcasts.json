@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T17:08:58.526Z",
+  "generatedAt": "2026-09-21T17:50:00.196Z",
   "today": "2026-09-22",
   "retentionDays": 7,
   "days": [
@@ -10,6 +10,13 @@
       "episodeIds": [
         "desk-9d29e46ff83f",
         "desk-4eb5f4de2aec"
+      ]
+    },
+    {
+      "date": "2026-09-21",
+      "label": "Yesterday",
+      "episodeIds": [
+        "diary-of-a-ceo-622cf05f50f4"
       ]
     },
     {
@@ -389,6 +396,186 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 152
+    },
+    {
+      "id": "diary-of-a-ceo-622cf05f50f4",
+      "sourceId": "diary-of-a-ceo",
+      "show": "The Diary Of A CEO",
+      "title": "Rick Rubin: What Jay-Z Did in 30 Minutes Left Me Speechless!",
+      "guest": "Rick Rubin",
+      "topics": [
+        "creativity",
+        "music production",
+        "psychology",
+        "artistic process"
+      ],
+      "summary": "In this episode of The Diary Of A CEO, legendary producer Rick Rubin discusses his unconventional creative philosophy and the ways he helps top artists like Jay‑Z break free from commercial constraints. He shares practical tactics such as the \"Indefensible\" act, the Vacuum Strategy, and how to recognize breakthrough ideas quickly. The conversation offers deep insight into the psychology of artistic greatness and actionable methods for listeners to unleash their own creative potential.",
+      "url": "",
+      "type": "rss",
+      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M2RHQ1E5ES2KPEYTFD0PRTWV/rick_rubin.ep_cover_.jpg",
+      "publishedAt": "2026-09-21T05:00:00.000Z",
+      "date": "2026-09-21",
+      "durationSec": 9960,
+      "processedAt": "2026-09-21T17:46:56.544Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "published",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Jay‑Z writes verses in 20‑30 minutes by listening",
+          "idea": "Jay‑Z rarely spends time writing; he repeatedly plays a beat, hums or mumbles, and after 20–30 minutes he has the verse ready, showing a rapid, almost automatic creative process.",
+          "why": "Reveals a counter‑intuitive, ultra‑fast method that challenges the myth that hit verses require painstaking lyric‑by‑lyric drafting, offering writers a concrete shortcut.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "And when I played him the beat for 99 Problems, he said, okay, just keep playing it over and over again. And he sat in the back of the room. You could hear him mumbling or humming. After 20 or 30 minutes, he's like, Okay, I got it, ran into the other room and did the first verse.",
+          "t": 0,
+          "kind": "said",
+          "confidence": 0.96,
+          "grounding": 1,
+          "repaired": true
+        },
+        {
+          "rank": 2,
+          "headline": "Artists should ignore near‑term incentives and focus on personal vision",
+          "idea": "Creating art for personal expression, not for short‑term commercial gain, builds longevity and authenticity.",
+          "why": "Counters the industry pressure to chase trends; prioritizing a personal vision yields work that endures and stands out, reshaping career strategy.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "We never consider near‑term incentive ever at any point in time. Never once. ... We’re making things forever. We’re making things that are truly personal to us.",
+          "t": 721,
+          "kind": "said",
+          "confidence": 0.94,
+          "grounding": 1,
+          "repaired": true
+        },
+        {
+          "rank": 3,
+          "headline": "Creative work follows four distinct phases",
+          "idea": "A creator moves through seed, experimentation, crafting, and finishing phases; realistic timelines can only be set after the first three are completed.",
+          "why": "Provides a reusable framework that explains why early deadlines often cripple projects, helping managers and artists schedule more effectively.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"The first phase is the seed phase, then is the experimentation phase, then is the crafting phase, and then is the finishing, completion, editorial phase. And you can't set a timeline early in that process.\"",
+          "t": 2315,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Spot potential from 20‑second voice notes",
+          "idea": "Creatives can identify high‑value songs by listening to a raw, 20‑second voice note, rather than waiting for polished demos.",
+          "why": "Challenges the common reliance on fully produced demos, giving talent‑scouts a faster, cheaper way to discover hits.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "But in this 20‑second voice note, I could listen and think, I really want to hear this whole song.",
+          "t": 3043,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Break big goals into 1% daily increments",
+          "idea": "Divide an ambitious goal into tiny daily tasks (the 1% method), turning the climb into manageable steps.",
+          "why": "A concrete, universally applicable productivity system that converts overwhelming objectives into steady progress.",
+          "action": "Identify one micro‑task you can complete each day that moves you 1 % toward your larger goal.",
+          "detail": "",
+          "passage": "",
+          "evidence": "The way to accomplish your goals is by breaking them down into tasks. tiny small steps, and we call this in our team the 1%.",
+          "t": 7282,
+          "kind": "recommendation",
+          "confidence": 0.93,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Creativity resides in the prompt, not the AI output",
+          "idea": "When using AI to generate creative works, the real creative act is the construction of the prompt; the AI merely implements it.",
+          "why": "Reframes AI as a tool that amplifies human imagination rather than replaces it, guiding users to focus on prompt engineering.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"The prompt is where the creativity is.\"",
+          "t": 5624,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Internal limiting beliefs block creativity",
+          "idea": "Negative self‑talk about not being good enough suppresses innate creative gifts; recognizing and rejecting these thoughts restores creative flow.",
+          "why": "Identifies a common, invisible barrier and offers a mental fix that can instantly lift creative blocks for many practitioners.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Believing you're not good enough. That's a big one. ... So we can. We just have bad information. We're told we're not good enough, and we believe it, and it's not true.",
+          "t": 1924,
+          "kind": "interpretation",
+          "confidence": 0.91,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "Lean forward, not lean back when evaluating work",
+          "idea": "When evaluating creative work, consciously choose to play it again instead of skipping; this forward‑leaning mindset fuels curiosity and deeper insight.",
+          "why": "A simple behavioral tweak that deepens engagement and can uncover hidden value in material that might otherwise be dismissed.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "You tend to want to lean forward, not lean back. You tend to want to listen again, not skip to the next one.",
+          "t": 3071,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 9,
+          "headline": "Create without market validation",
+          "idea": "Never ask if anyone else will like it or if it fits the market; instead, produce what you love at the highest possible level and let the audience decide.",
+          "why": "Provides a decisive rule that liberates creators from analysis paralysis and aligns output with authentic expression.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "We never questioned if anyone else was going to like it. We never questioned what the audience was going to think. We never questioned where does it fit in the market.",
+          "t": 1225,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 10,
+          "headline": "Capture authenticity via spontaneous living‑room demos",
+          "idea": "Recording informal, unscripted sessions in a living‑room setting can produce recordings that carry spontaneity and honesty that polished studio takes lack.",
+          "why": "Shows a concrete, low‑cost method to generate material with emotional resonance, useful for any musician or podcaster.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "We recorded all these songs in my living room of him singing and playing guitar. We weren't recording for an album. We were recording... it was the way that we got to know each other.",
+          "t": 6273,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 154
     },
     {
       "id": "desk-b53c0e09ba0d",
@@ -1310,54 +1497,6 @@
   ],
   "pending": [
     {
-      "id": "desk-1240b0b2e0b2",
-      "title": "Elon Musk & Dario’s Final Warning | Why the AI Race Is Getting Dangerously Out of Control?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=ky6jesFvIqY",
-      "takeaways": [
-        "Bill Gates warned that as AI models become more powerful they could act against our interests and we could lose control.",
-        "Geoffrey Hinton said anyone claiming AI won’t lead to human extinction isn’t facing reality."
-      ],
-      "date": "2026-09-22",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-b6151d26d3c2",
-      "title": "How Much Salary Do You Really Need in India?",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
-      "takeaways": [
-        "Two families earning the same amount can have completely different financial lives.",
-        "Your city, housing costs, dependents, loans, and lifestyle matter more than comparing your salary with someone else."
-      ],
-      "date": "2026-09-22",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-483eec7834c0",
-      "title": "The Uncomfortable Truth about Mutual Funds!",
-      "show": "Zero1 by Zerodha",
-      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
-      "takeaways": [
-        "Check metrics beyond just returns when evaluating index funds.",
-        "Avoid common mistakes that can hamper the returns you earn."
-      ],
-      "date": "2026-09-22",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-aafe80a1879c",
-      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
-      "takeaways": [
-        "Episode 382 of the #AskAbhijit show: Ask me your best questions in the live chat and Superchat, and I shall answer them.",
-        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
-      ],
-      "date": "2026-09-22",
-      "reason": "over the 8/day cap"
-    },
-    {
       "id": "desk-bffa57c8329b",
       "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
       "show": "The Deshbhakt",
@@ -1466,13 +1605,40 @@
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "diary-of-a-ceo-622cf05f50f4",
-      "title": "Rick Rubin: What Jay-Z Did in 30 Minutes Left Me Speechless!",
-      "show": "The Diary Of A CEO",
-      "url": "",
-      "takeaways": [],
-      "date": "2026-09-21",
-      "reason": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec4"
+      "id": "desk-b6151d26d3c2",
+      "title": "How Much Salary Do You Really Need in India?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
+      "takeaways": [
+        "Two families earning the same amount can have completely different financial lives.",
+        "Your city, housing costs, dependents, loans, and lifestyle matter more than comparing your salary with someone else."
+      ],
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "desk-483eec7834c0",
+      "title": "The Uncomfortable Truth about Mutual Funds!",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
+      "takeaways": [
+        "Check metrics beyond just returns when evaluating index funds.",
+        "Avoid common mistakes that can hamper the returns you earn."
+      ],
+      "date": "2026-09-22",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
+      "id": "desk-aafe80a1879c",
+      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
+      "takeaways": [
+        "Episode 382 of the #AskAbhijit show: Ask me your best questions in the live chat and Superchat, and I shall answer them.",
+        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
+      ],
+      "date": "2026-09-22",
+      "reason": "no candidate ideas found in the transcript"
     }
   ],
   "generator": {
@@ -1483,37 +1649,49 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-21T17:08:58.513Z",
+    "at": "2026-09-21T17:50:00.184Z",
     "discovered": 1124,
     "eligible": 8,
-    "processed": 2,
+    "processed": 1,
     "skipped": 1116,
-    "failed": 6,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
-        "id": "diary-of-a-ceo-622cf05f50f4",
-        "message": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9615,",
-        "at": "2026-09-21T16:57:46.824Z"
-      },
-      {
-        "stage": "process",
         "id": "desk-fa113e6da7bb",
         "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-21T17:00:40.238Z"
+        "at": "2026-09-21T17:47:29.868Z"
       },
       {
         "stage": "process",
         "id": "desk-f60380a60b7f",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-21T17:00:47.388Z"
+        "at": "2026-09-21T17:47:36.983Z"
       },
       {
         "stage": "process",
         "id": "desk-487d556a6e5b",
         "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-21T17:04:14.922Z"
+        "at": "2026-09-21T17:47:51.315Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-b6151d26d3c2",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-21T17:48:42.175Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-483eec7834c0",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-21T17:49:29.360Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-aafe80a1879c",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-21T17:50:00.155Z"
       }
     ],
     "estimatedCostUsd": 0
