@@ -1,9 +1,17 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T01:07:41.445Z",
-  "today": "2026-09-21",
+  "generatedAt": "2026-09-21T17:08:58.526Z",
+  "today": "2026-09-22",
   "retentionDays": 7,
   "days": [
+    {
+      "date": "2026-09-22",
+      "label": "Today",
+      "episodeIds": [
+        "desk-9d29e46ff83f",
+        "desk-4eb5f4de2aec"
+      ]
+    },
     {
       "date": "2026-09-19",
       "label": "Saturday",
@@ -36,6 +44,352 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-9d29e46ff83f",
+      "sourceId": "desk",
+      "show": "Akshat Shrivastava",
+      "title": "Will the Next 5 years be GREAT for Indian Markets? | Akshat Shrivastava",
+      "guest": "Akshat Shrivastava",
+      "topics": [
+        "indian markets",
+        "investment strategy",
+        "valuation",
+        "political risk"
+      ],
+      "summary": "In this episode Akshat Shrivastava analyses why the next five years may be promising for Indian equities, weighing currency effects, valuation metrics and political risk. He outlines practical allocation guidelines and highlights the structural challenges that can dilute returns in mid‑ and small‑caps. The discussion provides a nuanced view of when and how to invest in India versus global markets.",
+      "url": "https://www.youtube.com/watch?v=zWU3bTHd0t4",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-20T00:00:00.000Z",
+      "date": "2026-09-22",
+      "durationSec": 1241,
+      "processedAt": "2026-09-21T17:00:01.293Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Converting INR to USD outperformed Nifty50 in the past 5 years",
+          "idea": "A back‑test shows that simply converting ₹10 lakh to US dollars five years ago yielded higher returns than investing in the Nifty 50, contradicting the belief that Indian equities always beat foreign currency.",
+          "why": "It highlights that currency risk can dominate equity returns, challenging the assumption that domestic markets are inherently superior and urging investors to consider FX exposure.",
+          "action": "Periodically evaluate the return of a pure currency conversion versus the local equity index for your holding horizon.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"if you would have simply converted your INR into US dollar you would have made more money\"",
+          "t": 56,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Nifty50's PE of ~20 is cheap historically but not relative to US markets",
+          "idea": "While the Nifty 50’s price‑to‑earnings ratio is near its long‑term average (~20), it is higher than the forward PE of U.S. indices (≈19‑20), so it isn’t cheap in a global context.",
+          "why": "Investors often judge valuation locally; this comparison shows Indian large caps may still be overvalued when benchmarked against U.S. markets, affecting cross‑border allocation decisions.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"If you do a relative comparison of this 20 PE right now relatively how will we compare it? We’ll go to QQQ…S&P 500 forward P is around 1920\"",
+          "t": 274,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.5,
+          "repaired": true
+        },
+        {
+          "rank": 3,
+          "headline": "Mid‑cap and small‑cap investments carry high dilution risk",
+          "idea": "Promoters often exit by chipping out stakes in mid‑caps and small‑caps, creating significant dilution risk that can outweigh the higher potential returns.",
+          "why": "Dilution erodes existing shareholders’ ownership and can trigger sharp price drops, making these segments riskier than their headline growth prospects suggest.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Dilution means that lot of promoters come and chip out their companies and then they exit… dilution risk is much much higher on small and midcaps\"",
+          "t": 311,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.75,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Curated socialism: privatize gains, socialize losses",
+          "idea": "In India, the economic model is described as 'curated socialism', where private firms keep profits but the government redistributes losses to society, explaining why state‑owned enterprises can be taken over but gains are not fully retained.",
+          "why": "Understanding this framework helps investors gauge the true risk‑reward of companies operating in sectors where the government may intervene after losses, affecting long‑term profitability.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "what is curated socialism? Here we basically privatize the gains and socialize the losses",
+          "t": 914,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "K‑shaped risk curve for Indian investors",
+          "idea": "Indian equity markets present a K‑shaped risk: some firms thrive if politically connected, while others can crash dramatically if politics change.",
+          "why": "It underscores that political connections are a material factor in company performance, urging investors to assess political exposure when picking Indian stocks.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "in India you have basically a K-shaped curve for investors right that some companies will do exceptionally well, politically connected, but you run massive risk",
+          "t": 974,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 0.58,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Start with a 20% international allocation",
+          "idea": "Begin investing with 20% exposure to international markets and 80% in India; shift toward a 50/50 split as comfort with Indian markets grows.",
+          "why": "A modest foreign allocation buffers against Indian‑specific political and valuation risks while still allowing participation in domestic growth.",
+          "action": "Set your portfolio to 20% non‑Indian equities and 80% Indian equities, revisiting the split after a defined performance or confidence threshold.",
+          "detail": "",
+          "passage": "",
+          "evidence": "Start with 20% international, 80% India. If you feel very comfortable with India and at least move to a 50/50 structure",
+          "t": 1045,
+          "kind": "recommendation",
+          "confidence": 0.9,
+          "grounding": 0.89,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Allocate 20% of equity to gold and real‑estate",
+          "idea": "For every ₹100 of equity invested, add ₹20 in gold (or 20 units) and consider real‑estate investments at reasonable rates.",
+          "why": "Gold and real‑estate provide inflation‑hedging and diversification benefits that are less correlated with Indian equity market swings.",
+          "action": "When building a new equity position, simultaneously purchase gold worth 20% of the equity amount and explore a comparable allocation to real‑estate assets.",
+          "detail": "",
+          "passage": "",
+          "evidence": "For every 100 rupees of equity you buy, at least buy 20 rupees of gold, or 20 units of gold. ... start looking at some basic real estate",
+          "t": 1086,
+          "kind": "recommendation",
+          "confidence": 0.86,
+          "grounding": 0.69,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "Buy only when valuations are cheap",
+          "idea": "Invest only when market valuations are below historical averages, e.g., Nifty at 24.5 versus 26,000, to avoid overpaying.",
+          "why": "Valuation discipline reduces the likelihood of buying into over‑extended markets, which historically leads to lower long‑term returns.",
+          "action": "Set a valuation threshold (e.g., Nifty PE < 20) and pause new equity purchases until the market meets it.",
+          "detail": "",
+          "passage": "",
+          "evidence": "Buy only when valuations are cheap. For example, if you bought Nifty somewhere around 24 and a half, that's fine. ... if you are dumb, right? You bought it at 26,000",
+          "t": 1128,
+          "kind": "recommendation",
+          "confidence": 0.9,
+          "grounding": 0.79,
+          "repaired": false
+        },
+        {
+          "rank": 9,
+          "headline": "Invest only when systemic risk is low",
+          "idea": "Avoid buying during periods of high geopolitical or structural uncertainty; choose times when risk is lower, even if it means paying a slightly higher price.",
+          "why": "Low‑risk environments improve the odds of positive returns and reduce the chance of sudden market crashes.",
+          "action": "Monitor risk indicators (e.g., political stability indices, global volatility metrics) and delay new positions until they signal low systemic risk.",
+          "detail": "",
+          "passage": "",
+          "evidence": "Buy only when risk is low ... try to participate only in good times when you have clarity even if you have to buy a little bit higher",
+          "t": 1171,
+          "kind": "recommendation",
+          "confidence": 0.88,
+          "grounding": 0.8,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 1,
+      "audio": null,
+      "readSeconds": 177
+    },
+    {
+      "id": "desk-4eb5f4de2aec",
+      "sourceId": "desk",
+      "show": "Figuring Out",
+      "title": "Top VC: One Trait That Separates Billionaire Founders From The Rest | Sasha | FO564 Raj Shamani",
+      "guest": "Raj Shamani",
+      "topics": [
+        "founder traits",
+        "team composition",
+        "pitch deck advice",
+        "ai strategy",
+        "venture capital"
+      ],
+      "summary": "In this episode, the host discusses the key traits and team dynamics that differentiate billionaire founders from other entrepreneurs, emphasizing personal problem solving, complementary skill sets, and the importance of conscientious execution. The conversation also covers practical advice for pitch decks, founder market fit, and the strategic necessity of AI for future-proofing businesses.",
+      "url": "https://www.youtube.com/watch?v=0XStJayUrUY",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-19T00:00:00.000Z",
+      "date": "2026-09-22",
+      "durationSec": 8356,
+      "processedAt": "2026-09-21T17:08:58.488Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Founders should solve a personal pain point",
+          "idea": "The most successful companies arise when founders create solutions to problems they personally experienced for someone close to them, giving the startup a clear purpose.",
+          "why": "A founder’s own pain creates deep conviction and insider insight, dramatically increasing the odds of product‑market fit and sustainable traction.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"the main reason a really good company is created is there a pain point to solve that the founder personally had for someone close to them.\"",
+          "t": 7,
+          "kind": "said",
+          "confidence": 0.94,
+          "grounding": 0.85,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Founding team must include a seller and a builder",
+          "idea": "A startup’s core team should have one member whose primary role is selling (raising capital, closing deals) and another whose primary role is building the product.",
+          "why": "Separating these complementary skills prevents founders from getting stuck in one area and ensures both product and market success.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"You need someone who can sell... and someone who can actually build the product.\"",
+          "t": 49,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.83,
+          "repaired": true
+        },
+        {
+          "rank": 3,
+          "headline": "Conscientiousness predicts execution",
+          "idea": "Venture capitalists ask whether an entrepreneur is a conscientious person—i.e., if they say something they will follow through on. Those who consistently demonstrate this trait are more likely to execute and avoid talk without action.",
+          "why": "Reliability is a rare, measurable signal of future performance, letting investors filter out founders who lack follow‑through.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Are you a conscientious person? You say what you do, you'll do it. Which is very important. Talk is cheap.\"",
+          "t": 87,
+          "kind": "said",
+          "confidence": 0.93,
+          "grounding": 1,
+          "repaired": true
+        },
+        {
+          "rank": 4,
+          "headline": "Founder market fit check",
+          "idea": "VCs verify founder market fit by ensuring the founder’s background aligns with the business: they must personally understand the customer, have domain expertise, and can see why they are uniquely positioned to solve the problem.",
+          "why": "When founders have lived experience or deep expertise in the target market, they can design better solutions and navigate industry nuances faster.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"you know what the background of the founder is and why they're doing this business and why they will be able to play a part in this business.\"",
+          "t": 1718,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Clarity of pitch signals traction",
+          "idea": "A founder’s ability to articulate a clear, concise pitch indicates a focused mind; a muddled pitch suggests they are likely to be lost and will not progress.",
+          "why": "Pitch clarity reflects how well the founder has distilled the problem‑solution narrative, which correlates with execution discipline.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"When you see a muddle pitch, you know that this entrepreneur is going nowhere.\"",
+          "t": 1281,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Hard problems attract high‑return VCs",
+          "idea": "VCs prefer founders tackling hard, hard‑to‑solve problems with domain expertise because success here yields outsized returns; the combination of determination and domain knowledge is a powerful signal.",
+          "why": "Solving a difficult problem creates a larger market upside and defensibility, making the investment risk‑adjusted return much higher.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"I think I ... the combination of determination right they had clarity they had the hello high water... and if I tell you the founder is going to crack the problem we expect huge returns.\"",
+          "t": 2068,
+          "kind": "interpretation",
+          "confidence": 0.88,
+          "grounding": 0.44,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "All companies must adopt an AI strategy or become obsolete",
+          "idea": "Future‑proofing rule: every business needs AI capability or it will fail.",
+          "why": "AI is becoming a core operating layer; lacking it will leave companies uncompetitive across every sector.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"every company will have to have some version of AI whether it be firm like K capital ... any company in the world without an AI strategy and execution of AI will not survive\"",
+          "t": 7988,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.64,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "Avoid sin industries to keep limited partners invested",
+          "idea": "A VC fund must exclude alcohol, cigarettes, and other sin industries to satisfy LPs and avoid capital withdrawal.",
+          "why": "Investor mandates often prohibit exposure to socially controversial sectors, so compliance is essential for fund viability.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"we won't do alcohol we won't do cigarettes we won't do sin industries ... because our investors they many of them don't like us to do these categories so then they won't give us money\"",
+          "t": 7682,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.73,
+          "repaired": false
+        },
+        {
+          "rank": 9,
+          "headline": "Pitch decks should be 10 slides max, with team first",
+          "idea": "An effective pitch deck limits to ten slides, starts with the team, then problem, solution, timing, product demo, traction, competition, and funding ask.",
+          "why": "A concise, ordered deck forces founders to focus on the most compelling narrative, making it easier for investors to evaluate quickly.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Maximum 10 slides. I like the team in the front. Problem, solution, why now, product, traction, competition, funding.\"",
+          "t": 111,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.55,
+          "repaired": true
+        },
+        {
+          "rank": 10,
+          "headline": "Complementary founding teams matter",
+          "idea": "Successful founders assemble teams whose skill sets are mutually complementary, ensuring coverage across product, sales, and operations rather than overlapping strengths.",
+          "why": "Complementarity reduces blind spots and creates a balanced decision‑making engine, increasing the chance of scaling.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"at the end of the day are they complimenting each other teams you know because if you get two Rajes what's the point are you complimenting each other does each of them bring something to the table that is complimentary to each other which is very very important.\"",
+          "t": 1232,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.6,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 152
+    },
     {
       "id": "desk-b53c0e09ba0d",
       "sourceId": "desk",
@@ -956,51 +1310,63 @@
   ],
   "pending": [
     {
-      "id": "desk-1b7461822509",
-      "title": "BRICS 2026: India’s $226 Billion Trade Deficit & The New UPI Fee Explained | Cracknomics Ep 109",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=b22bw2UvXOg",
+      "id": "desk-1240b0b2e0b2",
+      "title": "Elon Musk & Dario’s Final Warning | Why the AI Race Is Getting Dangerously Out of Control?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=ky6jesFvIqY",
       "takeaways": [
-        "What did the 2026 BRICS summit in New Delhi really expose about India’s trade tightrope?",
-        "Where does the BRICS block stand right now?"
+        "Bill Gates warned that as AI models become more powerful they could act against our interests and we could lose control.",
+        "Geoffrey Hinton said anyone claiming AI won’t lead to human extinction isn’t facing reality."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-d8fbe0f67dc6",
-      "title": "Promo | EP-451 with Author and Historian Vikram Sampath Premieres Today at 5 PM IST",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=6WJBfDiVJiI",
+      "id": "desk-b6151d26d3c2",
+      "title": "How Much Salary Do You Really Need in India?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
       "takeaways": [
-        "India’s treasures lie rotting in Chor Bazaars and Raddi shops.",
-        "The real vidambana of our historical past is that it’s written in languages we don’t understand."
+        "Two families earning the same amount can have completely different financial lives.",
+        "Your city, housing costs, dependents, loans, and lifestyle matter more than comparing your salary with someone else."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-e993cdbfc291",
-      "title": "Rajasthan Ki Jai! 🚩| Rajveer Sir Returns On TRS | Jauhar, Art, Jains & Ancient History",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=ZMg5MbaXmcw",
+      "id": "desk-483eec7834c0",
+      "title": "The Uncomfortable Truth about Mutual Funds!",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
       "takeaways": [
-        "In this 541th (overall 1046th) episode of The Ranveer Show, Ranveer Allahbadia sits down with Rajveer Sir once again for a fascinating conversation about Rajasthan’s history, Rajput history, Ancient India, and Indian culture.",
-        "They talk about the ancient Saraswati River, Indus Valley Civilization, Sindh and Partition, and explore the stories of legendary figures like Bappa Rawal, Hammir Dev Chauhan, Maharana Kumbha, Sawai Jai Singh, and Man Singh."
+        "Check metrics beyond just returns when evaluating index funds.",
+        "Avoid common mistakes that can hamper the returns you earn."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-31fd5c67ec73",
-      "title": "A New Cat Species After 100 Years! Meet Bolivia’s ‘Tilcayo’ | Current Affairs | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=JEQdEZgfxSE",
+      "id": "desk-aafe80a1879c",
+      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
       "takeaways": [
-        "A new species of wild cat, named Tilcayo, has been identified in Bolivia’s cloud-covered Yungas forests, marking the first formal description of a new living cat species in more than a century.",
-        "Researchers used genetic analysis to confirm that the Bolivian tiger cat is a distinct species and named it Leopardus tilcayo."
+        "Episode 382 of the #AskAbhijit show: Ask me your best questions in the live chat and Superchat, and I shall answer them.",
+        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-bffa57c8329b",
+      "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=JfacDx4K6K0",
+      "takeaways": [
+        "If the station for Saudi Arabia was perilous two days ago - it just got a whole lot worse now.",
+        "With NO HELP coming from America - MBS has been scampering all over the place asking for help."
+      ],
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
@@ -1009,22 +1375,22 @@
       "show": "CA Rachana Ranade",
       "url": "https://www.youtube.com/watch?v=Z8k5_eiLraI",
       "takeaways": [
-        "BSE has been publicly listed since 2017, while NSE is now heading towards its IPO.",
-        "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage."
+        "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage.",
+        "The episode compares the revenue mix, market share, margins and valuations of BSE and NSE."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
       "id": "desk-1a8a9df81ccc",
-      "title": "CTC vs Gross Salary vs In-Hand Salary, Explained!",
+      "title": "How to Read Your Salary Slip?",
       "show": "Zerodha Varsity",
       "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
       "takeaways": [
         "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
         "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
@@ -1033,22 +1399,22 @@
       "show": "Dhruv Rathee",
       "url": "https://www.youtube.com/watch?v=q678XLOueN8",
       "takeaways": [
-        "Learn how to make content creation your part-time job or full-time career!",
-        "Learn to harness the power of ChatGPT and transform your life!"
+        "Learn how to make content creation your part‑time job or full‑time career.",
+        "Learn how to harness the power of ChatGPT and transform your life."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
       "id": "desk-2a51a7dbc329",
-      "title": "Sadhguru Darshan Part 1 - Shiva’s Lesson for Kubera",
+      "title": "Sadhguru Darshan Part 1 -  The True Meaning of Ganesha as Vighneshwara",
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=_zD8lEHeVP8",
       "takeaways": [
         "Sharp intelligence and a balanced disposition are the true means to overcome obstacles in life.",
-        "Sadhguru explains the deeper significance of Ganesha Chaturthi beyond the celebrations and feasting."
+        "Sadhguru explains that Ganesha Chaturthi holds deeper significance beyond the celebrations and feasting."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
@@ -1060,98 +1426,53 @@
         "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
         "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
       ],
-      "date": "2026-09-21",
+      "date": "2026-09-22",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-4eb5f4de2aec",
-      "title": "How Top VCs Pick Founders, Evaluate Startups & Fund Them | Sasha Mirchandani | FO564 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=0XStJayUrUY",
+      "id": "desk-fa113e6da7bb",
+      "title": "The Real Cost of Building a Life in America: Salary, Visas, Taxes & Trade-Offs | Khushi Jain | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=2FBiyidVdHE",
       "takeaways": [
-        "Conscientiousness beats raw talent in every founder he has ever backed.",
-        "He prefers funding founders who have already failed once and came back smarter."
+        "What makes this conversation useful is how specific it gets.",
+        "Khushi breaks down the actual numbers behind living in Manhattan: roughly $85,000 a year in US college fees, rent that starts upwards of $10,000 a month in Manhattan and drops to $5,000–$6,000 in Brooklyn, Queens or Astoria, a household budget of about $10,000 a month for a couple, and an effective tax rate in the 30–35% range for most earners."
       ],
-      "date": "2026-09-21",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
+      "date": "2026-09-22",
+      "reason": "no candidate ideas found in the transcript"
     },
     {
-      "id": "desk-1240b0b2e0b2",
-      "title": "Elon Musk & Dario’s Final Warning | Why the AI Race Is Getting Dangerously Out of Control?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=ky6jesFvIqY",
+      "id": "desk-f60380a60b7f",
+      "title": "5 Stocks Investors Are Quietly Buying",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=zWDQN105ak0",
       "takeaways": [
-        "An ex‑Anthropic scientist warned that AI could kill us all, a view echoed by Bill Gates, Geoffrey Hinton, Dario Amodei, Sam Altman and Elon Musk.",
-        "Michael Burry and others argue that the AI‑danger warnings are nonsense and are being used to buy time while AI companies lose money."
+        "What are some of India’s most experienced investors buying right now?",
+        "In this video, we track five under-the-radar companies where well-known investors have recently increased or taken meaningful positions."
       ],
-      "date": "2026-09-21",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "desk-b6151d26d3c2",
-      "title": "How Much Salary Do You Really Need in India?",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
+      "id": "desk-487d556a6e5b",
+      "title": "UPSC CSAT 2027 Preparation Begins! | Percentage | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=5T6gUf0nX70",
       "takeaways": [
-        "Your city, housing costs, dependants, loans, and lifestyle matter more than simply comparing salaries.",
-        "Do not assume the mentioned products are the best; you should research them yourself."
+        "Welcome to the CSAT Target Prelims 2027 Series by Drishti IAS.",
+        "In recent years, CSAT has emerged as one of the biggest challenges for UPSC aspirants, making early, systematic, and consistent preparation more important than ever."
       ],
-      "date": "2026-09-21",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "desk-483eec7834c0",
-      "title": "The Uncomfortable Truth about Mutual Funds!",
-      "show": "Zero1 by Zerodha",
-      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
-      "takeaways": [
-        "Pick any index, start an SIP, stay invested.",
-        "But if two funds are tracking the same index, does it really matter which one you choose?"
-      ],
-      "date": "2026-09-21",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
-    },
-    {
-      "id": "desk-aafe80a1879c",
-      "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
-      "takeaways": [
-        "The episode will answer listeners’ questions submitted through live chat and Superchat.",
-        "It covers topics from “Dark Stars to Black Holes” and other titles in the Black Hole Chronicles and Mirrors of Maya book series."
-      ],
-      "date": "2026-09-21",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
-    },
-    {
-      "id": "desk-bffa57c8329b",
-      "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=JfacDx4K6K0",
-      "takeaways": [
-        "If the station for Saudi Arabia was perilous two days ago - it just got a whole lot worse now.",
-        "With NO HELP coming from America - MBS has been scampering all over the place asking for help."
-      ],
-      "date": "2026-09-21",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
-    },
-    {
-      "id": "gunjanshouts-ef55c7787119",
-      "title": "She is 66, Fit & Happier Than Ever! Meet My Mother-in-Law | Pinky Madaan x Gunjan Taneja",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=yJeX6UXP7xM",
+      "id": "diary-of-a-ceo-622cf05f50f4",
+      "title": "Rick Rubin: What Jay-Z Did in 30 Minutes Left Me Speechless!",
+      "show": "The Diary Of A CEO",
+      "url": "",
       "takeaways": [],
-      "date": "2026-09-20",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
-    },
-    {
-      "id": "gunjanshouts-8a49d0cc1a83",
-      "title": "Is hair oiling really good or bad? | Dr Arika Bansal with GunjanShouts",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=35BghusJ12U",
-      "takeaways": [],
-      "date": "2026-09-19",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycooki"
+      "date": "2026-09-21",
+      "reason": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec4"
     }
   ],
   "generator": {
@@ -1162,67 +1483,37 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-21T01:07:41.443Z",
-    "discovered": 252,
+    "at": "2026-09-21T17:08:58.513Z",
+    "discovered": 1124,
     "eligible": 8,
-    "processed": 0,
-    "skipped": 244,
-    "failed": 8,
+    "processed": 2,
+    "skipped": 1116,
+    "failed": 6,
     "pruned": 0,
     "errors": [
       {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "fetch failed",
-        "at": "2026-09-20T23:51:42.184Z"
+        "stage": "process",
+        "id": "diary-of-a-ceo-622cf05f50f4",
+        "message": "groq refused the request size for openai/gpt-oss-120b: {\"error\":{\"message\":\"Request too large for model `openai/gpt-oss-120b` in organization `org_01kqwyxz0hec48pzkbazsp4ddy` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Requested 9615,",
+        "at": "2026-09-21T16:57:46.824Z"
       },
       {
         "stage": "process",
-        "id": "gunjanshouts-ef55c7787119",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-20T23:51:44.214Z"
+        "id": "desk-fa113e6da7bb",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-21T17:00:40.238Z"
       },
       {
         "stage": "process",
-        "id": "gunjanshouts-8a49d0cc1a83",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-20T23:51:59.108Z"
+        "id": "desk-f60380a60b7f",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-21T17:00:47.388Z"
       },
       {
         "stage": "process",
-        "id": "desk-4eb5f4de2aec",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-20T23:52:13.879Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-1240b0b2e0b2",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-21T00:19:09.618Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-b6151d26d3c2",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-21T00:19:24.425Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-483eec7834c0",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-21T00:19:39.371Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-aafe80a1879c",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-21T00:19:54.223Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-bffa57c8329b",
-        "message": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'",
-        "at": "2026-09-21T01:07:41.433Z"
+        "id": "desk-487d556a6e5b",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-21T17:04:14.922Z"
       }
     ],
     "estimatedCostUsd": 0
