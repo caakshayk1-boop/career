@@ -108,6 +108,12 @@ export const cfg = {
      tokens in a burst against an 8,000 TPM ceiling, which is a 429 every time.
      Raise it the day the tier changes, and measure rather than guess. */
   chunkConcurrency: int(process.env.CHUNK_CONCURRENCY, 2),
+  /* How many candidates pass 2 is allowed to weigh at once. The ranker returns
+     targetLearnings whatever it is shown, so this is a TPM budget, not a
+     quality dial: 80 records with verbatim quotations asked 9,615 tokens of a
+     model capped at 8,000 per minute, and the episode was lost. Spread across
+     chunks, never a global top-N. */
+  rankMaxCandidates: int(process.env.RANK_MAX_CANDIDATES, 40),
   chunkOverlapChars: int(process.env.CHUNK_OVERLAP_CHARS, 900),
 
   /* ── PROVIDERS ──────────────────────────────────────────────────────────

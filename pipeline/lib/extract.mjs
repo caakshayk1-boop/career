@@ -132,14 +132,59 @@ export async function extract(ai, ep, transcript) {
   log.info("extract", `${ep.id}: ${candidates.length} candidates from ${chunks.length} chunks`);
   if (!candidates.length) throw new Error("no candidate ideas found in the transcript");
 
-  /* ── PASS 2 ─────────────────────────────────────────────────────────────── */
-  const ranked = await ai.json({
+  /* ── PASS 2 ─────────────────────────────────────────────────────────────
+   * THE RANKER'S REQUEST IS THE BIGGEST ONE THIS PIPELINE SENDS, and on the
+   * 2026-09-21 run it was the only thing left standing between a 166-minute
+   * Diary Of A CEO episode and the page:
+   *
+   *   Request too large for openai/gpt-oss-120b ... TPM: Limit 8000,
+   *   Requested 9615
+   *
+   * Ten chunks at up to eight candidates each is eighty records, every one
+   * carrying a verbatim `evidence` quotation, pretty-printed at indent 1.
+   * Three things, cheapest first:
+   *
+   *   1. COMPACT JSON. `null, 1` spent a newline and a space on every field of
+   *      every record for a machine that does not read indentation.
+   *   2. CAP THE CANDIDATES, PER CHUNK. The ranker emits targetLearnings no
+   *      matter how many it is shown, so eighty in to pick twenty is waste.
+   *      Capped per chunk rather than globally BECAUSE the suite asserts
+   *      timeline spread — a global top-N by confidence can silently drop a
+   *      whole half of an episode.
+   *   3. SHRINK AND RETRY. Episode length is unbounded and the TPM ceiling is
+   *      not, so a fixed cap is a guess. If Groq still refuses on size, halve
+   *      and go again rather than losing the episode. */
+  const perChunkCap = Math.max(2, Math.ceil(cfg.rankMaxCandidates / Math.max(1, chunks.length)));
+  const byChunk = new Map();
+  for (const c of candidates) {
+    const k = c.chunkIndex ?? 0;
+    if (!byChunk.has(k)) byChunk.set(k, []);
+    byChunk.get(k).push(c);
+  }
+  let shortlist = [...byChunk.keys()].sort((a, b) => a - b).flatMap((k) =>
+    byChunk.get(k).sort((a, b) => (b.confidence || 0) - (a.confidence || 0)).slice(0, perChunkCap));
+  if (shortlist.length < candidates.length)
+    log.info("extract", `${ep.id}: ranking ${shortlist.length} of ${candidates.length} candidates ` +
+      `(${perChunkCap}/chunk, to stay inside the ranker's TPM ceiling)`);
+
+  const rank = (list) => ai.json({
     system: SYSTEM_RANK.replace(/\{TARGET\}/g, String(cfg.targetLearnings)),
-    user: `<episode>${ep.show} — ${ep.title}</episode>\n<candidates>${JSON.stringify(candidates, null, 1)}</candidates>`,
+    user: `<episode>${ep.show} — ${ep.title}</episode>\n<candidates>${JSON.stringify(list)}</candidates>`,
     schema: SCHEMA_RANKED, name: "record_ranked",
     description: "Merge, deduplicate and rank the candidate ideas.",
     effort: "high", maxTokens: 16000,
   });
+
+  let ranked;
+  try {
+    ranked = await rank(shortlist);
+  } catch (e) {
+    const tooBig = /refused the request size|request too large|reduce.*length/i.test(String(e.message || ""));
+    if (!tooBig || shortlist.length <= 4) throw e;
+    const half = Math.max(4, Math.floor(shortlist.length / 2));
+    log.warn("extract", `${ep.id}: ranker refused ${shortlist.length} candidates on size — retrying with ${half}`);
+    ranked = await rank(shortlist.slice(0, half));
+  }
 
   const learnings = (ranked.learnings || [])
     .slice(0, cfg.targetLearnings)
