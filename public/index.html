@@ -1902,10 +1902,28 @@ function drawRoles(){
      * That is a real answer, not a broken feed" is an assertion, and it is only
      * true when the scrape was healthy — which was never checked before saying
      * it. It is now conditional on exactly that. */
-    const srcOk = Number(st.sources_ok), srcTried = Number(st.sources_attempted);
-    const srcKnown = Number.isFinite(srcOk) && Number.isFinite(srcTried) && srcTried > 0;
-    const srcThin = srcKnown && srcOk < srcTried / 2;
-    const healthy = ageH != null && ageH <= 30 && !srcThin;
+    /* SOURCES_OK IS NOT "SOURCES THAT WORKED", AND READING IT THAT WAY WAS WRONG.
+     * jobs.py counts only status "ok" — a source that returned MATCHES. Its
+     * vocabulary is ok | empty | blocked | error, and its own healthy set is
+     * ok PLUS empty (jobs.py, ok_sources). "empty" means reachable, nothing
+     * senior-finance open today, which is an ordinary Tuesday at one employer.
+     *
+     * On 21 Sep the feed read 10/14, and all four of the others were "empty":
+     * Emaar, Jumeirah, Americana and Michael Page simply had nothing matching.
+     * Keying the warning off sources_ok would have called a perfectly healthy
+     * scrape degraded on any quiet week — the exact false alarm this banner
+     * exists to prevent. Count what actually broke instead. */
+    const srcs = Array.isArray(d.sources) ? d.sources : [];
+    const broke = srcs.filter(s => s && (s.status === "error" || s.status === "blocked"));
+    const srcTried = srcs.length || Number(st.sources_attempted) || 0;
+    const srcEmpty = srcs.filter(s => s && s.status === "empty").length;
+    /* A couple of sites refusing automated access is expected and jobs.py says
+       so. A QUARTER of them failing is the fetch layer, not the sites — and the
+       floor of 2 stops one flaky employer from crying wolf. At 14 sources that
+       is 4, which is the point where a materially incomplete market is being
+       presented as a shortlist. */
+    const srcBroken = srcTried > 0 && broke.length >= Math.max(2, Math.ceil(srcTried / 4));
+    const healthy = ageH != null && ageH <= 30 && !srcBroken;
 
     const warn = document.getElementById("rolesWarn");
     let wMsg = "";
@@ -1917,10 +1935,11 @@ function drawRoles(){
       wMsg = `<b>This shortlist is ${ageH} hours old.</b> The scraper publishes daily, so it has
         missed at least one run. Roles below may already be filled, and anything posted since is
         not here. Last built ${myt(d.generated_at)}.`;
-    else if (srcThin)
-      wMsg = `<b>Only ${srcOk} of ${srcTried} job sources responded.</b> The file is fresh but most
-        of the market is missing from it, so a short list below is the scrape failing rather than a
-        quiet week. Last built ${myt(d.generated_at)}.`;
+    else if (srcBroken)
+      wMsg = `<b>${broke.length} of ${srcTried} job sources could not be read.</b> The file is fresh
+        but part of the market is missing from it, so a short list below is the scrape failing
+        rather than a quiet week. Failed: ${esc(broke.map(s => s.name).filter(Boolean).join(", "))}.
+        Last built ${myt(d.generated_at)}.`;
     if (wMsg) {
       warn.className = "warnbox";
       warn.innerHTML = wMsg;
@@ -1934,7 +1953,7 @@ function drawRoles(){
       ${onFit} graded lower that still fit you ${FIT_FLOOR}+` : ""}. · Scraped
       ${myt(d.generated_at)}
       ${ageH != null ? `(${ageH}h ago)` : ""} ·
-      ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources responded ·
+      ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources had roles${srcEmpty ? `, ${srcEmpty} had none` : ""}${broke.length ? `, ${broke.length} failed` : ""} ·
       ${st.urls_verified ?? "?"} links verified.
       ${ROLES.length === 0 && healthy ? "<b> Nothing clears the bar today. That is a real answer, not a broken feed.</b>" : ""}
       ${ROLES.length === 0 && !healthy ? "<b> Nothing is shown, and the feed above says why — do not read this as an empty market.</b>" : ""}`;
