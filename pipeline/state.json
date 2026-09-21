@@ -18556,7 +18556,7 @@
       "reason": "only 5 learnings survived validation (floor is 6)"
     },
     "desk-aafe80a1879c": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "#AskAbhijit 382: Ask Me Anything - Any Topic",
       "show": "Abhijit Chavda",
       "url": "https://www.youtube.com/watch?v=IvxYfn5zCPE",
@@ -18564,8 +18564,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:43.778Z",
-      "updatedAt": "2026-09-21T17:50:00.155Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-21T22:51:50.121Z",
+      "reason": "only 3 learnings survived validation (floor is 6)"
     },
     "desk-a21e9dfc084e": {
       "status": "NEEDS_REVIEW",
@@ -22115,11 +22115,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:09.627Z",
-      "updatedAt": "2026-09-21T17:48:42.175Z",
+      "updatedAt": "2026-09-21T22:48:10.212Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-483eec7834c0": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "The Uncomfortable Truth about Mutual Funds!",
       "show": "Zero1 by Zerodha",
       "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
@@ -22127,8 +22127,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:24.433Z",
-      "updatedAt": "2026-09-21T17:49:29.360Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-21T22:49:08.242Z",
+      "reason": "only 4 learnings survived validation (floor is 6)"
     },
     "desk-bffa57c8329b": {
       "status": "FAILED",
@@ -22139,8 +22139,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:54.231Z",
-      "updatedAt": "2026-09-21T01:07:41.433Z",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+      "updatedAt": "2026-09-21T22:51:53.534Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-622cf05f50f4": {
       "status": "PUBLISHED",
@@ -22511,7 +22511,7 @@
       }
     },
     "desk-fa113e6da7bb": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "The Real Cost of Building a Life in America: Salary, Visas, Taxes & Trade-Offs | Khushi Jain | FWS",
       "show": "Finance With Sharan",
       "url": "https://www.youtube.com/watch?v=2FBiyidVdHE",
@@ -22519,11 +22519,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:01.325Z",
-      "updatedAt": "2026-09-21T17:47:29.868Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-09-21T22:46:22.376Z",
+      "reason": "only 5 learnings survived validation (floor is 6)"
     },
     "desk-f60380a60b7f": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "5 Stocks Investors Are Quietly Buying",
       "show": "Groww",
       "url": "https://www.youtube.com/watch?v=zWDQN105ak0",
@@ -22531,8 +22531,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:40.259Z",
-      "updatedAt": "2026-09-21T17:47:36.983Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-21T22:47:51.903Z",
+      "reason": "only 4 learnings survived validation (floor is 6)"
     },
     "desk-8fe23cb5cee2": {
       "status": "NEEDS_REVIEW",
@@ -22567,7 +22567,19 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:04:07.598Z",
-      "updatedAt": "2026-09-21T17:47:51.315Z",
+      "updatedAt": "2026-09-21T22:47:55.482Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-75cda777ce9c": {
+      "status": "FAILED",
+      "title": "BSE vs NSE: Can NSE Repeat BSE’s Massive Growth Story? | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=Z8k5_eiLraI",
+      "id": "desk-75cda777ce9c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-21T22:51:53.540Z",
+      "updatedAt": "2026-09-21T22:52:08.396Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
