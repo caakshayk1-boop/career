@@ -18564,8 +18564,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:43.778Z",
-      "updatedAt": "2026-09-18T00:14:19.939Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] IvxYfn5zCPE: This live event will begin in 38 hours."
+      "updatedAt": "2026-09-21T00:19:54.223Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
     },
     "desk-a21e9dfc084e": {
       "status": "NEEDS_REVIEW",
@@ -21886,7 +21886,79 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-19T22:54:14.828Z",
-      "updatedAt": "2026-09-19T22:54:16.262Z",
+      "updatedAt": "2026-09-20T23:51:59.108Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+    },
+    "gunjanshouts-ef55c7787119": {
+      "status": "FAILED",
+      "title": "She is 66, Fit & Happier Than Ever! Meet My Mother-in-Law | Pinky Madaan x Gunjan Taneja",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=yJeX6UXP7xM",
+      "id": "gunjanshouts-ef55c7787119",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T23:51:42.317Z",
+      "updatedAt": "2026-09-20T23:51:44.214Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+    },
+    "desk-4eb5f4de2aec": {
+      "status": "FAILED",
+      "title": "How Top VCs Pick Founders, Evaluate Startups & Fund Them | Sasha Mirchandani | FO564 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=0XStJayUrUY",
+      "id": "desk-4eb5f4de2aec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T23:51:59.116Z",
+      "updatedAt": "2026-09-20T23:52:13.879Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+    },
+    "desk-1240b0b2e0b2": {
+      "status": "FAILED",
+      "title": "Elon Musk & Dario’s Final Warning | Why the AI Race Is Getting Dangerously Out of Control?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=ky6jesFvIqY",
+      "id": "desk-1240b0b2e0b2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-20T23:52:13.887Z",
+      "updatedAt": "2026-09-21T00:19:09.618Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+    },
+    "desk-b6151d26d3c2": {
+      "status": "FAILED",
+      "title": "How Much Salary Do You Really Need in India?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
+      "id": "desk-b6151d26d3c2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-21T00:19:09.627Z",
+      "updatedAt": "2026-09-21T00:19:24.425Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+    },
+    "desk-483eec7834c0": {
+      "status": "FAILED",
+      "title": "The Uncomfortable Truth about Mutual Funds!",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
+      "id": "desk-483eec7834c0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-21T00:19:24.433Z",
+      "updatedAt": "2026-09-21T00:19:39.371Z",
+      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+    },
+    "desk-bffa57c8329b": {
+      "status": "FAILED",
+      "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=JfacDx4K6K0",
+      "id": "desk-bffa57c8329b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-21T00:19:54.231Z",
+      "updatedAt": "2026-09-21T01:07:41.433Z",
       "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
     }
   }
