@@ -106,12 +106,43 @@ export function ytdlpCookieArgs(c = cfg) {
   return [];
 }
 
+/** The cookie flag and its value removed. For when the cookie SOURCE cannot be
+ *  read, as opposed to the cookies being wrong or expired. */
+export function stripCookieArgs(args) {
+  const out = [];
+  for (let i = 0; i < args.length; i++) {
+    if (args[i] === "--cookies" || args[i] === "--cookies-from-browser") { i++; continue; }
+    out.push(args[i]);
+  }
+  return out;
+}
+
+/* macOS will not let a LaunchAgent read another app's container, so
+   `--cookies-from-browser safari` dies on Safari's Cookies.binarycookies with
+   EPERM under launchd while working perfectly from a Terminal that has been
+   granted Full Disk Access. MEASURED 19-21 Sep 2026: every episode of three
+   consecutive scheduled runs failed this way and the feed drained from 14
+   episodes to 6, while running the identical command by hand succeeded. */
+const COOKIE_SOURCE_UNREADABLE =
+  /operation not permitted|could not (find|open|copy)[^\n]*cookie|permission denied[^\n]*cookie|unable to (open|read)[^\n]*cookie/i;
+
 export async function runYtDlp(args) {
   const opts = { timeout: 180000, maxBuffer: 32 * 1024 * 1024 };
   try {
     return await run("yt-dlp", args, opts);
   } catch (e) {
     const msg = String((e && (e.stderr || e.message)) || "");
+
+    /* An unreadable cookie jar is not a reason to lose the episode. Without
+       cookies YouTube still serves plenty of caption tracks; only the
+       sign-in-walled ones are lost. Some of the feed beats none of it, and a
+       silent all-fail morning is exactly what this project keeps rediscovering. */
+    const hasCookies = args.some((a) => a === "--cookies" || a === "--cookies-from-browser");
+    if (hasCookies && COOKIE_SOURCE_UNREADABLE.test(msg)) {
+      log.warn("transcript", `cookie source unreadable, retrying without it — ${msg.slice(0, 90)}`);
+      return await run("yt-dlp", stripCookieArgs(args), opts);
+    }
+
     if (!/429|Too Many Requests/i.test(msg)) throw e;
     await napMs(YTDLP_RETRY_MS);
     ytdlpLast = Date.now();
