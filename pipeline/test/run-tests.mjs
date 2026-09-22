@@ -222,6 +222,51 @@ group("youtube caption XML");
   ok("junk yields nothing rather than throwing", parseTimedText("<html>consent</html>").length === 0);
 }
 
+group("a mixed channel, and a cap that does not reward failure");
+{
+  const now = new Date().toISOString();
+  const mk = (o) => ({ title: o.id, publishedAt: now, ...o });
+
+  /* PER-SOURCE FLOOR. GunjanShouts posts 2-hour episodes and 25-minute clips.
+     The global 20m floor lets the clips through, they fail the points floor,
+     and each one costs a slot. A source that mixes the two declares its own. */
+  const mixed = selectEligible([
+    mk({ id: "clip",    ytId: "aaaaaaaaaaa", durationSec: 25 * 60, minMinutes: 40 }),
+    mk({ id: "episode", ytId: "bbbbbbbbbbb", durationSec: 95 * 60, minMinutes: 40 }),
+  ], { episodes: {} }, isSettled);
+  ok("a clip under the source's own floor is skipped",
+    mixed.eligible.length === 1 && mixed.eligible[0].id === "episode",
+    mixed.eligible.map((e) => e.id).join(","));
+  ok("and the skip names the source's floor, not the global one",
+    /40m floor/.test(mixed.skipped.find((x) => x.id === "clip")?.reason || ""),
+    mixed.skipped.find((x) => x.id === "clip")?.reason);
+  ok("a source without its own floor still uses the global one",
+    selectEligible([mk({ id: "x", ytId: "ccccccccccc", durationSec: 5 * 60 })],
+      { episodes: {} }, isSettled).eligible.length === 0);
+
+  /* THE 22 SEP RUN. Eight YouTube episodes took all eight slots, every one hit
+     YouTube's bot check, and readable episodes were turned away behind them —
+     a morning that read nothing while material that needed nothing from YouTube
+     waited. Sorting by date alone hands the cap to whoever uploads most, which
+     is the source most likely to fail. */
+  const realCap = cfg.maxDailyEpisodes;
+  cfg.maxDailyEpisodes = 2;
+  const hour = (h) => new Date(Date.now() - h * 3600000).toISOString();
+  const mixedRun = selectEligible([
+    mk({ id: "yt-newest",  ytId: "ddddddddddd", durationSec: 60 * 60, publishedAt: hour(1) }),
+    mk({ id: "yt-newer",   ytId: "eeeeeeeeeee", durationSec: 60 * 60, publishedAt: hour(2) }),
+    mk({ id: "has-script", transcriptUrl: "https://x/t.vtt", audioUrl: "https://x/a.mp3",
+         durationSec: 60 * 60, publishedAt: hour(9) }),
+  ], { episodes: {} }, isSettled);
+  ok("an episode that publishes its own transcript claims a slot first",
+    mixedRun.eligible.some((e) => e.id === "has-script"),
+    mixedRun.eligible.map((e) => e.id).join(","));
+  ok("even though two YouTube episodes are newer",
+    mixedRun.eligible[0].id === "has-script", mixedRun.eligible[0].id);
+  ok("the cap still holds", mixedRun.eligible.length === 2, mixedRun.eligible.length);
+  cfg.maxDailyEpisodes = realCap;
+}
+
 group("what can be read without paying");
 {
   const key = cfg.deepgramKey;

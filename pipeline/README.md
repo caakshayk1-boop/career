@@ -113,6 +113,33 @@ run that used the source.
 
 A feature meant to add depth must never remove content.
 
+## Sources that mix clips with episodes
+
+A YouTube channel is not a podcast feed. GunjanShouts, Luke Coutinho and Dr Pal
+all post clips and shorts beside their long episodes, and a 25-minute clip
+clears the global 20-minute floor, fails the points floor, and costs a slot from
+the daily cap on the way. GunjanShouts was disabled twice for exactly that.
+
+Each such source declares its own floor:
+
+```json
+{ "id": "gunjanshouts", "type": "youtube", "minMinutes": 40 }
+```
+
+40 minutes because its real episodes run one to two hours and its clips do not.
+`dropShorts` removes Shorts by asking YouTube which uploads are on the /videos
+tab; `minMinutes` removes what is left that still is not an episode.
+
+## The cap goes to what can actually be read
+
+On 22 Sep eight YouTube episodes took all eight slots, every one hit YouTube's
+bot check, and readable episodes were turned away behind them — a morning that
+read nothing while material needing nothing from YouTube waited.
+
+Sorting the cap by date alone hands it to whichever source uploads most often,
+which is the one most likely to fail. Episodes whose show publishes its own
+transcript now claim slots first; within each group, newest wins.
+
 ## The supply problem, measured
 
 Fourteen real feeds were fetched in CI on 13 Sep 2026. **Exactly one publishes

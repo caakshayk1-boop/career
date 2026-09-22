@@ -140,6 +140,7 @@ function parseItem(block, source) {
 
   const rec = {
     sourceId: source.id,
+    minMinutes: source.minMinutes,
     show: source.show || source.id,
     type: ytId ? "youtube" : "rss",
     title,
@@ -206,6 +207,7 @@ async function discoverDesk(source) {
       const ytId = (String(url).match(YT_ID) || [])[1] || "";
       const rec = {
         sourceId: source.id,
+        minMinutes: source.minMinutes,
         show: e.show || e.author || e.podcast || source.show || "Podcast",
         type: ytId ? "youtube" : "link",
         title: e.title || "",
@@ -266,7 +268,15 @@ export function selectEligible(candidates, state, isSettled) {
        a reason to skip — the transcript step will find out. Only an explicitly
        declared out-of-range duration is disqualifying. */
     const mins = c.curated ? 0 : c.durationSec / 60;
-    if (c.durationSec && mins < cfg.minEpisodeMinutes) { skip(`${Math.round(mins)}m — under the ${cfg.minEpisodeMinutes}m floor`); continue; }
+    /* PER-SOURCE FLOOR. The global 20 minutes is right for a podcast feed and
+       far too low for a YouTube channel that posts clips alongside episodes.
+       GunjanShouts is the case: 110 of its 431 uploads run past thirty minutes
+       and it posts a long one most weeks, but the feed window is mostly clips —
+       clips that clear 20 minutes, fail the points floor, and take a slot from
+       something readable. A source that mixes the two declares its own floor
+       and the mix stops being a problem. */
+    const floor = Number(c.minMinutes) || cfg.minEpisodeMinutes;
+    if (c.durationSec && mins < floor) { skip(`${Math.round(mins)}m — under this source's ${floor}m floor`); continue; }
     if (c.durationSec && mins > cfg.maxEpisodeMinutes) { skip(`${Math.round(mins)}m — over the ${cfg.maxEpisodeMinutes}m ceiling`); continue; }
     /* FAIL FAST, AND SAY WHY. An episode with an audio URL and no transcript is
        unreadable unless paid ASR is configured. Discovering that one episode at
@@ -285,7 +295,19 @@ export function selectEligible(candidates, state, isSettled) {
   /* Newest first, then hard-capped. The cap is the last thing applied so that a
      day with eight new episodes publishes the three most recent rather than the
      three that happened to sort first alphabetically. */
-  eligible.sort((a, b) => Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
+  /* A FAILING SOURCE MUST NOT STARVE A WORKING ONE.
+     On 22 Sep eight YouTube episodes filled all eight slots, every one failed
+     YouTube's bot check, and two further episodes were turned away as "over the
+     cap" — a run that read nothing while readable material waited behind it.
+     Sorting purely by date makes the cap a lottery weighted towards whichever
+     source uploads most often, which is exactly the one most likely to fail.
+
+     An episode whose show publishes its own transcript needs nothing from
+     YouTube and is therefore near-certain to be read. Those claim slots first;
+     within each group, newest wins. */
+  const certain = (e) => (e.transcriptUrl ? 0 : 1);
+  eligible.sort((a, b) =>
+    certain(a) - certain(b) || Date.parse(b.publishedAt) - Date.parse(a.publishedAt));
   const over = eligible.splice(cfg.maxDailyEpisodes);
   for (const o of over)
     /* A curated item over the cap is still shown, as a title. Silently dropping
