@@ -137,8 +137,15 @@ await checkPage("/podcasts", "podcasts", async (page) => {
       undated: (doc.episodes || []).filter((e) => !e.date).length,
       thin: (doc.episodes || []).filter((e) => (e.learnings || []).length < 5).length,
       builtHoursAgo: Math.round((Date.now() - Date.parse(doc.generatedAt || 0)) / 3600000),
+      /* THE SAME ARITHMETIC RETENTION USES, not a re-derivation of it.
+       * This measured wall-clock milliseconds and rounded, while buildPublic
+       * counts whole calendar days in MYT between the episode's date and the
+       * artifact's own `today`. The two agree until the clock passes midday and
+       * then differ by one, which failed a deploy over an episode that
+       * retention had correctly kept. A check that reimplements the rule it is
+       * checking eventually disagrees with it; use the rule's own inputs. */
       oldestAgeDays: (doc.episodes || []).reduce((max, e) => Math.max(max,
-        Math.round((Date.now() - Date.parse(e.date + "T00:00:00Z")) / 86400000)), 0),
+        Math.round((Date.parse(doc.today + "T00:00:00Z") - Date.parse(e.date + "T00:00:00Z")) / 86400000)), 0),
     };
   });
 
