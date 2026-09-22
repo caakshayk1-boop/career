@@ -22115,8 +22115,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:09.627Z",
-      "updatedAt": "2026-09-21T22:48:10.212Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-22T00:57:14.108Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-483eec7834c0": {
       "status": "NEEDS_REVIEW",
@@ -22579,8 +22579,80 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T22:51:53.540Z",
-      "updatedAt": "2026-09-21T22:52:08.396Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-22T00:57:29.172Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Z8k5_eiLraI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-b3c004ebeecf": {
+      "status": "FAILED",
+      "title": "Half Of Delhi Voters Wiped Out?! | Is EC Incompetent Or Part Of A Bigger Evil Plan? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=i3DPYG5lD4w",
+      "id": "desk-b3c004ebeecf",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T00:55:56.904Z",
+      "updatedAt": "2026-09-22T00:55:59.058Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d7e5576be53e": {
+      "status": "FAILED",
+      "title": "The Tata crisis is a mess and no one comes out of it unscathed",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=8kQFjGDdnZY",
+      "id": "desk-d7e5576be53e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T00:55:59.068Z",
+      "updatedAt": "2026-09-22T00:56:14.446Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 8kQFjGDdnZY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-b2d43c3f74d0": {
+      "status": "FAILED",
+      "title": "“Our History Created A Sense That India Needed Outsiders To Unite And Civilize Us” Vikram Sampat",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=7R5DEq2Qnok",
+      "id": "desk-b2d43c3f74d0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T00:56:14.454Z",
+      "updatedAt": "2026-09-22T00:56:29.335Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 7R5DEq2Qnok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d73467f0bd48": {
+      "status": "FAILED",
+      "title": "Sadhguru Darshan Part 2 - The Science of Navratri",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=ac4264G0gk4",
+      "id": "desk-d73467f0bd48",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T00:56:29.342Z",
+      "updatedAt": "2026-09-22T00:56:44.377Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] ac4264G0gk4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d4ad3375ff5b": {
+      "status": "FAILED",
+      "title": "UP Will Be Divided Into 4 States? | What Does Article 3 Say? | Current Affairs | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=uYaBR9uc0yg",
+      "id": "desk-d4ad3375ff5b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T00:56:44.384Z",
+      "updatedAt": "2026-09-22T00:56:59.547Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] uYaBR9uc0yg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-1a8a9df81ccc": {
+      "status": "FAILED",
+      "title": "How to Read Your Salary Slip?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
+      "id": "desk-1a8a9df81ccc",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T00:57:29.180Z",
+      "updatedAt": "2026-09-22T00:57:44.261Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] dq44PB-rs2k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

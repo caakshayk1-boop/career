@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T22:52:08.414Z",
+  "generatedAt": "2026-09-22T00:57:44.271Z",
   "today": "2026-09-22",
   "retentionDays": 7,
   "days": [
@@ -1497,37 +1497,13 @@
   ],
   "pending": [
     {
-      "id": "desk-1a8a9df81ccc",
-      "title": "How to Read Your Salary Slip?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
-      "takeaways": [
-        "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
-        "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
-      ],
-      "date": "2026-09-22",
-      "reason": "over the 8/day cap"
-    },
-    {
       "id": "desk-57329e6625df",
       "title": "Deep Sea Mysteries That Science Can't Explain! | Dhruv Rathee",
       "show": "Dhruv Rathee",
       "url": "https://www.youtube.com/watch?v=q678XLOueN8",
       "takeaways": [
-        "Learn how to make content creation your part‑time job or full‑time career.",
-        "Learn how to harness the power of ChatGPT and transform your life."
-      ],
-      "date": "2026-09-22",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-2a51a7dbc329",
-      "title": "Sadhguru Darshan Part 1 -  The True Meaning of Ganesha as Vighneshwara",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=_zD8lEHeVP8",
-      "takeaways": [
-        "Sharp intelligence and a balanced disposition are the true means to overcome obstacles in life.",
-        "Sadhguru explains that Ganesha Chaturthi holds deeper significance beyond the celebrations and feasting."
+        "Learn how to make content creation your part-time job or full-time career!",
+        "Learn to harness the power of ChatGPT and transform your life!"
       ],
       "date": "2026-09-22",
       "reason": "over the 8/day cap"
@@ -1545,16 +1521,63 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-487d556a6e5b",
-      "title": "UPSC CSAT 2027 Preparation Begins! | Percentage | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=5T6gUf0nX70",
+      "id": "desk-b3c004ebeecf",
+      "title": "Half Of Delhi Voters Wiped Out?! | Is EC Incompetent Or Part Of A Bigger Evil Plan? | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=i3DPYG5lD4w",
       "takeaways": [
-        "Welcome to the CSAT Target Prelims 2027 Series by Drishti IAS.",
-        "In recent years, CSAT has emerged as one of the biggest challenges for UPSC aspirants, making early, systematic, and consistent preparation more important than ever."
+        "India’s voting system is facing serious questions due to SIR and the Election Commission’s handling of electoral rolls.",
+        "From thousands of voters receiving notices in Delhi to large-scale deletions reported in Bengal, Maharashtra, Karnataka and Punjab, the process has left many citizens struggling to prove their eligibility to vote."
       ],
       "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-d7e5576be53e",
+      "title": "The Tata crisis is a mess and no one comes out of it unscathed",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=8kQFjGDdnZY",
+      "takeaways": [
+        "The Tata crisis is a mess and no one comes out of it unscathed: Sucheta Dalal, Managing Editor, Moneylife, to Karan Thapar for The Wire.",
+        "Today we focus our attention on the crisis that’s afflicted the Tata Group."
+      ],
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: [youtube] 8kQFjGDdnZY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-b2d43c3f74d0",
+      "title": "“Our History Created A Sense That India Needed Outsiders To Unite And Civilize Us” Vikram Sampat",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=7R5DEq2Qnok",
+      "takeaways": [
+        "“Our History Created A Sense That India Needed Outsiders To Unite And Civilize Us” Vikram Sampat #Anipodcast #SmitaPrakash #VikramSampath #History #India #BritishRule #British #Colonization Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: [youtube] 7R5DEq2Qnok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-d73467f0bd48",
+      "title": "Sadhguru Darshan Part 2 - The Science of Navratri",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=ac4264G0gk4",
+      "takeaways": [
+        "Fasting during Navratri is important.",
+        "True victory lies not in accumulations but in transcending one’s limitations."
+      ],
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: [youtube] ac4264G0gk4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-d4ad3375ff5b",
+      "title": "UP Will Be Divided Into 4 States? | What Does Article 3 Say? | Current Affairs | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=uYaBR9uc0yg",
+      "takeaways": [
+        "Can Uttar Pradesh really be divided into four states?",
+        "A fresh debate has emerged after Uttar Pradesh Minister and SBSP chief Om Prakash Rajbhar claimed that the state would be divided into four parts after the caste census."
+      ],
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: [youtube] uYaBR9uc0yg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-b6151d26d3c2",
@@ -1562,23 +1585,11 @@
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
       "takeaways": [
-        "Two families earning the same amount can have completely different financial lives.",
-        "Your city, housing costs, dependents, loans, and lifestyle matter more than comparing your salary with someone else."
+        "Your city, housing costs, dependants, loans, and lifestyle matter more than comparing your salary with someone else.",
+        "Don’t assume the products mentioned are the best; you should do your own research."
       ],
       "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-bffa57c8329b",
-      "title": "Riyadh Comes Under Fire! | Did Trump Ditch MBS To Shake Hands With The Houthis!? | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=JfacDx4K6K0",
-      "takeaways": [
-        "If the station for Saudi Arabia was perilous two days ago - it just got a whole lot worse now.",
-        "With NO HELP coming from America - MBS has been scampering all over the place asking for help."
-      ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-75cda777ce9c",
@@ -1587,10 +1598,22 @@
       "url": "https://www.youtube.com/watch?v=Z8k5_eiLraI",
       "takeaways": [
         "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage.",
-        "The episode compares the revenue mix, market share, margins and valuations of BSE and NSE."
+        "The video compares revenue mix, market share, margins and valuations of BSE and NSE while asking if NSE can replicate BSE’s growth story."
       ],
       "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] Z8k5_eiLraI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-1a8a9df81ccc",
+      "title": "How to Read Your Salary Slip?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
+      "takeaways": [
+        "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
+        "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
+      ],
+      "date": "2026-09-22",
+      "reason": "yt-dlp failed: ERROR: [youtube] dq44PB-rs2k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -1601,7 +1624,7 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-21T22:52:08.402Z",
+    "at": "2026-09-22T00:57:44.270Z",
     "discovered": 1124,
     "eligible": 8,
     "processed": 0,
@@ -1611,27 +1634,51 @@
     "errors": [
       {
         "stage": "process",
-        "id": "desk-487d556a6e5b",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-21T22:47:55.482Z"
+        "id": "desk-b3c004ebeecf",
+        "message": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:55:59.058Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-d7e5576be53e",
+        "message": "yt-dlp failed: ERROR: [youtube] 8kQFjGDdnZY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:56:14.446Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-b2d43c3f74d0",
+        "message": "yt-dlp failed: ERROR: [youtube] 7R5DEq2Qnok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:56:29.335Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-d73467f0bd48",
+        "message": "yt-dlp failed: ERROR: [youtube] ac4264G0gk4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:56:44.377Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-d4ad3375ff5b",
+        "message": "yt-dlp failed: ERROR: [youtube] uYaBR9uc0yg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:56:59.547Z"
       },
       {
         "stage": "process",
         "id": "desk-b6151d26d3c2",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-21T22:48:10.212Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-bffa57c8329b",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-21T22:51:53.534Z"
+        "message": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:57:14.108Z"
       },
       {
         "stage": "process",
         "id": "desk-75cda777ce9c",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-21T22:52:08.396Z"
+        "message": "yt-dlp failed: ERROR: [youtube] Z8k5_eiLraI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:57:29.172Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-1a8a9df81ccc",
+        "message": "yt-dlp failed: ERROR: [youtube] dq44PB-rs2k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-22T00:57:44.261Z"
       }
     ],
     "estimatedCostUsd": 0
