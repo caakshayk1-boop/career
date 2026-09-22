@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-22T00:57:44.271Z",
-  "today": "2026-09-22",
+  "generatedAt": "2026-09-22T22:48:24.967Z",
+  "today": "2026-09-23",
   "retentionDays": 7,
   "days": [
     {
       "date": "2026-09-22",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-9d29e46ff83f",
         "desk-4eb5f4de2aec"
@@ -14,7 +14,7 @@
     },
     {
       "date": "2026-09-21",
-      "label": "Yesterday",
+      "label": "Monday",
       "episodeIds": [
         "diary-of-a-ceo-622cf05f50f4"
       ]
@@ -40,13 +40,6 @@
       "label": "Thursday",
       "episodeIds": [
         "desk-4a55ec85d533"
-      ]
-    },
-    {
-      "date": "2026-09-16",
-      "label": "Wednesday",
-      "episodeIds": [
-        "desk-82e25965bcf8"
       ]
     }
   ],
@@ -1252,250 +1245,21 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 82
-    },
-    {
-      "id": "desk-82e25965bcf8",
-      "sourceId": "desk",
-      "show": "Figuring Out",
-      "title": "TOP Harvard Scientist: These 5 Habits Are Aging You Faster | David Sinclair | FO562 Raj Shamani",
-      "guest": "David Sinclair",
-      "topics": [
-        "aging",
-        "epigenetics",
-        "longevity",
-        "gene therapy",
-        "lifestyle"
-      ],
-      "summary": "In this episode, Harvard biologist David Sinclair discusses how epigenetic changes drive aging and how cutting‑edge gene therapies like AAV‑OSK are being tested to reverse damage. He also outlines lifestyle habits that can add years of health, emphasizing early intervention and practical dietary tweaks.",
-      "url": "https://www.youtube.com/watch?v=gfCg5srOjN0",
-      "type": "youtube",
-      "image": "",
-      "publishedAt": "2026-09-15T00:00:00.000Z",
-      "date": "2026-09-16",
-      "durationSec": 8706,
-      "processedAt": "2026-09-16T15:38:42.558Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Epigenome, not DNA sequence, drives aging",
-          "idea": "Aging is caused mainly by epigenetic changes—alterations in DNA packaging and gene expression—while the DNA sequence itself remains largely unchanged.",
-          "why": "Shifts focus of research and therapy toward modifying the epigenome rather than trying to fix DNA mutations.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"The DNA is not changing with aging. What changes is the epigenome—how DNA is packaged and accessed—leading to mis‑expression of genes and aging.\"",
-          "t": 918,
-          "kind": "interpretation",
-          "confidence": 0.88,
-          "grounding": 0.38,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Organs age at different rates",
-          "idea": "Biological age differs across organs; a heart can be older than chronological age while the brain may be younger.",
-          "why": "Highlights the need for organ‑specific diagnostics and interventions rather than treating the body as a single age unit.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"You could have a different age for each organ... The heart, brain, immune system all have different biological ages.\"",
-          "t": 500,
-          "kind": "interpretation",
-          "confidence": 0.6,
-          "grounding": 0.58,
-          "repaired": true
-        },
-        {
-          "rank": 3,
-          "headline": "Partial Yamanaka factors rejuvenate human cells",
-          "idea": "Introducing three Yamanaka factors (OSK) without the oncogenic MINK gene restored roughly 80% of youthful identity in aged human cells, offering a safer reprogramming method.",
-          "why": "Provides a concrete, low‑cancer‑risk pathway to reverse cellular aging, moving the field toward clinical applications.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[23:31] cells went back about 80% to being young.",
-          "t": 1411,
-          "kind": "said",
-          "confidence": 0.86,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "AAV‑OSK eye injection regrows optic nerves in mice",
-          "idea": "Injecting AAV2 carrying OSK genes into mouse retinas regenerated damaged optic nerves within weeks, showing that age‑reversal can restore complex neural tissue.",
-          "why": "Demonstrates that gene‑based rejuvenation can repair sophisticated structures like the nervous system, a major hurdle for therapies.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[25:26] It's called an AAV... we used one called AAV2, which is designed to uh hit the retina.",
-          "t": 1526,
-          "kind": "said",
-          "confidence": 0.87,
-          "grounding": 0.78,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "First human trial of AAV‑OSK eye therapy",
-          "idea": "An FDA‑approved clinical trial is testing the safety of AAV‑OSK eye injections in humans to assess potential vision restoration.",
-          "why": "Marks the transition from animal studies to human testing, indicating imminent real‑world impact.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[29:41] FDA approved study to test safety.",
-          "t": 1781,
-          "kind": "said",
-          "confidence": 0.84,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Early DNA damage accelerates later aging in mice",
-          "idea": "Two weeks of targeted DNA cutting in young mice caused accelerated aging that became apparent ten months later, establishing a causal link between DNA damage and aging.",
-          "why": "Provides experimental proof that DNA damage drives aging, informing prevention strategies focused on genome protection.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[18:04] We cut the DNA for 2 weeks when they were young.",
-          "t": 1084,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "DNA break frequency explains aging speed differences",
-          "idea": "Individual variation in DNA break rates and repair efficiency accounts for why some people age faster, suggesting repair pathways as longevity targets.",
-          "why": "Identifies a measurable biomarker that could be used to personalize anti‑aging interventions.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[33:05] Right. And that is causing the aging.",
-          "t": 1985,
-          "kind": "interpretation",
-          "confidence": 0.82,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Five habits add 14 healthy years",
-          "idea": "A Harvard study found that avoiding excess alcohol, smoking, obesity, chronic stress, and eating poorly yields roughly 14 additional years of healthy life.",
-          "why": "Offers a simple, evidence‑backed lifestyle checklist that can dramatically extend healthspan for the general public.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"There was a study from Harvard that showed that the men who lived the longest, they actually had 14 years of extra healthy life if they just did five things: don't overdrink, don't smoke, don't be overweight, don't stress, and eat healthy.\"",
-          "t": 0,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.59,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Two meals daily boost health",
-          "idea": "Clinical trials show that eating only two meals a day, instead of three, provides significant health benefits.",
-          "why": "Challenges the entrenched three‑meal norm and presents an easy dietary tweak with measurable impact.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"What kind of other protocols will make me better? ... Reduce your number of meals down to two and you'll be good. That's been shown in many clinical trials to have vast health benefits.\"",
-          "t": 63,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 0.76,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Start with fewer, fresher meals",
-          "idea": "A practical first step for longevity is to reduce meal frequency and prioritize fresh, minimally processed foods.",
-          "why": "Provides an immediately actionable habit that aligns with the more powerful intermittent‑eating evidence.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"I would start with eating less often and within those meals eating fresh.\"",
-          "t": 8503,
-          "kind": "recommendation",
-          "confidence": 0.78,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 11,
-          "headline": "Begin anti‑aging measures a decade early",
-          "idea": "To maximize benefits, preventive lifestyle changes should start at least ten years before the age at which you expect to see effects.",
-          "why": "Counters the belief that late‑life interventions are equally effective, emphasizing early adoption for optimal outcomes.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"you do need to start, I think, decades to earlier or at least 10 years earlier\"",
-          "t": 8422,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 12,
-          "headline": "Resveratrol benefits require decades",
-          "idea": "Long‑term daily resveratrol use (15+ years) is necessary to see meaningful anti‑aging effects, indicating that benefits accrue over long periods.",
-          "why": "Counters the hype of short‑term supplement fixes and stresses the importance of sustained regimen.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"I've been taking resveratrol almost every day for you know 15 years or more.\"",
-          "t": 8388,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 13,
-          "headline": "Aging will be classified as a disease",
-          "idea": "Future medical policy is likely to label aging itself as a disease, opening pathways for treatments and insurance coverage.",
-          "why": "Signals a paradigm shift in healthcare regulation that could accelerate development and accessibility of anti‑aging therapies.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"Aging will be declared a medical condition or a disease.\"",
-          "t": 458,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 14,
-          "headline": "Lost repair proteins cause epigenetic drift",
-          "idea": "During DNA repair, missing repair proteins can fail to restore proper chromatin packaging, leading to age‑related epigenetic mis‑expression.",
-          "why": "Identifies a specific mechanistic failure point that could be targeted to maintain epigenetic fidelity with age.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"We can do small cuts in the DNA to repair it, but sometimes the repair proteins get lost and that leads to age‑related mis‑packaging.\"",
-          "t": 1030,
-          "kind": "interpretation",
-          "confidence": 0.82,
-          "grounding": 0.31,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 1,
-      "audio": null,
-      "readSeconds": 176
     }
   ],
   "pending": [
+    {
+      "id": "desk-1a8a9df81ccc",
+      "title": "How to Read Your Salary Slip?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
+      "takeaways": [
+        "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
+        "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
+      ],
+      "date": "2026-09-23",
+      "reason": "over the 8/day cap"
+    },
     {
       "id": "desk-57329e6625df",
       "title": "Deep Sea Mysteries That Science Can't Explain! | Dhruv Rathee",
@@ -1505,7 +1269,7 @@
         "Learn how to make content creation your part-time job or full-time career!",
         "Learn to harness the power of ChatGPT and transform your life!"
       ],
-      "date": "2026-09-22",
+      "date": "2026-09-23",
       "reason": "over the 8/day cap"
     },
     {
@@ -1517,7 +1281,7 @@
         "Arvind Narrain is an Indian human-rights lawyer, writer and activist, and a co-founder of Bengaluru’s Alternative Law Forum.",
         "His work focuses on constitutional rights, civil liberties, minority rights, discrimination and LGBTQ+ rights."
       ],
-      "date": "2026-09-22",
+      "date": "2026-09-23",
       "reason": "over the 8/day cap"
     },
     {
@@ -1529,8 +1293,8 @@
         "India’s voting system is facing serious questions due to SIR and the Election Commission’s handling of electoral rolls.",
         "From thousands of voters receiving notices in Delhi to large-scale deletions reported in Bengal, Maharashtra, Karnataka and Punjab, the process has left many citizens struggling to prove their eligibility to vote."
       ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-23",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
       "id": "desk-d7e5576be53e",
@@ -1541,43 +1305,8 @@
         "The Tata crisis is a mess and no one comes out of it unscathed: Sucheta Dalal, Managing Editor, Moneylife, to Karan Thapar for The Wire.",
         "Today we focus our attention on the crisis that’s afflicted the Tata Group."
       ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] 8kQFjGDdnZY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-b2d43c3f74d0",
-      "title": "“Our History Created A Sense That India Needed Outsiders To Unite And Civilize Us” Vikram Sampat",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=7R5DEq2Qnok",
-      "takeaways": [
-        "“Our History Created A Sense That India Needed Outsiders To Unite And Civilize Us” Vikram Sampat #Anipodcast #SmitaPrakash #VikramSampath #History #India #BritishRule #British #Colonization Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] 7R5DEq2Qnok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-d73467f0bd48",
-      "title": "Sadhguru Darshan Part 2 - The Science of Navratri",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=ac4264G0gk4",
-      "takeaways": [
-        "Fasting during Navratri is important.",
-        "True victory lies not in accumulations but in transcending one’s limitations."
-      ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] ac4264G0gk4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-d4ad3375ff5b",
-      "title": "UP Will Be Divided Into 4 States? | What Does Article 3 Say? | Current Affairs | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=uYaBR9uc0yg",
-      "takeaways": [
-        "Can Uttar Pradesh really be divided into four states?",
-        "A fresh debate has emerged after Uttar Pradesh Minister and SBSP chief Om Prakash Rajbhar claimed that the state would be divided into four parts after the caste census."
-      ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] uYaBR9uc0yg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-23",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
       "id": "desk-b6151d26d3c2",
@@ -1588,8 +1317,8 @@
         "Your city, housing costs, dependants, loans, and lifestyle matter more than comparing your salary with someone else.",
         "Don’t assume the products mentioned are the best; you should do your own research."
       ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-23",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
       "id": "desk-75cda777ce9c",
@@ -1600,20 +1329,17 @@
         "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage.",
         "The video compares revenue mix, market share, margins and valuations of BSE and NSE while asking if NSE can replicate BSE’s growth story."
       ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] Z8k5_eiLraI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "date": "2026-09-23",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "desk-1a8a9df81ccc",
-      "title": "How to Read Your Salary Slip?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
-      "takeaways": [
-        "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
-        "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
-      ],
-      "date": "2026-09-22",
-      "reason": "yt-dlp failed: ERROR: [youtube] dq44PB-rs2k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "id": "gunjanshouts-ef55c7787119",
+      "title": "She is 66, Fit & Happier Than Ever! Meet My Mother-in-Law | Pinky Madaan x Gunjan Taneja",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=yJeX6UXP7xM",
+      "takeaways": [],
+      "date": "2026-09-20",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   ],
   "generator": {
@@ -1624,61 +1350,43 @@
     "tts": "none"
   },
   "run": {
-    "at": "2026-09-22T00:57:44.270Z",
-    "discovered": 1124,
+    "at": "2026-09-22T22:48:24.955Z",
+    "discovered": 1146,
     "eligible": 8,
     "processed": 0,
-    "skipped": 1116,
-    "failed": 8,
+    "skipped": 1139,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "desk-b3c004ebeecf",
-        "message": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:55:59.058Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-22T22:45:15.817Z"
       },
       {
         "stage": "process",
         "id": "desk-d7e5576be53e",
-        "message": "yt-dlp failed: ERROR: [youtube] 8kQFjGDdnZY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:56:14.446Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-22T22:45:32.547Z"
       },
       {
         "stage": "process",
-        "id": "desk-b2d43c3f74d0",
-        "message": "yt-dlp failed: ERROR: [youtube] 7R5DEq2Qnok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:56:29.335Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-d73467f0bd48",
-        "message": "yt-dlp failed: ERROR: [youtube] ac4264G0gk4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:56:44.377Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-d4ad3375ff5b",
-        "message": "yt-dlp failed: ERROR: [youtube] uYaBR9uc0yg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:56:59.547Z"
+        "id": "gunjanshouts-ef55c7787119",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-22T22:47:55.267Z"
       },
       {
         "stage": "process",
         "id": "desk-b6151d26d3c2",
-        "message": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:57:14.108Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-22T22:48:10.154Z"
       },
       {
         "stage": "process",
         "id": "desk-75cda777ce9c",
-        "message": "yt-dlp failed: ERROR: [youtube] Z8k5_eiLraI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:57:29.172Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-1a8a9df81ccc",
-        "message": "yt-dlp failed: ERROR: [youtube] dq44PB-rs2k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-22T00:57:44.261Z"
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-09-22T22:48:24.949Z"
       }
     ],
     "estimatedCostUsd": 0

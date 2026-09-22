@@ -21854,7 +21854,7 @@
       }
     },
     "gunjanshouts-21290098a302": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "How To Understand Your Child: Tantrums, Behaviour, Emotions | @schweta.happyminds with GunjanShouts",
       "show": "GunjanShouts",
       "url": "https://www.youtube.com/watch?v=9qUubcMOp6k",
@@ -21862,8 +21862,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:34:26.246Z",
-      "updatedAt": "2026-09-20T02:11:54.970Z",
-      "reason": "fetch failed"
+      "updatedAt": "2026-09-22T22:45:12.153Z",
+      "reason": "older than 192h"
     },
     "gunjanshouts-11ab217dded8": {
       "status": "SKIPPED",
@@ -21898,8 +21898,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-20T23:51:42.317Z",
-      "updatedAt": "2026-09-20T23:51:44.214Z",
-      "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
+      "updatedAt": "2026-09-22T22:47:55.267Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-4eb5f4de2aec": {
       "status": "PUBLISHED",
@@ -22115,8 +22115,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:09.627Z",
-      "updatedAt": "2026-09-22T00:57:14.108Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 4XFtDn2W85Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:48:10.154Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-483eec7834c0": {
       "status": "NEEDS_REVIEW",
@@ -22579,8 +22579,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T22:51:53.540Z",
-      "updatedAt": "2026-09-22T00:57:29.172Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] Z8k5_eiLraI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:48:24.949Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-b3c004ebeecf": {
       "status": "FAILED",
@@ -22591,8 +22591,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-22T00:55:59.058Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:45:15.817Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d7e5576be53e": {
       "status": "FAILED",
@@ -22603,11 +22603,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:59.068Z",
-      "updatedAt": "2026-09-22T00:56:14.446Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 8kQFjGDdnZY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:45:32.547Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-b2d43c3f74d0": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "“Our History Created A Sense That India Needed Outsiders To Unite And Civilize Us” Vikram Sampat",
       "show": "ANI Podcast (clips)",
       "url": "https://www.youtube.com/watch?v=7R5DEq2Qnok",
@@ -22615,11 +22615,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:56:14.454Z",
-      "updatedAt": "2026-09-22T00:56:29.335Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 7R5DEq2Qnok: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:45:45.743Z",
+      "reason": "transcript unusable: transcript is only 3064 characters"
     },
     "desk-d73467f0bd48": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "Sadhguru Darshan Part 2 - The Science of Navratri",
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=ac4264G0gk4",
@@ -22627,11 +22627,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:56:29.342Z",
-      "updatedAt": "2026-09-22T00:56:44.377Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] ac4264G0gk4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:46:38.767Z",
+      "reason": "only 5 learnings survived validation (floor is 6)"
     },
     "desk-d4ad3375ff5b": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "UP Will Be Divided Into 4 States? | What Does Article 3 Say? | Current Affairs | Drishti IAS",
       "show": "Drishti IAS",
       "url": "https://www.youtube.com/watch?v=uYaBR9uc0yg",
@@ -22639,8 +22639,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:56:44.384Z",
-      "updatedAt": "2026-09-22T00:56:59.547Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] uYaBR9uc0yg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-22T22:47:51.428Z",
+      "reason": "only 5 learnings survived validation (floor is 6)"
     },
     "desk-1a8a9df81ccc": {
       "status": "FAILED",
@@ -22653,6 +22653,76 @@
       "seenAt": "2026-09-22T00:57:29.180Z",
       "updatedAt": "2026-09-22T00:57:44.261Z",
       "reason": "yt-dlp failed: ERROR: [youtube] dq44PB-rs2k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "luke-coutinho-7b83d5ed2734": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Your Body’s IRON STORAGE TANK Is Getting Empty !!",
+      "id": "luke-coutinho-7b83d5ed2734",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "luke-coutinho-c9ecc2bf0006": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Entire Hair Care Treatment Just in 16 Minutes",
+      "id": "luke-coutinho-c9ecc2bf0006",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "ali-abdaal-c1f73c53a017": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "Give Me 22 Minutes, I’ll Show You How to Get Your First Client",
+      "id": "ali-abdaal-c1f73c53a017",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "ali-abdaal-080c4500aa2c": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "If you’re ambitious but inconsistent, please watch this",
+      "id": "ali-abdaal-080c4500aa2c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "ali-abdaal-f97bb478b99f": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "How to make your first $1,000 online",
+      "id": "ali-abdaal-f97bb478b99f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "ali-abdaal-a7166a98da32": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "What To Do With Your Life",
+      "id": "ali-abdaal-a7166a98da32",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "ali-abdaal-68c925021c7d": {
+      "status": "SKIPPED",
+      "reason": "older than 192h",
+      "title": "How to Make Your Job Optional",
+      "id": "ali-abdaal-68c925021c7d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-22T22:45:12.153Z",
+      "updatedAt": "2026-09-22T22:45:12.153Z"
     }
   }
 }
