@@ -1,7 +1,7 @@
 {
   "//": [
     "THE ADMIN SURFACE. There is no admin dashboard because there is no server to",
-    "put one on — this site is an assets-only Worker. Editing this file is the",
+    "put one on \u2014 this site is an assets-only Worker. Editing this file is the",
     "add/remove/pause control, and it is strictly better than a web form for one",
     "operator: every change is a reviewable diff, version-controlled, with no",
     "auth to build and nothing new to attack.",
@@ -11,17 +11,30 @@
     "  url            the feed URL, or a bare UC... channel id for YouTube",
     "  verified       set true once `npm run podcasts:verify` has confirmed it",
     "",
-    "THE DESK SOURCE IS THE LIST §12 ALREADY HAD. news.askakshay.com/today.json",
+    "THE DESK SOURCE IS THE LIST \u00a712 ALREADY HAD. news.askakshay.com/today.json",
     "carries desk.podcasts, and this site has listed those episodes since before",
     "Podcast Intelligence existed. They are now processed like any other source.",
     "An episode whose link points at YouTube can be read for free; anything else",
     "is listed as PENDING and still shown as a title, never dropped.",
     "",
     "YOUTUBE IS NOT READABLE FROM CI, AND THAT IS NOT FIXABLE HERE. Google serves",
-    "captions empty to datacentre IPs — both the timedtext endpoint and the watch",
+    "captions empty to datacentre IPs \u2014 both the timedtext endpoint and the watch",
     "page's player config. Two routes were implemented and both are blocked from",
     "GitHub Actions. The desk feed stays enabled so its episodes remain LISTED on",
     "the page, but the ones pointing at YouTube will not be read here.",
+    "",
+    "HEALTH AND PRODUCTIVITY, ADDED 22 SEP 2026. GunjanShouts, Luke Coutinho,",
+    "Dr Pal and Ali Abdaal \u2014 the page was almost all finance and news.",
+    "",
+    "EVERY ONE CARRIES A minMinutes. These channels post clips and shorts beside",
+    "their episodes, and a clip clears the global 20m floor, fails the points floor",
+    "and costs a slot. GunjanShouts was disabled twice for exactly that. Its floor",
+    "is 40m because its real episodes run one to two hours and its clips do not.",
+    "",
+    "They are YouTube, so they are read only where YouTube answers. As of 22 Sep",
+    "that is not CI \u2014 yt-dlp there returns 'Sign in to confirm you're not a bot' \u2014",
+    "but it is any home connection, via ./scripts/morning.sh. Until that changes",
+    "they appear as listed titles from the Action, and episodes when run locally.",
     "",
     "MEASURED, 13 SEP 2026, NOT GUESSED. Fourteen real feeds were fetched in CI and",
     "EXACTLY ONE publishes <podcast:transcript>: Diary of a CEO, via flightcast.",
@@ -35,7 +48,7 @@
     "STATUS, 10 Sep 2026, from a real run rather than from memory:",
     "  diary-of-a-ceo        VERIFIED. 882 items, publishes <podcast:transcript>,",
     "                        produced 20 points from a 146m episode at $0.000.",
-    "  invest-like-the-best  Feed parses (596 items). NOT verified end to end —",
+    "  invest-like-the-best  Feed parses (596 items). NOT verified end to end \u2014",
     "                        nothing fell inside the 72h window on the day it was",
     "                        enabled, so whether it publishes a transcript is",
     "                        still unknown. Run podcasts:verify to find out.",
@@ -43,25 +56,25 @@
     "READ THIS BEFORE THE FIRST RUN. This deployment has no paid transcription",
     "key, so an episode is only readable if the transcript is already free:",
     "",
-    "  · the feed publishes <podcast:transcript> (Podcasting 2.0), or",
-    "  · it is a YouTube video with a caption track.",
+    "  \u00b7 the feed publishes <podcast:transcript> (Podcasting 2.0), or",
+    "  \u00b7 it is a YouTube video with a caption track.",
     "",
     "A show that publishes audio and nothing else CANNOT be read here. It will be",
     "skipped with that reason rather than failing silently, and it costs nothing",
-    "— but it also produces nothing, so do not leave such a source enabled.",
+    "\u2014 but it also produces nothing, so do not leave such a source enabled.",
     "",
     "`npm run podcasts:verify` fetches every feed below and tells you, per source,",
     "whether its newest episode is free-readable. Run it first. Fix or disable",
-    "anything it flags, then set verified:true by hand — the flag means a person",
+    "anything it flags, then set verified:true by hand \u2014 the flag means a person",
     "looked, which is not something a script can assert for itself.",
     "",
     "TO ADD A YOUTUBE CHANNEL: open the channel, View Source, search for",
-    "\"channelId\" — it is the UC... string. Put that bare id in `url`, not the",
+    "\"channelId\" \u2014 it is the UC... string. Put that bare id in `url`, not the",
     "@handle and not the page URL.",
     "",
     "The shows below are chosen for the campaign this site exists for: operators,",
     "finance, and decisions under constraint. A source that reliably yields no",
-    "learnings is costing model calls for nothing — disable it."
+    "learnings is costing model calls for nothing \u2014 disable it."
   ],
   "sources": [
     {
@@ -77,9 +90,40 @@
       "show": "GunjanShouts",
       "type": "youtube",
       "url": "UCKRpf_HZfpLwxuIgyeYnsVw",
-      "enabled": false,
+      "enabled": true,
       "verified": true,
-      "checked": "clips and shorts, not episodes - transcripts under the floor, disabled 22 Sep 2026"
+      "checked": "mixed channel: 110 of 431 uploads run past 30m, but the feed window is mostly clips. 40m floor keeps the episodes and drops the clips \u2014 22 Sep 2026",
+      "minMinutes": 40
+    },
+    {
+      "id": "luke-coutinho",
+      "show": "Luke Coutinho",
+      "type": "youtube",
+      "url": "UCbtHchJ3oGeVZTlp2RlHzXw",
+      "enabled": true,
+      "verified": false,
+      "minMinutes": 35,
+      "checked": "holistic health, lifestyle medicine \u2014 long-form; 35m floor drops the daily shorts"
+    },
+    {
+      "id": "dr-pal",
+      "show": "Gut Feeling with Dr Pal",
+      "type": "youtube",
+      "url": "UCdoC1XoPy7ui7ovlrnwMBfw",
+      "enabled": true,
+      "verified": false,
+      "minMinutes": 30,
+      "checked": "gut health, evidence-led \u2014 the podcast channel, not the shorts channel"
+    },
+    {
+      "id": "ali-abdaal",
+      "show": "Deep Dive with Ali Abdaal",
+      "type": "youtube",
+      "url": "UCoOae5nYA7VqaXzerajD0lg",
+      "enabled": true,
+      "verified": false,
+      "minMinutes": 35,
+      "checked": "productivity and working better \u2014 main channel mixes essays and interviews"
     },
     {
       "id": "diary-of-a-ceo",
@@ -88,7 +132,7 @@
       "url": "https://feeds.megaphone.fm/thediaryofaceo",
       "enabled": true,
       "verified": true,
-      "checked": "publishes <podcast:transcript> via flightcast — 20 points/episode, $0"
+      "checked": "publishes <podcast:transcript> via flightcast \u2014 20 points/episode, $0"
     },
     {
       "id": "invest-like-the-best",
@@ -97,7 +141,7 @@
       "url": "https://feeds.megaphone.fm/investlikethebest",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "knowledge-project",
@@ -106,7 +150,7 @@
       "url": "https://theknowledgeproject.libsyn.com/rss",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "lennys-podcast",
@@ -115,7 +159,7 @@
       "url": "https://api.substack.com/feed/podcast/10845.rss",
       "enabled": false,
       "verified": false,
-      "checked": "HTTP 403 — this feed URL is wrong"
+      "checked": "HTTP 403 \u2014 this feed URL is wrong"
     },
     {
       "id": "acquired",
@@ -133,7 +177,7 @@
       "url": "https://api.substack.com/feed/podcast/69345.rss",
       "enabled": false,
       "verified": false,
-      "checked": "HTTP 403 — this feed URL is wrong"
+      "checked": "HTTP 403 \u2014 this feed URL is wrong"
     },
     {
       "id": "founders",
@@ -142,7 +186,7 @@
       "url": "https://feeds.simplecast.com/3hnxp7yk",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "twenty-minute-vc",
@@ -151,7 +195,7 @@
       "url": "https://feeds.megaphone.fm/thetwentyminutevc",
       "enabled": false,
       "verified": false,
-      "checked": "HTTP 404 — this feed URL is wrong"
+      "checked": "HTTP 404 \u2014 this feed URL is wrong"
     },
     {
       "id": "my-first-million",
@@ -160,7 +204,7 @@
       "url": "https://feeds.megaphone.fm/HS2300184645",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "modern-wisdom",
@@ -169,7 +213,7 @@
       "url": "https://feeds.megaphone.fm/SIXMSB5088139739",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "huberman-lab",
@@ -178,7 +222,7 @@
       "url": "https://feeds.megaphone.fm/hubermanlab",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "tim-ferriss",
@@ -187,7 +231,7 @@
       "url": "https://rss.art19.com/tim-ferriss-show",
       "enabled": false,
       "verified": true,
-      "checked": "audio only — checked 13 Sep 2026"
+      "checked": "audio only \u2014 checked 13 Sep 2026"
     },
     {
       "id": "all-in",
@@ -196,7 +240,7 @@
       "url": "https://feeds.megaphone.fm/all-in",
       "enabled": false,
       "verified": false,
-      "checked": "HTTP 404 — this feed URL is wrong"
+      "checked": "HTTP 404 \u2014 this feed URL is wrong"
     },
     {
       "id": "odd-lots",
@@ -205,7 +249,7 @@
       "url": "https://feeds.bloomberg.fm/BLM3999844716",
       "enabled": false,
       "verified": false,
-      "checked": "unreachable — this feed URL is wrong"
+      "checked": "unreachable \u2014 this feed URL is wrong"
     }
   ]
 }
