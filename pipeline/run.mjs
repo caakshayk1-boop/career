@@ -244,7 +244,11 @@ async function processEpisode(ep, state, ai, audio) {
     /* Never publish to hit a number. An episode held here is visible in the
        ledger with its reasons and can be released by hand. */
     log.warn("validate", `${ep.id} held for review: ${v.problems.join("; ")}`);
-    remember(state, ep.id, { status: S.NEEDS_REVIEW, reason: v.problems.join("; "), title: ep.title, show: ep.show });
+    /* learningsFound, as a NUMBER and not only inside the reason prose. It is
+       what lets a later run re-evaluate this verdict when the floor moves —
+       see backfillLearningsFound in store.mjs for what its absence cost. */
+    remember(state, ep.id, { status: S.NEEDS_REVIEW, reason: v.problems.join("; "),
+      learningsFound: checked.learnings.length, title: ep.title, show: ep.show });
     run.counts.failed++;
     return;
   }

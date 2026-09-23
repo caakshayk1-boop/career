@@ -230,7 +230,7 @@ pipeline runs to completion with all of them unset.**
 |---|---|---|
 | `EXTRACTOR` | `local` | `local` = free, verbatim, no model. `ai` = the five-pass model pipeline. |
 | `MAX_DAILY_EPISODES` | `8` | hard cap per run — the desk feed is a curated list and the reader expects all of it |
-| `MIN_LEARNINGS` | `6` | floor — below this the episode is held, not published |
+| `MIN_LEARNINGS` | `4` | floor — below this the episode is held, not published |
 | `TARGET_LEARNINGS` | `20` | ceiling |
 | `MAX_EPISODE_MINUTES` | `240` | skip anything longer |
 | `MIN_EPISODE_MINUTES` | `20` | skip anything shorter |

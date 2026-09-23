@@ -50,7 +50,29 @@ const writeJson = (p, v) => { mkdirSync(join(p, ".."), { recursive: true }); wri
 export function loadState() {
   const s = readJson(cfg.statePath, null) || { version: 1, episodes: {} };
   s.episodes ||= {};
+  backfillLearningsFound(s);
   return s;
+}
+
+/** A VERDICT THAT CANNOT BE RE-EVALUATED IS A VERDICT THAT OUTLIVES ITS REASON.
+ *
+ *  "only 4 learnings survived validation (floor is 6)" was recorded as prose
+ *  and nothing else, so the ledger knew the episode had been rejected but not
+ *  what it had been rejected FOR. Lowering the floor to 4 therefore recovered
+ *  nothing: all 21 such rows still read as settled, and the episodes they name
+ *  were never retried. The count is what makes the verdict conditional, so it
+ *  is stored as a number from here on.
+ *
+ *  Rows written before that are backfilled once, from the only place the number
+ *  exists on them. Parsing prose is not how this should work, which is why it
+ *  happens here, once, at load — and not in isSettled, where it would become
+ *  permanent. */
+function backfillLearningsFound(state) {
+  for (const e of Object.values(state.episodes)) {
+    if (e.status !== "NEEDS_REVIEW" || typeof e.learningsFound === "number") continue;
+    const m = /only (\d+) learnings survived validation/.exec(e.reason || "");
+    if (m) e.learningsFound = Number(m[1]);
+  }
 }
 
 export const saveState = (s) => writeJson(cfg.statePath, s);
@@ -67,6 +89,17 @@ export function isSettled(state, id) {
   const e = state.episodes[id];
   if (!e || cfg.force) return false;
   if (e.promptVersion !== cfg.promptVersion || e.processingVersion !== cfg.processingVersion) return false;
+
+  /* HELD FOR BEING THIN, UNDER A FLOOR THAT HAS SINCE MOVED. The episode was
+     read, transcribed and extracted successfully — the only thing wrong with it
+     was a number in the config, and that number is not a property of the
+     episode. Lowering the floor must therefore release it, or the setting is
+     one that only applies to episodes nobody has looked at yet.
+     The transcript is cached and keyed independently of the prompt version, so
+     the retry re-reads nothing from YouTube and costs nothing. */
+  if (e.status === "NEEDS_REVIEW" && typeof e.learningsFound === "number"
+      && e.learningsFound >= cfg.minLearnings) return false;
+
   return ["PUBLISHED", "REJECTED", "SKIPPED", "NEEDS_REVIEW"].includes(e.status);
 }
 

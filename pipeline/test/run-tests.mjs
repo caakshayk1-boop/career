@@ -17,6 +17,7 @@
  */
 import { createServer } from "node:http";
 import { rmSync, existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 import { cfg } from "../config.mjs";
 
 /* Sandbox every path BEFORE importing anything that reads them, so a test run
@@ -93,6 +94,51 @@ group("duplicate episodes");
   ok("an unseen episode is not", !isSettled(st, "e2"));
   st.episodes.e1.promptVersion = "older";
   ok("a prompt-version bump un-settles it", !isSettled(st, "e1"));
+
+  /* A VERDICT THAT CANNOT BE RE-EVALUATED OUTLIVES ITS REASON. 21 episodes
+     were fetched, transcribed and extracted successfully, then held by one
+     number in the config — and the ledger recorded the rejection as prose
+     only, so lowering that number released none of them. The count makes the
+     verdict conditional on the floor that produced it. */
+  remember(st, "thin", { status: "NEEDS_REVIEW", learningsFound: cfg.minLearnings - 1 });
+  remember(st, "nowOk", { status: "NEEDS_REVIEW", learningsFound: cfg.minLearnings });
+  ok("an episode still under the floor stays settled", isSettled(st, "thin"));
+  ok("one that now clears the floor is released", !isSettled(st, "nowOk"));
+
+  /* Held for something that is NOT the floor — an unusable transcript, too
+     many failed candidates — must stay settled at any floor, or every run
+     retries episodes whose problem no number can fix. */
+  remember(st, "broken", { status: "NEEDS_REVIEW", reason: "transcript is only 300 characters" });
+  ok("a non-floor rejection is unaffected by the floor", isSettled(st, "broken"));
+}
+
+group("rows written before the count was recorded");
+{
+  /* The 21 in the live ledger predate the field, so they are backfilled once at
+     load from the only place the number exists on them. Parsing prose is not
+     how this should work — which is why it happens here, once, and not in
+     isSettled where it would become permanent. */
+  const { mkdtempSync, writeFileSync: wf } = await import("node:fs");
+  const { tmpdir } = await import("node:os");
+  const dir = mkdtempSync(join(tmpdir(), "ledger-"));
+  const path = join(dir, "state.json");
+  wf(path, JSON.stringify({ version: 1, episodes: {
+    old:    { status: "NEEDS_REVIEW", reason: "only 5 learnings survived validation (floor is 6)" },
+    also:   { status: "NEEDS_REVIEW", reason: "transcript is only 5979 characters; only 5 learnings survived validation (floor is 6)" },
+    tiny:   { status: "NEEDS_REVIEW", reason: "only 1 learnings survived validation (floor is 6)" },
+    other:  { status: "NEEDS_REVIEW", reason: "fewer than half the learnings are quotable from the source" },
+    done:   { status: "PUBLISHED" },
+  } }));
+  const realPath = cfg.statePath;
+  cfg.statePath = path;
+  const st2 = loadState();
+  cfg.statePath = realPath;
+
+  ok("the count is recovered from the reason", st2.episodes.old.learningsFound === 5, st2.episodes.old.learningsFound);
+  ok("even when another problem is recorded first", st2.episodes.also.learningsFound === 5, st2.episodes.also.learningsFound);
+  ok("a row with no count is left alone", st2.episodes.other.learningsFound === undefined);
+  ok("and a published row is never touched", st2.episodes.done.learningsFound === undefined);
+  ok("the thin one keeps its real count", st2.episodes.tiny.learningsFound === 1, st2.episodes.tiny.learningsFound);
 }
 
 /* ── ELIGIBILITY ─────────────────────────────────────────────────────────── */

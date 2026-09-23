@@ -129,8 +129,12 @@ identity comes from the feed's own GUID, never the title — shows retitle
 episodes after publishing, and a title-derived id would bring every one of them
 back as new.
 
-**Nothing is published to hit a number.** Below the floor of 10 points the
-episode is held as `NEEDS_REVIEW` and does not appear at all.
+**Nothing is published to hit a number.** Below the points floor the episode is
+held as `NEEDS_REVIEW` and does not appear at all. The floor itself is a setting
+(`MIN_LEARNINGS`, documented in `pipeline/README.md`) and is deliberately not
+restated here — this sentence said "10" for as long as the real value was 6, and
+then 4, because a number written in four places is a number that will be wrong in
+three of them.
 
 **Nothing disappears either.** The desk feed's podcast list is a source, not a
 fallback: every episode it names is either read into points or listed as

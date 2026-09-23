@@ -133,7 +133,7 @@ jobs:
           PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '30' }}
           MAX_PUBLIC_EPISODES: ${{ vars.MAX_PUBLIC_EPISODES || '60' }}
           MAX_LOOKBACK_HOURS: ${{ vars.MAX_LOOKBACK_HOURS || '744' }}
-          MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '6' }}
+          MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '4' }}
           TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
           FORCE_REPROCESS: ${{ inputs.force }}
           DRY_RUN: ${{ inputs.dry_run }}
