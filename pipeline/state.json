@@ -15261,7 +15261,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-10T14:49:26.862Z",
       "updatedAt": "2026-09-20T05:04:52.814Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
+      "reason": "only 4 learnings survived validation (floor is 6)",
+      "learningsFound": 4
     },
     "desk-338f935c708b": {
       "status": "FAILED",
@@ -18553,7 +18554,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:39.778Z",
       "updatedAt": "2026-09-16T15:40:52.371Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-aafe80a1879c": {
       "status": "NEEDS_REVIEW",
@@ -18565,7 +18567,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:43.778Z",
       "updatedAt": "2026-09-21T22:51:50.121Z",
-      "reason": "only 3 learnings survived validation (floor is 6)"
+      "reason": "only 3 learnings survived validation (floor is 6)",
+      "learningsFound": 3
     },
     "desk-a21e9dfc084e": {
       "status": "NEEDS_REVIEW",
@@ -18577,7 +18580,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:47.777Z",
       "updatedAt": "2026-09-16T15:40:56.910Z",
-      "reason": "transcript is only 5979 characters; only 5 learnings survived validation (floor is 6)"
+      "reason": "transcript is only 5979 characters; only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-d119d69c7e4f": {
       "status": "FAILED",
@@ -18601,7 +18605,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-16T00:32:55.782Z",
       "updatedAt": "2026-09-16T15:42:31.797Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-2fc719afd73a": {
       "status": "FAILED",
@@ -20847,7 +20852,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:24:40.525Z",
       "updatedAt": "2026-09-17T13:43:31.050Z",
-      "reason": "only 3 learnings survived validation (floor is 6)"
+      "reason": "only 3 learnings survived validation (floor is 6)",
+      "learningsFound": 3
     },
     "gunjanshouts-9a6007494187": {
       "status": "SKIPPED",
@@ -21038,7 +21044,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-17T13:33:27.094Z",
       "updatedAt": "2026-09-18T16:54:34.154Z",
-      "reason": "only 3 learnings survived validation (floor is 6)"
+      "reason": "only 3 learnings survived validation (floor is 6)",
+      "learningsFound": 3
     },
     "desk-02aab011eda4": {
       "status": "FAILED",
@@ -21272,7 +21279,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:30:37.852Z",
       "updatedAt": "2026-09-18T16:25:09.630Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
+      "reason": "only 4 learnings survived validation (floor is 6)",
+      "learningsFound": 4
     },
     "desk-d305b2a58483": {
       "status": "NEEDS_REVIEW",
@@ -21284,7 +21292,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T00:30:52.760Z",
       "updatedAt": "2026-09-18T16:27:14.807Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-b53c0e09ba0d": {
       "status": "PUBLISHED",
@@ -21462,7 +21471,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T15:49:43.446Z",
       "updatedAt": "2026-09-18T16:29:57.428Z",
-      "reason": "only 1 learnings survived validation (floor is 6)"
+      "reason": "only 1 learnings survived validation (floor is 6)",
+      "learningsFound": 1
     },
     "desk-ada47704e8c3": {
       "status": "PUBLISHED",
@@ -21637,7 +21647,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T15:52:18.266Z",
       "updatedAt": "2026-09-18T16:54:08.265Z",
-      "reason": "only 2 learnings survived validation (floor is 6)"
+      "reason": "only 2 learnings survived validation (floor is 6)",
+      "learningsFound": 2
     },
     "desk-98119e45f098": {
       "status": "NEEDS_REVIEW",
@@ -21649,7 +21660,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:24:00.667Z",
       "updatedAt": "2026-09-18T16:24:00.724Z",
-      "reason": "only 3 learnings survived validation (floor is 6)"
+      "reason": "only 3 learnings survived validation (floor is 6)",
+      "learningsFound": 3
     },
     "desk-330b01affd80": {
       "status": "NEEDS_REVIEW",
@@ -21661,7 +21673,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-18T16:27:14.815Z",
       "updatedAt": "2026-09-18T16:27:15.281Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
+      "reason": "only 4 learnings survived validation (floor is 6)",
+      "learningsFound": 4
     },
     "gunjanshouts-f5fcbb1537ba": {
       "status": "SKIPPED",
@@ -22104,7 +22117,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-20T23:52:13.887Z",
       "updatedAt": "2026-09-21T17:48:37.082Z",
-      "reason": "only 2 learnings survived validation (floor is 6)"
+      "reason": "only 2 learnings survived validation (floor is 6)",
+      "learningsFound": 2
     },
     "desk-b6151d26d3c2": {
       "status": "FAILED",
@@ -22128,7 +22142,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:24.433Z",
       "updatedAt": "2026-09-21T22:49:08.242Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
+      "reason": "only 4 learnings survived validation (floor is 6)",
+      "learningsFound": 4
     },
     "desk-bffa57c8329b": {
       "status": "FAILED",
@@ -22520,7 +22535,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:01.325Z",
       "updatedAt": "2026-09-21T22:46:22.376Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-f60380a60b7f": {
       "status": "NEEDS_REVIEW",
@@ -22532,7 +22548,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:40.259Z",
       "updatedAt": "2026-09-21T22:47:51.903Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
+      "reason": "only 4 learnings survived validation (floor is 6)",
+      "learningsFound": 4
     },
     "desk-8fe23cb5cee2": {
       "status": "NEEDS_REVIEW",
@@ -22544,7 +22561,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:47.397Z",
       "updatedAt": "2026-09-21T17:02:50.136Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-031e662004c9": {
       "status": "NEEDS_REVIEW",
@@ -22556,7 +22574,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:02:50.146Z",
       "updatedAt": "2026-09-21T17:04:07.585Z",
-      "reason": "only 4 learnings survived validation (floor is 6)"
+      "reason": "only 4 learnings survived validation (floor is 6)",
+      "learningsFound": 4
     },
     "desk-487d556a6e5b": {
       "status": "FAILED",
@@ -22591,8 +22610,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-23T00:46:14.187Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:46:13.442Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     "desk-d7e5576be53e": {
       "status": "FAILED",
@@ -22619,7 +22638,7 @@
       "reason": "transcript unusable: transcript is only 3064 characters"
     },
     "desk-d73467f0bd48": {
-      "status": "NEEDS_REVIEW",
+      "status": "PUBLISHED",
       "title": "Sadhguru Darshan Part 2 - The Science of Navratri",
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=ac4264G0gk4",
@@ -22627,8 +22646,115 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:56:29.342Z",
-      "updatedAt": "2026-09-22T22:46:38.767Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "updatedAt": "2026-09-23T16:46:14.370Z",
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5,
+      "payload": {
+        "id": "desk-d73467f0bd48",
+        "sourceId": "desk",
+        "show": "Sadhguru",
+        "title": "Sadhguru Darshan Part 2 - The Science of Navratri",
+        "guest": "Sadhguru",
+        "topics": [
+          "navratri",
+          "spirituality",
+          "wealth",
+          "power",
+          "knowledge"
+        ],
+        "summary": "In this episode, Sadhguru explores the deeper meaning of Navratri, linking its three sets of three nights to power, knowledge, and wealth. He discusses how these gifts can become poisons if hoarded, and how viewing them as trust for the greater good transforms them into empowerment. The conversation also highlights the significance of Vijayadashami and the role of fasting in reminding us of mortality.",
+        "url": "https://www.youtube.com/watch?v=ac4264G0gk4",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-21T00:00:00.000Z",
+        "date": "2026-09-24",
+        "durationSec": 641,
+        "processedAt": "2026-09-23T16:46:14.369Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Power, knowledge, wealth are both gifts and poisons",
+            "idea": "Sadhguru says that power, knowledge and wealth can be great possibilities but also great poisons; when treated as personal possessions they become sources of ignorance and enslavement.",
+            "why": "It warns that seeking external success without inner awareness can trap you, challenging the common belief that wealth, power and knowledge are unconditionally beneficial.",
+            "action": "Reflect on how you relate to your achievements and ask whether you treat them as personal trophies or as tools for larger good.",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"Power, knowledge, and wealth, all of them are great possibilities, and they're also great poisons.\"",
+            "t": 92,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.88,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Hold wealth, power, knowledge in trust for others",
+            "idea": "He advises that if you hold these assets in trust for larger well‑being rather than as personal gain, they become a tremendous empowerment.",
+            "why": "Reframes material assets as responsibilities, offering a practical mindset shift that counters ego‑centric accumulation.",
+            "action": "When making decisions about money or influence, ask: who benefits beyond me?",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"If you hold it in trust for larger well‑being, then it's a tremendous empowerment.\"",
+            "t": 318,
+            "kind": "said",
+            "confidence": 0.88,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Navaratri’s three sets of three nights map to power, knowledge, wealth",
+            "idea": "Sadhguru explains that Navaratri is organized into three groups of three nights, each honoring a Devi—Durga, Saraswati, Lakshmi—representing power, knowledge, and wealth respectively.",
+            "why": "Shows the festival’s structure as a symbolic journey through the three fundamental human drives, giving cultural practice a clear conceptual framework.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"Three into three. So, three forms of Devi, each one three nights. Durga… Saraswati and Lakshmi. These three Devis represent three fundamental qualities. Power, knowledge, and wealth.\"",
+            "t": 67,
+            "kind": "said",
+            "confidence": 0.87,
+            "grounding": 0.63,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Vijayadashami celebrates transcending material gains",
+            "idea": "He states that the victory celebrated on Vijayadashami is not about acquiring wealth, knowledge or power, but about realizing one is above them.",
+            "why": "Counters the narrative that success is measured by material accumulation, highlighting spiritual triumph as the true victory.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"Victory is not because you got wealth, not because you got knowledge, not because you got power.\"",
+            "t": 568,
+            "kind": "said",
+            "confidence": 0.86,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 5,
+            "headline": "Fasting during Navaratri reminds us of mortality",
+            "idea": "He notes that fasting makes one acutely aware of being mortal, reinforcing presence and appreciation of life.",
+            "why": "Links a concrete practice to a deeper existential insight, showing how ritual can cultivate mindfulness about life's impermanence.",
+            "action": "Try a short fast or mindful pause each day to notice bodily sensations and the fleeting nature of experience.",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"When you fast, you're very aware that you are mortal.\"",
+            "t": 633,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 100
+      }
     },
     "desk-d4ad3375ff5b": {
       "status": "NEEDS_REVIEW",
@@ -22640,7 +22766,8 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:56:44.384Z",
       "updatedAt": "2026-09-22T22:47:51.428Z",
-      "reason": "only 5 learnings survived validation (floor is 6)"
+      "reason": "only 5 learnings survived validation (floor is 6)",
+      "learningsFound": 5
     },
     "desk-1a8a9df81ccc": {
       "status": "FAILED",
@@ -22733,11 +22860,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:41.939Z",
-      "updatedAt": "2026-09-23T00:44:44.148Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] p4qPp_3_f2Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:43:54.606Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-e09ddcc9c437": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "If You Were PM For 5 Years, What Would You Change?",
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=chOTpc907AE",
@@ -22745,11 +22872,12 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:44.156Z",
-      "updatedAt": "2026-09-23T00:44:59.106Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] chOTpc907AE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:43:54.706Z",
+      "reason": "fewer than half the learnings are quotable from the source",
+      "learningsFound": 6
     },
     "desk-cac4466bb21b": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "As Mamata Banerjee Loses the Twin Flowers Symbol, There Is Only One Winner",
       "show": "The Wire",
       "url": "https://www.youtube.com/watch?v=YoHZSe9kw0I",
@@ -22757,8 +22885,99 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:59.113Z",
-      "updatedAt": "2026-09-23T00:45:14.420Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] YoHZSe9kw0I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:45:01.865Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] YoHZSe9kw0I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+      "payload": {
+        "id": "desk-cac4466bb21b",
+        "sourceId": "desk",
+        "show": "The Wire",
+        "title": "As Mamata Banerjee Loses the Twin Flowers Symbol, There Is Only One Winner",
+        "guest": "",
+        "topics": [
+          "indian politics",
+          "election commission",
+          "party symbols",
+          "mamata banerjee",
+          "bjp"
+        ],
+        "summary": "This episode examines the recent controversy surrounding the loss of Mamata Banerjee's twin flowers election symbol, focusing on the Election Commission's split rule and its implications for party identity. It highlights how the symbol's reassignment is tied to the number of sitting MLAs, the strategic use of dormant parties by the BJP, and the timing of the decision relative to Prime Minister Modi's birthday, offering insight into the mechanics of Indian political maneuvering.",
+        "url": "https://www.youtube.com/watch?v=YoHZSe9kw0I",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-22T00:00:00.000Z",
+        "date": "2026-09-24",
+        "durationSec": 598,
+        "processedAt": "2026-09-23T16:45:01.865Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "EC’s split rule: symbol goes to side with most MLAs on counting day",
+            "idea": "The Election Commission resolves a party split by awarding the party symbol to whichever faction wins the count of MLAs on the day it takes the decision.",
+            "why": "This rule determines which faction retains the party’s brand, effectively turning legislative loyalty into the decisive factor in party identity during splits.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"The test is not limited to just the Trinamool, nor will it be in the future. In the last 4 years, this method has been tried three times on three different parties. And every time, the symbol ultimately ended up in the hands of the side that joined the ruling party.\"",
+            "t": 498,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.5,
+            "repaired": true
+          },
+          {
+            "rank": 2,
+            "headline": "Party identity now measured by MLA count, not ideology",
+            "idea": "A party’s legal identity has shrunk to the number of its elected legislators, making the symbol a prize tied to parliamentary strength.",
+            "why": "It shifts focus from policy platforms to raw numbers, meaning parties can be redefined simply by who can muster legislative support at a given moment.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"In India, the identity of a party is now shrinking down to a single test. That is, how many of its elected legislators can be persuaded to stand in the other camp on the day of the Election Commission's counting.\"",
+            "t": 498,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.53,
+            "repaired": true
+          },
+          {
+            "rank": 3,
+            "headline": "BJP used a dormant party as a vehicle for defectors",
+            "idea": "The BJP facilitated a group of defecting MPs by channeling them through an almost inactive registered party, avoiding the appearance of a third‑party move.",
+            "why": "Shows a tactical method to sidestep anti‑defection rules and conceal the true destination of defectors, impacting party dynamics.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"the BJP helped them find an obscure, almost inactive registered party through which this group could switch sides. It was not a real political destination, but just a vehicle to get them there.\"",
+            "t": 348,
+            "kind": "said",
+            "confidence": 0.88,
+            "grounding": 0.63,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Timing of symbol revocation matched PM Modi’s birthday",
+            "idea": "The Election Commission revoked Mamata’s symbol on the night of Prime Minister Modi’s birthday, raising questions about political timing.",
+            "why": "Suggests possible strategic timing to align a punitive action with a politically symbolic date, influencing public perception.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"This order came on September 17. The very same night that was Prime Minister Modi’s birthday.\"",
+            "t": 148,
+            "kind": "interpretation",
+            "confidence": 0.75,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 1,
+        "audio": null,
+        "readSeconds": 79
+      }
     },
     "desk-294ca4d41305": {
       "status": "FAILED",
@@ -22769,8 +22988,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:14.428Z",
-      "updatedAt": "2026-09-23T00:45:29.179Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] T87f6O9bH1Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:45:21.929Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d43b93b96d2e": {
       "status": "FAILED",
@@ -22781,8 +23000,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:29.186Z",
-      "updatedAt": "2026-09-23T00:45:44.105Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] Q_BzkN397aA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:45:37.278Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-3a5459c15cdf": {
       "status": "FAILED",
@@ -22793,8 +23012,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:44.114Z",
-      "updatedAt": "2026-09-23T00:45:59.131Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] Hm0WHmZbOIs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:45:57.592Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }
