@@ -857,6 +857,42 @@ group("public retention window");
   ok("only rows past the data window are dropped", dropped === 1 && !st.episodes.ancient, dropped);
 }
 
+/* ── PROVENANCE ──────────────────────────────────────────────────────────── */
+group("the artifact does not misreport how it was made");
+{
+  /* A --republish from a machine without the model key rewrote `extractor: ai`
+     to `extractor: local` over eleven episodes a model had actually read, and
+     disarmed the workflow's downgrade warning in the same move — it compares
+     that field across runs, so a real downgrade the next morning would have
+     looked like no change at all. The artifact is checked here rather than in
+     run.mjs because this is a claim the PAGE makes. */
+  const doc = JSON.parse(readFileSync(new URL("../../public/podcasts.json", import.meta.url).pathname, "utf8"));
+  const g = doc.generator || {};
+  ok("the artifact says what made it", Boolean(g.extractor), JSON.stringify(g));
+  ok("and counts its episodes by how each was made", g.episodes && typeof g.episodes === "object",
+    JSON.stringify(g.episodes));
+
+  const counted = Object.values(g.episodes || {}).reduce((a, b) => a + b, 0);
+  ok("the counts cover every published episode", counted === doc.episodes.length,
+    `${counted} counted vs ${doc.episodes.length} published`);
+
+  const actual = {};
+  for (const e of doc.episodes) { const k = e.extractor || "unknown"; actual[k] = (actual[k] || 0) + 1; }
+  const wrong = Object.entries(actual).filter(([k, v]) => (g.episodes || {})[k] !== v)
+    .map(([k, v]) => `${k}: claims ${(g.episodes || {})[k]} has ${v}`);
+  ok("and match the episodes themselves", wrong.length === 0, wrong.join("; "));
+
+  /* THE CLAIM THE FOOTER MAKES. "Nothing on this page is written by a machine"
+     is true of the free extractive path and false for a model-read episode,
+     whose summary paragraph is the model's prose. The points are verbatim
+     either way — that is checked before anything is printed — but a page about
+     provenance does not get to round the difference off. */
+  const page = readFileSync(new URL("../../public/podcasts.html", import.meta.url).pathname, "utf8");
+  ok("the page no longer states that claim unconditionally",
+    !/Nothing on this page is written by a machine\.\s*\n\s*<\/footer>/.test(page));
+  ok("it derives the claim from the counts instead", /function footerProvenance/.test(page));
+}
+
 /* ── NOTHING DISAPPEARS ──────────────────────────────────────────────────── */
 group("an episode we cannot read is still shown");
 {
