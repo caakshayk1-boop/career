@@ -21911,8 +21911,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-20T23:51:42.317Z",
-      "updatedAt": "2026-09-23T00:46:29.277Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] yJeX6UXP7xM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T16:57:44.162Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-4eb5f4de2aec": {
       "status": "PUBLISHED",
@@ -22526,7 +22526,7 @@
       }
     },
     "desk-fa113e6da7bb": {
-      "status": "NEEDS_REVIEW",
+      "status": "PUBLISHED",
       "title": "The Real Cost of Building a Life in America: Salary, Visas, Taxes & Trade-Offs | Khushi Jain | FWS",
       "show": "Finance With Sharan",
       "url": "https://www.youtube.com/watch?v=2FBiyidVdHE",
@@ -22534,9 +22534,114 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:01.325Z",
-      "updatedAt": "2026-09-21T22:46:22.376Z",
+      "updatedAt": "2026-09-23T16:57:45.127Z",
       "reason": "only 5 learnings survived validation (floor is 6)",
-      "learningsFound": 5
+      "learningsFound": 5,
+      "payload": {
+        "id": "desk-fa113e6da7bb",
+        "sourceId": "desk",
+        "show": "Finance With Sharan",
+        "title": "The Real Cost of Building a Life in America: Salary, Visas, Taxes & Trade-Offs | Khushi Jain | FWS",
+        "guest": "Khushi Jain",
+        "topics": [
+          "salary",
+          "visas",
+          "taxes",
+          "cost of living"
+        ],
+        "summary": "In this episode, Khushi Jain discusses the practical financial realities of building a life in the United States, covering the salary needed for a comfortable lifestyle, visa-related benefits, and tax strategies. She shares personal tactics for optimizing retirement accounts and leveraging spousal visa status to reduce healthcare costs, offering listeners actionable insights into navigating the American financial landscape.",
+        "url": "https://www.youtube.com/watch?v=2FBiyidVdHE",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-20T00:00:00.000Z",
+        "date": "2026-09-24",
+        "durationSec": 1717,
+        "processedAt": "2026-09-23T16:57:45.126Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Need $100k salary to live comfortably in NYC",
+            "idea": "Khushi says you need to earn about $100,000 a year (≈2 crore rupees) to cover typical New York City living expenses.",
+            "why": "It quantifies the income gap for immigrants, showing that many visas and job offers are far below the true cost of a decent lifestyle in major US cities.",
+            "action": "Calculate your own city‑specific cost of living and compare it to any job offer before accepting.",
+            "detail": "",
+            "passage": "",
+            "evidence": "…you need to earn at least 200k per year to be comfortable…you need to have a 2 cr salary else you're toast.",
+            "t": 1007,
+            "kind": "said",
+            "confidence": 0.88,
+            "grounding": 0.92,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Higher income fuels lifestyle inflation",
+            "idea": "Khushi observes that when you earn more you tend to spend more, turning higher income into higher expenses.",
+            "why": "It challenges the assumption that a raise automatically improves savings, prompting listeners to guard against creeping expenses.",
+            "action": "Set a fixed percentage of any raise to go straight into savings or investments.",
+            "detail": "",
+            "passage": "",
+            "evidence": "…when you are earning more…you end up spending more too, right? Like your expenses become part of your lifestyle inflation.",
+            "t": 1027,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.63,
+            "repaired": true
+          },
+          {
+            "rank": 3,
+            "headline": "Backdoor Roth IRA for high earners",
+            "idea": "Khushi maximizes her 401(k) and then uses a backdoor Roth IRA to get Roth benefits despite exceeding the income limit.",
+            "why": "Provides a concrete, tax‑advantaged saving route for high‑income earners who think Roth contributions are off‑limits.",
+            "action": "If your income exceeds the Roth IRA limit, open a nondeductible traditional IRA and convert it to a Roth each year.",
+            "detail": "",
+            "passage": "",
+            "evidence": "…we max out our 401ks…and then the third thing that we do is a backdoor Roth IRA.",
+            "t": 1182,
+            "kind": "said",
+            "confidence": 0.86,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Spousal status unlocks employer health coverage",
+            "idea": "By being on a spouse visa, Khushi can join her husband’s employer health plan, dropping her personal premium from $250 to essentially free coverage.",
+            "why": "Highlights a low‑cost strategy for immigrants to reduce a major expense that many overlook when budgeting for the US.",
+            "action": "If married, investigate whether your partner’s employer offers dependent coverage and add yourself during open enrollment.",
+            "detail": "",
+            "passage": "",
+            "evidence": "…I’m on a spouse status, I can get benefits from him…my insurance would have…gone been gone. But thankfully now I can be on a spouse status…",
+            "t": 1340,
+            "kind": "said",
+            "confidence": 0.82,
+            "grounding": 0.75,
+            "repaired": false
+          },
+          {
+            "rank": 5,
+            "headline": "US wedding content can be delivered in hours",
+            "idea": "Hiring local creators through Preserve can produce raw and edited wedding footage within hours, whereas traditional photographers take months.",
+            "why": "Shows a disruptive service model that dramatically cuts turnaround time and can save couples both time and money.",
+            "action": "For upcoming events, explore platforms that connect you with local video creators for rapid content delivery.",
+            "detail": "",
+            "passage": "",
+            "evidence": "…within hours I had everything all raw footage within hours…professional photographers and videographers take months to give you content…",
+            "t": 1572,
+            "kind": "said",
+            "confidence": 0.79,
+            "grounding": 0.8,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 102
+      }
     },
     "desk-f60380a60b7f": {
       "status": "NEEDS_REVIEW",
@@ -22610,7 +22715,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-23T16:46:13.442Z",
+      "updatedAt": "2026-09-23T16:57:29.437Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     "desk-d7e5576be53e": {
@@ -22860,7 +22965,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:41.939Z",
-      "updatedAt": "2026-09-23T16:43:54.606Z",
+      "updatedAt": "2026-09-23T16:56:23.408Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-e09ddcc9c437": {
@@ -22872,7 +22977,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:44.156Z",
-      "updatedAt": "2026-09-23T16:43:54.706Z",
+      "updatedAt": "2026-09-23T16:56:23.507Z",
       "reason": "fewer than half the learnings are quotable from the source",
       "learningsFound": 6
     },
@@ -22988,7 +23093,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:14.428Z",
-      "updatedAt": "2026-09-23T16:45:21.929Z",
+      "updatedAt": "2026-09-23T16:56:44.115Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d43b93b96d2e": {
@@ -23000,7 +23105,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:29.186Z",
-      "updatedAt": "2026-09-23T16:45:37.278Z",
+      "updatedAt": "2026-09-23T16:56:59.619Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-3a5459c15cdf": {
@@ -23012,7 +23117,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:44.114Z",
-      "updatedAt": "2026-09-23T16:45:57.592Z",
+      "updatedAt": "2026-09-23T16:57:14.368Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
