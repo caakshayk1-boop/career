@@ -95,8 +95,15 @@ export const cfg = {
    *
    * The floor exists to reject an episode with nothing to say, not to reject a
    * short one that says a few things well. A 12-minute Warikoo clip cleared 20
-   * points on this same extractor, so length was never the discriminator. */
-  minLearnings: int(process.env.MIN_LEARNINGS, 6),
+   * points on this same extractor, so length was never the discriminator.
+   *
+   * 6 -> 4, MEASURED. 21 episodes were fetched, transcribed and extracted
+   * successfully and then discarded by this number alone: the counts were
+   * 1,2,2,3,3,3,3,4,4,4,4,4,4,5,5,5,5,5,5,5,5. A floor of 4 releases 14 of
+   * them; 3 would release 18 but starts admitting the 1- and 2-point rows,
+   * which are clip uploads and lecture recordings rather than conversations.
+   * Four cited, verbatim points is a thin episode. Zero is a missing one. */
+  minLearnings: int(process.env.MIN_LEARNINGS, 4),
 
   /* ── EXTRACTOR ──────────────────────────────────────────────────────────
      "local"  sentences chosen from the transcript by information density.

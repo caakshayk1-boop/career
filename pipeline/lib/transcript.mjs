@@ -227,6 +227,15 @@ const PROVIDERS = {
           ...ytdlpCookieArgs(),
           "--skip-download", "--write-auto-subs", "--write-subs",
           "--sub-langs", "en.*", "--sub-format", "json3",
+          /* THE GATE SPACES INVOCATIONS. THIS SPACES THE REQUESTS INSIDE ONE.
+             Five failures since 20 Sep read "Unable to download video subtitles
+             for 'en': HTTP Error 429" — the metadata call succeeded and the
+             subtitle fetch immediately after it did not, inside a single
+             yt-dlp run that ytdlpGate had already spaced by 15s. A gap between
+             invocations cannot help with that; only yt-dlp's own pacing can.
+             --retry-sleep makes its internal retry patient instead of
+             immediate, which is what turns a 429 into a transcript. */
+          "--sleep-requests", "2", "--retry-sleep", "exp=5:60", "--retries", "5",
           "--no-warnings", "--no-progress",
           "-o", join(dir, "cap"),
           `https://www.youtube.com/watch?v=${ep.ytId}`,
