@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Podcast Intelligence — The Campaign</title>
-<meta name="description" content="The ten things worth knowing from the long-form conversations of the last seven days.">
+<meta name="description" content="The ten things worth knowing from the long-form conversations of the last 30 days.">
 <meta name="robots" content="noindex,nofollow">
 <meta name="theme-color" content="#0B0F14">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>◆</text></svg>">
@@ -151,7 +151,7 @@ main{padding:clamp(22px,4vw,38px) 0 120px;min-width:0}
 .dsum{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--r-3) var(--r-3) 0;
   padding:15px 17px;margin:0 0 clamp(20px,3vw,26px);font-size:var(--t-6);line-height:1.62;color:var(--text);max-width:var(--measure)}
 
-/* Audio. preload="none" is deliberate — seven days of briefings would otherwise
+/* Audio. preload="none" is deliberate — a month of briefings would otherwise
    pull several megabytes on a page load where most visits play nothing. */
 .player{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
   padding:14px 16px;margin-bottom:clamp(22px,3vw,30px)}
@@ -309,7 +309,7 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
 
 <footer class="foot-p">
   Podcast Intelligence · career.askakshay.com · a private working surface, not published.<br>
-  Rebuilt every morning from published transcripts and caption tracks. Only the last seven days
+  Rebuilt every morning from published transcripts and caption tracks. Roughly the last 30 days
   are kept — older editions are removed, not archived.<br>
   Every point is a sentence taken verbatim from the conversation, at the moment it was said.
   Nothing on this page is written by a machine.
@@ -435,7 +435,7 @@ function renderIndex(doc){
   document.getElementById("phTitle").textContent =
     count === 1 ? "One conversation worth your time" : count + " conversations worth your time";
   document.getElementById("phLede").textContent =
-    learnings + " points from the last " + (doc.retentionDays || 7) + " days. Each one is a sentence somebody " +
+    learnings + " points from the last " + windowDays(doc) + " days. Each one is a sentence somebody " +
     "actually said, at the moment they said it — open any of them to read it back in context. Nothing older is kept.";
 
   /* The claim the page has to make good on, stated as a number: this many hours
@@ -446,7 +446,12 @@ function renderIndex(doc){
     (heard ? '<span class="pill">from ' + dur(heard) + " of conversation</span>" : "") +
     (withAudio ? '<span class="pill">' + withAudio + " audio briefing" + (withAudio > 1 ? "s" : "") + "</span>" : "") +
     ((doc.pending || []).length ? '<span class="pill">' + doc.pending.length + " listed, not read</span>" : "") +
-    '<span class="pill">' + (doc.retentionDays || 7) + "-day window</span>" +
+    '<span class="pill">' + windowDays(doc) + "-day window</span>" +
+    /* When the episode ceiling has bitten, the window on the page is shorter
+       than the window that was configured. Saying "30-day window" over 20 days
+       of episodes is the page lying about itself, so it says both. */
+    (doc.trimmedForSize ? '<span class="pill">' + doc.trimmedForSize +
+      " older trimmed to keep the page loadable</span>" : "") +
     (doc.generatedAt ? '<span class="pill">built ' + esc(new Date(doc.generatedAt)
       .toLocaleString("en-GB",{timeZone:MYT,day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})) + " MYT</span>" : "");
 
@@ -575,6 +580,12 @@ function epCard(e){
 }
 
 /* ── RENDER: DETAIL ────────────────────────────────────────────────────── */
+/* The window the page can honestly claim. doc.retentionDays is the EFFECTIVE
+   window — the builder narrows it when the episode ceiling trimmed the tail —
+   while doc.retentionConfigured is the setting. Always show the effective one.
+   The 30 is only for an artifact written before this field existed. */
+function windowDays(doc){ return doc.retentionDays || doc.retentionConfigured || 30; }
+
 function renderDetail(doc, id){
   const e = (doc.episodes || []).find(x => x.id === id);
   const view = document.getElementById("viewDetail");
@@ -583,7 +594,7 @@ function renderDetail(doc, id){
        a bug, and this is the product working as designed. */
     view.innerHTML = '<button class="back" id="back" type="button">&larr; All conversations</button>' +
       '<div class="empty"><b>That conversation is no longer here.</b>' +
-      "Only the last " + (doc.retentionDays || 7) + " days are kept. It has not been archived.</div>";
+      "Only the last " + windowDays(doc) + " days are kept. It has not been archived.</div>";
     return;
   }
 

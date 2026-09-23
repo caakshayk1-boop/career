@@ -36,7 +36,7 @@ const { items, tag, attr, durationSeconds, stripHtml } = await import("../lib/xm
 const { chunk, stripNoise, hhmmss } = await import("../lib/chunk.mjs");
 const { takeaways, sentences, findHost, pill, passageAt } = await import("../lib/extractive.mjs");
 const { validateLearnings, verdict, parseTs } = await import("../lib/validate.mjs");
-const { buildPublic, buildPending, mergePending, pruneState } = await import("../lib/retention.mjs");
+const { buildPublic, buildPending, mergePending, carryPending, pruneState } = await import("../lib/retention.mjs");
 const { extract, extractLocal } = await import("../lib/extract.mjs");
 const { makeAI, salvageToolArguments } = await import("../lib/ai.mjs");
 const { makeAudio, splitScript, durationFromBytes } = await import("../lib/audio.mjs");
@@ -105,7 +105,7 @@ group("eligibility and cost control");
   const mk = (o) => ({ id: o.id, title: o.id, audioUrl: "https://a/x.mp3", transcriptUrl: "https://a/x.vtt",
     durationSec: 3600, publishedAt: new Date(now - (o.ageH ?? 1) * 3600000).toISOString(), ...o });
   const cands = [
-    mk({ id: "fresh" }), mk({ id: "old", ageH: 400 }), mk({ id: "short", durationSec: 300 }),
+    mk({ id: "fresh" }), mk({ id: "old", ageH: cfg.maxLookbackHours + 24 }), mk({ id: "short", durationSec: 300 }),
     mk({ id: "epic", durationSec: 60 * 60 * 9 }), mk({ id: "nomedia", audioUrl: "", transcriptUrl: "", ytId: "" }),
     mk({ id: "nodate", publishedAt: "" }), mk({ id: "fresh2", ageH: 2 }), mk({ id: "fresh3", ageH: 3 }),
     mk({ id: "fresh4", ageH: 4 }),
@@ -185,24 +185,65 @@ A different speaker entirely, much later on.
     parseJsonTranscript(JSON.stringify({ wat: 1 })).length === 0);
 }
 
-group("the default cap agrees with itself");
+group("every default agrees with itself");
 {
   /* A default duplicated in config.mjs and in the workflow YAML is a default
      that will disagree with itself: the workflow's literal said '2' while the
      config said 12, and 16 of 20 desk episodes were held back as "over the
-     2/day cap" on a run meant to process all of them. */
-  const yml = readFileSync(new URL("../../.github/workflows/podcasts.yml", import.meta.url).pathname, "utf8");
-  const m = yml.match(/MAX_DAILY_EPISODES:\s*\$\{\{\s*vars\.MAX_DAILY_EPISODES\s*\|\|\s*'(\d+)'/);
-  ok("the workflow fallback matches the config default",
-    m && Number(m[1]) === cfg.maxDailyEpisodes, m ? `${m[1]} vs ${cfg.maxDailyEpisodes}` : "not found");
+     2/day cap" on a run meant to process all of them.
 
-  const ymlMin = yml.match(/MIN_LEARNINGS:\s*\$\{\{\s*vars\.MIN_LEARNINGS\s*\|\|\s*'(\d+)'/);
-  ok("and so does the points floor",
-    ymlMin && Number(ymlMin[1]) === cfg.minLearnings, ymlMin ? `${ymlMin[1]} vs ${cfg.minLearnings}` : "not found");
+     This used to be three hand-written checks for the three knobs somebody
+     remembered, which is why PUBLIC_RETENTION_DAYS sat un-asserted and
+     unnoticed. It is now derived: every numeric fallback in the workflow is
+     matched against config.mjs's own default for the same variable, so a knob
+     added tomorrow is covered the day it is added. */
+  const here = (rel) => readFileSync(new URL(rel, import.meta.url).pathname, "utf8");
+  const yml = here("../../.github/workflows/podcasts.yml");
+  const src = here("../config.mjs");
 
-  const ymlMax = yml.match(/TARGET_LEARNINGS:\s*\$\{\{\s*vars\.TARGET_LEARNINGS\s*\|\|\s*'(\d+)'/);
-  ok("and the ceiling",
-    ymlMax && Number(ymlMax[1]) === cfg.targetLearnings, ymlMax ? `${ymlMax[1]} vs ${cfg.targetLearnings}` : "not found");
+  const defaults = new Map();
+  for (const m of src.matchAll(/int\(process\.env\.([A-Z0-9_]+),\s*(\d+)\)/g)) defaults.set(m[1], Number(m[2]));
+  const fallbacks = [...yml.matchAll(/([A-Z0-9_]+):\s*\$\{\{\s*vars\.\1\s*\|\|\s*'(\d+)'/g)]
+    .map((m) => [m[1], Number(m[2])]);
+
+  ok("the workflow pins numeric knobs at all", fallbacks.length >= 6, fallbacks.length);
+  const drift = fallbacks
+    .filter(([k]) => defaults.has(k))
+    .filter(([k, v]) => defaults.get(k) !== v)
+    .map(([k, v]) => `${k}: yml ${v} vs config ${defaults.get(k)}`);
+  ok("every workflow fallback matches the config default", drift.length === 0, drift.join("; "));
+
+  /* And the reverse direction: a fallback naming a variable config never reads
+     is a knob that does nothing, which is worse than no knob — it reads as
+     configured. */
+  const orphans = fallbacks.map(([k]) => k)
+    .filter((k) => !new RegExp(`process\\.env\\.${k}\\b`).test(src));
+  ok("and no fallback names a variable the config never reads", orphans.length === 0, orphans.join(","));
+
+  /* The README table is a THIRD copy of the same defaults, and it had drifted
+     on three rows (12 vs 8, 10 vs 6, 192 vs 744) while the two code copies
+     agreed. Documentation that lies is worse than none: it is what somebody
+     reads before deciding not to set a variable. */
+  const doc = here("../README.md");
+  const rows = [...doc.matchAll(/\|\s*`([A-Z0-9_]+)`\s*\|\s*`(\d+)`\s*\|/g)].map((m) => [m[1], Number(m[2])]);
+  ok("the README documents the knobs", rows.length >= 6, rows.length);
+  const docDrift = rows.filter(([k]) => defaults.has(k)).filter(([k, v]) => defaults.get(k) !== v)
+    .map(([k, v]) => `${k}: README ${v} vs config ${defaults.get(k)}`);
+  ok("and every documented default is the real one", docDrift.length === 0, docDrift.join("; "));
+
+  /* THE WINDOW AND THE RETRY BUDGET MOVE TOGETHER. A 30-day public window is
+     only worth having if an episode stays eligible long enough to be retried
+     into it: YouTube refused eight episodes on the days they aired and the
+     same episodes read fine later. Lookback shorter than retention means the
+     page has room the pipeline is no longer allowed to fill. */
+  ok("eligibility outlasts the public window",
+    cfg.maxLookbackHours >= cfg.publicRetentionDays * 24,
+    `${cfg.maxLookbackHours}h vs ${cfg.publicRetentionDays * 24}h`);
+
+  /* And the ceiling has to be reachable, or the window is decorative. */
+  ok("the episode ceiling can hold a full window at the daily cap",
+    cfg.maxPublicEpisodes >= cfg.publicRetentionDays,
+    `${cfg.maxPublicEpisodes} slots for ${cfg.publicRetentionDays} days`);
 }
 
 group("youtube caption XML");
@@ -760,33 +801,59 @@ group("retry and timeout");
 }
 
 /* ── RETENTION ───────────────────────────────────────────────────────────── */
-group("7-day retention");
+group("public retention window");
 {
   const today = mytDate();
   const dayAgo = (n) => { const d = new Date(Date.parse(today + "T00:00:00Z") - n * 86400000); return d.toISOString().slice(0, 10); };
-  const eps = [0, 1, 2, 6, 7, 20].map((n) => ({ id: `e${n}`, status: "PUBLISHED", date: dayAgo(n), publishedAt: dayAgo(n) + "T06:00:00Z" }));
+  /* Window-RELATIVE, not 7. An earlier version hardcoded the days the default
+     happened to use, so widening the window broke four tests that were only
+     ever asserting the default back to itself. The rule under test is "inside
+     the window stays, outside falls off" — it must hold at any width. */
+  const R = cfg.publicRetentionDays;
+  const inside = [0, 1, 2, R - 1];
+  const outside = [R, R + 13];
+  const eps = [...inside, ...outside].map((n) => ({ id: `e${n}`, status: "PUBLISHED", date: dayAgo(n), publishedAt: dayAgo(n) + "T06:00:00Z" }));
   eps.push({ id: "held", status: "NEEDS_REVIEW", date: today });
 
   const doc = buildPublic(eps);
   const ids = doc.episodes.map((e) => e.id);
-  ok("exactly the last 7 days are published", eq(ids, ["e0", "e1", "e2", "e6"]), ids.join(","));
-  ok("day 7 has fallen off", !ids.includes("e7"));
+  ok("exactly the configured window is published", eq(ids, inside.map((n) => `e${n}`)), ids.join(","));
+  ok("the day past the window has fallen off", !ids.includes(`e${R}`));
   ok("an episode held for review is never published", !ids.includes("held"));
   ok("today is labelled Today and yesterday Yesterday",
     doc.days[0].label === "Today" && doc.days[1].label === "Yesterday", doc.days.map((d) => d.label).join(","));
   ok("older days get a weekday name", /^[A-Z][a-z]+day$/.test(doc.days[3].label), doc.days[3].label);
-  ok("empty days are omitted entirely", doc.days.length === 4, doc.days.length);
+  ok("empty days are omitted entirely", doc.days.length === inside.length, doc.days.length);
   ok("the artifact declares its own retention window", doc.retentionDays === cfg.publicRetentionDays);
+  ok("and says so was not trimmed", doc.trimmedForSize === 0, doc.trimmedForSize);
+
+  /* THE EPISODE CEILING. A 30-day window on a good week is 60+ episodes and a
+     page nobody can load. When the ceiling binds, the page must drop the
+     OLDEST and then say what window it is actually showing — advertising 30
+     days while serving 20 is the page lying about itself. */
+  {
+    const realCap = cfg.maxPublicEpisodes;
+    cfg.maxPublicEpisodes = 3;
+    const many = [0, 1, 2, 3, 4].map((n) => ({ id: `c${n}`, status: "PUBLISHED", date: dayAgo(n), publishedAt: dayAgo(n) + "T06:00:00Z" }));
+    const capped = buildPublic(many);
+    ok("the ceiling is enforced", capped.episodes.length === 3, capped.episodes.length);
+    ok("and it drops the oldest, not the newest",
+      eq(capped.episodes.map((e) => e.id), ["c0", "c1", "c2"]), capped.episodes.map((e) => e.id).join(","));
+    ok("the page reports the window it is actually showing", capped.retentionDays === 3, capped.retentionDays);
+    ok("while still reporting what was configured", capped.retentionConfigured === cfg.publicRetentionDays);
+    ok("and how many it dropped for size", capped.trimmedForSize === 2, capped.trimmedForSize);
+    cfg.maxPublicEpisodes = realCap;
+  }
 
   /* Retention must NOT prune the ledger on the public clock, or the job re-buys
-     its own back catalogue every week. */
+     its own back catalogue every time the window turns over. */
   const st = { episodes: {
     recent: { seenAt: today + "T00:00:00Z" },
-    lastMonth: { seenAt: dayAgo(30) + "T00:00:00Z" },
-    ancient: { seenAt: dayAgo(500) + "T00:00:00Z" },
+    justPast: { seenAt: dayAgo(R + 1) + "T00:00:00Z" },
+    ancient: { seenAt: dayAgo(cfg.dataRetentionDays + 100) + "T00:00:00Z" },
   } };
   const dropped = pruneState(st);
-  ok("a month-old ledger row survives the 7-day public window", Boolean(st.episodes.lastMonth), "reprocessing risk");
+  ok("a ledger row just past the public window survives", Boolean(st.episodes.justPast), "reprocessing risk");
   ok("only rows past the data window are dropped", dropped === 1 && !st.episodes.ancient, dropped);
 }
 
@@ -822,10 +889,34 @@ group("an episode we cannot read is still shown");
 
   /* Pending is subject to the same public window as everything else — it is a
      list of what is current, not an ever-growing graveyard. */
-  const old = { ...unreadable, id: "ancient", publishedAt: new Date(Date.now() - 30 * 86400000).toISOString() };
+  const old = { ...unreadable, id: "ancient",
+    publishedAt: new Date(Date.now() - (cfg.publicRetentionDays + 5) * 86400000).toISOString() };
   const stale = buildPending([{ id: "ancient", pending: true, reason: "r", episode: old }]);
   ok("but not past the retention window", stale.length === 0, stale.length);
   cfg.deepgramKey = key;
+
+  /* REBUILDING IS NOT REDISCOVERING. `--republish` rebuilds the artifact from
+     the ledger with no discovery, so it has no pending list — and the first
+     version wrote one anyway, emptying the block and deleting all twelve
+     "listed, not read" rows from the live page. Pending episodes are
+     deliberately absent from the ledger, so the previous artifact is the only
+     place they exist and the only place a rebuild can get them back. */
+  {
+    const today = mytDate();
+    const dayAgo = (n) => new Date(Date.parse(today + "T00:00:00Z") - n * 86400000).toISOString().slice(0, 10);
+    const prev = { pending: [
+      { id: "p1", title: "Still current", date: dayAgo(1) },
+      { id: "p2", title: "Also current", date: today },
+      { id: "p3", title: "Aged out", date: dayAgo(cfg.publicRetentionDays + 2) },
+      { id: "", title: "Malformed", date: today },
+    ] };
+    const carried = carryPending(prev);
+    ok("a rebuild carries the pending rows forward", carried.length === 2, carried.length);
+    ok("and ages out the ones past the window", !carried.some((p) => p.id === "p3"));
+    ok("and drops malformed rows rather than rendering them", !carried.some((p) => !p.id));
+    ok("a rebuild with no previous artifact is not an error", carryPending(null).length === 0);
+    ok("nor is one that published no pending block", carryPending({ episodes: [] }).length === 0);
+  }
 
   /* A pending episode must NOT be written off in the ledger: configuring paid
      transcription later should pick it up rather than skip it forever. */

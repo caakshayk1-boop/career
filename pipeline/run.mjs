@@ -18,6 +18,7 @@
  * exits non-zero only if it could not publish at all — a partially successful
  * morning is a normal morning.
  */
+import { existsSync, readFileSync } from "node:fs";
 import { cfg, loadSources, mytDate } from "./config.mjs";
 import { log, run, finishRun, charge } from "./lib/log.mjs";
 import { loadState, saveState, remember, isSettled, cached, pruneCache, savePublished } from "./lib/store.mjs";
@@ -27,7 +28,7 @@ import { extract, extractLocal, meta, script } from "./lib/extract.mjs";
 import { validateLearnings, verdict } from "./lib/validate.mjs";
 import { makeAI, estimateCost } from "./lib/ai.mjs";
 import { makeAudio } from "./lib/audio.mjs";
-import { buildPublic, buildPending, mergePending, pruneState } from "./lib/retention.mjs";
+import { buildPublic, buildPending, mergePending, carryPending, pruneState } from "./lib/retention.mjs";
 
 const argv = new Set(process.argv.slice(2));
 const REPUBLISH_ONLY = argv.has("--republish");
@@ -47,6 +48,13 @@ const S = {
 
 let pending = [];
 
+/** Read the artifact the last run published, if there is one. */
+function previousDoc() {
+  const path = new URL("../public/podcasts.json", import.meta.url).pathname;
+  if (!existsSync(path)) return null;
+  try { return JSON.parse(readFileSync(path, "utf8")); } catch { return null; }
+}
+
 async function main() {
   const state = loadState();
   const LOCAL = cfg.extractor === "local";
@@ -56,6 +64,14 @@ async function main() {
   const audio = makeAudio();
   log.stage("start", `extractor=${cfg.extractor}${ai ? ` (${ai.name}:${ai.model})` : " — no model, no cost"}` +
     ` tts=${audio.name} points=${cfg.minLearnings}-${cfg.targetLearnings} retention=${cfg.publicRetentionDays}d${cfg.dryRun ? " DRY-RUN" : ""}`);
+
+  /* --republish rebuilds the artifact from the ledger WITHOUT discovery, so it
+     has no pending list of its own. Writing one anyway publishes an empty
+     block and deletes every "listed, not read" row from the page — the exact
+     shape of the regression that removed the reader's own podcast list the
+     first time. A rebuild is not a re-discovery: carry forward what the last
+     real run found, and let the retention filter age it out normally. */
+  if (REPUBLISH_ONLY) pending = carryPending(previousDoc());
 
   if (!REPUBLISH_ONLY) {
     const sources = loadSources();

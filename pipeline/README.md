@@ -93,7 +93,7 @@ lists is either:
 
 Pending is not a terminal state: it is not written to the ledger, so configuring
 a transcription key later picks those episodes up rather than skipping them
-forever. It is subject to the same 7-day window as everything else, so it is a
+forever. It is subject to the same public window as everything else, so it is a
 list of what is current and not a graveyard.
 
 **Three things that used to delete an episode now list it instead:**
@@ -229,13 +229,14 @@ pipeline runs to completion with all of them unset.**
 | Variable | Default | What it does |
 |---|---|---|
 | `EXTRACTOR` | `local` | `local` = free, verbatim, no model. `ai` = the five-pass model pipeline. |
-| `MAX_DAILY_EPISODES` | `12` | hard cap per run — the desk feed is a curated list and the reader expects all of it |
-| `MIN_LEARNINGS` | `10` | floor — below this the episode is held, not published |
+| `MAX_DAILY_EPISODES` | `8` | hard cap per run — the desk feed is a curated list and the reader expects all of it |
+| `MIN_LEARNINGS` | `6` | floor — below this the episode is held, not published |
 | `TARGET_LEARNINGS` | `20` | ceiling |
 | `MAX_EPISODE_MINUTES` | `240` | skip anything longer |
 | `MIN_EPISODE_MINUTES` | `20` | skip anything shorter |
-| `MAX_LOOKBACK_HOURS` | `192` | ignore anything older — 8 days, one more than the public window |
-| `PUBLIC_RETENTION_DAYS` | `7` | how long an episode is on the page |
+| `MAX_LOOKBACK_HOURS` | `744` | ignore anything older — 31 days, one more than the public window |
+| `PUBLIC_RETENTION_DAYS` | `30` | how long an episode is on the page |
+| `MAX_PUBLIC_EPISODES` | `60` | ceiling on the page regardless of the window |
 | `DATA_RETENTION_DAYS` | `400` | how long we remember it existed |
 | `TRANSCRIPT_PROVIDER` | `auto` | `published` / `youtube` / `deepgram` / `fixture` |
 | `FIXTURE_TRANSCRIPT` | — | a JSON segments file, to rehearse a run offline |
@@ -250,8 +251,24 @@ Everything below is **off** and costs money when switched on:
 
 `PUBLIC_RETENTION_DAYS` and `DATA_RETENTION_DAYS` are separate on purpose. If
 the ledger were pruned on the public clock, the job would rediscover the whole
-back catalogue on day eight and reprocess it — a site that deletes its content
-weekly would re-buy it weekly.
+back catalogue the day after it expired and reprocess it — a site that deletes
+its own content monthly would re-buy it monthly.
+
+**Why the window is 30 days and not a week.** The page was draining. Eight
+episodes were read off YouTube between 17–22 Sep and nothing since, because
+caption access from a datacentre IP is closed by policy — so a 7-day window
+meant those eight aged off the page one by one with no replacements, and the
+page emptied itself. Widening the window does two things at once: it keeps what
+was already read visible for a month, and — because `MAX_LOOKBACK_HOURS` moves
+with it — it gives an episode that was refused on the day it aired roughly 30
+daily retry attempts instead of 8. The block has not been constant, so the
+backlog is picked up automatically whenever it lifts, at no cost.
+
+`MAX_PUBLIC_EPISODES` bounds what that costs the reader: 30 days at the daily
+cap is a page nobody can load, so when the ceiling binds the oldest are dropped
+and the artifact reports the window it is *actually* showing
+(`retentionDays`) alongside the one that was configured
+(`retentionConfigured`). The page prints the first.
 
 ### Audio is not in git
 ### Audio is not in git
