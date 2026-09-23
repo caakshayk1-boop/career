@@ -55,6 +55,31 @@ function previousDoc() {
   try { return JSON.parse(readFileSync(path, "utf8")); } catch { return null; }
 }
 
+/** WHAT MADE THE CONTENT, which is not the same as what this run was configured
+ *  with. Two ways this block used to lie:
+ *
+ *  1. A run that processed NOTHING still stamped its own configuration on the
+ *     artifact. A --republish from a machine without GROQ_API_KEY rewrote
+ *     `extractor: ai` to `extractor: local` over eleven episodes a model had
+ *     actually read, and disarmed the workflow's downgrade warning in the same
+ *     move — it compares this field across runs, so a genuine downgrade the
+ *     next morning would have looked like no change at all.
+ *  2. One value cannot describe a page whose episodes were made different
+ *     ways. The 30-day window spans both paths, so the counts are published
+ *     alongside it and the page reads those rather than the single value.
+ */
+function generator(published, ai, audio, prev) {
+  const episodes = {};
+  for (const e of published) { const k = e.extractor || "unknown"; episodes[k] = (episodes[k] || 0) + 1; }
+  const thisRun = {
+    processingVersion: cfg.processingVersion, promptVersion: cfg.promptVersion,
+    extractor: cfg.extractor, ai: ai ? `${ai.name}:${ai.model}` : "none", tts: audio.name,
+  };
+  const carried = run.counts.processed === 0 && prev && prev.generator ? prev.generator : thisRun;
+  const { episodes: _drop, ...base } = carried;
+  return { ...base, episodes };
+}
+
 async function main() {
   const state = loadState();
   const LOCAL = cfg.extractor === "local";
@@ -71,7 +96,8 @@ async function main() {
      shape of the regression that removed the reader's own podcast list the
      first time. A rebuild is not a re-discovery: carry forward what the last
      real run found, and let the retention filter age it out normally. */
-  if (REPUBLISH_ONLY) pending = carryPending(previousDoc());
+  const prev = previousDoc();
+  if (REPUBLISH_ONLY) pending = carryPending(prev);
 
   if (!REPUBLISH_ONLY) {
     const sources = loadSources();
@@ -172,10 +198,7 @@ async function main() {
     /* Dedupe: an episode can be named by eligibility AND by a processing
        failure in the same run. One row each. */
     pending: mergePending(pending),
-    generator: {
-      processingVersion: cfg.processingVersion, promptVersion: cfg.promptVersion,
-      extractor: cfg.extractor, ai: ai ? `${ai.name}:${ai.model}` : "none", tts: audio.name,
-    },
+    generator: generator(published, ai, audio, prev),
     run: summarise(),
   });
 

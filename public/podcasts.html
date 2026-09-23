@@ -312,7 +312,7 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
   Rebuilt every morning from published transcripts and caption tracks. Roughly the last 30 days
   are kept — older editions are removed, not archived.<br>
   Every point is a sentence taken verbatim from the conversation, at the moment it was said.
-  Nothing on this page is written by a machine.
+  <span id="footProv"></span>
 </footer>
 
 <script>
@@ -432,6 +432,9 @@ function renderIndex(doc){
   const withAudio = eps.filter(e => e.audio && e.audio.url).length;
   const readMins = Math.max(1, Math.round(eps.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
   const heard = eps.reduce((n, e) => n + (e.durationSec || 0), 0);
+  const fp = document.getElementById("footProv");
+  if (fp) fp.textContent = footerProvenance(doc);
+
   document.getElementById("phTitle").textContent =
     count === 1 ? "One conversation worth your time" : count + " conversations worth your time";
   document.getElementById("phLede").textContent =
@@ -584,6 +587,27 @@ function epCard(e){
    window — the builder narrows it when the episode ceiling trimmed the tail —
    while doc.retentionConfigured is the setting. Always show the effective one.
    The 30 is only for an artifact written before this field existed. */
+/* THE CLAIM THE FOOTER IS ALLOWED TO MAKE. It used to say, flatly, "Nothing on
+   this page is written by a machine." That was true of a page built entirely on
+   the free extractive path, and false the moment the 30-day window restored
+   eleven episodes a model had read — their points are still verbatim (that is
+   checked before anything is printed) but the summary paragraph under the title
+   is the model's prose. A page about provenance does not get to round that off.
+   The counts come from the artifact, so the sentence cannot drift from what is
+   actually being shown. */
+function footerProvenance(doc){
+  const by = (doc.generator && doc.generator.episodes) || {};
+  const read = by.ai || 0;
+  const total = (doc.episodes || []).length;
+  if (!total) return "";
+  if (!read) return "Nothing on this page is written by a machine.";
+  if (read === total)
+    return "The points are not written — the summary above each conversation is, by the model that read it.";
+  return "The points are not written. On " + read + " of these " + total +
+    " conversations the summary paragraph is written by the model that read the transcript; " +
+    "on the other " + (total - read) + " nothing is written at all. Each conversation says which.";
+}
+
 function windowDays(doc){ return doc.retentionDays || doc.retentionConfigured || 30; }
 
 function renderDetail(doc, id){
