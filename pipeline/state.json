@@ -22310,11 +22310,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:09.627Z",
-      "updatedAt": "2026-09-22T22:48:10.154Z",
+      "updatedAt": "2026-09-23T17:29:30.904Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-483eec7834c0": {
-      "status": "NEEDS_REVIEW",
+      "status": "PUBLISHED",
       "title": "The Uncomfortable Truth about Mutual Funds!",
       "show": "Zero1 by Zerodha",
       "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
@@ -22322,9 +22322,100 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:24.433Z",
-      "updatedAt": "2026-09-21T22:49:08.242Z",
+      "updatedAt": "2026-09-23T17:29:32.144Z",
       "reason": "only 4 learnings survived validation (floor is 6)",
-      "learningsFound": 4
+      "learningsFound": 4,
+      "payload": {
+        "id": "desk-483eec7834c0",
+        "sourceId": "desk",
+        "show": "Zero1 by Zerodha",
+        "title": "The Uncomfortable Truth about Mutual Funds!",
+        "guest": "",
+        "topics": [
+          "mutual funds",
+          "expense ratios",
+          "diversification",
+          "drawdown analysis",
+          "rolling returns"
+        ],
+        "summary": "In this episode, the hosts dissect the hidden costs and pitfalls of mutual fund investing, highlighting how even tiny fee differences can erode wealth over decades. They also expose common misconceptions about diversification and stress the importance of evaluating drawdowns and rolling returns rather than just headline performance.",
+        "url": "https://www.youtube.com/watch?v=3GegZ7tT4i0",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-19T00:00:00.000Z",
+        "date": "2026-09-24",
+        "durationSec": 852,
+        "processedAt": "2026-09-23T17:29:32.143Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "A 0.5% expense ratio difference can cost ₹3.9 lakh over 20 years",
+            "idea": "Even a seemingly tiny difference in index fund fees can accumulate to hundreds of thousands of rupees over two decades, making fee selection critical.",
+            "why": "Small fee differentials dramatically erode long‑term returns, overturning the belief that all low‑cost funds are essentially equivalent.",
+            "action": "Compare expense ratios and choose the lowest‑cost fund when all else is equal.",
+            "detail": "",
+            "passage": "",
+            "evidence": "If you invest 10,000 rupees every month in an index fund ... and another person invests 10,000 in an active fund for 20 years straight, those costs actually add up. ... over 20 years the actual rupee difference is 3.9 lakh rupees.",
+            "t": 143,
+            "kind": "said",
+            "confidence": 0.92,
+            "grounding": 0.57,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Overlapping index funds can defeat diversification",
+            "idea": "Holding multiple index funds that largely overlap (e.g., Nifty 500 and Nifty 200 share 86% of holdings) can lead to concentrated risk rather than true diversification.",
+            "why": "Investors assume more funds equal broader exposure, but overlapping holdings leave portfolios vulnerable to the same stock movements.",
+            "action": "Audit your fund holdings and eliminate those with high overlap to achieve genuine diversification.",
+            "detail": "",
+            "passage": "",
+            "evidence": "If you invest in Nifty 500 and Nifty 200, you're mostly investing in the same companies.",
+            "t": 546,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Drawdown analysis is more important than headline returns",
+            "idea": "When choosing an investment strategy, consider the worst‑case drawdown (e.g., 30% drop) rather than just the annualized XIRR, as it determines your ability to keep investing during crashes.",
+            "why": "Investors often chase high returns without assessing how deep losses could force them out of the market, leading to premature exits.",
+            "action": "Model the maximum historical drawdown of any strategy and ensure you can tolerate that loss before committing.",
+            "detail": "",
+            "passage": "",
+            "evidence": "It shows you the worst‑case scenario when the market crashes, how bad your portfolio will look... you will see a minus 30%.",
+            "t": 738,
+            "kind": "said",
+            "confidence": 0.87,
+            "grounding": 0.82,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Use rolling returns to assess worst‑case risk over a horizon",
+            "idea": "Rolling return analysis shows that over longer horizons the minimum return becomes positive, helping investors avoid panic during short‑term dips.",
+            "why": "It provides a data‑driven way to gauge how often you might actually lose money, countering the fear of occasional downturns.",
+            "action": "Calculate rolling 5‑year (or longer) returns for your benchmark and note the lowest figure; use it to set realistic expectations.",
+            "detail": "",
+            "passage": "",
+            "evidence": "the negative thing ... is actually statistically not there. So, this basically means if you know the maximum and minimum, you will not get spooked and stop your SIP because the index has given you a minus 20% return in a certain period.",
+            "t": 407,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 0.65,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 1,
+        "audio": null,
+        "readSeconds": 88
+      }
     },
     "desk-bffa57c8329b": {
       "status": "FAILED",
@@ -22986,8 +23077,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-23T17:10:05.709Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-23T17:29:16.348Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     "desk-d7e5576be53e": {
       "status": "FAILED",
@@ -23236,7 +23327,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:41.939Z",
-      "updatedAt": "2026-09-23T17:08:56.032Z",
+      "updatedAt": "2026-09-23T17:28:21.023Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-e09ddcc9c437": {
@@ -23248,7 +23339,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:44.156Z",
-      "updatedAt": "2026-09-23T17:08:56.130Z",
+      "updatedAt": "2026-09-23T17:28:21.122Z",
       "reason": "fewer than half the learnings are quotable from the source",
       "learningsFound": 6
     },
@@ -23364,7 +23455,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:14.428Z",
-      "updatedAt": "2026-09-23T17:09:05.994Z",
+      "updatedAt": "2026-09-23T17:28:31.282Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d43b93b96d2e": {
@@ -23376,7 +23467,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:29.186Z",
-      "updatedAt": "2026-09-23T17:09:26.015Z",
+      "updatedAt": "2026-09-23T17:28:46.265Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-3a5459c15cdf": {
@@ -23388,7 +23479,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:44.114Z",
-      "updatedAt": "2026-09-23T17:09:40.565Z",
+      "updatedAt": "2026-09-23T17:29:00.853Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
