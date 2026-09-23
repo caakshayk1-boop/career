@@ -21903,7 +21903,7 @@
       "reason": "yt-dlp failed: ERROR: [Errno 1] Operation not permitted: '/Users/akshaykumarkothari/Library/Containers/com.apple.Safari/Data/Library/Cookies/Cookies.binarycookies'"
     },
     "gunjanshouts-ef55c7787119": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "She is 66, Fit & Happier Than Ever! Meet My Mother-in-Law | Pinky Madaan x Gunjan Taneja",
       "show": "GunjanShouts",
       "url": "https://www.youtube.com/watch?v=yJeX6UXP7xM",
@@ -21911,8 +21911,189 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-20T23:51:42.317Z",
-      "updatedAt": "2026-09-23T16:57:44.162Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-23T17:17:58.187Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+      "payload": {
+        "id": "gunjanshouts-ef55c7787119",
+        "sourceId": "gunjanshouts",
+        "show": "GunjanShouts",
+        "title": "She is 66, Fit & Happier Than Ever! Meet My Mother-in-Law | Pinky Madaan x Gunjan Taneja",
+        "guest": "Pinky Madaan",
+        "topics": [
+          "health",
+          "fitness",
+          "nutrition",
+          "aging",
+          "family"
+        ],
+        "summary": "In this episode Gunjan Shouts interviews his mother-in-law, Pinky Madaan, a digital creator and nutrition enthusiast, about how she stays fit, happy, and youthful at 66. She shares her daily routines, dietary habits, mental wellness practices, and the role of family and spirituality in her life, offering practical advice for aging well.",
+        "url": "https://www.youtube.com/watch?v=yJeX6UXP7xM",
+        "type": "youtube",
+        "image": "https://i2.ytimg.com/vi/yJeX6UXP7xM/hqdefault.jpg",
+        "publishedAt": "2026-09-20T11:58:28.000Z",
+        "date": "2026-09-20",
+        "durationSec": 4463,
+        "processedAt": "2026-09-23T17:17:58.182Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Chew fresh neem and curry leaves each morning",
+            "idea": "Chewing freshly plucked neem, curry, peepal, and guava leaves each morning provides oral hygiene benefits and aids digestion.",
+            "why": "Leaf compounds have antibacterial properties that can reduce plaque and improve gut health, offering a low‑cost natural supplement to dental care and digestion.",
+            "action": "Pluck a handful of neem or curry leaves each morning, chew them for a minute, then rinse.",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"I plucked three or four Marua, three or four evergreen, I plucked, gave curry leaves, peepal leaves, Guava leaf\"",
+            "t": 724,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Dry massage before shower boosts circulation",
+            "idea": "Applying a dry massage to the body, especially the legs, before taking a shower can boost blood flow and increase energy levels.",
+            "why": "Stimulating muscles and skin without water enhances venous return, preparing the body for activity and improving overall circulation.",
+            "action": "Spend five minutes massaging your legs and arms with firm strokes before stepping into the bath.",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"I massage for 5 minutes before taking a bath. Thoroughly caress the entire body, work out the calf muscles thoroughly, the entire leg.\"",
+            "t": 669,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Roll a towel under knees for pain relief",
+            "idea": "Press a rolled towel or bedsheet under the knees and push with your knees to create pressure that gives knee pain relief and prevents joint damage.",
+            "why": "Targeted pressure reduces swelling and improves joint alignment, offering a simple home remedy for knee discomfort without medication.",
+            "action": "Roll a towel to a firm cylinder, place it under each knee while seated, and gently push upward for two minutes.",
+            "detail": "",
+            "passage": "",
+            "evidence": "[16:32] Roll up the bedsheet to your knees or [16:35] Roll the towel up and place it at the center of your knees.",
+            "t": 992,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Combine lentils and paneer for complete protein",
+            "idea": "Combine plant proteins (e.g., lentils + paneer) to create a complete protein, essential for muscle repair in older adults.",
+            "why": "Lentils lack certain amino acids that paneer provides; together they supply all nine essential amino acids, supporting muscle maintenance without excessive meat.",
+            "action": "Prepare a dish mixing equal parts cooked lentils and paneer (or another dairy) at each main meal.",
+            "detail": "",
+            "passage": "",
+            "evidence": "[29:46] It is very important to take protein so that our repairs should also continue… [31:12] What is a complete protein?… [31:21] Paneer bhurji with dal made it…",
+            "t": 1786,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.55,
+            "repaired": true
+          },
+          {
+            "rank": 5,
+            "headline": "Skip tea at breakfast to boost iron absorption",
+            "idea": "Caffeine in tea blocks iron uptake; replace tea with water or herbal infusions at breakfast to boost iron absorption.",
+            "why": "Iron deficiency is common, especially in older women; avoiding tannin‑rich tea during meals markedly improves dietary iron bioavailability.",
+            "action": "Drink water, ginger‑cardamom‑fennel water, or plain tea after breakfast instead of with the meal.",
+            "detail": "",
+            "passage": "",
+            "evidence": "What caffeine does to your nutrients? Does not allow absorption, especially of iron.",
+            "t": 2195,
+            "kind": "said",
+            "confidence": 0.78,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 6,
+            "headline": "Social circle size predicts longevity",
+            "idea": "Studies show that the number of close, supportive relationships you maintain is a stronger predictor of longevity than diet or exercise.",
+            "why": "Strong social ties reduce stress hormones and improve immune function, making relationships a critical, often overlooked health factor.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[51:05] The number one factor in health is diet. Isn’t that exercise, is that meditation? That is relationships. The person who keeps his social Circle invests in its relationships",
+            "t": 3065,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 0.79,
+            "repaired": false
+          },
+          {
+            "rank": 7,
+            "headline": "Five‑step routine to break negative thoughts",
+            "idea": "When a negative thought arises, pause, label it, ask what benefit you get from it, then deliberately redirect your attention to a neutral or positive task.",
+            "why": "Structured interruption trains the brain to disengage from rumination, lowering anxiety and improving mental resilience.",
+            "action": "Use a notebook to jot the four steps when a negative thought appears, then switch to a brief, uplifting activity.",
+            "detail": "",
+            "passage": "",
+            "evidence": "[48:42] I am practicing now That I should intentionally get out of that thing. How? So you can do this step by step with our",
+            "t": 2922,
+            "kind": "recommendation",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 8,
+            "headline": "Savor the final bite to curb cravings",
+            "idea": "When you eat a treat, focus on savoring the final bite instead of mindlessly chewing; this reduces the urge to keep eating.",
+            "why": "Mindful attention to taste signals satiety earlier, preventing over‑consumption of high‑calorie foods.",
+            "action": "Take a small bite of a dessert, chew slowly, and concentrate on its flavor until you finish the piece.",
+            "detail": "",
+            "passage": "",
+            "evidence": "Eat the Gulab Jamun whole or take a bite. The taste will remain that of its last bite only.",
+            "t": 2288,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 9,
+            "headline": "Eat a salad before indulgent dishes",
+            "idea": "Serve a plate of salad before a heavy dish; the fullness from the salad prevents you from eating more of the main course.",
+            "why": "Fiber‑rich salads increase gastric volume and slow glucose spikes, naturally limiting calorie intake of subsequent foods.",
+            "action": "Plate a mixed‑leaf salad and eat it first, then proceed to the main course.",
+            "detail": "",
+            "passage": "",
+            "evidence": "If you want to eat Bhature Chana, then I say today first Eat a plate of salad.",
+            "t": 2023,
+            "kind": "recommendation",
+            "confidence": 0.8,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 10,
+            "headline": "Kidney donation can save a life",
+            "idea": "Donating a single kidney to a relative who had a failing organ can restore their health, demonstrating the tangible life‑saving impact of living kidney donation.",
+            "why": "Living donation provides immediate functional renal tissue, reducing wait‑list mortality and highlighting a concrete way to help family members.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[1:03:11] Brother needed him most when One of his kidneys had failed and they needed a kidney, so you offered your kidney",
+            "t": 3791,
+            "kind": "said",
+            "confidence": 0.88,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 180
+      }
     },
     "desk-4eb5f4de2aec": {
       "status": "PUBLISHED",
@@ -22644,7 +22825,7 @@
       }
     },
     "desk-f60380a60b7f": {
-      "status": "NEEDS_REVIEW",
+      "status": "PUBLISHED",
       "title": "5 Stocks Investors Are Quietly Buying",
       "show": "Groww",
       "url": "https://www.youtube.com/watch?v=zWDQN105ak0",
@@ -22652,9 +22833,99 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T17:00:40.259Z",
-      "updatedAt": "2026-09-21T22:47:51.903Z",
+      "updatedAt": "2026-09-23T17:18:28.025Z",
       "reason": "only 4 learnings survived validation (floor is 6)",
-      "learningsFound": 4
+      "learningsFound": 4,
+      "payload": {
+        "id": "desk-f60380a60b7f",
+        "sourceId": "desk",
+        "show": "Groww",
+        "title": "5 Stocks Investors Are Quietly Buying",
+        "guest": "",
+        "topics": [
+          "stock analysis",
+          "financial risk",
+          "margin pressure",
+          "accounting nuances"
+        ],
+        "summary": "The episode breaks down a handful of under-the‑radar stocks that investors are accumulating, highlighting key financial and operational risks tied to each. It walks listeners through nuanced accounting quirks, customer concentration, cost pressures, and margin dynamics that could impact future performance. The analysis is data‑driven and actionable, making it valuable for anyone scouting emerging investment ideas.",
+        "url": "https://www.youtube.com/watch?v=zWDQN105ak0",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-20T00:00:00.000Z",
+        "date": "2026-09-24",
+        "durationSec": 984,
+        "processedAt": "2026-09-23T17:18:28.024Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Insurance accounting 1 by n rule explains CARE Health’s loss",
+            "idea": "Insurance companies may report a regulatory loss when a long‑term policy’s premium is only recognized in the first year, but the actual profit under Indian accounting is higher because claims and acquisition costs are already incurred.",
+            "why": "Understanding the accounting mismatch prevents misreading a loss as a sign of poor fundamentals, allowing investors to assess true profitability.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "But claims and acquisition costs for that policy may already be incurred. Due to this timing mismatch ... Care Health is showing a loss of 87 cr on regulatory basis. But on Indian Accounting Standards basis, CARE's actual profit was Rs 122 cr",
+            "t": 353,
+            "kind": "interpretation",
+            "confidence": 0.9,
+            "grounding": 0.61,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "High customer concentration in mining exposes revenue risk",
+            "idea": "Calibre Mining’s top three customers account for 90% of FY26 revenue, so any slowdown in those customers could significantly impact earnings.",
+            "why": "Extreme concentration creates a single‑point failure risk; investors must monitor those customers’ health rather than rely on aggregate revenue trends.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "The top three customers contribute 90% of FY26 revenue.",
+            "t": 736,
+            "kind": "interpretation",
+            "confidence": 0.88,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Fuel cost volatility can erode mining margins even with high order book",
+            "idea": "Even with a 5.4x order book, Calibre Mining’s EBITDA margin fell from 24.3% to 16.8% because diesel cost increases are not fully passed through to customers, leaving normalized margins around 20%.",
+            "why": "Margin compression from input cost pass‑through risk shows that order‑book size alone isn’t a safety net; cost structure dynamics are crucial for valuation.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "The reason was the sharp increase in fuel costs. ... If diesel is adjusted as per management, the normalized margin becomes around 20%.",
+            "t": 701,
+            "kind": "interpretation",
+            "confidence": 0.85,
+            "grounding": 0.77,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "NIM decline signals pressure on direct‑to‑consumer lenders",
+            "idea": "Northern Arc’s net interest margin fell from 9.8% to 9.3% sequentially, and management targets only 10% by year‑end, indicating margin compression in a fast‑growing loan market.",
+            "why": "Margin compression reveals that rapid loan growth may be funded at higher cost, warning investors about sustainable profitability.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "net interest margin has declined sequentially from 9.8% to 9.3%. ... Management is targeting 10% NIM by year end.",
+            "t": 590,
+            "kind": "interpretation",
+            "confidence": 0.84,
+            "grounding": 0.55,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 80
+      }
     },
     "desk-8fe23cb5cee2": {
       "status": "NEEDS_REVIEW",
@@ -22715,8 +22986,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-23T16:57:29.437Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-23T17:10:05.709Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d7e5576be53e": {
       "status": "FAILED",
@@ -22965,7 +23236,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:41.939Z",
-      "updatedAt": "2026-09-23T16:56:23.408Z",
+      "updatedAt": "2026-09-23T17:08:56.032Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-e09ddcc9c437": {
@@ -22977,7 +23248,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:44.156Z",
-      "updatedAt": "2026-09-23T16:56:23.507Z",
+      "updatedAt": "2026-09-23T17:08:56.130Z",
       "reason": "fewer than half the learnings are quotable from the source",
       "learningsFound": 6
     },
@@ -23093,7 +23364,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:14.428Z",
-      "updatedAt": "2026-09-23T16:56:44.115Z",
+      "updatedAt": "2026-09-23T17:09:05.994Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-d43b93b96d2e": {
@@ -23105,7 +23376,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:29.186Z",
-      "updatedAt": "2026-09-23T16:56:59.619Z",
+      "updatedAt": "2026-09-23T17:09:26.015Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-3a5459c15cdf": {
@@ -23117,7 +23388,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:44.114Z",
-      "updatedAt": "2026-09-23T16:57:14.368Z",
+      "updatedAt": "2026-09-23T17:09:40.565Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
