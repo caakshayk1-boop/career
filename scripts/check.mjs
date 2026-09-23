@@ -26,6 +26,7 @@
  *
  *   node scripts/check.mjs https://career.askakshay.com
  */
+import { existsSync } from "node:fs";
 import { chromium } from "playwright";
 
 const SITE = (process.argv[2] || "https://career.askakshay.com").replace(/\/$/, "");
@@ -36,7 +37,18 @@ const ok = (label, cond, detail) => {
   console.log(`  FAIL  ${label}${detail !== undefined ? `  -> ${detail}` : ""}`);
 };
 
-const browser = await chromium.launch();
+/* The container ships a pinned Chromium that may not match the build this
+ * Playwright expects (it looked for …_headless_shell-1234 against an installed
+ * 1194). That is an environment mismatch, not a site failure, and downloading a
+ * second browser to paper over it is both slow and unnecessary — the installed
+ * one renders these three static pages identically. Try the default first so
+ * CI, where the versions do agree, is unaffected. */
+const browser = await chromium.launch().catch(async (err) => {
+  const fallback = "/opt/pw-browsers/chromium";
+  if (!existsSync(fallback)) throw err;
+  console.log(`  note  using ${fallback} (bundled build not present)`);
+  return chromium.launch({ executablePath: fallback });
+});
 
 /* One fresh page per document: `errors` must not carry over between them, or a
  * failure on the first page is reported again against the second. */

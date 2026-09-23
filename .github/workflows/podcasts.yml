@@ -125,7 +125,14 @@ jobs:
           # process all of them. A default duplicated in two files is a default
           # that will disagree with itself.
           MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '8' }}
-          PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '7' }}
+          # The public window, the episode ceiling that bounds it, and how far
+          # back an episode stays eligible for a retry. These three move
+          # together: a 30-day window is worth having only if the pipeline is
+          # still allowed to retry a 30-day-old episode YouTube refused on the
+          # day it aired. A test asserts every literal here against config.mjs.
+          PUBLIC_RETENTION_DAYS: ${{ vars.PUBLIC_RETENTION_DAYS || '30' }}
+          MAX_PUBLIC_EPISODES: ${{ vars.MAX_PUBLIC_EPISODES || '60' }}
+          MAX_LOOKBACK_HOURS: ${{ vars.MAX_LOOKBACK_HOURS || '744' }}
           MIN_LEARNINGS: ${{ vars.MIN_LEARNINGS || '6' }}
           TARGET_LEARNINGS: ${{ vars.TARGET_LEARNINGS || '20' }}
           FORCE_REPROCESS: ${{ inputs.force }}

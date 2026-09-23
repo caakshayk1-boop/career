@@ -2089,9 +2089,20 @@ function renderPodcasts(d){
   const mins = Math.max(1, Math.round(done.reduce((n, e) => n + (e.readSeconds || 120), 0) / 60));
   const total = done.length + pending.length + unseen.length;
 
+  /* HOW MANY CARDS THIS SECTION SHOWS. The home page is a summary; the full
+     set lives at /podcasts. This used to be a bare slice(0, 8) under a blurb
+     promising "the rest are listed below", which was true at a 7-day window of
+     eight episodes and became a lie the day the window widened to thirty and
+     seventeen were read — nine of them were neither shown nor listed. */
+  const SHOWN = 8;
+  const shown = Math.min(done.length, SHOWN);
+  const more = done.length - shown;
+
   const blurb = done.length
     ? `${points} points from ${done.length} of ${total} conversation${total === 1 ? "" : "s"}` +
-      ` — about ${mins} minutes to read. The rest are listed below as they always were.`
+      ` — about ${mins} minutes to read.` +
+      (more ? ` The ${shown} newest are below; all ${done.length} are on the podcast page.`
+            : " The rest are listed below as they always were.")
     : `${total} episode${total === 1 ? "" : "s"}. None has been read yet — the morning job publishes points here.`;
 
   /* Air date, and it was missing from both cards while sitting in the payload.
@@ -2111,7 +2122,7 @@ function renderPodcasts(d){
     const ls = e.learnings || [];
     return `<div class="epi">
       <b><a href="/podcasts#e=${encodeURIComponent(e.id)}">${esc(e.title || "")}</a></b>
-      <span>${airDate(e) ? esc(airDate(e)) + " · " : ""}${esc(e.show || "")}${e.guest ? " · " + esc(e.guest) : ""}${
+      <span>${airDate(e) ? esc(airDate(e)) + " · " : ""}${esc(e.show || "")}${e.guest && e.guest !== e.show ? " · " + esc(e.guest) : ""}${
         e.durationSec ? " · " + (e.durationSec >= 3600
           ? Math.floor(e.durationSec/3600) + "h " + (Math.round(e.durationSec%3600/60) || "")
           : Math.round(e.durationSec/60) + "m") : ""}</span>
@@ -2132,7 +2143,9 @@ function renderPodcasts(d){
   </div>`;
 
   let body = "";
-  if (done.length) body += `<div class="lc">` + done.slice(0, 8).map(readCard).join("") + `</div>`;
+  if (done.length) body += `<div class="lc">` + done.slice(0, SHOWN).map(readCard).join("")
+    + (more ? `<div class="epi"><b><a href="/podcasts">${more} more already read &rarr;</a></b>
+        <span>Read in full on the podcast page.</span></div>` : "") + `</div>`;
 
   const rest = [
     ...pending.map(p => listCard(p.title, p.show, p.url, p.takeaways, "not readable for free", airDate(p))),

@@ -33,7 +33,16 @@ export const cfg = {
      episode existed — which is what stops the job reprocessing the same
      episode a week later at full cost. Collapsing these into one number is the
      bug that makes a "7-day site" re-buy its own back catalogue every Monday. */
-  publicRetentionDays: int(process.env.PUBLIC_RETENTION_DAYS, 7),
+  publicRetentionDays: int(process.env.PUBLIC_RETENTION_DAYS, 30),
+
+  /* A CEILING ON THE PAGE, NOT ON THE WINDOW. Thirty days of a working pipeline
+     is a bigger page than seven: 17 episodes already weigh 191KB, most of it
+     the `passage` text behind each point. Gzipped that is fine, but it grows
+     with every source that starts working, and the page fetches the whole file
+     before it can render anything. This bounds it. When it binds, the oldest go
+     first and the window is effectively shorter than 30 days — which the page
+     says, rather than silently showing less than advertised. */
+  maxPublicEpisodes: int(process.env.MAX_PUBLIC_EPISODES, 60),
   dataRetentionDays: int(process.env.DATA_RETENTION_DAYS, 400),
 
   /* ── COST CONTROL ───────────────────────────────────────────────────────
@@ -56,7 +65,17 @@ export const cfg = {
   /* 8 days, one more than the public window: an episode that appears in the
      desk feed a few days after airing should still be processed while it can
      still be shown. */
-  maxLookbackHours: int(process.env.MAX_LOOKBACK_HOURS, 192),
+  /* THIS IS THE RETRY WINDOW, AND IT MUST TRACK THE PUBLIC ONE.
+     An episode YouTube refuses today is not settled in the ledger, so every
+     later run tries it again — but only while it is still eligible, and
+     eligibility stopped at 8 days while the page went on showing 30. An
+     episode could therefore sit on the page, unread, with the pipeline no
+     longer even attempting it.
+     At 31 days a blocked episode gets ~30 attempts instead of ~8. The block has
+     not been constant — yt-dlp read eight episodes across 17-22 Sep and then
+     stopped — so the backlog is picked up automatically whenever it lifts,
+     without anyone re-running anything. */
+  maxLookbackHours: int(process.env.MAX_LOOKBACK_HOURS, 744),
 
   /* ── EXTRACTION ─────────────────────────────────────────────────────────
      targetLearnings is a CEILING, never a quota. minLearnings is the floor

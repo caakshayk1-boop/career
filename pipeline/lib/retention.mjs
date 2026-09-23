@@ -4,12 +4,19 @@
  * THESE ARE TWO DIFFERENT QUESTIONS and conflating them is the mistake this
  * file exists to prevent.
  *
- *   PUBLIC_RETENTION_DAYS (7)   how long an episode stays on the page.
+ *   PUBLIC_RETENTION_DAYS (30)  how long an episode stays on the page.
  *   DATA_RETENTION_DAYS (400)   how long we remember that it existed.
  *
- * If the ledger were pruned on the same 7-day clock, the job would rediscover
- * every episode in the feed's back catalogue on day eight and pay to process it
- * again — a site that deletes its own content weekly would re-buy it weekly.
+ * If the ledger were pruned on the same public clock, the job would rediscover
+ * every episode in the feed's back catalogue the day after it expired and pay
+ * to process it again — a site that deletes its own content monthly would
+ * re-buy it monthly.
+ *
+ * MAX_PUBLIC_EPISODES (60) is a third, independent bound: the window says how
+ * OLD, the ceiling says how MANY. A 30-day window on a good month is a page
+ * nobody can load, so when the ceiling binds the oldest go first and the
+ * artifact reports the window it is actually showing rather than the one that
+ * was configured.
  * The ledger row is a few hundred bytes; the reprocessing is dollars.
  */
 import { cfg, mytDate, daysBetween } from "../config.mjs";
@@ -50,6 +57,25 @@ export function buildPending(entries) {
     .sort((a, b) => b.date.localeCompare(a.date));
 }
 
+/** The pending rows already on the page, re-filtered through today's window.
+ *
+ *  Used by --republish, which rebuilds the artifact from the ledger WITHOUT
+ *  running discovery and so has no pending list of its own. Writing one anyway
+ *  publishes an empty block and deletes every "listed, not read" row from the
+ *  page — the exact shape of the regression that removed the reader's own
+ *  podcast list the first time. A rebuild is not a re-discovery.
+ *
+ *  It reads the previous ARTIFACT rather than the ledger on purpose: pending
+ *  episodes are deliberately never written to the ledger (that is what keeps
+ *  them retryable), so the artifact is the only place they exist.
+ */
+export function carryPending(prevDoc) {
+  const today = mytDate();
+  return ((prevDoc && prevDoc.pending) || [])
+    .filter((p) => p && p.id && p.date)
+    .filter((p) => { const age = daysBetween(p.date, today); return age >= 0 && age < cfg.publicRetentionDays; });
+}
+
 /** Merge pending entries from eligibility and from processing failures, keeping
  *  one row per episode. Both paths can name the same episode when a run retries
  *  something that was pending yesterday. */
@@ -70,6 +96,10 @@ export function buildPublic(episodes, extra = {}) {
     })
     .sort((a, b) => (b.date === a.date ? (b.publishedAt || "").localeCompare(a.publishedAt || "") : b.date.localeCompare(a.date)));
 
+  /* Oldest first out when the ceiling binds. `live` is already newest-first. */
+  const overflow = live.length > cfg.maxPublicEpisodes ? live.length - cfg.maxPublicEpisodes : 0;
+  if (overflow) live.length = cfg.maxPublicEpisodes;
+
   run.counts.pruned = episodes.filter((e) => e.status === "PUBLISHED").length - live.length;
 
   /* Days are derived from the episodes, not generated as a calendar range: a
@@ -84,11 +114,19 @@ export function buildPublic(episodes, extra = {}) {
     date, label: dayLabel(date, today), episodeIds: ids,
   }));
 
+  /* What the page should SAY the window is. Advertising 30 days while the
+     episode ceiling has trimmed it to 20 is the page lying about itself. */
+  const effectiveDays = overflow && live.length
+    ? Math.min(cfg.publicRetentionDays, daysBetween(live[live.length - 1].date, today) + 1)
+    : cfg.publicRetentionDays;
+
   return {
     version: 1,
     generatedAt: new Date().toISOString(),
     today,
-    retentionDays: cfg.publicRetentionDays,
+    retentionDays: effectiveDays,
+    retentionConfigured: cfg.publicRetentionDays,
+    trimmedForSize: overflow,
     days,
     episodes: live,
     ...extra,
