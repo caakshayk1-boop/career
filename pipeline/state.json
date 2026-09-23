@@ -21898,8 +21898,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-20T23:51:42.317Z",
-      "updatedAt": "2026-09-22T22:47:55.267Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-23T00:46:29.277Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] yJeX6UXP7xM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-4eb5f4de2aec": {
       "status": "PUBLISHED",
@@ -22584,15 +22584,15 @@
     },
     "desk-b3c004ebeecf": {
       "status": "FAILED",
-      "title": "Half Of Delhi Voters Wiped Out?! | Is EC Incompetent Or Part Of A Bigger Evil Plan? | Akash Banerjee",
+      "title": "Half Of Delhi Voters Wiped Out?! | Is EC Incompetent Or Playing A Dirtier Game? | Akash Banerjee",
       "show": "The Deshbhakt",
       "url": "https://www.youtube.com/watch?v=i3DPYG5lD4w",
       "id": "desk-b3c004ebeecf",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-22T22:45:15.817Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-23T00:46:14.187Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] i3DPYG5lD4w: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-d7e5576be53e": {
       "status": "FAILED",
@@ -22723,6 +22723,78 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T22:45:12.153Z",
       "updatedAt": "2026-09-22T22:45:12.153Z"
+    },
+    "desk-c558c6abb516": {
+      "status": "FAILED",
+      "title": "How To Master Seduction, Understand Desire & Influence People | Robert Greene | FO565 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=p4qPp_3_f2Y",
+      "id": "desk-c558c6abb516",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-23T00:44:41.939Z",
+      "updatedAt": "2026-09-23T00:44:44.148Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] p4qPp_3_f2Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-e09ddcc9c437": {
+      "status": "FAILED",
+      "title": "If You Were PM For 5 Years, What Would You Change?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=chOTpc907AE",
+      "id": "desk-e09ddcc9c437",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-23T00:44:44.156Z",
+      "updatedAt": "2026-09-23T00:44:59.106Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] chOTpc907AE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-cac4466bb21b": {
+      "status": "FAILED",
+      "title": "As Mamata Banerjee Loses the Twin Flowers Symbol, There Is Only One Winner",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=YoHZSe9kw0I",
+      "id": "desk-cac4466bb21b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-23T00:44:59.113Z",
+      "updatedAt": "2026-09-23T00:45:14.420Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] YoHZSe9kw0I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-294ca4d41305": {
+      "status": "FAILED",
+      "title": "How Indonesian Shopkeepers Connect ‘Artha’ With God | Smita Prakash | Vikram Sampath",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=T87f6O9bH1Q",
+      "id": "desk-294ca4d41305",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-23T00:45:14.428Z",
+      "updatedAt": "2026-09-23T00:45:29.179Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] T87f6O9bH1Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d43b93b96d2e": {
+      "status": "FAILED",
+      "title": "Kailash Kher x Ranveer - Sangeet, Pyaar, Saiyyan, Teri Deewani Aur Shiva | TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=Q_BzkN397aA",
+      "id": "desk-d43b93b96d2e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-23T00:45:29.186Z",
+      "updatedAt": "2026-09-23T00:45:44.105Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Q_BzkN397aA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-3a5459c15cdf": {
+      "status": "FAILED",
+      "title": "Drainage | Class 9 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=Hm0WHmZbOIs",
+      "id": "desk-3a5459c15cdf",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-23T00:45:44.114Z",
+      "updatedAt": "2026-09-23T00:45:59.131Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Hm0WHmZbOIs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }
