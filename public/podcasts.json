@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-23T17:29:32.178Z",
+  "generatedAt": "2026-09-24T00:38:42.779Z",
   "today": "2026-09-24",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -4033,7 +4033,7 @@
       "url": "https://www.youtube.com/watch?v=Z8k5_eiLraI",
       "takeaways": [
         "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage.",
-        "NSE is now heading towards its IPO."
+        "The episode compares the revenue mix, market share, margins and valuations of BSE and NSE."
       ],
       "date": "2026-09-24",
       "reason": "over the 8/day cap"
@@ -4081,10 +4081,69 @@
       "url": "https://www.youtube.com/watch?v=M_npo4c9DEA",
       "takeaways": [
         "The episode explains how India’s largest stock exchange generates its revenue.",
-        "It includes a direct comparison of NSE’s financial performance, growth potential and valuations against BSE."
+        "It directly compares NSE’s financial performance, growth potential, and valuations with BSE."
       ],
       "date": "2026-09-24",
       "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-ca6e062e5b2e",
+      "title": "Can A 29,000 INR Salary Support A Family And Buy A DREAM HOUSE? | Money Matters 126",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=0KyN6vtAnJM",
+      "takeaways": [
+        "Suraj earns ₹29,900 a month, helps pay for his younger siblings' education, and invests ₹4,500 a month while aiming to buy a home for his family.",
+        "The episode discusses increasing investments as income grows and planning a house purchase without rushing."
+      ],
+      "date": "2026-09-24",
+      "reason": "yt-dlp failed: ERROR: [youtube] 0KyN6vtAnJM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-1a6bf65db6f2",
+      "title": "India’s Moral Police Puts Taliban To Shame? | How Politicians Handle 2-Day-Outrages | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=sRkCX0Hdd24",
+      "takeaways": [
+        "Be it the disturbing news from Jamui or the assault shocker from New Delhi - a clear pattern emerges.",
+        "Moral Policing has become an tool to break all levels of morality and humanity."
+      ],
+      "date": "2026-09-24",
+      "reason": "yt-dlp failed: ERROR: [youtube] sRkCX0Hdd24: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-6aaaa548f64e",
+      "title": "US-Iran: Where are we at? What can we expect next? | Live",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=5tGC2lDMeDQ",
+      "takeaways": [
+        "With the Iran-US war nearly seven months old are both countries blowing hot and cold?",
+        "Trump has threatened to wipe out Iran’s leadership and collapse its economy but he also says he is ready to meet President Pezeshkian in New York this week."
+      ],
+      "date": "2026-09-24",
+      "reason": "yt-dlp failed: ERROR: [youtube] 5tGC2lDMeDQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-6af8a22f57cd",
+      "title": "“Dharmendra, Vinod Khanna, Jeetendra And I Once Shared One Makeup Room” Biswajit Chatterjee",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=_7e--HpndLA",
+      "takeaways": [
+        "“Dharmendra, Vinod Khanna, Jeetendra And I Once Shared One Makeup Room” Biswajit Chatterjee #ANIPodcast #SmitaPrakash #BiswajitChatterjee #Dharmendra #VinodKhanna #Jeetendra #Bollywood Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-24",
+      "reason": "yt-dlp failed: ERROR: [youtube] _7e--HpndLA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-ea372e4b2afd",
+      "title": "Part 2 | Class 9 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=4T5BpFGs3uw",
+      "takeaways": [
+        "Priyanka Singh, Expert Faculty at Drishti IAS, continues Class 9 Geography, Chapter 3 – “Drainage” in a simple, engaging, and exam-oriented manner.",
+        "Differences Between Himalayan and Peninsular Rivers The Buniyad NCERT Geography Series covers NCERT Geography from Class 6 to Class 12, helping aspirants build a strong conceptual foundation for UPSC, State PCS and other competitive examinations."
+      ],
+      "date": "2026-09-24",
+      "reason": "yt-dlp failed: ERROR: [youtube] 4T5BpFGs3uw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-c558c6abb516",
@@ -4092,22 +4151,23 @@
       "show": "Figuring Out",
       "url": "https://www.youtube.com/watch?v=p4qPp_3_f2Y",
       "takeaways": [
-        "Being too nice makes you appear weak in any room",
-        "Seduction has nothing to do with looks and everything to do with psychology"
+        "Being too nice to people makes you appear weak in any room.",
+        "Seduction has nothing to do with looks and everything to do with psychology."
       ],
       "date": "2026-09-24",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] p4qPp_3_f2Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-294ca4d41305",
-      "title": "How Indonesian Shopkeepers Connect ‘Artha’ With God | Smita Prakash | Vikram Sampath",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=T87f6O9bH1Q",
+      "id": "desk-e09ddcc9c437",
+      "title": "If You Were PM For 5 Years, What Would You Change?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=chOTpc907AE",
       "takeaways": [
-        "How Indonesian Shopkeepers Connect ‘Artha’ With God | Smita Prakash | Vikram Sampath #ANIPodcast #SmitaPrakash #VikramSampath #Lakshmi #Varuna #Ganesha #Indonesia #Bali #India #Bharat Tune in here: linktr.ee/podcastwithsmitaprakash"
+        "Access the full data and references used in this episode.",
+        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
       "date": "2026-09-24",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] chOTpc907AE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-d43b93b96d2e",
@@ -4119,43 +4179,7 @@
         "Kailash Kher opens up about his childhood, leaving home at a young age, living in Rishikesh, Gurukuls and Ashrams, learning from saints, studying the Vedas, facing hunger and financial struggles, and eventually finding his path in music."
       ],
       "date": "2026-09-24",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-3a5459c15cdf",
-      "title": "Drainage | Class 9 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=Hm0WHmZbOIs",
-      "takeaways": [
-        "Priyanka Singh, Expert Faculty at Drishti IAS, explains Class 9 Geography, Chapter 3 – “Drainage” in a simple, engaging, and exam-oriented manner.",
-        "In this chapter, you will explore India’s drainage system, major river systems, their features, and their geographical significance."
-      ],
-      "date": "2026-09-24",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-b3c004ebeecf",
-      "title": "Half Of Delhi Voters Wiped Out?! | Is EC Incompetent Or Playing A Dirtier Game? | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=i3DPYG5lD4w",
-      "takeaways": [
-        "India’s voting system is facing serious questions due to SIR and the Election Commission’s handling of electoral rolls.",
-        "From thousands of voters receiving notices in Delhi to large-scale deletions reported in Bengal, Maharashtra, Karnataka and Punjab, the process has left many citizens struggling to prove their eligibility to vote."
-      ],
-      "date": "2026-09-24",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-b6151d26d3c2",
-      "title": "How Much Salary Do You Really Need in India?",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=4XFtDn2W85Q",
-      "takeaways": [
-        "Your city, housing costs, dependants, loans, and lifestyle matter more than comparing your salary with someone else’s.",
-        "Don’t assume the products mentioned are the best; you should do your own research."
-      ],
-      "date": "2026-09-24",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: ERROR: [youtube] Q_BzkN397aA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -4170,49 +4194,61 @@
     }
   },
   "run": {
-    "at": "2026-09-23T17:29:32.169Z",
+    "at": "2026-09-24T00:38:42.778Z",
     "discovered": 1146,
     "eligible": 8,
-    "processed": 1,
+    "processed": 0,
     "skipped": 1138,
-    "failed": 7,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
-        "id": "desk-c558c6abb516",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-23T17:28:21.023Z"
+        "id": "desk-ca6e062e5b2e",
+        "message": "yt-dlp failed: ERROR: [youtube] 0KyN6vtAnJM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:36:57.774Z"
       },
       {
         "stage": "process",
-        "id": "desk-294ca4d41305",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-23T17:28:31.282Z"
+        "id": "desk-1a6bf65db6f2",
+        "message": "yt-dlp failed: ERROR: [youtube] sRkCX0Hdd24: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:37:12.588Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-6aaaa548f64e",
+        "message": "yt-dlp failed: ERROR: [youtube] 5tGC2lDMeDQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:37:27.639Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-6af8a22f57cd",
+        "message": "yt-dlp failed: ERROR: [youtube] _7e--HpndLA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:37:42.758Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-ea372e4b2afd",
+        "message": "yt-dlp failed: ERROR: [youtube] 4T5BpFGs3uw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:37:57.815Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-c558c6abb516",
+        "message": "yt-dlp failed: ERROR: [youtube] p4qPp_3_f2Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:38:12.747Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-e09ddcc9c437",
+        "message": "yt-dlp failed: ERROR: [youtube] chOTpc907AE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:38:27.734Z"
       },
       {
         "stage": "process",
         "id": "desk-d43b93b96d2e",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-23T17:28:46.265Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-3a5459c15cdf",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-23T17:29:00.853Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-b3c004ebeecf",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-23T17:29:16.348Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-b6151d26d3c2",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-09-23T17:29:30.904Z"
+        "message": "yt-dlp failed: ERROR: [youtube] Q_BzkN397aA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-24T00:38:42.769Z"
       }
     ],
     "estimatedCostUsd": 0
