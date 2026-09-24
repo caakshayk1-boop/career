@@ -22310,8 +22310,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T00:19:09.627Z",
-      "updatedAt": "2026-09-23T17:29:30.904Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-24T00:35:02.261Z",
+      "reason": "fetch failed"
     },
     "desk-483eec7834c0": {
       "status": "PUBLISHED",
@@ -23065,8 +23065,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-21T22:51:53.540Z",
-      "updatedAt": "2026-09-22T22:48:24.949Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-24T00:53:46.911Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-b3c004ebeecf": {
       "status": "FAILED",
@@ -23077,8 +23077,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-22T00:55:56.904Z",
-      "updatedAt": "2026-09-23T17:29:16.348Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-24T00:12:14.653Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-d7e5576be53e": {
       "status": "FAILED",
@@ -23327,11 +23327,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:41.939Z",
-      "updatedAt": "2026-09-24T00:38:12.747Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] p4qPp_3_f2Y: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T23:12:35.666Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-e09ddcc9c437": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "If You Were PM For 5 Years, What Would You Change?",
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=chOTpc907AE",
@@ -23339,8 +23339,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:44:44.156Z",
-      "updatedAt": "2026-09-24T00:38:27.734Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] chOTpc907AE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+      "updatedAt": "2026-09-23T23:12:35.773Z",
+      "reason": "fewer than half the learnings are quotable from the source",
       "learningsFound": 6
     },
     "desk-cac4466bb21b": {
@@ -23455,8 +23455,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:14.428Z",
-      "updatedAt": "2026-09-23T17:28:31.282Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-09-23T23:30:40.267Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-d43b93b96d2e": {
       "status": "FAILED",
@@ -23467,8 +23467,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:29.186Z",
-      "updatedAt": "2026-09-24T00:38:42.769Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] Q_BzkN397aA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T23:51:56.407Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "desk-3a5459c15cdf": {
       "status": "FAILED",
@@ -23479,68 +23479,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-23T00:45:44.114Z",
-      "updatedAt": "2026-09-23T17:29:00.853Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    "desk-ca6e062e5b2e": {
-      "status": "FAILED",
-      "title": "Can A 29,000 INR Salary Support A Family And Buy A DREAM HOUSE? | Money Matters 126",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=0KyN6vtAnJM",
-      "id": "desk-ca6e062e5b2e",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-24T00:36:53.637Z",
-      "updatedAt": "2026-09-24T00:36:57.774Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 0KyN6vtAnJM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-1a6bf65db6f2": {
-      "status": "FAILED",
-      "title": "India’s Moral Police Puts Taliban To Shame? | How Politicians Handle 2-Day-Outrages | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=sRkCX0Hdd24",
-      "id": "desk-1a6bf65db6f2",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-24T00:36:57.784Z",
-      "updatedAt": "2026-09-24T00:37:12.588Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] sRkCX0Hdd24: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-6aaaa548f64e": {
-      "status": "FAILED",
-      "title": "US-Iran: Where are we at? What can we expect next? | Live",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=5tGC2lDMeDQ",
-      "id": "desk-6aaaa548f64e",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-24T00:37:12.597Z",
-      "updatedAt": "2026-09-24T00:37:27.639Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 5tGC2lDMeDQ: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-6af8a22f57cd": {
-      "status": "FAILED",
-      "title": "“Dharmendra, Vinod Khanna, Jeetendra And I Once Shared One Makeup Room” Biswajit Chatterjee",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=_7e--HpndLA",
-      "id": "desk-6af8a22f57cd",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-24T00:37:27.649Z",
-      "updatedAt": "2026-09-24T00:37:42.758Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] _7e--HpndLA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-ea372e4b2afd": {
-      "status": "FAILED",
-      "title": "Part 2 | Class 9 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=4T5BpFGs3uw",
-      "id": "desk-ea372e4b2afd",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-24T00:37:42.767Z",
-      "updatedAt": "2026-09-24T00:37:57.815Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 4T5BpFGs3uw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-23T23:56:24.592Z",
+      "reason": "yt-dlp failed: no stderr"
     }
   }
 }
