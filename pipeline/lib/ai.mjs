@@ -26,6 +26,7 @@
  */
 import { cfg } from "../config.mjs";
 import { log, charge } from "./log.mjs";
+import { describeNetError } from "./http.mjs";
 
 /* Published list prices, $ per million tokens. Used only to print an estimate
    at the end of a run — an order-of-magnitude alarm, not an invoice. Stale
@@ -181,12 +182,27 @@ const PROVIDERS = {
         budget = { remaining: Infinity, resetInMs: 0 };
         last = Date.now();
       }
-      const res = await fetch(URL, {
-        method: "POST",
-        headers: { Authorization: `Bearer ${cfg.groqKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify(body),
-        signal: AbortSignal.timeout(180000),
-      });
+      /* A NETWORK FAULT IS NOT A VERDICT ON THE EPISODE. Undici reports a
+         dropped connection, a DNS miss or a laptop waking from sleep as a bare
+         TypeError "fetch failed", and this threw it straight out — failing an
+         episode whose transcript had already been read, after up to an hour of
+         token pacing. Six of eight episodes on 2026-09-25 died that way. Retry
+         the connection with backoff; name the underlying cause if it persists. */
+      let res;
+      for (let net = 0; ; net++) {
+        try {
+          res = await fetch(URL, {
+            method: "POST",
+            headers: { Authorization: `Bearer ${cfg.groqKey}`, "Content-Type": "application/json" },
+            body: JSON.stringify(body),
+            signal: AbortSignal.timeout(180000),
+          });
+          break;
+        } catch (e) {
+          if (e.name !== "TypeError" || net >= 4) throw describeNetError(e, "groq");
+          await nap(Math.min(60000, 5000 * 2 ** net));
+        }
+      }
       const rem = Number(res.headers.get("x-ratelimit-remaining-tokens"));
       if (Number.isFinite(rem)) {
         budget = { remaining: rem, resetInMs: resetMs(res.headers.get("x-ratelimit-reset-tokens")) };
