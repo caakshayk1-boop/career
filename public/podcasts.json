@@ -1,16 +1,22 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-25T00:45:49.523Z",
+  "generatedAt": "2026-09-25T05:11:40.179Z",
   "today": "2026-09-25",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
+      "date": "2026-09-25",
+      "label": "Today",
+      "episodeIds": [
+        "desk-1a6bf65db6f2"
+      ]
+    },
+    {
       "date": "2026-09-24",
       "label": "Yesterday",
       "episodeIds": [
-        "diary-of-a-ceo-2b348f131d7f",
         "desk-cac4466bb21b",
         "desk-d73467f0bd48",
         "desk-fa113e6da7bb",
@@ -87,169 +93,109 @@
   ],
   "episodes": [
     {
-      "id": "diary-of-a-ceo-2b348f131d7f",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Druski: They're Lying To You About Overnight Success!",
-      "guest": "Druski",
+      "id": "desk-1a6bf65db6f2",
+      "sourceId": "desk",
+      "show": "The Deshbhakt",
+      "title": "India’s Moral Police Puts Taliban To Shame? | How Politicians Handle 2-Day-Outrages | Akash Banerjee",
+      "guest": "",
       "topics": [
-        "comedy",
-        "trauma",
-        "entrepreneurship",
-        "personal growth"
+        "moral policing",
+        "political influence",
+        "social media activism",
+        "law enforcement tactics"
       ],
-      "summary": "In this episode, comedian and entrepreneur Druski shares how he turned a traumatic childhood into a driving force for his rapid rise in entertainment. He breaks down the psychological tools he used—such as leveraging humor, committing to a single plan, and relentless daily consistency—to overcome abuse, avoidant attachment, and the myth of overnight success.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M26N37TKRWRGKWK7TWSM6K5V/druski.ep_cover_png.jpg",
-      "publishedAt": "2026-09-24T05:00:00.000Z",
-      "date": "2026-09-24",
-      "durationSec": 6513,
-      "processedAt": "2026-09-25T00:44:14.706Z",
+      "summary": "In this episode Akash Banerjee examines how India's moral police operate, highlighting their reliance on political cover and the tendency to act only after incidents go viral. He discusses tactics like Operation Langda and the emergence of a youthful \"Desi Taliban\" that enforces strict moral codes through intimidation and assault. The conversation offers a critical look at the systemic suppression of assault reporting and the broader implications for civil liberties.",
+      "url": "https://www.youtube.com/watch?v=sRkCX0Hdd24",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-23T00:00:00.000Z",
+      "date": "2026-09-25",
+      "durationSec": 1270,
+      "processedAt": "2026-09-25T00:38:06.453Z",
       "status": "PUBLISHED",
-      "transcriptProvider": "published",
+      "transcriptProvider": "yt-dlp-captions",
       "timestamped": true,
       "extractor": "ai",
       "learnings": [
         {
           "rank": 1,
-          "headline": "Hypervigilant children become empathetic observers at a cost",
-          "idea": "Kids forced to stay extra aware of danger develop strong observation skills and empathy, but also face higher risk of mental health issues like depression or bipolar disorder.",
-          "why": "Parents and clinicians can recognize that early hypervigilance signals both a talent for empathy and a need for mental‑health support, turning a risk factor into a preventive insight.",
+          "headline": "Police suppress and bury assault news unless viral",
+          "idea": "The administration has a complete formula to first suppress and bury assault news, only acting when it goes viral.",
+          "why": "Shows institutional bias and that without public pressure, assaults are hidden, revealing systemic failure to protect victims.",
           "action": "",
           "detail": "",
           "passage": "",
-          "evidence": "\"Kids that have an early context where they have to be a little bit more… aware, they often become very good at observation. Yes. And they become good therapists. They become the most empathetic. They also sometimes have struggles with mental health because being hypervigilant…\"",
-          "t": 558,
-          "kind": "interpretation",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Parental framing forces early life choices",
-          "idea": "When he was eight, his father told him the only realistic paths were jail or a craft/trade (or the military, which would ‘blow his ass off’), shaping his perception of risk and opportunity.",
-          "why": "A stark two‑option narrative can limit a child's imagination of possible futures; recognizing this helps parents give broader, more nuanced possibilities.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "He said, \"You're either going to go to jail or, you find a craft or you're going to end up in a warehouse or something... You got to figure out whatever you're going to do. Or you go to the military, get your ass blown off.\"",
-          "t": 370,
-          "kind": "interpretation",
-          "confidence": 0.78,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Write down goals with dates and no Plan B",
-          "idea": "Commit to a single plan by documenting specific goals and dates, eliminating alternative options to force focus.",
-          "why": "Removing a fallback sharpens commitment, reduces procrastination, and aligns daily actions with a clear, primary objective.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"I wrote down all these goals... The first one I ever wrote was, don't have a plan B. Your plan A will work. No plan B, your plan A will work.\"",
-          "t": 2644,
+          "evidence": "[1:51] The administration has a complete formula on how to first suppress and bury the news.",
+          "t": 111,
           "kind": "said",
           "confidence": 0.9,
           "grounding": 1,
           "repaired": false
         },
         {
-          "rank": 4,
-          "headline": "Success demands a long time horizon, not overnight fame",
-          "idea": "Greatness often requires years of grinding—e.g., a magician spent 10 years doing card tricks on restaurant tables before achieving success.",
-          "why": "Understanding that mastery is a marathon discourages the myth of instant fame and encourages sustained, incremental effort.",
+          "rank": 2,
+          "headline": "Moral policing is enabled by political protection",
+          "idea": "Self‑appointed guardians of religion receive political protection, making them brazen in enforcing moral codes.",
+          "why": "Identifies the root cause of impunity for moral police, indicating that political cover sustains harassment.",
           "action": "",
           "detail": "",
           "passage": "",
-          "evidence": "\"the greatest illusionist in the world and he told me that he spent 10 years doing card tricks on restaurant tables\"",
-          "t": 3568,
+          "evidence": "[2:18] Are the self‑appointed guardians of religion and this civilization receiving some kind of political protection, which has made them so brazen?",
+          "t": 138,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Police only intervene after a video goes viral",
+          "idea": "Police intervene in assault cases only when a video spreads widely on social media.",
+          "why": "Highlights how media pressure, not duty, drives law enforcement, underscoring the need for independent oversight.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[5:49] Earlier, they would simply sit at the police station and claim that the incident never happened— it was all a fabricated",
+          "t": 349,
           "kind": "said",
           "confidence": 0.88,
           "grounding": 1,
           "repaired": false
         },
         {
+          "rank": 4,
+          "headline": "Operation Langda is a police tactic to silence dissent",
+          "idea": "Law enforcement launched 'Operation Langda' to arrest and intimidate people who publicize assaults.",
+          "why": "Reveals covert tactics used to control public discourse and suppress accountability.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[6:38] 'Operation Langda' had to be launched.",
+          "t": 398,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
           "rank": 5,
-          "headline": "Earn money early by promoting other creators",
-          "idea": "Start a promotion service where you share other people's music and videos on your social stories for a fee, earning a few hundred dollars a day while building your own following.",
-          "why": "Provides a low‑barrier revenue stream for nascent creators, allowing them to fund their own projects without sacrificing creative control.",
+          "headline": "Unemployed youth form a 'Desi Taliban' crime class",
+          "idea": "A growing class of unemployed, uneducated youths acts as a 'Desi Taliban', committing moral policing and assaults.",
+          "why": "Shows the socio‑economic driver behind moral policing, suggesting interventions must address unemployment and education.",
           "action": "",
           "detail": "",
           "passage": "",
-          "evidence": "\"I would promote people's music and their videos and throw it on my story. And I would do a full day of promotion. It would make me... a couple hundred dollars maybe\"",
-          "t": 2888,
+          "evidence": "[7:28] A breed of unemployed, lecherous terrorists that is proliferating in our country these days.",
+          "t": 448,
           "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Show up consistently is the rare trait of success",
-          "idea": "Only a handful of people actually keep showing up day‑after‑day to work; the rest quit after the second or third attempt.",
-          "why": "Consistency is a more reliable predictor of achievement than talent or ideas; cultivating daily discipline separates serious doers from talkers.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"Everybody that said they were going to do it, they do it one day. They're not showing up the third or the second day. Nobody nobody shows up continuously for the work.\"",
-          "t": 3343,
-          "kind": "interpretation",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Avoid early team-building; grind solo first",
-          "idea": "When starting out, don't assemble a team; focus on solo grinding to prove value before bringing others on board.",
-          "why": "Early solo effort validates the concept and avoids premature dilution of equity or creative vision.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"You don't need a fucking team. Keep grinding. Do it again. Do it again, man.\"",
-          "t": 3631,
-          "kind": "recommendation",
           "confidence": 0.75,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Comedy’s ethical rule: never punch down",
-          "idea": "He deliberately avoids jokes that target a specific group or individual; all his humor comes from a good‑hearted place, so even if it’s edgy, it doesn’t rely on demeaning others.",
-          "why": "Provides a reproducible moral framework for comedians and creators seeking edgy material without alienating audiences.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[1:15:04] I think the way I look at all of this stuff… I’ve never punched down with any jokes that I ever do. Any jokes I ever do always come from a good hearted place.",
-          "t": 4504,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Relationships trump talent in big‑brand deals",
-          "idea": "In corporate America, brands hire people not only for skill but because they’re trustworthy, good people in private; personal reputation is crucial for landing deals like T‑Mobile or Nike.",
-          "why": "Emphasizes that networking and character are as decisive as ability, guiding creators to invest in relationships early.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[1:11:26] Is it knowing a guy? It’s all relationships. Even in the biggest buildings, majority of it is relationships. Of course, your talent weighs a lot, but relationships are very much key.",
-          "t": 4286,
-          "kind": "said",
-          "confidence": 0.8,
           "grounding": 1,
           "repaired": false
         }
       ],
-      "rejectedCount": 1,
+      "rejectedCount": 0,
       "audio": null,
-      "readSeconds": 143
+      "readSeconds": 72
     },
     {
       "id": "desk-cac4466bb21b",
@@ -4193,85 +4139,13 @@
   ],
   "pending": [
     {
-      "id": "desk-7292be454886",
-      "title": "Cockroaches On Election Commission Thik Karo DriveWhat Next For Gyanesh Kumar?",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=oSA8iZjEoh0",
+      "id": "desk-75cda777ce9c",
+      "title": "BSE vs NSE: Can NSE Repeat BSE’s Massive Growth Story? | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=Z8k5_eiLraI",
       "takeaways": [
-        "Abhijeet Dipke and co‑conveners held a press conference titled “Hijacking of India’s Democracy.”",
-        "The conference addressed recent revelations concerning Chief Election Commissioner Gyanesh Kumar."
-      ],
-      "date": "2026-09-25",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-dc91758e3ad9",
-      "title": "“Ritwik Ghatak Insisted Nargis Play Mother Bengal In My Bangladeshi Documentary” Biswajit Chatterjee",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=yUaO0mbPDwQ",
-      "takeaways": [
-        "Ritwik Ghatak insisted that Nargis portray Mother Bengal in the Bangladeshi documentary.",
-        "The episode features Biswajit Chatterjee as the guest."
-      ],
-      "date": "2026-09-25",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-426a7741a1dd",
-      "title": "Sadhguru Darshan Part 3 – Sadhguru Responds To A Seeker Who Lost His Brother",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=ydT1WdeJ_38",
-      "takeaways": [
-        "Responding to a seeker’s question about losing his brother, Sadhguru speaks about the reality of death, the nature of grief, and why mortality should awaken human beings to the briefness of life and the nature of one’s existence.",
-        "Excerpted from Sadhguru Darshan at Isha Yoga Center on 15 September 2026."
-      ],
-      "date": "2026-09-25",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-fdb64932c090",
-      "title": "AI : Doomsday vs NeuroOptimism | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=M8m9Yjv42tk",
-      "takeaways": [
-        "In 2003, we were told AI would take 300 million jobs.",
-        "It's 2026, and companies are quietly rehiring the people they let go."
-      ],
-      "date": "2026-09-25",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-23d141c2f2ae",
-      "title": "UPSC Polity Basics: Start with the Right Foundation | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=l_Az6q3NXXY",
-      "takeaways": [
-        "Building a strong foundation in Polity is essential for every UPSC aspirant.",
-        "Abhay Kumar, Expert Faculty at Drishti IAS, explains the basics of Indian Polity in a simple, structured, and easy-to-understand manner."
-      ],
-      "date": "2026-09-25",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-ca6e062e5b2e",
-      "title": "Can A 29,000 INR Salary Support A Family And Buy A DREAM HOUSE? | Money Matters 126",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=0KyN6vtAnJM",
-      "takeaways": [
-        "Suraj, 22, earns ₹29,900 a month, helps pay his younger siblings' education, has a personal loan, and is investing ₹4,500 monthly while aiming to buy a family home.",
-        "The discussion emphasizes increasing investments as income grows and planning a house purchase without rushing."
-      ],
-      "date": "2026-09-25",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-e09ddcc9c437",
-      "title": "If You Were PM For 5 Years, What Would You Change?",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=chOTpc907AE",
-      "takeaways": [
-        "You can access the full data and references used in this episode.",
-        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
+        "BSE’s sharp growth was driven by changes in leadership, the relaunch of Sensex derivatives, SEBI’s expiry‑day changes, and operating leverage.",
+        "The episode compares the revenue mix, market share, margins and valuations of BSE and NSE."
       ],
       "date": "2026-09-25",
       "reason": "over the 8/day cap"
@@ -4294,8 +4168,8 @@
       "show": "Dhruv Rathee",
       "url": "https://www.youtube.com/watch?v=q678XLOueN8",
       "takeaways": [
-        "Learn how to make content creation your part‑time job or full‑time career.",
-        "Learn how to harness the power of ChatGPT and transform your life."
+        "Learn how to make content creation your part-time job or full-time career!",
+        "Learn to harness the power of ChatGPT and transform your life!"
       ],
       "date": "2026-09-25",
       "reason": "over the 8/day cap"
@@ -4313,88 +4187,76 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-3ad889803e0f",
-      "title": "How Much Does It Cost To Own A Private Jet? Business Explained | Abhinav Tripathi | FO566Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=pbLFmU1p-7A",
-      "takeaways": [
-        "₹25 crore is the annual cost to operate a private jet.",
-        "Banks typically refuse to finance aircraft purchases."
-      ],
-      "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] pbLFmU1p-7A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-dee6c95cd3fc",
-      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
-      "takeaways": [
-        "The rebel group from Yemen disrupted Saudi Arabia’s oil supply, causing the kingdom to struggle to sell its oil worldwide.",
-        "When the rebels captured three islands, Brent crude prices rose to $110 a barrel, sending shockwaves through the global economy."
-      ],
-      "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] UY9H83yQnzc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-93a3b9ee5af2",
-      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
-      "takeaways": [
-        "He shares the money principles he’s teaching his kids before they turn 15.",
-        "The video presents fundamental money ideas you should consider, but it isn’t investment advice."
-      ],
-      "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] y7pwGVQEiKc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-a84f95444c21",
-      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
-      "takeaways": [
-        "A practical case study of two working professionals shows how a retirement calculator can illustrate the use of SIP, step‑up SIP, SWP and step‑up SWP together for retirement planning.",
-        "The episode explores how much money is needed to retire comfortably and whether the retirement corpus will last for the rest of life."
-      ],
-      "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] 1MoqBEv9BGw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-5108c0ccd062",
-      "title": "Flat Buying Guide 2026 | Everything You Need To Know",
+      "id": "desk-09492378de3b",
+      "title": "NSE IPO Explained | Should You Apply?",
       "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=UZta_d0Da0Q",
+      "url": "https://www.youtube.com/watch?v=M_npo4c9DEA",
       "takeaways": [
-        "Demystifies industry terms such as carpet area, built‑up area, and super built‑up area.",
-        "Shows how actual usable space is calculated to avoid overpaying for non‑existent square footage."
+        "The episode explains how India’s largest stock exchange generates its revenue.",
+        "It directly compares NSE’s financial performance, growth potential, and valuations with BSE."
       ],
       "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] UZta_d0Da0Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-3bd07add1c56",
-      "title": "Nifty Down | But These 5 Stocks Are Still Strong",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=SwFk7IIBxtc",
+      "id": "desk-ca6e062e5b2e",
+      "title": "Can A 29,000 INR Salary Support A Family And Buy A DREAM HOUSE? | Money Matters 126",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=0KyN6vtAnJM",
       "takeaways": [
-        "Groww is India’s Best Investment App and the Largest Stock Broker.",
-        "Stock market investing content in Hindi | Finance content in Hindi | Personal finance content in Hindi Investment in securities market are subject to market risks, read all the related documents carefully before investing."
+        "Suraj earns ₹29,900 a month, helps pay for his younger siblings' education, and invests ₹4,500 a month while aiming to buy a home for his family.",
+        "The episode discusses increasing investments as income grows and planning a house purchase without rushing."
       ],
       "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] SwFk7IIBxtc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "fetch failed"
     },
     {
-      "id": "desk-2d2a344b1bc3",
-      "title": "Time Up For Gyanesh Kumar? | Can The Opposition Unite To Save India’s Democracy? | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=wdgqbgho37o",
+      "id": "desk-6aaaa548f64e",
+      "title": "US-Iran: Where are we at? What can we expect next? | Live",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=5tGC2lDMeDQ",
       "takeaways": [
-        "Never has the Modi Govt faced such a political challenge in 12 years of existence - a stinging investigation that has exposed the deep rot in the Election Commission of India and the actions of Chief Election Commissioner Gyanesh Kumar.",
-        "What’s more - the allegations stem from the objects of the two other Election Commissioners who work with Kumar."
+        "With the Iran-US war nearly seven months old are both countries blowing hot and cold?",
+        "Trump has threatened to wipe out Iran’s leadership and collapse its economy but he also says he is ready to meet President Pezeshkian in New York this week."
       ],
       "date": "2026-09-25",
-      "reason": "yt-dlp failed: ERROR: [youtube] wdgqbgho37o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "fetch failed"
+    },
+    {
+      "id": "desk-ea372e4b2afd",
+      "title": "Part 2 | Class 9 Geography, Chapter 3 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=4T5BpFGs3uw",
+      "takeaways": [
+        "Priyanka Singh, Expert Faculty at Drishti IAS, continues Class 9 Geography, Chapter 3 – “Drainage” in a simple, engaging, and exam-oriented manner.",
+        "Differences Between Himalayan and Peninsular Rivers The Buniyad NCERT Geography Series covers NCERT Geography from Class 6 to Class 12, helping aspirants build a strong conceptual foundation for UPSC, State PCS and other competitive examinations."
+      ],
+      "date": "2026-09-25",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "desk-c558c6abb516",
+      "title": "How To Master Seduction, Understand Desire & Influence People | Robert Greene | FO565 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=p4qPp_3_f2Y",
+      "takeaways": [
+        "Being too nice to people makes you appear weak in any room.",
+        "Seduction has nothing to do with looks and everything to do with psychology."
+      ],
+      "date": "2026-09-25",
+      "reason": "fetch failed"
+    },
+    {
+      "id": "desk-d43b93b96d2e",
+      "title": "Kailash Kher x Ranveer - Sangeet, Pyaar, Saiyyan, Teri Deewani Aur Shiva | TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=Q_BzkN397aA",
+      "takeaways": [
+        "In this 542th (overall 1047th) episode of The Ranveer Show, Ranveer Allahbadia sits down with legendary Indian singer Kailash Kher for a deeply personal conversation about music, love, spirituality, Lord Shiva, struggle, and the meaning of life.",
+        "Kailash Kher opens up about his childhood, leaving home at a young age, living in Rishikesh, Gurukuls and Ashrams, learning from saints, studying the Vedas, facing hunger and financial struggles, and eventually finding his path in music."
+      ],
+      "date": "2026-09-25",
+      "reason": "fetch failed"
     }
   ],
   "generator": {
@@ -4409,55 +4271,49 @@
     }
   },
   "run": {
-    "at": "2026-09-25T00:45:49.522Z",
-    "discovered": 1145,
+    "at": "2026-09-25T05:11:40.176Z",
+    "discovered": 257,
     "eligible": 8,
     "processed": 1,
-    "skipped": 1137,
-    "failed": 7,
+    "skipped": 250,
+    "failed": 6,
     "pruned": 0,
     "errors": [
       {
-        "stage": "process",
-        "id": "desk-3ad889803e0f",
-        "message": "yt-dlp failed: ERROR: [youtube] pbLFmU1p-7A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:44:19.356Z"
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-09-24T23:11:55.957Z"
       },
       {
         "stage": "process",
-        "id": "desk-dee6c95cd3fc",
-        "message": "yt-dlp failed: ERROR: [youtube] UY9H83yQnzc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:44:34.419Z"
+        "id": "desk-ca6e062e5b2e",
+        "message": "fetch failed",
+        "at": "2026-09-24T23:54:41.421Z"
       },
       {
         "stage": "process",
-        "id": "desk-93a3b9ee5af2",
-        "message": "yt-dlp failed: ERROR: [youtube] y7pwGVQEiKc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:44:49.541Z"
+        "id": "desk-6aaaa548f64e",
+        "message": "fetch failed",
+        "at": "2026-09-25T01:57:11.657Z"
       },
       {
         "stage": "process",
-        "id": "desk-a84f95444c21",
-        "message": "yt-dlp failed: ERROR: [youtube] 1MoqBEv9BGw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:45:04.362Z"
+        "id": "desk-ea372e4b2afd",
+        "message": "fetch failed",
+        "at": "2026-09-25T02:58:04.678Z"
       },
       {
         "stage": "process",
-        "id": "desk-5108c0ccd062",
-        "message": "yt-dlp failed: ERROR: [youtube] UZta_d0Da0Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:45:19.518Z"
+        "id": "desk-c558c6abb516",
+        "message": "fetch failed",
+        "at": "2026-09-25T03:57:39.688Z"
       },
       {
         "stage": "process",
-        "id": "desk-3bd07add1c56",
-        "message": "yt-dlp failed: ERROR: [youtube] SwFk7IIBxtc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:45:34.401Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2d2a344b1bc3",
-        "message": "yt-dlp failed: ERROR: [youtube] wdgqbgho37o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-25T00:45:49.513Z"
+        "id": "desk-d43b93b96d2e",
+        "message": "fetch failed",
+        "at": "2026-09-25T05:11:40.061Z"
       }
     ],
     "estimatedCostUsd": 0
