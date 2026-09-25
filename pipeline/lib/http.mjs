@@ -30,6 +30,15 @@ export class HttpError extends Error {
  * @param {number} o.retries   attempts AFTER the first
  * @param {"json"|"text"|"buffer"|"response"} o.as
  */
+/** "fetch failed" says nothing; the cause (ECONNRESET, ENOTFOUND, ETIMEDOUT…)
+ *  is what tells a sleeping laptop from a dead host. Keep the message, add it. */
+export function describeNetError(e, label) {
+  if (!e || e.name !== "TypeError" || !e.cause) return e;
+  const c = e.cause;
+  const why = [c.code, c.message].filter(Boolean).join(" ");
+  return Object.assign(new Error(`${e.message} (${label}: ${why})`), { cause: c });
+}
+
 export async function request(url, {
   method = "GET", headers = {}, body, timeout = 30000, retries = 3,
   as = "text", label = "http",
@@ -66,7 +75,7 @@ export async function request(url, {
     } catch (e) {
       const aborted = e.name === "AbortError";
       const fatal = e instanceof HttpError && !e.retryable;
-      if (fatal || attempt === retries) throw aborted ? new Error(`timeout after ${timeout}ms — ${short(url)}`) : e;
+      if (fatal || attempt === retries) throw aborted ? new Error(`timeout after ${timeout}ms — ${short(url)}`) : describeNetError(e, short(url));
       lastErr = e;
     } finally {
       clearTimeout(timer);

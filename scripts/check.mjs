@@ -28,6 +28,7 @@
  */
 import { existsSync } from "node:fs";
 import { chromium } from "playwright";
+import { cfg } from "../pipeline/config.mjs";
 
 const SITE = (process.argv[2] || "https://career.askakshay.com").replace(/\/$/, "");
 let failed = 0;
@@ -134,7 +135,7 @@ await checkPage("/podcasts", "podcasts", async (page) => {
     return f && !/Loading/.test(f.textContent);
   }, { timeout: 15000 }).catch(() => {});
 
-  const shape = await page.evaluate(async () => {
+  const shape = await page.evaluate(async (floor) => {
     const doc = await (await fetch("/podcasts.json", { cache: "no-store" })).json();
     return {
       episodes: (doc.episodes || []).length,
@@ -147,7 +148,10 @@ await checkPage("/podcasts", "podcasts", async (page) => {
        * A mismatch renders an empty heading, which reads as a bug in the feed. */
       orphanDays: (doc.days || []).filter((d) => !(d.episodeIds || []).length).length,
       undated: (doc.episodes || []).filter((e) => !e.date).length,
-      thin: (doc.episodes || []).filter((e) => (e.learnings || []).length < 5).length,
+      /* THE FLOOR COMES FROM config.mjs, NOT A LITERAL. This said `< 5` while
+       * the pipeline published at 4, so every deploy from 23 Sep failed this
+       * check over episodes the pipeline had correctly admitted. */
+      thin: (doc.episodes || []).filter((e) => (e.learnings || []).length < floor).length,
       builtHoursAgo: Math.round((Date.now() - Date.parse(doc.generatedAt || 0)) / 3600000),
       /* THE SAME ARITHMETIC RETENTION USES, not a re-derivation of it.
        * This measured wall-clock milliseconds and rounded, while buildPublic
@@ -159,12 +163,12 @@ await checkPage("/podcasts", "podcasts", async (page) => {
       oldestAgeDays: (doc.episodes || []).reduce((max, e) => Math.max(max,
         Math.round((Date.parse(doc.today + "T00:00:00Z") - Date.parse(e.date + "T00:00:00Z")) / 86400000)), 0),
     };
-  });
+  }, cfg.minLearnings);
 
   ok("podcasts: the feed parses and declares a retention window", shape.retention > 0, shape.retention);
   ok("podcasts: a card for every published episode", shape.cards === shape.episodes, `${shape.cards} cards / ${shape.episodes} episodes`);
   ok("podcasts: every episode carries at least the floor of points",
-    shape.thin === 0, `${shape.thin} episode(s) below the floor`);
+    shape.thin === 0, `${shape.thin} episode(s) below the floor of ${cfg.minLearnings}`);
   ok("podcasts: no episode without a date", shape.undated === 0, shape.undated);
   ok("podcasts: no day heading without episodes", shape.orphanDays === 0, shape.orphanDays);
 
