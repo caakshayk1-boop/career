@@ -173,7 +173,17 @@ log "at $(git rev-parse --short HEAD)"
 
 # ── READ ────────────────────────────────────────────────────────────────────
 log "reading podcasts"
-node pipeline/run.mjs "$@"
+# KEEP THE MAC AWAKE FOR THE READ. A run paces itself against Groq's token
+# windows and can take hours; on 2026-09-25 it took six, and six of eight
+# episodes died with "fetch failed" at roughly hourly intervals — the shape of
+# a laptop idling to sleep and dropping its connection. caffeinate -i holds an
+# idle-sleep assertion for exactly as long as the child runs, and releases it
+# when the child exits. It cannot stop a closed lid on battery; nothing can.
+if command -v caffeinate >/dev/null; then
+  caffeinate -i node pipeline/run.mjs "$@"
+else
+  node pipeline/run.mjs "$@"
+fi
 
 if [ "$DRY" = "1" ]; then log "dry run — nothing written."; exit 0; fi
 
