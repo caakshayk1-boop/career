@@ -23993,8 +23993,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-25T17:39:12.514Z",
-      "updatedAt": "2026-09-25T17:39:17.136Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] pbLFmU1p-7A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-25T23:30:20.410Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-dee6c95cd3fc": {
       "status": "FAILED",
@@ -24005,8 +24005,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-25T17:39:17.146Z",
-      "updatedAt": "2026-09-25T17:39:32.191Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] UY9H83yQnzc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-26T00:11:13.154Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "desk-93a3b9ee5af2": {
       "status": "FAILED",
@@ -24017,8 +24017,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-25T17:39:32.201Z",
-      "updatedAt": "2026-09-25T17:39:47.098Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] y7pwGVQEiKc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-26T00:12:52.208Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "desk-a84f95444c21": {
       "status": "FAILED",
@@ -24029,11 +24029,11 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-25T17:39:47.109Z",
-      "updatedAt": "2026-09-25T17:40:04.801Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 1MoqBEv9BGw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-26T00:29:20.835Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-5108c0ccd062": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "Flat Buying Guide 2026 | Everything You Need To Know",
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=UZta_d0Da0Q",
@@ -24041,11 +24041,12 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-25T17:40:04.810Z",
-      "updatedAt": "2026-09-25T17:40:17.043Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] UZta_d0Da0Q: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-26T00:41:24.485Z",
+      "reason": "fewer than half the learnings are quotable from the source",
+      "learningsFound": 5
     },
     "desk-3bd07add1c56": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "Nifty Down | But These 5 Stocks Are Still Strong",
       "show": "Groww",
       "url": "https://www.youtube.com/watch?v=SwFk7IIBxtc",
@@ -24053,104 +24054,153 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-25T17:40:17.052Z",
-      "updatedAt": "2026-09-25T17:40:32.084Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] SwFk7IIBxtc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-26T01:19:56.743Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] SwFk7IIBxtc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+      "payload": {
+        "id": "desk-3bd07add1c56",
+        "sourceId": "desk",
+        "show": "Groww",
+        "title": "Nifty Down | But These 5 Stocks Are Still Strong",
+        "guest": "",
+        "topics": [
+          "stock analysis",
+          "market downturn",
+          "valuation",
+          "profit margins",
+          "customer concentration"
+        ],
+        "summary": "The episode examines why the broader Nifty index is falling while highlighting five individual stocks that remain resilient. It explains how relative strength, sales drivers, thin margins, high valuations, and customer concentration affect investment decisions, offering a clear framework for picking winners in a weak market.",
+        "url": "https://www.youtube.com/watch?v=SwFk7IIBxtc",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-09-24T00:00:00.000Z",
+        "date": "2026-09-26",
+        "durationSec": 856,
+        "processedAt": "2026-09-26T01:19:56.742Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Relative strength line above zero signals market outperformance",
+            "idea": "A stock’s relative strength line above zero means it beats the market; useful for spotting resilient stocks during downturns.",
+            "why": "It gives investors a quantitative filter to pick stocks that can hold up when the broader market falls, improving portfolio resilience.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[0:10] how the stock is performing in comparison to the broader market. If this line is above zero, the stock is outperforming the market",
+            "t": 10,
+            "kind": "said",
+            "confidence": 0.95,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Finlex Cables’ 35‑44% Q1 sales growth driven by volume and fibre price hikes",
+            "idea": "Sudden surge in sales can result from commodity price changes (copper, fibre) combined with volume; investors should consider underlying drivers.",
+            "why": "Distinguishes temporary commodity‑driven spikes from sustainable demand, preventing overvaluation of growth that may fade.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[1:48] 35%, 22% and 44% in Quarter 1 FY27. This was driven by a combination of volume growth and improving fibre prices in communication cables",
+            "t": 108,
+            "kind": "said",
+            "confidence": 0.9,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Redington’s operating margin typically 2‑2.2%; thin profit despite high revenue",
+            "idea": "Distribution companies earn very low margins; growth must be paired with margin preservation to sustain value.",
+            "why": "Highlights that revenue growth alone is insufficient; investors must assess margin stability to gauge true profitability.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[5:24] operating margin of distribution businesses generally remains around just 2 to 2.2%",
+            "t": 324,
+            "kind": "said",
+            "confidence": 0.88,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Antelope Silan Energy’s 28.6x P/E may become expensive if production slows",
+            "idea": "High valuation is contingent on continued production ramp‑up; a slowdown would make the stock overvalued.",
+            "why": "Warns that the stock’s premium hinges on growth assumptions, prompting scrutiny of operational risk before buying at lofty multiples.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[8:04] stock is trading at around 28.6x price to earnings. If growth slows down, the 28x valuation may seem a bit expensive",
+            "t": 484,
+            "kind": "interpretation",
+            "confidence": 0.85,
+            "grounding": 0.67,
+            "repaired": false
+          },
+          {
+            "rank": 5,
+            "headline": "MV Photowatt’s 86% order book concentration in top five customers risks revenue volatility",
+            "idea": "Heavy order concentration can hurt earnings if any key customer delays delivery.",
+            "why": "Concentration risk can cause sudden revenue drops; diversification of the customer base is a crucial risk‑mitigation factor.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[10:43] Around 86% of the order book comes from the top five customers. Therefore, execution delays can impact revenue",
+            "t": 643,
+            "kind": "interpretation",
+            "confidence": 0.84,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 6,
+            "headline": "IPCA Labs’ 36x P/E justified by 14‑16% revenue guidance and 22‑23% EBITDA margin",
+            "idea": "High P/E supported only if revenue and margin growth targets are met; otherwise valuation is overextended.",
+            "why": "Links valuation directly to forward‑looking financial targets, urging investors to verify the feasibility of those forecasts.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[12:08] stock is trading at around 36x. … Consolidated EBITDA margin guidance has also been revised to 22‑23%",
+            "t": 728,
+            "kind": "interpretation",
+            "confidence": 0.83,
+            "grounding": 0.7,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 88
+      }
     },
-    "desk-5902e3c3da2b": {
+    "desk-2d2a344b1bc3": {
       "status": "FAILED",
-      "title": "From ₹5L to ₹40L+: The Career Choices That Actually Accelerate Your Salary in the AI Era | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=jKaTeI9IoTo",
-      "id": "desk-5902e3c3da2b",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:41:59.370Z",
-      "updatedAt": "2026-09-26T00:42:03.739Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] jKaTeI9IoTo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-45753e46564a": {
-      "status": "FAILED",
-      "title": "Can a Home Loan Overdraft Save You Interest?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=i9O0FZxpCRE",
-      "id": "desk-45753e46564a",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:42:03.748Z",
-      "updatedAt": "2026-09-26T00:42:18.737Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] i9O0FZxpCRE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-d6db0231b9f9": {
-      "status": "FAILED",
-      "title": "India's Worst Himalayan Disaster | Kedarnath 2013 True Story | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=va4GOYAAu2A",
-      "id": "desk-d6db0231b9f9",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:42:18.744Z",
-      "updatedAt": "2026-09-26T00:42:33.981Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] va4GOYAAu2A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-6c6ef4b6631f": {
-      "status": "FAILED",
-      "title": "UNGA ‘26 | Trump Threatens To Nuke Iran & Bends To China | Netanyahu Faces Biggest Walkout | Akash B",
+      "title": "Time Up For Gyanesh Kumar? | Can The Opposition Unite To Save India’s Democracy? | Akash Banerjee",
       "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=zf74kljc7x8",
-      "id": "desk-6c6ef4b6631f",
+      "url": "https://www.youtube.com/watch?v=wdgqbgho37o",
+      "id": "desk-2d2a344b1bc3",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:42:33.991Z",
-      "updatedAt": "2026-09-26T00:42:48.763Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] zf74kljc7x8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "seenAt": "2026-09-26T01:19:56.769Z",
+      "updatedAt": "2026-09-26T01:36:22.723Z",
+      "reason": "yt-dlp failed: no stderr"
     },
-    "desk-0963168689cf": {
+    "desk-7292be454886": {
       "status": "FAILED",
-      "title": "Citizen Protest: Protestors Detained by Delhi Police | Irfan Ki Report",
+      "title": "Cockroaches On Election Commission Thik Karo DriveWhat Next For Gyanesh Kumar?",
       "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=Uiv-3atMdkw",
-      "id": "desk-0963168689cf",
+      "url": "https://www.youtube.com/watch?v=oSA8iZjEoh0",
+      "id": "desk-7292be454886",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:42:48.772Z",
-      "updatedAt": "2026-09-26T00:43:03.919Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] Uiv-3atMdkw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-619a2984be1e": {
-      "status": "FAILED",
-      "title": "Promo | EP-453 with Crime Author & Investigative Journalist Vivek Agrawal Premieres Tomorrow at 5 PM",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=XSjprosiTIo",
-      "id": "desk-619a2984be1e",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:43:03.928Z",
-      "updatedAt": "2026-09-26T00:43:19.057Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] XSjprosiTIo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-bdc63d869004": {
-      "status": "FAILED",
-      "title": "India’s🇮🇳 Space HERO - Aliens, Space Economy & Rocket Making | Ex-ISRO Scientist & Skyroot CEO | TRS",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=GRvShUB2XBc",
-      "id": "desk-bdc63d869004",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:43:19.066Z",
-      "updatedAt": "2026-09-26T00:43:33.810Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] GRvShUB2XBc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
-    },
-    "desk-124698429e7d": {
-      "status": "FAILED",
-      "title": "Only Few Months Left for EPFO! | How PYQs Can Shape Your Preparation | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=9-8DHzeF484",
-      "id": "desk-124698429e7d",
-      "processingVersion": "1.0.0",
-      "promptVersion": "2026-09-14.a",
-      "seenAt": "2026-09-26T00:43:33.819Z",
-      "updatedAt": "2026-09-26T00:44:54.976Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 9-8DHzeF484: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "seenAt": "2026-09-26T01:36:22.732Z",
+      "updatedAt": "2026-09-26T02:35:59.969Z",
+      "reason": "The operation was aborted due to timeout"
     }
   }
 }

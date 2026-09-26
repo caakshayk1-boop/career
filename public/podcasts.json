@@ -1,11 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-26T00:44:54.985Z",
+  "generatedAt": "2026-09-26T02:36:00.002Z",
   "today": "2026-09-26",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
+    {
+      "date": "2026-09-26",
+      "label": "Today",
+      "episodeIds": [
+        "desk-3bd07add1c56"
+      ]
+    },
     {
       "date": "2026-09-25",
       "label": "Yesterday",
@@ -94,6 +101,127 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-3bd07add1c56",
+      "sourceId": "desk",
+      "show": "Groww",
+      "title": "Nifty Down | But These 5 Stocks Are Still Strong",
+      "guest": "",
+      "topics": [
+        "stock analysis",
+        "market downturn",
+        "valuation",
+        "profit margins",
+        "customer concentration"
+      ],
+      "summary": "The episode examines why the broader Nifty index is falling while highlighting five individual stocks that remain resilient. It explains how relative strength, sales drivers, thin margins, high valuations, and customer concentration affect investment decisions, offering a clear framework for picking winners in a weak market.",
+      "url": "https://www.youtube.com/watch?v=SwFk7IIBxtc",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-24T00:00:00.000Z",
+      "date": "2026-09-26",
+      "durationSec": 856,
+      "processedAt": "2026-09-26T01:19:56.742Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Relative strength line above zero signals market outperformance",
+          "idea": "A stock’s relative strength line above zero means it beats the market; useful for spotting resilient stocks during downturns.",
+          "why": "It gives investors a quantitative filter to pick stocks that can hold up when the broader market falls, improving portfolio resilience.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[0:10] how the stock is performing in comparison to the broader market. If this line is above zero, the stock is outperforming the market",
+          "t": 10,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Finlex Cables’ 35‑44% Q1 sales growth driven by volume and fibre price hikes",
+          "idea": "Sudden surge in sales can result from commodity price changes (copper, fibre) combined with volume; investors should consider underlying drivers.",
+          "why": "Distinguishes temporary commodity‑driven spikes from sustainable demand, preventing overvaluation of growth that may fade.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[1:48] 35%, 22% and 44% in Quarter 1 FY27. This was driven by a combination of volume growth and improving fibre prices in communication cables",
+          "t": 108,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Redington’s operating margin typically 2‑2.2%; thin profit despite high revenue",
+          "idea": "Distribution companies earn very low margins; growth must be paired with margin preservation to sustain value.",
+          "why": "Highlights that revenue growth alone is insufficient; investors must assess margin stability to gauge true profitability.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[5:24] operating margin of distribution businesses generally remains around just 2 to 2.2%",
+          "t": 324,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Antelope Silan Energy’s 28.6x P/E may become expensive if production slows",
+          "idea": "High valuation is contingent on continued production ramp‑up; a slowdown would make the stock overvalued.",
+          "why": "Warns that the stock’s premium hinges on growth assumptions, prompting scrutiny of operational risk before buying at lofty multiples.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[8:04] stock is trading at around 28.6x price to earnings. If growth slows down, the 28x valuation may seem a bit expensive",
+          "t": 484,
+          "kind": "interpretation",
+          "confidence": 0.85,
+          "grounding": 0.67,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "MV Photowatt’s 86% order book concentration in top five customers risks revenue volatility",
+          "idea": "Heavy order concentration can hurt earnings if any key customer delays delivery.",
+          "why": "Concentration risk can cause sudden revenue drops; diversification of the customer base is a crucial risk‑mitigation factor.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[10:43] Around 86% of the order book comes from the top five customers. Therefore, execution delays can impact revenue",
+          "t": 643,
+          "kind": "interpretation",
+          "confidence": 0.84,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "IPCA Labs’ 36x P/E justified by 14‑16% revenue guidance and 22‑23% EBITDA margin",
+          "idea": "High P/E supported only if revenue and margin growth targets are met; otherwise valuation is overextended.",
+          "why": "Links valuation directly to forward‑looking financial targets, urging investors to verify the feasibility of those forecasts.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[12:08] stock is trading at around 36x. … Consolidated EBITDA margin guidance has also been revised to 22‑23%",
+          "t": 728,
+          "kind": "interpretation",
+          "confidence": 0.83,
+          "grounding": 0.7,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 88
+    },
     {
       "id": "diary-of-a-ceo-c88fad86d466",
       "sourceId": "diary-of-a-ceo",
@@ -4457,73 +4585,13 @@
   ],
   "pending": [
     {
-      "id": "desk-3ad889803e0f",
-      "title": "How Much Does It Cost To Own A Private Jet? Business Explained | Abhinav Tripathi | FO566Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=pbLFmU1p-7A",
+      "id": "desk-dc91758e3ad9",
+      "title": "“Ritwik Ghatak Insisted Nargis Play Mother Bengal In My Bangladeshi Documentary” Biswajit Chatterjee",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=yUaO0mbPDwQ",
       "takeaways": [
-        "₹25 crore is the annual cost to run a private jet.",
-        "Charter pricing charges you for the aircraft’s journey rather than your own."
-      ],
-      "date": "2026-09-26",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-dee6c95cd3fc",
-      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
-      "takeaways": [
-        "A rebel group from Yemen disrupted Saudi Arabia’s oil supply, leaving the kingdom struggling to sell its own oil.",
-        "When the rebels captured three random islands, Brent crude prices rose to $110 a barrel."
-      ],
-      "date": "2026-09-26",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-93a3b9ee5af2",
-      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
-      "takeaways": [
-        "He shares the money principles he teaches his kids before they turn 15.",
-        "He emphasizes that the content is not investment advice and urges viewers to do their own due diligence."
-      ],
-      "date": "2026-09-26",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-a84f95444c21",
-      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
-      "takeaways": [
-        "The episode uses a practical case study of two working professionals in different age groups to demonstrate a retirement calculator.",
-        "It shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined for retirement planning."
-      ],
-      "date": "2026-09-26",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-5108c0ccd062",
-      "title": "Flat Buying Guide 2026 | Everything You Need To Know",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=UZta_d0Da0Q",
-      "takeaways": [
-        "Demystify complex industry terms like carpet area, built‑up area, and super built‑up area to understand how usable space is calculated and avoid paying for non‑existent square footage.",
-        "Buying a flat is one of the largest financial decisions you’ll make, and navigating the market without clear knowledge can easily lead to costly mistakes."
-      ],
-      "date": "2026-09-26",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-3bd07add1c56",
-      "title": "Nifty Down | But These 5 Stocks Are Still Strong",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=SwFk7IIBxtc",
-      "takeaways": [
-        "Groww is India’s Best Investment App and the Largest Stock Broker.",
-        "Stock market investing content in Hindi | Finance content in Hindi | Personal finance content in Hindi Investment in securities market are subject to market risks, read all the related documents carefully before investing."
+        "Ritwik Ghatak insisted that Nargis portray Mother Bengal in the Bangladeshi documentary.",
+        "The episode features Biswajit Chatterjee as the guest."
       ],
       "date": "2026-09-26",
       "reason": "over the 8/day cap"
@@ -4534,8 +4602,8 @@
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=ydT1WdeJ_38",
       "takeaways": [
-        "Sadhguru speaks about the reality of death, the nature of grief, and why mortality should awaken human beings to the briefness of life.",
-        "The episode is excerpted from Sadhguru Darshan at Isha Yoga Center on 15 September 2026."
+        "Responding to a seeker’s question about losing his brother, Sadhguru speaks about the reality of death, the nature of grief, and why mortality should awaken human beings to the briefness of life and the nature of one’s existence.",
+        "Excerpted from Sadhguru Darshan at Isha Yoga Center on 15 September 2026."
       ],
       "date": "2026-09-26",
       "reason": "over the 8/day cap"
@@ -4546,8 +4614,20 @@
       "show": "Sid Warrier",
       "url": "https://www.youtube.com/watch?v=M8m9Yjv42tk",
       "takeaways": [
-        "Companies are quietly rehiring the people they let go after earlier AI job‑loss predictions.",
-        "AI’s answers appear convincing on the surface but lack substance behind them, like a film set."
+        "In 2003, we were told AI would take 300 million jobs.",
+        "It's 2026, and companies are quietly rehiring the people they let go."
+      ],
+      "date": "2026-09-26",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-23d141c2f2ae",
+      "title": "UPSC Polity Basics: Start with the Right Foundation | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=l_Az6q3NXXY",
+      "takeaways": [
+        "Building a strong foundation in Polity is essential for every UPSC aspirant.",
+        "Abhay Kumar, Expert Faculty at Drishti IAS, explains the basics of Indian Polity in a simple, structured, and easy-to-understand manner."
       ],
       "date": "2026-09-26",
       "reason": "over the 8/day cap"
@@ -4558,8 +4638,8 @@
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=0KyN6vtAnJM",
       "takeaways": [
-        "Suraj is investing ₹4,500 each month while earning a ₹29,900 salary.",
-        "The episode discusses planning a house purchase without rushing."
+        "Suraj, 22, earns ₹29,900 a month, helps pay his younger siblings' education, has a personal loan, and is investing ₹4,500 monthly while aiming to buy a family home.",
+        "The discussion emphasizes increasing investments as income grows and planning a house purchase without rushing."
       ],
       "date": "2026-09-26",
       "reason": "over the 8/day cap"
@@ -4570,107 +4650,119 @@
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=chOTpc907AE",
       "takeaways": [
-        "Access the full data and references used in this episode.",
-        "The episode includes guests Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal."
+        "You can access the full data and references used in this episode.",
+        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
       "date": "2026-09-26",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-5902e3c3da2b",
-      "title": "From ₹5L to ₹40L+: The Career Choices That Actually Accelerate Your Salary in the AI Era | FWS",
-      "show": "Finance With Sharan",
-      "url": "https://www.youtube.com/watch?v=jKaTeI9IoTo",
-      "takeaways": [
-        "Vineet shares that his sales team in Mumbai grew from under 1% to 50% market share.",
-        "He notes that HCL chose not to lay off a single employee during the 2008 recession."
-      ],
-      "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] jKaTeI9IoTo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-45753e46564a",
-      "title": "Can a Home Loan Overdraft Save You Interest?",
+      "id": "desk-1a8a9df81ccc",
+      "title": "How to Read Your Salary Slip?",
       "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=i9O0FZxpCRE",
+      "url": "https://www.youtube.com/watch?v=dq44PB-rs2k",
       "takeaways": [
-        "Can a home loan overdraft really help you reduce your interest cost, or is it only useful for a certain type of borrower?",
-        "In this video, Aastha Khurana explains how a home loan overdraft works, how it differs from a regular home loan, and the situations where it can actually make sense."
+        "Does a ₹15 lakh CTC really mean you'll receive ₹1.25 lakh in your bank account every month?",
+        "In this video, Aastha Khurana breaks down a salary slip to explain the difference between CTC, Gross Salary and Net Salary, along with the common components you should understand before accepting a job offer."
       ],
       "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] i9O0FZxpCRE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-d6db0231b9f9",
-      "title": "India's Worst Himalayan Disaster | Kedarnath 2013 True Story | Dhruv Rathee",
+      "id": "desk-57329e6625df",
+      "title": "Deep Sea Mysteries That Science Can't Explain! | Dhruv Rathee",
       "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=va4GOYAAu2A",
+      "url": "https://www.youtube.com/watch?v=q678XLOueN8",
       "takeaways": [
-        "Use promo code DR20 on your first transfer to receive a bonus.",
-        "This offer is available to new users only."
+        "Learn how to make content creation your part‑time job or full‑time career.",
+        "Learn how to harness the power of ChatGPT and transform your life."
       ],
       "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] va4GOYAAu2A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-6c6ef4b6631f",
-      "title": "UNGA ‘26 | Trump Threatens To Nuke Iran & Bends To China | Netanyahu Faces Biggest Walkout | Akash B",
+      "id": "desk-d305b2a58483",
+      "title": "Where to park your cash for Short Term!",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
+      "takeaways": [
+        "This video explains Debt Mutual Funds.",
+        "Debt funds may look simple and safe, but choosing the wrong fund for your investment duration can expose you to credit risk, liquidity risk and interest rate risk."
+      ],
+      "date": "2026-09-26",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-3ad889803e0f",
+      "title": "How Much Does It Cost To Own A Private Jet? Business Explained | Abhinav Tripathi | FO566Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=pbLFmU1p-7A",
+      "takeaways": [
+        "₹25 crore is the annual cost to operate a private jet.",
+        "Banks typically refuse to finance aircraft purchases."
+      ],
+      "date": "2026-09-26",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-dee6c95cd3fc",
+      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
+      "takeaways": [
+        "The rebel group from Yemen disrupted Saudi Arabia’s oil supply, causing the kingdom to struggle to sell its oil worldwide.",
+        "When the rebels captured three islands, Brent crude prices rose to $110 a barrel, sending shockwaves through the global economy."
+      ],
+      "date": "2026-09-26",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
+      "id": "desk-93a3b9ee5af2",
+      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
+      "takeaways": [
+        "He shares the money principles he’s teaching his kids before they turn 15.",
+        "The video presents fundamental money ideas you should consider, but it isn’t investment advice."
+      ],
+      "date": "2026-09-26",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
+      "id": "desk-a84f95444c21",
+      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
+      "takeaways": [
+        "A practical case study of two working professionals shows how a retirement calculator can illustrate the use of SIP, step‑up SIP, SWP and step‑up SWP together for retirement planning.",
+        "The episode explores how much money is needed to retire comfortably and whether the retirement corpus will last for the rest of life."
+      ],
+      "date": "2026-09-26",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-2d2a344b1bc3",
+      "title": "Time Up For Gyanesh Kumar? | Can The Opposition Unite To Save India’s Democracy? | Akash Banerjee",
       "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=zf74kljc7x8",
+      "url": "https://www.youtube.com/watch?v=wdgqbgho37o",
       "takeaways": [
-        "The latest UN General Assembly once again shown how geopolitics is changing at a rapid pace.",
-        "On one hand Donald Trump is threatening Iran’s annihilation - on the other he's bending backwards to please China."
+        "Never has the Modi Govt faced such a political challenge in 12 years of existence - a stinging investigation that has exposed the deep rot in the Election Commission of India and the actions of Chief Election Commissioner Gyanesh Kumar.",
+        "What’s more - the allegations stem from the objects of the two other Election Commissioners who work with Kumar."
       ],
       "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] zf74kljc7x8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: no stderr"
     },
     {
-      "id": "desk-0963168689cf",
-      "title": "Citizen Protest: Protestors Detained by Delhi Police | Irfan Ki Report",
+      "id": "desk-7292be454886",
+      "title": "Cockroaches On Election Commission Thik Karo DriveWhat Next For Gyanesh Kumar?",
       "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=Uiv-3atMdkw",
+      "url": "https://www.youtube.com/watch?v=oSA8iZjEoh0",
       "takeaways": [
-        "On September 25, 2026 (Friday) protesters gathered to demand action against Chief Election Commissioner Gyanesh Kumar Gupta and call for his resignation.",
-        "Unarmed protesters were met with force by the Delhi Police, who packed them in several buses and took them around Delhi for many hours."
+        "Abhijeet Dipke and co‑conveners held a press conference titled “Hijacking of India’s Democracy.”",
+        "The conference addressed recent revelations concerning Chief Election Commissioner Gyanesh Kumar."
       ],
       "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] Uiv-3atMdkw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-619a2984be1e",
-      "title": "Promo | EP-453 with Crime Author & Investigative Journalist Vivek Agrawal Premieres Tomorrow at 5 PM",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=XSjprosiTIo",
-      "takeaways": [
-        "Promo | EP-453 with Crime Author & Investigative Journalist Vivek Agrawal Premieres Tomorrow at 5 PM “There was a reason the makers of Dhurandhar didn’t use Dawood’s full name.",
-        "Dawood doesn’t spare anyone who insults him.” “All the underworld gangs in this country are still active."
-      ],
-      "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] XSjprosiTIo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-bdc63d869004",
-      "title": "India’s🇮🇳 Space HERO - Aliens, Space Economy & Rocket Making | Ex-ISRO Scientist & Skyroot CEO | TRS",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=GRvShUB2XBc",
-      "takeaways": [
-        "Pawan explains that his team is building rockets in India for the global space market.",
-        "He says space technology could transform communication, agriculture, manufacturing and global connectivity."
-      ],
-      "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] GRvShUB2XBc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-124698429e7d",
-      "title": "Only Few Months Left for EPFO! | How PYQs Can Shape Your Preparation | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=9-8DHzeF484",
-      "takeaways": [
-        "With only a few months left for the UPSC EPFO 2026 examination, it is important to make every hour of preparation count.",
-        "But how do you know where to focus and which topics deserve more attention?"
-      ],
-      "date": "2026-09-26",
-      "reason": "yt-dlp failed: ERROR: [youtube] 9-8DHzeF484: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "The operation was aborted due to timeout"
     }
   ],
   "generator": {
@@ -4681,65 +4773,59 @@
     "tts": "none",
     "episodes": {
       "local": 6,
-      "ai": 20
+      "ai": 21
     }
   },
   "run": {
-    "at": "2026-09-26T00:44:54.984Z",
-    "discovered": 1146,
+    "at": "2026-09-26T02:35:59.998Z",
+    "discovered": 257,
     "eligible": 8,
-    "processed": 0,
-    "skipped": 1138,
-    "failed": 8,
+    "processed": 1,
+    "skipped": 249,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
-        "stage": "process",
-        "id": "desk-5902e3c3da2b",
-        "message": "yt-dlp failed: ERROR: [youtube] jKaTeI9IoTo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:42:03.739Z"
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "terminated (feeds.megaphone.fm/thediaryofaceo: ECONNRESET read ECONNRESET)",
+        "at": "2026-09-25T23:13:48.316Z"
       },
       {
         "stage": "process",
-        "id": "desk-45753e46564a",
-        "message": "yt-dlp failed: ERROR: [youtube] i9O0FZxpCRE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:42:18.737Z"
+        "id": "desk-3ad889803e0f",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-25T23:30:20.410Z"
       },
       {
         "stage": "process",
-        "id": "desk-d6db0231b9f9",
-        "message": "yt-dlp failed: ERROR: [youtube] va4GOYAAu2A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:42:33.981Z"
+        "id": "desk-dee6c95cd3fc",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-26T00:11:13.154Z"
       },
       {
         "stage": "process",
-        "id": "desk-6c6ef4b6631f",
-        "message": "yt-dlp failed: ERROR: [youtube] zf74kljc7x8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:42:48.763Z"
+        "id": "desk-93a3b9ee5af2",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-09-26T00:12:52.208Z"
       },
       {
         "stage": "process",
-        "id": "desk-0963168689cf",
-        "message": "yt-dlp failed: ERROR: [youtube] Uiv-3atMdkw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:43:03.919Z"
+        "id": "desk-a84f95444c21",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-26T00:29:20.835Z"
       },
       {
         "stage": "process",
-        "id": "desk-619a2984be1e",
-        "message": "yt-dlp failed: ERROR: [youtube] XSjprosiTIo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:43:19.057Z"
+        "id": "desk-2d2a344b1bc3",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-26T01:36:22.723Z"
       },
       {
         "stage": "process",
-        "id": "desk-bdc63d869004",
-        "message": "yt-dlp failed: ERROR: [youtube] GRvShUB2XBc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:43:33.810Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-124698429e7d",
-        "message": "yt-dlp failed: ERROR: [youtube] 9-8DHzeF484: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-26T00:44:54.976Z"
+        "id": "desk-7292be454886",
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-09-26T02:35:59.969Z"
       }
     ],
     "estimatedCostUsd": 0
