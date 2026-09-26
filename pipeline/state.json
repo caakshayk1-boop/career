@@ -24055,6 +24055,102 @@
       "seenAt": "2026-09-25T17:40:17.052Z",
       "updatedAt": "2026-09-25T17:40:32.084Z",
       "reason": "yt-dlp failed: ERROR: [youtube] SwFk7IIBxtc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-5902e3c3da2b": {
+      "status": "FAILED",
+      "title": "From ₹5L to ₹40L+: The Career Choices That Actually Accelerate Your Salary in the AI Era | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=jKaTeI9IoTo",
+      "id": "desk-5902e3c3da2b",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:41:59.370Z",
+      "updatedAt": "2026-09-26T00:42:03.739Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] jKaTeI9IoTo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-45753e46564a": {
+      "status": "FAILED",
+      "title": "Can a Home Loan Overdraft Save You Interest?",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=i9O0FZxpCRE",
+      "id": "desk-45753e46564a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:42:03.748Z",
+      "updatedAt": "2026-09-26T00:42:18.737Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] i9O0FZxpCRE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-d6db0231b9f9": {
+      "status": "FAILED",
+      "title": "India's Worst Himalayan Disaster | Kedarnath 2013 True Story | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=va4GOYAAu2A",
+      "id": "desk-d6db0231b9f9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:42:18.744Z",
+      "updatedAt": "2026-09-26T00:42:33.981Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] va4GOYAAu2A: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-6c6ef4b6631f": {
+      "status": "FAILED",
+      "title": "UNGA ‘26 | Trump Threatens To Nuke Iran & Bends To China | Netanyahu Faces Biggest Walkout | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=zf74kljc7x8",
+      "id": "desk-6c6ef4b6631f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:42:33.991Z",
+      "updatedAt": "2026-09-26T00:42:48.763Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] zf74kljc7x8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-0963168689cf": {
+      "status": "FAILED",
+      "title": "Citizen Protest: Protestors Detained by Delhi Police | Irfan Ki Report",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=Uiv-3atMdkw",
+      "id": "desk-0963168689cf",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:42:48.772Z",
+      "updatedAt": "2026-09-26T00:43:03.919Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Uiv-3atMdkw: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-619a2984be1e": {
+      "status": "FAILED",
+      "title": "Promo | EP-453 with Crime Author & Investigative Journalist Vivek Agrawal Premieres Tomorrow at 5 PM",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=XSjprosiTIo",
+      "id": "desk-619a2984be1e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:43:03.928Z",
+      "updatedAt": "2026-09-26T00:43:19.057Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] XSjprosiTIo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-bdc63d869004": {
+      "status": "FAILED",
+      "title": "India’s🇮🇳 Space HERO - Aliens, Space Economy & Rocket Making | Ex-ISRO Scientist & Skyroot CEO | TRS",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=GRvShUB2XBc",
+      "id": "desk-bdc63d869004",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:43:19.066Z",
+      "updatedAt": "2026-09-26T00:43:33.810Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] GRvShUB2XBc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-124698429e7d": {
+      "status": "FAILED",
+      "title": "Only Few Months Left for EPFO! | How PYQs Can Shape Your Preparation | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=9-8DHzeF484",
+      "id": "desk-124698429e7d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-26T00:43:33.819Z",
+      "updatedAt": "2026-09-26T00:44:54.976Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 9-8DHzeF484: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }
