@@ -1,11 +1,19 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T00:58:08.565Z",
+  "generatedAt": "2026-09-28T02:55:23.959Z",
   "today": "2026-09-28",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
+    {
+      "date": "2026-09-28",
+      "label": "Today",
+      "episodeIds": [
+        "desk-3b17589d3e58",
+        "desk-b381e3f1c9e8"
+      ]
+    },
     {
       "date": "2026-09-27",
       "label": "Yesterday",
@@ -110,6 +118,247 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-3b17589d3e58",
+      "sourceId": "desk",
+      "show": "Figuring Out",
+      "title": "Boring Business Masterclass: ₹1000 Cr Opportunity | Asish Mohapatra | FO567 Raj Shamani",
+      "guest": "Asish Mohapatra",
+      "topics": [
+        "business strategy",
+        "supply chain",
+        "cost arbitrage",
+        "productization",
+        "company culture"
+      ],
+      "summary": "In this episode, Asish Mohapatra breaks down a massive ₹1000 cr business opportunity, explaining how to create a high‑margin supply‑chain model and scale from a B2B platform to a manufacturing operation. He shares practical tactics for cost arbitrage, product packaging, funding via low‑capital media services, and building transparent company culture, offering a clear roadmap for ambitious entrepreneurs.",
+      "url": "https://www.youtube.com/watch?v=GhZgfEfz8og",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-26T00:00:00.000Z",
+      "date": "2026-09-28",
+      "durationSec": 12228,
+      "processedAt": "2026-09-28T00:13:21.047Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Intermediary margin structure: 4–5% per step, 8–10% total",
+          "idea": "Each intermediary in a raw‑material supply chain adds roughly 4–5% margin; including financing costs the total markup typically reaches 8–10%.",
+          "why": "Understanding this rule explains why corporate buyers cut out layers and helps founders price their products competitively.",
+          "action": "Calculate your supply‑chain markup using the 4‑5% per‑intermediary rule to identify where cost reductions are possible.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"typically what I have seen is that for bulk materials it tends to be for any material it tends to be 4 to 5% per step. So what have you done essentially and this includes cost of financing as well. Typically it would get added up by 8 to 10%\"",
+          "t": 1971,
+          "kind": "said",
+          "confidence": 0.94,
+          "grounding": 0.59,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Two‑step pathway: start as B2B platform, then build factory",
+          "idea": "First create a large B2B intermediary platform to earn trust and cash flow, then use that platform as a launchpad for your own manufacturing operation.",
+          "why": "It offers a low‑risk route to heavy‑asset manufacturing by leveraging network effects before committing capital.",
+          "action": "Develop a marketplace or procurement platform in your target industry before planning a production facility.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"We took this angle of building a B2B platform, then we built manufacturing. So, you could take a two‑step approach, maybe a three‑step approach, but finally you have to land up there.\"",
+          "t": 2487,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 0.71,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Continuous cost arbitrage: relocate to the next cheapest country",
+          "idea": "Monitor global cost curves and shift production to whichever country becomes the cheapest, as cost advantages are temporary.",
+          "why": "It provides a systematic way to stay ahead of competitors who rely on static low‑cost locations.",
+          "action": "Set up a quarterly review of labor and material costs across emerging manufacturing hubs and plan migration pathways.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"The arbitrage will always be taken away... Today India is cheaper. Tomorrow Nigeria is going to be cheaper... you have to set up operations in Nigeria.\"",
+          "t": 3292,
+          "kind": "said",
+          "confidence": 0.91,
+          "grounding": 0.79,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Productize into micro‑packets to match consumption habits",
+          "idea": "Pack products into the smallest useful quantity so consumers only buy what they need, increasing sales velocity and reducing waste.",
+          "why": "Micro‑packaging aligns with how people naturally consume, driving higher repeat purchases and lower inventory costs.",
+          "action": "Redesign your SKU strategy to offer a ‘micro‑packet’ version of each product.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"The world was designed to pack everything in very large buckets... the world was designed to consume everything in very small packets... If you can pack in two biscuits pack, your product will sell the most.\"",
+          "t": 2900,
+          "kind": "said",
+          "confidence": 0.89,
+          "grounding": 0.65,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "V‑media strategy to fund high‑capital entry",
+          "idea": "Before entering a capital‑intensive industry, create a low‑capital “V‑media” service that generates cash flow, then use that cash to fund the next stage.",
+          "why": "It solves the chicken‑egg problem of needing cash to build a business that itself generates cash.",
+          "action": "Identify a lightweight service you can launch quickly in your target market to bootstrap the larger venture.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"you have to figure out a V media because likely a 25year-old in India does not have capital... you have to figure out a v media for capital\"",
+          "t": 3472,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 0.86,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Open‑Office Cabin Principle boosts transparency",
+          "idea": "Removing a dedicated founder office and allowing casual, random interactions reduces intimidation and increases transparency among employees.",
+          "why": "It reshapes organizational culture, fostering openness and faster decision‑making.",
+          "action": "Eliminate closed executive offices and encourage walk‑around leadership.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"...and when they see you all the time here after a week or a month or two months then their fear goes away at the garage is just random dude walking here and there because he's just out there and that has helped me a lot because it increases transparency\"",
+          "t": 12135,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.55,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 1,
+      "audio": null,
+      "readSeconds": 109
+    },
+    {
+      "id": "desk-b381e3f1c9e8",
+      "sourceId": "desk",
+      "show": "Zero1 by Zerodha",
+      "title": "Can Indian Parents afford to raise a kid in India?",
+      "guest": "",
+      "topics": [
+        "family finance",
+        "childrearing costs",
+        "investment planning",
+        "education inflation"
+      ],
+      "summary": "In this episode the hosts examine the financial challenges Indian parents face when raising a child, covering everything from birth expenses to long‑term education costs. They break down the steep inflation in schooling fees, the importance of emergency reserves, and practical investment strategies like SIPs and pre‑birth savings plans. Listeners get a clear picture of how to budget effectively for a child's future in India.",
+      "url": "https://www.youtube.com/watch?v=EUhOrRbQcJY",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-09-26T00:00:00.000Z",
+      "date": "2026-09-28",
+      "durationSec": 1152,
+      "processedAt": "2026-09-28T00:55:52.926Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Hospital delivery cost range (government vs private)",
+          "idea": "In India a delivery at a government hospital averages ₹2,300 while a private one averages ₹37,000, and complications can add another ₹20–30k.",
+          "why": "Shows the huge hidden expense gap, countering the assumption that childbirth is uniformly affordable, and forces parents to budget for worst‑case private costs.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "hospital delivery in a government hospital can cost around 2300 and private can be 37000",
+          "t": 241,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Insurance often excludes delivery and has long waiting periods",
+          "idea": "Many health plans do not cover pregnancy delivery and have waiting periods from 3 months up to 6 years, so parents should verify coverage before birth.",
+          "why": "Corrects the belief that standard health insurance will automatically pay for childbirth, prompting proactive policy checks.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "most general insurance is actually not. There is a waiting period well. And I found this example ... giving 3 months to six years waiting period for their insurance.",
+          "t": 290,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 0.92,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Education inflation 10–12% vs general 5–6%",
+          "idea": "School fees rise at 10–12% per year, roughly double every 7 years, far exceeding general CPI, so budgeting must account for this steep rise.",
+          "why": "Provides a concrete, counterintuitive metric that forces families to treat education costs as a rapidly growing liability, not a static line item.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "current inflation is 5 to 6% but education inflation is 10 to 12% which means 1 lakh fee today is equal to ₹2 lakh in just seven years",
+          "t": 680,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.92,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Build an emergency fund equal to 6–10 months of expenses",
+          "idea": "Before adding any child‑related costs, set aside an emergency reserve covering 6–10 months of living expenses to buffer against unexpected financial shocks.",
+          "why": "A specific, often‑overlooked safety net that prevents new parents from derailing long‑term plans when unforeseen costs arise.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "please get that emergency fund for six to 10 months at least.",
+          "t": 1043,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Start a SIP in an index fund for your child at any amount",
+          "idea": "Begin a systematic investment plan (SIP) in a low‑cost index fund now, even with ₹500–₹1,000 per month, and increase it over time to build meaningful support by age 18–20.",
+          "why": "Provides a scalable, low‑barrier investment framework that compounds into substantial capital for education or other child expenses.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "don't hesitate to start an SIP with any index fund right now for your child. Even if it’s ₹500, ₹1,000, it doesn’t matter. You must start and you keep increasing it.",
+          "t": 1066,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.75,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "5–6‑year savings plan before having a child",
+          "idea": "Begin a dedicated savings plan 5–7 years before the birth of a child to build a buffer for future expenses.",
+          "why": "A reusable timeline rule that aligns long‑term wealth building with the high‑cost phase of parenthood, ensuring funds are in place when needed.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Financial planning will be done for at least 5 6 7 years plus then you can start thinking of having a child.",
+          "t": 983,
+          "kind": "recommendation",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 104
+    },
     {
       "id": "desk-5902e3c3da2b",
       "sourceId": "desk",
@@ -5077,36 +5326,13 @@
   ],
   "pending": [
     {
-      "id": "desk-04eee23f118c",
-      "title": "The Real Power Of Gyanesh Kumar | Why Modi-Shah Will Never Push The CEC To Resign | Akash Banerjee",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=UNQNIbAPGIk",
+      "id": "desk-f99512461d09",
+      "title": "Class 6 NCERT Geography Complete Revision | Marathon Class | One Shot",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=OXkmgEd74YA",
       "takeaways": [
-        "Faith in India’s Chief Election Commissioner had already been on a dismal low - Indian Express’s investigation has shaken the nation’s faith in the Election Commission.",
-        "Demands for Gyanesh Kumar’s arrest and prosecution is being made - Congress party has gone on a major offensive - the CJP now set to start a national agitation on the matter.."
-      ],
-      "date": "2026-09-28",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-df696932f287",
-      "title": "“Mumbai Police Torpedoed Ajit Doval’s Off-The-Books Mission Against Dawood” Vivek Agrawal",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=iE6AJBnSHJ8",
-      "takeaways": [
-        "“Mumbai Police Torpedoed Ajit Doval’s Off-The-Books Mission Against Dawood” Vivek Agrawal #ANIPodcast #SmitaPrakash #DawoodIbrahim  #AjitDoval #Dhurandhar #Mumbai Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-09-28",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-38f3d4479cf2",
-      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
-      "takeaways": [
-        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
-        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
+        "In this special Class 6 NCERT Geography Marathon Revision Class, Priyanka Mam takes you through the complete Class 6 NCERT Geography syllabus in one go, making it easier for students to revise all the important concepts in a single session.",
+        "This marathon session is especially useful for students who want to study and revise Class 6 NCERT Geography in one place and build a strong foundation in Geography."
       ],
       "date": "2026-09-28",
       "reason": "over the 8/day cap"
@@ -5129,8 +5355,8 @@
       "show": "The Ranveer Show",
       "url": "https://www.youtube.com/watch?v=GRvShUB2XBc",
       "takeaways": [
-        "Pawan explains that his team is building rockets in India for the global space market.",
-        "He says space technology could transform communication, agriculture, manufacturing and global connectivity."
+        "Pawan Kumar Chandana explains that his team is building rockets in India for the global space market.",
+        "He discusses how space technology could transform communication, agriculture, manufacturing and global connectivity."
       ],
       "date": "2026-09-28",
       "reason": "over the 8/day cap"
@@ -5141,8 +5367,8 @@
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
       "takeaways": [
-        "The rebel group from Yemen disrupted Saudi Arabia’s oil supply, making it struggle to sell its own oil.",
-        "When the rebels captured three random islands, Brent Crude prices rose to $110 a barrel."
+        "The rebel group from Yemen disrupted Saudi Arabia’s oil supply, leaving the kingdom struggling to sell its own oil.",
+        "When the rebels captured three random islands, Brent crude prices jumped to $110 a barrel, sending shockwaves through the global economy."
       ],
       "date": "2026-09-28",
       "reason": "over the 8/day cap"
@@ -5153,7 +5379,7 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
       "takeaways": [
-        "Money principles are being taught to kids before they turn 15.",
+        "Money principles the host is teaching their kids before they turn 15.",
         "The content is not investment advice; viewers should do their own due diligence."
       ],
       "date": "2026-09-28",
@@ -5165,8 +5391,20 @@
       "show": "CA Rachana Ranade",
       "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
       "takeaways": [
-        "The episode uses a practical case study of two working professionals of different ages to illustrate retirement planning with a calculator.",
-        "It shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined to help meet retirement goals."
+        "A practical case study of two working professionals with different ages is used to illustrate retirement planning.",
+        "The episode shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
+      ],
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-5108c0ccd062",
+      "title": "Flat Buying Guide 2026 | Everything You Need To Know",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=UZta_d0Da0Q",
+      "takeaways": [
+        "The video explains industry terms such as carpet area, built‑up area, and super built‑up area and shows how actual usable space is calculated.",
+        "It aims to help viewers avoid paying premium rates for non‑existent square footage when buying a flat."
       ],
       "date": "2026-09-28",
       "reason": "over the 8/day cap"
@@ -5189,70 +5427,11 @@
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=chOTpc907AE",
       "takeaways": [
-        "Access the full data and references used in this episode below and open them alongside the episode while watching."
+        "Access the full data and references used in this episode below.",
+        "The episode features Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal as guests."
       ],
       "date": "2026-09-28",
       "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-194b11b96532",
-      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
-      "takeaways": [
-        "Focus on smart asset allocation tailored for your 30s.",
-        "Balance high‑growth opportunities with risk management to accelerate financial independence."
-      ],
-      "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-4e40afc56ac5",
-      "title": "5 Monopoly Stocks Trading at 5-Year Lows",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=sy-nFt4Jzhg",
-      "takeaways": [
-        "Can a dominant market position still fail to translate into strong stock returns?",
-        "In this video, we analyse five businesses with unusually strong market shares, network effects or category leadership, but very different growth and valuation challenges."
-      ],
-      "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] sy-nFt4Jzhg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-ce0265ed54b4",
-      "title": "‘13 करोड़’, जिनका वोट ख़तरे में आख़िर हैं कौन? | Irfan Ki Report",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=9oP8-s1xcZA",
-      "takeaways": [
-        "Irfan interviews people who have been put on notice by the Election Commission.",
-        "He asks them for their reactions to the Election Commission’s latest statement."
-      ],
-      "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] 9oP8-s1xcZA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-4df28ccbec3c",
-      "title": "UPSC CSAT 2027 Preparation Begins! | Percentage | Part 2 | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=6Rhrvs16jY0",
-      "takeaways": [
-        "Early, systematic and consistent CSAT preparation is increasingly important for UPSC aspirants.",
-        "The lecture teaches systematic techniques and shortcut methods to solve percentage questions quickly and accurately."
-      ],
-      "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] 6Rhrvs16jY0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-3b17589d3e58",
-      "title": "Boring Business Masterclass: ₹1000 Cr Opportunity | Asish Mohapatra | FO567 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=GhZgfEfz8og",
-      "takeaways": [
-        "Boring industries are the biggest opportunities.",
-        "Solving a customer's whole problem creates an unbeatable moat."
-      ],
-      "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] GhZgfEfz8og: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-3cbfe9a633a0",
@@ -5260,23 +5439,58 @@
       "show": "Ankur Warikoo",
       "url": "https://www.youtube.com/watch?v=BNijrGE-BTA",
       "takeaways": [
-        "The right decision for using ₹50,000 depends on your responsibilities, safety net, and the cost of the problem you’re trying to solve.",
-        "Before seeking the highest return, first consider what the money needs to do for you."
+        "The right financial decision depends on your responsibilities, safety net, and the cost of the problem you’re trying to solve.",
+        "Before focusing on the highest return, first consider what you need the money to do for you."
       ],
       "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] BNijrGE-BTA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: no stderr"
     },
     {
-      "id": "desk-b381e3f1c9e8",
-      "title": "Can Indian Parents afford to raise a kid in India?",
-      "show": "Zero1 by Zerodha",
-      "url": "https://www.youtube.com/watch?v=EUhOrRbQcJY",
+      "id": "desk-04eee23f118c",
+      "title": "The Real Power Of Gyanesh Kumar | Why Modi-Shah Will Never Push The CEC To Resign | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=UNQNIbAPGIk",
       "takeaways": [
-        "The \"cost\" of raising a child can hardly be a deciding factor for any parent, because the experience and the memories you make all along are priceless!",
-        "With this video we aim to help you get a perspective on how you can manage your finances well around this beautiful experience of your life."
+        "Faith in India’s Chief Election Commissioner had already been on a dismal low - Indian Express’s investigation has shaken the nation’s faith in the Election Commission.",
+        "Demands for Gyanesh Kumar’s arrest and prosecution is being made - Congress party has gone on a major offensive - the CJP now set to start a national agitation on the matter.."
       ],
       "date": "2026-09-28",
-      "reason": "yt-dlp failed: ERROR: [youtube] EUhOrRbQcJY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "desk-2c79ba80c908",
+      "title": "Do Developing Countries Actually Need FDI? The Shocking Truth | Cracknomics Ep 110",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=0DGdlcSI7kE",
+      "takeaways": [
+        "In week in Cracknomics, we connect the dots behind India’s biggest economic paradoxes.",
+        "Foreign investors are pulling record money out of Indian markets—net FDI collapsed from $44 billion in FY21 to under $1 billion, even as gross inflows hit a record $94.8 billion."
+      ],
+      "date": "2026-09-28",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "desk-df696932f287",
+      "title": "“Mumbai Police Torpedoed Ajit Doval’s Off-The-Books Mission Against Dawood” Vivek Agrawal",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=iE6AJBnSHJ8",
+      "takeaways": [
+        "“Mumbai Police Torpedoed Ajit Doval’s Off-The-Books Mission Against Dawood” Vivek Agrawal #ANIPodcast #SmitaPrakash #DawoodIbrahim  #AjitDoval #Dhurandhar #Mumbai Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-38f3d4479cf2",
+      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
+      "takeaways": [
+        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
+        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: no stderr"
     },
     {
       "id": "gunjanshouts-4a29f13cc8d0",
@@ -5285,7 +5499,7 @@
       "url": "https://www.youtube.com/watch?v=Tpmn6S-9T0M",
       "takeaways": [],
       "date": "2026-09-27",
-      "reason": "yt-dlp failed: ERROR: [youtube] Tpmn6S-9T0M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: no stderr"
     }
   ],
   "generator": {
@@ -5296,65 +5510,53 @@
     "tts": "none",
     "episodes": {
       "local": 6,
-      "ai": 24
+      "ai": 26
     }
   },
   "run": {
-    "at": "2026-09-28T00:58:08.564Z",
+    "at": "2026-09-28T02:55:23.943Z",
     "discovered": 1147,
     "eligible": 8,
-    "processed": 0,
+    "processed": 2,
     "skipped": 1139,
-    "failed": 8,
+    "failed": 6,
     "pruned": 0,
     "errors": [
       {
         "stage": "process",
         "id": "gunjanshouts-4a29f13cc8d0",
-        "message": "yt-dlp failed: ERROR: [youtube] Tpmn6S-9T0M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:56:23.684Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-194b11b96532",
-        "message": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:56:38.900Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-4e40afc56ac5",
-        "message": "yt-dlp failed: ERROR: [youtube] sy-nFt4Jzhg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:56:53.639Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-ce0265ed54b4",
-        "message": "yt-dlp failed: ERROR: [youtube] 9oP8-s1xcZA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:57:08.746Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-4df28ccbec3c",
-        "message": "yt-dlp failed: ERROR: [youtube] 6Rhrvs16jY0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:57:23.827Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-3b17589d3e58",
-        "message": "yt-dlp failed: ERROR: [youtube] GhZgfEfz8og: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:57:38.935Z"
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-27T23:09:45.313Z"
       },
       {
         "stage": "process",
         "id": "desk-3cbfe9a633a0",
-        "message": "yt-dlp failed: ERROR: [youtube] BNijrGE-BTA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:57:53.659Z"
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-28T00:30:03.527Z"
       },
       {
         "stage": "process",
-        "id": "desk-b381e3f1c9e8",
-        "message": "yt-dlp failed: ERROR: [youtube] EUhOrRbQcJY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-28T00:58:08.556Z"
+        "id": "desk-04eee23f118c",
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-09-28T01:35:20.635Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-2c79ba80c908",
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-09-28T02:29:54.156Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-df696932f287",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-28T02:39:30.713Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-38f3d4479cf2",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-28T02:55:23.918Z"
       }
     ],
     "estimatedCostUsd": 0
