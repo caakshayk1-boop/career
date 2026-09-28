@@ -24777,6 +24777,102 @@
       "seenAt": "2026-09-27T06:51:42.637Z",
       "updatedAt": "2026-09-27T06:57:42.940Z",
       "reason": "yt-dlp failed: no stderr"
+    },
+    "gunjanshouts-4a29f13cc8d0": {
+      "status": "FAILED",
+      "title": "Why Your Mind Won’t Switch Off: Overthinking, Anxiety & Stress | Dr. Era Dutta with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=Tpmn6S-9T0M",
+      "id": "gunjanshouts-4a29f13cc8d0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:56:19.022Z",
+      "updatedAt": "2026-09-28T00:56:23.684Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Tpmn6S-9T0M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-194b11b96532": {
+      "status": "FAILED",
+      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
+      "id": "desk-194b11b96532",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:56:23.710Z",
+      "updatedAt": "2026-09-28T00:56:38.900Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-4e40afc56ac5": {
+      "status": "FAILED",
+      "title": "5 Monopoly Stocks Trading at 5-Year Lows",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=sy-nFt4Jzhg",
+      "id": "desk-4e40afc56ac5",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:56:38.908Z",
+      "updatedAt": "2026-09-28T00:56:53.639Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] sy-nFt4Jzhg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-ce0265ed54b4": {
+      "status": "FAILED",
+      "title": "‘13 करोड़’, जिनका वोट ख़तरे में आख़िर हैं कौन? | Irfan Ki Report",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=9oP8-s1xcZA",
+      "id": "desk-ce0265ed54b4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:56:53.648Z",
+      "updatedAt": "2026-09-28T00:57:08.746Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 9oP8-s1xcZA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-4df28ccbec3c": {
+      "status": "FAILED",
+      "title": "UPSC CSAT 2027 Preparation Begins! | Percentage | Part 2 | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=6Rhrvs16jY0",
+      "id": "desk-4df28ccbec3c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:57:08.754Z",
+      "updatedAt": "2026-09-28T00:57:23.827Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6Rhrvs16jY0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-3b17589d3e58": {
+      "status": "FAILED",
+      "title": "Boring Business Masterclass: ₹1000 Cr Opportunity | Asish Mohapatra | FO567 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=GhZgfEfz8og",
+      "id": "desk-3b17589d3e58",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:57:23.834Z",
+      "updatedAt": "2026-09-28T00:57:38.935Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] GhZgfEfz8og: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-3cbfe9a633a0": {
+      "status": "FAILED",
+      "title": "Same 50,000 INR - 5 Different People. Which One Are You?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=BNijrGE-BTA",
+      "id": "desk-3cbfe9a633a0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:57:38.943Z",
+      "updatedAt": "2026-09-28T00:57:53.659Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] BNijrGE-BTA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-b381e3f1c9e8": {
+      "status": "FAILED",
+      "title": "Can Indian Parents afford to raise a kid in India?",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=EUhOrRbQcJY",
+      "id": "desk-b381e3f1c9e8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-28T00:57:53.667Z",
+      "updatedAt": "2026-09-28T00:58:08.556Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] EUhOrRbQcJY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

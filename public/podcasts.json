@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T06:57:43.054Z",
-  "today": "2026-09-27",
+  "generatedAt": "2026-09-28T00:58:08.565Z",
+  "today": "2026-09-28",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-09-27",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-5902e3c3da2b",
         "desk-d6db0231b9f9",
@@ -17,7 +17,7 @@
     },
     {
       "date": "2026-09-26",
-      "label": "Yesterday",
+      "label": "Saturday",
       "episodeIds": [
         "desk-3bd07add1c56"
       ]
@@ -5077,111 +5077,38 @@
   ],
   "pending": [
     {
-      "id": "desk-3ad889803e0f",
-      "title": "How Much Does It Cost To Own A Private Jet? Business Explained | Abhinav Tripathi | FO566Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=pbLFmU1p-7A",
+      "id": "desk-04eee23f118c",
+      "title": "The Real Power Of Gyanesh Kumar | Why Modi-Shah Will Never Push The CEC To Resign | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=UNQNIbAPGIk",
       "takeaways": [
-        "₹25 crore is the annual cost to run a private jet.",
-        "Charter pricing charges you for the aircraft’s journey rather than your own."
+        "Faith in India’s Chief Election Commissioner had already been on a dismal low - Indian Express’s investigation has shaken the nation’s faith in the Election Commission.",
+        "Demands for Gyanesh Kumar’s arrest and prosecution is being made - Congress party has gone on a major offensive - the CJP now set to start a national agitation on the matter.."
       ],
-      "date": "2026-09-27",
+      "date": "2026-09-28",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-dee6c95cd3fc",
-      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
+      "id": "desk-df696932f287",
+      "title": "“Mumbai Police Torpedoed Ajit Doval’s Off-The-Books Mission Against Dawood” Vivek Agrawal",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=iE6AJBnSHJ8",
       "takeaways": [
-        "A rebel group from Yemen disrupted Saudi Arabia’s oil supply, leaving the kingdom struggling to sell its own oil.",
-        "When the rebels captured three random islands, Brent crude prices rose to $110 a barrel."
+        "“Mumbai Police Torpedoed Ajit Doval’s Off-The-Books Mission Against Dawood” Vivek Agrawal #ANIPodcast #SmitaPrakash #DawoodIbrahim  #AjitDoval #Dhurandhar #Mumbai Tune in here: linktr.ee/podcastwithsmitaprakash"
       ],
-      "date": "2026-09-27",
+      "date": "2026-09-28",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-93a3b9ee5af2",
-      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
-      "takeaways": [
-        "He shares the money principles he teaches his kids before they turn 15.",
-        "He emphasizes that the content is not investment advice and urges viewers to do their own due diligence."
-      ],
-      "date": "2026-09-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-a84f95444c21",
-      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
-      "takeaways": [
-        "The episode uses a practical case study of two working professionals in different age groups to demonstrate a retirement calculator.",
-        "It shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined for retirement planning."
-      ],
-      "date": "2026-09-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-5108c0ccd062",
-      "title": "Flat Buying Guide 2026 | Everything You Need To Know",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=UZta_d0Da0Q",
-      "takeaways": [
-        "Demystify complex industry terms like carpet area, built‑up area, and super built‑up area to understand how usable space is calculated and avoid paying for non‑existent square footage.",
-        "Buying a flat is one of the largest financial decisions you’ll make, and navigating the market without clear knowledge can easily lead to costly mistakes."
-      ],
-      "date": "2026-09-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-426a7741a1dd",
-      "title": "Sadhguru Darshan Part 3 – Sadhguru Responds To A Seeker Who Lost His Brother",
+      "id": "desk-38f3d4479cf2",
+      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
       "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=ydT1WdeJ_38",
+      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
       "takeaways": [
-        "Sadhguru speaks about the reality of death, the nature of grief, and why mortality should awaken human beings to the briefness of life.",
-        "The episode is excerpted from Sadhguru Darshan at Isha Yoga Center on 15 September 2026."
+        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
+        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
       ],
-      "date": "2026-09-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-fdb64932c090",
-      "title": "AI : Doomsday vs NeuroOptimism | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=M8m9Yjv42tk",
-      "takeaways": [
-        "Companies are quietly rehiring the people they let go after earlier AI job‑loss predictions.",
-        "AI’s answers appear convincing on the surface but lack substance behind them, like a film set."
-      ],
-      "date": "2026-09-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-ca6e062e5b2e",
-      "title": "Can A 29,000 INR Salary Support A Family And Buy A DREAM HOUSE? | Money Matters 126",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=0KyN6vtAnJM",
-      "takeaways": [
-        "Suraj is investing ₹4,500 each month while earning a ₹29,900 salary.",
-        "The episode discusses planning a house purchase without rushing."
-      ],
-      "date": "2026-09-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-e09ddcc9c437",
-      "title": "If You Were PM For 5 Years, What Would You Change?",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=chOTpc907AE",
-      "takeaways": [
-        "Access the full data and references used in this episode.",
-        "The episode includes guests Nikhil Kamath, Rajesh Magow, and Puneet Chhatwal."
-      ],
-      "date": "2026-09-27",
+      "date": "2026-09-28",
       "reason": "over the 8/day cap"
     },
     {
@@ -5193,32 +5120,8 @@
         "Can a home loan overdraft really help you reduce your interest cost, or is it only useful for a certain type of borrower?",
         "In this video, Aastha Khurana explains how a home loan overdraft works, how it differs from a regular home loan, and the situations where it can actually make sense."
       ],
-      "date": "2026-09-27",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "desk-0963168689cf",
-      "title": "Citizen Protest: Protestors Detained by Delhi Police | Irfan Ki Report",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=Uiv-3atMdkw",
-      "takeaways": [
-        "On September 25, 2026 (Friday) protesters gathered to demand action against Chief Election Commissioner Gyanesh Kumar Gupta and call for his resignation.",
-        "Unarmed protesters were met with force by the Delhi Police, who packed them in several buses and took them around Delhi for many hours."
-      ],
-      "date": "2026-09-27",
-      "reason": "no candidate ideas found in the transcript"
-    },
-    {
-      "id": "desk-619a2984be1e",
-      "title": "Promo | EP-453 with Crime Author & Investigative Journalist Vivek Agrawal Premieres Tomorrow at 5 PM",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=XSjprosiTIo",
-      "takeaways": [
-        "Promo | EP-453 with Crime Author & Investigative Journalist Vivek Agrawal Premieres Tomorrow at 5 PM “There was a reason the makers of Dhurandhar didn’t use Dawood’s full name.",
-        "Dawood doesn’t spare anyone who insults him.” “All the underworld gangs in this country are still active."
-      ],
-      "date": "2026-09-27",
-      "reason": "yt-dlp failed: no stderr"
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
     },
     {
       "id": "desk-bdc63d869004",
@@ -5229,20 +5132,160 @@
         "Pawan explains that his team is building rockets in India for the global space market.",
         "He says space technology could transform communication, agriculture, manufacturing and global connectivity."
       ],
-      "date": "2026-09-27",
-      "reason": "The operation was aborted due to timeout"
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-124698429e7d",
-      "title": "Only Few Months Left for EPFO! | How PYQs Can Shape Your Preparation | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=9-8DHzeF484",
+      "id": "desk-dee6c95cd3fc",
+      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
       "takeaways": [
-        "With only a few months left for the UPSC EPFO 2026 examination, it is important to make every hour of preparation count.",
-        "But how do you know where to focus and which topics deserve more attention?"
+        "The rebel group from Yemen disrupted Saudi Arabia’s oil supply, making it struggle to sell its own oil.",
+        "When the rebels captured three random islands, Brent Crude prices rose to $110 a barrel."
       ],
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-93a3b9ee5af2",
+      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
+      "takeaways": [
+        "Money principles are being taught to kids before they turn 15.",
+        "The content is not investment advice; viewers should do their own due diligence."
+      ],
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-a84f95444c21",
+      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
+      "takeaways": [
+        "The episode uses a practical case study of two working professionals of different ages to illustrate retirement planning with a calculator.",
+        "It shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined to help meet retirement goals."
+      ],
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-fdb64932c090",
+      "title": "AI : Doomsday vs NeuroOptimism | Dr Sid Warrier",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=M8m9Yjv42tk",
+      "takeaways": [
+        "In 2003, we were told AI would take 300 million jobs.",
+        "It's 2026, and companies are quietly rehiring the people they let go."
+      ],
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-e09ddcc9c437",
+      "title": "If You Were PM For 5 Years, What Would You Change?",
+      "show": "WTF is (clips)",
+      "url": "https://www.youtube.com/watch?v=chOTpc907AE",
+      "takeaways": [
+        "Access the full data and references used in this episode below and open them alongside the episode while watching."
+      ],
+      "date": "2026-09-28",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-194b11b96532",
+      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
+      "takeaways": [
+        "Focus on smart asset allocation tailored for your 30s.",
+        "Balance high‑growth opportunities with risk management to accelerate financial independence."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-4e40afc56ac5",
+      "title": "5 Monopoly Stocks Trading at 5-Year Lows",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=sy-nFt4Jzhg",
+      "takeaways": [
+        "Can a dominant market position still fail to translate into strong stock returns?",
+        "In this video, we analyse five businesses with unusually strong market shares, network effects or category leadership, but very different growth and valuation challenges."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] sy-nFt4Jzhg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-ce0265ed54b4",
+      "title": "‘13 करोड़’, जिनका वोट ख़तरे में आख़िर हैं कौन? | Irfan Ki Report",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=9oP8-s1xcZA",
+      "takeaways": [
+        "Irfan interviews people who have been put on notice by the Election Commission.",
+        "He asks them for their reactions to the Election Commission’s latest statement."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] 9oP8-s1xcZA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-4df28ccbec3c",
+      "title": "UPSC CSAT 2027 Preparation Begins! | Percentage | Part 2 | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=6Rhrvs16jY0",
+      "takeaways": [
+        "Early, systematic and consistent CSAT preparation is increasingly important for UPSC aspirants.",
+        "The lecture teaches systematic techniques and shortcut methods to solve percentage questions quickly and accurately."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6Rhrvs16jY0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-3b17589d3e58",
+      "title": "Boring Business Masterclass: ₹1000 Cr Opportunity | Asish Mohapatra | FO567 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=GhZgfEfz8og",
+      "takeaways": [
+        "Boring industries are the biggest opportunities.",
+        "Solving a customer's whole problem creates an unbeatable moat."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] GhZgfEfz8og: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-3cbfe9a633a0",
+      "title": "Same 50,000 INR - 5 Different People. Which One Are You?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=BNijrGE-BTA",
+      "takeaways": [
+        "The right decision for using ₹50,000 depends on your responsibilities, safety net, and the cost of the problem you’re trying to solve.",
+        "Before seeking the highest return, first consider what the money needs to do for you."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] BNijrGE-BTA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-b381e3f1c9e8",
+      "title": "Can Indian Parents afford to raise a kid in India?",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=EUhOrRbQcJY",
+      "takeaways": [
+        "The \"cost\" of raising a child can hardly be a deciding factor for any parent, because the experience and the memories you make all along are priceless!",
+        "With this video we aim to help you get a perspective on how you can manage your finances well around this beautiful experience of your life."
+      ],
+      "date": "2026-09-28",
+      "reason": "yt-dlp failed: ERROR: [youtube] EUhOrRbQcJY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "gunjanshouts-4a29f13cc8d0",
+      "title": "Why Your Mind Won’t Switch Off: Overthinking, Anxiety & Stress | Dr. Era Dutta with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=Tpmn6S-9T0M",
+      "takeaways": [],
       "date": "2026-09-27",
-      "reason": "yt-dlp failed: no stderr"
+      "reason": "yt-dlp failed: ERROR: [youtube] Tpmn6S-9T0M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -5257,49 +5300,61 @@
     }
   },
   "run": {
-    "at": "2026-09-27T06:57:43.050Z",
-    "discovered": 256,
+    "at": "2026-09-28T00:58:08.564Z",
+    "discovered": 1147,
     "eligible": 8,
-    "processed": 3,
-    "skipped": 248,
-    "failed": 5,
+    "processed": 0,
+    "skipped": 1139,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
-        "at": "2026-09-26T23:18:58.378Z"
+        "stage": "process",
+        "id": "gunjanshouts-4a29f13cc8d0",
+        "message": "yt-dlp failed: ERROR: [youtube] Tpmn6S-9T0M: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:56:23.684Z"
       },
       {
         "stage": "process",
-        "id": "desk-45753e46564a",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-27T01:09:15.009Z"
+        "id": "desk-194b11b96532",
+        "message": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:56:38.900Z"
       },
       {
         "stage": "process",
-        "id": "desk-0963168689cf",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-27T03:12:40.655Z"
+        "id": "desk-4e40afc56ac5",
+        "message": "yt-dlp failed: ERROR: [youtube] sy-nFt4Jzhg: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:56:53.639Z"
       },
       {
         "stage": "process",
-        "id": "desk-619a2984be1e",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-27T03:28:19.144Z"
+        "id": "desk-ce0265ed54b4",
+        "message": "yt-dlp failed: ERROR: [youtube] 9oP8-s1xcZA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:57:08.746Z"
       },
       {
         "stage": "process",
-        "id": "desk-bdc63d869004",
-        "message": "The operation was aborted due to timeout",
-        "at": "2026-09-27T06:51:42.609Z"
+        "id": "desk-4df28ccbec3c",
+        "message": "yt-dlp failed: ERROR: [youtube] 6Rhrvs16jY0: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:57:23.827Z"
       },
       {
         "stage": "process",
-        "id": "desk-124698429e7d",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-27T06:57:42.940Z"
+        "id": "desk-3b17589d3e58",
+        "message": "yt-dlp failed: ERROR: [youtube] GhZgfEfz8og: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:57:38.935Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-3cbfe9a633a0",
+        "message": "yt-dlp failed: ERROR: [youtube] BNijrGE-BTA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:57:53.659Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-b381e3f1c9e8",
+        "message": "yt-dlp failed: ERROR: [youtube] EUhOrRbQcJY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-28T00:58:08.556Z"
       }
     ],
     "estimatedCostUsd": 0
