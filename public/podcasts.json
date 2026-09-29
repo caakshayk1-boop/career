@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-29T00:45:18.392Z",
+  "generatedAt": "2026-09-29T02:17:30.285Z",
   "today": "2026-09-29",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -20,6 +20,7 @@
       "date": "2026-09-28",
       "label": "Yesterday",
       "episodeIds": [
+        "diary-of-a-ceo-32fc4aa61089",
         "desk-3b17589d3e58",
         "desk-b381e3f1c9e8"
       ]
@@ -787,6 +788,187 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 128
+    },
+    {
+      "id": "diary-of-a-ceo-32fc4aa61089",
+      "sourceId": "diary-of-a-ceo",
+      "show": "The Diary Of A CEO",
+      "title": "Adam Neumann: The Real Story Behind WeWork, A $4 Billion Cab Ride, And Surviving A $460 Million Debt",
+      "guest": "Adam Neumann",
+      "topics": [
+        "wework",
+        "entrepreneurship",
+        "psychology",
+        "growth",
+        "leadership"
+      ],
+      "summary": "In this episode, Adam Neumann reflects on the rise and fall of WeWork, discussing how massive investment offers and rapid growth distorted the company's mission. He also shares personal psychological lessons from his childhood and the corporate collapse, offering strategies for resilience and personal well‑being.",
+      "url": "",
+      "type": "rss",
+      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M32KJEJBDARNV6QBM32TABYW/adam_neumann_.ep_cover.jpg",
+      "publishedAt": "2026-09-28T05:00:00.000Z",
+      "date": "2026-09-28",
+      "durationSec": 8088,
+      "processedAt": "2026-09-29T02:15:55.453Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "published",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Premature IPO forces loss of control",
+          "idea": "Going public before a company is ready can trigger massive loss of control and value, as seen with WeWork’s valuation collapse.",
+          "why": "It shows that timing an IPO is critical; rushing it can destroy a founder’s equity and the company’s trajectory.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "...we were forced to go public when we weren't ready...",
+          "t": 42,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Ego from high valuation erodes mission",
+          "idea": "When valuations reach billions, founders may lose sight of their original purpose, letting money dictate strategy and leading to catastrophic failures.",
+          "why": "Highlights the risk that massive valuations can shift focus from mission to finance, a common pitfall for fast‑growing startups.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "...the ego starts coming up... It suddenly became about the money. I forgot what we were all about.",
+          "t": 42,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Green Desk turns empty floor into cash flow",
+          "idea": "The Green Desk model sliced an unoccupied floor into many small offices, charged each modest rent, and used the combined revenue to pay the landlord, achieving cash‑flow positivity within a month.",
+          "why": "Provides a concrete, replicable tactic for early‑stage founders to monetize underused space and achieve rapid cash flow.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "We'll put the receptionist downstairs so we can share the expenses... We'll put five ads on Craigslist. We launched Green Desk. It was 92% full within a week. Started cash flowing positive within a month.",
+          "t": 1469,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Ask why to slash construction costs",
+          "idea": "Deconstructing vendor quotes by questioning every component (materials, labor, overhead) can reduce a $30k–$45k floor cost to $12k and unlock internal construction capability.",
+          "why": "A systematic cost‑breakdown method that any founder can apply to negotiate dramatically lower prices.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "I said, well, how many pieces of floor? How many nails? How much glue? How much rubber? How many hours of work per person? How much does each person cost? No one could answer. So I have an idea...",
+          "t": 2290,
+          "kind": "said",
+          "confidence": 0.6,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Rapid growth reveals hidden capacity",
+          "idea": "A company that grows fast often discovers it can do far more in the next months or years than it thought possible at the start.",
+          "why": "Counters the belief that scaling is linear; fast growth can unlock unexpected capabilities, encouraging aggressive expansion when feasible.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Whatever you can do today, if your company starts growing fast, you'll be shocked what you’ll be able to do in three months, nine months…\"",
+          "t": 2563,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Stop building to turn high‑growth business profitable",
+          "idea": "A company can become cash‑flow positive simply by halting new supply; the excess demand then forces existing units to fill up and generate positive cash flow.",
+          "why": "Shows a counterintuitive lever—pausing expansion—to shift a high‑growth but cash‑negative model into profitability.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"All you have to do in a high growth business that's working to turn it profitable is stop growing.\"",
+          "t": 3579,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Influence beats power in leadership control",
+          "idea": "Real control in organizations is gained by building influence daily, not by wielding formal power.",
+          "why": "Provides a reusable leadership principle that challenges conventional hierarchies and improves effectiveness.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Control doesn't come from power. It comes from influence.",
+          "t": 7871,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "Pick partners who survive worst days",
+          "idea": "Choose business and life partners based on how they support you during crises, not just during success.",
+          "why": "A concrete decision rule that safeguards founders from unreliable allies when stakes are highest.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"... choose our partners, our friends, and our business partners based on how they will treat us in our worst day when we show the worst, not for the best.\"",
+          "t": 5285,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": true
+        },
+        {
+          "rank": 9,
+          "headline": "Personal guarantee extends liability beyond personal funds",
+          "idea": "A personal guarantee means the guarantor's liability covers company money as well as personal wealth, making it risky to sign without clear terms.",
+          "why": "Highlights a legal nuance that can trap founders, crucial for anyone negotiating financing.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "You signed the personal guarantee. It's not just your money. This is our money.",
+          "t": 7135,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 1,
+          "repaired": true
+        },
+        {
+          "rank": 10,
+          "headline": "Weekly 24‑hour tech‑shabbat resets focus",
+          "idea": "Take a full 24‑hour break from all screens once a week; it clears addiction, boosts idea quality, and reveals your true priorities.",
+          "why": "A simple habit that measurably improves creativity and mental clarity for busy founders.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"For me, the best practice is that 24 hours once a week... you take back that phone, two things will happen... some of the best ideas you've had in some time are gonna come to you\"",
+          "t": 5471,
+          "kind": "recommendation",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 134
     },
     {
       "id": "desk-3b17589d3e58",
@@ -6025,7 +6207,7 @@
       "show": "The Ranveer Show",
       "url": "https://www.youtube.com/watch?v=GRvShUB2XBc",
       "takeaways": [
-        "Pawan explains that his team is building rockets in India for the global space market.",
+        "Pawan explains that Skyroot Aerospace is building rockets in India for the global space market.",
         "He says space technology could transform communication, agriculture, manufacturing and global connectivity."
       ],
       "date": "2026-09-29",
@@ -6037,8 +6219,8 @@
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
       "takeaways": [
-        "The rebel group from Yemen disrupted Saudi Arabia’s oil supply, making it struggle to sell its own oil.",
-        "When the rebels captured three random islands, Brent Crude prices rose to $110 a barrel."
+        "Saudi Arabia’s oil supply has been disrupted by a Yemeni rebel group, making it difficult for the kingdom to sell its oil.",
+        "When the rebels captured three remote islands, Brent crude prices jumped to $110 a barrel."
       ],
       "date": "2026-09-29",
       "reason": "over the 8/day cap"
@@ -6049,7 +6231,7 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
       "takeaways": [
-        "Money principles are being taught to kids before they turn 15.",
+        "Money principles are being taught to the host’s kids.",
         "The content is not investment advice; viewers should do their own due diligence."
       ],
       "date": "2026-09-29",
@@ -6061,8 +6243,8 @@
       "show": "CA Rachana Ranade",
       "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
       "takeaways": [
-        "The episode uses a practical case study of two working professionals of different ages to illustrate retirement planning with a calculator.",
-        "It shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined to help meet retirement goals."
+        "A retirement calculator can illustrate how much money you’ll need to retire comfortably and whether your corpus will last.",
+        "SIP, step‑up SIP, SWP and step‑up SWP can be combined to create a retirement plan."
       ],
       "date": "2026-09-29",
       "reason": "over the 8/day cap"
@@ -6080,15 +6262,76 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-e09ddcc9c437",
-      "title": "If You Were PM For 5 Years, What Would You Change?",
+      "id": "desk-c436e242c031",
+      "title": "A Quiet Walk Through Nikhil's Art Collection",
       "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=chOTpc907AE",
+      "url": "https://www.youtube.com/watch?v=Wa3Z0m8c0Qo",
       "takeaways": [
-        "Access the full data and references used in this episode below and open them alongside the episode while watching."
+        "Nikhil Kamath is the co‑founder of Zerodha and Gruhas and hosts the “WTF is” and “People By WTF” podcasts.",
+        "Rajeev Juneja serves as Vice Chairman and Managing Director at Mankind Pharma Ltd."
       ],
       "date": "2026-09-29",
-      "reason": "over the 8/day cap"
+      "reason": "yt-dlp failed: ERROR: [youtube] Wa3Z0m8c0Qo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-8657abde363d",
+      "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=_phJIm8mUT8",
+      "takeaways": [
+        "The fastest and the most affordable way to upskill yourself in AI.",
+        "Live workshop happening on 18th Oct, 7pm IST!"
+      ],
+      "date": "2026-09-29",
+      "reason": "yt-dlp failed: ERROR: [youtube] _phJIm8mUT8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-dfb8be42be75",
+      "title": "The Wars That Never End",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=S3XPv1yfhtY",
+      "takeaways": [
+        "In this podcast, Kushal Mehra speaks with Abhijit Chavda about the never-ending war between the Israelis/Americans and Iran and the Russia-Ukraine war.",
+        "Could these escalate into a World War III-like scenario?"
+      ],
+      "date": "2026-09-29",
+      "reason": "yt-dlp failed: ERROR: [youtube] S3XPv1yfhtY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-a6d565aa8831",
+      "title": "Does Donald Trump care about India or are China and Pakistan more important?",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=DGxZJtW8v-U",
+      "takeaways": [
+        "In the wake of the Trump-Xi summit, the Russian sanctions law and Trump’s tweeting of Shahbaz Sharif’s UN speech where do India US relations stand?",
+        "The critical question is does Donald Trump care about India or are China and Pakistan more important?"
+      ],
+      "date": "2026-09-29",
+      "reason": "yt-dlp failed: ERROR: [youtube] DGxZJtW8v-U: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-4800def138fd",
+      "title": "“Dawood Never Spares Anyone Who Insults Him”: Vivek Agrawal",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=B1bC0_lxYk8",
+      "takeaways": [
+        "The episode features guest Vivek Agrawal discussing Dawood Ibrahim and the criminal underworld.",
+        "It is tagged with topics including crime, the underworld, Dubai, and Mumbai."
+      ],
+      "date": "2026-09-29",
+      "reason": "yt-dlp failed: ERROR: [youtube] B1bC0_lxYk8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-ab716fe8d716",
+      "title": "Natural Vegetation and Wildlife | Class 9 Geography, Chapter 5 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=1hYhCI7yo_E",
+      "takeaways": [
+        "The lecture covers protected areas and the importance of wildlife and forest conservation in India’s geography.",
+        "It is presented in a simple, engaging, exam‑oriented style."
+      ],
+      "date": "2026-09-29",
+      "reason": "yt-dlp failed: ERROR: [youtube] 1hYhCI7yo_E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-194b11b96532",
@@ -6096,20 +6339,11 @@
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
       "takeaways": [
-        "Focus on smart asset allocation tailored for your 30s.",
-        "Balance high‑growth opportunities with risk management to accelerate financial independence."
+        "Leverage your growing earning power while balancing bigger life milestones with long‑term security.",
+        "Use smart asset allocation that balances high‑growth opportunities with risk management to accelerate financial independence."
       ],
       "date": "2026-09-29",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "gunjanshouts-4a29f13cc8d0",
-      "title": "Why Your Mind Won’t Switch Off: Overthinking, Anxiety & Stress | Dr. Era Dutta with GunjanShouts",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=Tpmn6S-9T0M",
-      "takeaways": [],
-      "date": "2026-09-27",
-      "reason": "yt-dlp failed: no stderr"
+      "reason": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -6120,35 +6354,83 @@
     "tts": "none",
     "episodes": {
       "local": 6,
-      "ai": 30
+      "ai": 31
     }
   },
   "run": {
-    "at": "2026-09-29T00:45:18.381Z",
-    "discovered": 258,
+    "at": "2026-09-29T02:17:30.283Z",
+    "discovered": 1127,
     "eligible": 8,
-    "processed": 4,
-    "skipped": 251,
-    "failed": 3,
+    "processed": 1,
+    "skipped": 1119,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
         "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "terminated (feeds.megaphone.fm/thediaryofaceo: ECONNRESET read ECONNRESET)",
-        "at": "2026-09-29T00:08:53.006Z"
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-29T02:05:21.323Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-29T02:05:21.326Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-29T02:05:21.384Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-29T02:05:21.437Z"
       },
       {
         "stage": "process",
-        "id": "gunjanshouts-4a29f13cc8d0",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-29T00:24:31.738Z"
+        "id": "desk-c436e242c031",
+        "message": "yt-dlp failed: ERROR: [youtube] Wa3Z0m8c0Qo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:16:00.003Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-8657abde363d",
+        "message": "yt-dlp failed: ERROR: [youtube] _phJIm8mUT8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:16:15.243Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-dfb8be42be75",
+        "message": "yt-dlp failed: ERROR: [youtube] S3XPv1yfhtY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:16:29.908Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-a6d565aa8831",
+        "message": "yt-dlp failed: ERROR: [youtube] DGxZJtW8v-U: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:16:45.503Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-4800def138fd",
+        "message": "yt-dlp failed: ERROR: [youtube] B1bC0_lxYk8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:17:00.079Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-ab716fe8d716",
+        "message": "yt-dlp failed: ERROR: [youtube] 1hYhCI7yo_E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:17:15.300Z"
       },
       {
         "stage": "process",
         "id": "desk-194b11b96532",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-29T00:32:55.742Z"
+        "message": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-29T02:17:30.275Z"
       }
     ],
     "estimatedCostUsd": 0
