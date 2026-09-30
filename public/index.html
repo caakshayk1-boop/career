@@ -1764,7 +1764,11 @@ function roleAge(j){
 }
 const roleIsCurrent = j => { const a = roleAge(j); return a !== null && a <= MAX_AGE_DAYS; };
 
-let ROLES = [], rFilter = {country:"All", tier:"All", sort:"score"};
+/* SHELF holds what clears the bar; BELOW holds everything else that is still
+   current. Two lists rather than one filtered at draw time, because the meta
+   line has to state honestly how many were set aside and that number must come
+   from the same place the cards do. */
+let ROLES = [], BELOW = [], rFilter = {country:"All", tier:"All", sort:"score", all:false};
 
 function roleCard(j){
   const tier = j.tier || "-";
@@ -1787,6 +1791,7 @@ function roleCard(j){
     <div class="role-m">
       ${TIER_LABEL[tier] ? `<span class="pill tier-${esc(tier)}">${esc(TIER_LABEL[tier])}</span>` : ""}
       ${(!TIERS_SHOWN.includes(tier) && highFit(j)) ? `<span class="pill">Below grade · fits you ${j.candidate_fit_score}</span>` : ""}
+      ${(!onGrade(j)) ? `<span class="pill warn">Below the bar you set · tier ${esc(tier || "?")}</span>` : ""}
       ${j.application_priority ? `<span class="pill">${esc(j.application_priority)}</span>` : ""}
       ${j.status ? `<span class="pill ${st}">${esc(j.status)}</span>` : ""}
       ${(() => { const a = roleAge(j);
@@ -1832,8 +1837,50 @@ function roleDate(j){
   return Number.isFinite(t) ? t : null;
 }
 
+let META = null;
+/* Counted off what is ON SCREEN, not off d.stats: the feed's totals cover the
+   whole scrape, and "UAE 30" above 14 cards is just a wrong number. Same reason
+   it has to move when the toggle does. */
+function paintRolesStats(){
+  const vis = rFilter.all ? ROLES.concat(BELOW) : ROLES;
+  const n = f => vis.filter(f).length;
+  const el = document.getElementById("rolesStats");
+  el.innerHTML = [["Shown", vis.length],
+     ["S + A", n(j => j.tier === "S" || j.tier === "A")],
+     ["UAE", n(j => j.country === "UAE")],
+     ["Malaysia", n(j => j.country === "Malaysia")]]
+    .map(([l,v]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+  el.hidden = false;
+}
+
+function paintRolesMeta(){
+  if (!META) return;
+  const { d, st, onFit, ageH, srcEmpty, broke, healthy } = META;
+  const meta = document.getElementById("rolesMeta");
+  const shown = rFilter.all ? ROLES.length + BELOW.length : ROLES.length;
+  const lede = rFilter.all
+    ? `<b>All ${shown} current roles.</b> Including ${BELOW.length} below the bar you set —
+       they carry a tier pill so you can tell them apart at a glance.`
+    : `<b>${ROLES.length} roles worth seeing.</b>
+       Tier S, A and B, posted in the last ${MAX_AGE_DAYS} days${onFit ? `, plus
+       ${onFit} graded lower that still fit you ${FIT_FLOOR}+` : ""}${BELOW.length ? `.
+       ${BELOW.length} more are set aside below the bar` : ""}.`;
+  meta.innerHTML = `${lede} · Scraped
+      ${myt(d.generated_at)}
+      ${ageH != null ? `(${ageH}h ago)` : ""} ·
+      ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources had roles${srcEmpty ? `, ${srcEmpty} had none` : ""}${broke.length ? `, ${broke.length} failed` : ""} ·
+      ${st.urls_verified ?? "?"} links verified.
+      ${shown === 0 && healthy ? "<b> Nothing clears the bar today. That is a real answer, not a broken feed.</b>" : ""}
+      ${shown === 0 && !healthy ? "<b> Nothing is shown, and the feed above says why — do not read this as an empty market.</b>" : ""}`;
+}
+
 function drawRoles(){
-  const rows = ROLES.filter(j =>
+  /* "I need S, A, B jobs only" was right, and it was still right when the page
+     was showing 28 of 89 roles and the reader was looking at eight openings on
+     LinkedIn that were nowhere on it. A default is not a cage: the bar stays
+     exactly where it was, and the reader can see past it on purpose. */
+  const source = rFilter.all ? ROLES.concat(BELOW) : ROLES;
+  const rows = source.filter(j =>
       (rFilter.country === "All" || j.country === rFilter.country) &&
       (rFilter.tier === "All" ||
        (rFilter.tier === "S+A" ? ["S","A"].includes(j.tier) : j.tier === rFilter.tier)));
@@ -1849,8 +1896,9 @@ function drawRoles(){
   }
   document.getElementById("rolesList").innerHTML = rows.length
     ? rows.map(roleCard).join("")
-    : `<div class="empty">Nothing matches that filter. The shelf is already limited to
-         tiers S, A and B posted within ${MAX_AGE_DAYS} days.</div>`;
+    : `<div class="empty">Nothing matches that filter.${rFilter.all ? "" : ` The shelf is
+         limited to tiers S, A and B posted within ${MAX_AGE_DAYS} days — turn on
+         <b>All grades</b> to see the other ${BELOW.length}.`}</div>`;
 }
 
 (async function loadRoles(){
@@ -1867,6 +1915,10 @@ function drawRoles(){
     // Counted separately so the meta line can say WHY a role is missing. A
     // number that only says "14 shown" invites the reading that the market is
     // empty, when in fact most of what was dropped was dropped on grade.
+    /* Not discarded — set aside. Same currency rule as the shelf, so turning
+       the toggle on cannot resurrect a role that aged out. */
+    BELOW = pool.filter(j => !onGrade(j) && roleIsCurrent(j))
+                .sort((a,b) => (b.candidate_fit_score||0) - (a.candidate_fit_score||0));
     const cutTier = pool.filter(j => !onGrade(j)).length;
     const cutAge  = pool.filter(j => onGrade(j) && !roleIsCurrent(j)).length;
     const onFit   = ROLES.filter(j => !TIERS_SHOWN.includes(j.tier)).length;
@@ -1948,47 +2000,53 @@ function drawRoles(){
       warn.hidden = true;
     }
 
-    meta.innerHTML = `<b>${ROLES.length} roles worth seeing.</b>
-      Tier S, A and B, posted in the last ${MAX_AGE_DAYS} days${onFit ? `, plus
-      ${onFit} graded lower that still fit you ${FIT_FLOOR}+` : ""}. · Scraped
-      ${myt(d.generated_at)}
-      ${ageH != null ? `(${ageH}h ago)` : ""} ·
-      ${st.sources_ok ?? "?"} of ${st.sources_attempted ?? "?"} sources had roles${srcEmpty ? `, ${srcEmpty} had none` : ""}${broke.length ? `, ${broke.length} failed` : ""} ·
-      ${st.urls_verified ?? "?"} links verified.
-      ${ROLES.length === 0 && healthy ? "<b> Nothing clears the bar today. That is a real answer, not a broken feed.</b>" : ""}
-      ${ROLES.length === 0 && !healthy ? "<b> Nothing is shown, and the feed above says why — do not read this as an empty market.</b>" : ""}`;
-    // Counted off ROLES, not off d.stats: the feed's own totals cover the whole
-    // scrape, and showing "UAE 30" above 14 cards is just a wrong number.
-    const n = f => ROLES.filter(f).length;
-    document.getElementById("rolesStats").innerHTML =
-      [["Shown", ROLES.length],
-       ["S + A", n(j => j.tier === "S" || j.tier === "A")],
-       ["UAE", n(j => j.country === "UAE")],
-       ["Malaysia", n(j => j.country === "Malaysia")]]
-      .map(([l,v]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
-    document.getElementById("rolesStats").hidden = false;
+    /* Held so the toggle can repaint this line. It states which list is on
+       screen: a count that silently changes meaning is worse than no count. */
+    META = { d, st, onFit, ageH, srcEmpty, broke, healthy };
+    paintRolesMeta();
+    paintRolesStats();
 
     const countries = ["All", ...new Set(ROLES.map(j => j.country).filter(Boolean))];
     const f = document.getElementById("rolesFilters");
     f.innerHTML = countries.map(c =>
         `<button class="chip" data-rc="${esc(c)}" aria-pressed="${c==="All"}">${esc(c)}</button>`).join("")
       + '<span style="width:12px"></span>'
-      + ["All","S+A","S","A","B"].map(t =>
-        `<button class="chip" data-rt="${esc(t)}" aria-pressed="${t==="All"}">${t==="All"?"Any tier":t}</button>`).join("")
+      + ["All","S+A","S","A","B","C","D"].map(t =>
+        `<button class="chip" data-rt="${esc(t)}" aria-pressed="${t==="All"}"
+           ${["C","D"].includes(t) ? 'data-lowtier="1" hidden' : ""}>${t==="All"?"Any tier":t}</button>`).join("")
+      + '<span style="width:12px"></span>'
+      /* The toggle itself. It names the number it will reveal, because "show
+         all" is a promise and a count is a fact. */
+      + (BELOW.length ? `<button class="chip" data-rall="1" aria-pressed="false">+${BELOW.length} below the bar</button>` : "")
       + '<span style="width:12px"></span>'
       + [["score","Best fit"],["fresh","Freshest"]].map(([k,label]) =>
         `<button class="chip" data-rs="${k}" aria-pressed="${k==="score"}">${label}</button>`).join("");
     f.hidden = false;
     f.addEventListener("click", e => {
       const c = e.target.closest("[data-rc]"), t = e.target.closest("[data-rt]"),
-            o = e.target.closest("[data-rs]");
+            o = e.target.closest("[data-rs]"), a = e.target.closest("[data-rall]");
+      if (a){
+        rFilter.all = !rFilter.all;
+        a.setAttribute("aria-pressed", String(rFilter.all));
+        a.textContent = rFilter.all ? `Showing all ${ROLES.length + BELOW.length}` : `+${BELOW.length} below the bar`;
+        /* A tier chip for a tier that is not in the pool is a dead control, so
+           C and D only exist while the pool does. Turning the toggle off while
+           one of them is selected would leave the list empty with no visible
+           cause — so the selection goes back to Any tier with it. */
+        f.querySelectorAll('[data-lowtier]').forEach(b => { b.hidden = !rFilter.all; });
+        if (!rFilter.all && ["C","D"].includes(rFilter.tier)){
+          rFilter.tier = "All";
+          f.querySelectorAll("[data-rt]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.rt === "All")));
+        }
+        paintRolesMeta(); paintRolesStats();
+      }
       if (c){ rFilter.country = c.dataset.rc;
               f.querySelectorAll("[data-rc]").forEach(b => b.setAttribute("aria-pressed", String(b===c))); }
       if (t){ rFilter.tier = t.dataset.rt;
               f.querySelectorAll("[data-rt]").forEach(b => b.setAttribute("aria-pressed", String(b===t))); }
       if (o){ rFilter.sort = o.dataset.rs;
               f.querySelectorAll("[data-rs]").forEach(b => b.setAttribute("aria-pressed", String(b===o))); }
-      if (c || t || o) drawRoles();
+      if (c || t || o || a) drawRoles();
     });
     drawRoles();
   } catch (err) {
