@@ -69,6 +69,24 @@ export function buildPending(entries) {
  *  episodes are deliberately never written to the ledger (that is what keeps
  *  them retryable), so the artifact is the only place they exist.
  */
+/** WHEN SOMETHING WAS LAST ACTUALLY READ — not when the job last ran.
+ *
+ *  TWO RUNNERS WRITE THIS ARTIFACT and only one of them can read YouTube. The
+ *  Mac reads at 09:01 MYT; CI fires at 09:23, processes nothing, and
+ *  overwrites `run` with its own zeroes. Last writer wins, CI is always last,
+ *  and CI can never succeed — so the page announced "the last run read nothing
+ *  new" on 30 Sep, a morning the Mac had read a new episode an hour earlier.
+ *  The banner was not wrong about the last RUN. It was answering a question
+ *  nobody asked.
+ *
+ *  This marker only moves forward, and only on a run that read something. A
+ *  run that reads nothing leaves it alone rather than stamping its own failure
+ *  over someone else's success. */
+export function lastReadMarker(prevDoc, processed) {
+  if (processed > 0) return { at: new Date().toISOString(), processed };
+  return (prevDoc && prevDoc.lastRead) || null;
+}
+
 export function carryPending(prevDoc) {
   const today = mytDate();
   return ((prevDoc && prevDoc.pending) || [])
