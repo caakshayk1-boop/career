@@ -26316,6 +26316,102 @@
       "seenAt": "2026-09-30T01:01:05.889Z",
       "updatedAt": "2026-09-30T01:01:18.039Z",
       "reason": "yt-dlp returned no caption file"
+    },
+    "desk-2655b59de225": {
+      "status": "FAILED",
+      "title": "The Next $1 Trillion Energy Boom: Solar, Wind, & Green Hydrogen | Sumant Sinha | FO568 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=J5ft7TFUkoc",
+      "id": "desk-2655b59de225",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:21:22.532Z",
+      "updatedAt": "2026-09-30T01:21:27.914Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] J5ft7TFUkoc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-7fba9e0bf91c": {
+      "status": "FAILED",
+      "title": "Ratan Tata’s $2.3B Gamble | How Tata Turned JLR Into a Billion-Dollar Comeback",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
+      "id": "desk-7fba9e0bf91c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:21:27.922Z",
+      "updatedAt": "2026-09-30T01:21:42.530Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-778dfb166595": {
+      "status": "FAILED",
+      "title": "Where Should Your Money Go in a Crisis? Stocks, Gold, Cash & Real Estate | Shashank Udupa | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=wRBi0DT9dvY",
+      "id": "desk-778dfb166595",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:21:42.538Z",
+      "updatedAt": "2026-09-30T01:21:57.479Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] wRBi0DT9dvY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-621e613f8fb2": {
+      "status": "FAILED",
+      "title": "How to Buy Bonds on Groww App?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=GLkysTuGIj4",
+      "id": "desk-621e613f8fb2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:21:57.490Z",
+      "updatedAt": "2026-09-30T01:22:12.670Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] GLkysTuGIj4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-112ef88f4b6d": {
+      "status": "FAILED",
+      "title": "Cost Of Speaking Up Against An Authoritarian Govt | Samvaad With Sonam Wangchuk & Gitanjali J Angmo",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=lvBermEiJqo",
+      "id": "desk-112ef88f4b6d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:22:12.679Z",
+      "updatedAt": "2026-09-30T01:22:27.929Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] lvBermEiJqo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-f415bfe846f4": {
+      "status": "FAILED",
+      "title": "\"Beyond the Report Button: Rethinking Digital Rights and Remedies\"",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=_OHJvlVSUNA",
+      "id": "desk-f415bfe846f4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:22:27.938Z",
+      "updatedAt": "2026-09-30T01:22:42.612Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] _OHJvlVSUNA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-8b4ae9eacbe9": {
+      "status": "FAILED",
+      "title": "“Dawood Invited Chhota Rajan to Join D-Company” Vivek Agrawal",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=E3MvVgdyJ64",
+      "id": "desk-8b4ae9eacbe9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:22:42.620Z",
+      "updatedAt": "2026-09-30T01:22:57.300Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] E3MvVgdyJ64: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-20d0221a7717": {
+      "status": "FAILED",
+      "title": "50 Gen Zs Asked Me Questions I Was NOT Ready For",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=remqlmMVhNs",
+      "id": "desk-20d0221a7717",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:22:57.309Z",
+      "updatedAt": "2026-09-30T01:23:12.424Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

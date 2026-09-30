@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-30T01:01:33.638Z",
+  "generatedAt": "2026-09-30T01:23:12.435Z",
   "today": "2026-09-30",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -6269,6 +6269,18 @@
   ],
   "pending": [
     {
+      "id": "desk-9b1a136c6862",
+      "title": "India’s River Disputes Explained | Inter-State Water Disputes | Zero To Zenith Ep. 5",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=WoUq4S0Melg",
+      "takeaways": [
+        "The session explains the concept of inter‑state river water disputes in India, including their constitutional and legal framework.",
+        "It also covers major river disputes, the role of tribunals, and key challenges in water sharing and river management."
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
       "id": "desk-8657abde363d",
       "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
       "show": "Dhruv Rathee",
@@ -6293,49 +6305,13 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-a6d565aa8831",
-      "title": "Does Donald Trump care about India or are China and Pakistan more important?",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=DGxZJtW8v-U",
-      "takeaways": [
-        "In the wake of the Trump-Xi summit, the Russian sanctions law and Trump’s tweeting of Shahbaz Sharif’s UN speech where do India US relations stand?",
-        "The critical question is does Donald Trump care about India or are China and Pakistan more important?"
-      ],
-      "date": "2026-09-30",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-4800def138fd",
-      "title": "“Dawood Never Spares Anyone Who Insults Him”: Vivek Agrawal",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=B1bC0_lxYk8",
-      "takeaways": [
-        "The episode features guest Vivek Agrawal discussing Dawood Ibrahim and the criminal underworld.",
-        "It is tagged with topics including crime, the underworld, Dubai, and Mumbai."
-      ],
-      "date": "2026-09-30",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-ab716fe8d716",
-      "title": "Natural Vegetation and Wildlife | Class 9 Geography, Chapter 5 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=1hYhCI7yo_E",
-      "takeaways": [
-        "The lecture covers protected areas and the importance of wildlife and forest conservation in India’s geography.",
-        "It is presented in a simple, engaging, exam‑oriented style."
-      ],
-      "date": "2026-09-30",
-      "reason": "over the 8/day cap"
-    },
-    {
       "id": "desk-194b11b96532",
       "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
       "takeaways": [
-        "Leverage your growing earning power while balancing bigger life milestones with long‑term security.",
-        "Use smart asset allocation that balances high‑growth opportunities with risk management to accelerate financial independence."
+        "Focus on smart asset allocation.",
+        "Balance high‑growth opportunities with risk management."
       ],
       "date": "2026-09-30",
       "reason": "over the 8/day cap"
@@ -6346,8 +6322,8 @@
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
       "takeaways": [
-        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
-        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
+        "Patel’s work establishing India’s civil services is described as the “steel frame” that holds the nation together.",
+        "Patel secured Jammu & Kashmir’s accession to Bharat."
       ],
       "date": "2026-09-30",
       "reason": "over the 8/day cap"
@@ -6365,36 +6341,12 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-bdc63d869004",
-      "title": "India’s🇮🇳 Space HERO - Aliens, Space Economy & Rocket Making | Ex-ISRO Scientist & Skyroot CEO | TRS",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=GRvShUB2XBc",
-      "takeaways": [
-        "Pawan explains that Skyroot Aerospace is building rockets in India for the global space market.",
-        "He says space technology could transform communication, agriculture, manufacturing and global connectivity."
-      ],
-      "date": "2026-09-30",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-dee6c95cd3fc",
-      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
-      "takeaways": [
-        "Saudi Arabia’s oil supply has been disrupted by a Yemeni rebel group, making it difficult for the kingdom to sell its oil.",
-        "When the rebels captured three remote islands, Brent crude prices jumped to $110 a barrel."
-      ],
-      "date": "2026-09-30",
-      "reason": "over the 8/day cap"
-    },
-    {
       "id": "desk-93a3b9ee5af2",
       "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
       "takeaways": [
-        "Money principles are being taught to the host’s kids.",
+        "Money principles are being taught to the kids before they turn 15.",
         "The content is not investment advice; viewers should do their own due diligence."
       ],
       "date": "2026-09-30",
@@ -6406,8 +6358,8 @@
       "show": "CA Rachana Ranade",
       "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
       "takeaways": [
-        "A retirement calculator can illustrate how much money you’ll need to retire comfortably and whether your corpus will last.",
-        "SIP, step‑up SIP, SWP and step‑up SWP can be combined to create a retirement plan."
+        "A practical case study of two working professionals in different age groups is used to illustrate retirement planning.",
+        "The episode shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
       ],
       "date": "2026-09-30",
       "reason": "over the 8/day cap"
@@ -6425,13 +6377,99 @@
       "reason": "over the 8/day cap"
     },
     {
-      "id": "dr-pal-c6002fcd25e1",
-      "title": "When Dr. Pal met the Gen Alpha Varenya!",
-      "show": "Gut Feeling with Dr Pal",
-      "url": "https://www.youtube.com/watch?v=Ub0GZFwKCMk",
-      "takeaways": [],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: no stderr"
+      "id": "desk-2655b59de225",
+      "title": "The Next $1 Trillion Energy Boom: Solar, Wind, & Green Hydrogen | Sumant Sinha | FO568 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=J5ft7TFUkoc",
+      "takeaways": [
+        "Electricity makes up only 20% of the world’s total energy.",
+        "China quietly took control of the entire clean‑tech supply chain over the past 25 years."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] J5ft7TFUkoc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-7fba9e0bf91c",
+      "title": "Ratan Tata’s $2.3B Gamble | How Tata Turned JLR Into a Billion-Dollar Comeback",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
+      "takeaways": [
+        "Ratan Tata purchased Jaguar Land Rover from Ford for £1.15 billion.",
+        "In the seven years after the purchase, JLR generated £1.675 billion in profits."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-778dfb166595",
+      "title": "Where Should Your Money Go in a Crisis? Stocks, Gold, Cash & Real Estate | Shashank Udupa | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=wRBi0DT9dvY",
+      "takeaways": [
+        "The conversation begins with a simple question: who is winning?",
+        "Shashank explains how the United States has moved from exporting mainly defence and dollars to becoming a major exporter of oil, LNG and helium, why energy infrastructure has become a primary target in this war, and how Russia has used discounted oil and gas to fund its military efforts."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] wRBi0DT9dvY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-621e613f8fb2",
+      "title": "How to Buy Bonds on Groww App?",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=GLkysTuGIj4",
+      "takeaways": [
+        "Want to learn how to invest in bonds in India?",
+        "This step-by-step Groww tutorial covers what bonds are, why investors use them for fixed income and portfolio diversification, and how to buy bonds on the Groww app."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] GLkysTuGIj4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-112ef88f4b6d",
+      "title": "Cost Of Speaking Up Against An Authoritarian Govt | Samvaad With Sonam Wangchuk & Gitanjali J Angmo",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=lvBermEiJqo",
+      "takeaways": [
+        "In the latest edition of Deshbhakt Samvaad, Sonam Wangchuk & Gitanjali Angmo take us though the year gone by...from detention under NSA over Ladakh protests - to abduction from Jantar Mantar over education reforms.",
+        "For asking questions - both Wangchuk and Angmo have been targeted by government agencies over foreign funding and several other allegations."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] lvBermEiJqo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-f415bfe846f4",
+      "title": "\"Beyond the Report Button: Rethinking Digital Rights and Remedies\"",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=_OHJvlVSUNA",
+      "takeaways": [
+        "The event marks the first anniversary of SFLC.in’s 24/7 digital rights helpline, RightsLine.",
+        "The discussion will explore how to create rapid, comprehensive response processes for cyber fraud and more transparent, accountable systems for users facing account suspensions or content removal."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] _OHJvlVSUNA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-8b4ae9eacbe9",
+      "title": "“Dawood Invited Chhota Rajan to Join D-Company” Vivek Agrawal",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=E3MvVgdyJ64",
+      "takeaways": [
+        "“Dawood Invited Chhota Rajan to Join D-Company” Vivek Agrawal #AniPodcast #SmitaPrakash #VivekAgrawal #DawoodIbrahim #Mumbai #ChhotaRajan Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] E3MvVgdyJ64: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-20d0221a7717",
+      "title": "50 Gen Zs Asked Me Questions I Was NOT Ready For",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=remqlmMVhNs",
+      "takeaways": [
+        "The episode features young founders, creators, students and professionals discussing careers, startups, AI, content creation, money and finding direction in their 20s.",
+        "The podcast’s mission is to upgrade listeners’ mindset, intellect and soul through unfiltered, high‑impact conversations."
+      ],
+      "date": "2026-09-30",
+      "reason": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -6446,25 +6484,85 @@
     }
   },
   "run": {
-    "at": "2026-09-30T01:01:33.617Z",
-    "discovered": 297,
+    "at": "2026-09-30T01:23:12.433Z",
+    "discovered": 1127,
     "eligible": 8,
-    "processed": 1,
-    "skipped": 295,
-    "failed": 1,
+    "processed": 0,
+    "skipped": 1119,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
         "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "fetch failed (feeds.megaphone.fm/thediaryofaceo: ETIMEDOUT read ETIMEDOUT)",
-        "at": "2026-09-30T00:42:52.640Z"
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-30T01:21:20.141Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-30T01:21:20.143Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-30T01:21:20.216Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-09-30T01:21:21.309Z"
       },
       {
         "stage": "process",
-        "id": "dr-pal-c6002fcd25e1",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-09-30T00:58:07.240Z"
+        "id": "desk-2655b59de225",
+        "message": "yt-dlp failed: ERROR: [youtube] J5ft7TFUkoc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:21:27.914Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-7fba9e0bf91c",
+        "message": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:21:42.530Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-778dfb166595",
+        "message": "yt-dlp failed: ERROR: [youtube] wRBi0DT9dvY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:21:57.479Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-621e613f8fb2",
+        "message": "yt-dlp failed: ERROR: [youtube] GLkysTuGIj4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:22:12.670Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-112ef88f4b6d",
+        "message": "yt-dlp failed: ERROR: [youtube] lvBermEiJqo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:22:27.929Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-f415bfe846f4",
+        "message": "yt-dlp failed: ERROR: [youtube] _OHJvlVSUNA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:22:42.611Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-8b4ae9eacbe9",
+        "message": "yt-dlp failed: ERROR: [youtube] E3MvVgdyJ64: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:22:57.300Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-20d0221a7717",
+        "message": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-09-30T01:23:12.424Z"
       }
     ],
     "estimatedCostUsd": 0
