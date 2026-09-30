@@ -26013,7 +26013,7 @@
       }
     },
     "desk-c436e242c031": {
-      "status": "FAILED",
+      "status": "SKIPPED",
       "title": "A Quiet Walk Through Nikhil's Art Collection",
       "show": "WTF is (clips)",
       "url": "https://www.youtube.com/watch?v=Wa3Z0m8c0Qo",
@@ -26021,8 +26021,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-29T02:15:55.462Z",
-      "updatedAt": "2026-09-29T02:16:00.003Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] Wa3Z0m8c0Qo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-09-30T01:01:33.616Z",
+      "reason": "transcript unusable: transcript is only 1566 characters"
     },
     "desk-8657abde363d": {
       "status": "FAILED",
@@ -26083,6 +26083,239 @@
       "seenAt": "2026-09-29T02:17:00.087Z",
       "updatedAt": "2026-09-29T02:17:15.300Z",
       "reason": "yt-dlp failed: ERROR: [youtube] 1hYhCI7yo_E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "ali-abdaal-1c7816565280": {
+      "status": "SKIPPED",
+      "reason": "older than 744h",
+      "title": "I speak faster than I type - Free Month of Wispr Flow Pro in the description :)",
+      "id": "ali-abdaal-1c7816565280",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.374Z",
+      "updatedAt": "2026-09-30T00:42:53.374Z"
+    },
+    "ali-abdaal-3f14a115334d": {
+      "status": "SKIPPED",
+      "reason": "older than 744h",
+      "title": "30 days free of Manychat Pro in the description :)",
+      "id": "ali-abdaal-3f14a115334d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.374Z",
+      "updatedAt": "2026-09-30T00:42:53.374Z"
+    },
+    "ali-abdaal-0861c3f56ecc": {
+      "status": "SKIPPED",
+      "reason": "older than 744h",
+      "title": "Our new AI employee can give you $100 of free work - link in description!",
+      "id": "ali-abdaal-0861c3f56ecc",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.374Z",
+      "updatedAt": "2026-09-30T00:42:53.374Z"
+    },
+    "ali-abdaal-1f37a9466c70": {
+      "status": "SKIPPED",
+      "reason": "older than 744h",
+      "title": "Focus on one thing per quarter to succeed faster - click link in bio for my new app :)",
+      "id": "ali-abdaal-1f37a9466c70",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.374Z",
+      "updatedAt": "2026-09-30T00:42:53.374Z"
+    },
+    "ali-abdaal-2663a6fa8535": {
+      "status": "SKIPPED",
+      "reason": "older than 744h",
+      "title": "Watch this if you're wanting a business idea suited to your skills...",
+      "id": "ali-abdaal-2663a6fa8535",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.374Z",
+      "updatedAt": "2026-09-30T00:42:53.374Z"
+    },
+    "ali-abdaal-80ca7f37db7e": {
+      "status": "SKIPPED",
+      "reason": "older than 744h",
+      "title": "I asked Hormozi how to make $100k a year",
+      "id": "ali-abdaal-80ca7f37db7e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.374Z",
+      "updatedAt": "2026-09-30T00:42:53.374Z"
+    },
+    "dr-pal-c6002fcd25e1": {
+      "status": "FAILED",
+      "title": "When Dr. Pal met the Gen Alpha Varenya!",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=Ub0GZFwKCMk",
+      "id": "dr-pal-c6002fcd25e1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:42:53.375Z",
+      "updatedAt": "2026-09-30T00:58:07.240Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-006ba53b38ec": {
+      "status": "SKIPPED",
+      "title": "Can pizza be healthy for kids? Try This",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=NmMPil8f56E",
+      "id": "dr-pal-006ba53b38ec",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:58:07.496Z",
+      "updatedAt": "2026-09-30T00:59:02.070Z",
+      "reason": "transcript unusable: transcript is only 671 characters"
+    },
+    "luke-coutinho-cae3731d1478": {
+      "status": "SKIPPED",
+      "title": "Can Caffeine Reduce Pain? What Happens in Your Brain",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=Mmxq_deCJDg",
+      "id": "luke-coutinho-cae3731d1478",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:59:02.071Z",
+      "updatedAt": "2026-09-30T00:59:17.418Z",
+      "reason": "transcript unusable: transcript is only 1440 characters"
+    },
+    "dr-pal-8799f8e1dac5": {
+      "status": "SKIPPED",
+      "title": "Dark Reality Behind Meat Consumption",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=_XSn9rRsoZ8",
+      "id": "dr-pal-8799f8e1dac5",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:59:17.418Z",
+      "updatedAt": "2026-09-30T00:59:31.324Z",
+      "reason": "transcript unusable: transcript is only 922 characters"
+    },
+    "luke-coutinho-991de768d2c3": {
+      "status": "PUBLISHED",
+      "title": "Stop Waiting for Life to Get Better | Prosper Where You Are",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=2A8b2NsCvg8",
+      "id": "luke-coutinho-991de768d2c3",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T00:59:31.324Z",
+      "updatedAt": "2026-09-30T01:00:50.762Z",
+      "payload": {
+        "id": "luke-coutinho-991de768d2c3",
+        "sourceId": "luke-coutinho",
+        "show": "Luke Coutinho",
+        "title": "Stop Waiting for Life to Get Better | Prosper Where You Are",
+        "guest": "",
+        "topics": [
+          "mindset",
+          "resilience",
+          "personal growth",
+          "wellbeing"
+        ],
+        "summary": "In this episode the host explores the concept of \"prospering where you are,\" encouraging listeners to engage with life despite ongoing challenges. He differentiates true acceptance from toxic positivity and offers practical questions to help shift focus toward actionable growth. The discussion underscores that mindset can transform how we experience adversity and influence our well‑being.",
+        "url": "https://www.youtube.com/watch?v=2A8b2NsCvg8",
+        "type": "youtube",
+        "image": "https://i3.ytimg.com/vi/2A8b2NsCvg8/hqdefault.jpg",
+        "publishedAt": "2026-09-28T11:31:13.000Z",
+        "date": "2026-09-28",
+        "durationSec": 375,
+        "processedAt": "2026-09-30T01:00:50.762Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Even terminal patients choose joy",
+            "idea": "A person with only weeks to live prioritizes happiness over resignation, demonstrating that choosing joy can override fear of death.",
+            "why": "Shows that joy is a conscious choice, not contingent on circumstances, challenging the belief that happiness requires good health or time.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[5:49] What, what's keeping you going?… I would rather just choose to be happy.",
+            "t": 349,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.6,
+            "repaired": true
+          },
+          {
+            "rank": 2,
+            "headline": "Decide to thrive regardless of environment",
+            "idea": "Make a conscious decision to thrive in any location; this mindset can reduce stress and improve well-being.",
+            "why": "A deliberate mental shift counters the common excuse that surroundings dictate success, empowering proactive personal growth.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[3:25] decided: I'm just going to thrive where I am.",
+            "t": 205,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 1,
+            "repaired": false
+          },
+          {
+            "rank": 3,
+            "headline": "Choose daily small actions to thrive",
+            "idea": "Instead of waiting for conditions to improve, actively adopt practices—meditation, breathing, diet changes—to grow each day.",
+            "why": "Provides a concrete, repeatable framework that turns passive waiting into active self‑improvement, which is more sustainable.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[0:23] Will this define my whole life, and will I sulk and do nothing until my diabetes goes away?",
+            "t": 23,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 0.78,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Environmental stressors can be mitigated by mindset",
+            "idea": "Changing one’s attitude toward the environment can lessen physical symptoms such as allergies, illustrating a mind‑body link.",
+            "why": "Challenges the assumption that external factors alone cause health issues, suggesting mental framing can reduce symptom severity.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "[3:46] have magically disappeared. When pollution levels are high, I still feel it, but I used to take pills every day",
+            "t": 226,
+            "kind": "interpretation",
+            "confidence": 0.7,
+            "grounding": 0.54,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 0,
+        "audio": null,
+        "readSeconds": 61
+      }
+    },
+    "gunjanshouts-3d1a60da9b1a": {
+      "status": "SKIPPED",
+      "title": "The Real Reason Behind Overthinking, Anxiety & Self-Doubt",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=P0XuAGwqZ94",
+      "id": "gunjanshouts-3d1a60da9b1a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:00:50.788Z",
+      "updatedAt": "2026-09-30T01:01:05.889Z",
+      "reason": "transcript unusable: transcript is only 2149 characters"
+    },
+    "luke-coutinho-79ccea0561d0": {
+      "status": "SKIPPED",
+      "title": "Stop leaking your energy on things you CAN'T Control",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=T1-aFMwVdc8",
+      "id": "luke-coutinho-79ccea0561d0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-09-30T01:01:05.889Z",
+      "updatedAt": "2026-09-30T01:01:18.039Z",
+      "reason": "yt-dlp returned no caption file"
     }
   }
 }

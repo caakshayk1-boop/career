@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-29T02:17:30.285Z",
-  "today": "2026-09-29",
+  "generatedAt": "2026-09-30T01:01:33.638Z",
+  "today": "2026-09-30",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-09-29",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-4e40afc56ac5",
         "desk-4df28ccbec3c",
@@ -18,8 +18,9 @@
     },
     {
       "date": "2026-09-28",
-      "label": "Yesterday",
+      "label": "Monday",
       "episodeIds": [
+        "luke-coutinho-991de768d2c3",
         "diary-of-a-ceo-32fc4aa61089",
         "desk-3b17589d3e58",
         "desk-b381e3f1c9e8"
@@ -788,6 +789,96 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 128
+    },
+    {
+      "id": "luke-coutinho-991de768d2c3",
+      "sourceId": "luke-coutinho",
+      "show": "Luke Coutinho",
+      "title": "Stop Waiting for Life to Get Better | Prosper Where You Are",
+      "guest": "",
+      "topics": [
+        "mindset",
+        "resilience",
+        "personal growth",
+        "wellbeing"
+      ],
+      "summary": "In this episode the host explores the concept of \"prospering where you are,\" encouraging listeners to engage with life despite ongoing challenges. He differentiates true acceptance from toxic positivity and offers practical questions to help shift focus toward actionable growth. The discussion underscores that mindset can transform how we experience adversity and influence our well‑being.",
+      "url": "https://www.youtube.com/watch?v=2A8b2NsCvg8",
+      "type": "youtube",
+      "image": "https://i3.ytimg.com/vi/2A8b2NsCvg8/hqdefault.jpg",
+      "publishedAt": "2026-09-28T11:31:13.000Z",
+      "date": "2026-09-28",
+      "durationSec": 375,
+      "processedAt": "2026-09-30T01:00:50.762Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Even terminal patients choose joy",
+          "idea": "A person with only weeks to live prioritizes happiness over resignation, demonstrating that choosing joy can override fear of death.",
+          "why": "Shows that joy is a conscious choice, not contingent on circumstances, challenging the belief that happiness requires good health or time.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[5:49] What, what's keeping you going?… I would rather just choose to be happy.",
+          "t": 349,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.6,
+          "repaired": true
+        },
+        {
+          "rank": 2,
+          "headline": "Decide to thrive regardless of environment",
+          "idea": "Make a conscious decision to thrive in any location; this mindset can reduce stress and improve well-being.",
+          "why": "A deliberate mental shift counters the common excuse that surroundings dictate success, empowering proactive personal growth.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[3:25] decided: I'm just going to thrive where I am.",
+          "t": 205,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Choose daily small actions to thrive",
+          "idea": "Instead of waiting for conditions to improve, actively adopt practices—meditation, breathing, diet changes—to grow each day.",
+          "why": "Provides a concrete, repeatable framework that turns passive waiting into active self‑improvement, which is more sustainable.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[0:23] Will this define my whole life, and will I sulk and do nothing until my diabetes goes away?",
+          "t": 23,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.78,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Environmental stressors can be mitigated by mindset",
+          "idea": "Changing one’s attitude toward the environment can lessen physical symptoms such as allergies, illustrating a mind‑body link.",
+          "why": "Challenges the assumption that external factors alone cause health issues, suggesting mental framing can reduce symptom severity.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[3:46] have magically disappeared. When pollution levels are high, I still feel it, but I used to take pills every day",
+          "t": 226,
+          "kind": "interpretation",
+          "confidence": 0.7,
+          "grounding": 0.54,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 61
     },
     {
       "id": "diary-of-a-ceo-32fc4aa61089",
@@ -6178,6 +6269,78 @@
   ],
   "pending": [
     {
+      "id": "desk-8657abde363d",
+      "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=_phJIm8mUT8",
+      "takeaways": [
+        "The fastest and the most affordable way to upskill yourself in AI.",
+        "Live workshop happening on 18th Oct, 7pm IST!"
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-dfb8be42be75",
+      "title": "The Wars That Never End",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=S3XPv1yfhtY",
+      "takeaways": [
+        "In this podcast, Kushal Mehra speaks with Abhijit Chavda about the never-ending war between the Israelis/Americans and Iran and the Russia-Ukraine war.",
+        "Could these escalate into a World War III-like scenario?"
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-a6d565aa8831",
+      "title": "Does Donald Trump care about India or are China and Pakistan more important?",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=DGxZJtW8v-U",
+      "takeaways": [
+        "In the wake of the Trump-Xi summit, the Russian sanctions law and Trump’s tweeting of Shahbaz Sharif’s UN speech where do India US relations stand?",
+        "The critical question is does Donald Trump care about India or are China and Pakistan more important?"
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-4800def138fd",
+      "title": "“Dawood Never Spares Anyone Who Insults Him”: Vivek Agrawal",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=B1bC0_lxYk8",
+      "takeaways": [
+        "The episode features guest Vivek Agrawal discussing Dawood Ibrahim and the criminal underworld.",
+        "It is tagged with topics including crime, the underworld, Dubai, and Mumbai."
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-ab716fe8d716",
+      "title": "Natural Vegetation and Wildlife | Class 9 Geography, Chapter 5 | NCERT Geography | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=1hYhCI7yo_E",
+      "takeaways": [
+        "The lecture covers protected areas and the importance of wildlife and forest conservation in India’s geography.",
+        "It is presented in a simple, engaging, exam‑oriented style."
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-194b11b96532",
+      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
+      "takeaways": [
+        "Leverage your growing earning power while balancing bigger life milestones with long‑term security.",
+        "Use smart asset allocation that balances high‑growth opportunities with risk management to accelerate financial independence."
+      ],
+      "date": "2026-09-30",
+      "reason": "over the 8/day cap"
+    },
+    {
       "id": "desk-38f3d4479cf2",
       "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
       "show": "Sadhguru",
@@ -6186,7 +6349,7 @@
         "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
         "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
@@ -6198,7 +6361,7 @@
         "Can a home loan overdraft really help you reduce your interest cost, or is it only useful for a certain type of borrower?",
         "In this video, Aastha Khurana explains how a home loan overdraft works, how it differs from a regular home loan, and the situations where it can actually make sense."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
@@ -6210,7 +6373,7 @@
         "Pawan explains that Skyroot Aerospace is building rockets in India for the global space market.",
         "He says space technology could transform communication, agriculture, manufacturing and global connectivity."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
@@ -6222,7 +6385,7 @@
         "Saudi Arabia’s oil supply has been disrupted by a Yemeni rebel group, making it difficult for the kingdom to sell its oil.",
         "When the rebels captured three remote islands, Brent crude prices jumped to $110 a barrel."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
@@ -6234,7 +6397,7 @@
         "Money principles are being taught to the host’s kids.",
         "The content is not investment advice; viewers should do their own due diligence."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
@@ -6246,7 +6409,7 @@
         "A retirement calculator can illustrate how much money you’ll need to retire comfortably and whether your corpus will last.",
         "SIP, step‑up SIP, SWP and step‑up SWP can be combined to create a retirement plan."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
@@ -6258,92 +6421,17 @@
         "In 2003, we were told AI would take 300 million jobs.",
         "It's 2026, and companies are quietly rehiring the people they let go."
       ],
-      "date": "2026-09-29",
+      "date": "2026-09-30",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-c436e242c031",
-      "title": "A Quiet Walk Through Nikhil's Art Collection",
-      "show": "WTF is (clips)",
-      "url": "https://www.youtube.com/watch?v=Wa3Z0m8c0Qo",
-      "takeaways": [
-        "Nikhil Kamath is the co‑founder of Zerodha and Gruhas and hosts the “WTF is” and “People By WTF” podcasts.",
-        "Rajeev Juneja serves as Vice Chairman and Managing Director at Mankind Pharma Ltd."
-      ],
+      "id": "dr-pal-c6002fcd25e1",
+      "title": "When Dr. Pal met the Gen Alpha Varenya!",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=Ub0GZFwKCMk",
+      "takeaways": [],
       "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] Wa3Z0m8c0Qo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-8657abde363d",
-      "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=_phJIm8mUT8",
-      "takeaways": [
-        "The fastest and the most affordable way to upskill yourself in AI.",
-        "Live workshop happening on 18th Oct, 7pm IST!"
-      ],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] _phJIm8mUT8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-dfb8be42be75",
-      "title": "The Wars That Never End",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=S3XPv1yfhtY",
-      "takeaways": [
-        "In this podcast, Kushal Mehra speaks with Abhijit Chavda about the never-ending war between the Israelis/Americans and Iran and the Russia-Ukraine war.",
-        "Could these escalate into a World War III-like scenario?"
-      ],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] S3XPv1yfhtY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-a6d565aa8831",
-      "title": "Does Donald Trump care about India or are China and Pakistan more important?",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=DGxZJtW8v-U",
-      "takeaways": [
-        "In the wake of the Trump-Xi summit, the Russian sanctions law and Trump’s tweeting of Shahbaz Sharif’s UN speech where do India US relations stand?",
-        "The critical question is does Donald Trump care about India or are China and Pakistan more important?"
-      ],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] DGxZJtW8v-U: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-4800def138fd",
-      "title": "“Dawood Never Spares Anyone Who Insults Him”: Vivek Agrawal",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=B1bC0_lxYk8",
-      "takeaways": [
-        "The episode features guest Vivek Agrawal discussing Dawood Ibrahim and the criminal underworld.",
-        "It is tagged with topics including crime, the underworld, Dubai, and Mumbai."
-      ],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] B1bC0_lxYk8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-ab716fe8d716",
-      "title": "Natural Vegetation and Wildlife | Class 9 Geography, Chapter 5 | NCERT Geography | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=1hYhCI7yo_E",
-      "takeaways": [
-        "The lecture covers protected areas and the importance of wildlife and forest conservation in India’s geography.",
-        "It is presented in a simple, engaging, exam‑oriented style."
-      ],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] 1hYhCI7yo_E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-194b11b96532",
-      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
-      "takeaways": [
-        "Leverage your growing earning power while balancing bigger life milestones with long‑term security.",
-        "Use smart asset allocation that balances high‑growth opportunities with risk management to accelerate financial independence."
-      ],
-      "date": "2026-09-29",
-      "reason": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "yt-dlp failed: no stderr"
     }
   ],
   "generator": {
@@ -6354,83 +6442,29 @@
     "tts": "none",
     "episodes": {
       "local": 6,
-      "ai": 31
+      "ai": 32
     }
   },
   "run": {
-    "at": "2026-09-29T02:17:30.283Z",
-    "discovered": 1127,
+    "at": "2026-09-30T01:01:33.617Z",
+    "discovered": 297,
     "eligible": 8,
     "processed": 1,
-    "skipped": 1119,
-    "failed": 7,
+    "skipped": 295,
+    "failed": 1,
     "pruned": 0,
     "errors": [
       {
         "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-29T02:05:21.323Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-29T02:05:21.326Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "dr-pal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-29T02:05:21.384Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-29T02:05:21.437Z"
+        "id": "diary-of-a-ceo",
+        "message": "fetch failed (feeds.megaphone.fm/thediaryofaceo: ETIMEDOUT read ETIMEDOUT)",
+        "at": "2026-09-30T00:42:52.640Z"
       },
       {
         "stage": "process",
-        "id": "desk-c436e242c031",
-        "message": "yt-dlp failed: ERROR: [youtube] Wa3Z0m8c0Qo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:16:00.003Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-8657abde363d",
-        "message": "yt-dlp failed: ERROR: [youtube] _phJIm8mUT8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:16:15.243Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-dfb8be42be75",
-        "message": "yt-dlp failed: ERROR: [youtube] S3XPv1yfhtY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:16:29.908Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-a6d565aa8831",
-        "message": "yt-dlp failed: ERROR: [youtube] DGxZJtW8v-U: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:16:45.503Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-4800def138fd",
-        "message": "yt-dlp failed: ERROR: [youtube] B1bC0_lxYk8: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:17:00.079Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-ab716fe8d716",
-        "message": "yt-dlp failed: ERROR: [youtube] 1hYhCI7yo_E: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:17:15.300Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-194b11b96532",
-        "message": "yt-dlp failed: ERROR: [youtube] g5-SVV0Tlxk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-29T02:17:30.275Z"
+        "id": "dr-pal-c6002fcd25e1",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-09-30T00:58:07.240Z"
       }
     ],
     "estimatedCostUsd": 0
