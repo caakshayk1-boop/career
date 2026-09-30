@@ -903,6 +903,27 @@ group("public retention window");
   ok("only rows past the data window are dropped", dropped === 1 && !st.episodes.ancient, dropped);
 }
 
+/* ── TWO RUNNERS, ONE ARTIFACT ───────────────────────────────────────────── */
+group("a failed run does not erase a successful one");
+{
+  /* The Mac reads YouTube at 09:01 MYT. CI fires at 09:23, cannot read YouTube
+     at all, processes nothing, and rewrites the artifact. Last writer wins and
+     CI is always last — so on 30 Sep the page announced "the last run read
+     nothing new" on a morning that had read a new episode an hour earlier.
+     `run` is this run and is allowed to say zero. `lastRead` is the marker the
+     page actually needs, and it only ever moves forward. */
+  const { lastReadMarker } = await import("../lib/retention.mjs");
+
+  const prev = { lastRead: { at: "2026-09-30T01:01:00.000Z", processed: 1 } };
+  ok("a run that read nothing keeps the previous marker",
+    lastReadMarker(prev, 0).at === prev.lastRead.at);
+  ok("a run that read something advances it",
+    lastReadMarker(prev, 3).at !== prev.lastRead.at && lastReadMarker(prev, 3).processed === 3);
+  ok("with no previous artifact and nothing read, there is no marker",
+    lastReadMarker(null, 0) === null);
+  ok("and a first successful run creates one", Boolean(lastReadMarker(null, 2)));
+}
+
 /* ── PROVENANCE ──────────────────────────────────────────────────────────── */
 group("the artifact does not misreport how it was made");
 {

@@ -262,6 +262,11 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
   background:var(--warn-soft);border-radius:0 var(--r-3) var(--r-3) 0;padding:13px 15px;margin:0 0 18px;
   font-size:var(--t-4);line-height:1.65;color:var(--muted)}
 .runwarn b{color:var(--text)}
+/* A page that is working normally must not wear a warning. Same shape as
+   .runwarn, without the alarm stripe — "checked, nothing new" is the ordinary
+   state of a feed whose shows do not publish daily, not a fault. */
+.runnote{max-width:var(--measure);border:1px solid var(--line);border-left:3px solid var(--line2);
+  border-radius:8px;padding:10px 13px;margin:0 0 15px;font-size:13.5px;color:var(--dim);line-height:1.55}
 .empty{padding:36px 20px;text-align:center;color:var(--dim);font-size:var(--t-5);line-height:1.7;
   border:1px dashed var(--line2);border-radius:var(--r-4);max-width:var(--measure)}
 .empty b{display:block;color:var(--text);font-size:var(--t-6);margin-bottom:7px}
@@ -486,12 +491,36 @@ function runBanner(doc){
   const r = doc.run || {};
   const elig = r.eligible || 0, proc = r.processed || 0, fail = r.failed || 0;
   if (!elig || proc) return "";
-  const when = r.at
-    ? new Date(r.at).toLocaleString("en-GB", { timeZone: MYT, day: "numeric", month: "short",
-                                               hour: "2-digit", minute: "2-digit" }) + " MYT"
-    : "the last run";
-  return '<div class="runwarn"><b>The last run read nothing new.</b> ' + elig +
-    " episode" + (elig === 1 ? " was" : "s were") + " eligible and " + fail +
+
+  const stamp = (v) => v
+    ? new Date(v).toLocaleString("en-GB", { timeZone: MYT, day: "numeric", month: "short",
+                                            hour: "2-digit", minute: "2-digit" }) + " MYT"
+    : "";
+  const when = stamp(r.at) || "the last run";
+
+  /* TWO RUNNERS WRITE THIS FILE and only one of them can read YouTube. The Mac
+     reads at 09:01 MYT; CI fires at 09:23, processes nothing, and overwrites
+     `run` with its own zeroes — so this banner used to announce a failed
+     morning on a morning that had succeeded an hour earlier. It was not wrong
+     about the last RUN. It was answering a question nobody asked.
+
+     What the reader wants to know is whether the page is current, so say when
+     something was last actually READ, and only call it a problem when that was
+     long enough ago to be one. */
+  const read = doc.lastRead || null;
+  const hoursSince = read && read.at ? (Date.now() - Date.parse(read.at)) / 3600000 : Infinity;
+
+  if (hoursSince < 36) {
+    return '<div class="runnote">Checked ' + esc(when) + " — nothing new since. " +
+      "Last new conversation read " + esc(stamp(read.at)) + "." +
+      (fail ? " " + fail + " episode" + (fail === 1 ? "" : "s") +
+        " could not be read from this runner; they stay eligible and are retried daily." : "") +
+      "</div>";
+  }
+
+  return '<div class="runwarn"><b>Nothing new has been read' +
+    (read && read.at ? " since " + esc(stamp(read.at)) : " on any recent run") + '.</b> ' + elig +
+    " episode" + (elig === 1 ? " was" : "s were") + " eligible on the last run and " + fail +
     " failed at the transcript stage, so everything below is from an earlier run. Checked " +
     esc(when) + ".</div>";
 }

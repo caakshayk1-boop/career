@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-30T01:23:12.435Z",
+  "generatedAt": "2026-09-30T08:47:52.872Z",
   "today": "2026-09-30",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -6484,87 +6484,15 @@
     }
   },
   "run": {
-    "at": "2026-09-30T01:23:12.433Z",
-    "discovered": 1127,
-    "eligible": 8,
+    "at": "2026-09-30T08:47:52.870Z",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 1119,
-    "failed": 8,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-30T01:21:20.141Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-30T01:21:20.143Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-30T01:21:20.216Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "dr-pal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-09-30T01:21:21.309Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2655b59de225",
-        "message": "yt-dlp failed: ERROR: [youtube] J5ft7TFUkoc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:21:27.914Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-7fba9e0bf91c",
-        "message": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:21:42.530Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-778dfb166595",
-        "message": "yt-dlp failed: ERROR: [youtube] wRBi0DT9dvY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:21:57.479Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-621e613f8fb2",
-        "message": "yt-dlp failed: ERROR: [youtube] GLkysTuGIj4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:22:12.670Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-112ef88f4b6d",
-        "message": "yt-dlp failed: ERROR: [youtube] lvBermEiJqo: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:22:27.929Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-f415bfe846f4",
-        "message": "yt-dlp failed: ERROR: [youtube] _OHJvlVSUNA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:22:42.611Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-8b4ae9eacbe9",
-        "message": "yt-dlp failed: ERROR: [youtube] E3MvVgdyJ64: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:22:57.300Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-20d0221a7717",
-        "message": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-09-30T01:23:12.424Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
-  }
+  },
+  "lastRead": null
 }

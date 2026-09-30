@@ -28,7 +28,7 @@ import { extract, extractLocal, meta, script } from "./lib/extract.mjs";
 import { validateLearnings, verdict } from "./lib/validate.mjs";
 import { makeAI, estimateCost } from "./lib/ai.mjs";
 import { makeAudio } from "./lib/audio.mjs";
-import { buildPublic, buildPending, mergePending, carryPending, pruneState } from "./lib/retention.mjs";
+import { buildPublic, buildPending, mergePending, carryPending, lastReadMarker, pruneState } from "./lib/retention.mjs";
 
 const argv = new Set(process.argv.slice(2));
 const REPUBLISH_ONLY = argv.has("--republish");
@@ -200,6 +200,7 @@ async function main() {
     pending: mergePending(pending),
     generator: generator(published, ai, audio, prev),
     run: summarise(),
+    lastRead: lastReadMarker(prev, run.counts.processed),
   });
 
   if (cfg.dryRun) log.stage("publish", `DRY RUN — would publish ${doc.episodes.length} episodes across ${doc.days.length} days`);
