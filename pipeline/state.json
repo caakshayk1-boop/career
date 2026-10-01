@@ -26542,15 +26542,15 @@
     },
     "desk-7fba9e0bf91c": {
       "status": "FAILED",
-      "title": "Ratan Tata’s $2.3B Gamble | How Tata Turned JLR Into a Billion-Dollar Comeback",
+      "title": "TATA’S JAGUAR TAKEOVER | How Ratan Tata Turned His Biggest Failure Into a Global Luxury Empire",
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
       "id": "desk-7fba9e0bf91c",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-30T01:21:27.922Z",
-      "updatedAt": "2026-09-30T22:53:15.259Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-10-01T01:22:29.021Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-778dfb166595": {
       "status": "PUBLISHED",
@@ -27202,18 +27202,18 @@
     },
     "desk-20d0221a7717": {
       "status": "FAILED",
-      "title": "50 Gen Zs Asked Me Questions I Was NOT Ready For",
+      "title": "50 AMBITIOUS Gen Z's, 1 Ranveer - BeerBiceps Live Ep. 2",
       "show": "The Ranveer Show",
       "url": "https://www.youtube.com/watch?v=remqlmMVhNs",
       "id": "desk-20d0221a7717",
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-30T01:22:57.309Z",
-      "updatedAt": "2026-09-30T01:23:12.424Z",
+      "updatedAt": "2026-10-01T01:22:44.197Z",
       "reason": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "ali-abdaal-3400bc9e654e": {
-      "status": "NEEDS_REVIEW",
+      "status": "FAILED",
       "title": "My CEO Coach Destroys My Limiting Beliefs",
       "show": "Deep Dive with Ali Abdaal",
       "url": "https://www.youtube.com/watch?v=6-ZxPvpV8ec",
@@ -27221,9 +27221,69 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-30T22:45:15.407Z",
-      "updatedAt": "2026-09-30T22:46:30.879Z",
-      "reason": "fewer than half the learnings are quotable from the source",
+      "updatedAt": "2026-10-01T01:20:59.103Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6-ZxPvpV8ec: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
       "learningsFound": 6
+    },
+    "desk-1365c4fd6347": {
+      "status": "FAILED",
+      "title": "I Researched 10 Most Talked About Business Ideas To Replace Your Salary",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=Ab70caGusMY",
+      "id": "desk-1365c4fd6347",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-01T01:20:59.112Z",
+      "updatedAt": "2026-10-01T01:21:14.118Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Ab70caGusMY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-cdf51ffe185a": {
+      "status": "FAILED",
+      "title": "With Gyanesh Kumar - Has BJP Hit Its Bofors Moment? | Opp. Pressure Mounts On CEC | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=jRBd_jOyX1k",
+      "id": "desk-cdf51ffe185a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-01T01:21:14.127Z",
+      "updatedAt": "2026-10-01T01:21:28.949Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] jRBd_jOyX1k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-064b82c4608c": {
+      "status": "FAILED",
+      "title": "अखिलेश का बड़ा दांव, नाथवानी को राज्यसभामोदी के क़रीबी कारोबारी अब क्यों बदल रहे पाला? | Arfa Khanum",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=fOSOcZ5HE10",
+      "id": "desk-064b82c4608c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-01T01:21:28.960Z",
+      "updatedAt": "2026-10-01T01:21:44.050Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] fOSOcZ5HE10: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-7d5e00676f86": {
+      "status": "FAILED",
+      "title": "“The Creators Of Homeland Saw Me In Lunchbox And Thought I Would Make A Great Spy” Nimrat Kaur",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=P6sjWXciEbk",
+      "id": "desk-7d5e00676f86",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-01T01:21:44.058Z",
+      "updatedAt": "2026-10-01T01:21:59.046Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] P6sjWXciEbk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-3b91fffcea5d": {
+      "status": "FAILED",
+      "title": "The Delhi Sultans | Class 7 History, Chapter 3 | NCERT History | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=Fawd1jD001o",
+      "id": "desk-3b91fffcea5d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-01T01:21:59.056Z",
+      "updatedAt": "2026-10-01T01:22:13.998Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Fawd1jD001o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

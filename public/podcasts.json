@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-30T23:10:55.342Z",
+  "generatedAt": "2026-10-01T01:22:44.211Z",
   "today": "2026-10-01",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -7079,30 +7079,6 @@
   ],
   "pending": [
     {
-      "id": "desk-20d0221a7717",
-      "title": "50 Gen Zs Asked Me Questions I Was NOT Ready For",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=remqlmMVhNs",
-      "takeaways": [
-        "The episode features young founders, creators, students and professionals discussing careers, startups, AI, content creation, money and finding direction in their 20s.",
-        "The podcast’s mission is to upgrade listeners’ mindset, intellect and soul through unfiltered, high‑impact conversations."
-      ],
-      "date": "2026-10-01",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-9b1a136c6862",
-      "title": "India’s River Disputes Explained | Inter-State Water Disputes | Zero To Zenith Ep. 5",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=WoUq4S0Melg",
-      "takeaways": [
-        "The session explains the concept of inter‑state river water disputes in India, including their constitutional and legal framework.",
-        "It also covers major river disputes, the role of tribunals, and key challenges in water sharing and river management."
-      ],
-      "date": "2026-10-01",
-      "reason": "over the 8/day cap"
-    },
-    {
       "id": "desk-8657abde363d",
       "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
       "show": "Dhruv Rathee",
@@ -7120,8 +7096,8 @@
       "show": "Abhijit Chavda",
       "url": "https://www.youtube.com/watch?v=S3XPv1yfhtY",
       "takeaways": [
-        "In this podcast, Kushal Mehra speaks with Abhijit Chavda about the never-ending war between the Israelis/Americans and Iran and the Russia-Ukraine war.",
-        "Could these escalate into a World War III-like scenario?"
+        "The podcast discusses the ongoing war between Israelis/Americans and Iran, as well as the Russia‑Ukraine war.",
+        "It explores whether these conflicts could escalate into a World War III‑like scenario."
       ],
       "date": "2026-10-01",
       "reason": "over the 8/day cap"
@@ -7132,8 +7108,8 @@
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
       "takeaways": [
-        "Focus on smart asset allocation.",
-        "Balance high‑growth opportunities with risk management."
+        "Leverage your growing earning power while balancing bigger life milestones with long‑term security.",
+        "Use smart asset allocation that balances high‑growth opportunities with risk management to accelerate financial independence."
       ],
       "date": "2026-10-01",
       "reason": "over the 8/day cap"
@@ -7144,8 +7120,8 @@
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
       "takeaways": [
-        "Patel’s work establishing India’s civil services is described as the “steel frame” that holds the nation together.",
-        "Patel secured Jammu & Kashmir’s accession to Bharat."
+        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
+        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
       ],
       "date": "2026-10-01",
       "reason": "over the 8/day cap"
@@ -7156,8 +7132,8 @@
       "show": "Zerodha Varsity",
       "url": "https://www.youtube.com/watch?v=i9O0FZxpCRE",
       "takeaways": [
-        "Can a home loan overdraft really help you reduce your interest cost, or is it only useful for a certain type of borrower?",
-        "In this video, Aastha Khurana explains how a home loan overdraft works, how it differs from a regular home loan, and the situations where it can actually make sense."
+        "A home loan overdraft works differently from a regular home loan, with distinct calculations and features.",
+        "It can be beneficial in specific situations where those features align with the borrower’s needs."
       ],
       "date": "2026-10-01",
       "reason": "over the 8/day cap"
@@ -7168,8 +7144,8 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
       "takeaways": [
-        "Money principles are being taught to the kids before they turn 15.",
-        "The content is not investment advice; viewers should do their own due diligence."
+        "The video shares money principles the host is teaching his kids before they turn 15.",
+        "It explicitly states the content is not investment advice and you should do your own due diligence."
       ],
       "date": "2026-10-01",
       "reason": "over the 8/day cap"
@@ -7181,7 +7157,7 @@
       "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
       "takeaways": [
         "A practical case study of two working professionals in different age groups is used to illustrate retirement planning.",
-        "The episode shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
+        "The episode demonstrates how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
       ],
       "date": "2026-10-01",
       "reason": "over the 8/day cap"
@@ -7199,16 +7175,97 @@
       "reason": "over the 8/day cap"
     },
     {
+      "id": "ali-abdaal-3400bc9e654e",
+      "title": "My CEO Coach Destroys My Limiting Beliefs",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=6-ZxPvpV8ec",
+      "takeaways": [],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6-ZxPvpV8ec: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-1365c4fd6347",
+      "title": "I Researched 10 Most Talked About Business Ideas To Replace Your Salary",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=Ab70caGusMY",
+      "takeaways": [
+        "Revenue is not the same as profit, and ownership does not automatically mean passive income.",
+        "A higher salary does not always translate into higher savings."
+      ],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] Ab70caGusMY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-cdf51ffe185a",
+      "title": "With Gyanesh Kumar - Has BJP Hit Its Bofors Moment? | Opp. Pressure Mounts On CEC | Akash Banerjee",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=jRBd_jOyX1k",
+      "takeaways": [
+        "A week after the Indian Express exposed the dirty deeds of the Election Commission - the mess just keeps getting bigger.",
+        "Despite the EC trying to issue a detailed clarification - the questions keep mounting…from voter deletions, illegal Form 6, electoral roll manipulation, internal disagreements to total lack of transparency."
+      ],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] jRBd_jOyX1k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-064b82c4608c",
+      "title": "अखिलेश का बड़ा दांव, नाथवानी को राज्यसभामोदी के क़रीबी कारोबारी अब क्यों बदल रहे पाला? | Arfa Khanum",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=fOSOcZ5HE10",
+      "takeaways": [
+        "She also discusses a report by The Indian Express revealing that Congress has dropped Ambani’s name from its “Destroyers of Democracy” list.",
+        "She is joined by senior journalist Sheetal P."
+      ],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] fOSOcZ5HE10: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-7d5e00676f86",
+      "title": "“The Creators Of Homeland Saw Me In Lunchbox And Thought I Would Make A Great Spy” Nimrat Kaur",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=P6sjWXciEbk",
+      "takeaways": [
+        "The creators of *Homeland* saw Nimrat Kaur in *Lunchbox* and thought she would make a great spy.",
+        "She is featured as a guest on Smita Prakash’s podcast."
+      ],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] P6sjWXciEbk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-3b91fffcea5d",
+      "title": "The Delhi Sultans | Class 7 History, Chapter 3 | NCERT History | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=Fawd1jD001o",
+      "takeaways": [
+        "In this chapter, you will explore the rise and expansion of the Delhi Sultanate between the 12th and 16th centuries and understand the political, administrative and social changes that shaped medieval India.",
+        "The Iqta System and Revenue Administration Alauddin Khalji’s Administrative Measures Architecture and Monuments of the Delhi Sultanate Social and Political Changes under the Delhi Sultans Major Developments during the Delhi Sultanate The Buniyad NCERT History Series covers NCERT History from Class 6 to Class 12, helping aspirants build a strong conceptual foundation for UPSC, State PCS and other competitive examinations."
+      ],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] Fawd1jD001o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
       "id": "desk-7fba9e0bf91c",
-      "title": "Ratan Tata’s $2.3B Gamble | How Tata Turned JLR Into a Billion-Dollar Comeback",
+      "title": "TATA’S JAGUAR TAKEOVER | How Ratan Tata Turned His Biggest Failure Into a Global Luxury Empire",
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
       "takeaways": [
-        "Ratan Tata purchased Jaguar Land Rover from Ford for £1.15 billion.",
-        "In the seven years after the purchase, JLR generated £1.675 billion in profits."
+        "Ratan Tata walked away from selling Tata Motors’ passenger‑car division to Ford after a dismissive pitch.",
+        "Nine years later, Tata bought Jaguar Land Rover from Ford for £1.15 billion, and the business generated £1.675 billion in profit over the following seven years."
       ],
       "date": "2026-10-01",
-      "reason": "no candidate ideas found in the transcript"
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-20d0221a7717",
+      "title": "50 AMBITIOUS Gen Z's, 1 Ranveer - BeerBiceps Live Ep. 2",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=remqlmMVhNs",
+      "takeaways": [
+        "The episode is aimed at anyone figuring out their career, startup, creator journey, or next move in their 20s.",
+        "BeerBiceps has grown from a brand into a global hub for personal growth, offering high‑impact conversations."
+      ],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -7223,19 +7280,79 @@
     }
   },
   "run": {
-    "at": "2026-09-30T23:10:55.325Z",
-    "discovered": 1148,
+    "at": "2026-10-01T01:22:44.209Z",
+    "discovered": 1134,
     "eligible": 8,
-    "processed": 5,
-    "skipped": 1141,
-    "failed": 2,
+    "processed": 0,
+    "skipped": 1126,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-01T01:20:53.159Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-01T01:20:53.160Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-01T01:20:54.428Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-3400bc9e654e",
+        "message": "yt-dlp failed: ERROR: [youtube] 6-ZxPvpV8ec: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:20:59.103Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-1365c4fd6347",
+        "message": "yt-dlp failed: ERROR: [youtube] Ab70caGusMY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:21:14.118Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-cdf51ffe185a",
+        "message": "yt-dlp failed: ERROR: [youtube] jRBd_jOyX1k: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:21:28.949Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-064b82c4608c",
+        "message": "yt-dlp failed: ERROR: [youtube] fOSOcZ5HE10: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:21:44.050Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-7d5e00676f86",
+        "message": "yt-dlp failed: ERROR: [youtube] P6sjWXciEbk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:21:59.045Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-3b91fffcea5d",
+        "message": "yt-dlp failed: ERROR: [youtube] Fawd1jD001o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:22:13.998Z"
+      },
+      {
         "stage": "process",
         "id": "desk-7fba9e0bf91c",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-09-30T22:53:15.259Z"
+        "message": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:22:29.021Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-20d0221a7717",
+        "message": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-01T01:22:44.197Z"
       }
     ],
     "estimatedCostUsd": 0
