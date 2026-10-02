@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T23:07:06.054Z",
+  "generatedAt": "2026-10-02T01:45:19.549Z",
   "today": "2026-10-02",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -7781,28 +7781,16 @@
   ],
   "pending": [
     {
-      "id": "desk-20d0221a7717",
-      "title": "50 AMBITIOUS Gen Z's, 1 Ranveer - BeerBiceps Live Ep. 2",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=remqlmMVhNs",
+      "id": "desk-7fba9e0bf91c",
+      "title": "TATA’S JAGUAR TAKEOVER | How Ratan Tata Turned His Biggest Failure Into a Global Luxury Empire",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
       "takeaways": [
-        "The episode is aimed at anyone figuring out their career, startup, creator journey, or next move in their 20s.",
-        "BeerBiceps has grown from a brand into a global hub for personal growth, offering high‑impact conversations."
+        "Ratan Tata walked away from selling Tata’s passenger‑car division to Ford and later bought Jaguar Land Rover from Ford for £1.15 billion.",
+        "After the purchase, JLR went from losses to generating £1.675 billion in profits over the following seven years."
       ],
       "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-8657abde363d",
-      "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=_phJIm8mUT8",
-      "takeaways": [
-        "The fastest and the most affordable way to upskill yourself in AI.",
-        "Live workshop happening on 18th Oct, 7pm IST!"
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-dfb8be42be75",
@@ -7810,107 +7798,71 @@
       "show": "Abhijit Chavda",
       "url": "https://www.youtube.com/watch?v=S3XPv1yfhtY",
       "takeaways": [
-        "The podcast discusses the ongoing war between Israelis/Americans and Iran, as well as the Russia‑Ukraine war.",
-        "It explores whether these conflicts could escalate into a World War III‑like scenario."
+        "The episode discusses the ongoing conflict between Israelis/Americans and Iran as well as the Russia‑Ukraine war.",
+        "It considers whether these wars could escalate into a World War III‑like scenario."
       ],
       "date": "2026-10-02",
-      "reason": "over the 8/day cap"
+      "reason": "yt-dlp failed: ERROR: [youtube] S3XPv1yfhtY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-194b11b96532",
-      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
-      "takeaways": [
-        "Leverage your growing earning power while balancing bigger life milestones with long‑term security.",
-        "Use smart asset allocation that balances high‑growth opportunities with risk management to accelerate financial independence."
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-38f3d4479cf2",
-      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
-      "takeaways": [
-        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
-        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-45753e46564a",
-      "title": "Can a Home Loan Overdraft Save You Interest?",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=i9O0FZxpCRE",
-      "takeaways": [
-        "A home loan overdraft works differently from a regular home loan, with distinct calculations and features.",
-        "It can be beneficial in specific situations where those features align with the borrower’s needs."
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-93a3b9ee5af2",
-      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
-      "takeaways": [
-        "The video shares money principles the host is teaching his kids before they turn 15.",
-        "It explicitly states the content is not investment advice and you should do your own due diligence."
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-a84f95444c21",
-      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
-      "takeaways": [
-        "A practical case study of two working professionals in different age groups is used to illustrate retirement planning.",
-        "The episode demonstrates how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-fdb64932c090",
-      "title": "AI : Doomsday vs NeuroOptimism | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=M8m9Yjv42tk",
-      "takeaways": [
-        "In 2003, we were told AI would take 300 million jobs.",
-        "It's 2026, and companies are quietly rehiring the people they let go."
-      ],
-      "date": "2026-10-02",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-7d5e00676f86",
-      "title": "“The Creators Of Homeland Saw Me In Lunchbox And Thought I Would Make A Great Spy” Nimrat Kaur",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=P6sjWXciEbk",
-      "takeaways": [
-        "The creators of *Homeland* saw Nimrat Kaur in *Lunchbox* and thought she would make a great spy.",
-        "She is featured as a guest on Smita Prakash’s podcast."
-      ],
-      "date": "2026-10-02",
-      "reason": "no candidate ideas found in the transcript"
-    },
-    {
-      "id": "desk-7fba9e0bf91c",
-      "title": "TATA’S JAGUAR TAKEOVER | How Ratan Tata Turned His Biggest Failure Into a Global Luxury Empire",
+      "id": "desk-dee6c95cd3fc",
+      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
       "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
+      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
       "takeaways": [
-        "Ratan Tata walked away from selling Tata Motors’ passenger‑car division to Ford after a dismissive pitch.",
-        "Nine years later, Tata bought Jaguar Land Rover from Ford for £1.15 billion, and the business generated £1.675 billion in profit over the following seven years."
+        "The rebel attack from Yemen has disrupted Saudi Arabia’s oil supply, leaving the kingdom struggling to sell its oil worldwide.",
+        "When the rebels captured three remote islands, Brent crude prices rose to $110 a barrel, sending shockwaves through the global economy."
       ],
       "date": "2026-10-02",
-      "reason": "no candidate ideas found in the transcript"
+      "reason": "yt-dlp failed: ERROR: [youtube] UY9H83yQnzc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-5886041ee66d",
+      "title": "Lets Talk About Indian Courts... | Shut Up Ya Kunal w/ Kunal Kamra ft Arvind Narrain | Episode 37",
+      "show": "Shut Up Ya Kunal",
+      "url": "https://www.youtube.com/watch?v=ovC-02pLKnI",
+      "takeaways": [
+        "He argues that courts have the power to defend dissent, voting rights and minorities but have often lacked the courage to use it.",
+        "He examines electoral‑roll revisions, prolonged incarceration and denial of bail, as well as judicial appointments and accountability."
+      ],
+      "date": "2026-10-02",
+      "reason": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-8679a5d516c6",
+      "title": "The India That Gujarat Built | Shut Up Ya Kunal w/ Kunal Kamra ft Aakar Patel | Episode 36",
+      "show": "Shut Up Ya Kunal",
+      "url": "https://www.youtube.com/watch?v=-BucDdCiD-s",
+      "takeaways": [
+        "Aakar Patel serves as Chair of Amnesty International India.",
+        "In the episode he examines Gujarat’s political transformation and its influence on India, including the rise of Narendra Modi and the BJP’s model."
+      ],
+      "date": "2026-10-02",
+      "reason": "yt-dlp failed: ERROR: [youtube] -BucDdCiD-s: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-eea47041d491",
+      "title": "Outrageous Outings: Inside India's Most Unusual Defence Academy!",
+      "show": "Unfiltered by Samdish",
+      "url": "https://www.youtube.com/watch?v=6G6WkIYLlds",
+      "takeaways": [
+        "Harishankar Sharma is helping young people in Bharatpur prepare to become adults.",
+        "The episode focuses on finding the extraordinary in ordinary lives."
+      ],
+      "date": "2026-10-02",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6G6WkIYLlds: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-7b563e909891",
+      "title": "We Don't Need No Education : Subah Subah Sarkaari School Chalein?",
+      "show": "Unfiltered by Samdish",
+      "url": "https://www.youtube.com/watch?v=bDCS5ue4cSc",
+      "takeaways": [
+        "Education’s purpose is the formation of character.",
+        "Teachers often work tirelessly and unnoticed behind the scenes."
+      ],
+      "date": "2026-10-02",
+      "reason": "yt-dlp failed: ERROR: [youtube] bDCS5ue4cSc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -7925,25 +7877,79 @@
     }
   },
   "run": {
-    "at": "2026-10-01T23:07:06.035Z",
-    "discovered": 1148,
-    "eligible": 8,
-    "processed": 5,
-    "skipped": 1140,
-    "failed": 3,
+    "at": "2026-10-02T01:45:19.547Z",
+    "discovered": 1118,
+    "eligible": 7,
+    "processed": 0,
+    "skipped": 1111,
+    "failed": 7,
     "pruned": 0,
     "errors": [
       {
-        "stage": "process",
-        "id": "desk-7d5e00676f86",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-01T23:00:38.265Z"
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-02T01:43:41.584Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-02T01:43:42.651Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-02T01:43:42.936Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-02T01:43:45.165Z"
       },
       {
         "stage": "process",
         "id": "desk-7fba9e0bf91c",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-01T23:07:06.005Z"
+        "message": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:43:49.554Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-dfb8be42be75",
+        "message": "yt-dlp failed: ERROR: [youtube] S3XPv1yfhtY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:44:04.310Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-dee6c95cd3fc",
+        "message": "yt-dlp failed: ERROR: [youtube] UY9H83yQnzc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:44:19.633Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-5886041ee66d",
+        "message": "yt-dlp failed: ERROR: [youtube] ovC-02pLKnI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:44:34.367Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-8679a5d516c6",
+        "message": "yt-dlp failed: ERROR: [youtube] -BucDdCiD-s: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:44:49.275Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-eea47041d491",
+        "message": "yt-dlp failed: ERROR: [youtube] 6G6WkIYLlds: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:45:04.420Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-7b563e909891",
+        "message": "yt-dlp failed: ERROR: [youtube] bDCS5ue4cSc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-02T01:45:19.536Z"
       }
     ],
     "estimatedCostUsd": 0
