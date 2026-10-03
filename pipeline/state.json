@@ -27090,8 +27090,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-30T01:21:27.922Z",
-      "updatedAt": "2026-10-02T22:51:38.251Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-10-03T01:17:01.182Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-778dfb166595": {
       "status": "PUBLISHED",
@@ -27754,7 +27754,7 @@
       "reason": "yt-dlp failed: ERROR: [youtube] remqlmMVhNs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "ali-abdaal-3400bc9e654e": {
-      "status": "NEEDS_REVIEW",
+      "status": "FAILED",
       "title": "My CEO Coach Destroys My Limiting Beliefs",
       "show": "Deep Dive with Ali Abdaal",
       "url": "https://www.youtube.com/watch?v=6-ZxPvpV8ec",
@@ -27762,8 +27762,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-09-30T22:45:15.407Z",
-      "updatedAt": "2026-10-02T22:50:53.590Z",
-      "reason": "fewer than half the learnings are quotable from the source",
+      "updatedAt": "2026-10-03T01:16:46.343Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6-ZxPvpV8ec: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
       "learningsFound": 6
     },
     "desk-1365c4fd6347": {
@@ -28920,6 +28920,78 @@
         "audio": null,
         "readSeconds": 157
       }
+    },
+    "desk-6b130fc1c5b2": {
+      "status": "FAILED",
+      "title": "Democracy Is Being Manipulated? | Why India’s Voter List Has Triggered Nationwide Protests?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=MGRTpIyJRIk",
+      "id": "desk-6b130fc1c5b2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-03T01:15:10.962Z",
+      "updatedAt": "2026-10-03T01:15:16.092Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] MGRTpIyJRIk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-6e6cfcd221a2": {
+      "status": "FAILED",
+      "title": "What happened to the Indian Stock Market?",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=xEk2do30B1I",
+      "id": "desk-6e6cfcd221a2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-03T01:15:16.101Z",
+      "updatedAt": "2026-10-03T01:15:30.996Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] xEk2do30B1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-cf57c3d7f8a3": {
+      "status": "FAILED",
+      "title": "“Many Directors Wanted To Vulgarly Cash In On The Waterfall Scene”: Mandakini",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=QXAKPQi1UU4",
+      "id": "desk-cf57c3d7f8a3",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-03T01:15:31.004Z",
+      "updatedAt": "2026-10-03T01:15:46.012Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] QXAKPQi1UU4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-cb91032b09a7": {
+      "status": "FAILED",
+      "title": "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=2vRVTwYVbEE",
+      "id": "desk-cb91032b09a7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-03T01:15:46.023Z",
+      "updatedAt": "2026-10-03T01:16:00.978Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 2vRVTwYVbEE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-54cb035dee97": {
+      "status": "FAILED",
+      "title": "How Intelligence Agents Lie, Recruit & Run Secret Operations | David Bickford | FO569 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=txryxBFzmSs",
+      "id": "desk-54cb035dee97",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-03T01:16:00.987Z",
+      "updatedAt": "2026-10-03T01:16:15.999Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] txryxBFzmSs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-bfa0acf59eea": {
+      "status": "FAILED",
+      "title": "Correction FINALLY OVER in Indian Markets? (time to buy?)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=Bnbq1-9r3w4",
+      "id": "desk-bfa0acf59eea",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-03T01:16:16.009Z",
+      "updatedAt": "2026-10-03T01:16:31.061Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] Bnbq1-9r3w4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

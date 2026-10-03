@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T23:06:47.804Z",
+  "generatedAt": "2026-10-03T01:17:01.194Z",
   "today": "2026-10-03",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -8679,28 +8679,147 @@
   ],
   "pending": [
     {
-      "id": "desk-eea47041d491",
-      "title": "Outrageous Outings: Inside India's Most Unusual Defence Academy!",
-      "show": "Unfiltered by Samdish",
-      "url": "https://www.youtube.com/watch?v=6G6WkIYLlds",
+      "id": "desk-8657abde363d",
+      "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=_phJIm8mUT8",
       "takeaways": [
-        "Harishankar Sharma is helping young people in Bharatpur prepare to become adults.",
-        "The episode focuses on finding the extraordinary in ordinary lives."
+        "The fastest and the most affordable way to upskill yourself in AI.",
+        "Live workshop happening on 18th Oct, 7pm IST!"
       ],
       "date": "2026-10-03",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-7b563e909891",
-      "title": "We Don't Need No Education : Subah Subah Sarkaari School Chalein?",
-      "show": "Unfiltered by Samdish",
-      "url": "https://www.youtube.com/watch?v=bDCS5ue4cSc",
+      "id": "desk-194b11b96532",
+      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
       "takeaways": [
-        "Education’s purpose is the formation of character.",
-        "Teachers often work tirelessly and unnoticed behind the scenes."
+        "Leverage your growing earning power while balancing larger life milestones with long‑term security.",
+        "Use a smart asset‑allocation approach that balances high‑growth opportunities with risk management to accelerate financial independence."
       ],
       "date": "2026-10-03",
       "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-38f3d4479cf2",
+      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
+      "takeaways": [
+        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
+        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
+      ],
+      "date": "2026-10-03",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-a84f95444c21",
+      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
+      "takeaways": [
+        "A practical case study of two working professionals of different age groups is used to illustrate retirement planning.",
+        "The episode shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
+      ],
+      "date": "2026-10-03",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-93a3b9ee5af2",
+      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
+      "takeaways": [
+        "The video shares the money principles the host is teaching their kids.",
+        "It is not investment advice; viewers should do their own due diligence."
+      ],
+      "date": "2026-10-03",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-d305b2a58483",
+      "title": "Where to park your cash for Short Term!",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
+      "takeaways": [
+        "This video explains Debt Mutual Funds.",
+        "Debt funds may look simple and safe, but choosing the wrong fund for your investment duration can expose you to credit risk, liquidity risk and interest rate risk."
+      ],
+      "date": "2026-10-03",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-6b130fc1c5b2",
+      "title": "Democracy Is Being Manipulated? | Why India’s Voter List Has Triggered Nationwide Protests?",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=MGRTpIyJRIk",
+      "takeaways": [
+        "out of 3 Election Commissioners have objected at least 14 times in 10 months, saying some decisions were taken without their knowledge.",
+        "Protestors are demanding the resignation of Chief Election Commissioner Gyanesh Kumar."
+      ],
+      "date": "2026-10-03",
+      "reason": "yt-dlp failed: ERROR: [youtube] MGRTpIyJRIk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-6e6cfcd221a2",
+      "title": "What happened to the Indian Stock Market?",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=xEk2do30B1I",
+      "takeaways": [
+        "Are you feeling anxious about the recent stock market decline and wondering what your next move should be?",
+        "In this video, we dive deep into the current market situation, dissecting the key drivers behind the recent downturn and what it means for everyday investors."
+      ],
+      "date": "2026-10-03",
+      "reason": "yt-dlp failed: ERROR: [youtube] xEk2do30B1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-cf57c3d7f8a3",
+      "title": "“Many Directors Wanted To Vulgarly Cash In On The Waterfall Scene”: Mandakini",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=QXAKPQi1UU4",
+      "takeaways": [
+        "Many directors tried to exploit the waterfall scene for profit.",
+        "The episode features Mandakini discussing this aspect of Bollywood cinema."
+      ],
+      "date": "2026-10-03",
+      "reason": "yt-dlp failed: ERROR: [youtube] QXAKPQi1UU4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-cb91032b09a7",
+      "title": "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=2vRVTwYVbEE",
+      "takeaways": [
+        "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #Movies #Cinema #Actor #RajKapoor #RamTeriGangaMaili Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-10-03",
+      "reason": "yt-dlp failed: ERROR: [youtube] 2vRVTwYVbEE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-54cb035dee97",
+      "title": "How Intelligence Agents Lie, Recruit & Run Secret Operations | David Bickford | FO569 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=txryxBFzmSs",
+      "takeaways": [
+        "David Bickford recounts using fake passports during his career and his first UK operation that helped catch a Czechoslovak spy.",
+        "He explains how intelligence agencies recruit spies and discusses which holds more power, the CIA or Britain’s intelligence agencies."
+      ],
+      "date": "2026-10-03",
+      "reason": "yt-dlp failed: ERROR: [youtube] txryxBFzmSs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-bfa0acf59eea",
+      "title": "Correction FINALLY OVER in Indian Markets? (time to buy?)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=Bnbq1-9r3w4",
+      "takeaways": [
+        "NIFTY has been trading sideways for quite some time.",
+        "The host notes the content is not investment advice and urges viewers to do their own due diligence."
+      ],
+      "date": "2026-10-03",
+      "reason": "yt-dlp failed: ERROR: [youtube] Bnbq1-9r3w4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
       "id": "desk-7fba9e0bf91c",
@@ -8708,23 +8827,20 @@
       "show": "Think School",
       "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
       "takeaways": [
-        "Ratan Tata walked away from selling Tata’s passenger‑car division to Ford and later bought Jaguar Land Rover from Ford for £1.15 billion.",
-        "After the purchase, JLR went from losses to generating £1.675 billion in profits over the following seven years."
+        "Ratan Tata walked out of the deal to sell Tata Motors’ passenger‑car division to Ford and later bought Jaguar Land Rover from Ford for £1.15 billion.",
+        "After the acquisition, Jaguar Land Rover generated £1.675 billion in profits over the next seven years."
       ],
       "date": "2026-10-03",
-      "reason": "no candidate ideas found in the transcript"
+      "reason": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     },
     {
-      "id": "desk-dee6c95cd3fc",
-      "title": "BETRAYAL OF SAUDI ARABIA? | Why America Abandoned Saudi Arabia in Its Darkest Hour?",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=UY9H83yQnzc",
-      "takeaways": [
-        "The rebel attack from Yemen has disrupted Saudi Arabia’s oil supply, leaving the kingdom struggling to sell its oil worldwide.",
-        "When the rebels captured three remote islands, Brent crude prices rose to $110 a barrel, sending shockwaves through the global economy."
-      ],
-      "date": "2026-10-03",
-      "reason": "no candidate ideas found in the transcript"
+      "id": "ali-abdaal-3400bc9e654e",
+      "title": "My CEO Coach Destroys My Limiting Beliefs",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=6-ZxPvpV8ec",
+      "takeaways": [],
+      "date": "2026-10-01",
+      "reason": "yt-dlp failed: ERROR: [youtube] 6-ZxPvpV8ec: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -8739,25 +8855,79 @@
     }
   },
   "run": {
-    "at": "2026-10-02T23:06:47.788Z",
-    "discovered": 1139,
+    "at": "2026-10-03T01:17:01.192Z",
+    "discovered": 1135,
     "eligible": 8,
-    "processed": 5,
-    "skipped": 1131,
-    "failed": 3,
+    "processed": 0,
+    "skipped": 1127,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
-        "stage": "process",
-        "id": "desk-7fba9e0bf91c",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-02T22:51:38.251Z"
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-03T01:15:08.660Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-03T01:15:08.663Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-03T01:15:08.665Z"
       },
       {
         "stage": "process",
-        "id": "desk-dee6c95cd3fc",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-02T23:00:18.579Z"
+        "id": "desk-6b130fc1c5b2",
+        "message": "yt-dlp failed: ERROR: [youtube] MGRTpIyJRIk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:15:16.092Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-6e6cfcd221a2",
+        "message": "yt-dlp failed: ERROR: [youtube] xEk2do30B1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:15:30.996Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-cf57c3d7f8a3",
+        "message": "yt-dlp failed: ERROR: [youtube] QXAKPQi1UU4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:15:46.012Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-cb91032b09a7",
+        "message": "yt-dlp failed: ERROR: [youtube] 2vRVTwYVbEE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:16:00.978Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-54cb035dee97",
+        "message": "yt-dlp failed: ERROR: [youtube] txryxBFzmSs: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:16:15.999Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-bfa0acf59eea",
+        "message": "yt-dlp failed: ERROR: [youtube] Bnbq1-9r3w4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:16:31.061Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-3400bc9e654e",
+        "message": "yt-dlp failed: ERROR: [youtube] 6-ZxPvpV8ec: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:16:46.343Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-7fba9e0bf91c",
+        "message": "yt-dlp failed: ERROR: [youtube] eUCXN_4w7dI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-03T01:17:01.182Z"
       }
     ],
     "estimatedCostUsd": 0
