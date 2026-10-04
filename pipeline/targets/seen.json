@@ -1,0 +1,233 @@
+{
+ "note": "Employers his own jobs feed captured posting a role at or near controller grade. Extracted from news.askakshay.com/jobs.json; bestFit is the feed candidate_fit_score, not this analysis score.",
+ "feedGeneratedAt": "2026-09-21T10:22:51Z",
+ "companies": {
+  "Landmark Group": {
+   "posts": 3,
+   "bestFit": 81,
+   "titles": [
+    "senior manager finance",
+    "manager finance uae",
+    "assistant manager finance"
+   ]
+  },
+  "Aldar": {
+   "posts": 7,
+   "bestFit": 77,
+   "titles": [
+    "vice president asset management commercial",
+    "assistant vice president financial planning & analysis",
+    "associate director commercial assurance"
+   ]
+  },
+  "GMG": {
+   "posts": 2,
+   "bestFit": 75,
+   "titles": [
+    "senior manager finance factory",
+    "key accounts specialist health &amp beauty"
+   ]
+  },
+  "Al-Futtaim": {
+   "posts": 26,
+   "bestFit": 75,
+   "titles": [
+    "fp&a manager i real estate i contracting",
+    "fp&a manager healthcare healthhub dubai",
+    "manager financial controlling"
+   ]
+  },
+  "Majid Al Futtaim": {
+   "posts": 5,
+   "bestFit": 69,
+   "titles": [
+    "manager commercial",
+    "senior manager commercial",
+    "associate manager finance"
+   ]
+  },
+  "International Center for Biosaline Agriculture (ICBA)": {
+   "posts": 1,
+   "bestFit": 79,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Chalhoub Group": {
+   "posts": 4,
+   "bestFit": 59,
+   "titles": [
+    "regional account manager christofle",
+    "senior internal auditor audit &amp data analytics",
+    "treasury specialist"
+   ]
+  },
+  "C2i": {
+   "posts": 1,
+   "bestFit": 79,
+   "titles": [
+    "finance manager retail & f&b shared cost centre"
+   ]
+  },
+  "MultiBank Group": {
+   "posts": 1,
+   "bestFit": 73,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Payfuture": {
+   "posts": 1,
+   "bestFit": 75,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Euro Mechanical": {
+   "posts": 1,
+   "bestFit": 75,
+   "titles": [
+    "finance manager partners & services"
+   ]
+  },
+  "Morgan McKinley": {
+   "posts": 1,
+   "bestFit": 71,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Apparel Group": {
+   "posts": 3,
+   "bestFit": 59,
+   "titles": [
+    "manager accounts and finance",
+    "key account manager e commerce",
+    "senior executive accounts receivable"
+   ]
+  },
+  "Hays": {
+   "posts": 2,
+   "bestFit": 68,
+   "titles": [
+    "finance manager commercial & ops",
+    "finance manager"
+   ]
+  },
+  "NicheHR Global": {
+   "posts": 1,
+   "bestFit": 65,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Al Tayer": {
+   "posts": 2,
+   "bestFit": 43,
+   "titles": [
+    "inventory controller logistics",
+    "finance & insurance advisor"
+   ]
+  },
+  "PAYOK": {
+   "posts": 1,
+   "bestFit": 62,
+   "titles": [
+    "finance manager mandarin speaker"
+   ]
+  },
+  "JAG Corporate Services Sdn Bhd": {
+   "posts": 1,
+   "bestFit": 61,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "IFFCO Group": {
+   "posts": 1,
+   "bestFit": 60,
+   "titles": [
+    "finance manager corporate"
+   ]
+  },
+  "Rightangled": {
+   "posts": 1,
+   "bestFit": 59,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "IHG Hotels & Resorts": {
+   "posts": 1,
+   "bestFit": 56,
+   "titles": [
+    "finance and business support manager holiday inn and suites dubai science park"
+   ]
+  },
+  "DayOne": {
+   "posts": 2,
+   "bestFit": 56,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Anantara Hotels & Resorts": {
+   "posts": 1,
+   "bestFit": 55,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Etihad Airways": {
+   "posts": 10,
+   "bestFit": 54,
+   "titles": [
+    "manager recruitment revenue & commercial",
+    "supplier & cost management specialist technology",
+    "manager cargo revenue management"
+   ]
+  },
+  "AVI-SPL Middle East": {
+   "posts": 1,
+   "bestFit": 54,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "MCG Talent": {
+   "posts": 1,
+   "bestFit": 51,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "ibis, ibis Styles, ibis budget": {
+   "posts": 1,
+   "bestFit": 51,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "Asteco": {
+   "posts": 1,
+   "bestFit": 50,
+   "titles": [
+    "finance manager"
+   ]
+  },
+  "CBRE Asia Pacific": {
+   "posts": 1,
+   "bestFit": 48,
+   "titles": [
+    "eoi finance manager petaling jaya malaysia"
+   ]
+  },
+  "Kimia Zue Huat Sdn Bhd": {
+   "posts": 1,
+   "bestFit": 43,
+   "titles": [
+    "finance manager"
+   ]
+  }
+ }
+}

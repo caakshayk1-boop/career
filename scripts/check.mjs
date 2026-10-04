@@ -484,6 +484,92 @@ await checkPage("/guide", "learning book", async (page) => {
   ok("learning book: clearing search restores every section", srch.restored === 34, srch.restored);
 }, 1200);
 
+/* ── THE TARGET LIST ───────────────────────────────────────────────────────
+   The checks that matter are the honesty ones. A scored list is persuasive
+   whether or not the scoring means anything, so these assert that the rubric,
+   the band reasons and the measured-versus-judged distinction all reach the
+   page, and that the two policy facts the ranking rests on carry their
+   sources. A ranking without its rubric is just an opinion in a table. */
+await checkPage("/targets", "target list", async (page) => {
+  const d = await page.evaluate(async () => {
+    const j = await (await fetch("/targets.json", { cache: "no-store" })).json();
+    return { n: j.totals.employers, ev: j.totals.withEvidence, ctx: j.context.length,
+             rows: document.querySelectorAll(".tg").length,
+             bars: document.querySelectorAll(".bar5").length,
+             body: document.body.innerText,
+             /* The totals must equal their parts, or the bar lies. */
+             sums: j.targets.every((t) => t.s + t.z + t.h + t.v + t.r === t.total),
+             ranks: j.targets.every((t, i) => t.rank === i + 1),
+             sorted: j.targets.every((t, i) => i === 0 || j.targets[i - 1].total >= t.total),
+             spread: Math.max(...j.targets.map((t) => t.total)) - Math.min(...j.targets.map((t) => t.total)) };
+  });
+  ok("target list: a row for every employer", d.rows === d.n, `${d.rows} / ${d.n}`);
+  ok("target list: every row shows its score broken into parts", d.bars === d.n, `${d.bars} / ${d.n}`);
+  ok("target list: every total equals the sum of its five components", d.sums);
+  ok("target list: rows are ranked, and the ranks match the order", d.ranks && d.sorted);
+  /* A ranking where everything scores 85-97 discriminates nothing — which is
+     what the first version of this model did, and why this check exists. */
+  ok("target list: the scores actually spread", d.spread >= 35, `range of ${d.spread} points`);
+  ok("target list: the verdict states what the ranking says, not just that it ranks",
+    /binding constraint is the visa/i.test(d.body));
+  ok("target list: it separates what is measured from what is judged",
+    /Measured:/.test(d.body) && /Judged:/.test(d.body));
+  ok("target list: it says a high score is not a vacancy",
+    /not a prediction|not a claim that a vacancy exists/i.test(d.body));
+  /* Scoped to the rows: the page MUST name RM10,000 and RM20,000, because those
+     are the EP thresholds the ranking rests on. What it must not do is attach a
+     salary band to an employer, which is the number that gets quoted back in a
+     negotiation. */
+  const money = await page.evaluate(() =>
+    [...document.querySelectorAll(".tg")].filter((t) =>
+      /(?:RM|AED|USD|MYR)\s?\d{1,3},\d{3}|\d{1,3}k\s?(?:–|-|to)\s?\d{1,3}k/i.test(t.innerText)).length);
+  ok("target list: no employer row carries an invented salary band", money === 0, money);
+  ok("target list: it says which numbers are deliberately absent", /Absent on purpose/.test(d.body));
+  ok("target list: both policy facts carry a source link", d.ctx === 2
+    && (await page.evaluate(() => document.querySelectorAll(".ctx .src a").length)) === 2);
+  ok("target list: the Malaysian EP change is named with its effective date",
+    /1 June 2026/.test(d.body) && /RM20,000/.test(d.body));
+  ok("target list: Emiratisation is described as a quota, not a bar",
+    /not a disqualifier|does not block/i.test(d.body));
+
+  const open = await page.evaluate(async () => {
+    const t = document.querySelector(".tg");
+    t.querySelector("summary").click();
+    await new Promise((r) => setTimeout(r, 200));
+    const b = t.querySelector(".bod");
+    return { rows: b.querySelectorAll(".brk tr").length,
+             reasons: [...b.querySelectorAll(".brk tr")].filter((r) => r.children[2].textContent.trim()).length,
+             /* innerText reflects RENDERED text, and these labels carry
+                text-transform:uppercase — so match case-insensitively. */
+             why: /why it fits/i.test(b.innerText), watch: /what to watch/i.test(b.innerText) };
+  });
+  ok("target list: an opened row shows all five components plus a total", open.rows === 6, open.rows);
+  ok("target list: every component carries the reason for its band", open.reasons === 5, open.reasons);
+  ok("target list: every row says why it fits and what to watch", open.why && open.watch);
+
+  const f = await page.evaluate(async () => {
+    const before = document.querySelectorAll(".tg").length;
+    document.querySelector('[data-f="ev"]').click();
+    await new Promise((r) => setTimeout(r, 250));
+    const ev = document.querySelectorAll(".tg").length;
+    /* UAE and Malaysia must not be holdable together — an empty intersection
+       reads as a broken filter. */
+    document.querySelector('[data-f="ev"]').click();
+    await new Promise((r) => setTimeout(r, 250));
+    document.querySelector('[data-f="ae"]').click();
+    await new Promise((r) => setTimeout(r, 250));
+    document.querySelector('[data-f="my"]').click();
+    await new Promise((r) => setTimeout(r, 250));
+    const both = document.querySelectorAll(".tg").length;
+    const aePressed = document.querySelector('[data-f="ae"]').getAttribute("aria-pressed");
+    return { before, ev, both, aePressed };
+  });
+  ok("target list: filtering to observed demand narrows the list",
+    f.ev > 0 && f.ev < f.before, `${f.before} → ${f.ev}`);
+  ok("target list: picking Malaysia releases UAE rather than showing nothing",
+    f.both > 0 && f.aePressed === "false", `${f.both} rows, UAE pressed=${f.aePressed}`);
+}, 2000);
+
 await browser.close();
 console.log(failed ? `\nFAILED — ${failed} check(s)\n` : "\nALL CHECKS PASSED\n");
 process.exit(failed ? 1 : 0);

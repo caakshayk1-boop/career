@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>The Target List &mdash; The Campaign</title>
+<meta name="description" content="103 employers in the UAE and Malaysia scored for a Financial Controller / Head of FP&amp;A move, with the rubric published.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0B0F14">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#9670;</text></svg>">
+<style>
+/* ── FONTS ─────────────────────────────────────────────────────────────────
+   Same four faces, same files, already on the origin. A page that reuses them
+   costs nothing extra after the first visit to any page on this site. */
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-500-latin.woff2')format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-600-latin.woff2')format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Manrope';src:url('/fonts/Manrope-700-latin.woff2')format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'JBMono';src:url('/fonts/JetBrainsMono-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JBMono';src:url('/fonts/JetBrainsMono-500-latin.woff2')format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-400-latin.woff2')format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-600-latin.woff2')format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:'Newsreader';src:url('/fonts/Newsreader-400i-latin.woff2')format('woff2');font-weight:400;font-style:italic;font-display:swap}
+
+/* ── TOKENS ────────────────────────────────────────────────────────────────
+   Copied verbatim from index.html. They are duplicated rather than extracted
+   into a stylesheet on purpose, for the same reason /home duplicates them: the
+   whole site is single-file documents with no build step, and one shared CSS
+   file would be a second render-blocking request on every page to save 2KB. If
+   a token changes, it changes in three files — that is the trade, and it is
+   the cheaper side of it. */
+:root[data-theme="dark"]{
+  --bg:#0B0F14; --surface:#141A22; --raised:#1B222C;
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#F2F5F9; --muted:#B3BDCA; --dim:#8D97A5;
+  --ink-btn:#F2F5F9; --on-ink:#0B0F14;
+  --accent:#5B9CFF; --accent-soft:rgba(91,156,255,.13); --on-accent:#06101F;
+  --up:#2BD07C; --down:#FF6B6B; --warn:#F0B429;
+  --up-soft:rgba(43,208,124,.13); --down-soft:rgba(255,107,107,.13); --warn-soft:rgba(240,180,41,.13);
+  color-scheme:dark;
+}
+:root[data-theme="light"]{
+  --bg:#FFFFFF; --surface:#FFFFFF; --raised:#F6F7F8;
+  --line:rgba(0,0,0,.09); --line2:rgba(0,0,0,.14);
+  --text:#0A0A0A; --muted:#3E3E3E; --dim:#6B6B6B;
+  --ink-btn:#111111; --on-ink:#FFFFFF;
+  --accent:#1B5FD9; --accent-soft:rgba(27,95,217,.07); --on-accent:#FFFFFF;
+  --up:#0E7C48; --down:#C23B2E; --warn:#8A6208;
+  --up-soft:rgba(14,124,72,.09); --down-soft:rgba(194,59,46,.08); --warn-soft:rgba(138,98,8,.09);
+  color-scheme:light;
+}
+:root{
+  --ui:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JBMono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  --t-1:10px; --t-2:11px; --t-3:12px; --t-4:13px; --t-5:14px;
+  --t-6:16px; --t-7:18px; --t-8:21px; --t-9:25px; --t-10:30px;
+  --r-1:4px; --r-2:6px; --r-3:8px; --r-4:12px; --r-5:16px; --r-pill:999px;
+  --ls-tight:-.02em; --ls-snug:-.012em; --ls-wide:.05em; --ls-wider:.1em; --ls-widest:.14em;
+  --t-fast:140ms; --t-mid:220ms; --ease:cubic-bezier(.22,.61,.36,1);
+  --gut:clamp(16px,4vw,32px); --barh:56px;
+  --shell:820px; --measure:70ch;
+}
+@media(min-width:1400px){:root{--shell:900px}}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+body{margin:0;background:var(--bg);color:var(--text);
+  font:400 var(--t-6)/1.6 var(--ui);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{margin:0;font-family:var(--serif);font-weight:600;letter-spacing:var(--ls-snug);line-height:1.22}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:2px}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-1)}
+::selection{background:var(--accent);color:var(--on-accent)}
+
+.scrollprog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--accent);z-index:60;pointer-events:none}
+
+/* ── CHROME ────────────────────────────────────────────────────────────── */
+.bar{position:sticky;top:0;z-index:40;height:var(--barh);display:flex;align-items:center;
+  gap:12px;padding:0 var(--gut);border-bottom:1px solid var(--line);
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.mark{font:700 var(--t-6)/1 var(--ui);letter-spacing:var(--ls-tight);text-decoration:none;color:var(--text);white-space:nowrap}
+.mark i{color:var(--accent);font-style:normal}
+.bar-sp{flex:1}
+.bar a.up{font:500 var(--t-3)/1 var(--ui);color:var(--muted);text-decoration:none;white-space:nowrap}
+.bar a.up:hover{color:var(--text)}
+.icon-btn{width:34px;height:34px;display:grid;place-items:center;border:1px solid var(--line);
+  border-radius:var(--r-3);background:none;color:var(--muted);cursor:pointer;font-size:var(--t-5);
+  transition:color var(--t-fast) var(--ease),border-color var(--t-fast) var(--ease)}
+.icon-btn:hover{color:var(--text);border-color:var(--line2)}
+
+.shell{max-width:var(--shell);margin:0 auto;padding:0 var(--gut)}
+main{padding:clamp(22px,4vw,38px) 0 120px;min-width:0}
+
+/* ── PAGE HEAD ─────────────────────────────────────────────────────────── */
+.ph{padding-bottom:clamp(20px,3vw,28px);border-bottom:1px solid var(--line);margin-bottom:clamp(24px,3.4vw,34px)}
+.ph .k{display:block;font:500 var(--t-2)/1 var(--mono);letter-spacing:var(--ls-widest);
+  text-transform:uppercase;color:var(--accent);margin-bottom:11px}
+.ph h1{font-size:clamp(28px,5vw,42px);letter-spacing:var(--ls-tight);margin-bottom:11px;max-width:17ch}
+.ph p{color:var(--muted);max-width:60ch;font-size:var(--t-6)}
+.ph .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
+
+.pill{display:inline-flex;align-items:center;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;padding:5px 8px;border-radius:var(--r-1);border:1px solid var(--line2);
+  color:var(--dim);white-space:nowrap}
+.pill.acc{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.pill.up{color:var(--up);border-color:var(--up);background:var(--up-soft)}
+.pill.warn{color:var(--warn);border-color:var(--warn);background:var(--warn-soft)}
+
+/* ── DAY GROUPS ────────────────────────────────────────────────────────── */
+.day{margin-bottom:clamp(28px,4vw,42px)}
+.day-h{display:flex;align-items:baseline;gap:10px;margin-bottom:13px;
+  padding-bottom:9px;border-bottom:1px solid var(--line)}
+.day-h b{font:600 var(--t-7)/1.2 var(--serif);color:var(--text)}
+.day-h span{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--dim)}
+
+/* ── EPISODE CARD ──────────────────────────────────────────────────────── */
+/* One column, always. A two-column feed on a 1240px page produces cards too
+   narrow for a two-line title and gains nothing — this is a reading queue of
+   at most a handful of items a day, not a catalogue. */
+.ep{display:block;width:100%;text-align:left;border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 var(--r-4) var(--r-4) 0;background:var(--surface);padding:16px 18px;margin-bottom:11px;
+  cursor:pointer;transition:border-color var(--t-fast) var(--ease),background var(--t-fast) var(--ease)}
+.ep:hover{background:var(--raised);border-color:var(--line2);border-left-color:var(--accent)}
+.ep .show{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.ep h3{font-size:var(--t-7);line-height:1.32;margin-bottom:6px;color:var(--text)}
+.ep .guest{display:block;font-size:var(--t-4);color:var(--muted);margin-bottom:11px}
+.ep .sum{font-size:var(--t-5);color:var(--muted);line-height:1.62;margin-bottom:13px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.ep .foot{display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.ep .go{margin-left:auto;font:500 var(--t-3)/1 var(--ui);color:var(--accent);white-space:nowrap}
+@media(max-width:520px){.ep .go{margin-left:0;width:100%;margin-top:4px}}
+
+/* ── DETAIL ────────────────────────────────────────────────────────────── */
+.back{display:inline-flex;align-items:center;gap:7px;background:none;border:0;padding:8px 0;
+  color:var(--muted);cursor:pointer;font:500 var(--t-4)/1 var(--ui);margin-bottom:14px;min-height:38px}
+.back:hover{color:var(--text)}
+
+.dh{margin-bottom:clamp(20px,3vw,28px)}
+.dh .show{display:block;font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wider);
+  text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+.dh h1{font-size:clamp(24px,4.2vw,34px);line-height:1.24;margin-bottom:9px;max-width:24ch}
+.dh .guest{font-size:var(--t-6);color:var(--muted)}
+.dh .meta{display:flex;flex-wrap:wrap;gap:7px;margin-top:15px;align-items:center}
+.dsum{border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--r-3) var(--r-3) 0;
+  padding:15px 17px;margin:0 0 clamp(20px,3vw,26px);font-size:var(--t-6);line-height:1.62;color:var(--text);max-width:var(--measure)}
+
+/* Audio. preload="none" is deliberate — a month of briefings would otherwise
+   pull several megabytes on a page load where most visits play nothing. */
+.player{border:1px solid var(--line);border-radius:var(--r-4);background:var(--surface);
+  padding:14px 16px;margin-bottom:clamp(22px,3vw,30px)}
+.player .lbl{display:flex;align-items:baseline;gap:9px;margin-bottom:11px;flex-wrap:wrap}
+.player b{font:600 var(--t-5)/1.3 var(--ui);color:var(--text)}
+.player span{font:500 var(--t-1)/1 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--dim)}
+.player audio{width:100%;height:40px;display:block}
+.player .none{font-size:var(--t-4);color:var(--dim);line-height:1.6}
+
+
+/* ── TARGETS ───────────────────────────────────────────────────────────────
+   One ranked table, filterable. The score bar is the point: a number alone
+   invites argument about the number, a bar broken into its five parts invites
+   argument about the component, which is the argument worth having. */
+.gnums{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 18px}
+.gnums span{font-family:'JBMono',monospace;font-size:11px;padding:4px 9px;border:1px solid var(--line);
+  border-radius:999px;color:var(--muted);background:var(--surface)}
+.gnums b{color:var(--text);font-weight:600}
+
+.verdict{border:1px solid var(--accent);border-left-width:3px;border-radius:10px;background:var(--accent-soft);
+  padding:14px 16px;margin:0 0 16px;font-size:14px;line-height:1.65}
+.verdict h3{margin:0 0 7px;font-size:14px;font-weight:600}
+.verdict p{margin:0 0 8px}.verdict p:last-child{margin:0}
+
+.ctx{border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:10px;background:var(--surface);
+  padding:13px 15px;margin:0 0 10px;font-size:13px;line-height:1.62}
+.ctx h4{margin:0 0 6px;font-size:13.5px;font-weight:600;color:var(--warn)}
+.ctx .src{margin-top:7px;font-size:11.5px;color:var(--dim);line-height:1.5}
+.ctx .src a{color:var(--accent);overflow-wrap:anywhere}
+
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px;
+  padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.tools input[type=search]{flex:1 1 200px;min-width:0;background:var(--bg);color:var(--text);
+  border:1px solid var(--line2);border-radius:8px;padding:9px 11px;font:inherit;font-size:14px}
+.tools input[type=search]:focus{outline:2px solid var(--accent);outline-offset:1px}
+.fchip{font-family:'JBMono',monospace;font-size:11px;padding:5px 10px;border-radius:999px;cursor:pointer;
+  border:1px solid var(--line2);background:transparent;color:var(--muted)}
+.fchip[aria-pressed=true]{background:var(--accent-soft);border-color:var(--accent);color:var(--text)}
+.fchip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.tg{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:9px;overflow:hidden}
+.tg>summary{list-style:none;cursor:pointer;padding:12px 14px;display:block}
+.tg>summary::-webkit-details-marker{display:none}
+.tg>summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.tg[open]{border-color:var(--line2)}
+.tg .hd{display:flex;gap:11px;align-items:baseline}
+.tg .rk{font-family:'JBMono',monospace;font-size:12px;color:var(--dim);flex:none;min-width:26px}
+.tg .nm{font-size:14.5px;font-weight:600;line-height:1.4;flex:1 1 auto;overflow-wrap:anywhere}
+.tg .sc{font-family:'JBMono',monospace;font-size:15px;font-weight:600;flex:none}
+.tg .sub{font-size:12px;color:var(--muted);margin:5px 0 0 37px;line-height:1.5;overflow-wrap:anywhere}
+.tg .pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0 37px}
+@media(max-width:420px){.tg .sub,.tg .pills{margin-left:0}}
+
+/* The five-part score bar. Widths are the sub-score as a share of 100, so the
+   whole bar is the total and each band is its contribution. */
+.bar5{display:flex;height:6px;border-radius:999px;overflow:hidden;margin:9px 0 0 37px;background:var(--bg);
+  border:1px solid var(--line)}
+@media(max-width:420px){.bar5{margin-left:0}}
+.bar5 i{display:block;height:100%}
+.b-s{background:var(--accent)}.b-z{background:var(--up)}.b-h{background:var(--warn)}
+.b-v{background:#9A7BFF}.b-r{background:var(--muted)}
+
+.tg .bod{padding:0 14px 14px;border-top:1px solid var(--line);margin-top:11px;padding-top:13px}
+.tg .bod dt{font-family:'JBMono',monospace;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--dim);margin:13px 0 4px}
+.tg .bod dt:first-child{margin-top:0}
+.tg .bod dd{margin:0;font-size:13.5px;line-height:1.65;color:var(--text);overflow-wrap:anywhere}
+.tg .bod dd.q{color:var(--muted);font-size:13px}
+.brk{margin:11px 0 0;border-collapse:collapse;width:100%;font-size:12.5px}
+.brk td{padding:5px 6px;border-top:1px solid var(--line);vertical-align:top}
+.brk td:first-child{white-space:nowrap;color:var(--muted);font-family:'JBMono',monospace;font-size:11px}
+.brk td:nth-child(2){text-align:right;font-family:'JBMono',monospace;white-space:nowrap;color:var(--text);width:1%}
+.brk td:last-child{color:var(--muted);line-height:1.5}
+
+.p{font-family:'JBMono',monospace;font-size:10px;letter-spacing:.03em;padding:3px 7px;border-radius:999px;
+  border:1px solid var(--line2);color:var(--muted);background:var(--bg);white-space:nowrap}
+.p.ev{border-color:var(--up);color:var(--up);background:var(--up-soft)}
+.p.ae{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.p.my{border-color:var(--warn);color:var(--warn);background:var(--warn-soft)}
+.p.blk{border-color:var(--down);color:var(--down);background:var(--down-soft)}
+.key{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 16px;font-size:11.5px;color:var(--muted);
+  font-family:'JBMono',monospace}
+.key span{display:inline-flex;align-items:center;gap:5px}
+.key i{width:11px;height:11px;border-radius:3px;display:inline-block}
+.empty{border:1px dashed var(--line2);border-radius:12px;padding:26px 18px;text-align:center;
+  color:var(--muted);font-size:14px}
+.prov{margin-top:24px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);
+  font-size:12.5px;line-height:1.65;color:var(--muted)}
+.prov h4{margin:0 0 7px;font-size:12px;font-family:'JBMono',monospace;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--dim);font-weight:500}
+.prov b{color:var(--text)}
+</style>
+</head>
+<body>
+<div class="scrollprog" id="scrollprog" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<header class="bar">
+  <a class="mark" href="/">The <i>Campaign</i></a>
+  <span class="bar-sp"></span>
+  <a class="up" href="/">&larr; Campaign</a>
+  <button class="icon-btn" id="theme" type="button" aria-label="Toggle theme">&#9680;</button>
+</header>
+
+<div class="shell">
+<main>
+  <div class="ph">
+    <span class="k">The Target List</span>
+    <h1>103 employers, scored on five things, with the rubric published</h1>
+    <p>Where a Financial Controller or Head of FP&amp;A move is structurally available &mdash; sector
+       adjacency, whether the seat exists separately from the CFO, whether that employer appoints
+       Indian Chartered Accountants at this level, work-authorisation headroom, and whether there is
+       a door. Every row shows its five parts, so the argument is about a component rather than
+       about a number.</p>
+    <div class="meta" id="phMeta"></div>
+  </div>
+  <div id="feed"><div class="empty">Loading&hellip;</div></div>
+</main>
+</div>
+
+<button class="totop" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+
+<footer class="foot-p">
+  The Target List &middot; career.askakshay.com &middot; a private working surface, not published.<br>
+  A high score means the structural conditions for this move are present at that employer. It is
+  not a claim that a vacancy exists, and it is not a prediction. Only the rows marked
+  <i>already posting</i> carry observed demand.
+</footer>
+
+<script>
+/* ── THEME ─────────────────────────────────────────────────────────────────
+   localStorage THROWS in a private window and when site data is blocked — it
+   does not return null — so every access is wrapped. Same rule as the rest of
+   the site. */
+const store = {
+  get(k){ try { return localStorage.getItem(k); } catch(e){ return null; } },
+  set(k,v){ try { localStorage.setItem(k,v); } catch(e){} },
+};
+(function(){
+  const saved = store.get("ak:theme");
+  if (saved) document.documentElement.setAttribute("data-theme", saved);
+  document.getElementById("theme").addEventListener("click", () => {
+    const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    document.querySelector('meta[name="theme-color"]').setAttribute("content", next === "dark" ? "#0B0F14" : "#FFFFFF");
+    store.set("ak:theme", next);
+  });
+})();
+
+/* ── CHROME BEHAVIOUR ──────────────────────────────────────────────────────
+   No IntersectionObserver and no rAF loop: neither fires in a tab the browser
+   considers hidden, and the bar then reads as broken on return. rAF is used
+   only to COALESCE scroll events, which is safe — a scroll handler has nothing
+   to do when nobody is scrolling. Same rule as index.html. */
+(function(){
+  const bar = document.getElementById("scrollprog"), toTop = document.getElementById("toTop");
+  let queued = false;
+  function draw(){
+    const d = document.documentElement, h = d.scrollHeight - window.innerHeight;
+    const pc = h > 0 ? Math.min(100, Math.max(0, window.scrollY / h * 100)) : 0;
+    bar.style.width = pc + "%";
+    bar.setAttribute("aria-valuenow", Math.round(pc));
+    toTop.classList.toggle("show", window.scrollY > 600);
+    queued = false;
+  }
+  window.addEventListener("scroll", () => { if (!queued) { queued = true; requestAnimationFrame(draw); } }, {passive:true});
+  toTop.addEventListener("click", () => window.scrollTo({top:0, behavior:"smooth"}));
+  draw();
+})();
+
+/* ── THE TARGET LIST ───────────────────────────────────────────────────────
+   One fetch, one render, no section files: 103 rows with bodies is 90 KB, and
+   splitting that would cost a request to save nothing. */
+const FEED = "/targets.json";
+const esc = (s) => String(s == null ? "" : s)
+  .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+let d = null;
+let view = { q: "", f: new Set() };
+const $ = (id) => document.getElementById(id);
+const pill = (c, t, ti) => '<span class="p ' + c + '"' + (ti ? ' title="' + esc(ti) + '"' : "") + ">" + esc(t) + "</span>";
+const CTRY = { AE: ["ae", "UAE"], MY: ["my", "Malaysia"], KW: ["ae", "Kuwait"] };
+
+function match(t){
+  const f = view.f;
+  if (f.has("ae") && t.country !== "AE" && t.country !== "KW") return false;
+  if (f.has("my") && t.country !== "MY") return false;
+  if (f.has("ev") && !t.seen) return false;
+  if (f.has("door") && t.r < 10) return false;
+  if (f.has("top") && t.total < 75) return false;
+  if (view.q){
+    const q = view.q.toLowerCase();
+    if (!(t.name + " " + t.sector).toLowerCase().includes(q)) return false;
+  }
+  return true;
+}
+
+function row(t){
+  const [cls, label] = CTRY[t.country] || ["", t.country];
+  const bands = d.bands;
+  return '<details class="tg"><summary><div class="hd">'
+    + '<span class="rk">' + t.rank + "</span>"
+    + '<span class="nm">' + esc(t.name) + "</span>"
+    + '<span class="sc">' + t.total + "</span></div>"
+    + '<div class="sub">' + esc(t.sector) + "</div>"
+    + '<div class="bar5" role="img" aria-label="score ' + t.total + ' of 100">'
+    + ["s","z","h","v","r"].map((k) => '<i class="b-' + k + '" style="width:' + t[k] + '%"></i>').join("")
+    + "</div>"
+    + '<div class="pills">' + pill(cls, label)
+    + (t.seen ? pill("ev", "posted · feed fit " + t.seen.bestFit,
+        t.seen.posts + " posting(s) his own feed captured as \"" + t.seen.as + "\": " + t.seen.titles.join("; ")) : "")
+    + pill("", t.scale + " · " + t.owner, bands.scale[t.scale].why)
+    + (t.r < 10 ? pill("blk", "no cold route", bands.route[t.route].why) : "")
+    + "</div></summary>"
+    + '<div class="bod"><dl>'
+    + "<dt>Why it fits</dt><dd>" + esc(t.why) + "</dd>"
+    + "<dt>What to watch</dt><dd class=\"q\">" + esc(t.watch) + "</dd>"
+    + (t.seen ? "<dt>Observed hiring</dt><dd class=\"q\">" + t.seen.posts
+        + " posting(s) captured as <b>" + esc(t.seen.as) + "</b> &mdash; "
+        + esc(t.seen.titles.join("; ")) + ". The feed scored the closest one "
+        + t.seen.bestFit + "/100 against his CV.</dd>" : "")
+    + "</dl>"
+    + '<table class="brk"><tbody>'
+    + d.weights.map((w) => {
+        const why = w.k === "s" ? "Per-company judgement: how directly multi-entity retail, hospitality and real-estate FP&A reads on this employer's P&L."
+          : w.k === "z" ? bands.scale[t.scale].why
+          : w.k === "h" ? bands.owner[t.owner].why
+          : w.k === "v" ? bands.zone[t.zone].why
+          : bands.route[t.route].why;
+        return "<tr><td>" + esc(w.label) + "</td><td>" + t[w.k] + " / " + w.max
+          + "</td><td>" + esc(why) + "</td></tr>";
+      }).join("")
+    + "<tr><td><b>Total</b></td><td><b>" + t.total + " / 100</b></td><td></td></tr>"
+    + "</tbody></table></div></details>";
+}
+
+function render(){
+  const t = d.totals;
+  $("phMeta").innerHTML = '<div class="gnums">'
+    + "<span><b>" + t.employers + "</b> employers scored</span>"
+    + "<span><b>" + t.uae + "</b> UAE</span>"
+    + "<span><b>" + t.malaysia + "</b> Malaysia</span>"
+    + "<span><b>" + t.withEvidence + "</b> already seen posting</span>"
+    + "<span><b>" + t.above70 + "</b> score 70+</span></div>";
+
+  const my = d.targets.filter((x) => x.country === "MY");
+  const best = my[0], bestSector = [...my].sort((a, b) => b.s - a.s)[0];
+  const verdict = '<div class="verdict"><h3>What the ranking actually says</h3>'
+    + "<p><b>The top twelve are all UAE retail, F&amp;B, luxury and real-estate groups.</b> "
+    + "That is not regional preference — it is the only place where sector adjacency, a seat that "
+    + "exists separately from the CFO, a hiring pattern that reads Indian CA without translation, "
+    + "and a usable door all land together.</p>"
+    + "<p><b>In Malaysia the binding constraint is the visa, not the fit.</b> "
+    + esc(bestSector.name) + " scores " + bestSector.s + "/30 on sector adjacency &mdash; the highest "
+    + "on this list, higher than anything in the UAE &mdash; and still ranks " + bestSector.rank
+    + " overall, because a Malaysian local employer scores 3/15 on work-authorisation headroom. "
+    + "The best Malaysian row is <b>" + esc(best.name) + "</b> at " + best.total
+    + ", and it is an MNC rather than a retailer, for exactly that reason.</p>"
+    + "<p><b>So the shortlist is: UAE retail groups first, Malaysian MNC and shared-service seats "
+    + "second, Malaysian local retailers only where the seat can clear RM20,000.</b> "
+    + "Everything below 55 on this list is there to be ruled out on the record, not worked.</p></div>";
+
+  const ctx = d.context.map((c) =>
+    '<div class="ctx"><h4>' + esc(c.title) + "</h4><div>" + esc(c.body) + "</div>"
+    + '<div class="src">' + esc(c.source)
+    + ' <a href="' + esc(c.url) + '" target="_blank" rel="noopener noreferrer">source</a></div></div>').join("");
+
+  const chips = [["top","75+ only"],["ev","already posting"],["door","has a cold route"],["ae","UAE"],["my","Malaysia"]];
+  const tools = '<div class="tools">'
+    + '<input type="search" id="q" placeholder="Search employer or sector" value="' + esc(view.q)
+    + '" autocomplete="off" spellcheck="false">'
+    + chips.map(([k,l]) => '<button class="fchip" type="button" data-f="' + k + '" aria-pressed="'
+        + (view.f.has(k) ? "true" : "false") + '">' + l + "</button>").join("") + "</div>";
+
+  const key = '<div class="key">'
+    + d.weights.map((w) => '<span><i class="b-' + w.k + '"></i>' + esc(w.short) + " " + w.max + "</span>").join("")
+    + "</div>";
+
+  const hits = d.targets.filter(match);
+  const count = (view.q || view.f.size)
+    ? '<p style="font-size:13px;color:var(--muted);margin:0 0 12px">' + hits.length
+      + " of " + t.employers + " shown.</p>" : "";
+
+  $("feed").innerHTML = verdict + ctx + tools + key + count
+    + (hits.map(row).join("") || '<div class="empty">Nothing matches. Clear a filter.</div>')
+    + '<div class="prov"><h4>What is measured and what is judged</h4>'
+    + "<b>Measured:</b> country, sector and corporate scale are facts. So is <i>already posting</i> — "
+    + t.withEvidence + " of these " + t.employers + " employers appear in his own jobs feed with a role "
+    + "at or near controller grade, with the fit score that feed assigned. Feed built "
+    + esc(String(d.evidence.feedGeneratedAt).slice(0, 10)) + ".<br>"
+    + "<b>Judged:</b> sector adjacency is a per-company number. The other four components are derived "
+    + "from one published table of bands — scale, owner type, work-authorisation regime, route — so "
+    + "changing a band moves every affected employer together. Expand any row to see the five parts "
+    + "and the reason attached to each.<br>"
+    + "<b>Absent on purpose:</b> no salary figures and no headcounts. Both would be invented at this "
+    + "resolution, and an invented number gets quoted back in a negotiation.<br>"
+    + "<b>Not a prediction.</b> A high score means the structural conditions are present, not that a "
+    + "vacancy exists. The 13 rows marked <i>already posting</i> are the only ones with observed demand."
+    + "</div>";
+  wire();
+}
+
+function wire(){
+  const q = $("q");
+  if (q){ let t; q.oninput = () => { clearTimeout(t); t = setTimeout(() => { view.q = q.value.trim(); render(); }, 160); }; }
+  document.querySelectorAll("[data-f]").forEach((b) => {
+    b.onclick = () => {
+      const k = b.dataset.f;
+      view.f.has(k) ? view.f.delete(k) : view.f.add(k);
+      /* UAE and Malaysia are mutually exclusive — holding both shows nothing,
+         which reads as a broken filter rather than an empty intersection. */
+      if (k === "ae") view.f.delete("my");
+      if (k === "my") view.f.delete("ae");
+      render();
+    };
+  });
+}
+
+(async () => {
+  try {
+    const r = await fetch(FEED, { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    d = await r.json();
+  } catch (err) {
+    $("feed").innerHTML = '<div class="empty">The target list could not be loaded ('
+      + esc(err.message) + "). <code>node pipeline/targets/build.mjs</code> writes "
+      + "<code>public/targets.json</code> &mdash; check that it ran before the deploy.</div>";
+    return;
+  }
+  render();
+})();
+
+</script>
+</body>
+</html>
