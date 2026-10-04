@@ -63,8 +63,24 @@ const browser = await chromium.launch().catch(async (err) => {
 async function checkPage(path, label, extra, minText = 2000) {
   const page = await browser.newPage();
   const errors = [];
+  /* A SCRIPT ERROR AND AN UNREACHABLE HOST ARE DIFFERENT FAILURES.
+     The campaign page fetches news.askakshay.com. Run against the live site
+     that succeeds; run against a local copy from a sandbox with no egress it
+     fails, Chromium logs "Failed to load resource", and a check that counts
+     that as a script error reports a broken page every local run — which is
+     how a suite stops being read. Cross-origin network failures are collected
+     and printed; SAME-ORIGIN ones still fail, because a missing
+     /guide/01.json is this repo's bug. */
+  const netFails = [];
+  const sameOrigin = (u) => { try { return new URL(u).origin === new URL(SITE).origin; } catch { return true; } };
+  page.on("requestfailed", (r) => netFails.push({ url: r.url(), same: sameOrigin(r.url()) }));
   page.on("pageerror", (e) => errors.push(String(e).slice(0, 200)));
-  page.on("console", (m) => { if (m.type() === "error") errors.push(m.text().slice(0, 200)); });
+  page.on("console", (m) => {
+    if (m.type() !== "error") return;
+    const t = m.text();
+    if (/Failed to load resource: net::ERR_/.test(t)) return;   // asserted below, by origin
+    errors.push(t.slice(0, 200));
+  });
 
   const url = SITE + path;
   console.log(`\ncareer — checking ${url}  (${label})\n`);
@@ -75,6 +91,15 @@ async function checkPage(path, label, extra, minText = 2000) {
   /* A single inline script means one syntax error takes out everything. This is
    * the assertion that matters most on this site. */
   ok(`${label}: no script errors`, errors.length === 0, errors.slice(0, 2).join(" | "));
+
+  const own = netFails.filter((f) => f.same);
+  ok(`${label}: every file the page asks this origin for exists`,
+    own.length === 0, own.slice(0, 3).map((f) => f.url).join(" | "));
+  const ext = netFails.filter((f) => !f.same);
+  if (ext.length) {
+    console.log(`  note  ${label}: ${ext.length} cross-origin request(s) unreachable from here`
+      + ` — ${[...new Set(ext.map((f) => new URL(f.url).host))].join(", ")}`);
+  }
 
   ok(`${label}: has a title`, (await page.title()).length > 3, await page.title());
   const textLen = (await page.locator("body").innerText()).length;
@@ -341,6 +366,123 @@ await checkPage("/home", "home book", async (page) => {
   });
   ok("home book: nothing escapes its scroll container", escaped === 0, escaped);
 });
+
+await checkPage("/reads", "the weekly read", async (page) => {
+  /* Before the first Monday run the feed is {reads: []}. An empty state that
+     reads as a failure trains you to ignore the page, so assert it reads as
+     "not yet" and names the shelf — and assert the live case separately. */
+  const st = await page.evaluate(async () => {
+    const d = await (await fetch("/reads.json", { cache: "no-store" })).json();
+    const body = document.body.innerText;
+    return { n: (d.reads || []).length, shelf: d.shelfSize,
+             body, cards: document.querySelectorAll(".bk").length,
+             ideas: document.querySelectorAll(".idea").length };
+  });
+  if (st.n === 0) {
+    ok("the weekly read: an empty archive reads as 'not yet', not as an error",
+      !/error|failed|could not/i.test(st.body), st.body.slice(0, 120));
+    ok("the weekly read: the empty state names the shelf size",
+      st.body.includes(String(st.shelf)), st.shelf);
+  } else {
+    ok("the weekly read: a card for every edition", st.cards === st.n, `${st.cards} / ${st.n}`);
+    ok("the weekly read: the newest edition renders its ideas", st.ideas > 0, st.ideas);
+  }
+}, 400);
+
+/* ── THE LEARNING BOOK ─────────────────────────────────────────────────────
+   654 entries served as an index plus 34 section files. The checks that matter
+   are not "does it render" — it is a list — but whether the scope label
+   survives to the page. An entry whose advice is a Chinese regulation, shown
+   without that label to a reader in Malaysia, is the one way this page can do
+   harm, and it is invisible to every other assertion here. */
+await checkPage("/guide", "learning book", async (page) => {
+  const idx = await page.evaluate(async () => {
+    const d = await (await fetch("/guide/index.json", { cache: "no-store" })).json();
+    return { entries: d.totals.entries, sections: d.totals.sections,
+             cn: d.totals.scope.cn, lev: d.totals.highLeverage,
+             secs: document.querySelectorAll(".sec").length,
+             body: document.body.innerText };
+  });
+  ok("learning book: the index declares all 34 sections", idx.sections === 34, idx.sections);
+  ok("learning book: a card for every section", idx.secs === idx.sections, `${idx.secs} / ${idx.sections}`);
+  ok("learning book: the entry count is on the page",
+    idx.body.includes(String(idx.entries)), idx.entries);
+  ok("learning book: the China-scope warning is on the page before any entry",
+    /China/.test(idx.body) && idx.body.includes(String(idx.cn)), idx.cn);
+  ok("learning book: the licence and the original are credited",
+    /CC BY 4\.0/.test(idx.body) && /eternity4719/.test(idx.body));
+  ok("learning book: it says the scope label is derived, not hand-checked",
+    /pattern-match|will get some wrong/i.test(idx.body));
+
+  /* Opening a section fetches its file. If that request or the render throws,
+     the page sits on "Loading section" and looks like a slow network. */
+  const sec = await page.evaluate(async () => {
+    document.querySelector(".sec").click();
+    await new Promise((r) => setTimeout(r, 2500));
+    const ents = [...document.querySelectorAll(".ent")];
+    const cn = ents.filter((e) => e.querySelector(".p.cn")).length;
+    const grades = ents.filter((e) => e.querySelector(".p.gA,.p.gB,.p.gC")).length;
+    const open = ents.filter((e) => e.open).length;
+    return { n: ents.length, cn, grades, open,
+             loading: /Loading section/.test(document.body.innerText),
+             back: !!document.getElementById("bk") };
+  });
+  ok("learning book: a section opens its entries", sec.n > 0 && !sec.loading, `${sec.n} entries`);
+  ok("learning book: every entry carries an evidence grade", sec.grades === sec.n, `${sec.grades} / ${sec.n}`);
+  ok("learning book: entries start collapsed", sec.open === 0, sec.open);
+  ok("learning book: a section can be left again", sec.back);
+  ok("learning book: China-rule entries are marked as such in the list", sec.cn > 0, sec.cn);
+
+  /* The scope note must survive INTO the opened entry, not only sit in the
+     section list — a reader who expands straight from a search never saw it. */
+  const body = await page.evaluate(async () => {
+    const t = [...document.querySelectorAll(".ent")].find((e) => e.querySelector(".p.cn"));
+    t.querySelector("summary").click();
+    await new Promise((r) => setTimeout(r, 200));
+    const d = t.querySelector(".bod");
+    return { text: d ? d.innerText : "", dts: d ? d.querySelectorAll("dt").length : 0,
+             links: d ? d.querySelectorAll("a[href^='http']").length : 0 };
+  });
+  ok("learning book: an opened China-rule entry explains that it does not apply here",
+    /does NOT apply|Malaysia/i.test(body.text), body.text.slice(0, 120));
+  ok("learning book: an opened entry shows cost, plain terms and the evidence",
+    body.dts >= 4, body.dts);
+  ok("learning book: cited sources are real links", body.links > 0, body.links);
+
+  /* The filter chips are the only way to drop 149 inapplicable entries, so a
+     chip that silently does nothing is worse than no chip. */
+  const filt = await page.evaluate(async () => {
+    document.getElementById("bk").click();
+    await new Promise((r) => setTimeout(r, 200));
+    const before = document.querySelectorAll(".sec").length;
+    document.querySelector('[data-f="lev"]').click();
+    await new Promise((r) => setTimeout(r, 200));
+    const after = document.querySelectorAll(".sec").length;
+    const txt = document.body.innerText;
+    document.querySelector('[data-f="lev"]').click();
+    await new Promise((r) => setTimeout(r, 200));
+    return { before, after, restored: document.querySelectorAll(".sec").length,
+             counted: /\d+ of \d+ entries match/.test(txt) };
+  });
+  ok("learning book: a filter actually narrows the list",
+    filt.after < filt.before && filt.after > 0, `${filt.before} → ${filt.after}`);
+  ok("learning book: a filter says how many entries matched", filt.counted);
+  ok("learning book: clearing a filter restores the list",
+    filt.restored === filt.before, `${filt.restored} / ${filt.before}`);
+
+  const srch = await page.evaluate(async () => {
+    const q = document.getElementById("q");
+    q.value = "seat belt"; q.dispatchEvent(new Event("input"));
+    await new Promise((r) => setTimeout(r, 450));
+    const n = document.querySelectorAll(".sec").length;
+    q.value = ""; q.dispatchEvent(new Event("input"));
+    await new Promise((r) => setTimeout(r, 450));
+    return { n, restored: document.querySelectorAll(".sec").length };
+  });
+  ok("learning book: search narrows to the sections that contain the match",
+    srch.n > 0 && srch.n < 34, srch.n);
+  ok("learning book: clearing search restores every section", srch.restored === 34, srch.restored);
+}, 1200);
 
 await browser.close();
 console.log(failed ? `\nFAILED — ${failed} check(s)\n` : "\nALL CHECKS PASSED\n");
