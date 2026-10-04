@@ -39,9 +39,19 @@ on:
 
   workflow_dispatch:
 
+# CANCEL-IN-PROGRESS WAS WRONG HERE, AND IT COST A DEPLOY ON ITS FIRST DAY.
+# The books job was dispatched 12 seconds after a push. Its workflow_run deploy
+# claimed this group, cancelled the push deploy that was already uploading, and
+# was then itself skipped by the `if` below because the books run had failed.
+# Net effect: a green-looking repo, two deploy runs, and nothing published.
+#
+# A cancelling group only pays for itself when a later run supersedes an earlier
+# one. These runs check out `main` by name, so every deploy ships the same tree
+# whichever order they run in — superseding buys nothing, and a serialized
+# queue cannot cancel a live upload.
 concurrency:
   group: deploy
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:

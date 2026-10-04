@@ -480,6 +480,24 @@ const PROVIDERS = {
           const c = JSON.parse(user.match(/<candidates>([\s\S]*?)<\/candidates>/)?.[1] || "[]");
           return { learnings: c.slice(0, 10).map((x, i) => ({ ...x, rank: i + 1 })) };
         }
+        /* The weekly-read briefing. Without this arm the mock answered {} and
+           pipeline/books/run.mjs threw on b.ideas.length — which is how the
+           missing `await makeAI()` reached CI untested in the first place. */
+        if (name === "record_brief") {
+          const t = user.match(/<book>(.*?)<\/book>/)?.[1] || "a book";
+          return {
+            coreArgument: `Mock core argument for ${t}, produced offline for testing.`,
+            ideas: Array.from({ length: 6 }, (_, i) => ({
+              heading: `Mock idea ${i + 1}`,
+              explain: "Mock explanation. The offline provider does not read books.",
+              apply:   "Mock action for this week.",
+            })),
+            whoFor:   "Mock reader.",
+            limits:   "Mock limits — the offline provider cannot assess evidence.",
+            verdict:  "Mock verdict.",
+            readNext: ["Mock A", "Mock B", "Mock C"],
+          };
+        }
         if (name === "record_meta") {
           return { guest: "", summary: "Mock summary of the conversation, produced offline for testing.", topics: ["mock"] };
         }

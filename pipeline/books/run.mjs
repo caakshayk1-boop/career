@@ -144,11 +144,15 @@ export async function brief(ai, book) {
   });
 }
 
-export async function main() {
-  const shelf = JSON.parse(readFileSync(SHELF, "utf8"));
-  const prev  = existsSync(OUT) ? JSON.parse(readFileSync(OUT, "utf8")) : { reads: [] };
+/* The paths are arguments with the real files as defaults, so the suite can run
+   the whole job against a temp artifact. A job that can only be exercised by
+   dispatching it in CI gets exercised in CI — which is where the missing
+   `await` below was found, by a human, on the first live run. */
+export async function main({ shelfPath = SHELF, out = OUT, now = new Date() } = {}) {
+  const shelf = JSON.parse(readFileSync(shelfPath, "utf8"));
+  const prev  = existsSync(out) ? JSON.parse(readFileSync(out, "utf8")) : { reads: [] };
   const reads = prev.reads || [];
-  const week  = isoWeek();
+  const week  = isoWeek(now);
 
   if (reads.some((r) => r.week === week)) {
     log.info("books", `${week} already published "${reads.find((r) => r.week === week).title}" — nothing to do`);
@@ -163,8 +167,20 @@ export async function main() {
   if (v.ok) log.info("books", `rating confirmed ${v.rating}/5 from ${v.count} ratings`);
   else      log.warn("books", `rating not confirmed (${v.reason}) — the page will say so`);
 
-  const ai = makeAI();
+  /* makeAI() is async — the provider loads its SDK on demand. Calling it
+     without await hands back a Promise, and `ai.json is not a function` is
+     what that looks like at the far end. pipeline/run.mjs awaits it too. */
+  const ai = await makeAI();
   const b  = await brief(ai, book);
+
+  /* A provider that answers with the wrong shape must not be able to publish a
+     blank edition. Groq's strict tool schema should make this unreachable, but
+     salvageToolArguments() exists precisely because the wrong shape does come
+     back sometimes, and an edition with no ideas is worse than no edition. */
+  if (!Array.isArray(b?.ideas) || b.ideas.length < 3 || !b.coreArgument) {
+    log.fail("books", "brief", `the model returned ${Array.isArray(b?.ideas) ? b.ideas.length : "no"} ideas — not publishing`);
+    return { failed: true };
+  }
 
   reads.unshift({
     week, id: book.id, title: book.title, author: book.author,
@@ -176,7 +192,7 @@ export async function main() {
     ...b,
   });
 
-  writeFileSync(OUT, JSON.stringify({
+  writeFileSync(out, JSON.stringify({
     version: 1,
     generatedAt: new Date().toISOString(),
     week,

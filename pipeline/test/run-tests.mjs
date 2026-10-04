@@ -1119,6 +1119,82 @@ group("the committed public/podcasts.json");
   }
 }
 
+/* ── THE WEEKLY READ ──────────────────────────────────────────────────────── */
+/* This group exists because books.yml failed on its very first run with
+   `ai.json is not a function` — makeAI() is async and the call had no await.
+   Nothing here was tested, so nothing caught it. The end-to-end check below
+   would have, in under a second, with no key and no network. */
+group("the weekly read");
+{
+  const books = await import("../books/run.mjs");
+  const shelf = JSON.parse(readFileSync(new URL("../books/shelf.json", import.meta.url).pathname, "utf8"));
+
+  ok("the shelf parses and declares its own bar",
+    Array.isArray(shelf.books) && typeof shelf.minRating === "number" && typeof shelf.minPublished === "number");
+  ok("every book on the shelf carries the fields the page prints",
+    shelf.books.every((b) => b.id && b.title && b.author && b.published && b.category && b.why));
+  ok("every id on the shelf is unique",
+    new Set(shelf.books.map((b) => b.id)).size === shelf.books.length);
+  ok("no book is below the shelf's own bar",
+    shelf.books.every((b) => b.published >= shelf.minPublished && (b.rating ?? 0) >= shelf.minRating));
+
+  ok("the ISO week key is the Thursday rule, not a day-of-year divide",
+    books.isoWeek(new Date("2027-01-01T00:00:00Z")) === "2026-W53", books.isoWeek(new Date("2027-01-01T00:00:00Z")));
+  ok("a week always picks the same book",
+    books.pick(shelf, [], "2026-W40").id === books.pick(shelf, [], "2026-W40").id);
+  ok("different weeks do not all pick the same book",
+    new Set(Array.from({ length: 20 }, (_, i) => books.pick(shelf, [], `2026-W${10 + i}`).id).filter(Boolean)).size > 1);
+  ok("a book already read is not picked again",
+    !shelf.books.slice(0, 5).map((b) => b.id).includes(books.pick(shelf, shelf.books.slice(0, 5).map((b) => b.id), "2026-W40").id));
+  ok("the shelf cycles instead of running out",
+    books.pick(shelf, shelf.books.map((b) => b.id), "2026-W40") !== null);
+
+  /* END TO END, ONE WEEK — the check that would have caught the live failure. */
+  const OUTP = TMP + "reads.json";
+  const r1 = await books.main({ out: OUTP, now: new Date("2026-10-01T00:00:00Z") });
+  ok("a week publishes an edition", !r1.failed && !r1.skipped && r1.ideas >= 3, JSON.stringify(r1));
+  const d1 = JSON.parse(readFileSync(OUTP, "utf8"));
+  ok("the artifact is the shape the page reads",
+    d1.version === 1 && Array.isArray(d1.reads) && d1.reads.length === 1 && typeof d1.shelfSize === "number");
+  ok("the edition carries the argument, the ideas and the limits",
+    !!d1.reads[0].coreArgument && d1.reads[0].ideas.length >= 3 && !!d1.reads[0].limits && !!d1.reads[0].verdict);
+  ok("every idea carries something to do about it",
+    d1.reads[0].ideas.every((i) => i.heading && i.explain && i.apply));
+  ok("an unconfirmed rating is labelled unverified, not printed as fact",
+    ["googlebooks", "unverified"].includes(d1.reads[0].ratingSource));
+
+  /* IDEMPOTENCE — the same week twice must not publish twice. */
+  const r2 = await books.main({ out: OUTP, now: new Date("2026-10-02T00:00:00Z") });
+  ok("a second run in the same week is a no-op", r2.skipped === true);
+  ok("and it did not append a second edition",
+    JSON.parse(readFileSync(OUTP, "utf8")).reads.length === 1);
+
+  /* The next week appends rather than replacing. */
+  const r3 = await books.main({ out: OUTP, now: new Date("2026-10-08T00:00:00Z") });
+  const d3 = JSON.parse(readFileSync(OUTP, "utf8"));
+  ok("the next week appends to the archive", !r3.failed && d3.reads.length === 2, JSON.stringify(r3));
+  ok("the newest edition is first", d3.reads[0].week > d3.reads[1].week);
+  ok("the two weeks did not pick the same book", d3.reads[0].id !== d3.reads[1].id);
+
+  /* A PROVIDER THAT ANSWERS WITH THE WRONG SHAPE MUST NOT PUBLISH. */
+  const bad = await books.brief({ async json() { return {}; } }, shelf.books[0]);
+  ok("an empty brief is recognisable as empty, so main() can refuse it",
+    !Array.isArray(bad.ideas));
+}
+
+/* ── SHIPPED ARTIFACT, THE WEEKLY READ ───────────────────────────────────── */
+group("the committed public/reads.json");
+{
+  const p = new URL("../../public/reads.json", import.meta.url).pathname;
+  ok("it exists, so the page never sees a 404", existsSync(p));
+  if (existsSync(p)) {
+    const doc = JSON.parse(readFileSync(p, "utf8"));
+    ok("it is the shape the page reads", doc.version === 1 && Array.isArray(doc.reads));
+    ok("no two editions claim the same week",
+      new Set(doc.reads.map((r) => r.week)).size === doc.reads.length);
+  }
+}
+
 rmSync(TMP, { recursive: true, force: true });
 console.log(`\n${failed ? `FAILED — ${failed} of ${passed + failed}` : `ALL ${passed} CHECKS PASSED`}\n`);
 process.exit(failed ? 1 : 0);
