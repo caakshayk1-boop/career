@@ -1,0 +1,75 @@
+# The weekly read.
+#
+# Picks one book from pipeline/books/shelf.json, writes a briefing on it, and
+# appends it to public/reads.json. One a week, archived forever.
+#
+# UNLIKE THE PODCAST JOB, THIS ONE BELONGS IN CI. The podcast pipeline has to
+# run from a home connection because YouTube refuses caption access to
+# datacentre addresses. Nothing here is scraped: the shelf is a file in this
+# repo and the briefing is a model call. The only thing CI cannot do is confirm
+# a rating — Google Books answers a shared runner IP with 429 — and run.mjs
+# already treats that as a warning, keeping the shelf's own figure and marking
+# it unverified on the page rather than failing the week.
+#
+# Monday 23:00 UTC = 07:00 MYT Tuesday. Deliberately NOT adjacent to
+# podcasts.yml at 22:30 UTC: two jobs committing to the same branch in the same
+# minute is the race that cost this repo a morning in September.
+name: books
+
+on:
+  schedule:
+    - cron: "0 23 * * 1"
+  workflow_dispatch:
+
+concurrency:
+  group: books
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  read:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22" }
+
+      - name: Pick the week's book and write the briefing
+        env:
+          # Same key as the podcast job. Absent, config.mjs resolves to the
+          # free extractive path, which cannot write prose — so unlike the
+          # podcast pipeline this job genuinely needs it, and says so.
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GROQ_MODEL_PODCASTS: ${{ vars.GROQ_MODEL_PODCASTS }}
+        run: |
+          if [ -z "$GROQ_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::no model key — this job writes prose and cannot run on the free path"
+            exit 1
+          fi
+          node pipeline/books/run.mjs
+
+      - name: Commit if the week produced something
+        run: |
+          git config user.name  "weekly-read"
+          git config user.email "noreply@askakshay.com"
+          git add public/reads.json
+          # A second run in the same week is a no-op by design — the pick is
+          # keyed on the ISO week — so an unchanged file is success, not failure.
+          if git diff --staged --quiet; then
+            echo "This week is already published — nothing to commit."
+            exit 0
+          fi
+          TITLE=$(node -p "require('./public/reads.json').reads[0].title")
+          N=$(node -p "require('./public/reads.json').reads.length")
+          git commit -m "reads: ${TITLE} (${N} in the archive)"
+          for i in 1 2 3 4; do
+            git push && exit 0
+            echo "push lost a race — retrying"; sleep $((2 ** i))
+            git fetch origin main && git rebase origin/main || git rebase --abort || true
+          done
+          echo "::error::could not push public/reads.json after 4 attempts"
+          exit 1
