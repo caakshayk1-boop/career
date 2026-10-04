@@ -1,8 +1,62 @@
 {
  "version": 1,
- "generatedAt": null,
- "week": null,
+ "generatedAt": "2026-10-04T21:30:03.786Z",
+ "week": "2026-W40",
  "shelfSize": 22,
- "readCount": 0,
- "reads": []
+ "readCount": 1,
+ "reads": [
+  {
+   "week": "2026-W40",
+   "id": "right-kind-of-wrong",
+   "title": "Right Kind of Wrong: The Science of Failing Well",
+   "author": "Amy Edmondson",
+   "published": 2023,
+   "category": "psychology",
+   "rating": 4,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-10-04T21:30:03.786Z",
+   "coreArgument": "Learning and growth come from failures that are intentional, well‑designed, and reflected upon, not from careless mistakes.",
+   "ideas": [
+    {
+     "apply": "Set up a small test at work this week that you know will likely miss a target, then record exactly why it missed.",
+     "explain": "Create tasks or experiments that are meant to fail in specific ways so you can observe what doesn’t work. This turns failure into a data‑gathering exercise rather than a random setback.",
+     "heading": "Design purposeful failures"
+    },
+    {
+     "apply": "When a project goes off track, label the cause with one of the three categories to decide if it merits analysis.",
+     "explain": "Edmondson classifies failures into three categories: careless errors, inevitable mishaps, and strategic failures. Only the strategic ones are useful for learning.",
+     "heading": "Separate “good” from “bad” failures"
+    },
+    {
+     "apply": "After today’s test, meet with the team tomorrow to discuss findings and plan the next iteration.",
+     "explain": "After a failure, gather quick feedback, adjust, and try again within days rather than weeks. Short cycles keep the context fresh and the lessons actionable.",
+     "heading": "Use a rapid‑cycle feedback loop"
+    },
+    {
+     "apply": "Encourage anyone who reports a careless mistake to also propose a preventive step.",
+     "explain": "Make it clear that strategic failures are expected and rewarded, while carelessness is not. This encourages people to take calculated risks.",
+     "heading": "Normalize failure in team culture"
+    },
+    {
+     "apply": "Create a one‑page failure log for the test you run this week and update it after each iteration.",
+     "explain": "Write down what you tried, why it failed, and what the next hypothesis is. A written record prevents repeating the same mistake and builds a knowledge base.",
+     "heading": "Document the learning process"
+    },
+    {
+     "apply": "Ask a colleague anonymously how safe they feel sharing mistakes, then share the results with the group and discuss improvements.",
+     "explain": "People need to feel safe from blame to report failures honestly. Psychological safety is the condition where team members trust that speaking up won’t lead to punishment.",
+     "heading": "Leverage psychological safety"
+    }
+   ],
+   "limits": "The book leans heavily on case studies from tech and elite research labs, so its recommendations may not translate directly to low‑resource settings or highly regulated industries where failure carries legal risk.",
+   "readNext": [
+    "The Fearless Organization by Amy Edmondson",
+    "Thinking, Fast and Slow by Daniel Kahneman",
+    "Fail Fast, Fail Often by Ryan Babineaux and John Krumboltz"
+   ],
+   "verdict": "Skim if you need a quick checklist for building a failure‑friendly culture; read fully if you are designing processes where learning from failure is central.",
+   "whoFor": "Team leaders, product managers, and anyone who can shape how failure is treated in an organization; skip if you work in a context where failure is strictly prohibited or has severe legal consequences."
+  }
+ ]
 }
