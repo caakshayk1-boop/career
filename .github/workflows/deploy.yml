@@ -30,8 +30,11 @@ on:
   # nothing and this redeploys identical assets, which costs ~90 seconds and
   # changes nothing at the edge — cheaper than the alternative, which is a page
   # that quietly stops updating.
+  # books commits with the same GITHUB_TOKEN, so it needs naming here for the
+  # same reason — otherwise the weekly read lands in the repo on Monday night
+  # and the live page keeps serving last week's until the next unrelated push.
   workflow_run:
-    workflows: [podcasts]
+    workflows: [podcasts, books]
     types: [completed]
 
   workflow_dispatch:
