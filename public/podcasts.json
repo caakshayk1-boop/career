@@ -1,15 +1,23 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T01:45:02.073Z",
+  "generatedAt": "2026-10-04T08:18:29.152Z",
   "today": "2026-10-04",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
+      "date": "2026-10-04",
+      "label": "Today",
+      "episodeIds": [
+        "desk-6b130fc1c5b2"
+      ]
+    },
+    {
       "date": "2026-10-03",
       "label": "Yesterday",
       "episodeIds": [
+        "gunjanshouts-580d8e02e62b",
         "desk-dfb8be42be75",
         "desk-5886041ee66d",
         "desk-8679a5d516c6"
@@ -163,6 +171,293 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-6b130fc1c5b2",
+      "sourceId": "desk",
+      "show": "Think School",
+      "title": "Democracy Is Being Manipulated? | Why India’s Voter List Has Triggered Nationwide Protests?",
+      "guest": "",
+      "topics": [
+        "india",
+        "elections",
+        "voter list",
+        "democracy",
+        "political influence"
+      ],
+      "summary": "The episode investigates how India's voter list was altered, revealing opaque purges, broken oversight, and political influence over the Election Commission. It outlines systemic flaws such as undisclosed voter deletions, biased appointment processes, and rule‑changing without proper procedure, and discusses proposals for an independent arbitrator to restore fairness. The conversation offers a deep look at the mechanisms undermining democratic integrity in India.",
+      "url": "https://www.youtube.com/watch?v=MGRTpIyJRIk",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-10-02T00:00:00.000Z",
+      "date": "2026-10-04",
+      "durationSec": 1271,
+      "processedAt": "2026-10-04T04:14:31.589Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "16 lakh voters removed via opaque appeals",
+          "idea": "A 16‑lakh‑person voter purge was carried out through appeals filed under the Election Commission’s name, yet the commission’s own members were unaware and could not approve or veto the action.",
+          "why": "Shows that large-scale disenfranchisement can happen without any oversight from the body meant to protect voters, exposing a hidden mechanism for manipulating election rolls.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Appeals for the removal of 16 lakh voters were filed on behalf of the Election Commission.",
+          "t": 1024,
+          "kind": "said",
+          "confidence": 0.93,
+          "grounding": 0.75,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Second‑tier oversight broken in practice",
+          "idea": "Although the Election Commission is supposed to have three heads who can veto decisions, internal memos show that two of the three were left in the dark 14 times, effectively allowing unilateral actions.",
+          "why": "Reveals a structural flaw where the nominal checks within the commission are routinely bypassed, meaning decisions can be made without the required majority oversight.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "two of the three heads of the Election Commission say they were not informed.",
+          "t": 1031,
+          "kind": "said",
+          "confidence": 0.91,
+          "grounding": 0.8,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Form Six data change without rule change",
+          "idea": "The voter registration form (Form Six) was altered in July to add a mandatory ancestry question, despite earlier written objections from the commission and a requirement that rule changes precede form changes.",
+          "why": "Demonstrates that substantive changes to voter data collection can be implemented unilaterally, sidestepping procedural safeguards and potentially enabling targeted manipulation.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "In July, the form was changed anyway.",
+          "t": 1115,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Chief Commissioner selection dominated by the PM",
+          "idea": "The Chief Election Commissioner is chosen by a panel where two of three seats are occupied by officials directly linked to the Prime Minister, creating a bias toward the ruling party.",
+          "why": "Highlights a conflict of interest in the appointment process that can tilt the commission’s neutrality toward the incumbent government, undermining perceived fairness.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Two out of three people are directly or indirectly chosen by the prime minister.",
+          "t": 1188,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.57,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Proposed neutral arbitrator to fix leadership bias",
+          "idea": "A solution advocated by critics is to replace the cabinet minister seat on the commission with an independent judge, ensuring balanced, supervised leadership for free elections.",
+          "why": "Offers a concrete reform that could restore genuine tripartite oversight, making the commission less vulnerable to partisan control.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "return the judge to the commission… one from the government, one from the opposition, and one will be a neutral arbitrator",
+          "t": 1213,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 0.57,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 98
+    },
+    {
+      "id": "gunjanshouts-580d8e02e62b",
+      "sourceId": "gunjanshouts",
+      "show": "GunjanShouts",
+      "title": "Nobody Can Stop Me To Lose Weight Now- Radhika’s Transformation Journey with IMWOW | By GunjanShouts",
+      "guest": "Radhika Vohra",
+      "topics": [
+        "weight loss",
+        "thyroid",
+        "pcod",
+        "nutrition",
+        "habits"
+      ],
+      "summary": "In this episode, Radhika Vohra recounts her 24‑kg weight loss journey, detailing how she overcame thyroid and PCOD challenges through sustainable diet and lifestyle changes. She shares practical strategies like portion control, home‑cooked meals, and habit‑building routines that helped her achieve lasting results.",
+      "url": "https://www.youtube.com/watch?v=Mf6mNdRJw2U",
+      "type": "youtube",
+      "image": "https://i2.ytimg.com/vi/Mf6mNdRJw2U/hqdefault.jpg",
+      "publishedAt": "2026-10-03T05:38:04.000Z",
+      "date": "2026-10-03",
+      "durationSec": 5128,
+      "processedAt": "2026-10-04T03:23:36.701Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Meal‑replacement shakes cause hair loss, constipation, and bloating",
+          "idea": "Using meal‑replacement shakes led to hair fall, severe constipation, and bloating, making the approach unsustainable.",
+          "why": "It debunks the popular hack that shakes are a harmless shortcut, showing concrete health risks that many overlook.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[6:12] I tried it for I think five to six months. But then I started noticing something [6:13] Side effects. [6:14] My hair fall started increasing a lot. [6:17] When constipation issues become severe [6:19] Got it.",
+          "t": 372,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 0.61,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Prioritize sustainable habits over quick‑fix weight loss tricks",
+          "idea": "Long‑term weight maintenance requires realistic, everyday habits rather than shortcuts like shakes.",
+          "why": "Emphasizes a reusable decision framework: choose methods you can keep for life, which predicts lasting results better than short‑term diets.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[7:00] It is not sustainable for you. [7:01] It is not right at all. [7:03] Expensive ...",
+          "t": 420,
+          "kind": "interpretation",
+          "confidence": 0.82,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Switch to home‑cooked meals instead of shakes",
+          "idea": "Eating home‑made, balanced meals is more sustainable and healthier than relying on meal‑replacement shakes.",
+          "why": "Provides a concrete, actionable alternative that avoids the side effects described earlier and aligns with the sustainability rule.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[7:12] I was like I had to do something that would make life easier. [7:15] This cannot be possible with simple shakes. [8:10] Just start eating home cooked food instead of junk.",
+          "t": 432,
+          "kind": "recommendation",
+          "confidence": 0.8,
+          "grounding": 0.56,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Set a nightly alarm to lock in your morning routine",
+          "idea": "Radhika set a 4:00 AM alarm at night to plan her morning activities, ensuring consistency.",
+          "why": "Demonstrates a simple, replicable habit that forces pre‑planning, which boosts adherence to any health regimen.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[3:52] set an alarm of [3:53] Because Vayu was 8 months old that time.",
+          "t": 232,
+          "kind": "recommendation",
+          "confidence": 0.75,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Use a four‑section tiffin box for kids’ lunches",
+          "idea": "Divide a child’s lunch into four sections: nuts, fruit, a protein‑rich main (e.g., sandwich, gram‑flour chilla, peanut‑butter bread) and a vegetable side.",
+          "why": "Offers a concrete, balanced meal‑planning framework that can be adopted by parents to improve nutrition without strict restriction.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "That is his four-section tiffin box.",
+          "t": 941,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Choose a flexible, personalized diet that fits your lifestyle",
+          "idea": "Select a diet that adapts to travel, work schedules, and food availability rather than a one‑size‑fits‑all plan.",
+          "why": "Highlights a decision rule that makes adherence realistic, increasing the likelihood of long‑term success.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "It is not only about What You Want to Eat. it is about your edge at your convenience also that if you are travelling and if you are a working person",
+          "t": 1726,
+          "kind": "interpretation",
+          "confidence": 0.8,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Avoid over‑restriction; let kids choose healthy foods",
+          "idea": "Instead of banning foods, allow children to pick healthy options so they don’t feel deprived.",
+          "why": "Counters the common belief that strict restriction works for kids, offering a psychologically healthier approach.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "It’s not restrictions. Rather, you should eat what you are not eating.",
+          "t": 1113,
+          "kind": "interpretation",
+          "confidence": 0.75,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "Start the day with an apple to curb sweet cravings",
+          "idea": "Serve an apple first thing after brushing to satisfy sweet cravings and provide fiber before the main meal.",
+          "why": "Provides a low‑effort, counterintuitive tactic that reduces later snacking and improves overall diet quality.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "I give him Apple Daily and He Himself Wants Another Fruit in the Morning",
+          "t": 965,
+          "kind": "said",
+          "confidence": 0.7,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 9,
+          "headline": "Focus on portion control instead of counting calories",
+          "idea": "Prioritize measuring food portions and balancing macronutrients rather than obsessively tracking calories.",
+          "why": "Offers a reusable framework that simplifies dieting and reduces mental fatigue, making adherence easier.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "I was like this I have to skip or take a break of this many hours",
+          "t": 1528,
+          "kind": "interpretation",
+          "confidence": 0.7,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 10,
+          "headline": "Don’t equate weight gain with personal failure",
+          "idea": "Shift mindset from body‑shaming to focusing on health outcomes of weight change.",
+          "why": "A psychological reframing that can improve mental health and sustain motivation during weight fluctuations.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Weight gain means you are unfit. You are unhealthy.",
+          "t": 1453,
+          "kind": "interpretation",
+          "confidence": 0.7,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 122
+    },
     {
       "id": "desk-dfb8be42be75",
       "sourceId": "desk",
@@ -8679,60 +8974,13 @@
   ],
   "pending": [
     {
-      "id": "desk-109d4ded63ed",
-      "title": "How Banks Actually Create Money in India | Ex-SEBI Official Explains",
-      "show": "Zerodha Varsity",
-      "url": "https://www.youtube.com/watch?v=pLmt5WEqrc8",
+      "id": "desk-7fba9e0bf91c",
+      "title": "TATA’S JAGUAR TAKEOVER | How Ratan Tata Turned His Biggest Failure Into a Global Luxury Empire",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
       "takeaways": [
-        "In this Zerodha Varsity bootcamp session, Ananth Narayan, former Whole Time Member at SEBI,  starts from first principles: what money is and who creates it.",
-        "Using the combined balance sheet of India's banking system and the Reserve Bank of Inida, he shows why loans create deposits and not the other way around as everyone believes, how government spending and forex flows add or drain money, and why banks can be flush with liquidity yet short of deposits."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-cf57c3d7f8a3",
-      "title": "“Many Directors Wanted To Vulgarly Cash In On The Waterfall Scene”: Mandakini",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=QXAKPQi1UU4",
-      "takeaways": [
-        "“Many Directors Wanted To Vulgarly Cash In On The Waterfall Scene”: Mandakini #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #Movies #Cinema #Actor #RajKapoor #RamTeriGangaMaili Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-bfa0acf59eea",
-      "title": "Correction FINALLY OVER in Indian Markets? (time to buy?)",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=Bnbq1-9r3w4",
-      "takeaways": [
-        "NIFTY has been trading sideways for quite some time.",
-        "The episode explains the fundamentals to help retail investors decide if the market is still worth it."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-ca9ae8c990ec",
-      "title": "5 fastest growing smallcap stocks to watch for 2027?",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=WeIm9aHzQd4",
-      "takeaways": [
-        "Most small cap stocks people chase have already delivered their growth, and that growth is often already in the price.",
-        "In this video, Groww looks at five Indian small cap companies with large expansion plans still ahead: Fujiyama Power Systems (UTL Solar), GNG Electronics, Afcom Holdings, Waaree Renewable Technologies and Jeena Seekho Lifecare."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-4214154e53ba",
-      "title": "The Mountain Podcast - BeerBiceps In Ladakh",
-      "show": "The Ranveer Show",
-      "url": "https://www.youtube.com/watch?v=_L2cqQayZSo",
-      "takeaways": [
-        "The channel’s mission is to upgrade listeners’ mindset, intellect, and soul through unfiltered, high‑impact conversations.",
-        "It has produced over 1,000 podcasts and 7,000 videos, accumulating more than 150 million views."
+        "Ratan Tata walked out of the deal to sell Tata Motors’ passenger‑car division to Ford and later bought Jaguar Land Rover from Ford for £1.15 billion.",
+        "After the acquisition, Jaguar Land Rover generated £1.675 billion in profits over the next seven years."
       ],
       "date": "2026-10-04",
       "reason": "over the 8/day cap"
@@ -8745,6 +8993,18 @@
       "takeaways": [
         "The fastest and the most affordable way to upskill yourself in AI.",
         "Live workshop happening on 18th Oct, 7pm IST!"
+      ],
+      "date": "2026-10-04",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-194b11b96532",
+      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
+      "takeaways": [
+        "Leverage your growing earning power while balancing larger life milestones with long‑term security.",
+        "Use a smart asset‑allocation approach that balances high‑growth opportunities with risk management to accelerate financial independence."
       ],
       "date": "2026-10-04",
       "reason": "over the 8/day cap"
@@ -8767,107 +9027,35 @@
       "show": "CA Rachana Ranade",
       "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
       "takeaways": [
-        "A practical case study of two working professionals in different age groups is used to illustrate retirement planning.",
+        "A practical case study of two working professionals of different age groups is used to illustrate retirement planning.",
         "The episode shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
       ],
       "date": "2026-10-04",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-fdb64932c090",
-      "title": "AI : Doomsday vs NeuroOptimism | Dr Sid Warrier",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=M8m9Yjv42tk",
+      "id": "desk-93a3b9ee5af2",
+      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
       "takeaways": [
-        "In 2003, we were told AI would take 300 million jobs.",
-        "It's 2026, and companies are quietly rehiring the people they let go."
+        "The video shares the money principles the host is teaching their kids.",
+        "It is not investment advice; viewers should do their own due diligence."
       ],
       "date": "2026-10-04",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-63d9c42d997d",
-      "title": "NYU Professor: The Middle Class Is A Lie & How To Escape It | Scott Galloway | FO570 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=d6mAi5kHsxc",
+      "id": "desk-d305b2a58483",
+      "title": "Where to park your cash for Short Term!",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
       "takeaways": [
-        "The middle class is “an accident of history” that’s dying by design.",
-        "$50 trillion has moved from the bottom 90 % of earners to the top 10 % of earners."
+        "This video explains Debt Mutual Funds.",
+        "Debt funds may look simple and safe, but choosing the wrong fund for your investment duration can expose you to credit risk, liquidity risk and interest rate risk."
       ],
       "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-5b2308677514",
-      "title": "HOW TO SELL ANY SERVICE TO ANYONE |  The System Saad Used to Build a ₹50 Crore Service Business",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=M2OYgUoQwyk",
-      "takeaways": [
-        "Responding to a lead within 5 minutes can completely change the sales funnel.",
-        "The Offer Stack can turn a generic service into something people actually want to buy."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-4f15b484d4a6",
-      "title": "You Went to Buy Milk. How Did You Spend So Much?",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=E9-lFXMmAKA",
-      "takeaways": [
-        "Take responsibility for your spending.",
-        "Add one obstacle to impulse buying."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-2358286fb65c",
-      "title": "Build an Income that pays after You STOP Working",
-      "show": "Zero1 by Zerodha",
-      "url": "https://www.youtube.com/watch?v=YUMl5LUlSRk",
-      "takeaways": [
-        "India has one of the largest working population in the world and in the next few decades most of this population will retire.",
-        "But a majority of this population is not prepared for the retired life."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] YUMl5LUlSRk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-2a41407bb8e4",
-      "title": "BUSTED! - Gyanesh Kumar’s Form-7 Plan | Biggest Fraud On The Constitution Since Emergency? | Akash B",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=ewT1nqN7_QM",
-      "takeaways": [
-        "Indian Express’s Investigation Into Gyanesh Kumar’s misdeeds are only part of the story.",
-        "Independent news outlets like Reporters Collective / TNM / Newslaundry have been exposing how Form 7 has become a weapon of the EC / BJP."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] ewT1nqN7_QM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-f2280eaeb0dc",
-      "title": "Jantar Mantar 2.0 Latest Update: All you need to know | The Wire Live",
-      "show": "The Wire",
-      "url": "https://www.youtube.com/watch?v=NQk3uO17ngU",
-      "takeaways": [
-        "Protesters continued their demonstration at Jantar Mantar demanding Gyanesh Kumar’s resignation.",
-        "The Delhi Police swooped in to detain the demonstrators."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] NQk3uO17ngU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-9f74d8934d6d",
-      "title": "Class 7 NCERT Geography Complete Revision | Marathon Class | One Shot",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=hhqaBsr1ax4",
-      "takeaways": [
-        "In this special Class 7 NCERT Geography Marathon Revision Class, Priyanka Mam takes you through the complete Class 7 NCERT Geography syllabus in one go, making it easier for students to revise all the important concepts in a single session.",
-        "This marathon session is especially useful for students who want to study and revise Class 7 NCERT Geography in one place and strengthen their understanding of important geographical concepts."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] hhqaBsr1ax4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "over the 8/day cap"
     },
     {
       "id": "desk-6e6cfcd221a2",
@@ -8875,11 +9063,58 @@
       "show": "Pranjal Kamra",
       "url": "https://www.youtube.com/watch?v=xEk2do30B1I",
       "takeaways": [
-        "The episode examines the key drivers behind the recent Indian stock market downturn.",
-        "It offers practical ways to react to market volatility, helping investors avoid panic selling, protect their portfolios, and spot long‑term opportunities in the dip."
+        "Are you feeling anxious about the recent stock market decline and wondering what your next move should be?",
+        "In this video, we dive deep into the current market situation, dissecting the key drivers behind the recent downturn and what it means for everyday investors."
       ],
       "date": "2026-10-04",
-      "reason": "yt-dlp failed: ERROR: [youtube] xEk2do30B1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "desk-cf57c3d7f8a3",
+      "title": "“Many Directors Wanted To Vulgarly Cash In On The Waterfall Scene”: Mandakini",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=QXAKPQi1UU4",
+      "takeaways": [
+        "Many directors tried to exploit the waterfall scene for profit.",
+        "The episode features Mandakini discussing this aspect of Bollywood cinema."
+      ],
+      "date": "2026-10-04",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-cb91032b09a7",
+      "title": "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=2vRVTwYVbEE",
+      "takeaways": [
+        "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #Movies #Cinema #Actor #RajKapoor #RamTeriGangaMaili Tune in here: linktr.ee/podcastwithsmitaprakash"
+      ],
+      "date": "2026-10-04",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-54cb035dee97",
+      "title": "How Intelligence Agents Lie, Recruit & Run Secret Operations | David Bickford | FO569 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=txryxBFzmSs",
+      "takeaways": [
+        "David Bickford recounts using fake passports during his career and his first UK operation that helped catch a Czechoslovak spy.",
+        "He explains how intelligence agencies recruit spies and discusses which holds more power, the CIA or Britain’s intelligence agencies."
+      ],
+      "date": "2026-10-04",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-bfa0acf59eea",
+      "title": "Correction FINALLY OVER in Indian Markets? (time to buy?)",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=Bnbq1-9r3w4",
+      "takeaways": [
+        "NIFTY has been trading sideways for quite some time.",
+        "The host notes the content is not investment advice and urges viewers to do their own due diligence."
+      ],
+      "date": "2026-10-04",
+      "reason": "yt-dlp failed: no stderr"
     }
   ],
   "generator": {
@@ -8890,95 +9125,59 @@
     "tts": "none",
     "episodes": {
       "local": 6,
-      "ai": 47
+      "ai": 49
     }
   },
   "run": {
-    "at": "2026-10-04T01:45:02.071Z",
-    "discovered": 1129,
+    "at": "2026-10-04T08:18:29.135Z",
+    "discovered": 258,
     "eligible": 8,
-    "processed": 0,
-    "skipped": 1121,
-    "failed": 8,
+    "processed": 2,
+    "skipped": 250,
+    "failed": 6,
     "pruned": 0,
     "errors": [
       {
         "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-04T01:43:10.381Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "dr-pal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-04T01:43:10.542Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-04T01:43:10.564Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-04T01:43:10.571Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-63d9c42d997d",
-        "message": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:43:16.869Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-5b2308677514",
-        "message": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:43:31.787Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-4f15b484d4a6",
-        "message": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:43:46.842Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2358286fb65c",
-        "message": "yt-dlp failed: ERROR: [youtube] YUMl5LUlSRk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:44:01.864Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2a41407bb8e4",
-        "message": "yt-dlp failed: ERROR: [youtube] ewT1nqN7_QM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:44:17.010Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-f2280eaeb0dc",
-        "message": "yt-dlp failed: ERROR: [youtube] NQk3uO17ngU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:44:31.926Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-9f74d8934d6d",
-        "message": "yt-dlp failed: ERROR: [youtube] hhqaBsr1ax4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:44:46.834Z"
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-10-04T00:11:00.658Z"
       },
       {
         "stage": "process",
         "id": "desk-6e6cfcd221a2",
-        "message": "yt-dlp failed: ERROR: [youtube] xEk2do30B1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-04T01:45:02.065Z"
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-10-04T06:17:11.203Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-cf57c3d7f8a3",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-04T06:34:50.236Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-cb91032b09a7",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-04T07:33:29.252Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-54cb035dee97",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-04T07:50:36.950Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-bfa0acf59eea",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-04T08:18:28.806Z"
       }
     ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
-    "at": "2026-10-02T23:06:47.788Z",
-    "processed": 5
+    "at": "2026-10-04T08:18:29.136Z",
+    "processed": 2
   }
 }
