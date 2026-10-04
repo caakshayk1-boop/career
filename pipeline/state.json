@@ -28942,7 +28942,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-03T01:15:16.101Z",
-      "updatedAt": "2026-10-03T01:15:30.996Z",
+      "updatedAt": "2026-10-04T01:45:02.065Z",
       "reason": "yt-dlp failed: ERROR: [youtube] xEk2do30B1I: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     },
     "desk-cf57c3d7f8a3": {
@@ -28992,6 +28992,90 @@
       "seenAt": "2026-10-03T01:16:16.009Z",
       "updatedAt": "2026-10-03T01:16:31.061Z",
       "reason": "yt-dlp failed: ERROR: [youtube] Bnbq1-9r3w4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-63d9c42d997d": {
+      "status": "FAILED",
+      "title": "NYU Professor: The Middle Class Is A Lie & How To Escape It | Scott Galloway | FO570 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=d6mAi5kHsxc",
+      "id": "desk-63d9c42d997d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:43:11.698Z",
+      "updatedAt": "2026-10-04T01:43:16.869Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-5b2308677514": {
+      "status": "FAILED",
+      "title": "HOW TO SELL ANY SERVICE TO ANYONE |  The System Saad Used to Build a ₹50 Crore Service Business",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=M2OYgUoQwyk",
+      "id": "desk-5b2308677514",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:43:16.875Z",
+      "updatedAt": "2026-10-04T01:43:31.787Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-4f15b484d4a6": {
+      "status": "FAILED",
+      "title": "You Went to Buy Milk. How Did You Spend So Much?",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=E9-lFXMmAKA",
+      "id": "desk-4f15b484d4a6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:43:31.793Z",
+      "updatedAt": "2026-10-04T01:43:46.842Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-2358286fb65c": {
+      "status": "FAILED",
+      "title": "Build an Income that pays after You STOP Working",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=YUMl5LUlSRk",
+      "id": "desk-2358286fb65c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:43:46.848Z",
+      "updatedAt": "2026-10-04T01:44:01.864Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] YUMl5LUlSRk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-2a41407bb8e4": {
+      "status": "FAILED",
+      "title": "BUSTED! - Gyanesh Kumar’s Form-7 Plan | Biggest Fraud On The Constitution Since Emergency? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=ewT1nqN7_QM",
+      "id": "desk-2a41407bb8e4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:44:01.870Z",
+      "updatedAt": "2026-10-04T01:44:17.010Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] ewT1nqN7_QM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-f2280eaeb0dc": {
+      "status": "FAILED",
+      "title": "Jantar Mantar 2.0 Latest Update: All you need to know | The Wire Live",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=NQk3uO17ngU",
+      "id": "desk-f2280eaeb0dc",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:44:17.016Z",
+      "updatedAt": "2026-10-04T01:44:31.927Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] NQk3uO17ngU: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-9f74d8934d6d": {
+      "status": "FAILED",
+      "title": "Class 7 NCERT Geography Complete Revision | Marathon Class | One Shot",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=hhqaBsr1ax4",
+      "id": "desk-9f74d8934d6d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-04T01:44:31.933Z",
+      "updatedAt": "2026-10-04T01:44:46.834Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] hhqaBsr1ax4: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }
