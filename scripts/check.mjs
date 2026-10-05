@@ -375,7 +375,13 @@ await checkPage("/reads", "the weekly read", async (page) => {
     const d = await (await fetch("/reads.json", { cache: "no-store" })).json();
     const body = document.body.innerText;
     return { n: (d.reads || []).length, shelf: d.shelfSize,
-             body, cards: document.querySelectorAll(".bk").length,
+             body,
+             /* The newest edition renders expanded as a .bk card; every
+                earlier one is a collapsed .arch row. Counting only .bk made
+                this check pass with one edition and fail with two. */
+             cards: document.querySelectorAll(".bk").length + document.querySelectorAll(".arch").length,
+             open: document.querySelectorAll(".bk").length,
+             archived: document.querySelectorAll(".arch").length,
              ideas: document.querySelectorAll(".idea").length };
   });
   if (st.n === 0) {
@@ -384,7 +390,10 @@ await checkPage("/reads", "the weekly read", async (page) => {
     ok("the weekly read: the empty state names the shelf size",
       st.body.includes(String(st.shelf)), st.shelf);
   } else {
-    ok("the weekly read: a card for every edition", st.cards === st.n, `${st.cards} / ${st.n}`);
+    ok("the weekly read: an entry for every edition, open or archived",
+      st.cards === st.n, `${st.open} open + ${st.archived} archived / ${st.n}`);
+    ok("the weekly read: exactly one edition is open, the rest are archived",
+      st.open === 1 && st.archived === st.n - 1, `${st.open} open, ${st.archived} archived`);
     ok("the weekly read: the newest edition renders its ideas", st.ideas > 0, st.ideas);
 
     /* THE TWO EXAMPLE BLOCKS MUST STAY TELLABLE APART. One is the author's own
