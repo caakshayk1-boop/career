@@ -1,11 +1,20 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T02:56:48.512Z",
+  "generatedAt": "2026-10-05T03:24:14.060Z",
   "today": "2026-10-05",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
+    {
+      "date": "2026-10-05",
+      "label": "Today",
+      "episodeIds": [
+        "desk-746b8a614ed6",
+        "desk-0e542072319f",
+        "desk-4f15b484d4a6"
+      ]
+    },
     {
       "date": "2026-10-04",
       "label": "Yesterday",
@@ -171,6 +180,352 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-746b8a614ed6",
+      "sourceId": "desk",
+      "show": "Groww",
+      "title": "5 Stocks With A Risk You May Be Missing",
+      "guest": "",
+      "topics": [
+        "stock analysis",
+        "valuation risk",
+        "margin dynamics",
+        "business model shift",
+        "acquisition multiples"
+      ],
+      "summary": "In this episode, the host highlights five stocks that may carry hidden risks, explaining why their market valuations could be misleading. Listeners learn how to spot price momentum outpacing fundamentals, evaluate margin turnarounds, assess business model pivots, separate core earnings from non‑core items, and gauge acquisition multiples. The discussion offers practical frameworks for better risk assessment and smarter stock selection.",
+      "url": "https://www.youtube.com/watch?v=ZHpFtfGs5Ww",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-10-04T00:00:00.000Z",
+      "date": "2026-10-05",
+      "durationSec": 1016,
+      "processedAt": "2026-10-05T03:13:26.750Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Stock price can outpace slow fundamentals when the market prices in future growth",
+          "idea": "A busy investor should look for stocks whose price growth far exceeds their recent sales or profit growth because it signals the market is betting on significant future upside.",
+          "why": "It provides a concrete signal to spot undervalued growth opportunities that aren't reflected in historical financials, letting investors catch early upside.",
+          "action": "Screen for stocks where price CAGR over 3 years exceeds earnings or sales CAGR by at least 20 percentage points.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"stock price compounded roughly 36% annually in the last three years… the market is clearly pricing in future earnings potential more than historical growth\"",
+          "t": 292,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.63,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Rubindo Pharma’s margin turnaround started after US price erosion stabilized",
+          "idea": "Margins rose from around 15% to over 20% as US price erosion stopped and European growth accelerated, driving a rapid share price rise.",
+          "why": "Shows how stabilizing pricing pressures and regional growth can quickly improve profitability, a template for evaluating other pharma turnarounds.",
+          "action": "When assessing pharma stocks, compare recent margin trends to changes in regional pricing dynamics.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Operating margins recovered from around 15% in FY23 to plus 20%… USA's pricing stabilized… Europe grew roughly 23% in FY26… margins improved from single digits to around 20%\"",
+          "t": 117,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.56,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "MSTC’s pivot to digital auction turns a declining sales business into a high‑margin…",
+          "idea": "The company shifted from commodity trading to an asset‑light digital auction platform, raising margins to about 60% despite negative sales growth.",
+          "why": "Demonstrates that a strategic model shift can create sustainable profitability even when top‑line metrics look weak, guiding investors to value business model changes.",
+          "action": "Identify firms that are moving from inventory‑heavy models to platform‑based services and evaluate their margin trajectories.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"company gradually exited this business and shifted focus to digital auction and e‑commerce platform services… margins are structurally high at 60% because the company does not hold inventory\"",
+          "t": 521,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.72,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Track core operating profit separately from other income",
+          "idea": "A large portion of reported profit can come from non‑core items, so investors should isolate core earnings to assess true business health.",
+          "why": "Separating core earnings prevents over‑estimation of profitability and helps compare companies on an apples‑to‑oranges basis.",
+          "action": "Recalculate net profit excluding items like fixed‑deposit interest and report a ‘core earnings’ metric.",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Other Income was Rs 83 Cr… almost 40% of net profit… important to track CoreAuction earnings separately\"",
+          "t": 579,
+          "kind": "recommendation",
+          "confidence": 0.8,
+          "grounding": 0.89,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Wile’s acquisition of Mini Press was 3.5× FY26 revenue",
+          "idea": "Acquiring a brand for 3.5 times its annual sales signals a strategic move to control key product lines and potentially unlock higher margins.",
+          "why": "High‑multiple acquisitions indicate confidence in synergies or market positioning, offering a clue to future earnings upside.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Mini press rights from Fizzer for roughly ₹1250 crore… almost 3.5 times the financial year 26 revenue… annual market sales of the brand are roughly 228 Cr\"",
+          "t": 737,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.78,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 106
+    },
+    {
+      "id": "desk-0e542072319f",
+      "sourceId": "desk",
+      "show": "Dhruv Rathee",
+      "title": "How Long Is Your LIFELINE? | Reality of Palmistry | Dhruv Rathee",
+      "guest": "",
+      "topics": [
+        "palmistry",
+        "psychology",
+        "biology",
+        "pseudoscience"
+      ],
+      "summary": "In this episode the host examines the reality behind palmistry, discussing scientific studies on lifeline length, developmental origins of palm lines, and the psychological tricks that make readings seem accurate. It also highlights how certain palm features can indicate medical conditions and debunks historical claims of prophetic abilities.",
+      "url": "https://www.youtube.com/watch?v=KVI8MKzDnZI",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-10-04T00:00:00.000Z",
+      "date": "2026-10-05",
+      "durationSec": 1192,
+      "processedAt": "2026-10-05T03:15:31.359Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Lifeline length correlates with age at death",
+          "idea": "A 1990 study of 100 deceased people found a statistical correlation (0.55) between the corrected lifeline ratio on the right hand and their actual age at death, leading to a formula to estimate age from lifeline length.",
+          "why": "Shows that palm lines have a measurable biological link to lifespan, giving a concrete, reproducible metric rather than mystical meaning.",
+          "action": "Use the published formula to estimate expected lifespan only as a rough biological indicator, not a prediction.",
+          "detail": "",
+          "passage": "",
+          "evidence": "They measured the length of the lifeline on both the palms of 100 dead people and compared it with the actual age of the people recorded in the hospital records and do you know what the result of this study was that they found a correlation of 0.55 between the lifeline of the right hand and the age of death.",
+          "t": 196,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 0.88,
+          "repaired": true
+        },
+        {
+          "rank": 2,
+          "headline": "Palm lines form in the womb",
+          "idea": "The main reason the distinct palm lines exist is developmental: they form between weeks 8 and 13 of pregnancy to allow the hand to flex properly. They are not created by later hand movements.",
+          "why": "Counters the common belief that lines are carved by life experiences, showing they are fixed early and thus cannot reflect later events.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"These lines are formed only when the child is in the mother's womb. During the 8th to 13th week of pregnancy...\"",
+          "t": 1015,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "A single palm line may signal Down syndrome",
+          "idea": "If a newborn has only one of the three major palm lines, it can be an indicator of Down syndrome or other chromosomal abnormalities, although it is not a definitive test.",
+          "why": "Provides a concrete medical clue that can prompt early screening, turning a traditional belief into a useful diagnostic hint.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"If a baby is born with only one line, it could be an indication of Down syndrome.\"",
+          "t": 1048,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Barnum effect drives palm‑reader accuracy",
+          "idea": "The Forer/Barnum effect shows that vague, general statements can be perceived as highly accurate, explaining why palm readers appear accurate without special skill.",
+          "why": "Provides a psychological framework for why people accept palmistry, useful for skeptics and for anyone assessing vague claims.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "These are quick and generalized statements that can be true about any person or condition. ... This is exactly what all these palm readers and fortune tellers do.",
+          "t": 582,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.55,
+          "repaired": true
+        },
+        {
+          "rank": 5,
+          "headline": "Cold reading uses confidence, observation, and fishing",
+          "idea": "Effective cold reading combines confident, dramatic delivery; careful observation of attire and behavior; and 'fishing'—asking vague questions to elicit revealing statements that are then woven into a narrative.",
+          "why": "Breaks down the reusable technique that underlies many pseudoscientific readings, enabling readers to spot manipulation.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "The first thing that comes into play is the palm reader's own behavior... The second thing is to observe carefully... The third technique, fishing...",
+          "t": 671,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.5,
+          "repaired": true
+        },
+        {
+          "rank": 6,
+          "headline": "75% positive, 25% negative statements optimize readings",
+          "idea": "Harvard experiments found that a reading with about 75 % positive and 25 % negative statements is most effective, because the negatives increase perceived accuracy.",
+          "why": "Gives a specific, evidence‑based ratio that explains why mixed feedback feels convincing, applicable beyond palmistry to any persuasive assessment.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "An experiment was also conducted on this at Harvard University, in which it was revealed that the most effective reading is the one in which there are approximately 75% positive and 25% negative things about the client.",
+          "t": 824,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.82,
+          "repaired": true
+        },
+        {
+          "rank": 7,
+          "headline": "Warner’s predictions were post‑facto claims",
+          "idea": "Warner claimed to predict Kitchener’s death and Wilde’s exile, but the stories were published 16–17 years after the events, suggesting retrospective fabrication rather than accurate foresight.",
+          "why": "Corrects a popular anecdote that lends credibility to palmistry, showing how delayed reporting creates an illusion of prophecy.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "That story was told after 17 years. But the Kitchener story was told in 1932. 16 years after Kitchener's death.",
+          "t": 942,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": true
+        },
+        {
+          "rank": 8,
+          "headline": "Galton dismissed palm lines as meaningless",
+          "idea": "The famed fingerprint pioneer Francis Galton said palm lines are no more significant than the creases on old clothes, highlighting their lack of meaning.",
+          "why": "Uses authority of a scientific figure to undermine claims of significance, reinforcing the biological interpretation.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"Francis Galton, the father of fingerprinting, had said that these lines are no more significant than the creases in old clothes.\"",
+          "t": 1131,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.9,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 136
+    },
+    {
+      "id": "desk-4f15b484d4a6",
+      "sourceId": "desk",
+      "show": "Ankur Warikoo",
+      "title": "The Shopping Habit That Is Quietly Making The GenZ Poor",
+      "guest": "Ankur Warikoo",
+      "topics": [
+        "gen z finance",
+        "impulse buying",
+        "personal finance",
+        "spending habits"
+      ],
+      "summary": "In this episode the host examines how a subtle shopping habit is draining Gen Z's finances, exploring practical ways to curb impulse purchases. Listeners get actionable strategies like adding friction to buying processes and tracking primary versus secondary spending to gain clearer insight into their habits.",
+      "url": "https://www.youtube.com/watch?v=E9-lFXMmAKA",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-10-03T00:00:00.000Z",
+      "date": "2026-10-05",
+      "durationSec": 1035,
+      "processedAt": "2026-10-05T03:24:14.014Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Introduce friction to curb secondary purchases",
+          "idea": "Identify a single change that adds friction (e.g., turning off notifications, logging out, deleting an app) and apply it for a week. If it reduces secondary buying, iterate on friction.",
+          "why": "Creating friction makes impulse buying harder, directly targeting the habit loop that drives secondary purchases.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[6:39] turn off the notifications of all the apps, if the condition is very serious then log out, if the condition is very serious then delete the app itself, it could be anything, frankly there are many options but you have to choose what is that one option which will create friction in your life, will bring some hindrance.",
+          "t": 399,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.52,
+          "repaired": true
+        },
+        {
+          "rank": 2,
+          "headline": "Track primary vs secondary spending to reveal hidden impulse buys",
+          "idea": "Ask users to download their last 30‑day bank statement, label each payment as primary (intentional) or secondary (impulse), then calculate a ratio. This gives a concrete metric of how much money is spent on deliberate vs. unplanned purchases.",
+          "why": "Quantifying the split exposes the hidden weight of impulse spending, giving a baseline for improvement.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[4:52] We will calculate a ratio, for some people that ratio may be 60% primary 40% secondary.",
+          "t": 292,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Use a 7‑day monitoring period to test friction effectiveness",
+          "idea": "After implementing friction, track every expense for seven days without self‑editing. Compare the primary/secondary ratio to the initial 30‑day baseline to see real impact.",
+          "why": "A short, controlled experiment shows whether the friction change actually shifts spending behavior before committing to longer-term changes.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[5:19] track every single expense for the next seven days.",
+          "t": 319,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Separate regret from value‑based spending decisions",
+          "idea": "Ask after 30 days: did you stop yourself from buying something you later realized was unnecessary? Did you miss buying something you later felt you needed? This helps differentiate regret from true impulse control.",
+          "why": "Distinguishing regretful purchases from genuinely useful ones prevents over‑correction that could hinder beneficial spending.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "[11:29] Did I stop myself from doing something like that? Which I later realized was not necessary in life.",
+          "t": 689,
+          "kind": "said",
+          "confidence": 0.75,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 73
+    },
     {
       "id": "desk-6b130fc1c5b2",
       "sourceId": "desk",
@@ -9068,102 +9423,6 @@
       ],
       "date": "2026-10-05",
       "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-746b8a614ed6",
-      "title": "5 Stocks With A Risk You May Be Missing",
-      "show": "Groww",
-      "url": "https://www.youtube.com/watch?v=ZHpFtfGs5Ww",
-      "takeaways": [
-        "What happens when stock prices run far ahead of a company’s recent sales and profit growth?",
-        "In this video, we analyse five businesses where the market appears to be pricing in future expansion, acquisitions, margin recovery or industry tailwinds well before they fully show up in the numbers."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] ZHpFtfGs5Ww: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-0e542072319f",
-      "title": "How Long Is Your LIFELINE? | Reality of Palmistry | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=KVI8MKzDnZI",
-      "takeaways": [
-        "Start investing from just ₹100/day on UPI autopay - SEBI-regulated, zero hidden charges, no lock-in.",
-        "Use my code DHRUV26 to unlock Bachatt Saathi, your personal AI financial advisor, absolutely free (worth ₹399)."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] KVI8MKzDnZI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-6e2918be7210",
-      "title": "Promo EP-455 | Lt Gen KJS Dhillon (Retd) & Air Marshal Sanjeev Kapoor (Retd) premieres today at 5 PM",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=s-Jp8EFC36o",
-      "takeaways": [
-        "Promo EP-455 | Lt Gen KJS Dhillon (Retd) & Air Marshal Sanjeev Kapoor (Retd) premieres today at 5 PM “The lines between war, terrorism and crime are getting blurred.” Lt Gen K.J.S.",
-        "Dhillon “In any warfare situation, the person who adapts faster is going to win.” Air Marshal Sanjeev Kapoor “The Chinese are making over 1 crore drones per month.” Air Marshal Sanjeev Kapoor “The terrain and the enemy dictate what your strategy should be.” Lt Gen K.J.S."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] s-Jp8EFC36o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-2737f628dada",
-      "title": "Why Hard Work Isn't Enough | Neurologist explains",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=7MPLc2h0VXM",
-      "takeaways": [
-        "But hard work without direction is just wasted energy.",
-        "In this video, I break down success using three physics concepts — velocity, acceleration, and resonance — and explain why building a system that compounds your effort matters more than just pushing harder."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] 7MPLc2h0VXM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-ba69a5406149",
-      "title": "Ganga River System Explained Through Animation | Indian Geography for UPSC | Drishti IAS",
-      "show": "Drishti IAS",
-      "url": "https://www.youtube.com/watch?v=X-mzh0aASWE",
-      "takeaways": [
-        "Understand the Ganga River System in detail through engaging animations and easy-to-understand explanations.",
-        "In this video, we explore the Ganga River System, its origin, major tributaries, drainage patterns and geographical significance."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] X-mzh0aASWE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-63d9c42d997d",
-      "title": "NYU Professor: The Middle Class Is A Lie & How To Escape It | Scott Galloway | FO570 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=d6mAi5kHsxc",
-      "takeaways": [
-        "The middle class is described as “an accident of history” that’s dying by design.",
-        "$50 trillion has moved from the bottom 90 % of earners to the top 10 % of earners."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-5b2308677514",
-      "title": "HOW TO SELL ANY SERVICE TO ANYONE |  The System Saad Used to Build a ₹50 Crore Service Business",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=M2OYgUoQwyk",
-      "takeaways": [
-        "Responding to a lead within 5 minutes can completely change the sales funnel.",
-        "The Offer Stack can turn a generic service into something people actually want to buy."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
-    },
-    {
-      "id": "desk-4f15b484d4a6",
-      "title": "The Shopping Habit That Is Quietly Making The GenZ Poor",
-      "show": "Ankur Warikoo",
-      "url": "https://www.youtube.com/watch?v=E9-lFXMmAKA",
-      "takeaways": [
-        "Add one obstacle to impulse buying to make unplanned purchases less automatic",
-        "Take responsibility for your spending by reviewing your bank statement and tracking a normal week."
-      ],
-      "date": "2026-10-05",
-      "reason": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -9174,23 +9433,30 @@
     "tts": "none",
     "episodes": {
       "local": 6,
-      "ai": 49
+      "ai": 52
     }
   },
   "run": {
-    "at": "2026-10-05T02:56:48.509Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
-    "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "at": "2026-10-05T03:24:14.044Z",
+    "mode": "full",
+    "discovered": 259,
+    "eligible": 8,
+    "processed": 3,
+    "skipped": 252,
+    "failed": 4,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-10-05T03:11:57.669Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
-    "at": "2026-10-04T08:18:29.136Z",
-    "processed": 2
+    "at": "2026-10-05T03:24:14.045Z",
+    "processed": 3
   }
 }
