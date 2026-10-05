@@ -40,6 +40,10 @@ on:
         description: "Only check the sources: is each feed reachable, and can it be read for free?"
         type: boolean
         default: false
+      attempt_read:
+        description: "Try to fetch transcripts from this runner anyway (YouTube normally refuses a datacentre IP)"
+        type: boolean
+        default: false
 
 # One at a time. Two overlapping runs would both read the ledger, both process
 # the same episode, and the second would overwrite the first's commit.
@@ -93,7 +97,11 @@ jobs:
       # wired) or a non-YouTube source. Not a secret-shaped workaround: a
       # cookie jar in a repo secret is someone's live session, it expires
       # without warning, and it fails the same way this does.
+      # Only installed when a read will actually be attempted. The scheduled run
+      # republishes and never fetches, so this was 15 seconds of pip on every
+      # nightly run for a binary nothing then called.
       - name: Install yt-dlp for caption access
+        if: ${{ inputs.attempt_read || inputs.verify_only || inputs.force }}
         run: |
           python3 -m pip install --quiet --upgrade yt-dlp
           yt-dlp --version
@@ -163,7 +171,39 @@ jobs:
           #   TTS_PROVIDER: elevenlabs
           #   ELEVENLABS_API_KEY / R2_BUCKET / R2_ACCESS_KEY_ID /
           #   R2_SECRET_ACCESS_KEY / R2_PUBLIC_BASE
-        run: npm run podcasts
+        # ── WHY THE SCHEDULE REPUBLISHES INSTEAD OF READING ────────────────
+        #
+        # Measured on 2026-10-05: discovered 1151, eligible 8, PROCESSED 0,
+        # FAILED 8. All eight were the same line — "Sign in to confirm you're
+        # not a bot" — because YouTube refuses caption access to datacentre
+        # addresses. That has been the result of EVERY scheduled run: the
+        # commit log reads "read nothing — 8 failed" on 30 Sep, 1, 2, 3, 4 and
+        # 5 October, against "+5 read", "+5", "+5", "+1", "+2" from the Mac.
+        #
+        # The comment above this step already said the wall might be
+        # insurmountable from here, and proposed a paid transcript provider or
+        # a non-YouTube source as the real answer. Neither is configured. So
+        # the honest thing is to stop pretending: eight yt-dlp attempts a night
+        # that cannot succeed cost two minutes of runner time and wrote a
+        # 260-line diff of identical errors into this repository every day.
+        #
+        # --republish rebuilds the artifact from the ledger and pushes, which
+        # is all this run was ever actually achieving: the page stays deployed,
+        # the pending list carries forward, lastRead is preserved untouched, and
+        # the whole thing takes 0.2 seconds instead of two minutes.
+        #
+        # THE READING STILL HAPPENS, on the Mac, which has a residential
+        # address. attempt_read on a manual dispatch tries from here anyway —
+        # for the morning YouTube changes its mind, or a transcript provider
+        # gets a key.
+        run: |
+          if [ "${{ inputs.attempt_read }}" = "true" ] || [ "${{ inputs.force }}" = "true" ]; then
+            npm run podcasts
+          else
+            echo "Scheduled run: rebuilding from the ledger, not fetching."
+            echo "YouTube refuses caption access to datacentre addresses — see the comment above."
+            npm run podcasts:republish
+          fi
 
       # ── THE ROTATION TRAP ────────────────────────────────────────────────
       # config.mjs resolves a missing key to the free extractive path with NO
@@ -207,7 +247,12 @@ jobs:
           # refresh — 11 episodes" on such a run is how seven consecutive days of
           # reading nothing looked like seven successful mornings in the log.
           # The subject line states what the run actually did.
-          if [ "$PROC" -eq 0 ]; then
+          MODE=$(node -p "(require('./public/podcasts.json').run||{}).mode||'full'")
+          if [ "$MODE" = "republish" ]; then
+            # A republish did not try to read, so "read nothing — 0 failed"
+            # would describe a failure that never happened. Say what it did.
+            git commit -m "podcasts: rebuilt without reading — ${COUNT} episode(s) still served"
+          elif [ "$PROC" -eq 0 ]; then
             git commit -m "podcasts: read nothing — ${FAIL} failed, still serving ${COUNT} episode(s)"
           else
             git commit -m "podcasts: morning refresh — +${PROC} read, ${COUNT} episode(s), ${POINTS} points"

@@ -178,6 +178,18 @@ await checkPage("/podcasts", "podcasts", async (page) => {
        * check over episodes the pipeline had correctly admitted. */
       thin: (doc.episodes || []).filter((e) => (e.learnings || []).length < floor).length,
       builtHoursAgo: Math.round((Date.now() - Date.parse(doc.generatedAt || 0)) / 3600000),
+      /* THE CHECK BELOW USED generatedAt AND WAS THEREFORE UNFALSIFIABLE.
+         CI rebuilds this artifact every night without reading anything, so
+         generatedAt is always hours old whatever happens upstream — the
+         assertion "the morning job is still running" would have stayed green
+         with the reading machine switched off for a month. lastRead is the
+         timestamp of the last run that actually processed an episode, carried
+         forward by lastReadMarker() across every run that processed none. */
+      readHoursAgo: doc.lastRead && doc.lastRead.at
+        ? Math.round((Date.now() - Date.parse(doc.lastRead.at)) / 3600000) : null,
+      runMode: (doc.run || {}).mode || "full",
+      eligible: (doc.run || {}).eligible || 0,
+      processed: (doc.run || {}).processed || 0,
       /* THE SAME ARITHMETIC RETENTION USES, not a re-derivation of it.
        * This measured wall-clock milliseconds and rounded, while buildPublic
        * counts whole calendar days in MYT between the episode's date and the
@@ -213,11 +225,37 @@ await checkPage("/podcasts", "podcasts", async (page) => {
       .test(shape.dayHeadings[0] || ""), shape.dayHeadings[0]);
   ok("podcasts: nothing on the page is older than the retention window",
     shape.oldestAgeDays < shape.retention, `${shape.oldestAgeDays}d, window ${shape.retention}d`);
-  /* The assertion that actually catches a dead pipeline: the artifact is being
-   * rebuilt. 72h rather than 24h because a quiet weekend is not a failure and a
-   * check that cries wolf gets ignored. */
-  ok("podcasts: the morning job is still running",
+  /* Two different failures, so two assertions. The artifact being rebuilt only
+   * proves the scheduled job fires; it says nothing about whether anything can
+   * be read, and conflating the two is what made the old single check
+   * worthless. 72h on both rather than 24h, because a quiet weekend is not a
+   * failure and a check that cries wolf gets ignored. */
+  ok("podcasts: the scheduled rebuild is still firing",
     shape.builtHoursAgo < 72, `last built ${shape.builtHoursAgo}h ago — check the podcasts workflow`);
+  /* THE BANNER MUST NOT CALL A REBUILD A FAILURE. The old guard returned "" on
+     any run with eligible=0, which is every republish — so on CI days the page
+     showed no freshness note at all, and before that it showed "8 failed" for
+     a wall it was never going to pass. One assertion per mode. */
+  const banner = await page.evaluate(() => {
+    const e = document.querySelector(".runnote,.runwarn");
+    return { present: !!e, warn: !!document.querySelector(".runwarn"),
+             text: e ? e.innerText : "" };
+  });
+  if (shape.runMode === "republish") {
+    ok("podcasts: a rebuild-only run still says how current the page is", banner.present, banner.text.slice(0, 80));
+    ok("podcasts: a rebuild is not reported as a failed read",
+      !/failed|could not be read/i.test(banner.text), banner.text.slice(0, 120));
+    ok("podcasts: a rebuild says when something was last actually read",
+      /last new conversation read|nothing new has been read/i.test(banner.text), banner.text.slice(0, 120));
+  } else if (shape.eligible > 0 && shape.processed === 0) {
+    ok("podcasts: a run that tried and read nothing says so", banner.present, banner.text.slice(0, 80));
+  }
+
+  ok("podcasts: something is still able to read new episodes",
+    shape.readHoursAgo !== null && shape.readHoursAgo < 72,
+    shape.readHoursAgo === null
+      ? "nothing has ever been read"
+      : `last read ${shape.readHoursAgo}h ago — the CI rebuild cannot fetch captions, so this means the reading machine has not run`);
 
   /* THE DETAIL VIEW IS THE PRODUCT. Everything above it is navigation. */
   await page.locator(".ep").first().click();

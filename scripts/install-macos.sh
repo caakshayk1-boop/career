@@ -144,12 +144,54 @@ launchctl bootout "$DOMAIN/$LABEL" 2>/dev/null || true
 launchctl bootstrap "$DOMAIN" "$PLIST"
 info "bootstrapped into $DOMAIN"
 
+# ── THE SCHEDULED WAKE ─────────────────────────────────────────────────────
+#
+# 06:45 WAS NEVER ONCE HIT. Measured across the commits this job pushed:
+# 07:06, 07:07, 07:10, 08:45, 09:01, and once 16:18. StartCalendarInterval
+# does not fire at its minute on a sleeping Mac — it fires on the next WAKE,
+# so every one of those timestamps is the lid being opened, and the 16:18 is a
+# day the Mac was shut down and only RunAtLoad saved the run.
+#
+# That matters more than it looks, because this Mac is the ONLY machine that
+# can read YouTube: the scheduled CI run republishes without fetching, since
+# YouTube refuses caption access to datacentre addresses. A morning the lid
+# stays shut is a morning with no new episodes anywhere.
+#
+# pmset makes the Mac wake itself at 06:40, five minutes before the job. It
+# needs sudo, so it is OFFERED rather than done — an installer that silently
+# demands a password is an installer people stop running.
+#
+# `wakeorpoweron` wakes from sleep AND powers on from a full shutdown, which is
+# the case RunAtLoad could not cover.
+WAKE_CMD='sudo pmset repeat wakeorpoweron MTWRFSU 06:40:00'
+if pmset -g sched 2>/dev/null | grep -q "wakeorpoweron.*06:40"; then
+  info "scheduled wake at 06:40 already set"
+elif [ -t 0 ]; then
+  say "Set a 06:40 wake so 06:45 actually fires?"
+  printf '  %s\n  [y/N] ' "$WAKE_CMD"
+  read -r ans
+  case "$ans" in
+    [yY]*) $WAKE_CMD && info "wake scheduled — check it with: pmset -g sched" ;;
+    *)     info "skipped. Without it the job runs when you next open the lid, not at 06:45." ;;
+  esac
+else
+  info "non-interactive: skipping the wake. To set it later, run:"
+  printf '  %s\n' "$WAKE_CMD"
+fi
+
 say "Running it once now"
 launchctl kickstart -p "$DOMAIN/$LABEL"
 
 cat <<DONE
 
 Installed. It runs at 06:45 daily, and once at login if the Mac was off.
+
+THIS MAC IS THE ONLY MACHINE THAT CAN READ. The scheduled GitHub run rebuilds
+the page without fetching, because YouTube refuses caption access to datacentre
+addresses. If this job does not run, no new episodes appear anywhere.
+
+  pmset -g sched                   is the 06:40 wake set?
+  sudo pmset repeat wakeorpoweron MTWRFSU 06:40:00    set it
 
   tail -f $LOGDIR/podcasts.log     what it read
   tail -20 $LOGDIR/podcasts.err    DEGRADED warnings and exit 2

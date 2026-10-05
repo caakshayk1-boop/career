@@ -922,6 +922,28 @@ group("a failed run does not erase a successful one");
   ok("with no previous artifact and nothing read, there is no marker",
     lastReadMarker(null, 0) === null);
   ok("and a first successful run creates one", Boolean(lastReadMarker(null, 2)));
+
+  /* "PROCESSED 0" MEANS TWO OPPOSITE THINGS AND THE PAGE HAS TO TELL THEM
+     APART. A full run that processed nothing tried and failed — the
+     alive-and-broken state. A republish did not try: CI rebuilds from the
+     ledger on purpose, because YouTube refuses caption access to datacentre
+     addresses. Rendering the second as the first announced a failed morning
+     every single day for a morning nobody had attempted. The committed
+     artifact carries the mode, and these assert the artifact does. */
+  const shipped = JSON.parse(readFileSync(new URL("../../public/podcasts.json", import.meta.url).pathname, "utf8"));
+  ok("the artifact records which kind of run wrote it",
+    ["full", "republish"].includes((shipped.run || {}).mode), (shipped.run || {}).mode);
+  ok("a republish reports no failures, because it never attempted one",
+    (shipped.run || {}).mode !== "republish"
+      || ((shipped.run.failed || 0) === 0 && (shipped.run.eligible || 0) === 0),
+    `eligible=${(shipped.run || {}).eligible} failed=${(shipped.run || {}).failed}`);
+  ok("a republish preserves the read marker rather than clearing it",
+    (shipped.run || {}).mode !== "republish" || Boolean(shipped.lastRead && shipped.lastRead.at),
+    JSON.stringify(shipped.lastRead));
+  /* The one that would have caught the unfalsifiable staleness check: the
+     artifact must carry a timestamp that only a real read can move. */
+  ok("the read marker is older than or equal to the build it shipped in",
+    !shipped.lastRead || Date.parse(shipped.lastRead.at) <= Date.parse(shipped.generatedAt));
 }
 
 /* ── PROVENANCE ──────────────────────────────────────────────────────────── */

@@ -318,6 +318,14 @@ const readingTime = (learnings, summary) => {
 
 const summarise = () => ({
   at: new Date().toISOString(),
+  /* WHICH KIND OF RUN THIS WAS, because "processed 0" means two opposite
+     things. A full run that processed nothing TRIED and failed — that is the
+     alive-and-broken state the page's banner exists to show. A republish did
+     not try: it rebuilt the artifact from the ledger on purpose, which is what
+     CI does because YouTube refuses caption access to datacentre addresses.
+     Rendering the second as the first announced a failed morning every day for
+     a morning that had not been attempted. */
+  mode: REPUBLISH_ONLY ? "republish" : "full",
   ...run.counts,
   errors: run.errors.slice(0, 20),
   estimatedCostUsd: Math.round(estimateCost(run.cost.inTokens, run.cost.outTokens, cfg.activeAiModel) * 10000) / 10000,

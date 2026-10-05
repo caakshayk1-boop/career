@@ -490,7 +490,15 @@ function renderIndex(doc){
 function runBanner(doc){
   const r = doc.run || {};
   const elig = r.eligible || 0, proc = r.processed || 0, fail = r.failed || 0;
-  if (!elig || proc) return "";
+  /* A REPUBLISH DID NOT TRY, SO IT CANNOT HAVE FAILED. CI rebuilds this
+     artifact daily from the ledger and never attempts a transcript, because
+     YouTube refuses caption access to datacentre addresses — so eligible is 0
+     by design on those runs, not because there was nothing to read. The old
+     `!elig` guard therefore hid the banner entirely on every CI day, which is
+     exactly the day a reader most needs to know how old the page is. Handled
+     below on its own terms. */
+  const republished = r.mode === "republish";
+  if (!republished && (!elig || proc)) return "";
 
   const stamp = (v) => v
     ? new Date(v).toLocaleString("en-GB", { timeZone: MYT, day: "numeric", month: "short",
@@ -509,6 +517,23 @@ function runBanner(doc){
      long enough ago to be one. */
   const read = doc.lastRead || null;
   const hoursSince = read && read.at ? (Date.now() - Date.parse(read.at)) / 3600000 : Infinity;
+
+  /* On a republish the only honest statement is how old the content is: this
+     run read nothing and was never going to. 36h covers a normal overnight gap
+     plus a late Mac; past that, the machine that CAN read has not run. */
+  if (republished) {
+    if (hoursSince < 36) {
+      return '<div class="runnote">Rebuilt ' + esc(when) + " without re-reading &mdash; " +
+        "the scheduled rebuild runs in CI, which cannot fetch captions. " +
+        "Last new conversation read " + esc(stamp(read.at)) + "." + "</div>";
+    }
+    return '<div class="runwarn"><b>Nothing new has been read' +
+      (read && read.at ? " since " + esc(stamp(read.at)) : " on any recent run") +
+      " &mdash; about " + Math.round(hoursSince) + " hours ago.</b> " +
+      "The daily CI rebuild cannot fetch captions, so new episodes only arrive when the " +
+      "reading machine runs. Everything below is from an earlier run. Rebuilt " +
+      esc(when) + ".</div>";
+  }
 
   if (hoursSince < 36) {
     return '<div class="runnote">Checked ' + esc(when) + " — nothing new since. " +

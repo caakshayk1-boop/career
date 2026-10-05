@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-05T01:05:10.073Z",
+  "generatedAt": "2026-10-05T02:56:48.512Z",
   "today": "2026-10-05",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -9178,63 +9178,15 @@
     }
   },
   "run": {
-    "at": "2026-10-05T01:05:10.071Z",
-    "discovered": 1151,
-    "eligible": 8,
+    "at": "2026-10-05T02:56:48.509Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 1143,
-    "failed": 8,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "process",
-        "id": "desk-746b8a614ed6",
-        "message": "yt-dlp failed: ERROR: [youtube] ZHpFtfGs5Ww: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:03:23.564Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-0e542072319f",
-        "message": "yt-dlp failed: ERROR: [youtube] KVI8MKzDnZI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:03:38.612Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-6e2918be7210",
-        "message": "yt-dlp failed: ERROR: [youtube] s-Jp8EFC36o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:03:53.422Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-2737f628dada",
-        "message": "yt-dlp failed: ERROR: [youtube] 7MPLc2h0VXM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:04:08.298Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-ba69a5406149",
-        "message": "yt-dlp failed: ERROR: [youtube] X-mzh0aASWE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:04:23.798Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-63d9c42d997d",
-        "message": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:04:38.877Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-5b2308677514",
-        "message": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:04:57.079Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-4f15b484d4a6",
-        "message": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
-        "at": "2026-10-05T01:05:10.058Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
