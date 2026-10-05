@@ -20,6 +20,11 @@ on:
   schedule:
     - cron: "0 23 * * 1"
   workflow_dispatch:
+    inputs:
+      force:
+        description: "Rewrite this week's edition instead of skipping it (use after a format change)"
+        type: boolean
+        default: false
 
 concurrency:
   group: books
@@ -50,7 +55,10 @@ jobs:
             echo "::error::no model key — this job writes prose and cannot run on the free path"
             exit 1
           fi
-          node pipeline/books/run.mjs
+          # The scheduled run never forces: a second scheduled run in the
+          # same week must stay a no-op, or Monday's edition gets rewritten by
+          # Tuesday's retry. Only a human dispatch can rewrite a week.
+          node pipeline/books/run.mjs ${{ inputs.force && '--force' || '' }}
 
       - name: Commit if the week produced something
         run: |
@@ -65,7 +73,8 @@ jobs:
           fi
           TITLE=$(node -p "require('./public/reads.json').reads[0].title")
           N=$(node -p "require('./public/reads.json').reads.length")
-          git commit -m "reads: ${TITLE} (${N} in the archive)"
+          VERB=$([ "${{ inputs.force }}" = "true" ] && echo "rewrote" || echo "reads:")
+          git commit -m "${VERB} ${TITLE} (${N} in the archive)"
           for i in 1 2 3 4; do
             git push && exit 0
             echo "push lost a race — retrying"; sleep $((2 ** i))
