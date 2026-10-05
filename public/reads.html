@@ -302,8 +302,19 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
   line-height:1.65;color:var(--muted)}
 .ex b{display:block;font:500 var(--t-1)/1.6 var(--mono);letter-spacing:var(--ls-wide);
   text-transform:uppercase;margin-bottom:4px}
-.ex.bk-ex{background:var(--raised);border-left:2px solid var(--line2)}
+/* A BOOK CASE IS RECOLLECTION, NOT A QUOTE, AND IS STYLED AS THE WEAKER CLAIM.
+   It is dimmer and set in the body face rather than given a colour, because
+   the one thing it must never look like is a verified citation. The amber
+   variant is for a case carrying a statistic — an invented number is the kind
+   that gets repeated. */
+.ex.bk-ex{background:var(--raised);border-left:2px dashed var(--line2);color:var(--dim)}
 .ex.bk-ex b{color:var(--dim)}
+.ex.bk-ex.fig{border-left-color:var(--warn)}
+.ex.bk-ex.fig b{color:var(--warn)}
+.ex.bk-ex i{font-style:normal;font-family:var(--mono);font-size:var(--t-1);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;opacity:.85}
+.caveat{margin-top:14px;padding:11px 13px;border:1px dashed var(--line2);border-radius:var(--r-2);
+  font-size:var(--t-3);line-height:1.6;color:var(--dim);max-width:var(--measure)}
 .ex.wk{background:var(--accent-soft);border-left:2px solid var(--accent)}
 .ex.wk b{color:var(--accent)}
 .idea .tr{display:block;margin-top:8px;font-size:var(--t-4);line-height:1.6;color:var(--muted);
@@ -387,7 +398,10 @@ const myt = v => { if (!v) return "\u2014"; const d = new Date(v); if (isNaN(d))
 function ideaCard(i){
   return '<div class="idea"><h3>' + esc(i.heading) + "</h3>" +
     "<p>" + esc(i.explain) + "</p>" +
-    (i.bookExample ? '<span class="ex bk-ex"><b>The book\u2019s own case</b>' + esc(i.bookExample) + "</span>" : "") +
+    (i.bookExample ? '<span class="ex bk-ex' + (i.bookExampleHasFigure ? " fig" : "") + '">' +
+      "<b>A case the book may use &mdash; <i>unverified" +
+      (i.bookExampleHasFigure ? ", and it quotes a figure" : "") + "</i></b>" +
+      esc(i.bookExample) + "</span>" : "") +
     (i.yourWeek ? '<span class="ex wk"><b>In your week &mdash; this site\u2019s illustration, not the book\u2019s</b>' + esc(i.yourWeek) + "</span>" : "") +
     (i.apply ? '<span class="do"><b>Do this week</b> ' + esc(i.apply) + "</span>" : "") +
     (i.tradeoff ? '<span class="tr"><b>What it costs</b> ' + esc(i.tradeoff) + "</span>" : "") +
@@ -416,6 +430,14 @@ function readBlock(r, open){
     '<p class="arg">' + esc(r.coreArgument) + "</p>" +
     (r.oneThing ? '<div class="one"><b>If you do one thing</b><p>' + esc(r.oneThing) + "</p></div>" : "") +
     (r.ideas || []).map(ideaCard).join("") +
+    ((r.ideas || []).some((i) => i.bookExample)
+      ? '<p class="caveat">The grey blocks above are what the model recalls the author using, ' +
+        'not quotations, and <b>nothing in them has been checked against the book</b>. The first ' +
+        'edition in this format filled every one of them and put a percentage in three &mdash; ' +
+        'asked for a named example, a small model supplies one whether or not the author wrote it. ' +
+        'Treat them as a hint about what kind of evidence the book leans on. Do not repeat a figure ' +
+        'from one without opening the book.</p>'
+      : "") +
     '<div class="pan">' +
       (r.misreading ? "<div><b>How this book gets misquoted</b><p>" + esc(r.misreading) + "</p></div>" : "") +
       (r.whoFor  ? "<div><b>Who it is for</b><p>" + esc(r.whoFor) + "</p></div>" : "") +

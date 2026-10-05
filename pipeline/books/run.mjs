@@ -236,6 +236,25 @@ export async function main({ shelfPath = SHELF, out = OUT, now = new Date(), for
     return { failed: true };
   }
 
+  /* THE INSTRUCTION TO RETURN "" DID NOT HOLD, SO IT IS NOT RELIED ON.
+     Asked for the author's own case and told to answer with an empty string
+     when unsure, the first real edition filled 5 of 5 — three of them with a
+     specific percentage. A 20B-class model asked for a named example produces
+     one whether or not the author wrote it, and "Galloway describes a firm
+     that reduced processing time by 40%" is exactly the sentence that gets
+     repeated in an interview as fact.
+
+     Self-reported confidence cannot fix that, so none is asked for. Every book
+     case is treated as unverified recollection, always, and the ones carrying
+     a hard figure are marked separately, because an invented number is the
+     quotable kind. The page renders both; this only records them. */
+  const FIGURE = /\d+(?:\.\d+)?\s?%|\b\d+(?:\.\d+)?\s?per ?cent|[$£€]\s?\d|\b(?:USD|AED|RM|MYR)\s?\d/i;
+  const ideas = (b.ideas || []).map((i) => ({ ...i, bookExampleHasFigure: FIGURE.test(i.bookExample || "") }));
+  const withCase = ideas.filter((i) => i.bookExample).length;
+  const withFigure = ideas.filter((i) => i.bookExampleHasFigure).length;
+  log.info("books", `${withCase}/${ideas.length} ideas cite a case from the book, ${withFigure} with a figure — all marked unverified`);
+  if (withFigure) log.warn("books", `${withFigure} book case(s) quote a statistic this pipeline cannot check against the book`);
+
   reads.unshift({
     week, id: book.id, title: book.title, author: book.author,
     published: book.published, category: book.category,
@@ -244,6 +263,7 @@ export async function main({ shelfPath = SHELF, out = OUT, now = new Date(), for
     ratingCount: v.ok ? v.count : null,
     publishedAt: new Date().toISOString(),
     ...b,
+    ideas,
   });
 
   writeFileSync(out, JSON.stringify({

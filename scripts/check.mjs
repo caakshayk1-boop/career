@@ -398,7 +398,8 @@ await checkPage("/reads", "the weekly read", async (page) => {
       const d = JSON.parse(document.getElementById("probe")?.textContent || "null");
       return { wk: wk.length, bk: bk.length,
                labelled: wk.every((e) => /not the book/i.test(e.innerText)),
-               bkLabelled: bk.every((e) => /book.{0,3}s own case/i.test(e.innerText)),
+               bkLabelled: bk.every((e) => /unverified/i.test(e.innerText)),
+               caveat: /nothing in them has been checked/i.test(document.body.innerText),
                ideas: document.querySelectorAll(".idea").length,
                applies: document.querySelectorAll(".idea .do").length,
                costs: document.querySelectorAll(".idea .tr").length,
@@ -409,8 +410,15 @@ await checkPage("/reads", "the weekly read", async (page) => {
       ex.wk === ex.ideas, `${ex.wk} / ${ex.ideas}`);
     ok("the weekly read: this site's illustration says it is not the book's",
       ex.wk > 0 && ex.labelled);
-    ok("the weekly read: the author's own cases are labelled as the book's",
-      ex.bk === 0 || ex.bkLabelled);
+    /* THE ASSERTION THAT MATTERS MOST ON THIS PAGE. A book case is the model's
+       recollection, never a checked quote — the first edition in this format
+       filled 5 of 5 and put a percentage in three. If the word "unverified"
+       ever falls off one of these blocks, the page starts publishing invented
+       anecdotes as citations under a real author's name. */
+    ok("the weekly read: every book case is marked unverified",
+      ex.bk === 0 || ex.bkLabelled, `${ex.bk} blocks, all labelled=${ex.bkLabelled}`);
+    ok("the weekly read: the edition warns once that book cases are unchecked",
+      ex.bk === 0 || ex.caveat, ex.caveat);
     /* bookExample is "" when the model is not confident the book uses one —
        the correct answer. So fewer book cases than ideas is expected; MORE is
        impossible and would mean the render duplicated one. */
