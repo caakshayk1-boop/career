@@ -29290,6 +29290,102 @@
         "audio": null,
         "readSeconds": 122
       }
+    },
+    "desk-746b8a614ed6": {
+      "status": "FAILED",
+      "title": "5 Stocks With A Risk You May Be Missing",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=ZHpFtfGs5Ww",
+      "id": "desk-746b8a614ed6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:03:19.114Z",
+      "updatedAt": "2026-10-05T01:03:23.564Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] ZHpFtfGs5Ww: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-0e542072319f": {
+      "status": "FAILED",
+      "title": "How Long Is Your LIFELINE? | Reality of Palmistry | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=KVI8MKzDnZI",
+      "id": "desk-0e542072319f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:03:23.573Z",
+      "updatedAt": "2026-10-05T01:03:38.612Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] KVI8MKzDnZI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-6e2918be7210": {
+      "status": "FAILED",
+      "title": "Promo EP-455 | Lt Gen KJS Dhillon (Retd) & Air Marshal Sanjeev Kapoor (Retd) premieres today at 5 PM",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=s-Jp8EFC36o",
+      "id": "desk-6e2918be7210",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:03:38.622Z",
+      "updatedAt": "2026-10-05T01:03:53.422Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] s-Jp8EFC36o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-2737f628dada": {
+      "status": "FAILED",
+      "title": "Why Hard Work Isn't Enough | Neurologist explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=7MPLc2h0VXM",
+      "id": "desk-2737f628dada",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:03:53.435Z",
+      "updatedAt": "2026-10-05T01:04:08.298Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] 7MPLc2h0VXM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-ba69a5406149": {
+      "status": "FAILED",
+      "title": "Ganga River System Explained Through Animation | Indian Geography for UPSC | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=X-mzh0aASWE",
+      "id": "desk-ba69a5406149",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:04:08.308Z",
+      "updatedAt": "2026-10-05T01:04:23.798Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] X-mzh0aASWE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-63d9c42d997d": {
+      "status": "FAILED",
+      "title": "NYU Professor: The Middle Class Is A Lie & How To Escape It | Scott Galloway | FO570 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=d6mAi5kHsxc",
+      "id": "desk-63d9c42d997d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:04:23.810Z",
+      "updatedAt": "2026-10-05T01:04:38.877Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-5b2308677514": {
+      "status": "FAILED",
+      "title": "HOW TO SELL ANY SERVICE TO ANYONE |  The System Saad Used to Build a ₹50 Crore Service Business",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=M2OYgUoQwyk",
+      "id": "desk-5b2308677514",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:04:38.889Z",
+      "updatedAt": "2026-10-05T01:04:57.079Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+    },
+    "desk-4f15b484d4a6": {
+      "status": "FAILED",
+      "title": "The Shopping Habit That Is Quietly Making The GenZ Poor",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=E9-lFXMmAKA",
+      "id": "desk-4f15b484d4a6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-05T01:04:57.088Z",
+      "updatedAt": "2026-10-05T01:05:10.058Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
     }
   }
 }

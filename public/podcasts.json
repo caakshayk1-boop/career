@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T08:18:29.152Z",
-  "today": "2026-10-04",
+  "generatedAt": "2026-10-05T01:05:10.073Z",
+  "today": "2026-10-05",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-10-04",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-6b130fc1c5b2"
       ]
     },
     {
       "date": "2026-10-03",
-      "label": "Yesterday",
+      "label": "Saturday",
       "episodeIds": [
         "gunjanshouts-580d8e02e62b",
         "desk-dfb8be42be75",
@@ -8974,87 +8974,27 @@
   ],
   "pending": [
     {
-      "id": "desk-7fba9e0bf91c",
-      "title": "TATA’S JAGUAR TAKEOVER | How Ratan Tata Turned His Biggest Failure Into a Global Luxury Empire",
-      "show": "Think School",
-      "url": "https://www.youtube.com/watch?v=eUCXN_4w7dI",
+      "id": "desk-2358286fb65c",
+      "title": "Build an Income that pays after You STOP Working",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=YUMl5LUlSRk",
       "takeaways": [
-        "Ratan Tata walked out of the deal to sell Tata Motors’ passenger‑car division to Ford and later bought Jaguar Land Rover from Ford for £1.15 billion.",
-        "After the acquisition, Jaguar Land Rover generated £1.675 billion in profits over the next seven years."
+        "India has one of the largest working population in the world and in the next few decades most of this population will retire.",
+        "But a majority of this population is not prepared for the retired life."
       ],
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-8657abde363d",
-      "title": "Gyanesh Kumar EXPOSED | Dhruv Rathee",
-      "show": "Dhruv Rathee",
-      "url": "https://www.youtube.com/watch?v=_phJIm8mUT8",
+      "id": "desk-2a41407bb8e4",
+      "title": "BUSTED! - Gyanesh Kumar’s Form-7 Plan | Biggest Fraud On The Constitution Since Emergency? | Akash B",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=ewT1nqN7_QM",
       "takeaways": [
-        "The fastest and the most affordable way to upskill yourself in AI.",
-        "Live workshop happening on 18th Oct, 7pm IST!"
+        "Indian Express’s Investigation Into Gyanesh Kumar’s misdeeds are only part of the story.",
+        "Independent news outlets like Reporters Collective / TNM / Newslaundry have been exposing how Form 7 has become a weapon of the EC / BJP."
       ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-194b11b96532",
-      "title": "How to Invest in Your 30s | Complete Step-by-Step Guide",
-      "show": "Pranjal Kamra",
-      "url": "https://www.youtube.com/watch?v=g5-SVV0Tlxk",
-      "takeaways": [
-        "Leverage your growing earning power while balancing larger life milestones with long‑term security.",
-        "Use a smart asset‑allocation approach that balances high‑growth opportunities with risk management to accelerate financial independence."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-38f3d4479cf2",
-      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
-      "takeaways": [
-        "Sadhguru also speaks about Sardar Patel’s foundational role in shaping India’s civil services, which he described as the “steel frame” essential to holding the nation together.",
-        "He further reflects on Patel’s contributions in the Constituent Assembly, including his efforts toward building a framework of national unity, equal citizenship, and administrative stability for a newly independent nation."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-a84f95444c21",
-      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
-      "show": "CA Rachana Ranade",
-      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
-      "takeaways": [
-        "A practical case study of two working professionals of different age groups is used to illustrate retirement planning.",
-        "The episode shows how SIP, step‑up SIP, SWP and step‑up SWP can be combined using a retirement calculator."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-93a3b9ee5af2",
-      "title": "Money rules I will teach my kids before they turn 15 (#3 will surprise you!)",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=y7pwGVQEiKc",
-      "takeaways": [
-        "The video shares the money principles the host is teaching their kids.",
-        "It is not investment advice; viewers should do their own due diligence."
-      ],
-      "date": "2026-10-04",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-d305b2a58483",
-      "title": "Where to park your cash for Short Term!",
-      "show": "Labour Law Advisor",
-      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
-      "takeaways": [
-        "This video explains Debt Mutual Funds.",
-        "Debt funds may look simple and safe, but choosing the wrong fund for your investment duration can expose you to credit risk, liquidity risk and interest rate risk."
-      ],
-      "date": "2026-10-04",
+      "date": "2026-10-05",
       "reason": "over the 8/day cap"
     },
     {
@@ -9066,43 +9006,20 @@
         "Are you feeling anxious about the recent stock market decline and wondering what your next move should be?",
         "In this video, we dive deep into the current market situation, dissecting the key drivers behind the recent downturn and what it means for everyday investors."
       ],
-      "date": "2026-10-04",
-      "reason": "The operation was aborted due to timeout"
+      "date": "2026-10-05",
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-cf57c3d7f8a3",
-      "title": "“Many Directors Wanted To Vulgarly Cash In On The Waterfall Scene”: Mandakini",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=QXAKPQi1UU4",
+      "id": "desk-109d4ded63ed",
+      "title": "How Banks Actually Create Money in India | Ex-SEBI Official Explains",
+      "show": "Zerodha Varsity",
+      "url": "https://www.youtube.com/watch?v=pLmt5WEqrc8",
       "takeaways": [
-        "Many directors tried to exploit the waterfall scene for profit.",
-        "The episode features Mandakini discussing this aspect of Bollywood cinema."
+        "In this Zerodha Varsity bootcamp session, Ananth Narayan, former Whole Time Member at SEBI,  starts from first principles: what money is and who creates it.",
+        "Using the combined balance sheet of India's banking system and the Reserve Bank of Inida, he shows why loans create deposits and not the other way around as everyone believes, how government spending and forex flows add or drain money, and why banks can be flush with liquidity yet short of deposits."
       ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "desk-cb91032b09a7",
-      "title": "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail",
-      "show": "ANI Podcast (clips)",
-      "url": "https://www.youtube.com/watch?v=2vRVTwYVbEE",
-      "takeaways": [
-        "Mandakini Reveals Untold Stories From The Movie ‘Ram Teri Ganga Mail #ANIPodcast #SmitaPrakash #Mandakini #Bollywood #Movies #Cinema #Actor #RajKapoor #RamTeriGangaMaili Tune in here: linktr.ee/podcastwithsmitaprakash"
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "desk-54cb035dee97",
-      "title": "How Intelligence Agents Lie, Recruit & Run Secret Operations | David Bickford | FO569 Raj Shamani",
-      "show": "Figuring Out",
-      "url": "https://www.youtube.com/watch?v=txryxBFzmSs",
-      "takeaways": [
-        "David Bickford recounts using fake passports during his career and his first UK operation that helped catch a Czechoslovak spy.",
-        "He explains how intelligence agencies recruit spies and discusses which holds more power, the CIA or Britain’s intelligence agencies."
-      ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: no stderr"
+      "date": "2026-10-05",
+      "reason": "over the 8/day cap"
     },
     {
       "id": "desk-bfa0acf59eea",
@@ -9110,11 +9027,143 @@
       "show": "Akshat Shrivastava",
       "url": "https://www.youtube.com/watch?v=Bnbq1-9r3w4",
       "takeaways": [
-        "NIFTY has been trading sideways for quite some time.",
-        "The host notes the content is not investment advice and urges viewers to do their own due diligence."
+        "NIFTY has been trading sideways for quite some time now.",
+        "The speaker explains market fundamentals but notes the content is not investment advice."
       ],
-      "date": "2026-10-04",
-      "reason": "yt-dlp failed: no stderr"
+      "date": "2026-10-05",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-38f3d4479cf2",
+      "title": "Sadhguru 360 - Ep #6: Sardar Patel: The Man Who United Bharat | 4K UHD",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=P_P5LY_Cdwc",
+      "takeaways": [
+        "Sadhguru describes Sardar Patel’s role in shaping India’s civil services as the “steel frame” that holds the nation together.",
+        "He highlights Patel’s work in the Constituent Assembly to build a framework of national unity, equal citizenship, and administrative stability for a newly independent India."
+      ],
+      "date": "2026-10-05",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-a84f95444c21",
+      "title": "Retirement Calculator: How Much Money Do You Really Need to Retire? | SIP, SWP | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=1MoqBEv9BGw",
+      "takeaways": [
+        "A practical case study of two working professionals shows how a retirement calculator can be used to plan for retirement.",
+        "The episode demonstrates how SIP, step‑up SIP, SWP and step‑up SWP can work together in retirement planning."
+      ],
+      "date": "2026-10-05",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-d305b2a58483",
+      "title": "Where to park your cash for Short Term!",
+      "show": "Labour Law Advisor",
+      "url": "https://www.youtube.com/watch?v=xRZK5t7Bo1I",
+      "takeaways": [
+        "This video explains Debt Mutual Funds.",
+        "Debt funds may look simple and safe, but choosing the wrong fund for your investment duration can expose you to credit risk, liquidity risk and interest rate risk."
+      ],
+      "date": "2026-10-05",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "desk-746b8a614ed6",
+      "title": "5 Stocks With A Risk You May Be Missing",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=ZHpFtfGs5Ww",
+      "takeaways": [
+        "What happens when stock prices run far ahead of a company’s recent sales and profit growth?",
+        "In this video, we analyse five businesses where the market appears to be pricing in future expansion, acquisitions, margin recovery or industry tailwinds well before they fully show up in the numbers."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] ZHpFtfGs5Ww: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-0e542072319f",
+      "title": "How Long Is Your LIFELINE? | Reality of Palmistry | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=KVI8MKzDnZI",
+      "takeaways": [
+        "Start investing from just ₹100/day on UPI autopay - SEBI-regulated, zero hidden charges, no lock-in.",
+        "Use my code DHRUV26 to unlock Bachatt Saathi, your personal AI financial advisor, absolutely free (worth ₹399)."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] KVI8MKzDnZI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-6e2918be7210",
+      "title": "Promo EP-455 | Lt Gen KJS Dhillon (Retd) & Air Marshal Sanjeev Kapoor (Retd) premieres today at 5 PM",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=s-Jp8EFC36o",
+      "takeaways": [
+        "Promo EP-455 | Lt Gen KJS Dhillon (Retd) & Air Marshal Sanjeev Kapoor (Retd) premieres today at 5 PM “The lines between war, terrorism and crime are getting blurred.” Lt Gen K.J.S.",
+        "Dhillon “In any warfare situation, the person who adapts faster is going to win.” Air Marshal Sanjeev Kapoor “The Chinese are making over 1 crore drones per month.” Air Marshal Sanjeev Kapoor “The terrain and the enemy dictate what your strategy should be.” Lt Gen K.J.S."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] s-Jp8EFC36o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-2737f628dada",
+      "title": "Why Hard Work Isn't Enough | Neurologist explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=7MPLc2h0VXM",
+      "takeaways": [
+        "But hard work without direction is just wasted energy.",
+        "In this video, I break down success using three physics concepts — velocity, acceleration, and resonance — and explain why building a system that compounds your effort matters more than just pushing harder."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] 7MPLc2h0VXM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-ba69a5406149",
+      "title": "Ganga River System Explained Through Animation | Indian Geography for UPSC | Drishti IAS",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=X-mzh0aASWE",
+      "takeaways": [
+        "Understand the Ganga River System in detail through engaging animations and easy-to-understand explanations.",
+        "In this video, we explore the Ganga River System, its origin, major tributaries, drainage patterns and geographical significance."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] X-mzh0aASWE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-63d9c42d997d",
+      "title": "NYU Professor: The Middle Class Is A Lie & How To Escape It | Scott Galloway | FO570 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=d6mAi5kHsxc",
+      "takeaways": [
+        "The middle class is described as “an accident of history” that’s dying by design.",
+        "$50 trillion has moved from the bottom 90 % of earners to the top 10 % of earners."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-5b2308677514",
+      "title": "HOW TO SELL ANY SERVICE TO ANYONE |  The System Saad Used to Build a ₹50 Crore Service Business",
+      "show": "Think School",
+      "url": "https://www.youtube.com/watch?v=M2OYgUoQwyk",
+      "takeaways": [
+        "Responding to a lead within 5 minutes can completely change the sales funnel.",
+        "The Offer Stack can turn a generic service into something people actually want to buy."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
+    },
+    {
+      "id": "desk-4f15b484d4a6",
+      "title": "The Shopping Habit That Is Quietly Making The GenZ Poor",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=E9-lFXMmAKA",
+      "takeaways": [
+        "Add one obstacle to impulse buying to make unplanned purchases less automatic",
+        "Take responsibility for your spending by reviewing your bank statement and tracking a normal week."
+      ],
+      "date": "2026-10-05",
+      "reason": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://g"
     }
   ],
   "generator": {
@@ -9129,49 +9178,61 @@
     }
   },
   "run": {
-    "at": "2026-10-04T08:18:29.135Z",
-    "discovered": 258,
+    "at": "2026-10-05T01:05:10.071Z",
+    "discovered": 1151,
     "eligible": 8,
-    "processed": 2,
-    "skipped": 250,
-    "failed": 6,
+    "processed": 0,
+    "skipped": 1143,
+    "failed": 8,
     "pruned": 0,
     "errors": [
       {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
-        "at": "2026-10-04T00:11:00.658Z"
+        "stage": "process",
+        "id": "desk-746b8a614ed6",
+        "message": "yt-dlp failed: ERROR: [youtube] ZHpFtfGs5Ww: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:03:23.564Z"
       },
       {
         "stage": "process",
-        "id": "desk-6e6cfcd221a2",
-        "message": "The operation was aborted due to timeout",
-        "at": "2026-10-04T06:17:11.203Z"
+        "id": "desk-0e542072319f",
+        "message": "yt-dlp failed: ERROR: [youtube] KVI8MKzDnZI: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:03:38.612Z"
       },
       {
         "stage": "process",
-        "id": "desk-cf57c3d7f8a3",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-04T06:34:50.236Z"
+        "id": "desk-6e2918be7210",
+        "message": "yt-dlp failed: ERROR: [youtube] s-Jp8EFC36o: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:03:53.422Z"
       },
       {
         "stage": "process",
-        "id": "desk-cb91032b09a7",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-04T07:33:29.252Z"
+        "id": "desk-2737f628dada",
+        "message": "yt-dlp failed: ERROR: [youtube] 7MPLc2h0VXM: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:04:08.298Z"
       },
       {
         "stage": "process",
-        "id": "desk-54cb035dee97",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-04T07:50:36.950Z"
+        "id": "desk-ba69a5406149",
+        "message": "yt-dlp failed: ERROR: [youtube] X-mzh0aASWE: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:04:23.798Z"
       },
       {
         "stage": "process",
-        "id": "desk-bfa0acf59eea",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-04T08:18:28.806Z"
+        "id": "desk-63d9c42d997d",
+        "message": "yt-dlp failed: ERROR: [youtube] d6mAi5kHsxc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:04:38.877Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-5b2308677514",
+        "message": "yt-dlp failed: ERROR: [youtube] M2OYgUoQwyk: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:04:57.079Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-4f15b484d4a6",
+        "message": "yt-dlp failed: ERROR: [youtube] E9-lFXMmAKA: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-",
+        "at": "2026-10-05T01:05:10.058Z"
       }
     ],
     "estimatedCostUsd": 0
