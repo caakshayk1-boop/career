@@ -931,14 +931,20 @@ group("a failed run does not erase a successful one");
      every single day for a morning nobody had attempted. The committed
      artifact carries the mode, and these assert the artifact does. */
   const shipped = JSON.parse(readFileSync(new URL("../../public/podcasts.json", import.meta.url).pathname, "utf8"));
-  ok("the artifact records which kind of run wrote it",
-    ["full", "republish"].includes((shipped.run || {}).mode), (shipped.run || {}).mode);
+  /* ABSENT IS ALLOWED, AND NOT OUT OF LAXNESS. The Mac writes this artifact
+     too, from whatever commit its clone happens to be on — morning.sh pushes
+     but does not pull. An artifact written before `mode` existed has no mode,
+     and that is an older pipeline, not a broken one. Absent reads as "full",
+     which is what those runs were. What must never happen is a THIRD value. */
+  const mode = (shipped.run || {}).mode;
+  ok("the artifact records which kind of run wrote it, or predates the field",
+    mode === undefined || ["full", "republish"].includes(mode), String(mode));
   ok("a republish reports no failures, because it never attempted one",
-    (shipped.run || {}).mode !== "republish"
+    mode !== "republish"
       || ((shipped.run.failed || 0) === 0 && (shipped.run.eligible || 0) === 0),
     `eligible=${(shipped.run || {}).eligible} failed=${(shipped.run || {}).failed}`);
   ok("a republish preserves the read marker rather than clearing it",
-    (shipped.run || {}).mode !== "republish" || Boolean(shipped.lastRead && shipped.lastRead.at),
+    mode !== "republish" || Boolean(shipped.lastRead && shipped.lastRead.at),
     JSON.stringify(shipped.lastRead));
   /* The one that would have caught the unfalsifiable staleness check: the
      artifact must carry a timestamp that only a real read can move. */
