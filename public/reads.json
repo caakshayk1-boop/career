@@ -1,6 +1,6 @@
 {
  "version": 1,
- "generatedAt": "2026-10-05T02:25:01.599Z",
+ "generatedAt": "2026-10-05T02:30:41.440Z",
  "week": "2026-W41",
  "shelfSize": 22,
  "readCount": 2,
@@ -15,61 +15,66 @@
    "rating": 4.1,
    "ratingSource": "unverified",
    "ratingCount": null,
-   "publishedAt": "2026-10-05T02:25:01.599Z",
-   "coreArgument": "Wealth grows when you align focus, disciplined time use, stoic risk management, and deliberate diversification, acknowledging that luck plays a measurable role.",
-   "hook": "At a board meeting, a CFO watches a rival’s stock surge while his own firm’s cash sits idle, prompting a debate on whether to chase new investments or double down on core operations.",
+   "publishedAt": "2026-10-05T02:30:41.440Z",
+   "coreArgument": "Wealth grows when you align focused effort, disciplined stoicism, deliberate time allocation, diversified exposure, and an honest accounting of luck.",
+   "hook": "At a board meeting, the CFO watches the company's market cap stall while competitors surge, and realizes the firm has been spreading resources thin across too many projects.",
    "ideas": [
     {
-     "apply": "Create a one‑page “focus ledger” listing the top three financial initiatives you will protect with dedicated resources this month.",
-     "bookExample": "Galloway describes how he limited his investments to three core businesses, cutting others to concentrate capital and attention, which accelerated returns for his venture fund.",
-     "explain": "Focus means concentrating capital, time, and talent on a few high‑conviction bets rather than spreading effort thinly. The book argues that each additional focus dilutes oversight and slows execution, so limiting the number of active projects improves performance.",
-     "heading": "Limit active bets to three core initiatives",
-     "tradeoff": "You may miss opportunistic deals outside the three, potentially leaving money on the table.",
-     "yourWeek": "During month‑end close you allocate the team’s overtime to finalising the three priority forecasts instead of polishing peripheral variance notes, ensuring the board pack reflects the most material drivers."
+     "apply": "Create a one‑page list of the top three financial initiatives that will drive the next quarter's EBITDA, and drop all others until they are revisited.",
+     "bookExample": "Galloway describes how Apple trimmed its product line in the early 2000s to focus on the iPod, iPhone, and iPad, accelerating growth.",
+     "explain": "The idea of focus means concentrating capital and managerial attention on a few high‑return opportunities. The book argues that spreading effort dilutes impact and creates coordination costs. By limiting the number of concurrent projects, a firm can allocate talent, budget, and time more efficiently, which historically correlates with higher returns.",
+     "heading": "Focus on three high‑impact initiatives",
+     "tradeoff": "Dropping projects can demotivate teams attached to sidelined work and may miss hidden opportunities.",
+     "yourWeek": "During month‑end close you notice variance analysis is scattered across five regional forecasts; you pull the team together to identify the three regions that contribute 70% of profit variance and ask them to prioritize deep‑dive analysis on those only.",
+     "bookExampleHasFigure": false
     },
     {
-     "apply": "Block two 90‑minute “stoic review” slots this week to assess financial risks without reacting to market noise.",
-     "bookExample": "The author recounts a tech CEO who instituted a daily ‘stoic pause’, refusing to read headline news and instead reviewing only the firm’s key metrics, which reduced costly pivots.",
-     "explain": "Stoicism here is the practice of resisting emotional reactions to short‑term market swings, focusing instead on long‑term fundamentals. By creating regular, distraction‑free periods, you avoid knee‑jerk decisions that hurt profitability.",
-     "heading": "Schedule regular stoic risk reviews",
-     "tradeoff": "Time spent in quiet review is time not spent on ad‑hoc requests, which may frustrate other departments.",
-     "yourWeek": "You set a 90‑minute slot after the forecast cycle to ignore the latest commodity price chatter and instead verify that the variance commentary aligns with the strategic outlook, producing a steadier board narrative."
+     "apply": "Implement a weekly ‘stoic review’ where you record any unexpected financial shock and note your emotional reaction, then decide a rational response without venting to the team.",
+     "bookExample": "Galloway cites his own reaction to a sudden market dip in 2023, where he avoided panic selling by reminding himself that volatility is inevitable.",
+     "explain": "Stoicism here is the practice of recognizing that many market events are beyond control and responding without emotional bias. The book suggests that emotional decisions cost firms millions in missed opportunities or over‑reactions. By formalising a pause and rational assessment, managers reduce the chance of impulsive actions.",
+     "heading": "Apply stoic discipline to financial shocks",
+     "tradeoff": "Too much restraint can lead to missed proactive moves when swift action is warranted.",
+     "yourWeek": "When a sudden 8% drop in hotel occupancy appears in the forecast, you note the shock, wait 24 hours, then run a scenario analysis before recommending any budget re‑allocation.",
+     "bookExampleHasFigure": false
     },
     {
-     "apply": "Log every major financial decision and note the external factors that later proved decisive, to quantify luck’s impact over six months.",
-     "bookExample": "Galloway tracks a venture’s success and attributes 30% of outcomes to timing and market conditions, showing that even the best analysis cannot erase luck.",
-     "explain": "Luck is defined as the influence of random, uncontrollable events on outcomes. By documenting these factors, you can separate skill‑driven performance from luck, improving future allocation decisions.",
-     "heading": "Measure luck in decision outcomes",
-     "tradeoff": "Recording and analysing luck adds administrative overhead and may demotivate if luck appears dominant.",
-     "yourWeek": "After each budget negotiation you note whether the commercial team’s assumptions were hit by an unexpected tax change, building a simple spreadsheet that later informs how much weight to give similar forecasts."
+     "apply": "Block two hours each Friday for deep‑work on strategic modeling, shielding that time from meetings and emails.",
+     "bookExample": "Galloway describes how he reserves mornings for writing and analysis, treating time as a scarce asset.",
+     "explain": "Time is framed as a finite resource that must be allocated deliberately. The book argues that unstructured time leads to reactive firefighting rather than strategic planning. By scheduling protected slots, you ensure high‑value work gets done.",
+     "heading": "Treat time as a strategic asset",
+     "tradeoff": "Carving out time may create short‑term backlog in day‑to‑day tasks and could frustrate colleagues who need immediate input.",
+     "yourWeek": "You set a calendar block from 14:00‑16:00 on Fridays to rebuild the five‑year cash‑flow model, turning off notifications and delegating routine report checks to an analyst.",
+     "bookExampleHasFigure": false
     },
     {
-     "apply": "Rebalance the company’s cash pool to hold 10% in low‑cost index funds rather than keeping it all in a zero‑interest account.",
-     "bookExample": "The book cites a retail chain that diversified idle cash into diversified index ETFs, earning a 4% annual return while preserving liquidity.",
-     "explain": "Diversification spreads risk across asset classes, reducing the impact of any single failure. The author stresses that even modest, liquid investments can outpace cash drag without increasing risk materially.",
-     "heading": "Allocate idle cash to diversified liquid assets",
-     "tradeoff": "Even low‑risk assets carry market risk; a sudden downturn could reduce cash value temporarily.",
-     "yourWeek": "You move a portion of the month‑end surplus into a short‑duration bond ETF, noting the change in the board pack’s cash‑flow projection and explaining the modest return expectation to the CFO."
+     "apply": "Run a quarterly ‘luck audit’ where you list major wins and ask: which factors were skill, which were luck?",
+     "bookExample": "Galloway recounts a case where a startup’s rapid growth was later traced to a favorable regulatory change rather than product superiority.",
+     "explain": "Acknowledging luck separates repeatable skill from random chance. The book claims that over‑attributing success to skill leads to over‑confidence and poor future decisions. A systematic audit helps calibrate expectations and risk appetite.",
+     "heading": "Audit luck in past successes",
+     "tradeoff": "Focusing on luck can demotivate teams who feel their hard work is being downplayed.",
+     "yourWeek": "After a successful Q2 profit beat, you document that 30% of the upside came from a temporary tax incentive, and adjust next quarter's targets accordingly.",
+     "bookExampleHasFigure": false
     },
     {
-     "apply": "Set a quarterly “time audit” to count how many hours the finance team spends on manual reconciliations versus strategic analysis.",
-     "bookExample": "Galloway describes a firm that reduced manual processing time by 40% after auditing and automating low‑value tasks, freeing staff for higher‑impact work.",
-     "explain": "Time is a finite resource; allocating it to high‑impact activities yields greater returns. By measuring and trimming low‑value tasks, you increase the team’s capacity for analysis that drives growth.",
-     "heading": "Audit and reallocate finance team time",
-     "tradeoff": "Initial audit consumes time and may reveal uncomfortable inefficiencies, requiring change management.",
-     "yourWeek": "During the forecast cycle you track the hours spent compiling variance tables versus modelling scenario outcomes, then propose automating the variance templates to free analysts for scenario work."
+     "apply": "Construct a simple portfolio of three asset classes (cash, equities, real‑estate) with fixed weightings and rebalance quarterly, regardless of market headlines.",
+     "bookExample": "Galloway uses his personal investment strategy of a 60/30/10 split to illustrate disciplined diversification.",
+     "explain": "Diversification spreads risk across uncorrelated assets, reducing volatility of overall wealth. The book argues that many firms over‑concentrate on core business lines, exposing them to sector shocks. A disciplined rebalancing rule enforces exposure limits.",
+     "heading": "Maintain disciplined diversification",
+     "tradeoff": "Fixed allocations may under‑perform during strong sector rallies and can feel restrictive.",
+     "yourWeek": "You allocate 15% of the finance department’s discretionary budget to a mix of cash, a broad‑market index fund, and a REIT, and set a calendar reminder to rebalance each quarter.",
+     "bookExampleHasFigure": false
     }
    ],
-   "limits": "The book draws heavily from Galloway’s own tech‑focused investments and U.S. market data, so its lessons may not translate directly to highly regulated or low‑margin retail operations in Southeast Asia.",
-   "misreading": "That anyone can become wealthy simply by applying the four pillars, ignoring the role of capital size and market conditions.",
-   "oneThing": "Start a focus ledger and limit active financial initiatives to three, because it forces disciplined allocation of scarce resources.",
+   "limits": "The book leans heavily on examples from large tech firms and the author's personal investments, so its lessons may not transfer directly to mid‑size, multi‑entity retail groups facing regulatory and currency risks.",
+   "misreading": "That focusing on a few initiatives guarantees higher profit; the book actually stresses disciplined selection and willingness to drop projects, not that any focus automatically works.",
+   "oneThing": "Write down the three financial priorities that will move the needle this quarter and commit to ignoring everything else.",
    "readNext": [
-    "The Power of Habit by Charles Duhigg – adds behavioral tools for building focus routines.",
-    "Thinking, Fast and Slow by Daniel Kahneman – deepens understanding of luck and cognitive bias.",
-    "Financial Modeling in Excel by Chandan Sengupta – provides practical techniques for the strategic analysis Galloway recommends."
+    "Measure What Matters by John Doerr – adds a framework for setting and tracking OKRs that complements focus.",
+    "Thinking, Fast and Slow by Daniel Kahneman – deepens the understanding of bias and emotional decision‑making.",
+    "The Outsiders by William N. Thorndike – shows how CEOs used capital allocation discipline to outperform peers."
    ],
    "verdict": "skim",
-   "whoFor": "Useful for senior finance leaders who can act on allocation and time‑management tweaks; skip if you need sector‑specific risk frameworks or detailed investment theory."
+   "whoFor": "FP&A leaders in fast‑growing firms who need a blunt reminder to prioritize; senior accountants in highly regulated, low‑margin businesses may find it less actionable."
   },
   {
    "week": "2026-W40",
