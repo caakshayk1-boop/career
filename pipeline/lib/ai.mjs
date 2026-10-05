@@ -486,15 +486,24 @@ const PROVIDERS = {
         if (name === "record_brief") {
           const t = user.match(/<book>(.*?)<\/book>/)?.[1] || "a book";
           return {
-            coreArgument: `Mock core argument for ${t}, produced offline for testing.`,
+            hook: `Mock opening on ${t}, produced offline for testing.`,
+            coreArgument: `Mock core argument for ${t}.`,
             ideas: Array.from({ length: 6 }, (_, i) => ({
               heading: `Mock idea ${i + 1}`,
               explain: "Mock explanation. The offline provider does not read books.",
-              apply:   "Mock action for this week.",
+              /* One empty bookExample on purpose: the real model is told to
+                 return "" rather than invent an author's anecdote, so the page
+                 and the suite have to handle that case. */
+              bookExample: i === 2 ? "" : `Mock case the book uses for idea ${i + 1}.`,
+              yourWeek: "Mock scenario set in the reader's week.",
+              apply: "Mock action for this week.",
+              tradeoff: "Mock cost of following this.",
             })),
-            whoFor:   "Mock reader.",
-            limits:   "Mock limits — the offline provider cannot assess evidence.",
-            verdict:  "Mock verdict.",
+            misreading: "Mock common misreading.",
+            oneThing: "Mock single highest-value action.",
+            whoFor: "Mock reader.",
+            limits: "Mock limits — the offline provider cannot assess evidence.",
+            verdict: "Skim.",
             readNext: ["Mock A", "Mock B", "Mock C"],
           };
         }

@@ -386,6 +386,40 @@ await checkPage("/reads", "the weekly read", async (page) => {
   } else {
     ok("the weekly read: a card for every edition", st.cards === st.n, `${st.cards} / ${st.n}`);
     ok("the weekly read: the newest edition renders its ideas", st.ideas > 0, st.ideas);
+
+    /* THE TWO EXAMPLE BLOCKS MUST STAY TELLABLE APART. One is the author's own
+       case, one is this site's illustration written for this reader. A reader
+       who cannot tell which is which will quote the second as the first, in an
+       interview, as something the author wrote. That is the one way this page
+       can embarrass him, and no other assertion here would catch it. */
+    const ex = await page.evaluate(() => {
+      const wk = [...document.querySelectorAll(".ex.wk")];
+      const bk = [...document.querySelectorAll(".ex.bk-ex")];
+      const d = JSON.parse(document.getElementById("probe")?.textContent || "null");
+      return { wk: wk.length, bk: bk.length,
+               labelled: wk.every((e) => /not the book/i.test(e.innerText)),
+               bkLabelled: bk.every((e) => /book.{0,3}s own case/i.test(e.innerText)),
+               ideas: document.querySelectorAll(".idea").length,
+               applies: document.querySelectorAll(".idea .do").length,
+               costs: document.querySelectorAll(".idea .tr").length,
+               hook: !!document.querySelector(".hook"),
+               one: !!document.querySelector(".one"), d };
+    });
+    ok("the weekly read: every idea shows what it looks like in this reader's week",
+      ex.wk === ex.ideas, `${ex.wk} / ${ex.ideas}`);
+    ok("the weekly read: this site's illustration says it is not the book's",
+      ex.wk > 0 && ex.labelled);
+    ok("the weekly read: the author's own cases are labelled as the book's",
+      ex.bk === 0 || ex.bkLabelled);
+    /* bookExample is "" when the model is not confident the book uses one —
+       the correct answer. So fewer book cases than ideas is expected; MORE is
+       impossible and would mean the render duplicated one. */
+    ok("the weekly read: no idea shows more than one book case",
+      ex.bk <= ex.ideas, `${ex.bk} / ${ex.ideas}`);
+    ok("the weekly read: every idea says what to do and what it costs",
+      ex.applies === ex.ideas && ex.costs === ex.ideas, `${ex.applies} do / ${ex.costs} cost / ${ex.ideas} ideas`);
+    ok("the weekly read: the edition opens on a hook and names one thing to do",
+      ex.hook && ex.one);
   }
 }, 400);
 

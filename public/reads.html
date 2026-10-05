@@ -292,6 +292,29 @@ a.ts:hover{border-color:var(--accent);color:var(--accent)}
 .idea .do{display:block;margin-top:8px;font-size:var(--t-4);line-height:1.6;color:var(--text);
   border-left:2px solid var(--up);padding-left:11px}
 .idea .do b{font:500 var(--t-1)/1.6 var(--mono);letter-spacing:var(--ls-wide);text-transform:uppercase;color:var(--up)}
+/* The hook sits above the argument and reads as prose, not as a field. */
+.hook{font:400 var(--t-6)/1.7 var(--serif);color:var(--muted);margin-top:12px;max-width:var(--measure)}
+/* THE TWO EXAMPLE BLOCKS ARE VISUALLY DIFFERENT ON PURPOSE. One is the
+   author's case and one is this site's illustration, and a reader who cannot
+   tell them apart will quote the second as the first. The label says which;
+   the border colour means the label does not have to be read. */
+.ex{display:block;margin-top:9px;padding:10px 13px;border-radius:var(--r-2);font-size:var(--t-4);
+  line-height:1.65;color:var(--muted)}
+.ex b{display:block;font:500 var(--t-1)/1.6 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;margin-bottom:4px}
+.ex.bk-ex{background:var(--raised);border-left:2px solid var(--line2)}
+.ex.bk-ex b{color:var(--dim)}
+.ex.wk{background:var(--accent-soft);border-left:2px solid var(--accent)}
+.ex.wk b{color:var(--accent)}
+.idea .tr{display:block;margin-top:8px;font-size:var(--t-4);line-height:1.6;color:var(--muted);
+  border-left:2px solid var(--warn);padding-left:11px}
+.idea .tr b{font:500 var(--t-1)/1.6 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--warn)}
+.one{margin-top:18px;padding:14px 16px;border:1px solid var(--up);border-left-width:3px;
+  border-radius:var(--r-3);background:var(--up-soft);max-width:var(--measure)}
+.one b{display:block;font:500 var(--t-1)/1.6 var(--mono);letter-spacing:var(--ls-wide);
+  text-transform:uppercase;color:var(--up);margin-bottom:5px}
+.one p{font-size:var(--t-5);line-height:1.65;color:var(--text)}
 .pan{display:grid;gap:12px;margin-top:18px;max-width:var(--measure)}
 .pan div{border:1px solid var(--line);border-radius:var(--r-3);padding:13px 15px;background:var(--raised)}
 .pan b{display:block;font:500 var(--t-1)/1.6 var(--mono);letter-spacing:var(--ls-wide);
@@ -353,10 +376,22 @@ const MYT_MS = 8 * 3600 * 1000;
 const myt = v => { if (!v) return "\u2014"; const d = new Date(v); if (isNaN(d)) return String(v);
   return new Date(d.getTime() + MYT_MS).toISOString().slice(0, 10); };
 
+/* EVERY FIELD HERE IS OPTIONAL IN THE RENDER, DELIBERATELY. The briefing
+   format changed after the first edition was published, and an archive whose
+   point is that nothing is removed cannot have a page that throws on last
+   week's shape. Missing fields vanish; they do not render as empty boxes.
+
+   The model is instructed to return an empty bookExample rather than invent an
+   anecdote and attribute it to the author, so the empty case is the correct
+   case and must render as absence, not as "none". */
 function ideaCard(i){
   return '<div class="idea"><h3>' + esc(i.heading) + "</h3>" +
     "<p>" + esc(i.explain) + "</p>" +
-    (i.apply ? '<span class="do"><b>Do</b> ' + esc(i.apply) + "</span>" : "") + "</div>";
+    (i.bookExample ? '<span class="ex bk-ex"><b>The book\u2019s own case</b>' + esc(i.bookExample) + "</span>" : "") +
+    (i.yourWeek ? '<span class="ex wk"><b>In your week &mdash; this site\u2019s illustration, not the book\u2019s</b>' + esc(i.yourWeek) + "</span>" : "") +
+    (i.apply ? '<span class="do"><b>Do this week</b> ' + esc(i.apply) + "</span>" : "") +
+    (i.tradeoff ? '<span class="tr"><b>What it costs</b> ' + esc(i.tradeoff) + "</span>" : "") +
+    "</div>";
 }
 
 /* A rating this pipeline could not confirm is labelled, never printed bare.
@@ -377,9 +412,12 @@ function readBlock(r, open){
     '<div class="meta" style="margin-top:10px">' + ratingPill(r) +
       '<span class="pill">' + (r.ideas || []).length + " ideas</span>" +
       '<span class="pill">published ' + esc(myt(r.publishedAt)) + '</span></div>' +
+    (r.hook ? '<p class="hook">' + esc(r.hook) + "</p>" : "") +
     '<p class="arg">' + esc(r.coreArgument) + "</p>" +
+    (r.oneThing ? '<div class="one"><b>If you do one thing</b><p>' + esc(r.oneThing) + "</p></div>" : "") +
     (r.ideas || []).map(ideaCard).join("") +
     '<div class="pan">' +
+      (r.misreading ? "<div><b>How this book gets misquoted</b><p>" + esc(r.misreading) + "</p></div>" : "") +
       (r.whoFor  ? "<div><b>Who it is for</b><p>" + esc(r.whoFor) + "</p></div>" : "") +
       (r.limits  ? "<div><b>Where it is weak</b><p>" + esc(r.limits) + "</p></div>" : "") +
       (r.verdict ? "<div><b>Verdict</b><p>" + esc(r.verdict) + "</p></div>" : "") +

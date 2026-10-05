@@ -1156,10 +1156,31 @@ group("the weekly read");
   const d1 = JSON.parse(readFileSync(OUTP, "utf8"));
   ok("the artifact is the shape the page reads",
     d1.version === 1 && Array.isArray(d1.reads) && d1.reads.length === 1 && typeof d1.shelfSize === "number");
+  const e1 = d1.reads[0];
   ok("the edition carries the argument, the ideas and the limits",
-    !!d1.reads[0].coreArgument && d1.reads[0].ideas.length >= 3 && !!d1.reads[0].limits && !!d1.reads[0].verdict);
+    !!e1.coreArgument && e1.ideas.length >= 3 && !!e1.limits && !!e1.verdict);
   ok("every idea carries something to do about it",
-    d1.reads[0].ideas.every((i) => i.heading && i.explain && i.apply));
+    e1.ideas.every((i) => i.heading && i.explain && i.apply));
+
+  /* THE FORMAT THE BRIEFING WAS CHANGED TO. A schema field the model is told
+     to fill but the page never renders, or renders but the job never writes,
+     is the failure this group exists to catch — it looks fine in both halves
+     separately. */
+  ok("the edition opens on something concrete rather than on fields",
+    !!e1.hook && e1.hook.length > 20, e1.hook);
+  ok("the edition names the single highest-value action", !!e1.oneThing);
+  ok("the edition names how the book gets misquoted", !!e1.misreading);
+  ok("every idea shows what it looks like in this reader's week",
+    e1.ideas.every((i) => i.yourWeek && i.yourWeek.length > 10));
+  ok("every idea names what following it costs",
+    e1.ideas.every((i) => i.tradeoff && i.tradeoff.length > 5));
+  /* The model is instructed to return "" rather than invent an author's
+     anecdote. That is the CORRECT answer when it is unsure, so the field must
+     be present-but-empty-able and must never be required to be non-empty. */
+  ok("an idea may carry no book example without failing the run",
+    e1.ideas.some((i) => i.bookExample === "")
+    && e1.ideas.some((i) => i.bookExample && i.bookExample.length > 5),
+    e1.ideas.map((i) => (i.bookExample ? "x" : "-")).join(""));
   ok("an unconfirmed rating is labelled unverified, not printed as fact",
     ["googlebooks", "unverified"].includes(d1.reads[0].ratingSource));
 
@@ -1170,6 +1191,17 @@ group("the weekly read");
     JSON.parse(readFileSync(OUTP, "utf8")).reads.length === 1);
 
   /* The next week appends rather than replacing. */
+  /* FORCE REWRITES A WEEK IN PLACE. The archive keeps every week; it does not
+     keep every draft of a week, and the briefing format changed after the
+     first edition shipped. A force that appended instead of replacing would
+     put two editions in one week and break the "no two editions claim the same
+     week" invariant below. */
+  const rf = await books.main({ out: OUTP, now: new Date("2026-10-02T00:00:00Z"), force: true });
+  const df = JSON.parse(readFileSync(OUTP, "utf8"));
+  ok("force rewrites the week instead of skipping it", !rf.skipped && !rf.failed, JSON.stringify(rf));
+  ok("and it replaces rather than appends", df.reads.length === 1, df.reads.length);
+  ok("and the rewritten week picks the same book", df.reads[0].id === e1.id);
+
   const r3 = await books.main({ out: OUTP, now: new Date("2026-10-08T00:00:00Z") });
   const d3 = JSON.parse(readFileSync(OUTP, "utf8"));
   ok("the next week appends to the archive", !r3.failed && d3.reads.length === 2, JSON.stringify(r3));

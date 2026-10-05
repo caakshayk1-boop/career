@@ -88,50 +88,94 @@ export async function verifyRating(book) {
   } catch (e) { return { ok: false, reason: String(e.message || e).slice(0, 80) }; }
 }
 
+/* ── WHO THIS IS WRITTEN FOR ───────────────────────────────────────────────
+   A briefing addressed to nobody reads like a blurb. Naming the reader is what
+   turns "build better habits" into "the fourth consecutive month you rebuilt
+   the same variance commentary by hand". The model cannot write the second
+   without being told who is reading, and the second is the only version worth
+   publishing. */
+const READER = `
+The reader is a Chartered Accountant working as an FP&A manager in a
+multi-entity retail and hospitality group, based in Malaysia, interviewing for
+Financial Controller and Head of FP&A roles in the UAE and Malaysia. His week
+contains month-end close, board packs, variance commentary, forecast cycles,
+budget negotiations with commercial teams, interviews, and managing a small
+finance team. He reads non-fiction to decide something, not to feel motivated.
+`.trim();
+
 const SCHEMA = {
   type: "object",
   properties: {
-    coreArgument: { type: "string", description: "The book's central claim in one sentence" },
+    hook: {
+      type: "string",
+      description: "2-3 sentences opening on a concrete situation the book is about. Start in the middle of something happening — a decision, a failure, a specific moment. Never open with 'In today's world', 'Imagine', 'We all know' or a definition.",
+    },
+    coreArgument: { type: "string", description: "The book's central claim in one sentence, as a claim that could be wrong" },
     ideas: {
       type: "array",
       items: {
         type: "object",
         properties: {
-          heading: { type: "string", description: "3-8 words naming the idea" },
-          explain: { type: "string", description: "2-4 sentences, plain language, no jargon left undefined" },
-          apply:   { type: "string", description: "one concrete thing a reader can do this week" },
+          heading: { type: "string", description: "3-8 words naming the idea. A claim, not a topic: 'Failure has three causes, only one worth analysing', not 'Types of failure'." },
+          explain: { type: "string", description: "3-5 sentences, plain language. Every term defined the first time it appears. Say what the idea asserts and why the book thinks it is true." },
+          bookExample: {
+            type: "string",
+            description: "The case, study, company or person the BOOK ITSELF uses to make this point, named in 1-2 sentences, with what it showed. If you are not confident the book uses a specific example here, return an empty string. Never invent one and never attribute a story to the book that you are unsure of.",
+          },
+          yourWeek: {
+            type: "string",
+            description: "2-3 sentences showing this idea inside THIS READER's actual work — month-end close, a board pack, a forecast miss, a budget argument with a commercial team, an interview, a team member underperforming. Concrete and specific. This is your own illustration, NOT from the book, so do not describe it as the author's example.",
+          },
+          apply: { type: "string", description: "One concrete action, doable inside one week, that a reader would know they had done or not done. Name the artefact or the conversation, not the intention." },
+          tradeoff: { type: "string", description: "What this costs, or the situation where following it is the wrong call. Every real technique has one. If the book does not acknowledge it, say that." },
         },
-        required: ["heading", "explain", "apply"],
+        required: ["heading", "explain", "bookExample", "yourWeek", "apply", "tradeoff"],
         additionalProperties: false,
       },
     },
-    whoFor:   { type: "string", description: "who gets the most from this, and who should skip it" },
-    limits:   { type: "string", description: "where the book overreaches, what the evidence does not support" },
-    verdict:  { type: "string", description: "read it, skim it, or skip it — and why" },
-    readNext: { type: "array", items: { type: "string" }, description: "three books that complement it" },
+    misreading: { type: "string", description: "The most common wrong takeaway from this book — the version people quote that the book does not actually support" },
+    oneThing:   { type: "string", description: "If the reader does exactly one thing from this book, this is it, and in one sentence why this one" },
+    whoFor:     { type: "string", description: "Who gets the most from this, and who should skip it. Be willing to say skip." },
+    limits:     { type: "string", description: "Where the book overreaches, what its evidence does not support, which population its cases come from" },
+    verdict:    { type: "string", description: "Read it, skim it, or skip it — and why. Pick one of those three words." },
+    readNext:   { type: "array", items: { type: "string" }, description: "Three books that complement it, each with a few words on what it adds" },
   },
-  required: ["coreArgument", "ideas", "whoFor", "limits", "verdict", "readNext"],
+  required: ["hook", "coreArgument", "ideas", "misreading", "oneThing", "whoFor", "limits", "verdict", "readNext"],
 };
 
 const SYSTEM = `
-You are writing a critical reader's briefing on a non-fiction book for someone
-who has not read it and is deciding whether to.
+You are writing a critical reader's briefing on a non-fiction book for one
+named reader, described below. He has not read it and is deciding whether to.
 
 WHAT THIS IS NOT. It is not a chapter-by-chapter retelling and it is not a
 replacement for the book. Do not walk the contents page. Do not reproduce long
-passages. The book is in copyright and the reader is expected to buy it if the
-briefing persuades them.
+passages or retell the book's stories at length. The book is in copyright and
+the reader is expected to buy it if the briefing persuades them.
 
-WHAT IT IS. The argument, the handful of ideas that carry it, what a reader
-should DO differently, and — this is the part most summaries omit — where the
-book is weak. A briefing that only praises is an advertisement.
+WHAT IT IS. The argument, the handful of ideas that carry it, what each one
+looks like in this reader's actual week, what to DO about it, what it costs,
+and — the part most summaries omit — where the book is weak. A briefing that
+only praises is an advertisement.
 
-Six to ten ideas. Each one must be a claim the book actually makes, not a
-generic observation about the topic. If you are unsure the book makes a claim,
-leave it out rather than inventing it.
+FIVE TO SEVEN IDEAS, EACH ONE DEEP, rather than ten shallow ones. Each must be
+a claim the book actually makes, not a generic observation about the topic.
 
-Plain English. Define any term the first time it appears. No motivational
-register, no "in today's fast-paced world", no exclamation marks.
+THE TWO EXAMPLE FIELDS ARE DIFFERENT THINGS AND MUST NOT BE CONFUSED.
+"bookExample" is the author's own case, study or person, and must be real: if
+you are not confident the book uses a specific example for that idea, return an
+empty string. An invented anecdote attributed to the author is the single worst
+failure available to you here. "yourWeek" is YOUR illustration, set in the
+reader's work, and is openly your own — write it as a scenario, never as
+something the author wrote.
+
+WRITE LIKE A COLLEAGUE EXPLAINING OVER COFFEE. Short sentences. Concrete nouns.
+Specific numbers where the book gives them. Define any term the first time it
+appears. No motivational register, no "in today's fast-paced world", no
+exclamation marks, no rhetorical questions, no "game-changer", no "unlock".
+
+<reader>
+${READER}
+</reader>
 `.trim();
 
 export async function brief(ai, book) {
@@ -139,8 +183,10 @@ export async function brief(ai, book) {
     system: SYSTEM,
     user: `<book>${book.title}</book>\n<author>${book.author}</author>\n<published>${book.published}</published>\n<category>${book.category}</category>\n<why_on_the_shelf>${book.why}</why_on_the_shelf>`,
     schema: SCHEMA, name: "record_brief",
-    description: "Record the briefing on this book.",
-    effort: "high", maxTokens: 8000,
+    /* Six fields per idea across seven ideas is roughly double the old output,
+       and a reasoning model bills its hidden tokens to this budget — the
+       podcast pipeline learned that the expensive way. */
+    effort: "high", maxTokens: 16000,
   });
 }
 
@@ -148,12 +194,20 @@ export async function brief(ai, book) {
    the whole job against a temp artifact. A job that can only be exercised by
    dispatching it in CI gets exercised in CI — which is where the missing
    `await` below was found, by a human, on the first live run. */
-export async function main({ shelfPath = SHELF, out = OUT, now = new Date() } = {}) {
+export async function main({ shelfPath = SHELF, out = OUT, now = new Date(), force = false } = {}) {
   const shelf = JSON.parse(readFileSync(shelfPath, "utf8"));
   const prev  = existsSync(out) ? JSON.parse(readFileSync(out, "utf8")) : { reads: [] };
   const reads = prev.reads || [];
   const week  = isoWeek(now);
 
+  /* `force` replaces this week's edition in place rather than appending a
+     second one. Used when the briefing FORMAT changes and the week's edition
+     was written to the old shape — the archive keeps every week, not every
+     draft of a week. */
+  if (force) {
+    const i = reads.findIndex((r) => r.week === week);
+    if (i >= 0) { log.info("books", `rewriting ${week} — "${reads[i].title}"`); reads.splice(i, 1); }
+  }
   if (reads.some((r) => r.week === week)) {
     log.info("books", `${week} already published "${reads.find((r) => r.week === week).title}" — nothing to do`);
     return { skipped: true };
@@ -205,5 +259,5 @@ export async function main({ shelfPath = SHELF, out = OUT, now = new Date() } = 
 }
 
 if (import.meta.filename === process.argv[1]) {
-  main().catch((e) => { log.fail("books", "run", e.message); process.exit(1); });
+  main({ force: process.argv.includes("--force") }).catch((e) => { log.fail("books", "run", e.message); process.exit(1); });
 }
