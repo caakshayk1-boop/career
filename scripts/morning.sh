@@ -241,7 +241,8 @@ else
     fi
   done
   if [ "$PUSHED" = "1" ]; then
-    log "pushed — the deploy workflow ships it to career.askakshay.com in ~90s."
+    log "pushed. The CI deploy needs CLOUDFLARE_API_TOKEN, which this repo has lacked, so deploy from here too (wrangler's own login)."
+    if npx --no-install wrangler deploy >/dev/null 2>&1; then log "deployed to career.askakshay.com"; else warn "wrangler deploy failed: the page is NOT updated. Run 'npx wrangler deploy' here."; fi
   else
     warn "could not push after 4 attempts. The commit is local — run 'git push' when back online."
     exit 1
