@@ -269,6 +269,10 @@ export const cfg = {
   ytdlpCookiesFromBrowser: process.env.YTDLP_COOKIES_FROM_BROWSER || "",
   ytdlpCookiesFile: process.env.YTDLP_COOKIES_FILE || "",
   deepgramKey: process.env.DEEPGRAM_API_KEY || "",
+  /* A hosted transcript API (Supadata). It is the cloud route to YouTube captions: the request comes from their infrastructure,
+     not a GitHub runner, so the datacentre-IP block never applies and the Mac does not have to be awake. Native captions only,
+     so it never silently turns into a paid AI transcription. */
+  supadataKey: process.env.SUPADATA_API_KEY || "",
 
   /* ── AUDIO STORAGE ──────────────────────────────────────────────────────
      Audio does NOT go in git. Three minutes of MP3 a day is 60MB a week and

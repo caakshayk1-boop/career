@@ -203,6 +203,10 @@ async function main() {
     lastRead: lastReadMarker(prev, run.counts.processed),
   });
 
+  /* The counts describe what the page SHOWS. buildPublic may drop episodes (retention, the size ceiling), and counting the
+     ledger before that publishes a number the artifact then contradicts. */
+  doc.generator = generator(doc.episodes, ai, audio, prev);
+
   if (cfg.dryRun) log.stage("publish", `DRY RUN — would publish ${doc.episodes.length} episodes across ${doc.days.length} days`);
   else { savePublished(doc); log.stage("publish", `${doc.episodes.length} episodes across ${doc.days.length} days`); }
 

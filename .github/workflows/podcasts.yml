@@ -133,6 +133,8 @@ jobs:
           # process all of them. A default duplicated in two files is a default
           # that will disagree with itself.
           MAX_DAILY_EPISODES: ${{ vars.MAX_DAILY_EPISODES || '8' }}
+          # The cloud route to YouTube captions. Unset, the run behaves exactly as before.
+          SUPADATA_API_KEY: ${{ secrets.SUPADATA_API_KEY }}
           # The public window, the episode ceiling that bounds it, and how far
           # back an episode stays eligible for a retry. These three move
           # together: a 30-day window is worth having only if the pipeline is

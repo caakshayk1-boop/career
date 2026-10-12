@@ -57,6 +57,7 @@ function pickOrder(ep) {
   if (cfg.transcriptProvider !== "auto") return [cfg.transcriptProvider];
   const order = [];
   if (ep.transcriptUrl) order.push("published");   // free — the show published one
+  if (ep.ytId && cfg.supadataKey) order.push("supadata"); // hosted API: works from a datacentre, so the Mac can stay off
   if (ep.ytId) order.push("youtube");              // free — caption track
   /* free — the same captions through yt-dlp's player clients, which reach
      tracks the native routes above are refused. Costs a subprocess, so it is
@@ -151,6 +152,22 @@ export async function runYtDlp(args) {
 }
 
 const PROVIDERS = {
+  /** Supadata: YouTube captions fetched by their servers. mode=native means existing captions only (1 credit), never AI generation. */
+  async supadata(ep) {
+    if (!ep.ytId) throw new Error("not a YouTube episode");
+    const headers = { "x-api-key": cfg.supadataKey, accept: "application/json" };
+    const url = `https://api.supadata.ai/v1/transcript?url=${encodeURIComponent(`https://www.youtube.com/watch?v=${ep.ytId}`)}&lang=en&text=false&mode=native`;
+    let j = JSON.parse(await request(url, { headers, timeout: 60000, retries: 2, label: "supadata" }));
+    for (let i = 0; j && j.jobId && !j.content && i < 20; i++) {                 // long videos answer with a job to poll
+      await new Promise((r) => setTimeout(r, 6000));
+      j = JSON.parse(await request(`https://api.supadata.ai/v1/transcript/${j.jobId}`, { headers, timeout: 30000, retries: 1, label: "supadata" }));
+      if (j.status === "failed") throw new Error(`supadata job failed: ${j.error?.message || ""}`);
+    }
+    const cues = Array.isArray(j?.content) ? j.content : [];
+    if (!cues.length) throw new Error("supadata returned no captions for this video");
+    return finish("supadata", j.lang || "en", cues.map((c) => ({ t: (c.offset || 0) / 1000, d: (c.duration || 0) / 1000, speaker: null, text: String(c.text || "").replace(/\s+/g, " ").trim() })).filter((s) => s.text));
+  },
+
   /**
    * YouTube captions.
    *

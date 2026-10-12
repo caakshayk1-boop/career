@@ -387,3 +387,12 @@ pipeline/
     notebooklm.mjs     the adapter, and why it is empty
   test/run-tests.mjs   93 offline checks
 ```
+
+
+## Running without the Mac (added 2026-10-12)
+
+YouTube refuses caption requests from GitHub's datacentre IPs, which is why the morning job used to live on a laptop.
+Setting the repo secret `SUPADATA_API_KEY` adds a hosted route (`supadata` in `lib/transcript.mjs`) that is tried before the
+free routes: Supadata's servers make the request, existing captions only (`mode=native`, 1 credit each), so it never turns into
+paid AI transcription. Without the secret the run behaves exactly as before. Deploying the result needs
+`CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets, or `npx wrangler deploy` from any machine.

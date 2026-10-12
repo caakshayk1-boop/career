@@ -9417,8 +9417,8 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "local": 6,
-      "ai": 57
+      "ai": 57,
+      "local": 3
     }
   },
   "run": {
