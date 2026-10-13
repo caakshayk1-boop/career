@@ -116,7 +116,19 @@ if [ "$BRANCH" != "main" ]; then
 fi
 
 log "syncing with origin"
-git fetch --quiet origin
+# THE NETWORK IS OFTEN NOT UP YET when launchd fires: RunAtLoad runs this a few seconds after a wake or login, before Wi-Fi has
+# reconnected (2026-10-13: woke from hibernate at 09:49:56, job started 09:49:59, fetch failed). A bare `git fetch` under
+# `set -e` then killed the job with exit 128 and no message (--quiet), and the same "Could not resolve host" showed up on
+# 2026-10-04 and 10-05. Retry for a few minutes, then stop WITH the reason. Tunable: FETCH_TRIES, FETCH_WAIT (seconds).
+FETCH_TRIES=${FETCH_TRIES:-8}; FETCH_WAIT=${FETCH_WAIT:-30}; fetch_try=1
+until fetch_err=$(git fetch --quiet origin 2>&1); do
+  if [ "$fetch_try" -ge "$FETCH_TRIES" ]; then
+    warn "STOPPING: could not reach origin after $fetch_try tries. Last error: ${fetch_err##*$'\n'}"
+    exit 1
+  fi
+  log "origin not reachable (try $fetch_try of $FETCH_TRIES), waiting ${FETCH_WAIT}s: ${fetch_err##*$'\n'}"
+  sleep "$FETCH_WAIT"; fetch_try=$((fetch_try + 1))
+done
 git checkout --quiet -- public/podcasts.json pipeline/state.json 2>/dev/null || true
 
 # ── AN UNPUSHED COMMIT OF THIS JOB'S OWN OUTPUT ─────────────────────────────
