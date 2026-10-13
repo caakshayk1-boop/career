@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T01:25:47.252Z",
-  "today": "2026-10-12",
-  "retentionDays": 29,
+  "generatedAt": "2026-10-13T03:05:02.331Z",
+  "today": "2026-10-13",
+  "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 3,
   "days": [
     {
       "date": "2026-10-11",
-      "label": "Yesterday",
+      "label": "Sunday",
       "episodeIds": [
         "gunjanshouts-8ec427134d4f",
         "desk-b70e46be3c50"
@@ -9422,7 +9422,7 @@
     }
   },
   "run": {
-    "at": "2026-10-12T01:25:47.249Z",
+    "at": "2026-10-13T03:05:02.327Z",
     "mode": "republish",
     "discovered": 0,
     "eligible": 0,
