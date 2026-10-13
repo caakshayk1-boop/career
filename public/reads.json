@@ -1,10 +1,81 @@
 {
  "version": 1,
- "generatedAt": "2026-10-05T02:30:41.440Z",
- "week": "2026-W41",
+ "generatedAt": "2026-10-13T03:15:55.523Z",
+ "week": "2026-W42",
  "shelfSize": 22,
- "readCount": 2,
+ "readCount": 3,
  "reads": [
+  {
+   "week": "2026-W42",
+   "id": "breath",
+   "title": "Breath: The New Science of a Lost Art",
+   "author": "James Nestor",
+   "published": 2020,
+   "category": "health",
+   "rating": 4.2,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-10-13T03:15:55.523Z",
+   "coreArgument": "The way we breathe determines our physical and mental performance, and simple changes to nasal breathing can improve health outcomes.",
+   "hook": "During a routine dental exam, a patient struggled to keep his mouth closed while the dentist examined his teeth, revealing a lifelong habit of mouth breathing that had led to chronic fatigue and snoring.",
+   "ideas": [
+    {
+     "apply": "Switch to nasal breathing for the entire night during the next sleep cycle and record any change in sleep quality.",
+     "bookExample": "",
+     "explain": "Nasal breathing filters, humidifies, and warms air, which optimizes oxygen exchange in the lungs. The book argues that mouth breathing bypasses these processes, leading to reduced oxygen efficiency and higher stress hormones. By keeping the mouth closed, the diaphragm can move more fully, improving lung capacity.",
+     "heading": "Nasal breathing boosts oxygen efficiency",
+     "tradeoff": "It can feel uncomfortable at first, especially for those with nasal congestion or deviated septum.",
+     "yourWeek": "After closing the books for the month, you notice a late‑night review of the board pack. You decide to keep your mouth closed while reading the report, noting whether you feel more alert the next morning compared to previous evenings.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Practice a 5‑minute diaphragmatic breathing exercise each morning before checking emails.",
+     "bookExample": "",
+     "explain": "Diaphragmatic breathing engages the diaphragm, the primary muscle of respiration, which lowers heart rate and activates the parasympathetic nervous system. The book cites research showing a consistent 5‑minute practice can reduce cortisol, the stress hormone, by up to 20%.",
+     "heading": "Morning diaphragmatic breathing lowers stress",
+     "tradeoff": "Requires a quiet moment; may be skipped during busy mornings.",
+     "yourWeek": "Before your 9 am forecast meeting, you sit at your desk, place one hand on your chest and one on your belly, and breathe in for four seconds, out for six, repeating for five minutes. You track whether you feel calmer during the variance discussion.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Conduct a weekly “breath audit” by measuring breath duration with a timer during a typical workday.",
+     "bookExample": "",
+     "explain": "A breath audit makes the invisible habit of shallow, rapid breaths visible. The book shows that longer exhalations correlate with better focus and lower perceived workload. By timing breaths, you can spot when stress spikes and deliberately lengthen exhalations.",
+     "heading": "Tracking breath length reveals stress points",
+     "tradeoff": "Counting breaths can feel intrusive and may distract from complex analysis.",
+     "yourWeek": "During the budget negotiation, you pause after each commercial team’s proposal and count how many seconds your exhale lasts, noting any drop when tension rises. You later adjust by extending the exhale to reset your focus.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Use a nasal dilator strip during high‑intensity presentations to keep the airway open.",
+     "bookExample": "",
+     "explain": "Nasal dilators physically widen the nostrils, reducing airflow resistance. The book argues that this simple device helps maintain nasal breathing when the body naturally wants to mouth‑breathe under stress, preserving oxygen efficiency and reducing cortisol spikes.",
+     "heading": "Nasal strips maintain airflow under pressure",
+     "tradeoff": "May be perceived as odd in a formal business setting.",
+     "yourWeek": "When presenting the month‑end financial summary to senior leadership, you discreetly apply a strip and notice whether you feel less short‑of‑breath during the Q&A.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Schedule a 30‑minute walking meeting and consciously keep the pace slow enough to sustain nasal breathing.",
+     "bookExample": "",
+     "explain": "Walking at a moderate pace naturally encourages deeper breaths, and keeping the mouth closed forces a slower, more efficient respiratory rhythm. The book links this to improved heart‑rate variability, a marker of autonomic balance.",
+     "heading": "Walking meetings reinforce nasal rhythm",
+     "tradeoff": "Not all discussions suit a walking format; weather can be a factor.",
+     "yourWeek": "You arrange a 30‑minute walk with the commercial head to discuss budget allocations, reminding both of you to breathe through the nose, and observe whether the conversation stays more constructive.",
+     "bookExampleHasFigure": false
+    }
+   ],
+   "limits": "Most studies cited involve athletes or small clinical groups; the evidence for corporate finance outcomes is indirect, and the book assumes everyone can breathe through the nose without addressing structural nasal issues.",
+   "misreading": "That a few minutes of nose‑breathing will cure chronic health problems overnight.",
+   "oneThing": "Switch all nightly sleep to nasal breathing and monitor the change in sleep quality.",
+   "readNext": [
+    "The Oxygen Advantage by Patrick McKeown – expands on nasal breathing techniques for performance.",
+    "Why We Sleep by Matthew Walker – links sleep quality to overall cognition and decision‑making.",
+    "Thinking, Fast and Slow by Daniel Kahneman – provides a broader view of how physiological states affect judgment."
+   ],
+   "verdict": "skim",
+   "whoFor": "Finance leaders who want concrete, low‑cost health tweaks; skip if you need rigorous, peer‑reviewed medical guidance."
+  },
   {
    "week": "2026-W41",
    "id": "algebra-of-wealth",
