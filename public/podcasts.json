@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-13T23:55:44.210Z",
+  "generatedAt": "2026-10-14T01:17:28.763Z",
   "today": "2026-10-14",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -8733,22 +8733,15 @@
     }
   },
   "run": {
-    "at": "2026-10-13T23:55:44.199Z",
-    "mode": "full",
-    "discovered": 1129,
-    "eligible": 4,
-    "processed": 2,
-    "skipped": 1125,
-    "failed": 2,
+    "at": "2026-10-14T01:17:28.761Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-13T23:45:05.025Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
