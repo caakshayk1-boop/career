@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T23:52:46.001Z",
+  "generatedAt": "2026-10-16T00:30:20.302Z",
   "today": "2026-10-16",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -8929,12 +8929,12 @@
     }
   },
   "run": {
-    "at": "2026-10-15T23:52:45.981Z",
-    "mode": "full",
-    "discovered": 1135,
-    "eligible": 1,
-    "processed": 1,
-    "skipped": 1134,
+    "at": "2026-10-16T00:30:20.300Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
     "failed": 0,
     "pruned": 0,
     "errors": [],
