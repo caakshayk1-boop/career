@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T00:07:57.977Z",
+  "generatedAt": "2026-10-19T00:16:16.706Z",
   "today": "2026-10-19",
   "retentionDays": 25,
   "retentionConfigured": 30,
@@ -9014,22 +9014,15 @@
     }
   },
   "run": {
-    "at": "2026-10-19T00:07:57.966Z",
-    "mode": "full",
-    "discovered": 1156,
-    "eligible": 8,
-    "processed": 5,
-    "skipped": 1149,
-    "failed": 2,
+    "at": "2026-10-19T00:16:16.704Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "process",
-        "id": "desk-4a30ce0152d7",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-19T00:07:44.402Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
