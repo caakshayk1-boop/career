@@ -1,10 +1,81 @@
 {
  "version": 1,
- "generatedAt": "2026-10-13T03:15:55.523Z",
- "week": "2026-W42",
+ "generatedAt": "2026-10-20T01:20:49.101Z",
+ "week": "2026-W43",
  "shelfSize": 22,
- "readCount": 3,
+ "readCount": 4,
  "reads": [
+  {
+   "week": "2026-W43",
+   "id": "psychology-of-money",
+   "title": "The Psychology of Money",
+   "author": "Morgan Housel",
+   "published": 2020,
+   "category": "money",
+   "rating": 4.3,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-10-20T01:20:49.101Z",
+   "coreArgument": "Financial success depends more on personal behavior than on technical expertise or market knowledge.",
+   "hook": "A young investor watches his portfolio double one year, then halve the next, while his accountant calmly explains that the swing was caused by the investor’s own reactions, not the market’s fundamentals.",
+   "ideas": [
+    {
+     "apply": "Write a one‑page log of every financial decision you make this week, noting the emotion you felt and the outcome.",
+     "bookExample": "Housel describes the story of Ronald Read, a janitor who amassed $8 million by consistently saving and avoiding flashy investments, illustrating how simple habits beat market timing.",
+     "explain": "The idea is that small, repeatable habits compound over time. Housel argues that the biggest returns come from avoiding costly mistakes, not from chasing big wins. He calls this the \"margin of safety\" in behavior, meaning you protect yourself from over‑reacting to short‑term market moves.",
+     "heading": "Consistency beats brilliance",
+     "tradeoff": "Tracking decisions takes time and may feel tedious; it also exposes uncomfortable patterns.",
+     "yourWeek": "During month‑end close, you notice you approved a late expense claim because you were pressured by a team lead. In the log you record feeling rushed and later realize the claim inflated the variance commentary. The next board pack you flag the expense and adjust the commentary, avoiding a repeat.",
+     "bookExampleHasFigure": true
+    },
+    {
+     "apply": "Set a hard limit on how much of your portfolio can be in any single stock, then write that limit on a sticky note on your desk.",
+     "bookExample": "The book recounts the downfall of a hedge fund that let a single bet grow to 70% of assets, then collapsed when that bet failed.",
+     "explain": "Diversification is a behavioral guardrail. Housel shows that when investors let one idea dominate, they become vulnerable to luck turning against them. By capping exposure, you force yourself to stay within a comfort zone that tolerates error.",
+     "heading": "Cap single‑bet exposure",
+     "tradeoff": "Limiting concentration may lower potential upside on a high‑conviction idea.",
+     "yourWeek": "You are negotiating the budget for a new restaurant concept and feel tempted to allocate 40% of the capital plan to it because the commercial team is excited. The sticky‑note limit reminds you to keep the allocation below 20%, prompting a more balanced capital plan for the board.",
+     "bookExampleHasFigure": true
+    },
+    {
+     "apply": "During the next forecast cycle, write a brief paragraph titled \"What could go wrong\" and share it with your team before finalising numbers.",
+     "bookExample": "Housel tells how a tech CEO ignored worst‑case scenarios and was caught off‑guard when a supply‑chain shock hit, costing billions.",
+     "explain": "Planning for downside forces you to consider risks you might otherwise dismiss. The book calls this the \"reverse‑engineered safety margin\" – building a buffer by explicitly stating plausible failures.",
+     "heading": "Explicitly model downside risk",
+     "tradeoff": "Spending time on worst‑case scenarios can create pessimism and may slow decision‑making.",
+     "yourWeek": "When you prepare the variance commentary for the quarterly board pack, you add a short note that a 5% slowdown in tourism could cut hotel revenue by $2 million, and you ask the commercial team to develop mitigation steps. The board appreciates the proactive stance.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Schedule a 30‑minute meeting this week with each direct report to ask what financial process they find most wasteful, then note one change you can implement.",
+     "bookExample": "The author mentions a family that saved $1 million by simply cutting a recurring $5,000 yearly subscription they never used.",
+     "explain": "Small, often‑overlooked costs add up. Housel emphasizes the power of “hidden fees” and inefficiencies that compound over years. By surfacing them, you free up cash for higher‑impact work.",
+     "heading": "Root out hidden costs",
+     "tradeoff": "Changing entrenched processes can meet resistance and may temporarily disrupt workflows.",
+     "yourWeek": "Your junior analyst complains that the manual reconciliation spreadsheet takes two days each month. You approve a purchase of a simple automation tool, reducing the task to a few hours and freeing time for deeper analysis in the next budget cycle.",
+     "bookExampleHasFigure": true
+    },
+    {
+     "apply": "Before any interview, write down three concrete examples of how you handled uncertainty in past financial projects, and rehearse delivering them succinctly.",
+     "bookExample": "Housel recounts how Bill Gates avoided the dot‑com bubble by sticking to his long‑term vision despite market hype.",
+     "explain": "Demonstrating behavioral discipline is as important as technical skill when being evaluated. The book argues that interviewers value evidence of steady, rational decision‑making under pressure.",
+     "heading": "Show disciplined uncertainty management",
+     "tradeoff": "Focusing on behavioural anecdotes may divert preparation time from technical case studies.",
+     "yourWeek": "You have an interview for a Head of FP&A role in the UAE. You prepare a story about how you resisted a premature expense approval during a cash‑flow crunch, showing you can guard the organization against short‑term pressure.",
+     "bookExampleHasFigure": false
+    }
+   ],
+   "limits": "Most examples are drawn from wealthy individuals in stable economies; the book offers limited guidance for high‑growth, volatile markets or for teams constrained by strict regulatory frameworks.",
+   "misreading": "That \"money works like a physics problem\" – the book actually warns that financial outcomes are shaped by unpredictable human behavior, not deterministic formulas.",
+   "oneThing": "Start a simple decision log to make your financial habits visible.",
+   "readNext": [
+    "Thinking, Fast and Slow – Daniel Kahneman, for deeper insight into cognitive biases affecting money.",
+    "The Little Book of Common Sense Investing – John Bogle, for a complementary focus on low‑cost, diversified investing.",
+    "Financial Shenanigans – Howard Schilit, for practical detection of accounting tricks that undermine disciplined finance."
+   ],
+   "verdict": "skim",
+   "whoFor": "Chartered accountants who already master technical finance and want behavioral nudges; skip if you need detailed accounting standards or advanced valuation techniques."
+  },
   {
    "week": "2026-W42",
    "id": "breath",
