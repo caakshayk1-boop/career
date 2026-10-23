@@ -36711,6 +36711,18 @@
         "audio": null,
         "readSeconds": 100
       }
+    },
+    "diary-of-a-ceo-422bed0b0ee6": {
+      "status": "FAILED",
+      "title": "Most Replayed Moment: How AI Companies Are Gaslighting You - Karen Hao",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "id": "diary-of-a-ceo-422bed0b0ee6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-23T23:54:02.115Z",
+      "updatedAt": "2026-10-23T23:54:06.228Z",
+      "reason": "no candidate ideas found in the transcript"
     }
   }
 }

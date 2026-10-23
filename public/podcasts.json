@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23T00:44:56.875Z",
-  "today": "2026-10-23",
-  "retentionDays": 23,
+  "generatedAt": "2026-10-23T23:54:06.270Z",
+  "today": "2026-10-24",
+  "retentionDays": 24,
   "retentionConfigured": 30,
-  "trimmedForSize": 23,
+  "trimmedForSize": 17,
   "days": [
     {
       "date": "2026-10-23",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-8a02a076f2cc"
       ]
     },
     {
       "date": "2026-10-22",
-      "label": "Yesterday",
+      "label": "Thursday",
       "episodeIds": [
         "diary-of-a-ceo-0a11b8cc1579",
         "desk-237f39f984da",
@@ -9118,6 +9118,15 @@
   ],
   "pending": [
     {
+      "id": "diary-of-a-ceo-422bed0b0ee6",
+      "title": "Most Replayed Moment: How AI Companies Are Gaslighting You - Karen Hao",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "takeaways": [],
+      "date": "2026-10-23",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    {
       "id": "acquired-52ca3862c160",
       "title": "Seinfeld",
       "show": "Acquired",
@@ -9138,15 +9147,22 @@
     }
   },
   "run": {
-    "at": "2026-10-23T00:44:56.872Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-10-23T23:54:06.263Z",
+    "mode": "full",
+    "discovered": 1138,
+    "eligible": 1,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 1137,
+    "failed": 1,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "process",
+        "id": "diary-of-a-ceo-422bed0b0ee6",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-10-23T23:54:06.228Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
