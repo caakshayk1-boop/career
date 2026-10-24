@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23T23:54:06.270Z",
+  "generatedAt": "2026-10-24T00:50:24.484Z",
   "today": "2026-10-24",
   "retentionDays": 24,
   "retentionConfigured": 30,
@@ -9147,22 +9147,15 @@
     }
   },
   "run": {
-    "at": "2026-10-23T23:54:06.263Z",
-    "mode": "full",
-    "discovered": 1138,
-    "eligible": 1,
+    "at": "2026-10-24T00:50:24.480Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 1137,
-    "failed": 1,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "process",
-        "id": "diary-of-a-ceo-422bed0b0ee6",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-23T23:54:06.228Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
