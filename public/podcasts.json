@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-24T00:50:24.484Z",
-  "today": "2026-10-24",
-  "retentionDays": 24,
+  "generatedAt": "2026-10-25T00:23:38.641Z",
+  "today": "2026-10-25",
+  "retentionDays": 25,
   "retentionConfigured": 30,
-  "trimmedForSize": 17,
+  "trimmedForSize": 15,
   "days": [
     {
       "date": "2026-10-23",
-      "label": "Yesterday",
+      "label": "Friday",
       "episodeIds": [
         "desk-8a02a076f2cc"
       ]
@@ -9147,7 +9147,7 @@
     }
   },
   "run": {
-    "at": "2026-10-24T00:50:24.480Z",
+    "at": "2026-10-25T00:23:38.639Z",
     "mode": "republish",
     "discovered": 0,
     "eligible": 0,
