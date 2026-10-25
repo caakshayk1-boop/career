@@ -36721,7 +36721,91 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-23T23:54:02.115Z",
-      "updatedAt": "2026-10-23T23:54:06.228Z",
+      "updatedAt": "2026-10-24T23:59:02.579Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-3b05cde78352": {
+      "status": "FAILED",
+      "title": "Ex Navy SEAL Who Killed Osama Bin Laden On The Raid & Fear | Robert J. O’Neill | FO579 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=sRH-XlBE2cQ",
+      "id": "desk-3b05cde78352",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-24T23:59:02.613Z",
+      "updatedAt": "2026-10-25T00:15:36.574Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "desk-c5e12270eb43": {
+      "status": "FAILED",
+      "title": "Can You Afford a Child in India? 3 Costs You Need to Plan For",
+      "show": "Ankur Warikoo",
+      "url": "https://www.youtube.com/watch?v=Cgs2AYMsQu8",
+      "id": "desk-c5e12270eb43",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T00:15:36.592Z",
+      "updatedAt": "2026-10-25T00:41:27.297Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-0edc8e47d091": {
+      "status": "FAILED",
+      "title": "What is happening to the Indian Stock Market??",
+      "show": "Pranjal Kamra",
+      "url": "https://www.youtube.com/watch?v=JZ7sUV0O3IM",
+      "id": "desk-0edc8e47d091",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T00:41:27.330Z",
+      "updatedAt": "2026-10-25T00:41:46.033Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-e34fc37963a4": {
+      "status": "FAILED",
+      "title": "Should you BUY A House Or Invest in Stock Market?",
+      "show": "Zero1 by Zerodha",
+      "url": "https://www.youtube.com/watch?v=0Ga_YTnC4Yc",
+      "id": "desk-e34fc37963a4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T00:41:46.060Z",
+      "updatedAt": "2026-10-25T01:32:47.628Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "desk-24022e585f41": {
+      "status": "FAILED",
+      "title": "Harsh Reality of India’s Growth: Taxes, Jobs & the Cost of Doing Business | Jayant Mundhra | FWS",
+      "show": "Finance With Sharan",
+      "url": "https://www.youtube.com/watch?v=C3WpbUc8UC0",
+      "id": "desk-24022e585f41",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T01:32:47.641Z",
+      "updatedAt": "2026-10-25T02:30:01.015Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-f2479a730482": {
+      "status": "FAILED",
+      "title": "These Stocks Are Seeing Buying From Both FIIs & DIIs",
+      "show": "Groww",
+      "url": "https://www.youtube.com/watch?v=GYzyriY6vxQ",
+      "id": "desk-f2479a730482",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T02:30:01.109Z",
+      "updatedAt": "2026-10-25T02:43:25.599Z",
+      "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-c1dfb102d578": {
+      "status": "FAILED",
+      "title": "How Indian Media BRAINWASHES You! | Dhruv Rathee",
+      "show": "Dhruv Rathee",
+      "url": "https://www.youtube.com/watch?v=qWjfDow0xGQ",
+      "id": "desk-c1dfb102d578",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T02:43:25.633Z",
+      "updatedAt": "2026-10-25T03:18:08.441Z",
       "reason": "no candidate ideas found in the transcript"
     }
   }
