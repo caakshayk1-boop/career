@@ -36721,7 +36721,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-23T23:54:02.115Z",
-      "updatedAt": "2026-10-24T23:59:02.579Z",
+      "updatedAt": "2026-10-25T23:49:39.703Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-3b05cde78352": {
@@ -36807,6 +36807,18 @@
       "seenAt": "2026-10-25T02:43:25.633Z",
       "updatedAt": "2026-10-25T03:18:08.441Z",
       "reason": "no candidate ideas found in the transcript"
+    },
+    "desk-fcf12783f94c": {
+      "status": "FAILED",
+      "title": "Sadhguru 360 - Ep #7: The Forgotten Power of the Divine Feminine | 4K UHD",
+      "show": "Sadhguru",
+      "url": "https://www.youtube.com/watch?v=BWfS-KmA3mM",
+      "id": "desk-fcf12783f94c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-25T23:49:39.735Z",
+      "updatedAt": "2026-10-26T00:07:42.280Z",
+      "reason": "yt-dlp failed: no stderr"
     }
   }
 }
