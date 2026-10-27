@@ -1,81 +1,10 @@
 {
  "version": 1,
- "generatedAt": "2026-10-27T01:41:24.978Z",
- "week": "2026-W44",
+ "generatedAt": "2026-10-20T01:20:49.101Z",
+ "week": "2026-W43",
  "shelfSize": 22,
- "readCount": 5,
+ "readCount": 4,
  "reads": [
-  {
-   "week": "2026-W44",
-   "id": "clear-thinking",
-   "title": "Clear Thinking: Turning Ordinary Moments into Extraordinary Results",
-   "author": "Shane Parrish",
-   "published": 2023,
-   "category": "smart",
-   "rating": 4,
-   "ratingSource": "unverified",
-   "ratingCount": null,
-   "publishedAt": "2026-10-27T01:41:24.978Z",
-   "coreArgument": "Most performance gains come from adjusting the small, often unnoticed defaults that shape daily decisions, rather than from rare, high‑stakes choices.",
-   "hook": "During a quarterly board meeting, the CFO pauses as the profit variance slide flashes red; instead of launching a costly restructuring, the team spots a simple default‑setting error in the expense‑approval workflow that has been inflating travel costs.",
-   "ideas": [
-    {
-     "apply": "Create a one‑page checklist of all recurring approval workflows (expense, purchase, budget reallocations) and note the current default option for each.",
-     "bookExample": "Parrish describes how a large retailer reduced inventory write‑offs by changing the default reorder point in its ordering software, saving $12 million annually.",
-     "explain": "A default is the pre‑selected option that is applied unless someone actively changes it. The book argues that people rarely override defaults because it costs mental effort, so the default shapes outcomes at scale. By auditing and tweaking defaults, organizations can steer behavior without extra supervision.",
-     "heading": "Identify and redesign default settings",
-     "tradeoff": "Changing defaults can meet resistance if staff feel their autonomy is being curtailed; you may need a communication plan to explain the rationale.",
-     "yourWeek": "You notice that every month‑end the team manually resets the forecast template to start at zero, a step that often leads to missed carry‑over figures. Using the checklist, you set the template’s default to carry forward prior month’s actuals, cutting the reconciliation time by two hours.",
-     "bookExampleHasFigure": true
-    },
-    {
-     "apply": "Add a required short text field titled “Why am I choosing this budget variance?” before approving any variance that exceeds 5 % of the line‑item budget.",
-     "bookExample": "The author cites a tech startup that added a pre‑commit question before deploying code, which reduced production bugs by 30 %.",
-     "explain": "A pre‑commit prompt forces a brief justification before a decision is finalized, making the decision maker pause and consider consequences. The book shows that even a minimal friction can improve quality because it activates deliberate thinking.",
-     "heading": "Use “pre‑commit” prompts to lock in good choices",
-     "tradeoff": "Extra steps can slow down fast‑moving teams; overusing prompts may lead to checklist fatigue where people ignore the question.",
-     "yourWeek": "When a commercial manager requests a 10 % increase to marketing spend, the new prompt forces them to write a one‑sentence rationale, revealing that the request is based on an outdated campaign plan, and you negotiate a smaller, data‑driven increase.",
-     "bookExampleHasFigure": true
-    },
-    {
-     "apply": "Redesign the variance commentary template to present only three key performance drivers instead of the usual ten, each with a predefined drop‑down of likely causes.",
-     "bookExample": "Parrish details how a hospital reduced diagnostic errors by redesigning its test‑ordering interface to highlight three evidence‑based pathways.",
-     "explain": "Choice architecture is the way options are presented to a decision maker. By limiting and structuring choices, you reduce cognitive overload and improve consistency. The book claims that well‑designed architecture leads to faster, more accurate decisions.",
-     "heading": "Leverage “choice architecture” to simplify analysis",
-     "tradeoff": "Oversimplifying may hide important nuances; you need to ensure critical exceptions can still be captured.",
-     "yourWeek": "Your board pack usually contains a dozen variance explanations. After restructuring, the pack focuses on revenue, cost of goods sold, and staffing, each with a drop‑down of likely drivers, making the CFO’s review 20 % quicker.",
-     "bookExampleHasFigure": false
-    },
-    {
-     "apply": "Set up a recurring calendar alert that triggers two weeks before each budget negotiation deadline, prompting the finance team to pull the latest cost‑trend analysis.",
-     "bookExample": "The book notes how a logistics firm cut missed invoice payments by 40 % by automating reminder emails for invoice approvals.",
-     "explain": "Automatic reminders act as nudges that bring infrequent but important tasks to the front of people’s attention. Parrish argues that without such nudges, tasks slip due to the “forgetting curve”.",
-     "heading": "Implement “automatic reminders” for low‑frequency tasks",
-     "tradeoff": "Too many reminders can be ignored; timing and relevance must be calibrated.",
-     "yourWeek": "You often scramble to gather cost trends before budget talks. The new reminder arrives on schedule, allowing you to prepare a concise trend chart, which shortens the negotiation by 30 minutes.",
-     "bookExampleHasFigure": true
-    },
-    {
-     "apply": "Add a KPI to the monthly finance dashboard that tracks the variance in travel expense per employee before and after the default approval limit change.",
-     "bookExample": "Parrish recounts how a SaaS company tracked the uplift in user engagement after altering the default privacy setting, confirming a 15 % increase.",
-     "explain": "Continuous measurement validates whether a default adjustment is delivering the intended outcome. The book stresses that without data, you cannot know if the nudge worked or caused unintended side effects.",
-     "heading": "Measure the impact of default changes continuously",
-     "tradeoff": "Collecting extra data requires system changes and may burden staff with additional reporting.",
-     "yourWeek": "After setting a lower default for travel expense caps, you notice the KPI shows a 8 % drop in average travel spend, confirming the change’s effectiveness without harming employee satisfaction.",
-     "bookExampleHasFigure": true
-    }
-   ],
-   "limits": "The case studies focus on large, data‑rich organisations; the book offers limited guidance for firms with legacy systems that cannot easily alter defaults, and it assumes a culture open to experimentation.",
-   "misreading": "That you should abandon all strategic, big‑picture decisions and rely only on nudges; the author still stresses the need for major choices when the stakes are truly high.",
-   "oneThing": "Audit one recurring workflow, change its default, and measure the result within a month.",
-   "readNext": [
-    "Thinking, Fast and Slow – Daniel Kahneman (behavioural foundations of defaults)",
-    "Nudge – Richard Thaler & Cass Sunstein (policy‑level default design)",
-    "The Power of Little Ideas – David Robertson (small‑scale continuous improvement)"
-   ],
-   "verdict": "skim",
-   "whoFor": "Finance leaders who can modify processes and have access to dashboards will benefit; professionals without authority over system defaults should skip it."
-  },
   {
    "week": "2026-W43",
    "id": "psychology-of-money",

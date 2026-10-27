@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T01:32:07.949Z",
+  "generatedAt": "2026-10-27T06:01:49.671Z",
   "today": "2026-10-27",
   "retentionDays": 27,
   "retentionConfigured": 30,
@@ -9126,7 +9126,43 @@
         "The episode is a unique, direct‑to‑audience solo podcast where Sadhguru speaks straight to listeners.",
         "Save Soil, launched by Sadhguru, has reached 3.91 billion people worldwide to address soil extinction."
       ],
+      "date": "2026-10-27",
+      "reason": "over the 8/day cap"
+    },
+    {
+      "id": "diary-of-a-ceo-8cfb4e1ee627",
+      "title": "Mark Cuban: The Next Market Crash Is Where The Real Money Is Made!",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "takeaways": [],
       "date": "2026-10-26",
+      "reason": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "luke-coutinho-120396798c55",
+      "title": "Young people's cardiac arrest is discussed - HERE IS A SOLUTION",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=9R3QMN3QkvA",
+      "takeaways": [],
+      "date": "2026-10-26",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-818ce1332634",
+      "title": "Antacid Not Going To Solve Your Acidity Problem !!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=eEzSuqgFNB8",
+      "takeaways": [],
+      "date": "2026-10-26",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-0ce47ac7527a",
+      "title": "Your new HEALTHY habit is BAD for your sleep",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=Am3zQ2hgAck",
+      "takeaways": [],
+      "date": "2026-10-25",
       "reason": "yt-dlp failed: no stderr"
     },
     {
@@ -9159,15 +9195,58 @@
     }
   },
   "run": {
-    "at": "2026-10-27T01:32:07.948Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-10-27T06:01:49.643Z",
+    "mode": "full",
+    "discovered": 1152,
+    "eligible": 8,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 1147,
+    "failed": 5,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-26T23:55:53.530Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-26T23:55:53.598Z"
+      },
+      {
+        "stage": "process",
+        "id": "diary-of-a-ceo-8cfb4e1ee627",
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-10-27T03:29:51.089Z"
+      },
+      {
+        "stage": "process",
+        "id": "diary-of-a-ceo-422bed0b0ee6",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-10-27T03:41:25.859Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-120396798c55",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-27T03:59:18.928Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-818ce1332634",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-27T04:42:37.625Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-0ce47ac7527a",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-27T06:01:49.612Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {

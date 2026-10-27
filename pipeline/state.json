@@ -36721,7 +36721,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-23T23:54:02.115Z",
-      "updatedAt": "2026-10-25T23:49:39.703Z",
+      "updatedAt": "2026-10-27T03:41:25.859Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-3b05cde78352": {
@@ -36818,6 +36818,90 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-25T23:49:39.735Z",
       "updatedAt": "2026-10-26T00:07:42.280Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "diary-of-a-ceo-8cfb4e1ee627": {
+      "status": "FAILED",
+      "title": "Mark Cuban: The Next Market Crash Is Where The Real Money Is Made!",
+      "show": "The Diary Of A CEO",
+      "url": "",
+      "id": "diary-of-a-ceo-8cfb4e1ee627",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T00:00:24.717Z",
+      "updatedAt": "2026-10-27T03:29:51.089Z",
+      "reason": "The operation was aborted due to timeout"
+    },
+    "dr-pal-dd539d1ff2c0": {
+      "status": "SKIPPED",
+      "title": "Is Biofortified Food Actually Safe to Eat?",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=-ojLE2bh188",
+      "id": "dr-pal-dd539d1ff2c0",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T03:41:25.935Z",
+      "updatedAt": "2026-10-27T03:41:42.834Z",
+      "reason": "transcript unusable: transcript is only 3610 characters"
+    },
+    "luke-coutinho-d369fd20d66c": {
+      "status": "SKIPPED",
+      "title": "The AQI is cutting a hole in our lungs and our wallets! #aqi #mumbai",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=xDnQ2eaLTzA",
+      "id": "luke-coutinho-d369fd20d66c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T03:41:42.834Z",
+      "updatedAt": "2026-10-27T03:41:58.180Z",
+      "reason": "transcript unusable: transcript is only 2191 characters"
+    },
+    "luke-coutinho-120396798c55": {
+      "status": "FAILED",
+      "title": "Young people's cardiac arrest is discussed - HERE IS A SOLUTION",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=9R3QMN3QkvA",
+      "id": "luke-coutinho-120396798c55",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T03:41:58.180Z",
+      "updatedAt": "2026-10-27T03:59:18.928Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-818ce1332634": {
+      "status": "FAILED",
+      "title": "Antacid Not Going To Solve Your Acidity Problem !!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=eEzSuqgFNB8",
+      "id": "luke-coutinho-818ce1332634",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T03:59:18.958Z",
+      "updatedAt": "2026-10-27T04:42:37.625Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-0637d0c799a6": {
+      "status": "SKIPPED",
+      "title": "Why Gen Z Is Facing Hidden Hunger Problem",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=XhuLDclXuc8",
+      "id": "dr-pal-0637d0c799a6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T04:42:37.652Z",
+      "updatedAt": "2026-10-27T05:44:00.336Z",
+      "reason": "transcript unusable: transcript is only 3630 characters"
+    },
+    "luke-coutinho-0ce47ac7527a": {
+      "status": "FAILED",
+      "title": "Your new HEALTHY habit is BAD for your sleep",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=Am3zQ2hgAck",
+      "id": "luke-coutinho-0ce47ac7527a",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-10-27T05:44:00.336Z",
+      "updatedAt": "2026-10-27T06:01:49.612Z",
       "reason": "yt-dlp failed: no stderr"
     }
   }
