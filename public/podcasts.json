@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-26T00:07:42.376Z",
-  "today": "2026-10-26",
-  "retentionDays": 26,
+  "generatedAt": "2026-10-27T01:32:07.949Z",
+  "today": "2026-10-27",
+  "retentionDays": 27,
   "retentionConfigured": 30,
-  "trimmedForSize": 14,
+  "trimmedForSize": 10,
   "days": [
     {
       "date": "2026-10-23",
@@ -9159,52 +9159,15 @@
     }
   },
   "run": {
-    "at": "2026-10-26T00:07:42.372Z",
-    "mode": "full",
-    "discovered": 1121,
-    "eligible": 2,
+    "at": "2026-10-27T01:32:07.948Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 1119,
-    "failed": 2,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-25T23:49:26.084Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-25T23:49:26.088Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "dr-pal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-25T23:49:26.089Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-25T23:49:26.091Z"
-      },
-      {
-        "stage": "process",
-        "id": "diary-of-a-ceo-422bed0b0ee6",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-25T23:49:39.703Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-fcf12783f94c",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-26T00:07:42.280Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
