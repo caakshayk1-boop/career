@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T00:24:29.112Z",
+  "generatedAt": "2026-10-28T01:29:00.143Z",
   "today": "2026-10-28",
   "retentionDays": 28,
   "retentionConfigured": 30,
@@ -9258,46 +9258,15 @@
     }
   },
   "run": {
-    "at": "2026-10-28T00:24:29.103Z",
-    "mode": "full",
-    "discovered": 1122,
-    "eligible": 2,
-    "processed": 1,
-    "skipped": 1120,
-    "failed": 1,
+    "at": "2026-10-28T01:29:00.141Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-27T23:55:45.773Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "dr-pal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-27T23:55:45.776Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-27T23:55:45.777Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-27T23:55:45.777Z"
-      },
-      {
-        "stage": "process",
-        "id": "diary-of-a-ceo-422bed0b0ee6",
-        "message": "The operation was aborted due to timeout",
-        "at": "2026-10-28T00:24:29.062Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
