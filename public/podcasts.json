@@ -1,11 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T06:01:49.671Z",
-  "today": "2026-10-27",
-  "retentionDays": 27,
+  "generatedAt": "2026-10-28T00:24:29.112Z",
+  "today": "2026-10-28",
+  "retentionDays": 28,
   "retentionConfigured": 30,
-  "trimmedForSize": 10,
+  "trimmedForSize": 7,
   "days": [
+    {
+      "date": "2026-10-26",
+      "label": "Monday",
+      "episodeIds": [
+        "diary-of-a-ceo-8cfb4e1ee627"
+      ]
+    },
     {
       "date": "2026-10-23",
       "label": "Friday",
@@ -176,12 +183,297 @@
       "episodeIds": [
         "diary-of-a-ceo-933c2b95e138",
         "desk-2655b59de225",
-        "desk-778dfb166595",
-        "desk-112ef88f4b6d"
+        "desk-778dfb166595"
       ]
     }
   ],
   "episodes": [
+    {
+      "id": "diary-of-a-ceo-8cfb4e1ee627",
+      "sourceId": "diary-of-a-ceo",
+      "show": "The Diary Of A CEO",
+      "title": "Mark Cuban: AI Could Bankrupt Us Into A Deep Debt Bubble!",
+      "guest": "Mark Cuban",
+      "topics": [
+        "artificial intelligence",
+        "sales",
+        "entrepreneurship",
+        "long‑term strategy",
+        "wealth perception"
+      ],
+      "summary": "In this episode, billionaire entrepreneur Mark Cuban shares candid insights on the limits of artificial intelligence, the central role of sales in building lasting businesses, and the pitfalls of chasing quick wealth through social media. He also discusses long‑term strategic planning, leveraging AI as a tool rather than a replacement, and practical advice for entrepreneurs seeking sustainable growth.",
+      "url": "",
+      "type": "rss",
+      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M5E4XFMYB58HRTVR7QVS20AJ/mark_cuban.ep_cover.jpg",
+      "publishedAt": "2026-10-26T05:00:00.000Z",
+      "date": "2026-10-26",
+      "durationSec": 5464,
+      "processedAt": "2026-10-27T23:56:00.380Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "published",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Profit every month before raising money",
+          "idea": "Mark Cuban's Microsolutions stayed profitable every month for eight years, proving you can grow a business without venture capital.",
+          "why": "Demonstrates that sustainable growth is possible without external funding, challenging the assumption that startups must raise money early.",
+          "action": "Structure early‑stage finances to stay cash‑positive each month before seeking outside capital.",
+          "detail": "",
+          "passage": "",
+          "evidence": "For Microsolutions, our entire eight-year existence, we were profitable every single month.",
+          "t": 601,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Master one skill, then launch a business",
+          "idea": "Success comes from becoming extremely good at one thing and then turning that expertise into a product or service.",
+          "why": "Focuses effort on depth rather than breadth, increasing the likelihood of creating a defensible market offering.",
+          "action": "Identify a single capability you can excel at and design a business model around it.",
+          "detail": "",
+          "passage": "",
+          "evidence": "You've gotta find one thing and be great at it. And then find a way to turn that something into a business.",
+          "t": 38,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "Door‑to‑door sales train your mind for any selling",
+          "idea": "The fastest way to learn objection handling and resilience is cold, door‑to‑door selling; it builds a mindset that makes all future sales easier.",
+          "why": "Provides a concrete, low‑cost method to develop the psychological toughness needed for high‑stakes negotiations.",
+          "action": "Spend a week doing cold calls or in‑person pitches to practice handling rejection.",
+          "detail": "",
+          "passage": "",
+          "evidence": "The best sales experience is door-to-door sales. Or call centers, right? Every no gets you closer to a yes, right?",
+          "t": 390,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Think 10–20 years ahead to build a moat",
+          "idea": "Long‑term planning (decades, not quarters) creates enduring competitive advantages that short‑term thinking misses.",
+          "why": "Encourages founders to design strategies that outlast market cycles, yielding sustainable moats.",
+          "action": "Draft a 10‑year strategic roadmap for your venture and revisit it quarterly.",
+          "detail": "",
+          "passage": "",
+          "evidence": "…there’s a couple of entrepreneurs that I look out into the world and think, oh, they were thinking like 10, 20 years.",
+          "t": 822,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "Nice beats yelling for leadership",
+          "idea": "Being respectful and kind to people is more effective than being a jerk; it advances your goals faster.",
+          "why": "Counters the myth that aggressive intimidation drives results, showing kindness yields higher productivity and loyalty.",
+          "action": "When frustrated, pause and choose a constructive, polite response instead of raising your voice.",
+          "detail": "",
+          "passage": "",
+          "evidence": "One of the biggest mistakes I made was I was a jerk. I would yell. I would scream. And I found that I got a lot further by being nice than by being a dick.",
+          "t": 59,
+          "kind": "said",
+          "confidence": 0.75,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Bear markets are the real profit engine",
+          "idea": "Cuban claims that buying during bear markets—like during COVID—creates the biggest gains, because that’s when the market rebounds.",
+          "why": "Offers a concrete contrarian investment rule that flips the typical fear‑of‑loss mindset.",
+          "action": "Allocate a portion of your portfolio to be deployed only when major indices drop 15% or more.",
+          "detail": "",
+          "passage": "",
+          "evidence": "No, no. What the fuck? No, and I've tried to do the same thing. And again, just trying to not, don't just jump into the market, jump in the market. There's always going to be a bear market. And that's where the money was made.",
+          "t": 1838,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "AI models are inherently predictive, not deterministic",
+          "idea": "AI outputs vary across models; they lack deterministic logic, which limits their real‑world reliability.",
+          "why": "Highlights a fundamental limitation that users must account for when relying on AI for critical decisions.",
+          "action": "Validate AI suggestions with multiple models or human review before acting.",
+          "detail": "",
+          "passage": "",
+          "evidence": "It's predictive. It's not deterministic. Meaning if you asked… four different AIs, the same question, you're going to get four different answers.",
+          "t": 2021,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 8,
+          "headline": "AI’s latency creates safety gaps",
+          "idea": "AI will always lag behind real‑time events, making it unsuitable for high‑stakes decisions like driving without human oversight.",
+          "why": "Counters hype that AI can replace human control in fast‑moving environments, urging caution.",
+          "action": "Maintain a human‑in‑the‑loop for any AI‑assisted system that must react within milliseconds.",
+          "detail": "",
+          "passage": "",
+          "evidence": "It's always going to be behind. There's always going to be a latency. And so many things can change in a blink of the eye…",
+          "t": 2043,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 9,
+          "headline": "Stocks now meme‑driven, not fundamentals",
+          "idea": "He explains that today's market reacts to minor news like a meme, so price swings reflect perceived value rather than fundamentals.",
+          "why": "Shows why traditional fundamental analysis can be misleading in the current environment.",
+          "action": "Incorporate sentiment and news‑velocity metrics when evaluating stock entry points.",
+          "detail": "",
+          "passage": "",
+          "evidence": "And the reason I say that is by watching how stocks move with just a little bit of news. So a company might miss earnings by a penny or only beat by a penny, and their stock will be down 18%. The intrinsic value of that company hasn't changed 18%.",
+          "t": 1899,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 10,
+          "headline": "Patent your AI advantage as a trade secret",
+          "idea": "Instead of publishing or patenting AI‑related insights, companies keep them as trade secrets to maintain a competitive edge.",
+          "why": "Provides a tactical IP strategy for fast‑moving AI startups where patents are slow or risky.",
+          "action": "Implement strict internal access controls and nondisclosure agreements for core AI models.",
+          "detail": "",
+          "passage": "",
+          "evidence": "And you're also seeing it like when I go and talk to hospitals… they lose control of their intellectual property. And you're starting to see more and more and more people instead of patenting it, it's a trade secret.",
+          "t": 2191,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 11,
+          "headline": "Use agents to automate legal data gathering",
+          "idea": "Employ an AI agent that automatically monitors lawsuits and bid data, then drafts Open Records Act requests to fetch contract data that would otherwise require hiring and training a human.",
+          "why": "Shows a scalable workflow that turns a labor‑intensive research task into an automated pipeline, saving time and cost.",
+          "action": "Set up a custom AI agent to scrape public court filings and generate FOIA requests for contracts you need.",
+          "detail": "",
+          "passage": "",
+          "evidence": "I could never have imagined doing before unless I hired somebody. That meant I had to take the time to hire him and train them so it never got done.",
+          "t": 2565,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 12,
+          "headline": "Leverage brute‑force AI for security audits",
+          "idea": "Since AI excels at brute‑force searching combinations, use large numbers of agents to systematically scan your own systems for vulnerabilities instead of waiting for external threats.",
+          "why": "Provides a proactive defensive tactic that turns AI’s strength (massive search) into a security advantage.",
+          "action": "Deploy multiple AI agents to run automated penetration tests on your infrastructure weekly.",
+          "detail": "",
+          "passage": "",
+          "evidence": "What we don't talk about is using that same brute force on the defense side, that you can go out there and find all the holes in yourself and go be proactive to attack the bad guys.",
+          "t": 2778,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 13,
+          "headline": "Skill mastery beats automation in a data‑saturated world",
+          "idea": "Even with equal access to AI tools, success depends on how well one can synthesize information and ask better questions; the edge comes from human insight, not raw data.",
+          "why": "Reframes AI as an augmenting tool, emphasizing the enduring value of human judgment.",
+          "action": "Practice crafting precise prompts and interpreting AI outputs before relying on them for decisions.",
+          "detail": "",
+          "passage": "",
+          "evidence": "Because it's cool, like, I can say, write me a business plan for this business. And it'll create all the agents. It'll do all that stuff. But I've got to be the one to say, this is right, this is wrong, this is right.",
+          "t": 2696,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 14,
+          "headline": "LinkedIn Ads let you target by job title, seniority, company size, industry, skills",
+          "idea": "Unlike broad ad platforms, LinkedIn allows precise demographic targeting, driving higher B2B ROAS.",
+          "why": "Offers a concrete, high‑ROI ad channel for B2B marketers that many overlook.",
+          "action": "Create a LinkedIn campaign using job title and seniority filters to reach decision‑makers in your niche.",
+          "detail": "",
+          "passage": "",
+          "evidence": "LinkedIn Ads, who are a sponsor of this podcast, lets you reach them specifically by job title, seniority, company size, industry, the skills that they have, and much more.",
+          "t": 3457,
+          "kind": "said",
+          "confidence": 0.93,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 15,
+          "headline": "Entrepreneurship reduces personal control, not increases",
+          "idea": "Owning a company gives less personal autonomy because you’re subject to customers, employees, and unforeseen circumstances.",
+          "why": "Counters the romanticized view of startup freedom, informing realistic expectations for founders.",
+          "action": "Before starting a venture, list the top three external dependencies that will dictate your daily decisions.",
+          "detail": "",
+          "passage": "",
+          "evidence": "It's the exact opposite. You have no control of your life as an entrepreneur because your customers, your employees, there's always something.",
+          "t": 4336,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 16,
+          "headline": "Money cannot change how you feel about yourself",
+          "idea": "Accruing wealth doesn’t alter one’s self‑esteem or happiness; it only removes financial stress.",
+          "why": "Dispels the common belief that wealth equals fulfillment, guiding focus toward purpose rather than money.",
+          "action": "Allocate a fixed percentage of income to charitable causes that reflect your values.",
+          "detail": "",
+          "passage": "",
+          "evidence": "Money can't change who you are. Money can't change your approach to life. Money can't change how you feel about yourself. It really won't.",
+          "t": 3744,
+          "kind": "said",
+          "confidence": 0.9,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 17,
+          "headline": "Early career financial decisions can free future time",
+          "idea": "After selling a company, immediately invest rather than live lavishly to preserve future freedom.",
+          "why": "Shows a strategic use of windfall capital to build long‑term freedom rather than short‑term consumption.",
+          "action": "Set up an automatic investment plan for any large liquidity event before making discretionary purchases.",
+          "detail": "",
+          "passage": "",
+          "evidence": "I didn't immediately say, I'm going to take this money, invest it, and I'm going to go out there and make as much money as I can. I did the exact opposite.",
+          "t": 3614,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 267
+    },
     {
       "id": "desk-8a02a076f2cc",
       "sourceId": "desk",
@@ -8933,238 +9225,9 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 115
-    },
-    {
-      "id": "desk-112ef88f4b6d",
-      "sourceId": "desk",
-      "show": "The Deshbhakt",
-      "title": "Cost Of Speaking Up Against An Authoritarian Govt | Samvaad With Sonam Wangchuk & Gitanjali J Angmo",
-      "guest": "Sonam Wangchuk & Gitanjali J Angmo",
-      "topics": [
-        "authoritarianism",
-        "activism",
-        "ladakh",
-        "land rights",
-        "media suppression"
-      ],
-      "summary": "In this episode Samvaad talks with activists Sonam Wangchuk and Gitanjali J Angmo about the perils of speaking out under an authoritarian regime in Ladakh. They describe how the government uses labels, legal tools and media control to silence dissent, and detail specific grievances such as land transfers, stalled judicial inquiries, and internet jamming. The conversation offers a stark look at how state power curtails protest and the tactics activists employ to resist.",
-      "url": "https://www.youtube.com/watch?v=lvBermEiJqo",
-      "type": "youtube",
-      "image": "",
-      "publishedAt": "2026-09-29T00:00:00.000Z",
-      "date": "2026-10-01",
-      "durationSec": 5155,
-      "processedAt": "2026-09-30T23:02:07.205Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Hunger strike hinges on two unresolved demands",
-          "idea": "The activist will only begin a hunger strike if both a public inquiry into Ladakh violence is not opened and the education protest’s demands remain unmet.",
-          "why": "It provides a clear decision rule for activists, showing how to tie personal sacrifice to concrete political goals, making the protest’s leverage measurable.",
-          "action": "Set specific, measurable conditions that must be met before undertaking a hunger strike.",
-          "detail": "",
-          "passage": "",
-          "evidence": "If even one of these is resolved, I might not go on a hunger strike. If neither is addressed, then I will sit on a hunger strike.",
-          "t": 877,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Labeling dissenters as \"cockroaches\" delegitimizes protest",
-          "idea": "The government tags activists as “cockroaches” to portray them as vermin and justify harsh suppression, often linking the label to foreign interference.",
-          "why": "Understanding this dehumanizing tactic helps activists anticipate narrative framing and develop counter‑messaging strategies.",
-          "action": "Publicly expose and re‑frame dehumanizing labels when they appear in official discourse.",
-          "detail": "",
-          "passage": "",
-          "evidence": "the 'Cockroach Janata Party' is a ploy by foreign countries... if it is wrong, then I would say you should not support it.",
-          "t": 694,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Massive land transfers bypass local councils",
-          "idea": "Around 40,000 acres in Ladakh are being handed over to solar power corporations without input from the local Hill Council, which should decide land use.",
-          "why": "This illustrates how authoritarian governance can sideline local autonomy, creating a template for other regions facing extractive deals.",
-          "action": "Demand transparent, council‑led approval processes for large land deals.",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"We are seeing massive tracts of land—as much as 40,000 acres—being handed over to solar power corporations… the local Hill Council possesses full powers regarding land.\"",
-          "t": 3766,
-          "kind": "said",
-          "confidence": 0.94,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Judicial inquiry ordered but never published",
-          "idea": "A judicial inquiry into the Ladakh violence was ordered, yet after a year no report has been released despite 80 FIRs being filed.",
-          "why": "The silence reveals systemic failure of accountability, warning activists that formal inquiries can be stalled or ignored.",
-          "action": "File right‑to‑information requests and publicize any missing inquiry reports.",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"The judicial inquiry that was ordered—Sonam had stated, even while in jail, that a judicial inquiry should be conducted… yet no report released.\"",
-          "t": 3068,
-          "kind": "said",
-          "confidence": 0.93,
-          "grounding": 0.93,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "NSA cases weaponized to silence dissent",
-          "idea": "The National Security Act is repeatedly used against activists, creating a precedent that deters public protest through fear of severe legal repercussions.",
-          "why": "Recognizing this pattern helps activists assess legal risk and seek protective measures before engaging in high‑profile actions.",
-          "action": "Consult legal counsel to challenge NSA filings pre‑emptively and document any misuse.",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"The NSA has become a favorite tool; it is truly unfortunate, a precedent could have been set—well, okay.\"",
-          "t": 3404,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Lieutenant Governor retains key decisions despite democratic promises",
-          "idea": "In Ladakh, the Lieutenant Governor continues to make major decisions on land and policy, undermining the elected Hill Council’s authority.",
-          "why": "This shows the gap between promised autonomy and actual centralized control, informing activists where advocacy must focus.",
-          "action": "Lobby for statutory amendments that limit LG powers in land and policy matters.",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"After that, in Ladakh, the LG began making all the decisions himself… They began making such decisions regarding land that could easily have been left to the elected representatives.\"",
-          "t": 3642,
-          "kind": "said",
-          "confidence": 0.91,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Internet jamming blocks reporting on activist abductions",
-          "idea": "During a key activist’s abduction, authorities deployed jammers and cut internet access, preventing journalists from covering the incident.",
-          "why": "Demonstrates a direct method of information suppression that can be anticipated and mitigated by preparing alternative communication channels.",
-          "action": "Establish offline reporting networks and encrypted backup channels before protests.",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"Jammers were put, for anyone who wanted to interview didn't have internet access, and there was a blackout.\"",
-          "t": 2921,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Single tweet can trigger state warning and media frenzy",
-          "idea": "A tweet about a warning from the Lieutenant Governor led to immediate coverage across newspapers and a formal state warning, showing how quickly online content can influence official actions.",
-          "why": "Highlights the power of digital amplification and the need for strategic messaging in authoritarian contexts.",
-          "action": "Craft concise, factual tweets during crises to force rapid public and official response.",
-          "detail": "",
-          "passage": "",
-          "evidence": "a tweet appears, in which it said, the LG issued a stern warning to Sonam Wangchuk... The next day, it was in all the newspapers... stern warning for Sonam Wangchuk",
-          "t": 583,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.79,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Media can be weaponised via coordinated instructions",
-          "idea": "Government officials issue directives to media outlets to amplify a narrative, using social‑media posts to seed widespread coverage.",
-          "why": "Understanding this coordinated propaganda model lets activists spot and counteract manufactured news cycles.",
-          "action": "Monitor media releases for sudden spikes linked to official instructions and issue corrective statements.",
-          "detail": "",
-          "passage": "",
-          "evidence": "Instructions are being issued to the media to blow this up... otherwise, with so many papers carrying it, no.",
-          "t": 630,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Independent labs can verify suspected medical tampering",
-          "idea": "When lab results appear manipulated, activists should demand third‑party testing and present the independent data to authorities.",
-          "why": "Provides a concrete safeguard against state‑orchestrated health abuse, ensuring evidence remains credible.",
-          "action": "Arrange for all critical medical tests to be cross‑checked by an accredited external laboratory.",
-          "detail": "",
-          "passage": "",
-          "evidence": "I was saying since 10:00 AM that I want to get this cross-checked by a third-party lab.",
-          "t": 1888,
-          "kind": "recommendation",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 176
     }
   ],
   "pending": [
-    {
-      "id": "desk-fcf12783f94c",
-      "title": "Sadhguru 360 - Ep #7: The Forgotten Power of the Divine Feminine | 4K UHD",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=BWfS-KmA3mM",
-      "takeaways": [
-        "The episode is a unique, direct‑to‑audience solo podcast where Sadhguru speaks straight to listeners.",
-        "Save Soil, launched by Sadhguru, has reached 3.91 billion people worldwide to address soil extinction."
-      ],
-      "date": "2026-10-27",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "diary-of-a-ceo-8cfb4e1ee627",
-      "title": "Mark Cuban: The Next Market Crash Is Where The Real Money Is Made!",
-      "show": "The Diary Of A CEO",
-      "url": "",
-      "takeaways": [],
-      "date": "2026-10-26",
-      "reason": "The operation was aborted due to timeout"
-    },
-    {
-      "id": "luke-coutinho-120396798c55",
-      "title": "Young people's cardiac arrest is discussed - HERE IS A SOLUTION",
-      "show": "Luke Coutinho",
-      "url": "https://www.youtube.com/watch?v=9R3QMN3QkvA",
-      "takeaways": [],
-      "date": "2026-10-26",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "luke-coutinho-818ce1332634",
-      "title": "Antacid Not Going To Solve Your Acidity Problem !!",
-      "show": "Luke Coutinho",
-      "url": "https://www.youtube.com/watch?v=eEzSuqgFNB8",
-      "takeaways": [],
-      "date": "2026-10-26",
-      "reason": "yt-dlp failed: no stderr"
-    },
-    {
-      "id": "luke-coutinho-0ce47ac7527a",
-      "title": "Your new HEALTHY habit is BAD for your sleep",
-      "show": "Luke Coutinho",
-      "url": "https://www.youtube.com/watch?v=Am3zQ2hgAck",
-      "takeaways": [],
-      "date": "2026-10-25",
-      "reason": "yt-dlp failed: no stderr"
-    },
     {
       "id": "diary-of-a-ceo-422bed0b0ee6",
       "title": "Most Replayed Moment: How AI Companies Are Gaslighting You - Karen Hao",
@@ -9172,7 +9235,7 @@
       "url": "",
       "takeaways": [],
       "date": "2026-10-23",
-      "reason": "no candidate ideas found in the transcript"
+      "reason": "The operation was aborted due to timeout"
     },
     {
       "id": "acquired-52ca3862c160",
@@ -9195,62 +9258,50 @@
     }
   },
   "run": {
-    "at": "2026-10-27T06:01:49.643Z",
+    "at": "2026-10-28T00:24:29.103Z",
     "mode": "full",
-    "discovered": 1152,
-    "eligible": 8,
-    "processed": 0,
-    "skipped": 1147,
-    "failed": 5,
+    "discovered": 1122,
+    "eligible": 2,
+    "processed": 1,
+    "skipped": 1120,
+    "failed": 1,
     "pruned": 0,
     "errors": [
       {
         "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-26T23:55:53.530Z"
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-27T23:55:45.773Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-27T23:55:45.776Z"
       },
       {
         "stage": "ingest",
         "id": "gunjanshouts",
         "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-10-26T23:55:53.598Z"
+        "at": "2026-10-27T23:55:45.777Z"
       },
       {
-        "stage": "process",
-        "id": "diary-of-a-ceo-8cfb4e1ee627",
-        "message": "The operation was aborted due to timeout",
-        "at": "2026-10-27T03:29:51.089Z"
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-27T23:55:45.777Z"
       },
       {
         "stage": "process",
         "id": "diary-of-a-ceo-422bed0b0ee6",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-10-27T03:41:25.859Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-120396798c55",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-27T03:59:18.928Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-818ce1332634",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-27T04:42:37.625Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-0ce47ac7527a",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-27T06:01:49.612Z"
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-10-28T00:24:29.062Z"
       }
     ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
-    "at": "2026-10-22T23:52:10.322Z",
-    "processed": 2
+    "at": "2026-10-28T00:24:29.103Z",
+    "processed": 1
   }
 }
