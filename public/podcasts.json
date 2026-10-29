@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-29T01:49:57.957Z",
+  "generatedAt": "2026-10-29T01:52:32.752Z",
   "today": "2026-10-29",
   "retentionDays": 29,
   "retentionConfigured": 30,
@@ -9251,28 +9251,15 @@
     }
   },
   "run": {
-    "at": "2026-10-29T01:49:57.948Z",
-    "mode": "full",
-    "discovered": 1141,
-    "eligible": 3,
-    "processed": 1,
-    "skipped": 1138,
-    "failed": 2,
+    "at": "2026-10-29T01:52:32.748Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "process",
-        "id": "ali-abdaal-cf3c2e41452b",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-10-29T00:45:39.107Z"
-      },
-      {
-        "stage": "process",
-        "id": "gunjanshouts-5b78b2a3029a",
-        "message": "The operation was aborted due to timeout",
-        "at": "2026-10-29T01:49:57.914Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
