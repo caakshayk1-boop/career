@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T01:29:00.143Z",
-  "today": "2026-10-28",
-  "retentionDays": 28,
+  "generatedAt": "2026-10-29T01:49:57.957Z",
+  "today": "2026-10-29",
+  "retentionDays": 29,
   "retentionConfigured": 30,
-  "trimmedForSize": 7,
+  "trimmedForSize": 4,
   "days": [
     {
       "date": "2026-10-26",
@@ -17,6 +17,7 @@
       "date": "2026-10-23",
       "label": "Friday",
       "episodeIds": [
+        "diary-of-a-ceo-422bed0b0ee6",
         "desk-8a02a076f2cc"
       ]
     },
@@ -182,8 +183,7 @@
       "label": "Thursday",
       "episodeIds": [
         "diary-of-a-ceo-933c2b95e138",
-        "desk-2655b59de225",
-        "desk-778dfb166595"
+        "desk-2655b59de225"
       ]
     }
   ],
@@ -473,6 +473,141 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 267
+    },
+    {
+      "id": "diary-of-a-ceo-422bed0b0ee6",
+      "sourceId": "diary-of-a-ceo",
+      "show": "The Diary Of A CEO",
+      "title": "Most Replayed Moment: How AI Companies Are Gaslighting You - Karen Hao",
+      "guest": "Karen Hao",
+      "topics": [
+        "ai risk",
+        "corporate control",
+        "journalism",
+        "openai"
+      ],
+      "summary": "In this episode, award‑winning journalist Karen Hao discusses the hidden risks of AI, focusing on who controls the technology rather than the tech itself. She critiques the narratives used by AI firms to justify their power and warns about tactics that silence critical voices. The conversation reveals how corporate strategies shape public discourse and the importance of independent journalism in the AI debate.",
+      "url": "",
+      "type": "rss",
+      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M1PEF1M5HE2FX78QVY3VYYG8/square_cover_image.jpg",
+      "publishedAt": "2026-10-23T05:00:00.000Z",
+      "date": "2026-10-23",
+      "durationSec": 1443,
+      "processedAt": "2026-10-29T00:30:06.740Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "published",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "10‑25% chance of AGI catastrophe",
+          "idea": "Dario, a former OpenAI VP, estimated the probability that AGI will cause catastrophic harm to civilization is between 10% and 25%.",
+          "why": "This concrete risk estimate contradicts the common belief that AGI risks are negligible, urging policymakers and investors to treat AI safety as a high‑stakes priority.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "I can't see any reason in principle why that couldn't happen. My chance that something goes really quite catastrophically wrong on the scale of human civilization might be somewhere between 10% and 25%.",
+          "t": 26,
+          "kind": "said",
+          "confidence": 0.95,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "AI empires use dual worst/best narrative to justify control",
+          "idea": "Companies frame AI progress as either catastrophic or utopian, using both extremes to argue that only they can safely guide the technology.",
+          "why": "By presenting a false dichotomy, firms manufacture fear and hope to secure regulatory and market dominance, sidelining independent oversight.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "They need that part of the myth in order to then say, and that’s why we need to be in control of the technology because that’s the only way that it’s going to go really, really well… the worst case lights out… the best case, we cure cancer…",
+          "t": 869,
+          "kind": "said",
+          "confidence": 0.93,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 3,
+          "headline": "AI companies pursue imperial agenda via land grabbing, labor, knowledge monopoly",
+          "idea": "OpenAI and similar firms systematically acquire data, exploit labor, and monopolize knowledge to maintain a technological and political monopoly.",
+          "why": "These practices concentrate power, reduce competition, and shape policy outcomes, making the industry resistant to external regulation.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "They lay claim to resources that are not their own… They are land grabbing… They contract hundreds of thousands of workers… They monopolize knowledge production…",
+          "t": 501,
+          "kind": "said",
+          "confidence": 0.92,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Brains as statistical models fuels scaling thesis",
+          "idea": "Ilya Sutskever and Jeff Hinton argue that human brains are giant statistical models, so building larger statistical engines will yield human‑level and beyond intelligence.",
+          "why": "This hypothesis drives the industry’s focus on scaling model size rather than exploring alternative architectures, shaping research agendas and investment decisions.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "Ilya’s hypothesis is that ultimately our brains are giant statistical models… they have such a strong conviction in the idea of building AI systems that are statistical models… If we build a bigger statistical engine than the human brain, then based on this chart, it will be more intelligent.",
+          "t": 179,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 0.83,
+          "repaired": false
+        },
+        {
+          "rank": 5,
+          "headline": "OpenAI intimidates critics with subpoenas and phishing",
+          "idea": "OpenAI employed a strategy of targeting critics through subpoenas and phishing to collect private information and stifle opposition.",
+          "why": "Legal and covert pressure tactics create a chilling effect on independent scrutiny, undermining transparency and public accountability.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "This was opening. I started subpoenaing some of its critics. … a campaign of intimidation, but also what appeared to be a campaign of phishing for more information …",
+          "t": 668,
+          "kind": "said",
+          "confidence": 0.88,
+          "grounding": 1,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "OpenAI uses access as a carrot to shape public discourse",
+          "idea": "The company dangles access for years, hoping that the mere promise will make journalists feel comfortable, thereby limiting critical coverage.",
+          "why": "By conditioning media cooperation on future access, OpenAI can steer narratives without overt censorship, subtly influencing public perception.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "…who have basically dangled the carrot of them coming here for like 18 months… If we just dangle it for long enough, then they will perform in the way that we want them to do… Our critics… will just be… pleasant about us…",
+          "t": 1277,
+          "kind": "interpretation",
+          "confidence": 0.88,
+          "grounding": 0.85,
+          "repaired": false
+        },
+        {
+          "rank": 7,
+          "headline": "Journalists should not play the 'access game' to maintain coverage",
+          "idea": "Reporters should prioritize truth over seeking corporate access, refusing to let the promise of future access dictate their coverage.",
+          "why": "Maintaining editorial independence ensures that critical stories about powerful AI firms reach the public, preserving democratic oversight.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"...you are supposed to report the truth, and you're always supposed to report in the interest of the public… I can continue to do the work. They don't need to open the front door for me.\"",
+          "t": 1381,
+          "kind": "recommendation",
+          "confidence": 0.85,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 0,
+      "audio": null,
+      "readSeconds": 111
     },
     {
       "id": "desk-8a02a076f2cc",
@@ -9074,167 +9209,25 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 180
-    },
-    {
-      "id": "desk-778dfb166595",
-      "sourceId": "desk",
-      "show": "Finance With Sharan",
-      "title": "Where Should Your Money Go in a Crisis? Stocks, Gold, Cash & Real Estate | Shashank Udupa | FWS",
-      "guest": "Shashank Udupa",
-      "topics": [
-        "asset allocation",
-        "crisis investing",
-        "commodities",
-        "strategic reserves",
-        "real estate"
-      ],
-      "summary": "In this episode Sharan and guest Shashank Udupa break down how investors should position their portfolios when markets are under stress, comparing the merits of stocks, gold, cash, and real estate. They also examine global commodity trends and strategic reserves, offering practical guidance for navigating crises.",
-      "url": "https://www.youtube.com/watch?v=wRBi0DT9dvY",
-      "type": "youtube",
-      "image": "",
-      "publishedAt": "2026-09-29T00:00:00.000Z",
-      "date": "2026-10-01",
-      "durationSec": 2564,
-      "processedAt": "2026-09-30T22:56:40.163Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "US LNG exports surged 108% in six months",
-          "idea": "The United States has become the world’s top LNG exporter, with its LNG shipments to Asia increasing by 108% over the past six months.",
-          "why": "Such a rapid expansion reshapes global energy supply chains, giving the U.S. new geopolitical leverage and affecting commodity‑linked currencies.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[7:00] US is one of the largest exporters of oil today. Number one, they are the largest exporter of LG today. Their exports to LG has gone up 108% in the last 6 months to Asian countries.",
-          "t": 17,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 0.88,
-          "repaired": true
-        },
-        {
-          "rank": 2,
-          "headline": "India creates 100‑day strategic oil reserve at Mangalore",
-          "idea": "India is building a dedicated strategic oil reserve of roughly 100 days of supply at the Mangalore refinery.",
-          "why": "Physical stockpiles provide a hedge against supply shocks and signal a shift toward tangible asset protection in a volatile geopolitical environment.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"Recently India gave a contract to the refinery in Mangalore that now we're going to stockpile strategic reserve\"",
-          "t": 812,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Physical oil holdings beat derivatives as hedge",
-          "idea": "Owning the physical commodity of oil offers stronger protection against price swings than using financial derivatives for hedging.",
-          "why": "Physical delivery removes counterparty risk and aligns exposure directly with the underlying asset, a crucial advantage in crisis markets.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"you can hedge whatever you want in financial products physical delivery physical asset is better than hedge\"",
-          "t": 817,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Russia dumped helium at 50% discount to fund war",
-          "idea": "Russia deliberately flooded the helium market at a 50% discount to raise quick funds for its war effort.",
-          "why": "This illustrates how states can weaponize commodity markets for financing conflicts, creating abrupt price distortions that affect downstream industries.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[8:19] they flooded the market at 50% discount rate right helium goes with respect to USD/MCF so they flooded it at 50% discount...",
-          "t": 499,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Double‑down on mutual funds during crises",
-          "idea": "Investors should continue buying mutual funds—and even increase purchases—rather than selling during short‑term geopolitical turbulence.",
-          "why": "Maintaining exposure captures long‑term market recovery while avoiding the detrimental timing risk of panic selling.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"If you're a mutual fund investor, continue what you're doing. Do not stop. In fact, double down is what I would suggest right now.\"",
-          "t": 1187,
-          "kind": "recommendation",
-          "confidence": 0.9,
-          "grounding": 0.83,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "China’s 100‑day oil stockpile buffers price wars",
-          "idea": "China keeps a 100‑day reserve of oil, allowing it to stay out of supply‑driven price wars during geopolitical tensions.",
-          "why": "Large strategic reserves give a country breathing room to weather shocks without resorting to market‑driven buying, enhancing energy security.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"China had physical oil stockpile that they had kept 100 days\"",
-          "t": 827,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "GCC arrival triggers real‑estate boom within seven years",
-          "idea": "When a Global City Cluster (GCC) establishes in a city, real‑estate prices begin rising within 2‑5 years and boom by year seven as workers seek housing near new offices.",
-          "why": "Understanding this timeline lets investors target locations poised for rapid appreciation tied to macro‑urban development trends.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"If any GCC comes to any city let’s say Bangalore or let’s say Hyderabad within seven years the real estate in that area will blast...\"",
-          "t": 2369,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.71,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Nifty could fall to 20‑21k in world‑war scenario",
-          "idea": "In a global war, the Indian Nifty 50 index could drop to roughly 20,000‑21,000 points, about a 10% decline from current levels.",
-          "why": "This scenario provides a concrete downside benchmark for stress‑testing portfolios and planning defensive allocations.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"If a world war comes, it'll go to 21,000. 20,000 also\"",
-          "t": 1547,
-          "kind": "interpretation",
-          "confidence": 0.84,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 115
     }
   ],
   "pending": [
     {
-      "id": "diary-of-a-ceo-422bed0b0ee6",
-      "title": "Most Replayed Moment: How AI Companies Are Gaslighting You - Karen Hao",
-      "show": "The Diary Of A CEO",
-      "url": "",
+      "id": "ali-abdaal-cf3c2e41452b",
+      "title": "I Tried Learning AI Video Editing in One Day",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=C0jOKDJtK9s",
       "takeaways": [],
-      "date": "2026-10-23",
+      "date": "2026-10-26",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "gunjanshouts-5b78b2a3029a",
+      "title": "AUTISM & ADHD Explained: Early Signs, Causes & Treatment | Dr. AM Reddy with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=PCkWqStqqLM",
+      "takeaways": [],
+      "date": "2026-10-25",
       "reason": "The operation was aborted due to timeout"
     },
     {
@@ -9258,19 +9251,32 @@
     }
   },
   "run": {
-    "at": "2026-10-28T01:29:00.141Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
-    "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "at": "2026-10-29T01:49:57.948Z",
+    "mode": "full",
+    "discovered": 1141,
+    "eligible": 3,
+    "processed": 1,
+    "skipped": 1138,
+    "failed": 2,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "process",
+        "id": "ali-abdaal-cf3c2e41452b",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-29T00:45:39.107Z"
+      },
+      {
+        "stage": "process",
+        "id": "gunjanshouts-5b78b2a3029a",
+        "message": "The operation was aborted due to timeout",
+        "at": "2026-10-29T01:49:57.914Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
-    "at": "2026-10-28T00:24:29.103Z",
+    "at": "2026-10-29T01:49:57.948Z",
     "processed": 1
   }
 }
