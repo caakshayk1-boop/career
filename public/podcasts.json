@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-30T02:02:37.438Z",
-  "today": "2026-10-30",
+  "generatedAt": "2026-10-31T00:37:00.371Z",
+  "today": "2026-10-31",
   "retentionDays": 30,
   "retentionConfigured": 30,
-  "trimmedForSize": 5,
+  "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-10-26",
@@ -183,13 +183,6 @@
         "desk-cdf51ffe185a",
         "desk-064b82c4608c",
         "desk-3b91fffcea5d"
-      ]
-    },
-    {
-      "date": "2026-10-01",
-      "label": "Thursday",
-      "episodeIds": [
-        "diary-of-a-ceo-933c2b95e138"
       ]
     }
   ],
@@ -9004,189 +8997,33 @@
       "rejectedCount": 1,
       "audio": null,
       "readSeconds": 81
-    },
-    {
-      "id": "diary-of-a-ceo-933c2b95e138",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Shawn Ryan: There's A Battle For Your Soul, It's Happening Right Now",
-      "guest": "Shawn Ryan",
-      "topics": [
-        "adrenaline addiction",
-        "psychedelics",
-        "military transition",
-        "personal alignment"
-      ],
-      "summary": "In this episode Shawn Ryan, former Navy SEAL and CIA contractor, discusses how the relentless chase for adrenaline can erode one's soul, the perilous experience he had with ibogaine psychedelics, and the sacrifices required for true personal alignment. He shares gritty insights from his elite military background and the cost of stepping away from profit-driven incentives to stay true to his values.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M32NTF4GFVXBCXNQ06T9D8EF/shawn_ryan.ep_cover.jpg",
-      "publishedAt": "2026-10-01T05:00:00.000Z",
-      "date": "2026-10-01",
-      "durationSec": 5959,
-      "processedAt": "2026-10-01T22:51:41.151Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "published",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "SEAL training pipeline spans roughly two years",
-          "idea": "A Navy SEAL spends about six months in BUD/S, then jump school, SEAL Qualification Training, and roughly 1.5 years with a team before any deployment.",
-          "why": "Knowing the true length and stages clarifies the extreme commitment required, countering any notion that elite forces are quickly assembled.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "You go through BUDS, which if you make it without getting hurt or without getting rolled back, that's six months. I didn't make it without rolling back, so I think I spent about nine months there. Then you go to jump school. Then you go to SQT, SEAL qualification training… Then you get your SEAL trident, and then you spend another year or two, year and a half training at your SEAL team before you ever even get the opportunity to deploy for the country.",
-          "t": 241,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Use surveillance detection routes to spot bugs",
-          "idea": "Moving through several unrelated locations (different cafés, hotels, etc.) in a short period lets you test whether you are being followed or monitored.",
-          "why": "A practical security technique that anyone traveling in hostile environments can apply to verify if they’re under surveillance.",
-          "action": "When you suspect surveillance, travel to three distinct venues in succession and observe if any follow you.",
-          "detail": "",
-          "passage": "",
-          "evidence": "I did that. I didn't pick anything up. Bought a couple of different tickets to different places and was out of there within 12 hours, never to go back. And when you got back to the United States, presumably, had you changed?",
-          "t": 2784,
-          "kind": "interpretation",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Ibogaine can cure addiction in a single dose",
-          "idea": "A one‑time Ibogaine session has been reported to eradicate addictive behaviors, though it can cause severe physical effects like paralysis and intense anxiety.",
-          "why": "Challenges the belief that addiction treatment is always multi‑session and highlights a potent, risky alternative.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "There are several cases where people do one dose of Ibogaine in a therapeutic setting and their addiction is cured.",
-          "t": 3112,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Break big goals into 1% daily steps",
-          "idea": "Divide large ambitions into tiny increments (about 1% of the total) each day, tracking progress in a diary to make seemingly impossible goals achievable.",
-          "why": "Provides a concrete, research‑backed habit loop that turns overwhelming objectives into manageable actions.",
-          "action": "Identify your biggest goal and write down the 1% action you can take tomorrow.",
-          "detail": "",
-          "passage": "",
-          "evidence": "...when you aim at the big, big, big goal, it can feel incredibly psychologically uncomfortable because it's kind of like being stood at the foot of Mount Everest and looking upwards. The way to accomplish your goals is by breaking them down into tiny tiny small steps. And we call this in our team, the 1%.",
-          "t": 4125,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Delete questionable interviews before release",
-          "idea": "If a guest provides dubious or potentially harmful claims (e.g., unfounded vaccine statements), the host should choose not to publish the episode to avoid spreading misinformation.",
-          "why": "Sets an editorial safeguard that protects listeners from dangerous falsehoods and preserves the creator’s credibility.",
-          "action": "Before publishing, have a subject‑matter expert review any contentious claims and pull the episode if they cannot be verified.",
-          "detail": "",
-          "passage": "",
-          "evidence": "I never released the episode. And I talked to lots of doctors. And it was a charged subject... I couldn't live with myself if I found out that guy was totally full of shit, feeding a bullshit narrative or whatever.",
-          "t": 2100,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Terminate interviews when guests spiral into conspiracy",
-          "idea": "If an interviewee cannot explain basic concepts (e.g., what the World Economic Forum is) and immediately launches into conspiracy talk, the host should end the conversation.",
-          "why": "Provides a clear red line for content creators to prevent platforming unfounded theories and protecting audience trust.",
-          "action": "Set a pre‑defined cue to cut off any interview that fails a basic knowledge check.",
-          "detail": "",
-          "passage": "",
-          "evidence": "He couldn't even tell me what it was. ... And then he would just start talking about all this conspiracy shit. ... So let's just end the interview right now.",
-          "t": 2152,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Speculative narratives differ from conspiracy theories",
-          "idea": "An expert labels 'speculative narratives' as ideas that may later prove true, distinguishing them from typical, unfounded conspiracy theories.",
-          "why": "Offers a nuanced framework for evaluating emerging claims, helping listeners separate plausible future‑looking speculation from baseless paranoia.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Annie Jacobson calls it speculative narratives instead of conspiracy theories. Speculative narratives.",
-          "t": 1041,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Exorcism priests test prayers to locate oppression source",
-          "idea": "Priests perform a series of prayers, observing reactions to identify which part of the ritual affects the perceived oppression, then eliminate ineffective prayers to pinpoint the cause.",
-          "why": "Reveals a systematic, empirical‑like method applied to spiritual distress, showing a repeatable process beyond anecdote.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "...they all think that it is oppression, oppression, not possession. ... We do a series of these and we'll wanna see if we get any reactions to certain prayers or certain parts of prayers. And if we do see a reaction to a certain part, then we can eliminate certain things and kind of dial in on what we think exactly is going on.",
-          "t": 4269,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Successful people make short‑term sacrifices against incentives",
-          "idea": "Interviews reveal a pattern: each successful individual once chose a path that conflicted with immediate rewards, which later led to greater long‑term success.",
-          "why": "Counters the bias toward short‑term gain, encouraging strategic patience for lasting achievement.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "...there is a moment when they made a decision that was against their near‑term incentives. And often, I mean this could be... people would think an idiot would do that, but consistently it leads to a better place.",
-          "t": 4967,
-          "kind": "said",
-          "confidence": 0.93,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Use secure DNS, VPN, and burner numbers for phone privacy",
-          "idea": "A bundled privacy app that includes a VPN, secure DNS to block data brokers, and disposable burner numbers protects users from phone‑based data theft and unwanted contacts.",
-          "why": "Provides a concrete toolset for individuals concerned about digital surveillance, moving beyond abstract advice.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "It has a VPN, it’s got secure DNS, and it has burner numbers. You walk around every day, you have all these apps. These apps are sucking information out of your phone.",
-          "t": 5696,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 165
     }
   ],
   "pending": [
+    {
+      "id": "desk-eea47041d491",
+      "title": "Outrageous Outings: Inside India's Most Unusual Defence Academy!",
+      "show": "Unfiltered by Samdish",
+      "url": "https://www.youtube.com/watch?v=6G6WkIYLlds",
+      "takeaways": [
+        "Harishankar Sharma is training some young people in Bharatpur to become ready for adulthood.",
+        "The episode emphasizes finding the extraordinary in ordinary lives rather than showcasing only extraordinary things."
+      ],
+      "date": "2026-10-31",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "desk-7b563e909891",
+      "title": "We Don't Need No Education : Subah Subah Sarkaari School Chalein?",
+      "show": "Unfiltered by Samdish",
+      "url": "https://www.youtube.com/watch?v=bDCS5ue4cSc",
+      "takeaways": [
+        "Education aims to form character.",
+        "Teachers work tirelessly behind the scenes, often unnoticed."
+      ],
+      "date": "2026-10-31",
+      "reason": "no candidate ideas found in the transcript"
+    },
     {
       "id": "acquired-52ca3862c160",
       "title": "Seinfeld",
@@ -9204,24 +9041,60 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 60
+      "ai": 59
     }
   },
   "run": {
-    "at": "2026-10-30T02:02:37.431Z",
+    "at": "2026-10-31T00:37:00.366Z",
     "mode": "full",
-    "discovered": 236,
+    "discovered": 220,
     "eligible": 2,
-    "processed": 1,
-    "skipped": 234,
-    "failed": 1,
+    "processed": 0,
+    "skipped": 218,
+    "failed": 2,
     "pruned": 0,
     "errors": [
       {
         "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-31T00:00:04.559Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-31T00:00:04.623Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-31T00:00:04.626Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-10-31T00:00:04.635Z"
+      },
+      {
+        "stage": "ingest",
         "id": "diary-of-a-ceo",
-        "message": "fetch failed (feeds.megaphone.fm/thediaryofaceo: ETIMEDOUT read ETIMEDOUT)",
-        "at": "2026-10-30T00:44:44.951Z"
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-10-31T00:02:49.709Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-eea47041d491",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-10-31T00:18:58.253Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-7b563e909891",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-10-31T00:37:00.331Z"
       }
     ],
     "estimatedCostUsd": 0

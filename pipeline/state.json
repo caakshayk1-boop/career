@@ -28715,8 +28715,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-02T01:44:49.283Z",
-      "updatedAt": "2026-10-02T01:45:04.421Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] 6G6WkIYLlds: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-10-31T00:18:58.253Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-7b563e909891": {
       "status": "FAILED",
@@ -28727,8 +28727,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-02T01:45:04.429Z",
-      "updatedAt": "2026-10-02T01:45:19.536Z",
-      "reason": "yt-dlp failed: ERROR: [youtube] bDCS5ue4cSc: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-"
+      "updatedAt": "2026-10-31T00:37:00.331Z",
+      "reason": "no candidate ideas found in the transcript"
     },
     "diary-of-a-ceo-e94f9565b6f8": {
       "status": "PUBLISHED",
