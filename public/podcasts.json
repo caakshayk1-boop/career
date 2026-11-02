@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T00:35:00.036Z",
+  "generatedAt": "2026-11-02T01:36:19.539Z",
   "today": "2026-11-02",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -8096,34 +8096,15 @@
     }
   },
   "run": {
-    "at": "2026-11-02T00:35:00.028Z",
-    "mode": "full",
-    "discovered": 240,
-    "eligible": 3,
+    "at": "2026-11-02T01:36:19.537Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 238,
-    "failed": 2,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
-        "at": "2026-11-01T23:57:57.498Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-8d63531c0bab",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-02T00:15:04.744Z"
-      },
-      {
-        "stage": "process",
-        "id": "ali-abdaal-2967c9574f97",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-02T00:34:20.043Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
