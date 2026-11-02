@@ -38059,6 +38059,42 @@
         "audio": null,
         "readSeconds": 119
       }
+    },
+    "desk-8d63531c0bab": {
+      "status": "FAILED",
+      "title": "EP-463 with foundational medicine & lifestyle expert Luke Coutinho premieres today at 5 PM IST",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=Qz_MLyi70XI",
+      "id": "desk-8d63531c0bab",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-01T23:57:57.682Z",
+      "updatedAt": "2026-11-02T00:15:04.744Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "ali-abdaal-2967c9574f97": {
+      "status": "FAILED",
+      "title": "Everything's Changing - 2026 Life Update",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=DrZNvkOgZRE",
+      "id": "ali-abdaal-2967c9574f97",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-02T00:15:04.765Z",
+      "updatedAt": "2026-11-02T00:34:20.043Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "desk-857c37264e85": {
+      "status": "SKIPPED",
+      "title": "“Under Akhilesh’s Rule, My Life Was In Danger, Even Though I Was A Sitting MP” Pankaj Chaudhary",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=YqlzJ7DtDzI",
+      "id": "desk-857c37264e85",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-02T00:34:20.071Z",
+      "updatedAt": "2026-11-02T00:35:00.025Z",
+      "reason": "transcript unusable: transcript is only 3673 characters"
     }
   }
 }
