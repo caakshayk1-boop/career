@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-02T23:51:39.831Z",
+  "generatedAt": "2026-11-03T03:31:29.050Z",
   "today": "2026-11-03",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -8182,40 +8182,15 @@
     }
   },
   "run": {
-    "at": "2026-11-02T23:51:39.824Z",
-    "mode": "full",
-    "discovered": 1141,
-    "eligible": 4,
-    "processed": 1,
-    "skipped": 1137,
-    "failed": 3,
+    "at": "2026-11-03T03:31:29.046Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-11-02T23:45:06.925Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-a2f39517c4a6",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-02T23:51:09.176Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-b0606ca6f075",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-02T23:51:23.668Z"
-      },
-      {
-        "stage": "process",
-        "id": "ali-abdaal-2967c9574f97",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-02T23:51:39.806Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
