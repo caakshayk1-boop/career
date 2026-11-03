@@ -28707,7 +28707,7 @@
       }
     },
     "desk-eea47041d491": {
-      "status": "FAILED",
+      "status": "NEEDS_REVIEW",
       "title": "Outrageous Outings: Inside India's Most Unusual Defence Academy!",
       "show": "Unfiltered by Samdish",
       "url": "https://www.youtube.com/watch?v=6G6WkIYLlds",
@@ -28715,8 +28715,9 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-10-02T01:44:49.283Z",
-      "updatedAt": "2026-10-31T00:18:58.253Z",
-      "reason": "yt-dlp failed: no stderr"
+      "updatedAt": "2026-11-03T23:49:15.194Z",
+      "reason": "only 3 learnings survived validation (floor is 4)",
+      "learningsFound": 3
     },
     "desk-7b563e909891": {
       "status": "FAILED",
@@ -38309,6 +38310,18 @@
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-02T23:51:09.186Z",
       "updatedAt": "2026-11-02T23:51:23.668Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-84cba36b33a9": {
+      "status": "FAILED",
+      "title": "What's Happening at SRFTI?",
+      "show": "Unfiltered by Samdish",
+      "url": "https://www.youtube.com/watch?v=2hiwvg4ccZg",
+      "id": "desk-84cba36b33a9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-03T23:45:15.138Z",
+      "updatedAt": "2026-11-03T23:45:22.589Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
