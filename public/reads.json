@@ -1,10 +1,81 @@
 {
  "version": 1,
- "generatedAt": "2026-10-20T01:20:49.101Z",
- "week": "2026-W43",
+ "generatedAt": "2026-11-03T03:46:01.393Z",
+ "week": "2026-W45",
  "shelfSize": 22,
- "readCount": 4,
+ "readCount": 5,
  "reads": [
+  {
+   "week": "2026-W45",
+   "id": "supercommunicators",
+   "title": "Supercommunicators",
+   "author": "Charles Duhigg",
+   "published": 2024,
+   "category": "smart",
+   "rating": 4.1,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-11-03T03:46:01.393Z",
+   "coreArgument": "Effective communication hinges on structuring conversations around three core levers—framing, pacing, and signaling intent—so the listener can process and act on the message.",
+   "hook": "During a quarterly review, a senior VP dismissed a data analyst’s recommendation, not because the numbers were wrong, but because the analyst presented the findings without aligning the narrative to the VP’s current priorities.",
+   "ideas": [
+    {
+     "apply": "Rewrite the executive summary of the next board pack to start with the top‑line impact, then list supporting data in descending order of relevance.",
+     "bookExample": "Duhigg recounts how a product manager at Google doubled stakeholder buy‑in by opening meetings with a concise ‘impact statement’ that tied the agenda to the company’s quarterly OKRs.",
+     "explain": "The idea is ‘Start with the impact’. The book defines impact as the concrete result the listener cares about. By leading with it, the speaker gives the audience a hook that frames the rest of the conversation. Duhigg shows that when listeners know the payoff up front, they allocate mental resources to the details that follow.",
+     "heading": "Start with the impact",
+     "tradeoff": "May oversimplify complex issues, risking loss of nuance.",
+     "yourWeek": "When you send the month‑end board pack, begin the email with a one‑sentence headline: ‘Profit margin improved 3.2 % YoY after renegotiating supplier contracts.’ The rest of the pack then provides the variance analysis, supporting the headline.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "During the next forecast meeting, pause after presenting each major assumption and ask the commercial lead to restate it in their own words.",
+     "bookExample": "The author describes a sales director at IBM who used ‘check‑back pauses’ to surface hidden objections, cutting forecast error by 15 %.",
+     "explain": "The idea is ‘Use check‑back pauses’. A check‑back pause is a brief silence after a key point, prompting the listener to reflect or paraphrase. Duhigg argues that this forces the other party to internalise the message and reveal misunderstandings before they snowball.",
+     "heading": "Check‑back pauses",
+     "tradeoff": "Adds time to meetings; can feel condescending if overused.",
+     "yourWeek": "In your weekly variance commentary, after you explain a cost overrun, pause and say, ‘What does that mean for your team’s budget?’ The commercial manager’s response will surface any disagreement early.",
+     "bookExampleHasFigure": true
+    },
+    {
+     "apply": "Create a one‑page ‘intent map’ before every interview, listing the three outcomes you want the candidate to demonstrate.",
+     "bookExample": "Duhigg cites a hiring panel at Microsoft that reduced interview bias by 20 % after mapping desired behaviors onto each question.",
+     "explain": "The idea is ‘Signal intent clearly’. Signalling intent means making the purpose of each conversational turn explicit. The book shows that when participants know what the speaker is trying to achieve, they adjust their contributions accordingly, leading to more focused dialogue.",
+     "heading": "Signal intent clearly",
+     "tradeoff": "Preparation overhead; risk of appearing scripted.",
+     "yourWeek": "Before the finance manager interview, write: 1) test analytical rigor, 2) gauge cultural fit, 3) assess stakeholder management. Phrase each question to reflect that intent, e.g., ‘Walk me through a time you convinced a non‑finance leader to change a budget.’",
+     "bookExampleHasFigure": true
+    },
+    {
+     "apply": "In the next budget negotiation, pre‑emptively state the ‘decision threshold’ – the minimum change you need to approve the request.",
+     "bookExample": "",
+     "explain": "The idea is ‘Declare decision thresholds’. A decision threshold is the smallest shift in variables that would trigger a different outcome. By stating it, you give the other side a clear target and prevent endless back‑and‑forth.",
+     "heading": "Declare decision thresholds",
+     "tradeoff": "May limit flexibility; opponent could lock you out of a better deal.",
+     "yourWeek": "When commercial heads ask for a 5 % increase in marketing spend, tell them, ‘If you can show a 2 % lift in same‑store sales, I can approve an extra 3 %.’",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Add a ‘recap‑and‑next‑step’ slide at the end of every forecast cycle presentation.",
+     "bookExample": "The book details how a finance team at PepsiCo cut follow‑up emails by 40 % after institutionalising a recap slide that listed actions, owners, and deadlines.",
+     "explain": "The idea is ‘Close with a concise recap’. A recap bundles the key points and assigns responsibility, turning discussion into action. Duhigg argues that without a clear close, decisions linger in ambiguity.",
+     "heading": "Close with a concise recap",
+     "tradeoff": "Requires discipline to track actions; risk of superficial check‑boxes.",
+     "yourWeek": "After the quarterly forecast review, slide three lists: 1) Adjust SG&A forecast by 1 %, owner = you; 2) Validate vendor rebates, owner = procurement lead; 3) Update board pack by Friday, owner = analyst.",
+     "bookExampleHasFigure": true
+    }
+   ],
+   "limits": "The case studies focus on large, data‑rich firms in the US tech sector; the tactics may need scaling for smaller teams or different cultural contexts, such as the hierarchical norms common in parts of the Middle East.",
+   "misreading": "‘Talk less, listen more’ – the book does not claim silence alone drives success; it stresses structured pauses combined with clear framing.",
+   "oneThing": "Start every communication with a single‑sentence impact statement, because it instantly gives the listener a frame for everything that follows.",
+   "readNext": [
+    "Never Split the Difference by Chris Voss – adds negotiation tactics rooted in tactical empathy.",
+    "The Making of a Manager by Julie Zhuo – offers practical frameworks for aligning team conversations with performance goals.",
+    "Thinking, Fast and Slow by Daniel Kahneman – explains the cognitive biases that underlie why the book’s levers work."
+   ],
+   "verdict": "skim",
+   "whoFor": "Senior finance professionals who routinely produce reports and lead cross‑functional meetings will find useful tools; junior analysts seeking quick fixes should skip it."
+  },
   {
    "week": "2026-W43",
    "id": "psychology-of-money",
