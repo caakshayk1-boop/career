@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-05T02:13:28.654Z",
+  "generatedAt": "2026-11-05T02:36:32.035Z",
   "today": "2026-11-05",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -7918,28 +7918,15 @@
     }
   },
   "run": {
-    "at": "2026-11-05T02:13:28.641Z",
-    "mode": "full",
-    "discovered": 1145,
-    "eligible": 4,
-    "processed": 2,
-    "skipped": 1141,
-    "failed": 2,
+    "at": "2026-11-05T02:36:32.033Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "process",
-        "id": "ali-abdaal-2967c9574f97",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-05T01:19:02.196Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-bb9b0d89fd5f",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-05T01:34:38.135Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
