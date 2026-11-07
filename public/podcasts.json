@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-07T02:03:37.659Z",
-  "today": "2026-11-07",
+  "generatedAt": "2026-11-07T23:50:20.264Z",
+  "today": "2026-11-08",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-11-06",
-      "label": "Yesterday",
+      "label": "Friday",
       "episodeIds": [
         "diary-of-a-ceo-162a3ffe77cf",
         "desk-bb9b0d89fd5f"
@@ -182,13 +182,6 @@
       "episodeIds": [
         "gunjanshouts-8ec427134d4f",
         "desk-b70e46be3c50"
-      ]
-    },
-    {
-      "date": "2026-10-09",
-      "label": "Friday",
-      "episodeIds": [
-        "diary-of-a-ceo-60011ba59e06"
       ]
     }
   ],
@@ -8024,142 +8017,6 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 131
-    },
-    {
-      "id": "diary-of-a-ceo-60011ba59e06",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Most Replayed Moment: AI Is Changing How Teams Work Forever",
-      "guest": "Nick Hanauer, Daniel Priestley",
-      "topics": [
-        "artificial intelligence",
-        "future of work",
-        "entrepreneurship",
-        "economy",
-        "policy"
-      ],
-      "summary": "In this episode, billionaire entrepreneur Nick Hanauer and author Daniel Priestley debate how AI will reshape the future of work, examining both the threats of mass unemployment and the potential for new human-centered value. They discuss how AI can elevate entry‑level roles, accelerate competition, enable rapid scaling for SaaS startups, and propose policy ideas like a sovereign‑wealth‑fund model. The conversation balances practical business insights with broader economic implications, making it valuable for listeners interested in AI’s impact on jobs and entrepreneurship.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M1KGEWKZNC7WRB5CY66CKQH4/square_cover_image.jpg",
-      "publishedAt": "2026-10-09T05:00:00.000Z",
-      "date": "2026-10-09",
-      "durationSec": 1236,
-      "processedAt": "2026-10-11T15:43:12.687Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "published",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "AI can turn entry‑level automation into higher‑value roles",
-          "idea": "When AI handles routine tasks like data entry or cold calling, workers can be reskilled to focus on high‑impact activities such as closing sales, interpreting AI insights, or managing client relationships, increasing their value.",
-          "why": "Shows a concrete shift in workforce composition that leaders can act on now, turning low‑skill jobs into strategic roles.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"We've hired some entry level people who are augmented by AI, so they become more valuable because of AI… We use it with our marketing and we end up hiring people who can actually have those final conversations with people\"",
-          "t": 384,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "AI accelerates competition via cheaper or better options",
-          "idea": "A company can outperform rivals by either using AI to drastically cut costs, making its offering cheaper, or by leveraging AI to deliver superior outcomes, turning one skilled worker into the productivity of five without eliminating the job.",
-          "why": "Provides a clear decision rule for firms choosing between automation and augmentation, highlighting a strategic lever for market advantage.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"One person with good AI tools may be able to do the job of five… you could eliminate that job or you could keep that person, give them the right tools and out-compete your competitors\"",
-          "t": 450,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Small SaaS ventures can scale instantly with AI‑driven tools",
-          "idea": "An entrepreneur can build a niche AI application in months, attract thousands via a waiting list, and grow to a ten‑person team without billions in capital, demonstrating that AI lowers the barrier to entry for scalable software.",
-          "why": "Offers a realistic, repeatable business model that listeners can emulate to launch capital‑efficient startups.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"They launched a waiting list for this. They got 5,500 people to join the waiting list… and now they're hiring a team of 10 people… this tiny little SaaS opportunity is suddenly possible because of AI\"",
-          "t": 653,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Use a sovereign‑wealth‑fund model to recycle AI value",
-          "idea": "Governments could capture a fixed share (e.g., 50%) of the economic value generated by AI firms and reinvest it as a sovereign wealth fund, funding public goods or cushioning workers displaced by automation.",
-          "why": "Presents a specific, high‑impact policy idea that could reshape how societies share AI‑driven wealth.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"Creating a sovereign wealth fund with 50% of the value created by AI and recycling that into, I think it's unclear exactly how those benefits should be recycled… trying to find a way to make some of that value a cushion for the disruption\"",
-          "t": 238,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Hiring depth in the AI rabbit hole as a predictor of success",
-          "idea": "When recruiting for AI roles, asking candidates how deeply they have explored AI is a strong signal of future performance; those who are deeply engaged should be hired.",
-          "why": "Provides a reusable hiring framework that can improve talent selection in fast‑moving AI teams.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "In my hiring, I ask the question, how deep are you in the AI rabbit hole? And anyone who says, oh, a lot, I’m like, okay, join the team.",
-          "t": 1144,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Close tax loopholes to force Amazon‑scale firms to pay fair tax",
-          "idea": "Large companies like Amazon avoid taxes through loopholes; closing these loopholes would ensure they contribute their fair share and reduce tax inequality.",
-          "why": "Offers a concrete, counterintuitive policy lever that could address public finance imbalances caused by tech giants.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "They do not accurately reflect the value that we give them, they don’t return equal value. So you’re saying increase the taxes on companies like Amazon. You both agree? Well, Amazon is very successfully avoiding taxes.",
-          "t": 1002,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.94,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "AI teammates free humans for high‑judgment work",
-          "idea": "Tools like Asana’s AI teammate can handle routine tasks, letting people focus on decisions that require judgment, thereby increasing overall productivity.",
-          "why": "Shows a practical workflow change that listeners can adopt immediately to boost efficiency.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "With Asana, their AI teammate can keep routine work moving while decisions that need judgment stay with people.",
-          "t": 1210,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 129
     }
   ],
   "pending": [
@@ -8180,19 +8037,44 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 53
+      "ai": 52
     }
   },
   "run": {
-    "at": "2026-11-07T02:03:37.656Z",
-    "mode": "republish",
-    "discovered": 0,
+    "at": "2026-11-07T23:50:20.249Z",
+    "mode": "full",
+    "discovered": 1127,
     "eligible": 0,
     "processed": 0,
-    "skipped": 0,
+    "skipped": 1127,
     "failed": 0,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-07T23:50:10.024Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-07T23:50:11.328Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-07T23:50:11.482Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-07T23:50:11.630Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
