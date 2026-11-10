@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-10T03:15:02.003Z",
+  "generatedAt": "2026-11-10T04:12:02.817Z",
   "today": "2026-11-10",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -7771,58 +7771,15 @@
     }
   },
   "run": {
-    "at": "2026-11-10T03:15:01.995Z",
-    "mode": "full",
-    "discovered": 220,
-    "eligible": 2,
+    "at": "2026-11-10T04:12:02.815Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 218,
-    "failed": 2,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "dr-pal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-11-10T02:22:23.669Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "gunjanshouts",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-11-10T02:22:23.671Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "luke-coutinho",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-11-10T02:22:23.672Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "ali-abdaal",
-        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
-        "at": "2026-11-10T02:22:23.674Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "fetch failed (feeds.megaphone.fm/thediaryofaceo: ENOTFOUND getaddrinfo ENOTFOUND feeds.megaphone.fm)",
-        "at": "2026-11-10T03:00:51.040Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-db8db466be4c",
-        "message": "yt-dlp failed: ERROR: [youtube] oq5odXfokrM: Unable to download API page: HTTPSConnection(host='www.youtube.com', port=443): Failed to resolve 'www.youtube.com' ([Errno 8] nodename nor servname provided, or not know",
-        "at": "2026-11-10T03:01:22.513Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-93ab8b1da194",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-10T03:15:01.948Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
