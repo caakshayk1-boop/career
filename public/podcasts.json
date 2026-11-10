@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-09T01:46:41.793Z",
-  "today": "2026-11-09",
+  "generatedAt": "2026-11-10T03:15:02.003Z",
+  "today": "2026-11-10",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
@@ -174,14 +174,6 @@
       "label": "Monday",
       "episodeIds": [
         "diary-of-a-ceo-a494a627f603"
-      ]
-    },
-    {
-      "date": "2026-10-11",
-      "label": "Sunday",
-      "episodeIds": [
-        "gunjanshouts-8ec427134d4f",
-        "desk-b70e46be3c50"
       ]
     }
   ],
@@ -7732,294 +7724,32 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 225
-    },
-    {
-      "id": "gunjanshouts-8ec427134d4f",
-      "sourceId": "gunjanshouts",
-      "show": "GunjanShouts",
-      "title": "Can Homeopathy Treat Cancer? Doctor Explains | Dr Gauri Shankar with GunjanShouts",
-      "guest": "Dr Gauri Shankar",
-      "topics": [
-        "cancer",
-        "homeopathy",
-        "early detection",
-        "integrative medicine"
-      ],
-      "summary": "In this episode, Dr Gauri Shankar, a classical homeopath, discusses how cancer develops, early warning signs, and lifestyle factors that influence risk. He evaluates the scientific evidence surrounding homeopathic treatments for cancer and suggests integrating them with conventional medicine. The conversation also covers the limitations of homeopathy and practical screening advice for early detection.",
-      "url": "https://www.youtube.com/watch?v=v0x81hbyuVM",
-      "type": "youtube",
-      "image": "https://i3.ytimg.com/vi/v0x81hbyuVM/hqdefault.jpg",
-      "publishedAt": "2026-10-11T05:52:12.000Z",
-      "date": "2026-10-11",
-      "durationSec": 5681,
-      "processedAt": "2026-10-11T15:43:13.751Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Stage zero is 100% curable",
-          "idea": "The speaker claims that the pre‑cancerous or stage‑zero phase of cancer, characterized by continuous irritation, is fully curable if caught early.",
-          "why": "Recognizing cancer at the earliest, reversible stage offers a chance for complete recovery, contrary to the belief that all cancers are inevitably progressive.",
-          "action": "Seek medical evaluation promptly if persistent irritation of any organ lasts months.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[14:51] Stage zero of cancer is 100% curable.",
-          "t": 891,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Constant irritation signals stage zero",
-          "idea": "Persistent, organ‑specific irritation lasting months or years is the hallmark sign that cancer is entering the stage‑zero (pre‑cancer) phase.",
-          "why": "Most early‑stage cancers masquerade as common ailments; identifying this pattern enables earlier diagnostic work‑up.",
-          "action": "Monitor any chronic irritation (e.g., throat soreness, mouth ulcers, skin lesions) and have it evaluated if it persists beyond a few weeks.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[13:47] Irritation on some specific part. Constant irritation.",
-          "t": 827,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Regular CBC and panels catch early cancers",
-          "idea": "Semi‑annual complete blood counts, plus lipid, liver, kidney, thyroid, and HPV tests, create a repeatable health‑screening schedule that can flag early cancers.",
-          "why": "A structured lab regimen provides objective data points for early detection, especially for cancers that lack obvious symptoms.",
-          "action": "Schedule CBC every six months and add annual lipid, LFT, KFT, thyroid, and HPV screenings to your health routine.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[16:19] First of all, you should get a CBC every six months. ... For that we need to get a lipid profile done. ... LFT should be done ... KFT ... Thyroid function tests ... HPV test should be done.",
-          "t": 979,
-          "kind": "interpretation",
-          "confidence": 0.6,
-          "grounding": 0.6,
-          "repaired": true
-        },
-        {
-          "rank": 4,
-          "headline": "Normal test results don’t guarantee cancer‑free status",
-          "idea": "A normal panel of screening tests lowers risk but never fully eliminates the possibility of cancer.",
-          "why": "Understanding the limits of screening prevents false reassurance and encourages continued vigilance for symptoms.",
-          "action": "Even with normal labs, stay alert to persistent symptoms and follow up with targeted imaging if needed.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[18:15] If it comes back normal, does it guarantee that that person doesn't have cancer? ... There is no guarantee of anything.",
-          "t": 1095,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 0.9,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Psychological stress suppresses immunity and raises cancer risk",
-          "idea": "Emotional conflict, identity crises, and chronic negative emotions can weaken immune function, creating conditions where cancer may develop.",
-          "why": "Links mental health to physiological cancer risk, highlighting a preventive angle often omitted from standard medical advice.",
-          "action": "Practice stress‑reduction techniques (mindfulness, counseling) especially during major life transitions.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[26:24] Negative Emotions immunosuppress your lowers immunity and when our immunity falls, then disease can occur ... identity crisis ... leads to cancer.",
-          "t": 1584,
-          "kind": "interpretation",
-          "confidence": 0.8,
-          "grounding": 0.69,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Integrate allopathy with homeopathy for cancer care",
-          "idea": "The speaker recommends a joint mission: use allopathic treatment for urgent or serious conditions, then follow with homeopathic therapy for long‑term healing.",
-          "why": "Provides a pragmatic framework for clinicians who want to combine modalities without abandoning standard emergency care.",
-          "action": "If diagnosed with cancer, ensure any acute surgical or chemotherapeutic interventions are completed before adding homeopathic adjuncts.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[36:04] We do a joint mission. ... If there is a serious condition, it is an emergency. ... Then you go to allopathic management. Take. So this is our joint mission.",
-          "t": 2164,
-          "kind": "recommendation",
-          "confidence": 0.6,
-          "grounding": 0.8,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Surgery often fails if root cause isn’t addressed",
-          "idea": "Tumors can regrow after surgical removal because the underlying nutritional or energetic supply to the tissue isn’t corrected.",
-          "why": "Challenges the assumption that excision alone is curative, urging clinicians to consider systemic factors post‑operatively.",
-          "action": "After tumor resection, assess and modify patient’s diet, metabolism, and micro‑environment to reduce recurrence risk.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[45:19] If we remove it from outside, will it have oxygen? Did we reduce the supply? ... It will regrow. And this is what happens.",
-          "t": 2719,
-          "kind": "said",
-          "confidence": 0.55,
-          "grounding": 0.75,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Homeopathy claims remedies for suicidal thoughts",
-          "idea": "The guest asserts that there exists a specific homeopathic medicine that can eliminate extreme self‑harm ideation.",
-          "why": "If true, this counters the common view that mental health crises require pharmacological or psychotherapeutic interventions, raising questions about alternative treatment pathways.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[33:12] There is a different medicine for feeling like dying. the desire to die by drowning ... There is a separate medicine for feeling like dying.",
-          "t": 1992,
-          "kind": "said",
-          "confidence": 0.7,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Homeopathic medicines have no side effects due to dilution",
-          "idea": "Because homeopathic remedies are highly diluted, they are presented as non‑crude substances that produce no measurable adverse reactions.",
-          "why": "Contrasts with allopathic drugs’ side‑effect profiles, a point frequently used in debates about safety of alternative therapies.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[34:34] The material is not a crude substance. It has no side effects. This medicine ... works equally on emotions and pathology.",
-          "t": 2074,
-          "kind": "said",
-          "confidence": 0.65,
-          "grounding": 0.91,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 152
-    },
-    {
-      "id": "desk-b70e46be3c50",
-      "sourceId": "desk",
-      "show": "Groww",
-      "title": "5 Fastest Growing Auto Stocks in India",
-      "guest": "",
-      "topics": [
-        "auto stocks",
-        "india",
-        "growth strategies",
-        "financial analysis"
-      ],
-      "summary": "The episode reviews the five fastest‑growing automobile stocks in India, breaking down each company's recent performance, strategic moves, and financial health. Listeners get clear insights into revenue growth, capacity expansions, demergers, and cash‑flow risks that differentiate these firms. The discussion is data‑driven, helping investors gauge which auto stocks may offer the strongest upside.",
-      "url": "https://www.youtube.com/watch?v=9SeILDrFBcQ",
-      "type": "youtube",
-      "image": "",
-      "publishedAt": "2026-10-08T00:00:00.000Z",
-      "date": "2026-10-11",
-      "durationSec": 823,
-      "processedAt": "2026-10-11T15:43:13.796Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "ASK's organic revenue growth is ~25% after pass‑through",
-          "idea": "ASK reported 52% revenue growth, but 33.4% of that was a pass‑through of rising aluminium prices and a 6.6% negative hit from closing a low‑margin wheel business, leaving true organic revenue growth at around 25%.",
-          "why": "Separating price‑pass‑through from organic growth reveals the real business momentum, preventing over‑optimistic valuations based on inflated revenue figures.",
-          "action": "Adjust valuation models to subtract known pass‑through percentages and focus on underlying growth rates.",
-          "detail": "",
-          "passage": "",
-          "evidence": "There was a pass-through impact of around 33.4% on revenue due to rising aluminium prices ... underlying revenue growth was around 25.3% ...",
-          "t": 406,
-          "kind": "said",
-          "confidence": 0.93,
-          "grounding": 0.92,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Electra's share slump reflects execution risk",
-          "idea": "Electra's stock fell about 48% from its all‑time high as the market priced in high expectations that were not met due to delayed deliveries and weak FY24 sales, dropping the PE from 185x to around 53x.",
-          "why": "A sharp price correction signals that order books alone don’t guarantee valuation; execution risk must be factored into investment theses.",
-          "action": "Screen for companies with large order backlogs but recent delivery delays and adjust target prices accordingly.",
-          "detail": "",
-          "passage": "",
-          "evidence": "the stock is down roughly 48% from its all-time high and the PE has also fallen from 185x to around 53x",
-          "t": 679,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Precall demerges 61% revenue unit to attract partners",
-          "idea": "Precall is spinning off its driver‑information and connected‑vehicle business, which accounts for roughly 61 % of revenue, into a new entity (Precall Autotech) to draw in specialized capital and technology partners.",
-          "why": "A demerger can unlock value by allowing each unit to focus on its growth drivers and appeal to investors with specific sector expertise.",
-          "action": "Monitor the demerged entity’s capital raises and partnership announcements for early signals of value creation.",
-          "detail": "",
-          "passage": "",
-          "evidence": "Precall is demerging its driver information and connected vehicle sessions business, which contributes roughly 61% of revenue, into Precall Autotech",
-          "t": 375,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 0.92,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Electra faces cash‑flow risk from state transport payments",
-          "idea": "Because many of Electra’s customers are state transport bodies, payment delays can strain working capital and make cash flow volatile.",
-          "why": "Identifying a concrete cash‑flow bottleneck helps investors assess the sustainability of growth and the need for liquidity buffers.",
-          "action": "Check the proportion of receivables owed to government entities and model delayed payment scenarios.",
-          "detail": "",
-          "passage": "",
-          "evidence": "Olettra's customers also include state transport bodies. Where payment delays can stretch working capital and make cash flow volatile",
-          "t": 742,
-          "kind": "said",
-          "confidence": 0.87,
-          "grounding": 0.93,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Bajaj Auto expands capacity to meet 37% sales jump",
-          "idea": "To support a 37% standalone sales growth in Q1FY27, Bajaj Auto is increasing annual production capacity from 7 million to 9 million units – a 25% boost.",
-          "why": "Capacity expansion is a concrete operational commitment that validates the growth narrative and reduces the risk of supply constraints.",
-          "action": "Track capacity utilisation metrics and compare them to sales growth targets in quarterly updates.",
-          "detail": "",
-          "passage": "",
-          "evidence": "It is taking annual capacity from 7 million to 9 million units",
-          "t": 583,
-          "kind": "said",
-          "confidence": 0.86,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Lumax Auto maintains 1x debt‑to‑equity and 5x interest coverage",
-          "idea": "The company carries total borrowings of ~₹1231 cr (including lease liabilities), giving a debt‑to‑equity ratio of about 1 X and an interest coverage of ~5×.",
-          "why": "Leverage levels directly influence a firm’s risk profile and its ability to sustain growth, especially if margins tighten or borrowing costs rise.",
-          "action": "Include debt‑to‑equity and interest‑coverage ratios in screening criteria for auto sector investments.",
-          "detail": "",
-          "passage": "",
-          "evidence": "total borrowings including lease liabilities are around 1231 cr and debt to equity is around 1X ... interest coverage is still around five times",
-          "t": 125,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.69,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 131
     }
   ],
   "pending": [
+    {
+      "id": "desk-db8db466be4c",
+      "title": "Great time for Indian Markets? (after Trump's loss) | Akshat Shrivastava",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=oq5odXfokrM",
+      "takeaways": [
+        "They discuss the potential consequences of the US mid‑term elections.",
+        "They state that the content is not investment advice and encourage personal due diligence."
+      ],
+      "date": "2026-11-10",
+      "reason": "yt-dlp failed: ERROR: [youtube] oq5odXfokrM: Unable to download API page: HTTPSConnection(host='www.youtube.com', port=443): Failed to resolve 'www.youtube.com'"
+    },
+    {
+      "id": "desk-93ab8b1da194",
+      "title": "Invest....(but where?). Everything is falling: Gold, Nifty, AI Stocks",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=_-QSrevxzuU",
+      "takeaways": [
+        "was a turbulent year for retail investors, featuring a rally in equities and commodities followed by a broad correction."
+      ],
+      "date": "2026-11-10",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
     {
       "id": "acquired-52ca3862c160",
       "title": "Seinfeld",
@@ -8037,19 +7767,62 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 52
+      "ai": 50
     }
   },
   "run": {
-    "at": "2026-11-09T01:46:41.790Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-11-10T03:15:01.995Z",
+    "mode": "full",
+    "discovered": 220,
+    "eligible": 2,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 218,
+    "failed": 2,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-10T02:22:23.669Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-10T02:22:23.671Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-10T02:22:23.672Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-10T02:22:23.674Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "fetch failed (feeds.megaphone.fm/thediaryofaceo: ENOTFOUND getaddrinfo ENOTFOUND feeds.megaphone.fm)",
+        "at": "2026-11-10T03:00:51.040Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-db8db466be4c",
+        "message": "yt-dlp failed: ERROR: [youtube] oq5odXfokrM: Unable to download API page: HTTPSConnection(host='www.youtube.com', port=443): Failed to resolve 'www.youtube.com' ([Errno 8] nodename nor servname provided, or not know",
+        "at": "2026-11-10T03:01:22.513Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-93ab8b1da194",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-10T03:15:01.948Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {

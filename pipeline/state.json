@@ -39175,6 +39175,30 @@
         "audio": null,
         "readSeconds": 182
       }
+    },
+    "desk-db8db466be4c": {
+      "status": "FAILED",
+      "title": "Great time for Indian Markets? (after Trump's loss) | Akshat Shrivastava",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=oq5odXfokrM",
+      "id": "desk-db8db466be4c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-10T03:00:51.145Z",
+      "updatedAt": "2026-11-10T03:01:22.513Z",
+      "reason": "yt-dlp failed: ERROR: [youtube] oq5odXfokrM: Unable to download API page: HTTPSConnection(host='www.youtube.com', port=443): Failed to resolve 'www.youtube.com' ([Errno 8] nodename nor servname provided, or not know"
+    },
+    "desk-93ab8b1da194": {
+      "status": "FAILED",
+      "title": "Invest....(but where?). Everything is falling: Gold, Nifty, AI Stocks",
+      "show": "Akshat Shrivastava",
+      "url": "https://www.youtube.com/watch?v=_-QSrevxzuU",
+      "id": "desk-93ab8b1da194",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-10T03:01:22.525Z",
+      "updatedAt": "2026-11-10T03:15:01.950Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }
