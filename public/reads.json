@@ -1,10 +1,81 @@
 {
  "version": 1,
- "generatedAt": "2026-11-03T03:46:01.393Z",
- "week": "2026-W45",
+ "generatedAt": "2026-11-10T04:24:30.766Z",
+ "week": "2026-W46",
  "shelfSize": 22,
- "readCount": 5,
+ "readCount": 6,
  "reads": [
+  {
+   "week": "2026-W46",
+   "id": "anxious-generation",
+   "title": "The Anxious Generation",
+   "author": "Jonathan Haidt",
+   "published": 2024,
+   "category": "psychology",
+   "rating": 4.3,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-11-10T04:24:30.766Z",
+   "coreArgument": "The rise of digital communication and parental anxiety has reshaped children’s emotional development, leading to higher rates of anxiety and reduced resilience.",
+   "hook": "During a school meeting, a teacher asks why half the class flinches at a routine fire drill, while a decade earlier the same students would have laughed it off.",
+   "ideas": [
+    {
+     "apply": "Ask your child to spend a full weekend without any screen time and note their mood before and after.",
+     "bookExample": "",
+     "explain": "The book argues that early, unsupervised screen exposure reduces opportunities for face‑to‑face interaction, which are crucial for learning emotional regulation. Without practicing reading facial cues and tone, children rely on text cues that are ambiguous, building a habit of anxiety about misinterpretation.",
+     "heading": "Screen limits boost emotional regulation",
+     "tradeoff": "Enforcing screen bans can cause short‑term conflict and may limit access to educational apps.",
+     "yourWeek": "During your month‑end close, you notice your 4‑year‑old daughter constantly asking you to check her tablet for videos. You set Saturday as a screen‑free day, prepare puzzles and board games, and after dinner you find she is calmer and engages more with you, making it easier to focus on the financial statements.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Schedule a weekly 30‑minute “talk‑time” where you and your child discuss a recent disappointment and label the feeling.",
+     "bookExample": "",
+     "explain": "Naming emotions gives children a vocabulary to describe internal states, which reduces the tendency to catastrophize. The practice creates a mental shortcut: when a stressor appears, the child can label it and step back, lowering physiological arousal.",
+     "heading": "Emotion labeling reduces catastrophizing",
+     "tradeoff": "Consistent practice requires time that busy parents may find hard to carve out.",
+     "yourWeek": "Before your board‑pack presentation, you spend 30 minutes with your son after school, asking how his soccer loss felt and naming the disappointment, which helps him calm down and lets you finish the variance commentary without interruption.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Implement a “pause before reply” rule for text messages at home: wait 2 minutes before responding to a child's message.",
+     "bookExample": "",
+     "explain": "Immediate responses train a reflexive anxiety loop: the child expects instant validation, and delay feels like rejection, heightening stress. A brief pause breaks this loop, giving both parties time to process emotions before reacting.",
+     "heading": "Delay replies to break validation loop",
+     "tradeoff": "Kids may feel ignored and test boundaries, requiring clear explanation of the rule.",
+     "yourWeek": "When a junior analyst texts you a last‑minute forecast tweak at 5 pm, you wait two minutes before replying, using the pause to check the numbers, which avoids a rushed decision and models calm response for your own child who also texts you about a school project.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Conduct a quarterly “stress‑audit” with your finance team, mapping each recurring deadline to its anxiety triggers and assigning a mitigation step.",
+     "bookExample": "",
+     "explain": "By making anxiety visible as a data point, organizations can allocate resources to reduce it, similar to how they manage financial risk. The audit turns a vague feeling into a concrete item that can be budgeted for, such as extra staffing or process automation.",
+     "heading": "Treat anxiety as a measurable risk",
+     "tradeoff": "The audit adds a meeting and data‑collection workload, which can feel bureaucratic if not tied to clear outcomes.",
+     "yourWeek": "You add a short line in the month‑end close checklist asking each team member to note one stress point; the resulting list shows the variance commentary deadline is the biggest trigger, prompting you to start the draft two days earlier.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Replace one weekly “quick‑fix” email with a short video call to discuss the issue in real time.",
+     "bookExample": "",
+     "explain": "Live voice interaction restores the missing non‑verbal cues lost in text, allowing participants to gauge tone and intent, which reduces misinterpretation and the anxiety that follows.",
+     "heading": "Live calls curb misinterpretation anxiety",
+     "tradeoff": "Scheduling live calls can be harder across time zones and may interrupt deep work.",
+     "yourWeek": "Instead of emailing the commercial team about a budget variance, you set a 15‑minute call, hearing their concerns directly, which prevents a tense email exchange and lets you finalize the board pack more smoothly.",
+     "bookExampleHasFigure": false
+    }
+   ],
+   "limits": "The evidence largely comes from Western, middle‑class families and tech‑industry pilots; it may not translate directly to Malaysian cultural norms or the high‑pressure finance environment.",
+   "misreading": "That removing screens entirely will eliminate anxiety – the book only shows reduced, not eradicated, anxiety with balanced limits.",
+   "oneThing": "Introduce a regular, structured emotion‑labeling conversation with your child, because it quickly builds the vocabulary that underpins lower anxiety.",
+   "readNext": [
+    "Raising Humans in a Digital World by Dr. Sherry Turkle – explores how technology reshapes parent‑child interaction.",
+    "The Power of Bad: How the Negatives in Life Make Us Stronger by John Tierney – gives a broader view on resilience building.",
+    "Thinking, Fast and Slow by Daniel Kahneman – deepens understanding of how quick judgments fuel anxiety."
+   ],
+   "verdict": "skim",
+   "whoFor": "Parents of young children who can experiment with screen limits; finance leaders with little time should skip the dense research chapters."
+  },
   {
    "week": "2026-W45",
    "id": "supercommunicators",
