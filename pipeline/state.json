@@ -39465,6 +39465,102 @@
         "audio": null,
         "readSeconds": 165
       }
+    },
+    "dr-pal-53732a8951c9": {
+      "status": "FAILED",
+      "title": "One Menstrual Cup for Years? Dr. Tanaya Explains the Benefits!",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=i4NDyYe6xrA",
+      "id": "dr-pal-53732a8951c9",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T01:18:12.881Z",
+      "updatedAt": "2026-11-12T01:34:52.875Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-8e5cd10fd3a2": {
+      "status": "FAILED",
+      "title": "Small wins every day!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=rr2I5BETGr8",
+      "id": "luke-coutinho-8e5cd10fd3a2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T01:34:52.896Z",
+      "updatedAt": "2026-11-12T01:41:13.623Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "ali-abdaal-6930a5903198": {
+      "status": "FAILED",
+      "title": "My top 5 productivity apps right now",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=WXnioZZVXtA",
+      "id": "ali-abdaal-6930a5903198",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T01:41:13.645Z",
+      "updatedAt": "2026-11-12T01:57:04.062Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-935692bf17f2": {
+      "status": "FAILED",
+      "title": "The cheapest PROTEIN SHAKE.. NO additives.",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=iWkBdHUfdjM",
+      "id": "luke-coutinho-935692bf17f2",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T01:57:04.091Z",
+      "updatedAt": "2026-11-12T02:14:56.016Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-2cf1019958ff": {
+      "status": "FAILED",
+      "title": "Why Are 8–10-Year-Olds Developing Prediabetes? | Dr. Pal & Dr. Arun Kumar",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=QZiQLBH6SDQ",
+      "id": "dr-pal-2cf1019958ff",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T02:14:56.032Z",
+      "updatedAt": "2026-11-12T02:30:18.624Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-3d84ff8fae51": {
+      "status": "FAILED",
+      "title": "Heavy Periods: When Is Menstrual Bleeding Abnormal? | Dr. Tanaya & Dr. Pal",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=aLO719TnZag",
+      "id": "dr-pal-3d84ff8fae51",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T02:30:18.642Z",
+      "updatedAt": "2026-11-12T02:41:10.936Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-00a5247a21b7": {
+      "status": "FAILED",
+      "title": "Upgrade your PARATHA now !",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=YtlTyDTrWPM",
+      "id": "luke-coutinho-00a5247a21b7",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T02:41:10.980Z",
+      "updatedAt": "2026-11-12T02:54:37.970Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "ali-abdaal-ddc54e38c119": {
+      "status": "FAILED",
+      "title": "What I got wrong about freedom in my 20s",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=iACc_7N7QnU",
+      "id": "ali-abdaal-ddc54e38c119",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-12T02:54:38.049Z",
+      "updatedAt": "2026-11-12T02:55:59.594Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }

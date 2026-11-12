@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T03:09:47.802Z",
+  "generatedAt": "2026-11-12T02:55:59.618Z",
   "today": "2026-11-12",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -7727,35 +7727,87 @@
   ],
   "pending": [
     {
-      "id": "desk-db8db466be4c",
-      "title": "Great time for Indian Markets? (after Trump's loss) | Akshat Shrivastava",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=oq5odXfokrM",
+      "id": "desk-84cba36b33a9",
+      "title": "What's Happening at SRFTI?",
+      "show": "Unfiltered by Samdish",
+      "url": "https://www.youtube.com/watch?v=2hiwvg4ccZg",
       "takeaways": [
-        "They discuss the potential consequences of the US mid‑term elections.",
-        "They state that the content is not investment advice and encourage personal due diligence."
+        "Student solidarity on campus is powerful, with hundreds ready to support an individual who is targeted.",
+        "Spending two days on the campus left a significant, multifaceted impact on the visitors."
       ],
-      "date": "2026-11-11",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "date": "2026-11-12",
+      "reason": "over the 8/day cap"
     },
     {
-      "id": "desk-93ab8b1da194",
-      "title": "Invest....(but where?). Everything is falling: Gold, Nifty, AI Stocks",
-      "show": "Akshat Shrivastava",
-      "url": "https://www.youtube.com/watch?v=_-QSrevxzuU",
-      "takeaways": [
-        "was a turbulent year for retail investors, featuring a rally in equities and commodities followed by a broad correction."
-      ],
-      "date": "2026-11-11",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "ali-abdaal-2967c9574f97",
-      "title": "Everything's Changing - 2026 Life Update",
-      "show": "Deep Dive with Ali Abdaal",
-      "url": "https://www.youtube.com/watch?v=DrZNvkOgZRE",
+      "id": "dr-pal-53732a8951c9",
+      "title": "One Menstrual Cup for Years? Dr. Tanaya Explains the Benefits!",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=i4NDyYe6xrA",
       "takeaways": [],
-      "date": "2026-10-31",
+      "date": "2026-11-11",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-8e5cd10fd3a2",
+      "title": "Small wins every day!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=rr2I5BETGr8",
+      "takeaways": [],
+      "date": "2026-11-11",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "ali-abdaal-6930a5903198",
+      "title": "My top 5 productivity apps right now",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=WXnioZZVXtA",
+      "takeaways": [],
+      "date": "2026-11-11",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-935692bf17f2",
+      "title": "The cheapest PROTEIN SHAKE.. NO additives.",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=iWkBdHUfdjM",
+      "takeaways": [],
+      "date": "2026-11-11",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "dr-pal-2cf1019958ff",
+      "title": "Why Are 8–10-Year-Olds Developing Prediabetes? | Dr. Pal & Dr. Arun Kumar",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=QZiQLBH6SDQ",
+      "takeaways": [],
+      "date": "2026-11-10",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "dr-pal-3d84ff8fae51",
+      "title": "Heavy Periods: When Is Menstrual Bleeding Abnormal? | Dr. Tanaya & Dr. Pal",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=aLO719TnZag",
+      "takeaways": [],
+      "date": "2026-11-10",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-00a5247a21b7",
+      "title": "Upgrade your PARATHA now !",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=YtlTyDTrWPM",
+      "takeaways": [],
+      "date": "2026-11-10",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "ali-abdaal-ddc54e38c119",
+      "title": "What I got wrong about freedom in my 20s",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=iACc_7N7QnU",
+      "takeaways": [],
+      "date": "2026-11-10",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
@@ -7779,15 +7831,70 @@
     }
   },
   "run": {
-    "at": "2026-11-12T03:09:47.800Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-11-12T02:55:59.609Z",
+    "mode": "full",
+    "discovered": 280,
+    "eligible": 8,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 272,
+    "failed": 8,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-11-12T01:18:12.785Z"
+      },
+      {
+        "stage": "process",
+        "id": "dr-pal-53732a8951c9",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T01:34:52.875Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-8e5cd10fd3a2",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T01:41:13.623Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-6930a5903198",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T01:57:04.062Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-935692bf17f2",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T02:14:56.016Z"
+      },
+      {
+        "stage": "process",
+        "id": "dr-pal-2cf1019958ff",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T02:30:18.624Z"
+      },
+      {
+        "stage": "process",
+        "id": "dr-pal-3d84ff8fae51",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T02:41:10.936Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-00a5247a21b7",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-12T02:54:37.970Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-ddc54e38c119",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-12T02:55:59.594Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
