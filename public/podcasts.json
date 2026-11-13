@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-12T23:56:56.590Z",
+  "generatedAt": "2026-11-13T02:43:23.874Z",
   "today": "2026-11-13",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -8224,40 +8224,15 @@
     }
   },
   "run": {
-    "at": "2026-11-12T23:56:56.573Z",
-    "mode": "full",
-    "discovered": 1168,
-    "eligible": 8,
-    "processed": 2,
-    "skipped": 1161,
-    "failed": 5,
+    "at": "2026-11-13T02:43:23.872Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
+    "processed": 0,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "process",
-        "id": "ali-abdaal-25bc884cb5b7",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-12T23:52:17.052Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-313a71d125ff",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-12T23:52:30.106Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-ba76f7b6f3ce",
-        "message": "no candidate ideas found in the transcript",
-        "at": "2026-11-12T23:54:28.688Z"
-      },
-      {
-        "stage": "process",
-        "id": "desk-b589008a365a",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-12T23:54:36.774Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
