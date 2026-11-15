@@ -1,21 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-14T02:31:05.900Z",
-  "today": "2026-11-14",
+  "generatedAt": "2026-11-15T01:48:20.361Z",
+  "today": "2026-11-15",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-11-14",
-      "label": "Today",
+      "label": "Yesterday",
       "episodeIds": [
         "desk-3b428e9d80db"
       ]
     },
     {
       "date": "2026-11-13",
-      "label": "Yesterday",
+      "label": "Friday",
       "episodeIds": [
         "diary-of-a-ceo-e7513c04e35b",
         "desk-18bf6c99fdee"
@@ -173,13 +173,6 @@
         "desk-9909ebfbaba4",
         "desk-f0864f63bb1d",
         "desk-6fa12bb17214"
-      ]
-    },
-    {
-      "date": "2026-10-16",
-      "label": "Friday",
-      "episodeIds": [
-        "diary-of-a-ceo-a880adcea9d2"
       ]
     }
   ],
@@ -7716,165 +7709,9 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 97
-    },
-    {
-      "id": "diary-of-a-ceo-a880adcea9d2",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Most Replayed Moment: Christian vs Atheist - Is Faith A Human Creation?",
-      "guest": "Greg Koukl",
-      "topics": [
-        "faith",
-        "meaning",
-        "philosophy",
-        "psychology"
-      ],
-      "summary": "In this episode three thinkers—Christian apologist Greg Koukl, skeptic Alex O’Connor, and psychiatrist Dr K—debate whether faith is a human construct and how it relates to meaning. They examine death denial, purpose, and the role of control in shaping a sense of purpose, weaving together theology, philosophy, and psychology. The conversation uncovers unexpected forces that shape how meaningful our lives feel.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M1P5RWF2845G8ZTEB99WYFHY/square_cover_image.jpg",
-      "publishedAt": "2026-10-16T05:00:00.000Z",
-      "date": "2026-10-16",
-      "durationSec": 1726,
-      "processedAt": "2026-10-16T23:47:15.426Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "published",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "God’s purpose is friendship, not arbitrary duty",
-          "idea": "A deity who creates beings to be in friendship with Him gives purpose that is non‑arbitrary; it reflects divine love and desire for communion.",
-          "why": "It reframes divine purpose as relational rather than functional, countering the common claim that God’s creation is merely a task, and gives believers a concrete reason for meaning.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "If God decides that he wants to make creatures to be in friendship with him because this reflects his loving character—[8:44]",
-          "t": 524,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Human meaning arises from death denial projects",
-          "idea": "People pursue immortality projects—religion, legacy, work—to counteract awareness of death, explaining why meaning is sought after mortality.",
-          "why": "It identifies a specific psychological mechanism (immortality projects) that drives meaning‑making, challenging the idea that purpose is purely cultural or rational.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "...engage in what we might call immortality projects. They engage in things which will outlast themselves and which give them a sense of escaping this death. [3:16]",
-          "t": 196,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Artificial life with trivial purpose lacks human satisfaction",
-          "idea": "A conscious AI whose sole purpose is to produce paper clips would feel unfulfilled, showing that meaning must involve more than a task given by a creator.",
-          "why": "The thought experiment demonstrates that externally imposed, narrow goals are insufficient for genuine fulfillment, implying that purpose must be richer than mere function.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "...its meaning consists in creating paperclips is...not sufficient, is not enough to address what people really want. [6:56]",
-          "t": 416,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Purpose is a quantifiable scale, not binary",
-          "idea": "People can rate their sense of purpose on a numeric scale; research shows purpose can be measured and increased incrementally, contrary to the belief that it is all‑or‑nothing.",
-          "why": "It provides a concrete, testable framework for assessing and tracking purpose, enabling interventions and personal benchmarking.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Purpose is not binary. It's quantifiable. It's like a scale. [16:11]",
-          "t": 971,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Active challenges vs passive challenges ratio boosts purpose",
-          "idea": "Increasing the ratio of actively chosen challenges to life‑imposed (passive) challenges restores a sense of control and, in turn, elevates one's sense of purpose.",
-          "why": "It offers a practical lever—shift toward self‑selected difficulty—to counter overwhelm and cultivate purpose, a counter‑intuitive yet evidence‑based tactic.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "If you take someone who feels out of control in life and you help them get control of their life… The solution is to wake up and start to push yourself in a particular direction… take on more active challenges. [25:14]",
-          "t": 1514,
-          "kind": "said",
-          "confidence": 0.89,
-          "grounding": 0.83,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Purpose correlates with perceived control",
-          "idea": "The subjective sense of control over one's life is a key predictor of how purposefully one feels; when control feels restored, purpose rises.",
-          "why": "It links two measurable constructs, suggesting that interventions boosting perceived control can directly raise purpose, guiding therapeutic focus.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "If I feel like I am in control of my life— then my sense of purpose will increase. [24:08]",
-          "t": 1448,
-          "kind": "said",
-          "confidence": 0.86,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 103
     }
   ],
   "pending": [
-    {
-      "id": "desk-a4f827125130",
-      "title": "Jensen Huang To Quit As Nvidia CEO? | Cost Of Sleeping With A Chinese Spy - A Security Nightmare!!",
-      "show": "The Deshbhakt",
-      "url": "https://www.youtube.com/watch?v=06Wjimg1rEE",
-      "takeaways": [
-        "It’s risk free with Nord’s 30 day money-back guarantee!✌ The explosive secret affair between Nvidia CEO Jensen Huang and alleged Chinese spy Alice Huang has sent shockwaves around the world and crashed Nvidia’s stocks - the most valuable company in the world.",
-        "But Huang cheating on his wife of four decades is not even the start of the story - it gets much more dirty."
-      ],
-      "date": "2026-11-14",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-270e355ef83f",
-      "title": "#AskAbhijit 384: Ask Me Anything - Any Topic",
-      "show": "Abhijit Chavda",
-      "url": "https://www.youtube.com/watch?v=RccqEOcIEYA",
-      "takeaways": [
-        "Episode 384 of the #AskAbhijit show: Ask me your best questions in the live chat and superchat, and I shall answer them.",
-        "Dark Stars to Black Holes: The 250-Year Journey from Impossible Idea to Nobel Prize (The Black Hole Chronicles Book 1) 2."
-      ],
-      "date": "2026-11-14",
-      "reason": "over the 8/day cap"
-    },
-    {
-      "id": "desk-06f5ea6e5e65",
-      "title": "The Brain Hack Every Couple Needs | Neurologist Dr Sid explains",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=xa_1Izi9Esg",
-      "takeaways": [
-        "Why do minor disagreements quickly spiral into shouting matches or silent treatment?",
-        "In this video, Dr Sid Warrier breaks down the neuroscience of what happens in your brain when you fight with a partner, parent, or friend."
-      ],
-      "date": "2026-11-14",
-      "reason": "over the 8/day cap"
-    },
     {
       "id": "desk-4c9fa69e6f7a",
       "title": "5 US Growth Stocks Down Over 25% | Opportunity or Trap?",
@@ -7884,7 +7721,7 @@
         "Can a company deliver strong revenue and profit growth while its stock falls 40%–70% from the highs?",
         "In this video, we analyse five US companies where business performance remains strong, but the market has sharply reset expectations."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7896,7 +7733,7 @@
         "Decoding any fund’s full name involves separating it into four parts: the AMC brand, the scheme category, the plan (Direct vs. Regular), and the option (Growth vs. IDCW).",
         "The regular plan’s annual commission fee compounds over time, creating a massive wealth gap."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7908,7 +7745,7 @@
         "Why earning 6% from an FD could actually mean losing money after taxes and inflation.",
         "The CAMEL framework helps you identify risky companies before investing in their bonds."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7920,7 +7757,7 @@
         "The episode discusses the consequences of the US Mid‑term Elections.",
         "It emphasizes that the content is not investment advice and urges listeners to do their own due diligence."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7932,7 +7769,7 @@
         "The episode opens with SEBI’s pre-budget recommendation to scrap the 12.5% long-term capital gains (LTCG) tax for foreign portfolio investors, along with a proposal to exempt domestic investors from LTCG when they switch between mutual fund schemes after holding units for more than a year.",
         "Shashank explains how the proposal would work, why it resembles the reinvestment relief real estate investors already enjoy, why the final decision rests with the Union Budget, and why bringing foreign capital back matters for the rupee and Indian equities."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7944,7 +7781,7 @@
         "4x everything on the yearly plan, plus a free custom domain for 1 year.",
         "Compare Mode: Compare responses across different AI Models and generate a consensus - one powerful, well-rounded answer from multiple models."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7956,7 +7793,7 @@
         "Full data and references used in the episode are provided for listeners.",
         "The episode features Sameer Nigam, founder and CEO of PhonePE, and Harshil Mathur, co‑founder and CEO of Razorpay."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7968,7 +7805,7 @@
         "The two days we spent around the campus impacted us in more ways than one.",
         "They offered us a glimpse of what student solidarity truly looks like, if one person gets hit, 300 others will stand behind them."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7980,7 +7817,7 @@
         "Please Note: An Arbitrage Mutual Fund is a type of mutual fund that seeks to generate returns by exploiting price differences in different markets, such as different exchanges (as our example), or in the cash and futures market.",
         "These funds capitalise on temporary mismatches in prices across these markets to create low risk profit opportunities."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "over the 8/day cap"
     },
     {
@@ -7992,7 +7829,7 @@
         "Update your emergency fund before 2027.",
         "Invest in skills that can grow your income."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
@@ -8004,7 +7841,7 @@
         "Spirituality is described as a fundamental longing in every human being to become boundless.",
         "Sadhguru examines the mechanics of karma and its role in life, death, and rebirth."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "no candidate ideas found in the transcript"
     },
     {
@@ -8016,7 +7853,7 @@
         "In this video, we explore Class 11 History (Old NCERT), Chapter 6 – \"Neolithic Age: First Farmers and Herders\" and understand the emergence of agriculture and animal domestication in human history.",
         "We examine how prehistoric communities gradually shifted from hunting and gathering to food production, developed settled lifestyles and established early agricultural settlements."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
@@ -8028,16 +7865,31 @@
         "This year, we have built something completely unique.",
         "Join us as we unveil the highly anticipated secret theme for JJ27, open the brand-new box, and show you how to build discipline, track your goals, and reflect on who you are becoming in just 5 minutes a day."
       ],
-      "date": "2026-11-14",
+      "date": "2026-11-15",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "ali-abdaal-25bc884cb5b7",
-      "title": "How to Get Rich (My Talk at a Business School)",
-      "show": "Deep Dive with Ali Abdaal",
-      "url": "https://www.youtube.com/watch?v=G2tBWRHif6Q",
-      "takeaways": [],
-      "date": "2026-11-13",
+      "id": "desk-a4f827125130",
+      "title": "Jensen Huang To Quit As Nvidia CEO? | Cost Of Sleeping With A Chinese Spy - A Security Nightmare!!",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=06Wjimg1rEE",
+      "takeaways": [
+        "It’s risk free with Nord’s 30 day money-back guarantee!✌ The explosive secret affair between Nvidia CEO Jensen Huang and alleged Chinese spy Alice Huang has sent shockwaves around the world and crashed Nvidia’s stocks - the most valuable company in the world.",
+        "But Huang cheating on his wife of four decades is not even the start of the story - it gets much more dirty."
+      ],
+      "date": "2026-11-15",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "desk-06f5ea6e5e65",
+      "title": "The Brain Hack Every Couple Needs | Neurologist Dr Sid explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=xa_1Izi9Esg",
+      "takeaways": [
+        "Why do minor disagreements quickly spiral into shouting matches or silent treatment?",
+        "In this video, Dr Sid Warrier breaks down the neuroscience of what happens in your brain when you fight with a partner, parent, or friend."
+      ],
+      "date": "2026-11-15",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
@@ -8057,19 +7909,86 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 50
+      "ai": 49
     }
   },
   "run": {
-    "at": "2026-11-14T02:31:05.898Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-11-15T01:48:20.350Z",
+    "mode": "full",
+    "discovered": 238,
+    "eligible": 8,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 230,
+    "failed": 8,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "gunjanshouts",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCKRpf_HZfpLwxuIgyeYnsVw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-14T23:52:41.772Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "ali-abdaal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCoOae5nYA7VqaXzerajD0lg — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-14T23:52:41.774Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "luke-coutinho",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCbtHchJ3oGeVZTlp2RlHzXw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-14T23:52:43.192Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "dr-pal",
+        "message": "HTTP 404 https://www.youtube.com/feeds/videos.xml?channel_id=UCdoC1XoPy7ui7ovlrnwMBfw — <!DOCTYPE html>\n<html lang=en>\n  <meta charset=utf-8>\n  <meta name=viewport content=\"initial-scale=1, minimum-scale=1, width=device-width\">\n  <title>Error 404 (Not Found)!!1</title>\n  <style>\n    *{ma",
+        "at": "2026-11-14T23:52:43.370Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-11-15T00:28:13.910Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-313a71d125ff",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-15T00:28:48.695Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-ba76f7b6f3ce",
+        "message": "no candidate ideas found in the transcript",
+        "at": "2026-11-15T00:29:20.314Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-b589008a365a",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-15T00:29:53.750Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-56cb95873bd9",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-15T00:30:26.808Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-a4f827125130",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-15T00:30:34.621Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-06f5ea6e5e65",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-15T01:48:20.326Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {

@@ -39850,7 +39850,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:17.060Z",
-      "updatedAt": "2026-11-14T00:04:59.387Z",
+      "updatedAt": "2026-11-15T00:28:48.695Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-e64f3d4d84ff": {
@@ -39862,7 +39862,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:30.112Z",
-      "updatedAt": "2026-11-14T00:04:59.424Z",
+      "updatedAt": "2026-11-15T00:28:48.727Z",
       "reason": "transcript is only 4181 characters",
       "learningsFound": 5
     },
@@ -39887,7 +39887,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:53:50.547Z",
-      "updatedAt": "2026-11-14T00:21:29.833Z",
+      "updatedAt": "2026-11-15T00:29:20.314Z",
       "reason": "no candidate ideas found in the transcript"
     },
     "desk-b589008a365a": {
@@ -39899,7 +39899,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:54:28.716Z",
-      "updatedAt": "2026-11-14T00:22:03.339Z",
+      "updatedAt": "2026-11-15T00:29:53.750Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-18bf6c99fdee": {
@@ -40335,7 +40335,44 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-14T00:40:01.199Z",
-      "updatedAt": "2026-11-14T00:40:35.309Z",
+      "updatedAt": "2026-11-15T00:30:26.808Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-a4f827125130": {
+      "status": "FAILED",
+      "title": "Jensen Huang To Quit As Nvidia CEO? | Cost Of Sleeping With A Chinese Spy - A Security Nightmare!!",
+      "show": "The Deshbhakt",
+      "url": "https://www.youtube.com/watch?v=06Wjimg1rEE",
+      "id": "desk-a4f827125130",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-15T00:30:26.818Z",
+      "updatedAt": "2026-11-15T00:30:34.621Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
+    },
+    "desk-270e355ef83f": {
+      "status": "NEEDS_REVIEW",
+      "title": "#AskAbhijit 384: Ask Me Anything - Any Topic",
+      "show": "Abhijit Chavda",
+      "url": "https://www.youtube.com/watch?v=RccqEOcIEYA",
+      "id": "desk-270e355ef83f",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-15T00:30:34.630Z",
+      "updatedAt": "2026-11-15T01:48:10.308Z",
+      "reason": "only 2 learnings survived validation (floor is 4)",
+      "learningsFound": 2
+    },
+    "desk-06f5ea6e5e65": {
+      "status": "FAILED",
+      "title": "The Brain Hack Every Couple Needs | Neurologist Dr Sid explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=xa_1Izi9Esg",
+      "id": "desk-06f5ea6e5e65",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-15T01:48:10.319Z",
+      "updatedAt": "2026-11-15T01:48:20.326Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
