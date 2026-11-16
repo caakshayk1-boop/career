@@ -39838,8 +39838,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:07.148Z",
-      "updatedAt": "2026-11-14T00:04:20.481Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-11-16T01:58:09.943Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-313a71d125ff": {
       "status": "FAILED",
@@ -39850,8 +39850,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:17.060Z",
-      "updatedAt": "2026-11-15T00:28:48.695Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-11-16T02:15:33.297Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-e64f3d4d84ff": {
       "status": "NEEDS_REVIEW",
@@ -39862,7 +39862,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:30.112Z",
-      "updatedAt": "2026-11-15T00:28:48.727Z",
+      "updatedAt": "2026-11-16T02:15:33.332Z",
       "reason": "transcript is only 4181 characters",
       "learningsFound": 5
     },
@@ -39879,7 +39879,7 @@
       "reason": "transcript unusable: transcript is only 2417 characters"
     },
     "desk-ba76f7b6f3ce": {
-      "status": "FAILED",
+      "status": "PUBLISHED",
       "title": "Getting Drunk on Moonbeams: Ancient Yogic Secrets | Sadhguru",
       "show": "Sadhguru",
       "url": "https://www.youtube.com/watch?v=jEu_CGP0qZ0",
@@ -39887,8 +39887,129 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:53:50.547Z",
-      "updatedAt": "2026-11-15T00:29:20.314Z",
-      "reason": "no candidate ideas found in the transcript"
+      "updatedAt": "2026-11-16T02:18:19.425Z",
+      "reason": "no candidate ideas found in the transcript",
+      "payload": {
+        "id": "desk-ba76f7b6f3ce",
+        "sourceId": "desk",
+        "show": "Sadhguru",
+        "title": "Getting Drunk on Moonbeams: Ancient Yogic Secrets | Sadhguru",
+        "guest": "Sadhguru",
+        "topics": [
+          "yoga",
+          "consciousness",
+          "reincarnation",
+          "mindfulness",
+          "spirituality"
+        ],
+        "summary": "In this episode, Sadhguru shares a blend of ancient yogic insights and contemporary observations, discussing everything from the subtle effects of moonlight to the mechanics of reincarnation and the nature of consciousness. He emphasizes practical approaches to inner freedom, such as allowing the mind to flow rather than suppressing it, and highlights how cultural expectations shape our emotional lives. Listeners seeking a fresh perspective on spirituality and everyday well‑being will find his teachings both thought‑provoking and accessible.",
+        "url": "https://www.youtube.com/watch?v=jEu_CGP0qZ0",
+        "type": "youtube",
+        "image": "",
+        "publishedAt": "2026-11-11T00:00:00.000Z",
+        "date": "2026-11-16",
+        "durationSec": 2764,
+        "processedAt": "2026-11-16T02:18:19.423Z",
+        "status": "PUBLISHED",
+        "transcriptProvider": "yt-dlp-captions",
+        "timestamped": true,
+        "extractor": "ai",
+        "learnings": [
+          {
+            "rank": 1,
+            "headline": "Conscious choice can select a womb, but rarity makes reincarnation largely automatic",
+            "idea": "Most beings are reborn according to karmic tendencies, yet a highly conscious individual can deliberately choose the womb for the next life.",
+            "why": "Introduces a rare but actionable exception to the deterministic view of rebirth, highlighting the value of heightened consciousness.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"…unless a being has come to such a level of consciousness that he can choose a womb consciously, which is rare… the rest will choose by tendency.\"",
+            "t": 1008,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 0.75,
+            "repaired": false
+          },
+          {
+            "rank": 2,
+            "headline": "Marital expectations amplify emotional experience",
+            "idea": "Cultural narratives that marriage equals bliss create stored expectations that magnify both positive and negative events in married life.",
+            "why": "Shows how socially imposed scripts act like karmic residues, shaping personal perception and emotional intensity.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"…you are told marriage is about bliss… the information that I'm married and I'm supposed to be happy… that little thing becomes magnified… if you were not married… the misery is magnified.\"",
+            "t": 620,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.53,
+            "repaired": true
+          },
+          {
+            "rank": 3,
+            "headline": "Pleasantness at death influences post‑death experience",
+            "idea": "Cultivating a feeling of pleasantness in one's final moments can make that quality dominate the experience after death.",
+            "why": "Offers a practical, transferable practice for end‑of‑life mental framing, suggesting agency even at life's end.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "\"…read the Gita, say Ram Ram, do something. The idea is to create some kind of pleasantness… if you create pleasantness, pleasantness can become the dominant quality in his life.\"",
+            "t": 920,
+            "kind": "said",
+            "confidence": 0.8,
+            "grounding": 0.8,
+            "repaired": false
+          },
+          {
+            "rank": 4,
+            "headline": "Full moonlight can induce subtle intoxication",
+            "idea": "Sitting in bright moonlight can produce a light‑headed, altered state of consciousness without substances.",
+            "why": "Provides a simple, natural technique for accessing altered awareness, expanding meditation toolkits.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "If you go out somewhere where there are no electric lights, let’s say on a full moon day or in a moonlight, you will get light‑headed.",
+            "t": 1910,
+            "kind": "interpretation",
+            "confidence": 0.6,
+            "grounding": 0.6,
+            "repaired": true
+          },
+          {
+            "rank": 5,
+            "headline": "The mind cannot be stopped, only allowed to flow",
+            "idea": "Attempting to suppress mental chatter leads to insanity; instead, the mind should be observed without interference.",
+            "why": "Challenges common meditation advice to 'stop thoughts', offering a more sustainable mental approach.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "If you try to stop the mental nonsense, you will go insane. Because you need to understand with your mind all the three pedals are throttles.",
+            "t": 1561,
+            "kind": "said",
+            "confidence": 0.85,
+            "grounding": 0.67,
+            "repaired": false
+          },
+          {
+            "rank": 6,
+            "headline": "Spirituality is inherent, not a choice",
+            "idea": "Everyone possesses a spiritual nature regardless of deliberate pursuit; awareness merely uncovers what already is.",
+            "why": "Reframes spiritual practice as uncovering innate reality rather than adopting a new identity, impacting how seekers approach growth.",
+            "action": "",
+            "detail": "",
+            "passage": "",
+            "evidence": "So, spirituality is not calling you. Nor are you choosing to be spiritual. Unfortunately, you are spiritual.",
+            "t": 2623,
+            "kind": "said",
+            "confidence": 0.75,
+            "grounding": 1,
+            "repaired": false
+          }
+        ],
+        "rejectedCount": 2,
+        "audio": null,
+        "readSeconds": 88
+      }
     },
     "desk-b589008a365a": {
       "status": "FAILED",
@@ -39899,7 +40020,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:54:28.716Z",
-      "updatedAt": "2026-11-15T00:29:53.750Z",
+      "updatedAt": "2026-11-16T02:18:27.286Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-18bf6c99fdee": {
@@ -40335,7 +40456,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-14T00:40:01.199Z",
-      "updatedAt": "2026-11-15T00:30:26.808Z",
+      "updatedAt": "2026-11-16T02:18:42.215Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-a4f827125130": {
@@ -40347,7 +40468,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-15T00:30:26.818Z",
-      "updatedAt": "2026-11-15T00:30:34.621Z",
+      "updatedAt": "2026-11-16T02:18:57.158Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     "desk-270e355ef83f": {
@@ -40374,6 +40495,18 @@
       "seenAt": "2026-11-15T01:48:10.319Z",
       "updatedAt": "2026-11-15T01:48:20.326Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "gunjanshouts-0552ee74cc7d": {
+      "status": "FAILED",
+      "title": "The Science Behind Dabur Chyawanprash: What Most People Dont Know! | Dr. Ritu with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=0e8ehOAo3XE",
+      "id": "gunjanshouts-0552ee74cc7d",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-16T01:37:55.752Z",
+      "updatedAt": "2026-11-16T01:41:13.736Z",
+      "reason": "yt-dlp failed: no stderr"
     }
   }
 }

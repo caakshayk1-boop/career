@@ -1,11 +1,18 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T02:15:07.992Z",
+  "generatedAt": "2026-11-16T02:18:57.176Z",
   "today": "2026-11-16",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
+    {
+      "date": "2026-11-16",
+      "label": "Today",
+      "episodeIds": [
+        "desk-ba76f7b6f3ce"
+      ]
+    },
     {
       "date": "2026-11-14",
       "label": "Saturday",
@@ -167,6 +174,127 @@
     }
   ],
   "episodes": [
+    {
+      "id": "desk-ba76f7b6f3ce",
+      "sourceId": "desk",
+      "show": "Sadhguru",
+      "title": "Getting Drunk on Moonbeams: Ancient Yogic Secrets | Sadhguru",
+      "guest": "Sadhguru",
+      "topics": [
+        "yoga",
+        "consciousness",
+        "reincarnation",
+        "mindfulness",
+        "spirituality"
+      ],
+      "summary": "In this episode, Sadhguru shares a blend of ancient yogic insights and contemporary observations, discussing everything from the subtle effects of moonlight to the mechanics of reincarnation and the nature of consciousness. He emphasizes practical approaches to inner freedom, such as allowing the mind to flow rather than suppressing it, and highlights how cultural expectations shape our emotional lives. Listeners seeking a fresh perspective on spirituality and everyday well‑being will find his teachings both thought‑provoking and accessible.",
+      "url": "https://www.youtube.com/watch?v=jEu_CGP0qZ0",
+      "type": "youtube",
+      "image": "",
+      "publishedAt": "2026-11-11T00:00:00.000Z",
+      "date": "2026-11-16",
+      "durationSec": 2764,
+      "processedAt": "2026-11-16T02:18:19.423Z",
+      "status": "PUBLISHED",
+      "transcriptProvider": "yt-dlp-captions",
+      "timestamped": true,
+      "extractor": "ai",
+      "learnings": [
+        {
+          "rank": 1,
+          "headline": "Conscious choice can select a womb, but rarity makes reincarnation largely automatic",
+          "idea": "Most beings are reborn according to karmic tendencies, yet a highly conscious individual can deliberately choose the womb for the next life.",
+          "why": "Introduces a rare but actionable exception to the deterministic view of rebirth, highlighting the value of heightened consciousness.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"…unless a being has come to such a level of consciousness that he can choose a womb consciously, which is rare… the rest will choose by tendency.\"",
+          "t": 1008,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.75,
+          "repaired": false
+        },
+        {
+          "rank": 2,
+          "headline": "Marital expectations amplify emotional experience",
+          "idea": "Cultural narratives that marriage equals bliss create stored expectations that magnify both positive and negative events in married life.",
+          "why": "Shows how socially imposed scripts act like karmic residues, shaping personal perception and emotional intensity.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"…you are told marriage is about bliss… the information that I'm married and I'm supposed to be happy… that little thing becomes magnified… if you were not married… the misery is magnified.\"",
+          "t": 620,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.53,
+          "repaired": true
+        },
+        {
+          "rank": 3,
+          "headline": "Pleasantness at death influences post‑death experience",
+          "idea": "Cultivating a feeling of pleasantness in one's final moments can make that quality dominate the experience after death.",
+          "why": "Offers a practical, transferable practice for end‑of‑life mental framing, suggesting agency even at life's end.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "\"…read the Gita, say Ram Ram, do something. The idea is to create some kind of pleasantness… if you create pleasantness, pleasantness can become the dominant quality in his life.\"",
+          "t": 920,
+          "kind": "said",
+          "confidence": 0.8,
+          "grounding": 0.8,
+          "repaired": false
+        },
+        {
+          "rank": 4,
+          "headline": "Full moonlight can induce subtle intoxication",
+          "idea": "Sitting in bright moonlight can produce a light‑headed, altered state of consciousness without substances.",
+          "why": "Provides a simple, natural technique for accessing altered awareness, expanding meditation toolkits.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "If you go out somewhere where there are no electric lights, let’s say on a full moon day or in a moonlight, you will get light‑headed.",
+          "t": 1910,
+          "kind": "interpretation",
+          "confidence": 0.6,
+          "grounding": 0.6,
+          "repaired": true
+        },
+        {
+          "rank": 5,
+          "headline": "The mind cannot be stopped, only allowed to flow",
+          "idea": "Attempting to suppress mental chatter leads to insanity; instead, the mind should be observed without interference.",
+          "why": "Challenges common meditation advice to 'stop thoughts', offering a more sustainable mental approach.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "If you try to stop the mental nonsense, you will go insane. Because you need to understand with your mind all the three pedals are throttles.",
+          "t": 1561,
+          "kind": "said",
+          "confidence": 0.85,
+          "grounding": 0.67,
+          "repaired": false
+        },
+        {
+          "rank": 6,
+          "headline": "Spirituality is inherent, not a choice",
+          "idea": "Everyone possesses a spiritual nature regardless of deliberate pursuit; awareness merely uncovers what already is.",
+          "why": "Reframes spiritual practice as uncovering innate reality rather than adopting a new identity, impacting how seekers approach growth.",
+          "action": "",
+          "detail": "",
+          "passage": "",
+          "evidence": "So, spirituality is not calling you. Nor are you choosing to be spiritual. Unfortunately, you are spiritual.",
+          "t": 2623,
+          "kind": "said",
+          "confidence": 0.75,
+          "grounding": 1,
+          "repaired": false
+        }
+      ],
+      "rejectedCount": 2,
+      "audio": null,
+      "readSeconds": 88
+    },
     {
       "id": "desk-3b428e9d80db",
       "sourceId": "desk",
@@ -7161,6 +7289,18 @@
   ],
   "pending": [
     {
+      "id": "desk-06f5ea6e5e65",
+      "title": "The Brain Hack Every Couple Needs | Neurologist Dr Sid explains",
+      "show": "Sid Warrier",
+      "url": "https://www.youtube.com/watch?v=xa_1Izi9Esg",
+      "takeaways": [
+        "Why do minor disagreements quickly spiral into shouting matches or silent treatment?",
+        "In this video, Dr Sid Warrier breaks down the neuroscience of what happens in your brain when you fight with a partner, parent, or friend."
+      ],
+      "date": "2026-11-16",
+      "reason": "over the 8/day cap"
+    },
+    {
       "id": "desk-4c9fa69e6f7a",
       "title": "5 US Growth Stocks Down Over 25% | Opportunity or Trap?",
       "show": "Groww",
@@ -7169,7 +7309,7 @@
         "Can a company deliver strong revenue and profit growth while its stock falls 40%–70% from the highs?",
         "In this video, we analyse five US companies where business performance remains strong, but the market has sharply reset expectations."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7181,7 +7321,7 @@
         "Decoding any fund’s full name involves separating it into four parts: the AMC brand, the scheme category, the plan (Direct vs. Regular), and the option (Growth vs. IDCW).",
         "The regular plan’s annual commission fee compounds over time, creating a massive wealth gap."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7193,7 +7333,7 @@
         "Why earning 6% from an FD could actually mean losing money after taxes and inflation.",
         "The CAMEL framework helps you identify risky companies before investing in their bonds."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7205,7 +7345,7 @@
         "The episode discusses the consequences of the US Mid‑term Elections.",
         "It emphasizes that the content is not investment advice and urges listeners to do their own due diligence."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7217,7 +7357,7 @@
         "The episode opens with SEBI’s pre-budget recommendation to scrap the 12.5% long-term capital gains (LTCG) tax for foreign portfolio investors, along with a proposal to exempt domestic investors from LTCG when they switch between mutual fund schemes after holding units for more than a year.",
         "Shashank explains how the proposal would work, why it resembles the reinvestment relief real estate investors already enjoy, why the final decision rests with the Union Budget, and why bringing foreign capital back matters for the rupee and Indian equities."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7229,7 +7369,7 @@
         "4x everything on the yearly plan, plus a free custom domain for 1 year.",
         "Compare Mode: Compare responses across different AI Models and generate a consensus - one powerful, well-rounded answer from multiple models."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7241,7 +7381,7 @@
         "Full data and references used in the episode are provided for listeners.",
         "The episode features Sameer Nigam, founder and CEO of PhonePE, and Harshil Mathur, co‑founder and CEO of Razorpay."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7253,7 +7393,7 @@
         "The two days we spent around the campus impacted us in more ways than one.",
         "They offered us a glimpse of what student solidarity truly looks like, if one person gets hit, 300 others will stand behind them."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7265,7 +7405,7 @@
         "Please Note: An Arbitrage Mutual Fund is a type of mutual fund that seeks to generate returns by exploiting price differences in different markets, such as different exchanges (as our example), or in the cash and futures market.",
         "These funds capitalise on temporary mismatches in prices across these markets to create low risk profit opportunities."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "over the 8/day cap"
     },
     {
@@ -7277,20 +7417,8 @@
         "Update your emergency fund before 2027.",
         "Invest in skills that can grow your income."
       ],
-      "date": "2026-11-15",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "desk-ba76f7b6f3ce",
-      "title": "Getting Drunk on Moonbeams: Ancient Yogic Secrets | Sadhguru",
-      "show": "Sadhguru",
-      "url": "https://www.youtube.com/watch?v=jEu_CGP0qZ0",
-      "takeaways": [
-        "Spirituality is described as a fundamental longing in every human being to become boundless.",
-        "Sadhguru examines the mechanics of karma and its role in life, death, and rebirth."
-      ],
-      "date": "2026-11-15",
-      "reason": "no candidate ideas found in the transcript"
+      "date": "2026-11-16",
+      "reason": "yt-dlp failed: no stderr"
     },
     {
       "id": "desk-b589008a365a",
@@ -7301,7 +7429,7 @@
         "In this video, we explore Class 11 History (Old NCERT), Chapter 6 – \"Neolithic Age: First Farmers and Herders\" and understand the emergence of agriculture and animal domestication in human history.",
         "We examine how prehistoric communities gradually shifted from hunting and gathering to food production, developed settled lifestyles and established early agricultural settlements."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
@@ -7313,7 +7441,7 @@
         "This year, we have built something completely unique.",
         "Join us as we unveil the highly anticipated secret theme for JJ27, open the brand-new box, and show you how to build discipline, track your goals, and reflect on who you are becoming in just 5 minutes a day."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     {
@@ -7325,20 +7453,26 @@
         "It’s risk free with Nord’s 30 day money-back guarantee!✌ The explosive secret affair between Nvidia CEO Jensen Huang and alleged Chinese spy Alice Huang has sent shockwaves around the world and crashed Nvidia’s stocks - the most valuable company in the world.",
         "But Huang cheating on his wife of four decades is not even the start of the story - it gets much more dirty."
       ],
-      "date": "2026-11-15",
+      "date": "2026-11-16",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
     },
     {
-      "id": "desk-06f5ea6e5e65",
-      "title": "The Brain Hack Every Couple Needs | Neurologist Dr Sid explains",
-      "show": "Sid Warrier",
-      "url": "https://www.youtube.com/watch?v=xa_1Izi9Esg",
-      "takeaways": [
-        "Why do minor disagreements quickly spiral into shouting matches or silent treatment?",
-        "In this video, Dr Sid Warrier breaks down the neuroscience of what happens in your brain when you fight with a partner, parent, or friend."
-      ],
-      "date": "2026-11-15",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "id": "gunjanshouts-0552ee74cc7d",
+      "title": "The Science Behind Dabur Chyawanprash: What Most People Dont Know! | Dr. Ritu with GunjanShouts",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=0e8ehOAo3XE",
+      "takeaways": [],
+      "date": "2026-11-14",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "ali-abdaal-25bc884cb5b7",
+      "title": "How to Get Rich (My Talk at a Business School)",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=G2tBWRHif6Q",
+      "takeaways": [],
+      "date": "2026-11-13",
+      "reason": "yt-dlp failed: no stderr"
     },
     {
       "id": "acquired-52ca3862c160",
@@ -7357,23 +7491,66 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 45
+      "ai": 46
     }
   },
   "run": {
-    "at": "2026-11-16T02:15:07.990Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
-    "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "at": "2026-11-16T02:18:57.166Z",
+    "mode": "full",
+    "discovered": 258,
+    "eligible": 8,
+    "processed": 1,
+    "skipped": 250,
+    "failed": 7,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-11-16T01:37:55.652Z"
+      },
+      {
+        "stage": "process",
+        "id": "gunjanshouts-0552ee74cc7d",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-16T01:41:13.736Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-25bc884cb5b7",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-16T01:58:09.943Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-313a71d125ff",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-16T02:15:33.297Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-b589008a365a",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-16T02:18:27.286Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-56cb95873bd9",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-16T02:18:42.215Z"
+      },
+      {
+        "stage": "process",
+        "id": "desk-a4f827125130",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-16T02:18:57.158Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
-    "at": "2026-11-14T00:40:35.322Z",
-    "processed": 2
+    "at": "2026-11-16T02:18:57.166Z",
+    "processed": 1
   }
 }
