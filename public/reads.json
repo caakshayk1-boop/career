@@ -1,10 +1,81 @@
 {
  "version": 1,
- "generatedAt": "2026-11-10T04:24:30.766Z",
- "week": "2026-W46",
+ "generatedAt": "2026-11-17T04:50:45.504Z",
+ "week": "2026-W47",
  "shelfSize": 22,
- "readCount": 6,
+ "readCount": 7,
  "reads": [
+  {
+   "week": "2026-W47",
+   "id": "die-with-zero",
+   "title": "Die With Zero",
+   "author": "Bill Perkins",
+   "published": 2020,
+   "category": "money",
+   "rating": 4.1,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-11-17T04:50:45.504Z",
+   "coreArgument": "People should allocate money to experiences while they can enjoy them, rather than accumulating wealth for death.",
+   "hook": "At a family dinner, a 78‑year‑old billionaire handed his grandson a sealed envelope of cash, then asked why he hadn’t used any of it to travel while he was still able.",
+   "ideas": [
+    {
+     "apply": "Create a “experience budget” spreadsheet that lists upcoming trips or courses you want, assigns a cost, and schedules them within the next 12 months.",
+     "bookExample": "",
+     "explain": "The idea is that human enjoyment follows a curve called the \"time‑value of experiences\" – the older you get, the less you can physically enjoy many activities. By budgeting for experiences now, you avoid the regret of money left unused at death. Perkins argues that most people over‑save because they treat money like a stock, ignoring that experiences are perishable.",
+     "heading": "Budget for experiences now, not later",
+     "tradeoff": "You may have less cushion for unexpected emergencies; the plan requires disciplined emergency savings separate from the experience fund.",
+     "yourWeek": "During this month‑end close, you notice a $5,000 surplus in the cash flow forecast. Instead of rolling it into the year‑end reserve, you allocate $2,000 to a team‑building retreat in Bali scheduled for next quarter, noting the cost in the board pack as a strategic talent investment.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Calculate your \"life‑expectancy multiplier\" by dividing your current net worth by the average annual expenses you expect to need for the rest of your life.",
+     "bookExample": "",
+     "explain": "The multiplier tells you how many years of spending your assets can support at current consumption levels. If the number is high, you are over‑saving; if low, you risk running out. The book suggests targeting a multiplier around 25‑30 for a balanced approach.",
+     "heading": "Use a life‑expectancy multiplier",
+     "tradeoff": "The metric assumes stable expenses and ignores inflation spikes; it may mislead if your cost base changes dramatically.",
+     "yourWeek": "When preparing the variance commentary, you run the multiplier: net cash of RM 30 million divided by forecasted annual spend of RM 1 million gives 30 years, signaling you could afford to fund a new store rollout now rather than waiting for next fiscal year.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Set a \"die‑with‑zero\" date for each major asset, planning to liquidate it before you lose the ability to enjoy it.",
+     "bookExample": "",
+     "explain": "The concept is to assign a deadline to assets that have utility tied to physical ability or relevance. When the deadline approaches, you convert the asset into cash for experiences while you still can benefit. This prevents holding onto items that become burdensome.",
+     "heading": "Assign use‑by dates to assets",
+     "tradeoff": "Premature liquidation can reduce long‑term wealth if market conditions are poor; timing must balance price risk with personal utility.",
+     "yourWeek": "You realize the company’s old fleet of delivery vans will be obsolete in five years; you schedule their sale now, redirecting the proceeds to a digital training program for junior accountants before they retire.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Implement a \"reverse‑budget\" by listing regrets you anticipate and budgeting to avoid them.",
+     "bookExample": "",
+     "explain": "A reverse‑budget starts with potential regrets (missed trips, unlearned skills) and works backward to allocate money now to prevent them. It shifts focus from abstract saving goals to concrete life‑quality goals.",
+     "heading": "Budget against future regrets",
+     "tradeoff": "Speculating about regrets can lead to over‑allocation to unlikely events; it requires honest self‑assessment.",
+     "yourWeek": "During budget negotiations, you ask the commercial team what strategic initiatives they might regret missing if delayed; you agree to fund a pilot e‑commerce platform now, noting the avoided regret in the board discussion.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Use the \"10‑year rule\": postpone any purchase that won’t add value to your life within the next decade.",
+     "bookExample": "",
+     "explain": "The rule filters out long‑term speculative assets that tie up cash without delivering personal benefit. If you cannot see personal use or joy in ten years, the money is better spent elsewhere.",
+     "heading": "Apply the 10‑year rule to spending",
+     "tradeoff": "Long‑term investments that appreciate significantly may be missed; the rule works best for discretionary spending, not core business capital.",
+     "yourWeek": "You receive a request to purchase a new ERP system costing RM 3 million; you apply the 10‑year rule, noting the system’s benefits will materialize beyond ten years, and instead negotiate a cloud subscription that spreads cost and keeps cash free for quarterly incentive trips.",
+     "bookExampleHasFigure": false
+    }
+   ],
+   "limits": "The book relies heavily on anecdotes from wealthy, Western individuals; its formulas assume stable, inflation‑adjusted expenses and may not fit volatile emerging‑market economies or high‑tax jurisdictions.",
+   "misreading": "That you should spend everything now and never save for retirement; Perkins actually advocates a balance of early experiences and a safety net.",
+   "oneThing": "Create a separate, short‑term experience fund and schedule at least one concrete activity for the next 12 months.",
+   "readNext": [
+    "Your Money or Your Life – a systematic approach to aligning spending with values.",
+    "The Psychology of Money – why behavior matters more than formulas.",
+    "Designing Your Life – practical tools for planning meaningful experiences."
+   ],
+   "verdict": "skim",
+   "whoFor": "Finance professionals who already have a solid safety net but struggle to allocate time and money to personal experiences; skip if you are still building basic emergency reserves."
+  },
   {
    "week": "2026-W46",
    "id": "anxious-generation",
