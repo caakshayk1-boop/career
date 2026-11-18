@@ -40787,7 +40787,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-17T23:45:40.153Z",
-      "updatedAt": "2026-11-17T23:45:56.428Z",
+      "updatedAt": "2026-11-18T23:47:08.487Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-93588534b2ef": {
@@ -40799,7 +40799,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-17T23:45:56.435Z",
-      "updatedAt": "2026-11-17T23:46:10.073Z",
+      "updatedAt": "2026-11-18T23:47:21.829Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-7e675b7fac8e": {
@@ -41002,6 +41002,78 @@
         "audio": null,
         "readSeconds": 146
       }
+    },
+    "desk-5d42048feef6": {
+      "status": "FAILED",
+      "title": "Why AI Will Replace These Jobs: The Skills You Need Next | Sachin Puri | FO589 Raj Shamani",
+      "show": "Figuring Out",
+      "url": "https://www.youtube.com/watch?v=8ol3j7o1U7o",
+      "id": "desk-5d42048feef6",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-18T23:45:29.376Z",
+      "updatedAt": "2026-11-18T23:45:38.526Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-4b147cc04b4c": {
+      "status": "FAILED",
+      "title": "Two Companies: Loss to Operating Profit! But How? | CA Rachana Ranade",
+      "show": "CA Rachana Ranade",
+      "url": "https://www.youtube.com/watch?v=udnTDIetwNQ",
+      "id": "desk-4b147cc04b4c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-18T23:45:38.536Z",
+      "updatedAt": "2026-11-18T23:45:53.388Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en-en-IN': HTTP Error 429: Too Many Requests"
+    },
+    "desk-30a6e6b112d8": {
+      "status": "FAILED",
+      "title": "Satire: Delhi Police Announcement",
+      "show": "The Wire",
+      "url": "https://www.youtube.com/watch?v=I_GiUcI9XP8",
+      "id": "desk-30a6e6b112d8",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-18T23:45:53.399Z",
+      "updatedAt": "2026-11-18T23:46:07.054Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-78d3249ee3b4": {
+      "status": "FAILED",
+      "title": "“Left Historians Saw Students Avoiding History in Colleges, So They Targeted Class 6” Meenakshi Jain",
+      "show": "ANI Podcast (clips)",
+      "url": "https://www.youtube.com/watch?v=1alz6AUSyiU",
+      "id": "desk-78d3249ee3b4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-18T23:46:07.064Z",
+      "updatedAt": "2026-11-18T23:46:22.242Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-e8c1b9be43a1": {
+      "status": "FAILED",
+      "title": "We Got This Podcast Before GTA 6💀 Ft. @Mythpat X @beerbiceps",
+      "show": "The Ranveer Show",
+      "url": "https://www.youtube.com/watch?v=ktKhpQz1jNI",
+      "id": "desk-e8c1b9be43a1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-18T23:46:22.252Z",
+      "updatedAt": "2026-11-18T23:46:37.749Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "desk-445f6bd5ad63": {
+      "status": "FAILED",
+      "title": "Conservation Areas in One Shot | UPSC 2027 | Zero To Zenith",
+      "show": "Drishti IAS",
+      "url": "https://www.youtube.com/watch?v=VEGMuJ0VEYg",
+      "id": "desk-445f6bd5ad63",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-18T23:46:37.760Z",
+      "updatedAt": "2026-11-18T23:46:52.081Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }
