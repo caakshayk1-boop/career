@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-20T23:17:29.712Z",
+  "generatedAt": "2026-11-21T03:17:36.335Z",
   "today": "2026-11-21",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -4081,40 +4081,15 @@
     }
   },
   "run": {
-    "at": "2026-11-20T23:17:29.676Z",
-    "mode": "full",
-    "discovered": 236,
-    "eligible": 2,
+    "at": "2026-11-21T03:17:36.333Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 234,
-    "failed": 2,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "desk",
-        "message": "HTTP 503 https://news.askakshay.com/today.json — The deployment is currently unavailable\n\nDEPLOYMENT_PAUSED\n\nsin1::lhk46-1795215517928-875a881b129e\n",
-        "at": "2026-11-20T22:58:37.949Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
-        "at": "2026-11-20T23:16:18.796Z"
-      },
-      {
-        "stage": "process",
-        "id": "gunjanshouts-0552ee74cc7d",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-20T23:16:51.968Z"
-      },
-      {
-        "stage": "process",
-        "id": "ali-abdaal-25bc884cb5b7",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-20T23:17:29.620Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
