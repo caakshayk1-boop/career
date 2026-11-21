@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T03:17:36.335Z",
-  "today": "2026-11-21",
+  "generatedAt": "2026-11-21T23:13:01.007Z",
+  "today": "2026-11-22",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
   "days": [
     {
       "date": "2026-11-20",
-      "label": "Yesterday",
+      "label": "Friday",
       "episodeIds": [
         "diary-of-a-ceo-a82cf464ea1d"
       ]
@@ -127,14 +127,6 @@
       "label": "Sunday",
       "episodeIds": [
         "gunjanshouts-5b78b2a3029a"
-      ]
-    },
-    {
-      "date": "2026-10-23",
-      "label": "Friday",
-      "episodeIds": [
-        "diary-of-a-ceo-422bed0b0ee6",
-        "desk-8a02a076f2cc"
       ]
     }
   ],
@@ -3793,264 +3785,18 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 158
-    },
-    {
-      "id": "diary-of-a-ceo-422bed0b0ee6",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Most Replayed Moment: How AI Companies Are Gaslighting You - Karen Hao",
-      "guest": "Karen Hao",
-      "topics": [
-        "ai risk",
-        "corporate control",
-        "journalism",
-        "openai"
-      ],
-      "summary": "In this episode, award‑winning journalist Karen Hao discusses the hidden risks of AI, focusing on who controls the technology rather than the tech itself. She critiques the narratives used by AI firms to justify their power and warns about tactics that silence critical voices. The conversation reveals how corporate strategies shape public discourse and the importance of independent journalism in the AI debate.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M1PEF1M5HE2FX78QVY3VYYG8/square_cover_image.jpg",
-      "publishedAt": "2026-10-23T05:00:00.000Z",
-      "date": "2026-10-23",
-      "durationSec": 1443,
-      "processedAt": "2026-10-29T00:30:06.740Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "published",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "10‑25% chance of AGI catastrophe",
-          "idea": "Dario, a former OpenAI VP, estimated the probability that AGI will cause catastrophic harm to civilization is between 10% and 25%.",
-          "why": "This concrete risk estimate contradicts the common belief that AGI risks are negligible, urging policymakers and investors to treat AI safety as a high‑stakes priority.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "I can't see any reason in principle why that couldn't happen. My chance that something goes really quite catastrophically wrong on the scale of human civilization might be somewhere between 10% and 25%.",
-          "t": 26,
-          "kind": "said",
-          "confidence": 0.95,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "AI empires use dual worst/best narrative to justify control",
-          "idea": "Companies frame AI progress as either catastrophic or utopian, using both extremes to argue that only they can safely guide the technology.",
-          "why": "By presenting a false dichotomy, firms manufacture fear and hope to secure regulatory and market dominance, sidelining independent oversight.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "They need that part of the myth in order to then say, and that’s why we need to be in control of the technology because that’s the only way that it’s going to go really, really well… the worst case lights out… the best case, we cure cancer…",
-          "t": 869,
-          "kind": "said",
-          "confidence": 0.93,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "AI companies pursue imperial agenda via land grabbing, labor, knowledge monopoly",
-          "idea": "OpenAI and similar firms systematically acquire data, exploit labor, and monopolize knowledge to maintain a technological and political monopoly.",
-          "why": "These practices concentrate power, reduce competition, and shape policy outcomes, making the industry resistant to external regulation.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "They lay claim to resources that are not their own… They are land grabbing… They contract hundreds of thousands of workers… They monopolize knowledge production…",
-          "t": 501,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Brains as statistical models fuels scaling thesis",
-          "idea": "Ilya Sutskever and Jeff Hinton argue that human brains are giant statistical models, so building larger statistical engines will yield human‑level and beyond intelligence.",
-          "why": "This hypothesis drives the industry’s focus on scaling model size rather than exploring alternative architectures, shaping research agendas and investment decisions.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Ilya’s hypothesis is that ultimately our brains are giant statistical models… they have such a strong conviction in the idea of building AI systems that are statistical models… If we build a bigger statistical engine than the human brain, then based on this chart, it will be more intelligent.",
-          "t": 179,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 0.83,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "OpenAI intimidates critics with subpoenas and phishing",
-          "idea": "OpenAI employed a strategy of targeting critics through subpoenas and phishing to collect private information and stifle opposition.",
-          "why": "Legal and covert pressure tactics create a chilling effect on independent scrutiny, undermining transparency and public accountability.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "This was opening. I started subpoenaing some of its critics. … a campaign of intimidation, but also what appeared to be a campaign of phishing for more information …",
-          "t": 668,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "OpenAI uses access as a carrot to shape public discourse",
-          "idea": "The company dangles access for years, hoping that the mere promise will make journalists feel comfortable, thereby limiting critical coverage.",
-          "why": "By conditioning media cooperation on future access, OpenAI can steer narratives without overt censorship, subtly influencing public perception.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "…who have basically dangled the carrot of them coming here for like 18 months… If we just dangle it for long enough, then they will perform in the way that we want them to do… Our critics… will just be… pleasant about us…",
-          "t": 1277,
-          "kind": "interpretation",
-          "confidence": 0.88,
-          "grounding": 0.85,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Journalists should not play the 'access game' to maintain coverage",
-          "idea": "Reporters should prioritize truth over seeking corporate access, refusing to let the promise of future access dictate their coverage.",
-          "why": "Maintaining editorial independence ensures that critical stories about powerful AI firms reach the public, preserving democratic oversight.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"...you are supposed to report the truth, and you're always supposed to report in the interest of the public… I can continue to do the work. They don't need to open the front door for me.\"",
-          "t": 1381,
-          "kind": "recommendation",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 111
-    },
-    {
-      "id": "desk-8a02a076f2cc",
-      "sourceId": "desk",
-      "show": "Groww",
-      "title": "5 stocks showing strength in a weak market",
-      "guest": "",
-      "topics": [
-        "stock analysis",
-        "market outlook",
-        "investment strategy",
-        "relative strength"
-      ],
-      "summary": "The episode analyzes five Indian stocks that have demonstrated resilience despite a weak market environment, highlighting each company's unique business model and financial performance. It provides practical insights on identifying strong performers through relative‑strength analysis and operational efficiencies, making it valuable for investors seeking actionable ideas.",
-      "url": "https://www.youtube.com/watch?v=pLuJ45-4p2A",
-      "type": "youtube",
-      "image": "",
-      "publishedAt": "2026-10-21T00:00:00.000Z",
-      "date": "2026-10-23",
-      "durationSec": 926,
-      "processedAt": "2026-10-22T23:52:10.282Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Blue Stone’s omni‑channel model triples average order value",
-          "idea": "Blue Stone’s 95% in‑house manufacturing and omni‑channel selling lifted its average order value from ₹27,900 in FY22 to ₹78,810 in Q1FY27, a 3× increase in 5 years.",
-          "why": "A clear metric of revenue lift tied to strategy, useful for valuation and growth assessment, showing how operational choices directly boost per‑customer spend.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "The average order value increased from ₹27,900 in FY22 to ₹66,31 in FY26 and ₹78,81 in Quarter One of FY27.",
-          "t": 116,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "E2E Networks’ GPU‑rental model drives high cash‑flow conversion",
-          "idea": "By buying GPUs and renting them via the cloud, E2E has a CFO‑to‑profit ratio above 90 % for five consecutive years, indicating strong operating cash‑flow efficiency.",
-          "why": "Shows the company’s cash‑flow health despite expansion and is a key metric for investors assessing sustainability.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "CFO to operating profit ratio has been consistently above 90% over the last 5 years.",
-          "t": 318,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Ageas Logistics’ profit CAGR outpaces sales CAGR",
-          "idea": "Over the last three years, Ageas’s profit grew at 29 % CAGR while sales were flat or declining, showing that margin expansion can drive profitability.",
-          "why": "Illustrates that a company can achieve high returns even when top‑line growth is weak, a key insight for valuation.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Profit CAGR 29% over the last 3 years and Sales CAGR negative 1%.",
-          "t": 759,
-          "kind": "said",
-          "confidence": 0.87,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Black Box’s margin jump driven by operational efficiency, not sales",
-          "idea": "Margin rose from 4.8 % to 9 % after rationalizing low‑margin businesses and focusing on large customers, with profits tripling while sales grew only 6 % in FY26.",
-          "why": "Shows a systematic, reusable framework: cost control and business rationalization can boost profitability more than revenue growth.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Margins jumped from 4.8% to 9%. The company rationalized low margin businesses ... the major driver of growth was operational efficiency and not sales.",
-          "t": 471,
-          "kind": "interpretation",
-          "confidence": 0.6,
-          "grounding": 0.54,
-          "repaired": true
-        },
-        {
-          "rank": 5,
-          "headline": "Use custom industry‑relative‑strength to spot themes",
-          "idea": "Start by comparing sector and theme strength against the market using relative‑strength indicators; the top themes in a weak market were jewellery, AI data centers, networking infrastructure, diagnostics, and LPG logistics.",
-          "why": "Provides a quantifiable filter for picking outperforming stocks in a down market, turning sector analysis into a concrete investment process.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "First, we analyze different sectors and themes using custom industries and relative strength indicators to see which ones are outperforming the broader market.",
-          "t": 32,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.75,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Dr Lal Path labs’ revenue concentration in North India",
-          "idea": "About 63 % of Dr Lal’s revenue comes from North India, underscoring a geographic concentration that could affect expansion strategy.",
-          "why": "Geographic revenue concentration is a critical risk factor that investors should monitor for downside exposure.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "About 63% of the revenue comes from North India.",
-          "t": 612,
-          "kind": "said",
-          "confidence": 0.83,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 100
     }
   ],
   "pending": [
+    {
+      "id": "gunjanshouts-67a37669dcc1",
+      "title": "Stop Being the Woman Who Sacrifices Everything | GunjanShouts | Ritu Agarwal",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=rvdMggMmtCI",
+      "takeaways": [],
+      "date": "2026-11-21",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
     {
       "id": "gunjanshouts-0552ee74cc7d",
       "title": "The Science Behind Dabur Chyawanprash: What Most People Dont Know! | Dr. Ritu with GunjanShouts",
@@ -4067,7 +3813,7 @@
       "url": "https://www.youtube.com/watch?v=G2tBWRHif6Q",
       "takeaways": [],
       "date": "2026-11-13",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "reason": "yt-dlp failed: no stderr"
     }
   ],
   "generator": {
@@ -4077,19 +3823,44 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 23
+      "ai": 21
     }
   },
   "run": {
-    "at": "2026-11-21T03:17:36.333Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-11-21T23:13:01.000Z",
+    "mode": "full",
+    "discovered": 1150,
+    "eligible": 3,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 1147,
+    "failed": 3,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "desk",
+        "message": "HTTP 503 https://news.askakshay.com/today.json — The deployment is currently unavailable\n\nDEPLOYMENT_PAUSED\n\nsin1::4ltqw-1795301825452-ffdde486bcae\n",
+        "at": "2026-11-21T22:57:05.471Z"
+      },
+      {
+        "stage": "process",
+        "id": "gunjanshouts-67a37669dcc1",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-21T22:57:17.834Z"
+      },
+      {
+        "stage": "process",
+        "id": "gunjanshouts-0552ee74cc7d",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-21T22:57:30.339Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-25bc884cb5b7",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-21T23:13:00.958Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {

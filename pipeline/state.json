@@ -39838,8 +39838,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:07.148Z",
-      "updatedAt": "2026-11-20T23:17:29.620Z",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "updatedAt": "2026-11-21T23:13:00.958Z",
+      "reason": "yt-dlp failed: no stderr"
     },
     "desk-313a71d125ff": {
       "status": "FAILED",
@@ -40505,7 +40505,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-16T01:37:55.752Z",
-      "updatedAt": "2026-11-20T23:16:51.968Z",
+      "updatedAt": "2026-11-21T22:57:30.340Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-8db644a152bb": {
@@ -41507,6 +41507,18 @@
         "audio": null,
         "readSeconds": 118
       }
+    },
+    "gunjanshouts-67a37669dcc1": {
+      "status": "FAILED",
+      "title": "Stop Being the Woman Who Sacrifices Everything | GunjanShouts | Ritu Agarwal",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=rvdMggMmtCI",
+      "id": "gunjanshouts-67a37669dcc1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-21T22:57:07.605Z",
+      "updatedAt": "2026-11-21T22:57:17.834Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
 }
