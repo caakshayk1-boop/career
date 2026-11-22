@@ -39838,8 +39838,8 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-12T23:52:07.148Z",
-      "updatedAt": "2026-11-21T23:13:00.958Z",
-      "reason": "yt-dlp failed: no stderr"
+      "updatedAt": "2026-11-22T22:45:54.963Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "desk-313a71d125ff": {
       "status": "FAILED",
@@ -40505,7 +40505,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-16T01:37:55.752Z",
-      "updatedAt": "2026-11-21T22:57:30.340Z",
+      "updatedAt": "2026-11-22T22:45:38.860Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     },
     "diary-of-a-ceo-8db644a152bb": {
@@ -41517,7 +41517,7 @@
       "processingVersion": "1.0.0",
       "promptVersion": "2026-09-14.a",
       "seenAt": "2026-11-21T22:57:07.605Z",
-      "updatedAt": "2026-11-21T22:57:17.834Z",
+      "updatedAt": "2026-11-22T22:45:23.719Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
     }
   }
