@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-21T23:13:01.007Z",
+  "generatedAt": "2026-11-22T02:23:22.921Z",
   "today": "2026-11-22",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -3827,40 +3827,15 @@
     }
   },
   "run": {
-    "at": "2026-11-21T23:13:01.000Z",
-    "mode": "full",
-    "discovered": 1150,
-    "eligible": 3,
+    "at": "2026-11-22T02:23:22.920Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 1147,
-    "failed": 3,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "desk",
-        "message": "HTTP 503 https://news.askakshay.com/today.json — The deployment is currently unavailable\n\nDEPLOYMENT_PAUSED\n\nsin1::4ltqw-1795301825452-ffdde486bcae\n",
-        "at": "2026-11-21T22:57:05.471Z"
-      },
-      {
-        "stage": "process",
-        "id": "gunjanshouts-67a37669dcc1",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-21T22:57:17.834Z"
-      },
-      {
-        "stage": "process",
-        "id": "gunjanshouts-0552ee74cc7d",
-        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
-        "at": "2026-11-21T22:57:30.339Z"
-      },
-      {
-        "stage": "process",
-        "id": "ali-abdaal-25bc884cb5b7",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-21T23:13:00.958Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
