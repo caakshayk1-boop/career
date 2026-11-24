@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T01:50:31.377Z",
+  "generatedAt": "2026-11-24T06:10:23.602Z",
   "today": "2026-11-24",
   "retentionDays": 30,
   "retentionConfigured": 30,
@@ -3685,76 +3685,15 @@
     }
   },
   "run": {
-    "at": "2026-11-24T01:50:31.374Z",
-    "mode": "full",
-    "discovered": 278,
-    "eligible": 8,
+    "at": "2026-11-24T06:10:23.600Z",
+    "mode": "republish",
+    "discovered": 0,
+    "eligible": 0,
     "processed": 0,
-    "skipped": 270,
-    "failed": 8,
+    "skipped": 0,
+    "failed": 0,
     "pruned": 0,
-    "errors": [
-      {
-        "stage": "ingest",
-        "id": "desk",
-        "message": "HTTP 503 https://news.askakshay.com/today.json — The deployment is currently unavailable\n\nDEPLOYMENT_PAUSED\n\nsin1::bk8p6-1795476782579-0b13df1178f9\n",
-        "at": "2026-11-23T23:33:02.858Z"
-      },
-      {
-        "stage": "ingest",
-        "id": "diary-of-a-ceo",
-        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
-        "at": "2026-11-23T23:50:02.614Z"
-      },
-      {
-        "stage": "process",
-        "id": "ali-abdaal-fa79c23e46e1",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T00:05:55.193Z"
-      },
-      {
-        "stage": "process",
-        "id": "dr-pal-85cdf0342df1",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T00:22:18.363Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-b87e433723f1",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T00:34:01.428Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-d051f8c50c34",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T00:49:36.790Z"
-      },
-      {
-        "stage": "process",
-        "id": "dr-pal-620083efbd94",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T01:05:00.587Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-0cb944f5c215",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T01:21:06.257Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-1671736c1942",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T01:35:01.332Z"
-      },
-      {
-        "stage": "process",
-        "id": "luke-coutinho-d134d5b9bcfb",
-        "message": "yt-dlp failed: no stderr",
-        "at": "2026-11-24T01:50:31.341Z"
-      }
-    ],
+    "errors": [],
     "estimatedCostUsd": 0
   },
   "lastRead": {
