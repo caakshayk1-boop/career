@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-23T02:54:54.914Z",
-  "today": "2026-11-23",
+  "generatedAt": "2026-11-24T01:50:31.377Z",
+  "today": "2026-11-24",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
@@ -120,13 +120,6 @@
       "label": "Monday",
       "episodeIds": [
         "diary-of-a-ceo-8cfb4e1ee627"
-      ]
-    },
-    {
-      "date": "2026-10-25",
-      "label": "Sunday",
-      "episodeIds": [
-        "gunjanshouts-5b78b2a3029a"
       ]
     }
   ],
@@ -3605,215 +3598,80 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 267
-    },
-    {
-      "id": "gunjanshouts-5b78b2a3029a",
-      "sourceId": "gunjanshouts",
-      "show": "GunjanShouts",
-      "title": "AUTISM & ADHD Explained: Early Signs, Causes & Treatment | Dr. AM Reddy with GunjanShouts",
-      "guest": "Dr. AM Reddy",
-      "topics": [
-        "autism",
-        "adhd",
-        "early signs",
-        "treatment"
-      ],
-      "summary": "In this episode, Dr. AM Reddy discusses autism spectrum disorder and its distinction from ADHD, covering early signs, potential causes, and treatment approaches. He emphasizes the importance of early diagnosis and intervention, while also addressing common misconceptions about genetics, vaccines, and nutrition. Listeners gain a concise overview of how to recognize and support autistic children effectively.",
-      "url": "https://www.youtube.com/watch?v=PCkWqStqqLM",
-      "type": "youtube",
-      "image": "https://i1.ytimg.com/vi/PCkWqStqqLM/hqdefault.jpg",
-      "publishedAt": "2026-10-25T06:29:27.000Z",
-      "date": "2026-10-25",
-      "durationSec": 2569,
-      "processedAt": "2026-10-30T02:02:37.393Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "yt-dlp-captions",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Thyroid disturbances during pregnancy increase autism risk",
-          "idea": "The speaker asserts that thyroid dysfunction in the mother during pregnancy is the most common cause of autism.",
-          "why": "Identifying a specific maternal health factor gives parents a measurable risk to monitor and potentially treat, challenging the view that autism is solely genetic.",
-          "action": "Ask your obstetrician to screen thyroid levels early in pregnancy and treat any abnormalities.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[11:08] 12 major reasons. The first reason is the thyroid disturbances during pregnancy.",
-          "t": 668,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "Space pregnancies 2–4 years to lower autism risk",
-          "idea": "Spacing pregnancies by two to four years lowers the risk of autism in the next child.",
-          "why": "Provides a concrete, evidence‑based family planning guideline that can be acted on immediately, counter to the assumption that birth order has no effect.",
-          "action": "Plan subsequent pregnancies with at least a two‑year gap and no more than four years between births.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[15:12] Two years is the minimum. Four years is the maximum.",
-          "t": 912,
-          "kind": "recommendation",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Unnecessary vaccines may increase autism risk",
-          "idea": "The speaker distinguishes essential vaccines from unnecessary ones, claiming extra shots beyond the mandatory schedule can provoke autism.",
-          "why": "Challenges the prevailing belief that all approved vaccines are harmless for neurodevelopment, prompting parents to scrutinize vaccination schedules.",
-          "action": "Follow the government‑mandated vaccine schedule and discuss any additional vaccines with a qualified pediatrician.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[12:27] Vaccination is good. Vaccinations are good but unwanted and unnecessary vaccinations are more.",
-          "t": 747,
-          "kind": "said",
-          "confidence": 0.7,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Avoid antibiotics in early childhood unless essential",
-          "idea": "Do not give antibiotics to infants unless absolutely necessary; the gut microbiome supports immunity and may influence autism risk.",
-          "why": "Highlights a modifiable medical practice that can affect neurodevelopment, countering the routine prescription of antibiotics for minor ailments.",
-          "action": "Consult your pediatrician and reserve antibiotics for confirmed bacterial infections, not viral colds.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[17:18] If you give antibiotics to children. So the healthy microbes in the body will completely die.",
-          "t": 1038,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 0.88,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Autism is not hereditary but stems from nervous system instability",
-          "idea": "The speaker claims autism has no genetic basis, only nervous system instability.",
-          "why": "Contradicts the dominant narrative of strong genetic inheritance, shifting focus to early environmental and physiological factors.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[10:47] Autism is 100% not genetic. It is not a hereditary.",
-          "t": 647,
-          "kind": "said",
-          "confidence": 0.6,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Online autism screening tests are unreliable",
-          "idea": "Online screening tools may misclassify children; a brief clinical discussion with a pediatrician or neurologist is more reliable.",
-          "why": "Prevents parents from over‑relying on dubious internet quizzes and encourages professional evaluation, which can lead to earlier, accurate diagnosis.",
-          "action": "If you suspect autism, schedule an in‑person assessment rather than trusting an online test.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[33:47] Some parents, when they notice signs or symptoms of autism in their children, take online screening tests. Are these reliable? It is not so perfect in online screening test. It is not at all a good idea.",
-          "t": 2027,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 0.71,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Excess sugar and constant feeding can trigger regression",
-          "idea": "Excessive sugar or constant feeding schedules can worsen behavioral regression in autistic children, highlighting the need for balanced nutrition and regular bowel habits.",
-          "why": "Offers a specific, actionable dietary factor that families can adjust to potentially curb worsening symptoms.",
-          "action": "Limit sugary snacks and establish regular meal times with adequate fiber to support gut health.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[34:52] Diet can also cause regression. Giving too many sweets or giving full meals from morning till evening can also cause regression.",
-          "t": 2092,
-          "kind": "said",
-          "confidence": 0.8,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Routine and predictability improve focus in autistic children",
-          "idea": "Establishing consistent daily schedules reduces anxiety and improves attention in autistic children.",
-          "why": "Provides a low‑cost, evidence‑backed strategy that can be implemented immediately to enhance daily functioning.",
-          "action": "Create a visual daily timetable and stick to the same waking, eating, and bedtime routines.",
-          "detail": "",
-          "passage": "",
-          "evidence": "[35:29] routine and predictability are very helpful. Is that true? And if yes then why and how?",
-          "t": 2129,
-          "kind": "interpretation",
-          "confidence": 0.7,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Natural birth preserves hormonal benefits for neurodevelopment",
-          "idea": "Cesarean sections may miss the physiological benefits of natural birth that support neonatal neurological development.",
-          "why": "Highlights a seldom‑discussed factor that could influence early brain development, informing birth‑plan decisions.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[39:03] Once you have a normal delivery, your entire muscular system, body system, hormonal system, everything remains perfect.",
-          "t": 2343,
-          "kind": "said",
-          "confidence": 0.65,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Early intervention within two years yields better outcomes",
-          "idea": "Addressing autism diagnosis and initiating treatment as early as possible (ideally within two years) enhances the likelihood of better outcomes.",
-          "why": "Reinforces the critical window for therapeutic impact, urging timely professional engagement.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "[40:56] After two years, the same parents go to homeopathy, so that is why you can go for counselling, you can go for diagnosis, you can go whatever there is.",
-          "t": 2456,
-          "kind": "interpretation",
-          "confidence": 0.75,
-          "grounding": 0.71,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 158
     }
   ],
   "pending": [
     {
-      "id": "gunjanshouts-67a37669dcc1",
-      "title": "Stop Being the Woman Who Sacrifices Everything | GunjanShouts | Ritu Agarwal",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=rvdMggMmtCI",
-      "takeaways": [],
-      "date": "2026-11-21",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "gunjanshouts-0552ee74cc7d",
-      "title": "The Science Behind Dabur Chyawanprash: What Most People Dont Know! | Dr. Ritu with GunjanShouts",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=0e8ehOAo3XE",
-      "takeaways": [],
-      "date": "2026-11-14",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
-    },
-    {
-      "id": "ali-abdaal-25bc884cb5b7",
-      "title": "How to Get Rich (My Talk at a Business School)",
+      "id": "ali-abdaal-fa79c23e46e1",
+      "title": "If I Lost Everything, Here's EXACTLY How I'd Make $100K Fast",
       "show": "Deep Dive with Ali Abdaal",
-      "url": "https://www.youtube.com/watch?v=G2tBWRHif6Q",
+      "url": "https://www.youtube.com/watch?v=PiwBdhcpsxQ",
       "takeaways": [],
-      "date": "2026-11-13",
-      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+      "date": "2026-11-23",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "dr-pal-85cdf0342df1",
+      "title": "Shocking Facts about Diabetes| Dr. Pal Manickam & Dr. Rahul Baxi",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=qoZ4prm0ils",
+      "takeaways": [],
+      "date": "2026-11-23",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-b87e433723f1",
+      "title": "Day 6 Of Solving Your Cortisol Problem !! #lukecoutinho",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=JJYn9ScV7CI",
+      "takeaways": [],
+      "date": "2026-11-23",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-d051f8c50c34",
+      "title": "The Moment You Set Boundaries, They Call You Selfish!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=BH-9n5usREY",
+      "takeaways": [],
+      "date": "2026-11-23",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "dr-pal-620083efbd94",
+      "title": "These “Healthy” Foods Can Be Bad for Diabetes",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=MTNBWtPrs5M",
+      "takeaways": [],
+      "date": "2026-11-22",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-0cb944f5c215",
+      "title": "10,000 Steps a Day? Stop Making This Your Fitness Goal!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=hjElUwlPAFI",
+      "takeaways": [],
+      "date": "2026-11-22",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-1671736c1942",
+      "title": "Introvert or Antisocial? Understand the Difference",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=2aypvFUXcBo",
+      "takeaways": [],
+      "date": "2026-11-22",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-d134d5b9bcfb",
+      "title": "Can't Lose Weight? It May Have Nothing to Do With Calories!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=DqqxQr_vvE0",
+      "takeaways": [],
+      "date": "2026-11-22",
+      "reason": "yt-dlp failed: no stderr"
     }
   ],
   "generator": {
@@ -3823,19 +3681,80 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 21
+      "ai": 20
     }
   },
   "run": {
-    "at": "2026-11-23T02:54:54.912Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-11-24T01:50:31.374Z",
+    "mode": "full",
+    "discovered": 278,
+    "eligible": 8,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 270,
+    "failed": 8,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "desk",
+        "message": "HTTP 503 https://news.askakshay.com/today.json — The deployment is currently unavailable\n\nDEPLOYMENT_PAUSED\n\nsin1::bk8p6-1795476782579-0b13df1178f9\n",
+        "at": "2026-11-23T23:33:02.858Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-11-23T23:50:02.614Z"
+      },
+      {
+        "stage": "process",
+        "id": "ali-abdaal-fa79c23e46e1",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T00:05:55.193Z"
+      },
+      {
+        "stage": "process",
+        "id": "dr-pal-85cdf0342df1",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T00:22:18.363Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-b87e433723f1",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T00:34:01.428Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-d051f8c50c34",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T00:49:36.790Z"
+      },
+      {
+        "stage": "process",
+        "id": "dr-pal-620083efbd94",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T01:05:00.587Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-0cb944f5c215",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T01:21:06.257Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-1671736c1942",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T01:35:01.332Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-d134d5b9bcfb",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-24T01:50:31.341Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {

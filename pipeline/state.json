@@ -41519,6 +41519,102 @@
       "seenAt": "2026-11-21T22:57:07.605Z",
       "updatedAt": "2026-11-22T22:45:23.719Z",
       "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "ali-abdaal-fa79c23e46e1": {
+      "status": "FAILED",
+      "title": "If I Lost Everything, Here's EXACTLY How I'd Make $100K Fast",
+      "show": "Deep Dive with Ali Abdaal",
+      "url": "https://www.youtube.com/watch?v=PiwBdhcpsxQ",
+      "id": "ali-abdaal-fa79c23e46e1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-23T23:50:02.686Z",
+      "updatedAt": "2026-11-24T00:05:55.193Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-85cdf0342df1": {
+      "status": "FAILED",
+      "title": "Shocking Facts about Diabetes| Dr. Pal Manickam & Dr. Rahul Baxi",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=qoZ4prm0ils",
+      "id": "dr-pal-85cdf0342df1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T00:05:55.214Z",
+      "updatedAt": "2026-11-24T00:22:18.363Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-b87e433723f1": {
+      "status": "FAILED",
+      "title": "Day 6 Of Solving Your Cortisol Problem !! #lukecoutinho",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=JJYn9ScV7CI",
+      "id": "luke-coutinho-b87e433723f1",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T00:22:18.420Z",
+      "updatedAt": "2026-11-24T00:34:01.428Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-d051f8c50c34": {
+      "status": "FAILED",
+      "title": "The Moment You Set Boundaries, They Call You Selfish!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=BH-9n5usREY",
+      "id": "luke-coutinho-d051f8c50c34",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T00:34:01.447Z",
+      "updatedAt": "2026-11-24T00:49:36.790Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-620083efbd94": {
+      "status": "FAILED",
+      "title": "These “Healthy” Foods Can Be Bad for Diabetes",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=MTNBWtPrs5M",
+      "id": "dr-pal-620083efbd94",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T00:49:36.810Z",
+      "updatedAt": "2026-11-24T01:05:00.587Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-0cb944f5c215": {
+      "status": "FAILED",
+      "title": "10,000 Steps a Day? Stop Making This Your Fitness Goal!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=hjElUwlPAFI",
+      "id": "luke-coutinho-0cb944f5c215",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T01:05:00.603Z",
+      "updatedAt": "2026-11-24T01:21:06.257Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-1671736c1942": {
+      "status": "FAILED",
+      "title": "Introvert or Antisocial? Understand the Difference",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=2aypvFUXcBo",
+      "id": "luke-coutinho-1671736c1942",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T01:21:06.276Z",
+      "updatedAt": "2026-11-24T01:35:01.332Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-d134d5b9bcfb": {
+      "status": "FAILED",
+      "title": "Can't Lose Weight? It May Have Nothing to Do With Calories!",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=DqqxQr_vvE0",
+      "id": "luke-coutinho-d134d5b9bcfb",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-24T01:35:01.352Z",
+      "updatedAt": "2026-11-24T01:50:31.341Z",
+      "reason": "yt-dlp failed: no stderr"
     }
   }
 }
