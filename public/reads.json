@@ -1,10 +1,81 @@
 {
  "version": 1,
- "generatedAt": "2026-11-17T04:50:45.504Z",
- "week": "2026-W47",
+ "generatedAt": "2026-11-24T06:34:40.445Z",
+ "week": "2026-W48",
  "shelfSize": 22,
- "readCount": 7,
+ "readCount": 8,
  "reads": [
+  {
+   "week": "2026-W48",
+   "id": "exercised",
+   "title": "Exercised: Why Something We Never Evolved to Do Is Healthy and Rewarding",
+   "author": "Daniel Lieberman",
+   "published": 2021,
+   "category": "health",
+   "rating": 4.1,
+   "ratingSource": "unverified",
+   "ratingCount": null,
+   "publishedAt": "2026-11-24T06:34:40.445Z",
+   "coreArgument": "Modern exercise habits are culturally imposed, not biologically necessary, and can be redesigned to align with our evolutionary adaptations for health.",
+   "hook": "A 30‑year‑old office worker in a high‑rise tower feels a sharp ache after a weekend hike and wonders why his body protests a routine that feels like a punishment.",
+   "ideas": [
+    {
+     "apply": "Replace one weekly 90‑minute cardio class with a 30‑minute walk in a natural setting.",
+     "bookExample": "Lieberman describes the Hadza, a hunter‑gatherer group in Tanzania, whose daily movement consists of short bursts of walking and occasional high‑intensity chases, totaling under two hours of moderate activity per day.",
+     "explain": "The idea is that continuous, high‑intensity exercise is not what our bodies evolved for. Lieberman argues that sporadic, varied movement – walking, climbing, sprinting – matches the pattern of activity in ancestral humans and delivers comparable health benefits with less stress. He cites studies showing that short, intense bouts combined with low‑intensity walking maintain cardiovascular health while reducing injury risk.",
+     "heading": "Match ancestral movement patterns",
+     "tradeoff": "May feel less ‘productive’ to gym‑culture peers; progress metrics differ from standard cardio benchmarks.",
+     "yourWeek": "During this month’s close, you schedule a 30‑minute walk around the office park before the board‑pack meeting instead of the usual treadmill session. The walk clears mental clutter, and you notice fewer back complaints from the team during the variance commentary.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Audit the week’s scheduled ‘exercise’ meetings and cut any that are purely social pressure without measurable outcome.",
+     "bookExample": "Lieberman recounts a corporate wellness program that mandated daily step counts, finding no health improvement after six months despite high compliance.",
+     "explain": "The idea is that mandated, one‑size‑fits‑all exercise programs create compliance without benefit. Lieberman shows that when participants choose activities that fit their personal preferences and natural movement tendencies, health markers improve more reliably. The key is autonomy, not imposed volume.",
+     "heading": "Exercise autonomy beats mandates",
+     "tradeoff": "Reduces visible ‘wellness’ branding; may require justification to senior leadership.",
+     "yourWeek": "You cancel the weekly forced “team HIIT” session and instead let each analyst log a movement they enjoy. When you discuss budget negotiations, the commercial team notes the finance staff appear less stressed and more engaged.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Introduce a ‘post‑close stretch’ routine lasting five minutes for the finance team.",
+     "bookExample": "The book cites a study of office workers who performed brief, targeted stretching after prolonged sitting, resulting in lower blood pressure and improved posture within weeks.",
+     "explain": "Lieberman points out that humans evolved to spend time upright and moving, not seated for hours. Brief, frequent stretches counteract the physiological strain of sitting, restoring joint range and circulation. The evidence shows measurable health gains with minimal time investment.",
+     "heading": "Short stretches counter sedentary stress",
+     "tradeoff": "Requires discipline to start; may be seen as a break rather than work time.",
+     "yourWeek": "After the month‑end close, you lead the team in a five‑minute stretch before finalizing the board pack. The routine reduces reported neck pain and improves focus for the next day’s forecast review.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Swap one high‑intensity interval training (HIIT) session for a 20‑minute resistance‑band circuit that mimics everyday lifting.",
+     "bookExample": "Lieberman discusses how early humans regularly lifted natural objects, developing strength without heavy gym equipment, and shows that low‑weight, functional movements maintain muscle mass efficiently.",
+     "explain": "The claim is that functional strength activities, which mirror daily tasks, are more aligned with our evolutionary design than maximal lifts. They improve muscular endurance and reduce injury risk, especially for older adults. The book presents data that moderate resistance training yields similar metabolic benefits to HIIT for cardiovascular health.",
+     "heading": "Functional resistance over maximal HIIT",
+     "tradeoff": "May not satisfy those seeking high‑intensity performance metrics; progress slower to visible strength gains.",
+     "yourWeek": "During the forecast cycle, you replace your usual HIIT sprint on Tuesday with a band circuit that simulates lifting a cash register. You notice less post‑work fatigue, allowing sharper variance commentary the same afternoon.",
+     "bookExampleHasFigure": false
+    },
+    {
+     "apply": "Document personal energy levels before and after each movement session for one week.",
+     "bookExample": "Lieberman includes a self‑tracking experiment where participants recorded perceived vigor after different activity types, finding natural movement correlated with higher subjective energy.",
+     "explain": "The idea is that subjective energy is a reliable indicator of whether an activity aligns with our biology. By tracking it, you can identify which forms of movement are truly restorative versus draining. The book argues that this feedback loop helps people tailor exercise to their innate rhythms.",
+     "heading": "Use perceived energy as a guide",
+     "tradeoff": "Requires consistent self‑reporting; may be dismissed as anecdotal by data‑driven managers.",
+     "yourWeek": "You log energy scores after each budget negotiation meeting and after your evening walk. Patterns show that a brief walk boosts your energy more than a late‑night gym session, informing how you schedule future activity around critical deadlines.",
+     "bookExampleHasFigure": false
+    }
+   ],
+   "limits": "The evolutionary case studies focus on small, active forager societies and elite athletes; they may not translate directly to sedentary office workers in high‑stress finance roles.",
+   "misreading": "That any amount of movement is enough; the book still emphasizes intensity and consistency, not just casual walking.",
+   "oneThing": "Track your own energy after each activity and let that data decide which movements you keep.",
+   "readNext": [
+    "“Spark” by John J. Ratey – explains how exercise boosts brain performance, useful for finance decision‑making.",
+    "“The Story of the Human Body” by Daniel Lieberman – broader evolutionary context for health habits.",
+    "“Atomic Habits” by James Clear – practical methods to embed the movement tweaks recommended here."
+   ],
+   "verdict": "skim",
+   "whoFor": "Finance professionals who want evidence‑based tweaks to their routine; skip if you prefer prescriptive workout plans."
+  },
   {
    "week": "2026-W47",
    "id": "die-with-zero",
