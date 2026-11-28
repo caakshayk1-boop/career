@@ -41615,6 +41615,102 @@
       "seenAt": "2026-11-24T01:35:01.352Z",
       "updatedAt": "2026-11-24T01:50:31.341Z",
       "reason": "yt-dlp failed: no stderr"
+    },
+    "gunjanshouts-cfab208bd3c4": {
+      "status": "FAILED",
+      "title": "The Secret to Staying Young at Every Age",
+      "show": "GunjanShouts",
+      "url": "https://www.youtube.com/watch?v=owfrmQDdB_g",
+      "id": "gunjanshouts-cfab208bd3c4",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-27T23:51:20.527Z",
+      "updatedAt": "2026-11-27T23:56:49.827Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "dr-pal-4023fee374d3": {
+      "status": "FAILED",
+      "title": "Cervical Cancer in Indian Women: The HPV Connection You Must Know!",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=ckgvjdIR1m8",
+      "id": "dr-pal-4023fee374d3",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-27T23:56:49.840Z",
+      "updatedAt": "2026-11-28T00:12:18.542Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-3aee73f7a5fb": {
+      "status": "FAILED",
+      "title": "The Future of Luxury Homes Must Put Health First",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=8iEPATIzB4s",
+      "id": "luke-coutinho-3aee73f7a5fb",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-28T00:12:18.558Z",
+      "updatedAt": "2026-11-28T00:29:11.308Z",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    "luke-coutinho-a45e9fa98d1c": {
+      "status": "FAILED",
+      "title": "Real Fat Loss vs. Weight Loss: What Actually Works",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=kGUKsAY1OCo",
+      "id": "luke-coutinho-a45e9fa98d1c",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-28T00:29:11.320Z",
+      "updatedAt": "2026-11-28T01:15:02.306Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-1bc47df8bede": {
+      "status": "FAILED",
+      "title": "Moringa Khichdi - Complete Protein + Correct micronutrients",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=OhUIAke4zJw",
+      "id": "luke-coutinho-1bc47df8bede",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-28T01:15:02.331Z",
+      "updatedAt": "2026-11-28T01:58:43.070Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "luke-coutinho-6db4f911c35e": {
+      "status": "FAILED",
+      "title": "Stop Doing This If You Want to Finally Lose Fat",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=qImzwGBlNb4",
+      "id": "luke-coutinho-6db4f911c35e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-28T01:58:43.096Z",
+      "updatedAt": "2026-11-28T02:15:10.642Z",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    "dr-pal-8cf42b8fb35e": {
+      "status": "SKIPPED",
+      "title": "Why Diet Still Matters Even If You Take Insulin",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=dfWs0REGMQQ",
+      "id": "dr-pal-8cf42b8fb35e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-28T02:15:10.691Z",
+      "updatedAt": "2026-11-28T02:59:54.247Z",
+      "reason": "transcript unusable: transcript is only 3646 characters"
+    },
+    "dr-pal-e8c7cc3b514e": {
+      "status": "SKIPPED",
+      "title": "Why South Asians Have a Higher Risk of Diabetes",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=uS9-w3-Od0w",
+      "id": "dr-pal-e8c7cc3b514e",
+      "processingVersion": "1.0.0",
+      "promptVersion": "2026-09-14.a",
+      "seenAt": "2026-11-28T02:59:54.247Z",
+      "updatedAt": "2026-11-28T03:42:41.514Z",
+      "reason": "transcript unusable: transcript is only 837 characters"
     }
   }
 }

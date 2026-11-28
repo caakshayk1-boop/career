@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-27T04:20:54.833Z",
-  "today": "2026-11-27",
+  "generatedAt": "2026-11-28T03:42:41.542Z",
+  "today": "2026-11-28",
   "retentionDays": 30,
   "retentionConfigured": 30,
   "trimmedForSize": 0,
@@ -106,13 +106,6 @@
       "label": "Friday",
       "episodeIds": [
         "diary-of-a-ceo-a891e1a2c92a"
-      ]
-    },
-    {
-      "date": "2026-10-29",
-      "label": "Thursday",
-      "episodeIds": [
-        "diary-of-a-ceo-5585c0c015fa"
       ]
     }
   ],
@@ -3125,214 +3118,61 @@
       "rejectedCount": 0,
       "audio": null,
       "readSeconds": 160
-    },
-    {
-      "id": "diary-of-a-ceo-5585c0c015fa",
-      "sourceId": "diary-of-a-ceo",
-      "show": "The Diary Of A CEO",
-      "title": "Dr. Sarah Paine: Why The World Is Turning Away From America",
-      "guest": "Dr. Sarah Paine",
-      "topics": [
-        "geopolitics",
-        "maritime trade",
-        "economic policy",
-        "historical strategy"
-      ],
-      "summary": "In this episode, Dr. Sarah Paine, a geopolitical strategist and historian, examines how abandoning a rules‑based maritime order threatens global economic stability and could push the world toward conflict. She traces historical patterns from the Peloponnesian War to modern Russia and China, arguing that isolationist policies and aggressive tariffs erode U.S. influence and inflate inflation. Listeners gain a strategic perspective on why maritime trade is essential for a positive‑sum world and what alternatives exist if current institutions fail.",
-      "url": "",
-      "type": "rss",
-      "image": "https://files.flightcast.com/workspaces/edpmsc3wdznn1aa2txug5e3p/01M5NZ8FAPCJ2RFPDH202RH6XM/paine_cover.jpg",
-      "publishedAt": "2026-10-29T06:00:00.000Z",
-      "date": "2026-10-29",
-      "durationSec": 6093,
-      "processedAt": "2026-11-01T01:17:19.962Z",
-      "status": "PUBLISHED",
-      "transcriptProvider": "published",
-      "timestamped": true,
-      "extractor": "ai",
-      "learnings": [
-        {
-          "rank": 1,
-          "headline": "Negative objectives are the core of government success",
-          "idea": "Governments primarily exist to prevent disasters—negative objectives such as preventing foreign invasion or bridge collapse—rather than to create visible positive achievements.",
-          "why": "It flips the usual view of state purpose, suggesting policy should be judged by how well it averts crises, not by headline projects, guiding more realistic assessments of governmental performance.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Government, I believe, are primarily about negative objectives, preventing disasters. ... governments don’t actually get credit for what they do because on a normal day, it’s normal.",
-          "t": 375,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 0.93,
-          "repaired": false
-        },
-        {
-          "rank": 2,
-          "headline": "A 2% drop in growth triples doubling time",
-          "idea": "Reducing a nation's growth rate by just 2 percentage points—via sanctions, war, or tariffs—can extend the time it takes for its economy to double from about 23 years to roughly 71 years.",
-          "why": "Small, seemingly minor slowdowns have outsized long‑term effects, turning modest policy errors into multi‑generation economic setbacks.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Another thing to give you, an economy doubles at different growth weights according to the following equation. The natural log of 2 over whatever that growth rate is. If your economy grows at 1% per annum, it'll double in 69, 70 years, something like that… If you grow at 3%, so it's a 2% differential, you'll double in 23 years. So if you do dumbassery… you knock off 2% growth, instead of waiting 23 years to double, you're going to wait 71.",
-          "t": 2169,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 3,
-          "headline": "Planned economies rely on fabricated data, causing systemic collapse",
-          "idea": "In a centrally planned system, officials inflate needed resources and understate available ones because they can't be sure supplies will arrive, leading to cumulative garbage data that misallocates capital and labor, eventually causing economic collapse.",
-          "why": "Shows a concrete mechanism why centrally planned economies fail, offering a diagnostic tool for evaluating any system that relies on top‑down forecasts.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Since it's all run by a plan… you decide however many cameras you need a new year… you're going to exaggerate what you think you need because you aren't sure the plan's going to give it to you… And you're going to understate what you have, again, because you're not sure you're going to get things… So everyone's doing that across an economy… It's garbage.",
-          "t": 2125,
-          "kind": "said",
-          "confidence": 0.88,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 4,
-          "headline": "Sanctions are like chemotherapy, not a cure",
-          "idea": "Sanctions reduce an opponent’s resources and growth—shrinking the problem—without eliminating the underlying conflict, much like chemotherapy shrinks a tumor but doesn’t cure the disease.",
-          "why": "Provides a vivid analogy that helps policymakers set realistic expectations for sanctions and avoid over‑promising decisive outcomes.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "So it's a form of chemotherapy. You don't eliminate the tumor, but you try to shrink it back.",
-          "t": 2228,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 5,
-          "headline": "Maritime is the only infinite positive‑sum world order",
-          "idea": "The speaker argues that a truly positive‑sum, infinite game world order is maritime because about 90% of global trade moves by sea, making oceans the original network that connects everything.",
-          "why": "Positions sea‑based logistics as the structural foundation of sustainable global growth, implying that policies securing maritime trade are pivotal for long‑term prosperity.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "The only infinite game positive sum world order is a maritime. It's maritime because, what is it, 90% of the world's trade goes by these oceans.",
-          "t": 5770,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 6,
-          "headline": "Sales teams waste 50% of time on admin",
-          "idea": "A survey found that about half of a sales rep’s time is spent on manual CRM updates instead of selling, which hurts revenue.",
-          "why": "Quantifies a major productivity leak that any revenue‑focused organization can address to boost top‑line growth.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"sales teams spend about 50% of their time on admin and manual CRM updates rather than selling\"",
-          "t": 3015,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 7,
-          "headline": "Monopsony depresses wages across sectors",
-          "idea": "When a single firm dominates hiring in an area, it can dictate wages downward, contributing to widespread under‑paying.",
-          "why": "Identifies a structural labor market distortion that explains persistent low wages in many regions, useful for policymakers and workers alike.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"But then there's monopsony, which means you hire such a large percentage of the workforce... you dictate wages\"",
-          "t": 2935,
-          "kind": "said",
-          "confidence": 0.9,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 8,
-          "headline": "Russian oil refinery capacity down 50%",
-          "idea": "Russia has lost up to half its oil refinery capacity due to drone attacks, severely limiting its energy exports.",
-          "why": "Signals a major disruption in global energy supply chains and a strategic vulnerability for Russia's economy.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "Russia has lost up to 50% of its operating oil refinery capacity.",
-          "t": 5240,
-          "kind": "said",
-          "confidence": 0.95,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 9,
-          "headline": "Iran war drives diesel price spikes",
-          "idea": "The rise in diesel prices to about $6 is correlated with the Iran war, not a Putin‑Trump deal.",
-          "why": "Links geopolitical conflict directly to consumer fuel costs, highlighting how distant wars affect domestic economies.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "The correlation for when diesel prices go up... is with the Iran War.",
-          "t": 5028,
-          "kind": "said",
-          "confidence": 0.92,
-          "grounding": 1,
-          "repaired": false
-        },
-        {
-          "rank": 10,
-          "headline": "Create a parallel institution if UN reforms fail",
-          "idea": "When international institutions like the UN cannot be reformed, the speaker recommends establishing a parallel institution to maintain global governance and avoid chaos.",
-          "why": "Offers a concrete contingency plan for preserving order when existing multilateral bodies become ineffective, a valuable strategy for diplomats.",
-          "action": "",
-          "detail": "",
-          "passage": "",
-          "evidence": "\"If you can't reform the UN to make it better, then you create a parallel institution. And then your government gradually says, hey, we're no longer doing the office in New York City.\"",
-          "t": 5802,
-          "kind": "said",
-          "confidence": 0.85,
-          "grounding": 1,
-          "repaired": false
-        }
-      ],
-      "rejectedCount": 0,
-      "audio": null,
-      "readSeconds": 163
     }
   ],
   "pending": [
     {
-      "id": "gunjanshouts-67a37669dcc1",
-      "title": "Why Some Women Are Always Happy, Confident & Magnetic | GunjanShouts | Ritu Agarwal",
+      "id": "gunjanshouts-cfab208bd3c4",
+      "title": "The Secret to Staying Young at Every Age",
       "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=rvdMggMmtCI",
+      "url": "https://www.youtube.com/watch?v=owfrmQDdB_g",
       "takeaways": [],
-      "date": "2026-11-21",
+      "date": "2026-11-27",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "dr-pal-4023fee374d3",
+      "title": "Cervical Cancer in Indian Women: The HPV Connection You Must Know!",
+      "show": "Gut Feeling with Dr Pal",
+      "url": "https://www.youtube.com/watch?v=ckgvjdIR1m8",
+      "takeaways": [],
+      "date": "2026-11-27",
       "reason": "yt-dlp failed: no stderr"
     },
     {
-      "id": "gunjanshouts-0552ee74cc7d",
-      "title": "The Science Behind Dabur Chyawanprash: What Most People Dont Know! | Dr. Ritu with GunjanShouts",
-      "show": "GunjanShouts",
-      "url": "https://www.youtube.com/watch?v=0e8ehOAo3XE",
+      "id": "luke-coutinho-3aee73f7a5fb",
+      "title": "The Future of Luxury Homes Must Put Health First",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=8iEPATIzB4s",
       "takeaways": [],
-      "date": "2026-11-14",
+      "date": "2026-11-27",
+      "reason": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests"
+    },
+    {
+      "id": "luke-coutinho-a45e9fa98d1c",
+      "title": "Real Fat Loss vs. Weight Loss: What Actually Works",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=kGUKsAY1OCo",
+      "takeaways": [],
+      "date": "2026-11-27",
       "reason": "yt-dlp failed: no stderr"
     },
     {
-      "id": "ali-abdaal-25bc884cb5b7",
-      "title": "How to Get Rich (My Talk at a Business School)",
-      "show": "Deep Dive with Ali Abdaal",
-      "url": "https://www.youtube.com/watch?v=G2tBWRHif6Q",
+      "id": "luke-coutinho-1bc47df8bede",
+      "title": "Moringa Khichdi - Complete Protein + Correct micronutrients",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=OhUIAke4zJw",
       "takeaways": [],
-      "date": "2026-11-13",
+      "date": "2026-11-27",
+      "reason": "yt-dlp failed: no stderr"
+    },
+    {
+      "id": "luke-coutinho-6db4f911c35e",
+      "title": "Stop Doing This If You Want to Finally Lose Fat",
+      "show": "Luke Coutinho",
+      "url": "https://www.youtube.com/watch?v=qImzwGBlNb4",
+      "takeaways": [],
+      "date": "2026-11-26",
       "reason": "yt-dlp failed: no stderr"
     }
   ],
@@ -3343,19 +3183,68 @@
     "ai": "groq:openai/gpt-oss-120b",
     "tts": "none",
     "episodes": {
-      "ai": 19
+      "ai": 18
     }
   },
   "run": {
-    "at": "2026-11-27T04:20:54.831Z",
-    "mode": "republish",
-    "discovered": 0,
-    "eligible": 0,
+    "at": "2026-11-28T03:42:41.529Z",
+    "mode": "full",
+    "discovered": 278,
+    "eligible": 8,
     "processed": 0,
-    "skipped": 0,
-    "failed": 0,
+    "skipped": 272,
+    "failed": 6,
     "pruned": 0,
-    "errors": [],
+    "errors": [
+      {
+        "stage": "ingest",
+        "id": "desk",
+        "message": "HTTP 503 https://news.askakshay.com/today.json — The deployment is currently unavailable\n\nDEPLOYMENT_PAUSED\n\nsfo1::t7mrh-1795822185365-9c74f2eec9fc\n",
+        "at": "2026-11-27T23:29:45.493Z"
+      },
+      {
+        "stage": "ingest",
+        "id": "diary-of-a-ceo",
+        "message": "timeout after 25000ms — feeds.megaphone.fm/thediaryofaceo",
+        "at": "2026-11-27T23:51:20.440Z"
+      },
+      {
+        "stage": "process",
+        "id": "gunjanshouts-cfab208bd3c4",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-27T23:56:49.827Z"
+      },
+      {
+        "stage": "process",
+        "id": "dr-pal-4023fee374d3",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-28T00:12:18.542Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-3aee73f7a5fb",
+        "message": "yt-dlp failed: ERROR: Unable to download video subtitles for 'en': HTTP Error 429: Too Many Requests",
+        "at": "2026-11-28T00:29:11.308Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-a45e9fa98d1c",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-28T01:15:02.306Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-1bc47df8bede",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-28T01:58:43.070Z"
+      },
+      {
+        "stage": "process",
+        "id": "luke-coutinho-6db4f911c35e",
+        "message": "yt-dlp failed: no stderr",
+        "at": "2026-11-28T02:15:10.642Z"
+      }
+    ],
     "estimatedCostUsd": 0
   },
   "lastRead": {
